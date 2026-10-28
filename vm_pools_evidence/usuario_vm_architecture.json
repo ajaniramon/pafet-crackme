@@ -1,0 +1,165 @@
+{
+  "image_base": "0x140000000",
+  "blob_va": "0x1403e5020",
+  "blob_sz": 1752,
+  "blob_block_size": 24,
+  "blob_blocks": 73,
+  "dispatcher_va": "0x14003f540",
+  "dispatcher_pdata": [
+    "0x14003f540",
+    "0x140048925",
+    37861
+  ],
+  "helpers": {
+    "fmix64": {
+      "va": "0x140002040",
+      "pdata_range": null
+    },
+    "permute8_uservm": {
+      "va": "0x140002080",
+      "pdata_range": [
+        "0x140002080",
+        "0x1400021d8",
+        344
+      ]
+    },
+    "handler_resolver": {
+      "va": "0x14003ebb0",
+      "pdata_range": null
+    },
+    "operand_reader": {
+      "va": "0x1400074d0",
+      "pdata_range": [
+        "0x1400074d0",
+        "0x140007609",
+        313
+      ]
+    },
+    "pc_reader": {
+      "va": "0x1400071e0",
+      "pdata_range": [
+        "0x1400071e0",
+        "0x140007365",
+        389
+      ]
+    },
+    "materializer_prolog": {
+      "va": "0x140007610",
+      "pdata_range": [
+        "0x140007610",
+        "0x14000762d",
+        29
+      ]
+    },
+    "materializer_body": {
+      "va": "0x140007631",
+      "pdata_range": [
+        "0x140007631",
+        "0x140007ba1",
+        1392
+      ]
+    },
+    "helper_called_63x": {
+      "va": "0x140006770",
+      "pdata_range": [
+        "0x140006770",
+        "0x140006a1e",
+        686
+      ]
+    },
+    "ctx_setter_tiny": {
+      "va": "0x140048940",
+      "pdata_range": null
+    },
+    "pool_reader_shared_alu": {
+      "va": "0x140048e10",
+      "pdata_range": [
+        "0x140048e10",
+        "0x140048e52",
+        66
+      ]
+    },
+    "shadow_state_updater": {
+      "va": "0x140049330",
+      "pdata_range": [
+        "0x140049330",
+        "0x14004985f",
+        1327
+      ]
+    }
+  },
+  "rip_refs_to_blob": [
+    {
+      "va": "0x14000769a",
+      "mnemonic": "lea",
+      "op_str": "r9, [rip + 0x3dd97f]",
+      "target": "0x1403e5020",
+      "offset_in_blob": "0x0"
+    },
+    {
+      "va": "0x14003f6f1",
+      "mnemonic": "lea",
+      "op_str": "rdi, [rip + 0x3a5928]",
+      "target": "0x1403e5020",
+      "offset_in_blob": "0x0"
+    }
+  ],
+  "dispatch_sites": [
+    {
+      "va": "0x140041185",
+      "channel_hint_edx_or_ebx": 3
+    },
+    {
+      "va": "0x140042be3",
+      "channel_hint_edx_or_ebx": 1
+    },
+    {
+      "va": "0x140042cb0",
+      "channel_hint_edx_or_ebx": 2
+    },
+    {
+      "va": "0x1400479f1",
+      "channel_hint_edx_or_ebx": 3
+    }
+  ],
+  "operand_decoder": {
+    "description": "At 0x1400071e0 the PC-indexed operand reader reads two bytes from buffer[pc..pc+2], packs them as little-endian u16 via `(byte1<<8) | byte0`, then applies: temp = PC * 0x7af13fd3 (mod 2^32); raw_mixed = raw ^ (temp>>13) ^ temp ^ 0xffff9a10; operand = (raw_mixed * 0x1a8d) & 0xffff.",
+    "const_pc_mix": "0x7af13fd3",
+    "const_mask": "0xffff9a10",
+    "const_final_mul": "0x1a8d",
+    "modinv_1a8d_mod_2_16": "0x3845",
+    "modinv_7af13fd3_mod_2_32": "0x3d26705b",
+    "inverse_formula": "given operand (u16), PC: raw_mixed = operand * 0x3845 & 0xffff; temp = PC * 0x7af13fd3 (mod 2^32); raw = raw_mixed ^ (temp>>13) ^ temp ^ 0xffff9a10, mask to u16."
+  },
+  "handler_resolver_signature": {
+    "va": "0x14003ebb0",
+    "description": "handler = (int32_t(ctx[0xf40][channel*62 + opcode]) ^ int32_t(ctx[0xf50])) + ctx[0xf48]. channel is passed in edx (0..3), opcode byte in r8d (0..61).",
+    "table_ptr_offset": "0xf40",
+    "base_ptr_offset": "0xf48",
+    "xor_key_offset": "0xf50",
+    "operand_table_offset": "0xf64",
+    "opcode_count": 62,
+    "channel_count": 4
+  },
+  "attestation": {
+    "seed": "0xf7002e5d6b6ed339",
+    "expected": "0xc4344faf7ef3b8df",
+    "reproduced_offline_on_blob": true,
+    "proof_script": "scripts/pafet_uservm_bc.py"
+  },
+  "ctx_fields": {
+    "0x28": "LCG PRNG state (mul 0x9e3779b97f4a7c15, add 0x2545f4914f6cdd1d)",
+    "0x30": "PRNG counter",
+    "0x1b0": "bytecode buffer pointer (materialized window)",
+    "0x1b8": "bytecode buffer size (u32)",
+    "0x1e8/1f0/1f8": "shadow mask base values (3 x u64)",
+    "0x200": "shadow toggle byte (controls XOR vs ADD/SUB in masked store)",
+    "0x208/0x210/0x218/0x220/0x258": "masked state slots",
+    "0x210": "PC counter (byte offset in bytecode buffer)",
+    "0x278/0x279/0x27a/0x27b/0x282": "shadow bytes written by state updaters",
+    "0xf40": "handler jump-table pointer (248 int32 entries)",
+    "0xf48": "handler base address (added to table entry)",
+    "0xf50": "handler table XOR key",
+    "0xf64": "operand uint16[] table (248 entries) or ptr"
+  }
+}
