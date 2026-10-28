@@ -1,5 +1,10 @@
 # PAFET — auditoría y cierre de recuperación criptográfica
 
+> **Alcance:** este cierre C es criptográfico. La auditoría posterior de
+> semántica concluye **D — cobertura incompleta**; véase
+> [PAFET_SEMANTIC_COVERAGE.md](PAFET_SEMANTIC_COVERAGE.md).
+
+
 Fecha: 2026-10-28. **Conclusión C: BLOQUEO JUSTIFICADO.** No se han recuperado credenciales ni una flag real; no hay una ejecución válida del original que demuestre aceptación. Con los datos disponibles no he identificado un ataque práctico sustancialmente mejor que adivinar credenciales. Esto es una conclusión sobre las vías examinadas y los recursos disponibles, no una demostración de imposibilidad criptográfica.
 
 ## 1. Material, pruebas iniciales y alcance de la evidencia

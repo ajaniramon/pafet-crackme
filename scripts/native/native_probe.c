@@ -16,6 +16,7 @@ typedef struct {uint64_t g[16],rip,flags;uint8_t xmm[16][16];} Context;
 extern void capture_exception(void),capture_catch_return(void);
 static Context pending[128];static int depth;static uint64_t heapnext=0x60000000;
 static uint64_t exceptions;static uint64_t lastreport;
+static uint64_t probe_tick=1;
 static uint8_t *debug_out;
 static uint64_t q(uint64_t p){return *(uint64_t*)p;}
 static uint32_t d(uint64_t p){return *(uint32_t*)p;}
@@ -24,13 +25,13 @@ static void MS stub_free(void *p){(void)p;}
 static void * MS stub_new(size_t n){return alloc(n);}
 static void * MS stub_memset(void *p,int v,size_t n){return memset(p,v,n);}
 static void * MS stub_memcpy(void *p,const void *s,size_t n){return memmove(p,s,n);}
-static uint64_t MS stub_qpc(void){return 1;}
+static uint64_t MS stub_qpc(void){return probe_tick;}
 static uint64_t MS stub_qpf(void){return 10000000;}
 static void * MS stub_va(void *p,size_t n,uint32_t type,uint32_t perm){(void)p;(void)type;(void)perm;return alloc(n);}
 static uint64_t MS stub_one(void){return 1;}
 static uint64_t MS stub_zero(void){return 0;}
 static void * MS stub_pcfile(void *p,void **out){(void)p;*out=(void*)BASE;return *out;}
-static uint64_t MS stub_qpc_import(uint64_t *p){*p=1;return 1;}
+static uint64_t MS stub_qpc_import(uint64_t *p){*p=probe_tick;return 1;}
 static uint64_t MS stub_qpf_import(uint64_t *p){*p=10000000;return 1;}
 static uint64_t MS stub_module(void *p){(void)p;return BASE;}
 static void * MS stub_heap_alloc(void *heap,uint32_t flags,size_t n){(void)heap;(void)flags;return alloc(n);}
@@ -128,6 +129,70 @@ static void MS trace_des_block(const uint8_t *in,uint8_t *out,const uint64_t *ks
     fprintf(stderr,"DES-TRACE %u ",enc);for(int i=0;i<8;i++)fprintf(stderr,"%02x",copy[i]);fputc(' ',stderr);for(int i=0;i<8;i++)fprintf(stderr,"%02x",out[i]);
     for(int i=0;i<16;i++)fprintf(stderr," %012lx",ks[i]);fputc('\n',stderr);
 }
+/* Control-flow experiment only: abstract native host calls while retaining
+   the original outer VM. These returns are NOT credential validation. */
+static unsigned semantic_calls;
+static int semantic_sha_fail,semantic_pad,semantic_shape,semantic_counter;
+static uint64_t semantic_unused_value;
+static uint64_t(MS *semantic_real_lookup)(void*,uint32_t,uint32_t);
+static uint64_t(MS *semantic_real_read_byte)(void*);
+static unsigned semantic_lookup_calls;
+static uint64_t semantic_live_value(uint64_t vm,int i){
+    uint64_t mask=q(vm+0x58)^(uint64_t)(i+1)*q(vm+0x60)^((uint64_t)*(uint8_t*)(vm+0xe8+i)*q(vm+0x68));
+    uint64_t v=q(vm+0x78+i*8);return *(uint8_t*)(vm+0x70)?v-mask:v^mask;
+}
+static uint64_t MS semantic_read_byte(void *ctx){
+    uint64_t vm=(uint64_t)ctx,pc=semantic_live_value(vm,1);
+    uint64_t value=semantic_real_read_byte(ctx);
+    if(*(uint8_t*)(vm+0xf60)==58)printf("SEMANTIC-ARG58 %lu %lu\n",pc,value&255);
+    return value;
+}
+static uint64_t MS semantic_lookup(void *ctx,uint32_t table,uint32_t index){
+    uint64_t result=semantic_real_lookup(ctx,table,index),vm=(uint64_t)ctx;
+    if(++semantic_lookup_calls>8192){fprintf(stderr,"SEMANTIC opcode budget exceeded\n");exit(8);}
+    printf("SEMANTIC-OP %lu %u %u %u %lx\n",semantic_live_value(vm,1),*(uint8_t*)(vm+0xf60),table,index,result);
+    if(*(uint8_t*)(vm+0xf60)==58){
+        printf("SEMANTIC-THUNK58 ");for(int i=0;i<32;i++)printf("%02x",((uint8_t*)result)[i]);puts("");
+        uint8_t *b=(void*)result;uint64_t target=0;
+        if(b[0]==0x48&&b[1]==0xb8)target=q(result+2);
+        if(b[0]==0x4c&&b[1]==0x8b&&b[2]==0x1d&&b[7]==0x48&&b[8]==0xb8){
+            uint64_t key=q(result+7+*(int32_t*)(b+3)),imm=q(result+9);
+            if(b[17]==0x4c&&b[18]==0x31&&b[19]==0xd8)target=key^imm;
+            if(b[17]==0x4c&&b[18]==0x01&&b[19]==0xd8)target=key+imm;
+        }
+        printf("SEMANTIC-TARGET58 %lx\n",target);
+    }
+    return result;
+}
+static int semantic_user_length,semantic_user_index;
+static uint64_t semantic_user_value;
+static uint64_t MS semantic_user_host(void *ctx,uint32_t op,void *arg){
+    (void)ctx;uint64_t ret=0;
+    if(++semantic_calls>2048){fprintf(stderr,"SEMANTIC user call budget exceeded\n");exit(8);}
+    if(op==2)semantic_user_index=*(int64_t*)arg;
+    if(op==3)ret=semantic_user_index<semantic_user_length;
+    if(op==4)ret=semantic_user_value;
+    if(op==5)ret=semantic_user_index;
+    printf("SEMANTIC-USER %u %lu index=%d\n",op,ret,semantic_user_index);fflush(stdout);
+    return ret;
+}
+static uint64_t MS semantic_host(void *ctx,uint32_t op,void *arg){
+    (void)ctx;uint64_t ret=semantic_unused_value;
+    if(++semantic_calls>128){fprintf(stderr,"SEMANTIC call budget exceeded\n");exit(8);}
+    if(op==8)ret=semantic_sha_fail;
+    if(op==14)ret=semantic_pad;
+    if(op==17)semantic_counter=*(int32_t*)arg;
+    if(op==18)ret=(int64_t)semantic_counter;
+    if(op==20)ret=semantic_shape;
+    printf("SEMANTIC-HOST %u %lu counter=%d\n",op,ret,semantic_counter);fflush(stdout);
+    if(getenv("SEMANTIC_LIVE")){
+        uint64_t vm=q(0x30002060);printf("SEMANTIC-LIVE");
+        for(int i=0;i<6;i++){
+            printf(" %lu",semantic_live_value(vm,i));
+        }printf(" %u\n",*(uint8_t*)(vm+0xf60));fflush(stdout);
+    }
+    return ret;
+}
 int main(int argc,char **argv){
     struct sigaction sa={.sa_sigaction=on_signal,.sa_flags=SA_SIGINFO};sigemptyset(&sa.sa_mask);sigaction(SIGSEGV,&sa,NULL);sigaction(SIGILL,&sa,NULL);sigaction(SIGBUS,&sa,NULL);
     void *image=mmap((void*)BASE,0x460000,PROT_READ|PROT_WRITE|PROT_EXEC,MAP_PRIVATE|MAP_ANONYMOUS|MAP_FIXED_NOREPLACE,-1,0);if(image==MAP_FAILED){perror("image mmap");return 1;}
@@ -161,6 +226,30 @@ int main(int argc,char **argv){
     *(uint8_t*)(BASE+0x3a49a0)=0xc3;*(uint8_t*)(BASE+0x3a3dc0)=0xc3;
     memset((void*)(BASE+0x1ecf9e),0x90,0x0f);
     memset((void*)(BASE+0x298cf4),0x90,0x0f);
+    if(argc>3&&!strcmp(argv[1],"--user-control")){
+        semantic_user_length=atoi(argv[2]);semantic_user_value=strtoull(argv[3],NULL,0);
+        if(semantic_user_length<0||semantic_user_length>65)return 2;
+        patch(BASE+0x48960,semantic_user_host);
+        uint64_t *ctx=alloc(128);for(int i=0;i<8;i++)ctx[i]=(uint64_t)newstr((void*)"",0);
+        ((uint64_t(MS*)(void*,uint32_t,void*))(BASE+0x396990))(ctx,10,NULL);
+        puts("SEMANTIC-USER-RETURN");return 0;
+    }
+    if(argc>4&&!strcmp(argv[1],"--script-control")){
+        if(getenv("PROBE_TICK"))probe_tick=strtoull(getenv("PROBE_TICK"),NULL,0);
+        if(getenv("PROBE_VOID_RETURN"))semantic_unused_value=strtoull(getenv("PROBE_VOID_RETURN"),NULL,0);
+        if(getenv("SEMANTIC_OPS")){
+            uint8_t *tr=mmap(NULL,4096,7,MAP_PRIVATE|MAP_ANONYMOUS,-1,0);
+            memcpy(tr,(void*)(BASE+0x335150),12);patch((uint64_t)tr+12,(void*)(BASE+0x33515c));
+            semantic_real_lookup=(void*)tr;patch(BASE+0x335150,semantic_lookup);
+            uint8_t *rd=mmap(NULL,4096,7,MAP_PRIVATE|MAP_ANONYMOUS,-1,0);
+            memcpy(rd,(void*)(BASE+0x3858a0),15);patch((uint64_t)rd+15,(void*)(BASE+0x3858af));
+            semantic_real_read_byte=(void*)rd;patch(BASE+0x3858a0,semantic_read_byte);
+        }
+        semantic_sha_fail=atoi(argv[2]);semantic_pad=atoi(argv[3]);semantic_shape=atoi(argv[4]);
+        patch(BASE+0x396990,semantic_host);
+        int ret=((int(MS*)(void))(BASE+0x3967a0))();
+        printf("SEMANTIC-RETURN %d\n",ret);return 0;
+    }
     if(getenv("FAST_DES")){patch(BASE+0x1ece80,fast_schedule);patch(BASE+0x17f610,fast_des);}
     if(getenv("LOG_SHA_BLOCK")){memset((void*)(BASE+0x283270),0x90,0x9d);patch(BASE+0x298930,log_sha_block);}
     if(getenv("LOG_SHA_ALL")){

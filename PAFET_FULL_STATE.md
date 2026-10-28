@@ -1,7 +1,9 @@
 # Pafet Crackme — Full reversing state
 
 > **Historical report — superseded in part (2026-10-28).** The cipher has
-> since been reconstructed. Start with [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md)
+> since been reconstructed. For corrected semantic/control-flow coverage see
+> [PAFET_SEMANTIC_COVERAGE.md](PAFET_SEMANTIC_COVERAGE.md); for crypto see
+> [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md)
 > and [PAFET_DES3_RECOVERY.md](PAFET_DES3_RECOVERY.md) for the corrected RC4
 > stream, 24-byte key construction, three DES3 passes, parity and padding,
 > native-loader limitations, and current unresolved credential recovery.

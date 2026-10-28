@@ -1,3 +1,5 @@
+> **Cobertura semántica posterior:** [PAFET_SEMANTIC_COVERAGE.md](PAFET_SEMANTIC_COVERAGE.md) distingue componentes reconstruidos de rutas VM todavía desconocidas.
+
 > **Auditoría posterior:** consultar [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md).
 > Las capturas y primitivas se reproducen, pero el cargador nativo presenta
 > devoluciones inconsistentes en la ruta completa de derivación de clave.

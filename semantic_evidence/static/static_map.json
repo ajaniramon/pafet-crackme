@@ -1,0 +1,342 @@
+{
+  "binary_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "image_base": "0x140000000",
+  "pe_entry": "0x1403a46d8",
+  "native_host_tables": {
+    "main_host": [
+      {
+        "opcode": 0,
+        "address": "0x1403969f0",
+        "role": "initialize target SHA string (slot 0)"
+      },
+      {
+        "opcode": 1,
+        "address": "0x140396a51",
+        "role": "print separator (slot 1)"
+      },
+      {
+        "opcode": 2,
+        "address": "0x140396a5b",
+        "role": "print banner (slot 2)"
+      },
+      {
+        "opcode": 3,
+        "address": "0x140396a65",
+        "role": "print separator (slot 3)"
+      },
+      {
+        "opcode": 4,
+        "address": "0x140396a6f",
+        "role": "print username prompt (slot 4)"
+      },
+      {
+        "opcode": 5,
+        "address": "0x140396a79",
+        "role": "getline username"
+      },
+      {
+        "opcode": 6,
+        "address": "0x140396aad",
+        "role": "print serial prompt (slot 5)"
+      },
+      {
+        "opcode": 7,
+        "address": "0x140396ab7",
+        "role": "getline serial"
+      },
+      {
+        "opcode": 8,
+        "address": "0x140396abd",
+        "role": "compare SHA hex of original username; 0=match, 1=mismatch"
+      },
+      {
+        "opcode": 9,
+        "address": "0x140396b24",
+        "role": "print invalid username (slot 6)"
+      },
+      {
+        "opcode": 10,
+        "address": "0x140396b2e",
+        "role": "transform username through user VM"
+      },
+      {
+        "opcode": 11,
+        "address": "0x140396c36",
+        "role": "transform serial through RC4 wrapper VMs"
+      },
+      {
+        "opcode": 12,
+        "address": "0x140396d87",
+        "role": "concatenate transformed inputs"
+      },
+      {
+        "opcode": 13,
+        "address": "0x140396ee2",
+        "role": "truncate key material to 24 bytes"
+      },
+      {
+        "opcode": 14,
+        "address": "0x140396f62",
+        "role": "key size below 24 predicate"
+      },
+      {
+        "opcode": 15,
+        "address": "0x140396f78",
+        "role": "append zero bytes to key"
+      },
+      {
+        "opcode": 16,
+        "address": "0x140396f92",
+        "role": "load/decode fixed ciphertext"
+      },
+      {
+        "opcode": 17,
+        "address": "0x1403970ed",
+        "role": "set cipher loop counter from argument"
+      },
+      {
+        "opcode": 18,
+        "address": "0x1403970fb",
+        "role": "get signed cipher loop counter"
+      },
+      {
+        "opcode": 19,
+        "address": "0x140397107",
+        "role": "one existing cipher pass plus unpad (not re-reversed)"
+      },
+      {
+        "opcode": 20,
+        "address": "0x140397239",
+        "role": "prefix/suffix predicate; 1=shape match"
+      },
+      {
+        "opcode": 21,
+        "address": "0x1403972ca",
+        "role": "print correct message (slot 9)"
+      },
+      {
+        "opcode": 22,
+        "address": "0x1403972d1",
+        "role": "print output with declared byte length"
+      },
+      {
+        "opcode": 23,
+        "address": "0x140397316",
+        "role": "print wrong credentials (slot 12)"
+      }
+    ],
+    "user_host": [
+      {
+        "opcode": 0,
+        "address": "0x140048989"
+      },
+      {
+        "opcode": 1,
+        "address": "0x140048995"
+      },
+      {
+        "opcode": 2,
+        "address": "0x1400489d0"
+      },
+      {
+        "opcode": 3,
+        "address": "0x1400489e7"
+      },
+      {
+        "opcode": 4,
+        "address": "0x140048a05"
+      },
+      {
+        "opcode": 5,
+        "address": "0x140048a4d"
+      },
+      {
+        "opcode": 6,
+        "address": "0x140048a5f"
+      }
+    ]
+  },
+  "regions": {
+    "crt_entry": {
+      "entry": "0x1403a46d8",
+      "runtime_function_start": "0x1403a46d8",
+      "runtime_function_end": "0x1403a46ea",
+      "has_pdata_entry": true
+    },
+    "main_wrapper": {
+      "entry": "0x1403967a0",
+      "runtime_function_start": "0x1403967a0",
+      "runtime_function_end": "0x140396985",
+      "has_pdata_entry": true
+    },
+    "main_VM": {
+      "entry": "0x14038d9d0",
+      "runtime_function_start": "0x14038d9d0",
+      "runtime_function_end": "0x14039677c",
+      "has_pdata_entry": true
+    },
+    "main_native_host": {
+      "entry": "0x140396990",
+      "runtime_function_start": "0x140396990",
+      "runtime_function_end": "0x1403973e0",
+      "has_pdata_entry": true
+    },
+    "string_decoder": {
+      "entry": "0x140380840",
+      "runtime_function_start": "0x140380840",
+      "runtime_function_end": "0x140380ace",
+      "has_pdata_entry": true
+    },
+    "user_VM": {
+      "entry": "0x14003f540",
+      "runtime_function_start": "0x14003f540",
+      "runtime_function_end": "0x140048925",
+      "has_pdata_entry": true
+    },
+    "user_native_host": {
+      "entry": "0x140048960",
+      "runtime_function_start": "0x140048960",
+      "runtime_function_end": "0x140048ab0",
+      "has_pdata_entry": true
+    },
+    "serial_outer_VM": {
+      "entry": "0x140264a60",
+      "runtime_function_start": "0x140264a60",
+      "runtime_function_end": "0x14026d9b6",
+      "has_pdata_entry": true
+    },
+    "serial_native_adapter": {
+      "entry": "0x14039d740",
+      "runtime_function_start": "0x14039d740",
+      "runtime_function_end": "0x14039d8f3",
+      "has_pdata_entry": true
+    },
+    "serial_inner_VM": {
+      "entry": "0x14022a120",
+      "runtime_function_start": "0x14022a120",
+      "runtime_function_end": "0x140232df8",
+      "has_pdata_entry": true
+    },
+    "sha_wrapper": {
+      "entry": "0x1402831c0",
+      "runtime_function_start": "0x1402831c0",
+      "runtime_function_end": "0x1402834ca",
+      "has_pdata_entry": true
+    },
+    "sha_VM": {
+      "entry": "0x14027aba0",
+      "runtime_function_start": "0x14027aba0",
+      "runtime_function_end": "0x140283192",
+      "has_pdata_entry": true
+    },
+    "sha_native_host": {
+      "entry": "0x1402834d0",
+      "runtime_function_start": "0x1402834d0",
+      "runtime_function_end": "0x140283a30",
+      "has_pdata_entry": true
+    },
+    "hex_decoder_VM": {
+      "entry": "0x1400804c0",
+      "runtime_function_start": "0x1400804c0",
+      "runtime_function_end": "0x1400889d1",
+      "has_pdata_entry": true
+    },
+    "live_accessor": {
+      "entry": "0x140381630",
+      "runtime_function_start": null,
+      "runtime_function_end": null,
+      "has_pdata_entry": false
+    },
+    "VM_handler_lookup": {
+      "entry": "0x140335150",
+      "runtime_function_start": null,
+      "runtime_function_end": null,
+      "has_pdata_entry": false
+    },
+    "VM_fail_stop": {
+      "entry": "0x140381090",
+      "runtime_function_start": "0x140381090",
+      "runtime_function_end": "0x1403815bf",
+      "has_pdata_entry": true
+    },
+    "cast58_clone1": {
+      "entry": "0x140386150",
+      "runtime_function_start": "0x140386150",
+      "runtime_function_end": "0x140386271",
+      "has_pdata_entry": true
+    },
+    "cast58_clone2": {
+      "entry": "0x140388310",
+      "runtime_function_start": "0x140388310",
+      "runtime_function_end": "0x140388431",
+      "has_pdata_entry": true
+    },
+    "cast58_clone3": {
+      "entry": "0x14038a270",
+      "runtime_function_start": "0x14038a270",
+      "runtime_function_end": "0x14038a391",
+      "has_pdata_entry": true
+    },
+    "cast58_clone4": {
+      "entry": "0x14038b8b0",
+      "runtime_function_start": "0x14038b8b0",
+      "runtime_function_end": "0x14038b9d8",
+      "has_pdata_entry": true
+    }
+  },
+  "warning": "24 native host callbacks are not all 62 logical VM instruction kinds",
+  "disassembly_ranges": {
+    "main_native_host": [
+      "0x140396990",
+      2544
+    ],
+    "user_native_host": [
+      "0x140048960",
+      308
+    ],
+    "string_decoder": [
+      "0x140380840",
+      654
+    ],
+    "live_accessor": [
+      "0x140381630",
+      170
+    ],
+    "VM_handler_lookup": [
+      "0x140335150",
+      32
+    ],
+    "VM_fail_stop": [
+      "0x140381090",
+      1327
+    ],
+    "cast58_clone1": [
+      "0x140386150",
+      289
+    ],
+    "cast58_clone2": [
+      "0x140388310",
+      289
+    ],
+    "cast58_clone3": [
+      "0x14038a270",
+      289
+    ],
+    "cast58_clone4": [
+      "0x14038b8b0",
+      296
+    ],
+    "serial_native_adapter": [
+      "0x14039d740",
+      435
+    ],
+    "main_VM_TLS_and_guard": [
+      "0x14038e329",
+      70
+    ],
+    "main_VM_dispatch": [
+      "0x14038eb64",
+      68
+    ]
+  }
+}

@@ -60,19 +60,20 @@ The baseline ZIP is evidence, not a package to overwrite the current source
 with. `initial_bundle_entries` records its original contents.
 `delivered_files_sha256` describes the earlier downloadable audit archive,
 before repository documentation was refreshed; `repository_files_sha256`
-describes the files included in this repository update. The manifest itself
+describes the cryptographic repository snapshot published as `5e76df0`, before the semantic audit. Later source changes are recorded separately in `semantic_evidence/manifest.json`. The manifest itself
 is excluded from its own file-hash list.
 
-To check the current repository snapshot:
+To check that historical cryptographic snapshot inside the Git repository:
 
 ```sh
 python - <<'PY'
 from pathlib import Path
-import hashlib, json
+import hashlib, json, subprocess
 root = Path('.')
 m = json.loads((root / 'audit_evidence/manifest.json').read_text())
 for name, expected in m['repository_files_sha256'].items():
-    assert hashlib.sha256((root / name).read_bytes()).hexdigest() == expected, name
+    data = subprocess.check_output(['git', 'show', '5e76df0:' + name])
+    assert hashlib.sha256(data).hexdigest() == expected, name
 print('PASS: repository audit file hashes')
 PY
 ```

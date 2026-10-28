@@ -82,3 +82,39 @@ The JSON reports successful assertions separately from KDF observations; it
 preserves failed KDF comparisons. A successful runner exit does not assert
 that every KDF observation matched. No command here validates real credentials
 in an unmodified Windows execution.
+
+
+## Semantic-audit modes
+
+These modes are **control projections with replaced native callbacks**, not
+valid original runs. They never establish that an original credential passes.
+
+```sh
+./native_probe --script-control SHA_FAIL PAD_NEEDED SHAPE_OK
+./native_probe --user-control LENGTH CHARACTER_RESULT
+SEMANTIC_LIVE=1 SEMANTIC_OPS=1 ./native_probe --script-control 0 1 1
+```
+
+`--script-control` retains the original main wrapper and outer VM; it models
+console/cipher actions and the three predicate results. Counter setters/getters
+are modeled according to their inspected native bodies. `PROBE_TICK` changes
+the fixed QPC value and `PROBE_VOID_RETURN` the nuisance return value of the
+other host calls. These are model parameters, not credentials.
+
+`--user-control` retains the original user VM and models its seven callbacks;
+length is bounded to 0..65. It studies the loop, not actual input derivation.
+
+`SEMANTIC_LIVE` prints six decoded live fields followed by the current logical
+opcode. Index 1 is the PC; its expression is independently checked against the
+original getter. Observation does not call that mutating getter.
+`SEMANTIC_OPS` instruments the original handler lookup and byte reader using
+trampolines. It records logical opcodes, PC, clone slots, and the observed
+operand/targets of opcode 58. The return value and host trace are compared
+against uninstrumented projection runs. These are traces of executed paths,
+not an exhaustive static CFG.
+
+The separate `--cipher` tail fixture in the semantic probe uses original cipher
+instructions and artificial intermediate data. Keep it distinct from a real
+challenge execution and from the projected control-flow runs. The final
+semantic coverage report supersedes any inference that 24 host callback kinds
+mean every VM instruction/path is understood.

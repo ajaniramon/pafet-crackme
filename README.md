@@ -1,15 +1,22 @@
-# Pafet Crackme — Cipher Recovery and Cryptographic Audit
+# Pafet Crackme — Cipher Recovery and Semantic Audit
 
-**Status (2026-10-28): UNSOLVED — justified blockage.** The cipher is
+**Status (2026-10-28): UNSOLVED — semantic coverage incomplete (D).** The cipher is
 reconstructed for complete blocks and reproduces the recorded captures.
 No valid username, serial or flag has been recovered or accepted by an
 unmodified execution of the original challenge.
 
-The remaining problem is credential/key recovery. Further VM reversing is
-not currently a demonstrated route to the flag, and no practical
-cryptanalytic shortcut has been identified from the available information.
+The cryptographic phase closed with no practical key-recovery shortcut.
+The semantic audit remains **incomplete**: native callbacks and observed VM
+paths are characterized, but unobserved control/runtime paths are not excluded.
+The next bounded experiments concern the controller and user-VM return path.
 
-Start with [the cryptographic audit](PAFET_CRYPTO_AUDIT.md) (Spanish), then
+Start with [the semantic coverage report](PAFET_SEMANTIC_COVERAGE.md) and
+[the REVoid assessment](PAFET_REVOID_ASSESSMENT.md) (Spanish). The new evidence
+includes native/virtual control projections, opcode 58 conversion tests and a
+memory-slack experiment that changes the isolated final predicate. None is
+original credential acceptance.
+
+For the previous phase, see [the cryptographic audit](PAFET_CRYPTO_AUDIT.md) (Spanish), then
 [the cipher recovery report](PAFET_DES3_RECOVERY.md) (English). The audit
 records both successful tests and limitations of the experimental loader.
 
@@ -113,6 +120,11 @@ real flag and do not exercise the original acceptance gate.
 
 | File or directory | Purpose |
 |---|---|
+| [PAFET_SEMANTIC_COVERAGE.md](PAFET_SEMANTIC_COVERAGE.md) | Current semantic coverage, unresolved regions and next experiments |
+| [PAFET_REVOID_ASSESSMENT.md](PAFET_REVOID_ASSESSMENT.md) | Source assessment and limited interpreter-instrumentation proof of concept |
+| [scripts/pafet_semantic_probe.py](scripts/pafet_semantic_probe.py) | Bounded original-byte and control-flow semantic tests |
+| [scripts/pafet_semantic_map.py](scripts/pafet_semantic_map.py) | Native callback tables and focused disassembly from the original PE |
+| [semantic_evidence/](semantic_evidence/) | Recorded semantic tests, instruction traces, provenance and hashes |
 | [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md) | Current conclusion, mathematical hypotheses, costs, counterexample and validation limits |
 | [PAFET_DES3_RECOVERY.md](PAFET_DES3_RECOVERY.md) | Cipher reconstruction, captures and earlier bounded search results |
 | [scripts/pafet_des3_offline.py](scripts/pafet_des3_offline.py) | Current byte-oriented key derivation and cipher model |
@@ -131,6 +143,22 @@ Original binary SHA-256:
 ```text
 fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a
 ```
+
+## Reproduce the semantic audit
+
+Install `pefile`, `capstone`, `unicorn` and follow the native build instructions
+when running the optional Linux x86-64 collector:
+
+```sh
+python scripts/pafet_semantic_map.py --out semantic_evidence_new/static
+python scripts/pafet_semantic_probe.py
+python scripts/pafet_semantic_probe.py --native scripts/native/native_probe --opcode-projection --tail-validation
+```
+
+The first probe command executes no DES. The last reuses the existing cipher
+for two directed tail tests; it does not repeat DES recovery or search real
+credentials. See [semantic_evidence/README.md](semantic_evidence/README.md) for
+exactly which dependencies are modeled and what the results do not prove.
 
 ## Historical reversing notes
 
