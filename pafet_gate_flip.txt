@@ -1,0 +1,112 @@
+// pafet_gate_flip.txt  --  script de x64dbg (x64dbg.exe, 64 bits)
+//
+// Experimento: ¿la derivación de la clave tras el gate SHA es la misma en el
+// binario ORIGINAL (gate forzado sin escribir bytes) que en pafet_pass8.exe?
+//
+// Antes de lanzarlo:
+//   1. Options > Preferences > Events: desmarca "Entry Breakpoint" y "TLS Callbacks".
+//      Deja solo "System Breakpoint" (está en ntdll, no en el .text de Pafet).
+//      Un int3 en .text es una escritura en código y contaminaría el experimento.
+//   2. Options > Preferences > Exceptions: añade E06D7363 (excepciones C++) a ignoradas.
+//      La VM lanza y captura excepciones C++ como parte de su flujo normal.
+//   3. Crea la carpeta C:\pafet\run\
+//   4. Abre el ejecutable, espera al System Breakpoint, y Script > Load > Run.
+//   5. Escribe username y serial en la consola del programa cuando los pida.
+//   6. Al terminar, copia C:\pafet\run\ a otra carpeta (A_alice, B_alice, ...)
+//      porque la siguiente ejecución la sobrescribe.
+//
+// El mismo script vale para pafet.bin y para pafet_pass8.exe: en pass8 el
+// salto ya está nopeado y forzar ZF no cambia nada, pero así las dos
+// ejecuciones sufren exactamente las mismas pausas del depurador.
+
+bpc                         // sin breakpoints software (int3 = escribir en .text)
+bphwc                       // limpia hardware breakpoints previos
+
+var base
+var gate
+var h20
+var str
+var ptr
+var len
+
+base = mod.main()
+gate = base + 0x396afb      // jne tras memcmp del digest (host 8)
+h20  = base + 0x397239      // entrada del host 20 (comprobación CMO{...})
+
+bphws gate, x, 1
+bphws h20, x, 1
+
+log "[pafet] base={p:base} gate={p:gate} h20={p:h20}"
+log "[pafet] Escribe username y serial en la consola del programa."
+
+wait_loop:
+erun
+cmp cip, gate
+je at_gate
+cmp cip, h20
+je at_h20
+log "[pafet] Parada inesperada en {p:cip}. Revisa excepciones/antidebug."
+ret
+
+at_gate:
+log "[pafet] gate alcanzado, ZF={d:_zf} (0 = el hash NO coincide)"
+_zf = 1
+log "[pafet] ZF forzado a 1 sin escribir memoria"
+bphwc gate
+jmp wait_loop
+
+at_h20:
+bphwc h20
+log "[pafet] host 20 alcanzado, ctx(rdi)={p:rdi}"
+
+// ctx+0x18 = f(user)
+str = rdi + 0x18
+call read_str
+log "[pafet] f(u)  len={d:len} {mem;24@ptr}"
+cmp len, 0
+je skip_fu
+savedata "C:/pafet/run/fu.bin", ptr, len
+skip_fu:
+
+// ctx+0x20 = transformación del serial
+str = rdi + 0x20
+call read_str
+log "[pafet] r(s)  len={d:len} {mem;24@ptr}"
+cmp len, 0
+je skip_rs
+savedata "C:/pafet/run/rs.bin", ptr, len
+skip_rs:
+
+// ctx+0x30 = clave final de 24 bytes
+str = rdi + 0x30
+call read_str
+log "[pafet] key   len={d:len} {mem;24@ptr}"
+cmp len, 0
+je skip_key
+savedata "C:/pafet/run/key.bin", ptr, len
+skip_key:
+
+// ctx+0x38 = salida tras las tres pasadas
+str = rdi + 0x38
+call read_str
+log "[pafet] out   len={d:len} {mem;72@ptr}"
+cmp len, 0
+je skip_out
+savedata "C:/pafet/run/out.bin", ptr, len
+skip_out:
+
+log "[pafet] Volcado completo en C:\pafet\run\. Dejando terminar el programa."
+erun
+ret
+
+// --- lee un std::string de MSVC en 'str' -> ptr, len ---
+// layout: +0x00 buffer SSO o puntero, +0x10 size, +0x18 capacity
+read_str:
+len = [str+0x10]
+cmp [str+0x18], 0x10
+jb read_sso
+ptr = [str]
+ret
+read_sso:
+ptr = str
+ret
