@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "./native_probe",
+      "--cipher",
+      "464340464ead7dfb28c25b6d0b0000000000000000000000",
+      "00"
+    ],
+    "POISON_TAIL": false,
+    "FAST_DES": false,
+    "stdout": "STAGE 1 29\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "command": [
+      "./native_probe",
+      "--cipher",
+      "464340464ead7dfb28c25b6d0b0000000000000000000000",
+      "00"
+    ],
+    "POISON_TAIL": true,
+    "FAST_DES": false,
+    "stdout": "STAGE 1 d9\n",
+    "stderr": "",
+    "returncode": 0
+  }
+]

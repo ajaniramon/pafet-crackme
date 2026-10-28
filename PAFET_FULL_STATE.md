@@ -1,5 +1,13 @@
 # Pafet Crackme — Full reversing state
 
+> **Historical report — superseded in part (2026-10-28).** The cipher has
+> since been reconstructed. Start with [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md)
+> and [PAFET_DES3_RECOVERY.md](PAFET_DES3_RECOVERY.md) for the corrected RC4
+> stream, 24-byte key construction, three DES3 passes, parity and padding,
+> native-loader limitations, and current unresolved credential recovery.
+> The original observations below are retained as historical evidence.
+
+
 **Author**: NIMA Nikjoo (GitHub `NIKJOO`) · **Challenge**: VSEC — Pafet Challenge
 **Document date**: 2026-10-28
 **Status**: UNSOLVED. Attack path confirmed; blocked at username preimage.

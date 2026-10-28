@@ -1,0 +1,386 @@
+{
+  "scope": "instrumented PE loader; NOT unmodified Windows acceptance",
+  "des_trace": {
+    "calls": 9,
+    "round_subkeys_checked": 144,
+    "directions": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    "final_block": "fd2077a101acdfae",
+    "canonical_PC1_PC2_rotations_and_independent_DES_match": true
+  },
+  "decoded_hash_and_empty_RC4_key": {
+    "args": [
+      "--strings"
+    ],
+    "environment": {},
+    "returncode": 0,
+    "stdout": "STRING-0 39343139663836623937626433373939303662653732656138303531376330373561343939643064623061333734393931333263326432303363633231343230\nSTRING-7 \n",
+    "stderr": ""
+  },
+  "sha": [
+    {
+      "args": [
+        "--sha-hex",
+        ""
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\nACTUAL-SHA-DIGEST e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    },
+    {
+      "args": [
+        "--sha-hex",
+        "616c696365"
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 616c6963658000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000028\nACTUAL-SHA-DIGEST 2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    },
+    {
+      "args": [
+        "--sha-hex",
+        "2041007a20"
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 2041007a208000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000028\nACTUAL-SHA-DIGEST 510aca16dac68675bfba8fa88fc6b0bea495fdd98c83a1c51f1a095576aaf927\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    },
+    {
+      "args": [
+        "--sha-hex",
+        "41610020c3b1ff"
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 41610020c3b1ff800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000038\nACTUAL-SHA-DIGEST cc7ac259b92a896fb1576a3df8d434ebeeef4d3ffc7d95933bdaaba351c27da4\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    },
+    {
+      "args": [
+        "--sha-hex",
+        "61616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161"
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161618000000000000001b8\nACTUAL-SHA-DIGEST 9f4390f8d30c2dd92ec9f095b65e2b9ae9b0a925a5258e241c9f1e910f734318\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    },
+    {
+      "args": [
+        "--sha-hex",
+        "6161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161"
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 61616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161618000000000000000\nACTUAL-SHA-BLOCK 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001c0\nACTUAL-SHA-DIGEST b35439a4ac6f0948b6d6f9e3c6af0f5f590ce20f1bde7090ef7970686ec6738a\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    },
+    {
+      "args": [
+        "--sha-hex",
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f"
+      ],
+      "environment": {
+        "LOG_SHA_ALL": "1"
+      },
+      "returncode": 0,
+      "stdout": "ACTUAL-SHA-BLOCK 000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f\nACTUAL-SHA-BLOCK 80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200\nACTUAL-SHA-DIGEST fdeab9acf3710362bd2658cdc9a29e8f9c757fcf9811603a8c447cd1d9151108\n",
+      "stderr": "",
+      "matches_standard_blocks_and_hashlib": true
+    }
+  ],
+  "unpad": [
+    {
+      "args": [
+        "--unpad",
+        ""
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD \n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "00"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD 00\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "09"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD 09\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "02"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD 02\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "4142434445464701"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD 41424344454647\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "4142434445464702"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD 414243444546\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "0808080808080808"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD \n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "4142434445464708"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD \n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--unpad",
+        "414141414141414109"
+      ],
+      "environment": {},
+      "returncode": 0,
+      "stdout": "UNPAD 414141414141414109\n",
+      "stderr": ""
+    }
+  ],
+  "derive_observations": [
+    {
+      "args": [
+        "--derive",
+        "616c696365",
+        "73657269616c303131"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 616c696365\nUSER-OP 1\nWORKING 6563696c61\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-OP 6\nWORKING 464340464e\nOUTPUT 464340464e\nUSER-TRANSFORM 464340464e\nSERIAL-TRANSFORM ad7dfb28c25b6d0bbb\nCONCAT 464340464ead7dfb28c25b6d0bbb\nTRUNCATE 464340464ead7dfb28c25b6d0bbb\nNEEDS-PAD 1\nKEY 464340464ead7dfb28c25b6d0bbb00000000000000000000\n",
+      "stderr": "",
+      "expected_key": "464340464ead7dfb28c25b6d0bbb00000000000000000000",
+      "expected_user_transform": "464340464e",
+      "expected_serial_transform": "ad7dfb28c25b6d0bbb",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "2041007a20",
+        "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 2041007a20\nUSER-OP 1\nWORKING 207a004120\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-OP 6\nWORKING 812a672b8d\nOUTPUT 812a672b8d\nUSER-TRANSFORM 812a672b8d\nSERIAL-TRANSFORM de198b42a7325b3d820f146c5b639c62d70b6db0e4d9fd805d3257293b8b4181\nCONCAT 812a672b8dde198b42a7325b3d820f146c5b639c62d70b6db0e4d9fd805d3257293b8b4181\nTRUNCATE 812a672b8dde198b42a7325b3d820f146c5b639c62d70b6d\nNEEDS-PAD 0\nKEY 812a672b8dde198b42a7325b3d820f146c5b639c62d70b6d\n",
+      "stderr": "",
+      "expected_key": "812a672b8dde198b42a7325b3d820f146c5b639c62d70b6d",
+      "expected_user_transform": "812a672b8d",
+      "expected_serial_transform": "de198b42a7325b3d820f146c5b639c62d70b6db0e4d9fd805d3257293b8b4181",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 414141414141414141414141414141\nUSER-OP 1\nWORKING 414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c\nOUTPUT 2225282b2e3134373a3d404346494c\nUSER-TRANSFORM \nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT ef2aba7596016a02\nTRUNCATE ef2aba7596016a02\nNEEDS-PAD 1\nKEY ef2aba7596016a0200000000000000000000000000000000\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494cef2aba7596016a0200",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": false,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "4141414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 4141414141414141414141414141414141\nUSER-OP 1\nWORKING 4141414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-INDEX 15\nUSER-INDEX 16\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c4f52\nOUTPUT 2225282b2e3134373a3d404346494c4f52\nUSER-TRANSFORM \nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT ef2aba7596016a02\nTRUNCATE ef2aba7596016a02\nNEEDS-PAD 1\nKEY ef2aba7596016a0200000000000000000000000000000000\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494c4f52ef2aba7596016a",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c4f52",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": false,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "4141414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 4141414141414141414141414141414141\nUSER-OP 1\nWORKING 4141414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-INDEX 15\nUSER-INDEX 16\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c4f52\nOUTPUT 2225282b2e3134373a3d404346494c4f52\nUSER-TRANSFORM 2225282b2e3134373a3d404346494c4f52\nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT 2225282b2e3134373a3d404346494c4f52ef2aba7596016a02\nTRUNCATE 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\nNEEDS-PAD 0\nKEY 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494c4f52ef2aba7596016a",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c4f52",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "4141414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 4141414141414141414141414141414141\nUSER-OP 1\nWORKING 4141414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-INDEX 15\nUSER-INDEX 16\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c4f52\nOUTPUT 2225282b2e3134373a3d404346494c4f52\nUSER-TRANSFORM 2225282b2e3134373a3d404346494c4f52\nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT 2225282b2e3134373a3d404346494c4f52ef2aba7596016a02\nTRUNCATE 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\nNEEDS-PAD 0\nKEY 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494c4f52ef2aba7596016a",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c4f52",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "4141414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 4141414141414141414141414141414141\nUSER-OP 1\nWORKING 4141414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-INDEX 15\nUSER-INDEX 16\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c4f52\nOUTPUT 2225282b2e3134373a3d404346494c4f52\nUSER-TRANSFORM 2225282b2e3134373a3d404346494c4f52\nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT 2225282b2e3134373a3d404346494c4f52ef2aba7596016a02\nTRUNCATE 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\nNEEDS-PAD 0\nKEY 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494c4f52ef2aba7596016a",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c4f52",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "4141414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 4141414141414141414141414141414141\nUSER-OP 1\nWORKING 4141414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-INDEX 15\nUSER-INDEX 16\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c4f52\nOUTPUT 2225282b2e3134373a3d404346494c4f52\nUSER-TRANSFORM 2225282b2e3134373a3d404346494c4f52\nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT 2225282b2e3134373a3d404346494c4f52ef2aba7596016a02\nTRUNCATE 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\nNEEDS-PAD 0\nKEY 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494c4f52ef2aba7596016a",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c4f52",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    },
+    {
+      "args": [
+        "--derive",
+        "4141414141414141414141414141414141",
+        "3132333435363738"
+      ],
+      "environment": {
+        "TRACE_USER": "1"
+      },
+      "returncode": 0,
+      "stdout": "USER-OP 0\nWORKING 4141414141414141414141414141414141\nUSER-OP 1\nWORKING 4141414141414141414141414141414141\nUSER-INDEX 0\nUSER-INDEX 1\nUSER-INDEX 2\nUSER-INDEX 3\nUSER-INDEX 4\nUSER-INDEX 5\nUSER-INDEX 6\nUSER-INDEX 7\nUSER-INDEX 8\nUSER-INDEX 9\nUSER-INDEX 10\nUSER-INDEX 11\nUSER-INDEX 12\nUSER-INDEX 13\nUSER-INDEX 14\nUSER-INDEX 15\nUSER-INDEX 16\nUSER-OP 6\nWORKING 2225282b2e3134373a3d404346494c4f52\nOUTPUT 2225282b2e3134373a3d404346494c4f52\nUSER-TRANSFORM 2225282b2e3134373a3d404346494c4f52\nSERIAL-TRANSFORM ef2aba7596016a02\nCONCAT 2225282b2e3134373a3d404346494c4f52ef2aba7596016a02\nTRUNCATE 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\nNEEDS-PAD 0\nKEY 2225282b2e3134373a3d404346494c4f52ef2aba7596016a\n",
+      "stderr": "",
+      "expected_key": "2225282b2e3134373a3d404346494c4f52ef2aba7596016a",
+      "expected_user_transform": "2225282b2e3134373a3d404346494c4f52",
+      "expected_serial_transform": "ef2aba7596016a02",
+      "key_matches_model": true,
+      "handler_output_matches_model": true
+    }
+  ],
+  "known_limitations": [
+    "Intermittent long-user wrapper return mismatch; not a program length restriction.",
+    "Some decoded string slots are unreliable in loader; slot8 gave empty/a0, not assumed CMO{.",
+    "SHA stream formatting/gate and whole original Windows execution are not exercised.",
+    "Partial DES block tail depends on memory past logical string length."
+  ],
+  "assertions_passed": true,
+  "real_searches_executed": 0
+}

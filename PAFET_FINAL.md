@@ -1,5 +1,13 @@
 # Pafet — Final report (stopped at block)
 
+> **Historical report — superseded in part (2026-10-28).** The cipher has
+> since been reconstructed. Start with [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md)
+> and [PAFET_DES3_RECOVERY.md](PAFET_DES3_RECOVERY.md) for the corrected RC4
+> stream, 24-byte key construction, three DES3 passes, parity and padding,
+> native-loader limitations, and current unresolved credential recovery.
+> The original observations below are retained as historical evidence.
+
+
 ## What is proven (verifiable offline, no binary needed)
 
 - `f_user(username) → s18`: reverse-scan formula `s18[i] = ((user[N-1-i] XOR 0x5a) + 7 + 3*i) & 0xFF`. **23/23 observations**, including unseen predictions (Alice, 123, 12x).

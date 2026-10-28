@@ -1,5 +1,13 @@
 # PAFET Phase 6 — Deliverable
 
+> **Historical report — superseded in part (2026-10-28).** The cipher has
+> since been reconstructed. Start with [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md)
+> and [PAFET_DES3_RECOVERY.md](PAFET_DES3_RECOVERY.md) for the corrected RC4
+> stream, 24-byte key construction, three DES3 passes, parity and padding,
+> native-loader limitations, and current unresolved credential recovery.
+> The original observations below are retained as historical evidence.
+
+
 ## Question
 
 Does `0x14016fa50` participate in generating `s38`?

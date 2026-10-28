@@ -1,0 +1,21 @@
+$ python scripts/pafet_des3_offline.py --self-test --parity-test
+PASS 'alice'/'serial01': sha256[:16]=66b0ab3df07fc783
+PASS 'alice'/'serial02': sha256[:16]=68bdf732c113e1eb
+PASS 'alice'/'serial03': sha256[:16]=68bdf732c113e1eb
+PASS 'alicE'/'serial01': sha256[:16]=21c1eb1c33ce4369
+PASS 'aliceX'/'serial01': sha256[:16]=7b0e07fbd7b27647
+PASS 'alice'/'serial011': sha256[:16]=bd2ffacec2e73684
+PASS 'A'/'0': sha256[:16]=281001ff91cdd3cc
+PASS 'AA'/'0': sha256[:16]=280fd5e9b3be6a7c
+PASS 'A'/'00': sha256[:16]=e6b1175a9fc53968
+PASS ''/'': sha256[:16]=956043bd298b7234
+PASS all 10 final digests, 9 intermediate prefixes, full empty capture
+Recovered offline algorithm: flip each of 64 serial bits independently
+PASS: exactly the 8 bit-0 flips preserve the 72-byte DES3 result; 56 other flips change it
+{"unchanged_serial_bits": [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0]]}
+
+$ python scripts/pafet_mitm.py --self-test
+PASS: independent synthetic cases for 8- and 16-byte usernames
+
+$ ./prefix_scan --self-test
+PASS: first blocks match recorded empty and alice/serial01 captures

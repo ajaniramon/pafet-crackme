@@ -1,0 +1,80 @@
+{
+  "scope": "synthetic validation only; no recovery or original acceptance claim",
+  "algebra": {
+    "generic_adjacent_inverse_cancellations": 0,
+    "three_pass_differs_from_one": true,
+    "if_K1_equals_K2": "F = D_K3, but F^3 = D_K3^3 in general",
+    "not_a_proof_against_all_possible_cryptanalysis": true
+  },
+  "parity": {
+    "all_24_key_byte_low_bits_ignored": true,
+    "does_not_remove_username_hash_check": true
+  },
+  "canonical_lengths": {
+    "serial_representative_max_for_N_lt24": "24-N bytes",
+    "serial_ignored_for_N_ge24": true,
+    "username_truncation_does_not_preserve_SHA256": true
+  },
+  "conditional_two_anchor_mitm": {
+    "hypotheses": [
+      "conventional padding before each encryption",
+      "username length 8 or 16",
+      "serial length <=8"
+    ],
+    "time": "O(U+S) DES evaluations up to constant factors",
+    "memory": "O(min(U,S)) if the smaller side is tabulated",
+    "full_space_user8_serial8": "about 2^57 token evaluations, about 2^56 entries",
+    "full_space_user16_serial8": "about 2^112 username candidates plus 2^56 serial candidates",
+    "synthetic_cases": [
+      {
+        "username_bytes": 8,
+        "serial_bytes": 8,
+        "user_candidates": 129,
+        "serial_candidates": 257,
+        "matches": 1,
+        "seconds": 0.06521226299992122,
+        "python_peak_bytes": 25916,
+        "stage_lengths": [
+          64,
+          56,
+          48
+        ]
+      },
+      {
+        "username_bytes": 16,
+        "serial_bytes": 8,
+        "user_candidates": 129,
+        "serial_candidates": 257,
+        "matches": 1,
+        "seconds": 0.0831644680001773,
+        "python_peak_bytes": 25010,
+        "stage_lengths": [
+          64,
+          56,
+          48
+        ]
+      }
+    ]
+  },
+  "padding_counterexample": {
+    "synthetic_only": true,
+    "ciphertext_bytes": 72,
+    "plain_bytes": 72,
+    "shape_predicate": true,
+    "stage_lengths": [
+      72,
+      72,
+      72
+    ],
+    "outer_PAD8_hypothesis": false,
+    "correct_credentials_missed_by_PAD8_mitm": true,
+    "conclusion": "72-byte ciphertext and CMO{...} shape do not imply nested padding"
+  },
+  "username_parity_test": {
+    "equivalent_key_variants": 256,
+    "matching_raw_SHA256_preimages": 1,
+    "not_the_challenge_target_hash": true
+  },
+  "real_searches_executed": 0,
+  "all_assertions_passed": true
+}

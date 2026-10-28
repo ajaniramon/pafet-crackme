@@ -1,0 +1,113 @@
+{
+  "original_binary_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "initial_bundle_sha256": "347d9634235197a98a7272070a8a671217e267c0bb05f003fd8b4d96420a07f4",
+  "initial_bundle_entries": [
+    {
+      "name": "README.md",
+      "size": 6666,
+      "sha256": "42d87ef6ac6e63ed52a5bc3b3c576e0e800a59b0c2ba83ff31310bfbc3957428"
+    },
+    {
+      "name": "PAFET_DES3_RECOVERY.md",
+      "size": 9409,
+      "sha256": "b849e2dfe1f0e5567e6da91c2053f390651cf0df016d90841e3a24c0e714855a"
+    },
+    {
+      "name": "scripts/pafet_des3_offline.py",
+      "size": 8186,
+      "sha256": "cfc3f721316d36e66cbce9387c6dae0ad151c732edddaf29ccf973491a3f961c"
+    },
+    {
+      "name": "scripts/pafet_mitm.py",
+      "size": 4680,
+      "sha256": "cde12af8c5c12f1a55392b3e4e742624552a0193e345ab6a80b1acd04c7475f5"
+    },
+    {
+      "name": "scripts/pafet_prefix_scan.c",
+      "size": 3387,
+      "sha256": "e8a08de6205c784eaf392875cafc1df98af22bb908bb98ce28be895d603810f8"
+    },
+    {
+      "name": "scripts/native/README.md",
+      "size": 2184,
+      "sha256": "db20964bb0109f682ad008a8876b1813e6b63f9da730b79d1e67802c1cd6ae68"
+    },
+    {
+      "name": "scripts/native/fh4_metadata.py",
+      "size": 2210,
+      "sha256": "01163398a939665e9e77e69913f5e01fd7e93a83dd717a4e73c486da019ffc46"
+    },
+    {
+      "name": "scripts/native/prepare_native.py",
+      "size": 3021,
+      "sha256": "22421fd66ec7c32ff12a9a647a072d259f6d00a290aad097aa54a0b25cb4a0c8"
+    },
+    {
+      "name": "scripts/native/native_probe.c",
+      "size": 15069,
+      "sha256": "bbf8a90fe2c57f160e7bdaef9593e09dafddfcc7cdab61f1fc784b18d2fb5a1e"
+    },
+    {
+      "name": "scripts/native/.gitignore",
+      "size": 74,
+      "sha256": "1ebfe9dd4879f62f87f4b944c2f7a60dcb6f132a5c4750ce8b913b4887092c49"
+    }
+  ],
+  "audit_classification": "C: BLOQUEO JUSTIFICADO",
+  "real_credential_searches_this_phase": 0,
+  "delivered_files_sha256": {
+    "PAFET_CRYPTO_AUDIT.md": "f5e962165e4bf37875159de3d5c1e75d2bec22d2a03e65b28fe3823d073e15c4",
+    "PAFET_DES3_RECOVERY.md": "a58c0ac758c67e5765b0b97b3633f897c2f1f2494048310bb8086771187033c9",
+    "PAFET_FULL_STATE.md": "e6e9232cd32941c55a546022603266fded043bf0e20ed3ab82bfd6a2478a8f49",
+    "README.md": "f1e452acce244ecac1abd675e5128e222b4930068dabbde3c11350f1a10e07f2",
+    "pafet.bin": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+    "scripts/pafet_des3_offline.py": "cfc3f721316d36e66cbce9387c6dae0ad151c732edddaf29ccf973491a3f961c",
+    "scripts/pafet_mitm.py": "cde12af8c5c12f1a55392b3e4e742624552a0193e345ab6a80b1acd04c7475f5",
+    "scripts/pafet_prefix_scan.c": "e8a08de6205c784eaf392875cafc1df98af22bb908bb98ce28be895d603810f8",
+    "scripts/pafet_crypto_audit.py": "07601bd3fc053bf28ea4748c4d70f7f306322760b6350d09c0edae6f301b917a",
+    "scripts/pafet_native_audit.py": "cf4637a15475fdaabb83da3e2d6bef385aa71f6ccd95c2072ae28aee69521b4f",
+    "scripts/native/native_probe.c": "190e991fd1f9534da10d349006084362a69111ccb463c1ab44c0ccc1ec8353af",
+    "scripts/native/fh4_metadata.py": "01163398a939665e9e77e69913f5e01fd7e93a83dd717a4e73c486da019ffc46",
+    "scripts/native/prepare_native.py": "22421fd66ec7c32ff12a9a647a072d259f6d00a290aad097aa54a0b25cb4a0c8",
+    "scripts/native/README.md": "5607bc1e4b3d1c25a87d0bd846c7a308955857c275c40ecd6b668359fb555480",
+    "audit_evidence/baseline_selftests.txt": "4ec8804e0db59bc7ff5ef81c946615cfcb25acb35255c76b388c0a3e917a1d6e",
+    "audit_evidence/crypto_audit.json": "6d8c82a69a93ba824f3ad497d7b94c234bae68057c13632ae545a6bdfcc4bd8e",
+    "audit_evidence/des_trace.txt": "7b4fc3914fd094655a85383d9de8f72ae68f8694dad09226c09ec47bccca6e53",
+    "audit_evidence/native_audit.json": "4d7e98e0c8f2a94d65bf07939665b83dfea11288dd8a2289a32385e121802ce6",
+    "audit_evidence/partial_tail.json": "b9b27cb16ea2c028c40b3f6da4e64af46ccb67203616a1b7e002114718f647df",
+    "audit_evidence/static_disassembly.txt": "93c8545d1db94f1f0f8739d261fdb65e6f0c0007c035e1919e030adb48ca2dfd"
+  },
+  "delivered_files_sha256_scope": "Earlier pafet_crypto_audit.zip snapshot, before this repository documentation refresh.",
+  "initial_bundle_repository_path": "audit_evidence/baseline/pafet_cipher_recovery.zip",
+  "repository_files_sha256": {
+    "README.md": "624b82c97b59490de4609aae2aa689dd348021e296bfd1d187239185aee0fcce",
+    "PAFET_CRYPTO_AUDIT.md": "0a8d58fcb49bf8f65eb30be02c8e1b3034bd040aa163b20da6e4a8869c49955a",
+    "PAFET_DES3_RECOVERY.md": "a58c0ac758c67e5765b0b97b3633f897c2f1f2494048310bb8086771187033c9",
+    "PAFET_FULL_STATE.md": "882b28184cd585f41a590d71137172804dc834e626a264fc9881cee2be284a4d",
+    "PAFET_FINAL.md": "331f910ef9e25b8f2a42aeb09cad8c56fda0898e6c9c185dc637ba6232f3ee87",
+    "PAFET_PHASE6_REPORT.md": "1bf058b5572f21d871d8a604862dc28632e0346c9655bc71421f095b0ba09b70",
+    "PAFET_CIPHER_STATUS.md": "79b75306322f79e989a87eaa46f4eda55943a0516ed6f7555dfc4f865a93b26a",
+    "PAFET_DEVIRT_STATUS.md": "d3623bc72867c7aa101d4105bd9e3a3e87728a3d705902ead75ed0cb63a6af46",
+    "pafet_vm_program.md": "e3e0431a0094b085c4bde82d041873a19c09b199b8699adc07a1b7df4355953e",
+    "pafet_offline.py": "83d4ae03b3ab540ae5ebe4eff7d2d32e6ffebda994ff23b04b3b82d6abbe276e",
+    "pafet.bin": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+    "scripts/pafet_des3_offline.py": "cfc3f721316d36e66cbce9387c6dae0ad151c732edddaf29ccf973491a3f961c",
+    "scripts/pafet_mitm.py": "cde12af8c5c12f1a55392b3e4e742624552a0193e345ab6a80b1acd04c7475f5",
+    "scripts/pafet_prefix_scan.c": "e8a08de6205c784eaf392875cafc1df98af22bb908bb98ce28be895d603810f8",
+    "scripts/pafet_crypto_audit.py": "07601bd3fc053bf28ea4748c4d70f7f306322760b6350d09c0edae6f301b917a",
+    "scripts/pafet_native_audit.py": "cf4637a15475fdaabb83da3e2d6bef385aa71f6ccd95c2072ae28aee69521b4f",
+    "scripts/native/native_probe.c": "190e991fd1f9534da10d349006084362a69111ccb463c1ab44c0ccc1ec8353af",
+    "scripts/native/prepare_native.py": "22421fd66ec7c32ff12a9a647a072d259f6d00a290aad097aa54a0b25cb4a0c8",
+    "scripts/native/fh4_metadata.py": "01163398a939665e9e77e69913f5e01fd7e93a83dd717a4e73c486da019ffc46",
+    "scripts/native/README.md": "5607bc1e4b3d1c25a87d0bd846c7a308955857c275c40ecd6b668359fb555480",
+    "scripts/native/.gitignore": "1ebfe9dd4879f62f87f4b944c2f7a60dcb6f132a5c4750ce8b913b4887092c49",
+    "audit_evidence/README.md": "f8843ddc6478fb9535fb301e85220dfb4894a52771aa750aa56e35e2e96f0200",
+    "audit_evidence/baseline/pafet_cipher_recovery.zip": "347d9634235197a98a7272070a8a671217e267c0bb05f003fd8b4d96420a07f4",
+    "audit_evidence/baseline_selftests.txt": "4ec8804e0db59bc7ff5ef81c946615cfcb25acb35255c76b388c0a3e917a1d6e",
+    "audit_evidence/crypto_audit.json": "6d8c82a69a93ba824f3ad497d7b94c234bae68057c13632ae545a6bdfcc4bd8e",
+    "audit_evidence/des_trace.txt": "7b4fc3914fd094655a85383d9de8f72ae68f8694dad09226c09ec47bccca6e53",
+    "audit_evidence/native_audit.json": "4d7e98e0c8f2a94d65bf07939665b83dfea11288dd8a2289a32385e121802ce6",
+    "audit_evidence/partial_tail.json": "b9b27cb16ea2c028c40b3f6da4e64af46ccb67203616a1b7e002114718f647df",
+    "audit_evidence/static_disassembly.txt": "5ea38cafcd5ef7d13328ab2d0d43830ca8a4df607afeb137aea0cf9a6d3380ab"
+  }
+}

@@ -1,77 +1,161 @@
-# Pafet Crackme — Open Call for Help
+# Pafet Crackme — Cipher Recovery and Cryptographic Audit
 
-> **tl;dr**: Reversed about 60% of a nested VM crackme by **NIMA Nikjoo** (VSEC — Pafet Challenge). Hit a wall on the cipher-VM. Looking for reversers who want to help crack the last stretch.
+**Status (2026-10-28): UNSOLVED — justified blockage.** The cipher is
+reconstructed for complete blocks and reproduces the recorded captures.
+No valid username, serial or flag has been recovered or accepted by an
+unmodified execution of the original challenge.
 
-## What's in this repo
+The remaining problem is credential/key recovery. Further VM reversing is
+not currently a demonstrated route to the flag, and no practical
+cryptanalytic shortcut has been identified from the available information.
 
-A dump of ~50 hours of dynamic + static reversing on the `pafet.bin` challenge. The pipeline from credentials to the point where cipher-VM takes over is reproducible offline (`pafet_offline.py`, 23/23 + 3/3 + 2/2 validations). What's missing: the final `s30 → s38` transformation inside a 3-level nested VM with ASLR-noise-injected state.
+Start with [the cryptographic audit](PAFET_CRYPTO_AUDIT.md) (Spanish), then
+[the cipher recovery report](PAFET_DES3_RECOVERY.md) (English). The audit
+records both successful tests and limitations of the experimental loader.
 
-- **`pafet.bin`** — original binary (PE x86-64 VC++2019, image base `0x140000000`, 4396544 B), unmodified.
-- **`pafet_pass8.exe`** — 2-byte patch that bypasses the SHA-256 username gate. Lets you run with any user and observe the cipher-VM output.
-- **`pafet_oracle.exe`** — additional patches that also bypass the final `CMO{...}` check, printing the raw 72-byte plaintext for any input.
-- **`pafet_offline.py`** — validated offline pipeline for the parts that are solved.
-- Reports in English (`PAFET_FINAL.md`, `PAFET_FULL_STATE.md`, `PAFET_PHASE6_REPORT.md`, `PAFET_CIPHER_STATUS.md`, `PAFET_DEVIRT_STATUS.md`, `pafet_vm_program.md`).
-- `scripts/` — all Frida instrumentation and offline analysis scripts (100+ files, numbered by phase).
+## Recovered pipeline
 
-## The challenge in one paragraph
+The original checks the **complete SHA-256 of the original username bytes**:
 
-The program asks for `username` and `serial`. The username is first checked by SHA-256 against a hardcoded hash. If accepted, both inputs go through a transformation that derives a 72-byte plaintext `s38`. The program checks that `s38` starts with `CMO{` and ends with `}`. If so, it prints `[+] Flag: <s38>`. The hash target is:
-
+```text
+9419f86b97bd379906be72ea80517c075a499d0db0a37499132c2d203cc21420
 ```
-sha256(username) == 9419f86b97bd379906be72ea80517c075a499d0db0a37499132c2d203cc21420
+
+For username bytes `u` and serial bytes `s`, the reconstructed key is:
+
+```python
+f = bytes(((c ^ 0x5a) + 7 + 3*i) & 255
+          for i, c in enumerate(reversed(u)))
+r = ARC4.new(b'\0').encrypt(s)
+key = (f + r)[:24].ljust(24, b'\0')
 ```
 
-## What's solved
+The observed empty RC4-key behavior is equivalent to the one-byte zero key
+above. The stream **does not repeat after eight bytes**. Splitting `key`
+into `K1 || K2 || K3`, one cipher pass is:
 
-| Stage | Formula | Status |
-|---|---|---|
-| `f_user(user) → s18` | reverse-scan `s18[i] = ((user[N-1-i] ^ 0x5a) + 7 + 3*i) & 0xFF` | ✅ 23/23 observations incl. unseen predictions |
-| `g_serial(serial) → s20` | `serial ^ 0xde188941a3375d3a` | ✅ 10/10, lens 1..8 |
-| `build_s30 = s18 ++ s20` | concatenation | ✅ 3/3 |
-| `canonical_s30` | cipher ignores bit 0 of `s20[-1]` (so `serial02 ≡ serial03`, `'2' ≡ '3'`) | ✅ 2/2 equivalence predictions |
+```text
+F(X) = D_K1(E_K2(D_K3(X)))    # Triple DES EDE decryption, ECB
+```
 
-Run `python pafet_offline.py` to see all of the above validate.
+The fixed ciphertext is 72 bytes, decoded from 144 ASCII hex characters at
+`0x1403dbbc0`. The program applies `F` three times with the same key and a
+permissive unpad after each pass. DES ignores the low bit of **every** key
+byte. Key zero-padding is actual content, not unused string capacity.
 
-## What's blocking
+The cipher stage checks the `CMO{...}` shape, including the closing `}`.
+Only credentials accepted by the original username gate and producing a
+valid flag count as a solution.
 
-**`cipher_transform(s30) → s38` is not reversed.** The cipher-VM is nested 3 levels deep (level 1 at `0x1400c0510`, level 2 at `0x1400d3fe0`, level 3 at `0x140176950`), each with its own encrypted bytecode and dispatcher. On top of that, the protector appears to inject ASLR-dependent state into many internal fields that **do not affect the final output** but confuse state-based static recovery.
+## Evidence and limits
 
-Specifically identified as **noise** (same credentials, different processes → different internal state, same `s38`):
+- The offline solver reproduces ten recorded final output digests, nine
+  intermediate prefixes and the full empty-input capture.
+- A trace of original DES instructions matches nine independent DES calls
+  and all 144 round subkeys. Actual SHA VM padding and original compression
+  match seven standard SHA-256 cases, including embedded NUL and two blocks.
+- A partial last DES block reads past the string's logical length. Its tail
+  depends on memory slack; the solver stops instead of inventing padding.
+  The first eight plaintext bytes remain independently computable.
+- The Linux PE loader adapts APIs, allocation, exception handling and cookie
+  checks. It has intermittent incorrect wrapper returns during complete key
+  derivation, even when internal transformation output is correct. It is
+  **not** a complete unmodified Windows execution or an acceptance oracle.
+- A two-anchor MITM works on synthetic examples under conventional nested
+  padding and specific username/serial lengths. A synthetic counterexample
+  proves that ciphertext size and flag shape do not imply that padding.
+  Without bounded candidate sets, even the favorable 8+8-byte layout needs
+  roughly 2^56 table entries (about 1.5 EiB for 24-byte records).
+- No useful username length/alphabet constraint or username–serial relation
+  was verified. The latest audit ran no new real-credential search.
 
-- Loop 3 of `0x140176950` — writes to a buffer never read again
-- `0x14016fa50` — three "key-dependent" ops are dead stores; actual state update depends only on prior ASLR-seeded state
-- `0x1401af6b0` as a direct producer — 11,352 calls per cipher#3 invocation; 0 modify bytes 64-71 of the first 80-byte heap buffer monitored. The RIP that writes those bytes (`0x1401afa6a`) *is* inside this function per `.pdata`, but the diff pre/post experiment cannot locate the specific call. Most likely the buffer monitored differs between runs by ASLR allocation order.
+See [audit_evidence/README.md](audit_evidence/README.md) for saved results,
+failed observations, integrity hashes and baseline provenance. Previous
+searches and their negative results are documented in the recovery report;
+they are not evidence that the credential space has been exhausted.
 
-Full details and reproducers in `PAFET_FINAL.md` and `PAFET_PHASE6_REPORT.md`.
+## Reproduce the bounded tests
 
-## Hashcat line
+Python 3 and PyCryptodome are required:
 
-The SHA-256 target has been attacked for ~52 phases on a Mac mini (M-series). Masks tried include: standard wordlists (rockyou, best64, dive, d3ad0ne), `?l^N` / `?a^N` masks for N up to 7, prefixes `vsec/VSEC/Pafet/pafet/PAFET/nikjoo/Nikjoo/NIKJOO/nima`, Persian name wordlists (~400), GitHub author lists (~388 names). No match. Suggests either an uncommon word, a non-dictionary string, or OSINT clue I'm missing.
+```sh
+python -m pip install pycryptodome
+python scripts/pafet_des3_offline.py --self-test --parity-test
+python scripts/pafet_mitm.py --self-test
+python scripts/pafet_crypto_audit.py
+python scripts/pafet_native_audit.py --trace audit_evidence/des_trace.txt
+```
 
-## Ways to help
+To compute a candidate's exact first block:
 
-1. **OSINT on the author** — Nima Nikjoo (GitHub `NIKJOO`). Any guess for the username that passes `sha256(x) == 9419f86b...` wins immediately.
-2. **Known-plaintext attack from `CMO{` and `}`** — if the cipher is any kind of invertible stream-ish construction, those 5 bytes could be a lever. The avalanche test (every bit changes with any input bit) argues against a stream cipher, but maybe the structure helps anyway.
-3. **Unicorn or qiling emulation** — emulate `0x1400c0510` with a stub environment and feed s30 directly. This bypasses the whole username question and gives a `cipher(s30) → s38` oracle. I started on this in `pafet_unicorn_h10.py` for a sibling VM and ran into CRT stub proliferation.
-4. **Static devirtualization** — read the three dispatcher jump tables (`0x1400c94a8` level 1, `0x14039ddec` level 2) and port handlers manually. Painful but tractable.
-5. **Spot a mistake** — if a diff finding or an inferred invariant is wrong, say so. Blocking contradictions are listed explicitly in `PAFET_FINAL.md`.
+```sh
+python scripts/pafet_des3_offline.py alice serial01 --prefix-only
+```
 
-## Running the binary
+These are example credentials, not a solution. The complete-output mode
+raises an explicit error if an intermediate trim leaves a partial block.
+The Python functions accept bytes; the CLI encodes text as UTF-8, which is
+not a guarantee about Windows console input encoding.
 
-Windows x64 only. The original is harmless (fails credential check). The patched versions are convenient to see cipher-VM output without needing a valid username:
+The optional OpenSSL C prefix scanner has two regression vectors:
+
+```sh
+gcc -O3 -Wno-deprecated-declarations scripts/pafet_prefix_scan.c -lcrypto -o /tmp/pafet_prefix_scan
+/tmp/pafet_prefix_scan --self-test
+```
+
+For Linux x86-64 native instruction experiments, see
+[scripts/native/README.md](scripts/native/README.md). That workflow also
+requires GCC, `pefile` and `capstone`. The synthetic tests do not recover a
+real flag and do not exercise the original acceptance gate.
+
+## Repository map
+
+| File or directory | Purpose |
+|---|---|
+| [PAFET_CRYPTO_AUDIT.md](PAFET_CRYPTO_AUDIT.md) | Current conclusion, mathematical hypotheses, costs, counterexample and validation limits |
+| [PAFET_DES3_RECOVERY.md](PAFET_DES3_RECOVERY.md) | Cipher reconstruction, captures and earlier bounded search results |
+| [scripts/pafet_des3_offline.py](scripts/pafet_des3_offline.py) | Current byte-oriented key derivation and cipher model |
+| [scripts/pafet_crypto_audit.py](scripts/pafet_crypto_audit.py) | Small synthetic mathematical tests; no real-credential search |
+| [scripts/pafet_native_audit.py](scripts/pafet_native_audit.py) | Independent DES schedule comparison and native observation collector |
+| [scripts/pafet_mitm.py](scripts/pafet_mitm.py) | Earlier conditional one-anchor MITM; assumptions are explicit |
+| [scripts/pafet_prefix_scan.c](scripts/pafet_prefix_scan.c) | First-block scanner against a fixed list of serial hypotheses |
+| [scripts/native/](scripts/native/) | Experimental PE loader sources and build instructions |
+| [audit_evidence/](audit_evidence/) | Captured results, disassembly, hashes and frozen pre-audit bundle |
+| [pafet.bin](pafet.bin) | Unmodified original challenge, PE x86-64 VC++2019, 4,396,544 bytes |
+| `pafet_pass8.exe`, `pafet_oracle.exe` | Existing patched research oracles; never proof of a solution |
+| [pafet_offline.py](pafet_offline.py) | Historical partial model; superseded, including its repeated serial-mask assumption |
+
+Original binary SHA-256:
+
+```text
+fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a
+```
+
+## Historical reversing notes
+
+The original reports and instrumentation are retained for provenance:
+[PAFET_FULL_STATE.md](PAFET_FULL_STATE.md), [PAFET_FINAL.md](PAFET_FINAL.md),
+[PAFET_PHASE6_REPORT.md](PAFET_PHASE6_REPORT.md),
+[PAFET_CIPHER_STATUS.md](PAFET_CIPHER_STATUS.md),
+[PAFET_DEVIRT_STATUS.md](PAFET_DEVIRT_STATUS.md) and
+[pafet_vm_program.md](pafet_vm_program.md).
+Their unresolved-cipher claims and some early key/parity hypotheses are
+superseded by the current reports. The scripts directory retains the prior
+Frida instrumentation and analysis scripts.
+
+## Running the challenge
+
+Windows x64:
 
 ```powershell
-# Original — asks for user/serial, says "Invalid username" for anything
-.\pafet.bin
-
-# Patched: skips SHA-256 gate, still checks CMO{...} prefix at the end
-.\pafet_pass8.exe
-
-# Oracle: skips both checks, prints the raw plaintext for any input
-.\pafet_oracle.exe
+.\pafet.bin         # Original: full username and flag checks
+.\pafet_pass8.exe   # Research patch: bypasses username SHA comparison
+.\pafet_oracle.exe  # Research patch: also bypasses final flag check
 ```
 
-Both patched versions are included for convenience of other reversers. Byte-for-byte diffs are documented in `PAFET_FULL_STATE.md`.
+Patch byte differences are preserved in the historical full-state report.
+Arbitrary bytes printed as a flag by a patched executable are not a solution.
 
 ## Credits and license
 

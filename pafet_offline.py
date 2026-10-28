@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Pafet offline reconstruction — PROGRESSIVE.
+"""HISTORICAL partial model; superseded by scripts/pafet_des3_offline.py.
+
+Do not use this file to derive current cipher keys. In particular, repeating
+its 8-byte SERIAL_KEY for longer serials is incorrect; the actual transform
+uses the RC4 zero-key stream, and key material is truncated/zero-padded to 24.
+See PAFET_CRYPTO_AUDIT.md for verified behavior and native-loader limitations.
+
+Original progressive notes (preserved):
 
 VERIFIED (byte-by-byte against runtime):
   - f_user(username) → s18     : 21/21 observations (incl. 4 predictions)
