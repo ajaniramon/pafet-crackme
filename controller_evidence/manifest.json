@@ -1,0 +1,125 @@
+{
+  "phase": "complete logical-main controller slice",
+  "previous_semantic_snapshot_commit": "55567c0f09f32ac654a31764608cc363ef6d5bb5",
+  "global_outcome": "D: COBERTURA INCOMPLETA",
+  "logical_main_coverage": "complete under explicit native-host contracts",
+  "original_binary_unchanged": true,
+  "original_binary_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "valid_original_credentials_recovered": false,
+  "original_flag_acceptance_demonstrated": false,
+  "real_credential_searches": 0,
+  "DES_SHA_executions_this_phase": 0,
+  "proof_scope": "PAFET_CONTROLLER_SLICE.md; projected original interpreter, forced original-materializer extraction, original-byte components with documented adapters",
+  "test_counts": {
+    "blocks": 105,
+    "static_instructions": 482,
+    "reachable_in_contract_model": 409,
+    "unreachable_in_contract_model": 73,
+    "padding_bytes": 1131,
+    "original_map_cases": 361,
+    "constant_cases": 92,
+    "operand_reader_cases": 716,
+    "native_control_contrasts": 32,
+    "native_dispatches_checked": 8248,
+    "native_operands_checked": 6368,
+    "native_stack_events_checked": 8976
+  },
+  "all_assertions_passed": true,
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "dependencies": {
+    "pefile": "2024.8.26",
+    "capstone": "5.0.9",
+    "unicorn": "2.1.4"
+  },
+  "files": {
+    "PAFET_SEMANTIC_COVERAGE.md": {
+      "bytes": 25444,
+      "sha256": "cbd5e67d5b219f224416956e388961c136246a91b2d2582d97a16c2f2d722cc0"
+    },
+    "PAFET_REVOID_ASSESSMENT.md": {
+      "bytes": 11817,
+      "sha256": "ac9749266356b3c858331b12cbeb63789207064d021a76cccd75764661d482bb"
+    },
+    "PAFET_CONTROLLER_SLICE.md": {
+      "bytes": 9923,
+      "sha256": "e9ed6f7f59f5aa2ded0766195a9157c55d5a4b9c2f2617c91368291e0ffbcec8"
+    },
+    "README.md": {
+      "bytes": 10502,
+      "sha256": "b936f16488ee754588a8d34265e0e8b2d73efacb993a0e4f74e1f3f10e544aa8"
+    },
+    "scripts/pafet_controller_slice.py": {
+      "bytes": 19417,
+      "sha256": "613a1f322a875fab67c158d79b4ce5871d6ad5e9ae8c6217df65347a517c72ba"
+    },
+    "scripts/pafet_semantic_probe.py": {
+      "bytes": 22252,
+      "sha256": "91aa2db05ab2adfbdec88e73d8ab7478925f4fdabaaaf4e7a36991310e281aae"
+    },
+    "scripts/pafet_semantic_map.py": {
+      "bytes": 4631,
+      "sha256": "049ace7760b399d1831b2dd495ff33a8a5c99b17bfc18518a6d50e2f2eec824f"
+    },
+    "scripts/native/native_probe.c": {
+      "bytes": 26941,
+      "sha256": "33707fe90f4c3fd7fda9bb6628a0cf5bd49b6f8396843d758b8e71284b992701"
+    },
+    "scripts/native/native_context.S": {
+      "bytes": 1802,
+      "sha256": "ee6d9a209cf7f3d5db00433145c506f732826c1e267741459691c7f94b411db3"
+    },
+    "scripts/native/prepare_native.py": {
+      "bytes": 3021,
+      "sha256": "22421fd66ec7c32ff12a9a647a072d259f6d00a290aad097aa54a0b25cb4a0c8"
+    },
+    "scripts/native/README.md": {
+      "bytes": 7259,
+      "sha256": "76680010a4e5590e184292bc496540ccd6e0dbd418e18ee9c001c532700f2874"
+    },
+    "semantic_evidence/README.md": {
+      "bytes": 4565,
+      "sha256": "5cfeae914dd326c8f3b422b3198772a8682d5e7ddf4d2e9b7969f041aee453d9"
+    },
+    "pafet.bin": {
+      "bytes": 4396544,
+      "sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a"
+    },
+    "controller_evidence/README.md": {
+      "bytes": 2319,
+      "sha256": "45bba339d60a215937683f287a5cecee7ba88b00be24ad1cec1a3862277302e6"
+    },
+    "controller_evidence/controller_slice_tests.json": {
+      "bytes": 30407,
+      "sha256": "3875eda6a9681e006734bdaa395933ba97519f22b551398ee6b7dffeda77e662"
+    },
+    "controller_evidence/decoded_main_program.json": {
+      "bytes": 81931,
+      "sha256": "eab41f2ef7d28eac5a165d5c169825352f758a741ce2930120a5ab1be1127d62"
+    },
+    "controller_evidence/main_bytecode_wire.bin": {
+      "bytes": 2730,
+      "sha256": "bbf827ceae0c0103dfdef84c677c7a7f83c26a3fd2b78466a7fb0d4ba46ff256"
+    },
+    "controller_evidence/main_program.txt": {
+      "bytes": 21176,
+      "sha256": "35b6fd0b49ddf923cc4745379a95056074792d5a5be408ba2b327591ed61e1b1"
+    },
+    "controller_evidence/materializer_dump.txt": {
+      "bytes": 7667,
+      "sha256": "50a1aa5751e3dd940ab6b0793f7adba31e875aaef01936e1a56bcaf048d01376"
+    },
+    "controller_evidence/operand_trace_success.txt": {
+      "bytes": 55370,
+      "sha256": "b4ed4c5ea8a755d510ee43423324ad89fd3b69a1c4878410c6480b6b605f8127"
+    },
+    "controller_evidence/operand_trace_username_reject.txt": {
+      "bytes": 9765,
+      "sha256": "d45207a4f7da7f1ae8fed0343e5a94a0a669830750d7e83b4ee5b90073c3a022"
+    },
+    "controller_evidence/semantic_regression.json": {
+      "bytes": 635900,
+      "sha256": "5291e06b77ba5af6499ad4b4cf413a56a95deb130395dfe45dfccb805145be2b"
+    }
+  }
+}

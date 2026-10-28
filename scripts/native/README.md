@@ -118,3 +118,35 @@ instructions and artificial intermediate data. Keep it distinct from a real
 challenge execution and from the projected control-flow runs. The final
 semantic coverage report supersedes any inference that 24 host callback kinds
 mean every VM instruction/path is understood.
+
+## Complete main logical bytecode and operand traces
+
+```sh
+SEMANTIC_OPS=1 SEMANTIC_OPERANDS=1 ./native_probe --script-control 0 1 1
+SEMANTIC_DUMP_WIRE=1 ./native_probe --script-control 0 1 1
+```
+
+`SEMANTIC_OPERANDS` adds original U8/U16/U32 reader results, push/pop values
+and resolved thunk targets. Its reader/push/pop trampolines copy 15 complete
+prologue bytes at this exact binary's addresses; the lookup trampoline uses
+its independently inspected 12-byte prologue. These offsets are target-specific.
+`SEMANTIC_WINDOWS` optionally adds noisy mutable-window diagnostics; those
+windows are not used as the canonical full program.
+
+`SEMANTIC_DUMP_WIRE` is a **forced extraction**, not normal path coverage. At
+the first modeled host callback, it calls the original block materializer,
+block resolver and segment opener for every block, dumps `code XOR shadow`,
+then exits immediately. Four controlled configurations yield identical 2730
+bytes. The materializer and copied image are instrumented; the disk PE is
+unchanged. No inference of unmodified original acceptance follows.
+
+The target-specific decoder and dependency slice are reproduced from the repo
+root with:
+
+```sh
+python scripts/pafet_controller_slice.py --native scripts/native/native_probe --out controller_evidence_new
+```
+
+The report distinguishes the
+complete logical program under host contracts from incomplete native runtime
+coverage. No DES/SHA runs are involved.

@@ -1,0 +1,590 @@
+# Logical main program; PCs are byte offsets, not native addresses.
+# UNREACHED means unreachable only under the documented host contracts.
+0000 block=000 HOST         0 0
+0004 block=000 DROP         
+0005 block=000 HOST         1 0
+0009 block=000 DROP         
+0010 block=000 CONST        0 = 0x5bf2838ff8990697
+0015 block=000 CONST        1 = 0xa40d7c700766f969
+0020 block=000 ADD          
+0021 block=000 JMP_BLOCK    1 -> PC 520
+0026 block=012 CONST        10 = 0x8800e178ff491b97
+0031 block=012 SET          0
+0034 block=012 HOST         15 0
+0038 block=012 DROP         
+0039 block=012 JMP_BLOCK    48 -> PC 1404
+0052 block=070 GET          17 [UNREACHED under contracts]
+0055 block=070 GET          18 [UNREACHED under contracts]
+0058 block=070 NE            [UNREACHED under contracts]
+0059 block=070 DROP          [UNREACHED under contracts]
+0060 block=070 JMP_BLOCK    42 -> PC 234 [UNREACHED under contracts]
+0078 block=072 GET          4
+0081 block=072 GET          21
+0084 block=072 NE           
+0085 block=072 DROP         
+0086 block=072 JMP_BLOCK    50 -> PC 988
+0104 block=073 GET          10
+0107 block=073 GET          3
+0110 block=073 NE           
+0111 block=073 DROP         
+0112 block=073 JMP_BLOCK    26 -> PC 1768
+0130 block=024 CONST        17 = 0x0000000000000077 [UNREACHED under contracts]
+0135 block=024 NOT           [UNREACHED under contracts]
+0136 block=024 DROP          [UNREACHED under contracts]
+0137 block=024 JMP_BLOCK    16 -> PC 1378 [UNREACHED under contracts]
+0156 block=094 JMP_BLOCK    22 -> PC 260 [UNREACHED under contracts]
+0182 block=049 GET          16
+0185 block=049 CONST        18 = 0x0000000000000084
+0190 block=049 ADD          
+0191 block=049 DROP         
+0192 block=049 JMP_BLOCK    53 -> PC 2522
+0208 block=008 HOST         10 0
+0212 block=008 DROP         
+0213 block=008 HOST         11 0
+0217 block=008 DROP         
+0218 block=008 HOST         12 0
+0222 block=008 DROP         
+0223 block=008 HOST         13 0
+0227 block=008 DROP         
+0228 block=008 JMP_BLOCK    9 -> PC 2106
+0234 block=042 CONST        18 = 0x0000000000000084 [UNREACHED under contracts]
+0239 block=042 SET          9 [UNREACHED under contracts]
+0242 block=042 GET          9 [UNREACHED under contracts]
+0245 block=042 CONST        18 = 0x0000000000000084 [UNREACHED under contracts]
+0250 block=042 XOR           [UNREACHED under contracts]
+0251 block=042 SET          9 [UNREACHED under contracts]
+0254 block=042 JMP_BLOCK    43 -> PC 1196 [UNREACHED under contracts]
+0260 block=022 HOST         23 0
+0264 block=022 DROP         
+0265 block=022 CONST        5 = 0x0000000000000001
+0270 block=022 RETURN       
+0286 block=095 CONST        18 = 0x0000000000000084
+0291 block=095 SET          9
+0294 block=095 GET          9
+0297 block=095 CONST        19 = 0x00000000000000b9
+0302 block=095 XOR          
+0303 block=095 SET          9
+0306 block=095 JMP_BLOCK    96 -> PC 1274
+0312 block=045 JMP_BLOCK    54 -> PC 1300
+0338 block=067 GET          5
+0341 block=067 GET          8
+0344 block=067 NE           
+0345 block=067 DROP         
+0346 block=067 JMP_BLOCK    16 -> PC 1378
+0364 block=091 GET          18 [UNREACHED under contracts]
+0367 block=091 CONST        15 = 0x00000000000000bf [UNREACHED under contracts]
+0372 block=091 ADD           [UNREACHED under contracts]
+0373 block=091 DROP          [UNREACHED under contracts]
+0374 block=091 JMP_BLOCK    6 -> PC 2678 [UNREACHED under contracts]
+0390 block=058 CONST        19 = 0x00000000000000b9
+0395 block=058 CONST        16 = 0x00000000000000bb
+0400 block=058 SLT          
+0401 block=058 DROP         
+0402 block=058 JMP_BLOCK    22 -> PC 260
+0416 block=032 JMP_BLOCK    46 -> PC 2470
+0442 block=101 CONST        16 = 0x00000000000000bb
+0447 block=101 NOT          
+0448 block=101 DROP         
+0449 block=101 GET          19
+0452 block=101 CONST        20 = 0x00000000000000d3
+0457 block=101 SGT          
+0458 block=101 JNZ_BLOCK    51 -> PC 1560
+0463 block=101 JMP_BLOCK    102 -> PC 1586
+0468 block=069 CONST        20 = 0x00000000000000d3
+0473 block=069 CONST        20 = 0x00000000000000d3
+0478 block=069 XOR          
+0479 block=069 DROP         
+0480 block=069 JMP_BLOCK    14 -> PC 1066
+0494 block=036 JMP_BLOCK    7 -> PC 2444
+0520 block=001 SET          0
+0523 block=001 HOST         2 0
+0527 block=001 DROP         
+0528 block=001 HOST         3 0
+0532 block=001 DROP         
+0533 block=001 CONST        2 = 0xc56cf0bd2cd2743b
+0538 block=001 SET          0
+0541 block=001 JMP_BLOCK    2 -> PC 1248
+0546 block=089 CONST        18 = 0x0000000000000084
+0551 block=089 CONST        17 = 0x0000000000000077
+0556 block=089 XOR          
+0557 block=089 DROP         
+0558 block=089 JMP_BLOCK    23 -> PC 572
+0572 block=023 CONST        16 = 0x00000000000000bb
+0577 block=023 CONST        15 = 0x00000000000000bf
+0582 block=023 XOR          
+0583 block=023 DROP         
+0584 block=023 JMP_BLOCK    58 -> PC 390
+0598 block=075 GET          15
+0601 block=075 GET          21
+0604 block=075 NE           
+0605 block=075 DROP         
+0606 block=075 JMP_BLOCK    30 -> PC 1690
+0624 block=028 GET          4 [UNREACHED under contracts]
+0627 block=028 GET          18 [UNREACHED under contracts]
+0630 block=028 NE            [UNREACHED under contracts]
+0631 block=028 DROP          [UNREACHED under contracts]
+0632 block=028 JMP_BLOCK    34 -> PC 858 [UNREACHED under contracts]
+0650 block=060 CONST        16 = 0x00000000000000bb
+0655 block=060 NOT          
+0656 block=060 DROP         
+0657 block=060 GET          22
+0660 block=060 CONST        16 = 0x00000000000000bb
+0665 block=060 SGT          
+0666 block=060 JNZ_BLOCK    64 -> PC 806
+0671 block=060 JMP_BLOCK    61 -> PC 1872
+0676 block=013 HOST         16 0
+0680 block=013 DROP         
+0681 block=013 CONST        11 = 0x0000000000000000
+0686 block=013 SIGN_EXTEND  32
+0688 block=013 HOST         17 1
+0692 block=013 DROP         
+0693 block=013 JMP_BLOCK    14 -> PC 1066
+0702 block=068 CONST        15 = 0x00000000000000bf
+0707 block=068 NOT          
+0708 block=068 DROP         
+0709 block=068 JMP_BLOCK    12 -> PC 26
+0728 block=011 JMP_BLOCK    37 -> PC 1222
+0754 block=033 CONST        15 = 0x00000000000000bf
+0759 block=033 CONST        17 = 0x0000000000000077
+0764 block=033 XOR          
+0765 block=033 DROP         
+0766 block=033 JMP_BLOCK    69 -> PC 468
+0780 block=071 GET          6
+0783 block=071 CONST        17 = 0x0000000000000077
+0788 block=071 ADD          
+0789 block=071 DROP         
+0790 block=071 JMP_BLOCK    79 -> PC 2054
+0806 block=064 CONST        17 = 0x0000000000000077 [UNREACHED under contracts]
+0811 block=064 CONST        17 = 0x0000000000000077 [UNREACHED under contracts]
+0816 block=064 SLT           [UNREACHED under contracts]
+0817 block=064 DROP          [UNREACHED under contracts]
+0818 block=064 JMP_BLOCK    12 -> PC 26 [UNREACHED under contracts]
+0832 block=086 CONST        19 = 0x00000000000000b9
+0837 block=086 NOT          
+0838 block=086 DROP         
+0839 block=086 JMP_BLOCK    33 -> PC 754
+0858 block=034 CONST        18 = 0x0000000000000084 [UNREACHED under contracts]
+0863 block=034 CONST        19 = 0x00000000000000b9 [UNREACHED under contracts]
+0868 block=034 XOR           [UNREACHED under contracts]
+0869 block=034 DROP          [UNREACHED under contracts]
+0870 block=034 JMP_BLOCK    99 -> PC 2652 [UNREACHED under contracts]
+0884 block=027 JMP_BLOCK    72 -> PC 78
+0910 block=019 JMP_BLOCK    78 -> PC 936
+0936 block=078 CONST        18 = 0x0000000000000084
+0941 block=078 NOT          
+0942 block=078 DROP         
+0943 block=078 JMP_BLOCK    98 -> PC 1950
+0962 block=080 JMP_BLOCK    74 -> PC 1456
+0988 block=050 CONST        19 = 0x00000000000000b9
+0993 block=050 NOT          
+0994 block=050 DROP         
+0995 block=050 JMP_BLOCK    76 -> PC 1118
+1014 block=021 CONST        11 = 0x0000000000000000
+1019 block=021 RETURN       
+1040 block=017 HOST         18 0
+1044 block=017 DROP         
+1045 block=017 JMP_BLOCK    62 -> PC 1742
+1066 block=014 HOST         18 0
+1070 block=014 SIGN_EXTEND  32
+1072 block=014 CONST        12 = 0x0000000000000003
+1077 block=014 SLT          
+1078 block=014 JZ_BLOCK     87 -> PC 1144
+1083 block=014 JMP_BLOCK    15 -> PC 1092
+1092 block=015 JMP_BLOCK    65 -> PC 1430
+1118 block=076 CONST        17 = 0x0000000000000077
+1123 block=076 SET          9
+1126 block=076 GET          9
+1129 block=076 CONST        20 = 0x00000000000000d3
+1134 block=076 XOR          
+1135 block=076 SET          9
+1138 block=076 JMP_BLOCK    77 -> PC 1664
+1144 block=087 CONST        17 = 0x0000000000000077
+1149 block=087 SET          9
+1152 block=087 GET          9
+1155 block=087 CONST        20 = 0x00000000000000d3
+1160 block=087 XOR          
+1161 block=087 SET          9
+1164 block=087 JMP_BLOCK    88 -> PC 1898
+1170 block=092 GET          8
+1173 block=092 CONST        16 = 0x00000000000000bb
+1178 block=092 ADD          
+1179 block=092 DROP         
+1180 block=092 JMP_BLOCK    20 -> PC 2288
+1196 block=043 JMP_BLOCK    66 -> PC 2314 [UNREACHED under contracts]
+1222 block=037 CONST        20 = 0x00000000000000d3
+1227 block=037 CONST        18 = 0x0000000000000084
+1232 block=037 XOR          
+1233 block=037 DROP         
+1234 block=037 JMP_BLOCK    95 -> PC 286
+1248 block=002 GET          0
+1251 block=002 CONST        3 = 0x3a930f42d32d8bc4
+1256 block=002 XOR          
+1257 block=002 SET          0
+1260 block=002 HOST         4 0
+1264 block=002 DROP         
+1265 block=002 JMP_BLOCK    3 -> PC 1638
+1274 block=096 JMP_BLOCK    56 -> PC 1612
+1300 block=054 CONST        20 = 0x00000000000000d3
+1305 block=054 NOT          
+1306 block=054 DROP         
+1307 block=054 JMP_BLOCK    75 -> PC 598
+1326 block=085 CONST        20 = 0x00000000000000d3 [UNREACHED under contracts]
+1331 block=085 CONST        16 = 0x00000000000000bb [UNREACHED under contracts]
+1336 block=085 XOR           [UNREACHED under contracts]
+1337 block=085 DROP          [UNREACHED under contracts]
+1338 block=085 JMP_BLOCK    7 -> PC 2444 [UNREACHED under contracts]
+1352 block=057 CONST        17 = 0x0000000000000077 [UNREACHED under contracts]
+1357 block=057 CONST        20 = 0x00000000000000d3 [UNREACHED under contracts]
+1362 block=057 SLT           [UNREACHED under contracts]
+1363 block=057 DROP          [UNREACHED under contracts]
+1364 block=057 JMP_BLOCK    70 -> PC 52 [UNREACHED under contracts]
+1378 block=016 HOST         19 0
+1382 block=016 DROP         
+1383 block=016 HOST         18 0
+1387 block=016 CONST        5 = 0x0000000000000001
+1392 block=016 ADD          
+1393 block=016 HOST         17 1
+1397 block=016 DROP         
+1398 block=016 JMP_BLOCK    17 -> PC 1040
+1404 block=048 CONST        16 = 0x00000000000000bb
+1409 block=048 CONST        20 = 0x00000000000000d3
+1414 block=048 SLT          
+1415 block=048 DROP         
+1416 block=048 JMP_BLOCK    104 -> PC 1924
+1430 block=065 GET          4
+1433 block=065 CONST        15 = 0x00000000000000bf
+1438 block=065 ADD          
+1439 block=065 DROP         
+1440 block=065 JMP_BLOCK    41 -> PC 2210
+1456 block=074 CONST        16 = 0x00000000000000bb
+1461 block=074 CONST        17 = 0x0000000000000077
+1466 block=074 SLT          
+1467 block=074 DROP         
+1468 block=074 JMP_BLOCK    18 -> PC 1846
+1482 block=083 CONST        17 = 0x0000000000000077
+1487 block=083 SET          9
+1490 block=083 GET          9
+1493 block=083 CONST        20 = 0x00000000000000d3
+1498 block=083 XOR          
+1499 block=083 SET          9
+1502 block=083 JMP_BLOCK    84 -> PC 2080
+1508 block=039 CONST        16 = 0x00000000000000bb
+1513 block=039 NOT          
+1514 block=039 DROP         
+1515 block=039 JMP_BLOCK    38 -> PC 2158
+1534 block=090 GET          11
+1537 block=090 GET          19
+1540 block=090 NE           
+1541 block=090 DROP         
+1542 block=090 JMP_BLOCK    71 -> PC 780
+1560 block=051 CONST        19 = 0x00000000000000b9 [UNREACHED under contracts]
+1565 block=051 SET          9 [UNREACHED under contracts]
+1568 block=051 GET          9 [UNREACHED under contracts]
+1571 block=051 CONST        17 = 0x0000000000000077 [UNREACHED under contracts]
+1576 block=051 XOR           [UNREACHED under contracts]
+1577 block=051 SET          9 [UNREACHED under contracts]
+1580 block=051 JMP_BLOCK    52 -> PC 1794 [UNREACHED under contracts]
+1586 block=102 JMP_BLOCK    92 -> PC 1170
+1612 block=056 CONST        18 = 0x0000000000000084
+1617 block=056 NOT          
+1618 block=056 DROP         
+1619 block=056 JMP_BLOCK    25 -> PC 2600
+1638 block=003 CONST        4 = 0x90f6163c9b69522d
+1643 block=003 NOT          
+1644 block=003 SET          0
+1647 block=003 HOST         5 0
+1651 block=003 DROP         
+1652 block=003 HOST         6 0
+1656 block=003 DROP         
+1657 block=003 JMP_BLOCK    4 -> PC 1820
+1664 block=077 JMP_BLOCK    13 -> PC 676
+1690 block=030 GET          18
+1693 block=030 GET          11
+1696 block=030 NE           
+1697 block=030 DROP         
+1698 block=030 GET          22
+1701 block=030 CONST        16 = 0x00000000000000bb
+1706 block=030 SGT          
+1707 block=030 JMP_BLOCK    31 -> PC 2548
+1716 block=093 CONST        16 = 0x00000000000000bb [UNREACHED under contracts]
+1721 block=093 SET          9 [UNREACHED under contracts]
+1724 block=093 GET          9 [UNREACHED under contracts]
+1727 block=093 CONST        18 = 0x0000000000000084 [UNREACHED under contracts]
+1732 block=093 XOR           [UNREACHED under contracts]
+1733 block=093 SET          9 [UNREACHED under contracts]
+1736 block=093 JMP_BLOCK    94 -> PC 156 [UNREACHED under contracts]
+1742 block=062 CONST        17 = 0x0000000000000077
+1747 block=062 SET          9
+1750 block=062 GET          9
+1753 block=062 CONST        18 = 0x0000000000000084
+1758 block=062 XOR          
+1759 block=062 SET          9
+1762 block=062 JMP_BLOCK    63 -> PC 2392
+1768 block=026 CONST        15 = 0x00000000000000bf
+1773 block=026 SET          9
+1776 block=026 GET          9
+1779 block=026 CONST        16 = 0x00000000000000bb
+1784 block=026 XOR          
+1785 block=026 SET          9
+1788 block=026 JMP_BLOCK    27 -> PC 884
+1794 block=052 JMP_BLOCK    20 -> PC 2288 [UNREACHED under contracts]
+1820 block=004 HOST         7 0
+1824 block=004 DROP         
+1825 block=004 HOST         8 0
+1829 block=004 JZ_BLOCK     83 -> PC 1482
+1834 block=004 JMP_BLOCK    5 -> PC 2132
+1846 block=018 CONST        13 = 0x9cc26a243f0cc9c7
+1851 block=018 SET          0
+1854 block=018 HOST         20 0
+1858 block=018 JZ_BLOCK     55 -> PC 2262
+1863 block=018 JMP_BLOCK    19 -> PC 910
+1872 block=061 JMP_BLOCK    68 -> PC 702
+1898 block=088 JMP_BLOCK    90 -> PC 1534
+1924 block=104 GET          12
+1927 block=104 CONST        19 = 0x00000000000000b9
+1932 block=104 ADD          
+1933 block=104 DROP         
+1934 block=104 JMP_BLOCK    49 -> PC 182
+1950 block=098 GET          7
+1953 block=098 GET          8
+1956 block=098 NE           
+1957 block=098 DROP         
+1958 block=098 JMP_BLOCK    29 -> PC 1976
+1976 block=029 GET          21
+1979 block=029 CONST        17 = 0x0000000000000077
+1984 block=029 ADD          
+1985 block=029 DROP         
+1986 block=029 JMP_BLOCK    101 -> PC 442
+2002 block=035 CONST        18 = 0x0000000000000084
+2007 block=035 SET          9
+2010 block=035 GET          9
+2013 block=035 CONST        20 = 0x00000000000000d3
+2018 block=035 XOR          
+2019 block=035 SET          9
+2022 block=035 JMP_BLOCK    36 -> PC 494
+2028 block=100 CONST        20 = 0x00000000000000d3
+2033 block=100 NOT          
+2034 block=100 DROP         
+2035 block=100 JMP_BLOCK    59 -> PC 2236
+2054 block=079 CONST        16 = 0x00000000000000bb
+2059 block=079 SET          9
+2062 block=079 GET          9
+2065 block=079 CONST        16 = 0x00000000000000bb
+2070 block=079 XOR          
+2071 block=079 SET          9
+2074 block=079 JMP_BLOCK    80 -> PC 962
+2080 block=084 JMP_BLOCK    100 -> PC 2028
+2106 block=009 CONST        8 = 0xdb4d71f80afbd2f3
+2111 block=009 CONST        9 = 0x24b28e07f5042d0d
+2116 block=009 ADD          
+2117 block=009 SET          0
+2120 block=009 HOST         14 0
+2124 block=009 JMP_BLOCK    10 -> PC 2366
+2132 block=005 JMP_BLOCK    40 -> PC 2496
+2158 block=038 GET          7
+2161 block=038 CONST        19 = 0x00000000000000b9
+2166 block=038 ADD          
+2167 block=038 DROP         
+2168 block=038 JMP_BLOCK    81 -> PC 2340
+2184 block=047 JMP_BLOCK    6 -> PC 2678
+2210 block=041 CONST        15 = 0x00000000000000bf
+2215 block=041 CONST        16 = 0x00000000000000bb
+2220 block=041 XOR          
+2221 block=041 DROP         
+2222 block=041 JMP_BLOCK    39 -> PC 1508
+2236 block=059 GET          21
+2239 block=059 GET          5
+2242 block=059 NE           
+2243 block=059 DROP         
+2244 block=059 JMP_BLOCK    97 -> PC 2704
+2262 block=055 CONST        20 = 0x00000000000000d3
+2267 block=055 CONST        17 = 0x0000000000000077
+2272 block=055 SLT          
+2273 block=055 DROP         
+2274 block=055 JMP_BLOCK    89 -> PC 546
+2288 block=020 HOST         21 0
+2292 block=020 DROP         
+2293 block=020 HOST         22 0
+2297 block=020 DROP         
+2298 block=020 CONST        14 = 0xf7af3fc393b1d1ff
+2303 block=020 SET          0
+2306 block=020 JMP_BLOCK    21 -> PC 1014
+2314 block=066 CONST        20 = 0x00000000000000d3 [UNREACHED under contracts]
+2319 block=066 CONST        17 = 0x0000000000000077 [UNREACHED under contracts]
+2324 block=066 SLT           [UNREACHED under contracts]
+2325 block=066 DROP          [UNREACHED under contracts]
+2326 block=066 JMP_BLOCK    85 -> PC 1326 [UNREACHED under contracts]
+2340 block=081 CONST        18 = 0x0000000000000084
+2345 block=081 NOT          
+2346 block=081 DROP         
+2347 block=081 GET          10
+2350 block=081 CONST        16 = 0x00000000000000bb
+2355 block=081 SGT          
+2356 block=081 JNZ_BLOCK    24 -> PC 130
+2361 block=081 JMP_BLOCK    82 -> PC 2418
+2366 block=010 JZ_BLOCK     73 -> PC 104
+2371 block=010 JMP_BLOCK    11 -> PC 728
+2392 block=063 JMP_BLOCK    86 -> PC 832
+2418 block=082 JMP_BLOCK    67 -> PC 338
+2444 block=007 CONST        6 = 0x2ec7ebe2e358441b
+2449 block=007 SET          0
+2452 block=007 GET          0
+2455 block=007 CONST        7 = 0xd138141d1ca7bbe4
+2460 block=007 XOR          
+2461 block=007 SET          0
+2464 block=007 JMP_BLOCK    8 -> PC 208
+2470 block=046 CONST        20 = 0x00000000000000d3
+2475 block=046 SET          9
+2478 block=046 GET          9
+2481 block=046 CONST        18 = 0x0000000000000084
+2486 block=046 XOR          
+2487 block=046 SET          9
+2490 block=046 JMP_BLOCK    47 -> PC 2184
+2496 block=040 CONST        19 = 0x00000000000000b9
+2501 block=040 CONST        19 = 0x00000000000000b9
+2506 block=040 XOR          
+2507 block=040 DROP         
+2508 block=040 JMP_BLOCK    44 -> PC 2626
+2522 block=053 CONST        15 = 0x00000000000000bf
+2527 block=053 NOT          
+2528 block=053 DROP         
+2529 block=053 JMP_BLOCK    103 -> PC 2574
+2548 block=031 JNZ_BLOCK    91 -> PC 364
+2553 block=031 JMP_BLOCK    32 -> PC 416
+2574 block=103 GET          6
+2577 block=103 CONST        17 = 0x0000000000000077
+2582 block=103 ADD          
+2583 block=103 DROP         
+2584 block=103 JMP_BLOCK    13 -> PC 676
+2600 block=025 GET          0
+2603 block=025 CONST        19 = 0x00000000000000b9
+2608 block=025 ADD          
+2609 block=025 DROP         
+2610 block=025 JMP_BLOCK    60 -> PC 650
+2626 block=044 CONST        15 = 0x00000000000000bf
+2631 block=044 SET          9
+2634 block=044 GET          9
+2637 block=044 CONST        20 = 0x00000000000000d3
+2642 block=044 XOR          
+2643 block=044 SET          9
+2646 block=044 JMP_BLOCK    45 -> PC 312
+2652 block=099 GET          17 [UNREACHED under contracts]
+2655 block=099 GET          10 [UNREACHED under contracts]
+2658 block=099 NE            [UNREACHED under contracts]
+2659 block=099 DROP          [UNREACHED under contracts]
+2660 block=099 JMP_BLOCK    93 -> PC 1716 [UNREACHED under contracts]
+2678 block=006 HOST         9 0
+2682 block=006 DROP         
+2683 block=006 CONST        5 = 0x0000000000000001
+2688 block=006 RETURN       
+2704 block=097 CONST        15 = 0x00000000000000bf
+2709 block=097 CONST        18 = 0x0000000000000084
+2714 block=097 XOR          
+2715 block=097 DROP         
+2716 block=097 JMP_BLOCK    35 -> PC 2002
+# Padding ranges after each block terminal (start, length):
+# 26 0
+# 546 0
+# 1270 4
+# 1662 2
+# 1839 7
+# 2137 21
+# 2689 15
+# 2469 1
+# 233 1
+# 2129 3
+# 2376 16
+# 733 21
+# 44 8
+# 698 4
+# 1088 4
+# 1097 21
+# 1403 1
+# 1050 16
+# 1868 4
+# 915 21
+# 2311 3
+# 1020 20
+# 271 15
+# 589 9
+# 142 14
+# 2615 11
+# 1793 1
+# 889 21
+# 637 13
+# 1991 11
+# 1712 4
+# 2558 16
+# 421 21
+# 771 9
+# 875 9
+# 2027 1
+# 499 21
+# 1239 9
+# 2173 11
+# 1520 14
+# 2513 9
+# 2227 9
+# 259 1
+# 1201 21
+# 2651 1
+# 317 21
+# 2495 1
+# 2189 21
+# 1421 9
+# 197 11
+# 1000 14
+# 1585 1
+# 1799 21
+# 2534 14
+# 1312 14
+# 2279 9
+# 1624 14
+# 1369 9
+# 407 9
+# 2249 13
+# 676 0
+# 1877 21
+# 1767 1
+# 2397 21
+# 823 9
+# 1445 11
+# 2331 9
+# 351 13
+# 714 14
+# 485 9
+# 65 13
+# 795 11
+# 91 13
+# 117 13
+# 1473 9
+# 611 13
+# 1143 1
+# 1669 21
+# 948 14
+# 2079 1
+# 967 21
+# 2366 0
+# 2423 21
+# 1507 1
+# 2085 21
+# 1343 9
+# 844 14
+# 1169 1
+# 1903 21
+# 563 9
+# 1547 13
+# 379 11
+# 1185 11
+# 1741 1
+# 161 21
+# 311 1
+# 1279 21
+# 2721 9
+# 1963 13
+# 2665 13
+# 2040 14
+# 468 0
+# 1591 21
+# 2589 11
+# 1939 11

@@ -60,16 +60,27 @@ Se implementaron `scripts/pafet_semantic_probe.py`, `scripts/pafet_semantic_map.
 4. **Seguimiento dirigido de la extensión de signo.** Se resuelven las formas de thunk vistas para opcode 58, se registra el inmediato leído por la rutina original y se ejecutan sus cuatro cuerpos por separado. Se comprueba que instrumentar el lookup mantiene la secuencia host y el retorno de cada caso.
 5. **Flujo de la VM de usuario.** `--user-control` conserva esa VM y abstrae sus siete callbacks nativos. Treinta casos combinan seis longitudes y cinco resultados de carácter transformado. El flujo observado depende del contador/longitud modelados y no cambia con esos cinco resultados. Esto no demuestra ausencia global de accesos o condiciones no observados.
 
+## Ampliación: levantado completo del controlador lógico
+
+La técnica adaptable de separar efectos host y reducir el flujo se llevó ahora más lejos mediante `scripts/pafet_controller_slice.py`, sin implementar un desvirtualizador genérico:
+
+- El materializador original `0x140385b30` permite extraer 105 bloques de 26 bytes. Se utiliza `code XOR shadow` para compensar la mutación de la ventana; la extracción forzada termina inmediatamente y no se presenta como recorrido natural.
+- La posición de los bloques usa una permutación Feistel de 8 bits y cycle walking sobre 104 posiciones, dejando el bloque 0 fijo. Se contrastan los 256 valores de la permutación y los 105 destinos con instrucciones originales.
+- Los operandos de 16/32 bits tienen mezcla dependiente de su posición y orden de bytes propio; no se pueden interpretar con el formato del ejemplo público. Los 716 ensayos de lectores originales cubren todos los operandos estáticos en ambos modos de campos vivos. Se recupera además el pool de 21 constantes y se contrasta en 92 casos de cuatro clones originales.
+- Se levantan las 482 instrucciones hasta el salto/retorno terminal de cada bloque, preservando el relleno. Los 32 contrastes dinámicos comprueban cada PC, opcode, operando y valor de pila de los caminos del modelo. El slice descarta retornos host no usados mediante `DROP` inmediato y reduce las decisiones a SHA/padding/formato y contador.
+
+Esto demuestra que la técnica dirigida es útil en Pafet aunque el código público no sea una herramienta de desvirtualización compatible. No demuestra equivalencia total de runtimes o wrappers, ni aporta una preimagen o bits nuevos de clave. Véase `PAFET_CONTROLLER_SLICE.md` para contratos y falsación.
+
 ## Qué aporta cada técnica y qué queda abierto
 
 | Objetivo | Resultado de esta fase | Límite |
 |---|---|---|
-| Identificar handlers | Tabla nativa principal de 24 entradas, tabla de usuario de 7 y 16 tipos virtuales observados | No todos los tipos de instrucción de la VM están caracterizados |
-| Reconstruir control | Proyección de rechazo SHA, padding opcional, tres pasadas y dos salidas de formato | No es un CFG estático exhaustivo de los 2730 bytes |
-| Recuperar expresiones | Getter de campos vivos, predicados nativos y extensión de signo | No hay levantado simbólico completo de guardas, stack y bytecode |
-| Eliminar irrelevancias | Proyección por efectos host y pruebas variando retornos no usados/reloj | No es una prueba de que todo estado de historia, runtime o guardas sea ruido |
+| Identificar handlers | Tabla principal de 24 entradas, usuario de 7 y los 16 tipos presentes en todo el bytecode lógico principal | El resto del catálogo no aparece en el programa principal extraído; las otras funciones tienen mapas propios |
+| Reconstruir control | CFG completo de 105 bloques y slice del programa lógico principal | Completo bajo contratos host explícitos; no prueba todas las guardas nativas |
+| Recuperar expresiones | Campos vivos, constantes, operandos y dependencias lógicas hacia ramas/retorno | No hay prueba simbólica global del runtime ni de las VMs anidadas |
+| Eliminar irrelevancias | Prueba estática de DROP para retornos no usados; 73 instrucciones inalcanzables bajo contratos | No es una prueba de que todo estado de historia, runtime o guardas sea ruido |
 | Localizar aceptación | Componentes nativos de SHA/formato y su conexión bajo retornos abstractos | No se ha recorrido la aceptación real con username válido |
-| Encontrar ramas nuevas | Se recorren ambas decisiones de las comprobaciones conocidas y se corrigen mapas históricos | Las regiones no observadas no se declaran inalcanzables |
+| Encontrar ramas nuevas | Se clasifican todos los bloques lógicos principales y sus ramas | La inalcanzabilidad se limita al modelo; otras VMs/runtime siguen abiertos |
 
 No se ha medido una reducción del espacio de credenciales gracias a esta prueba. Sí se evita tomar una traza parcial o un ejemplo del virtualizador como prueba de cobertura total.
 
@@ -80,6 +91,7 @@ Desde el repositorio, instalar `pefile`, `capstone`, `unicorn`; para el colector
 ```sh
 python scripts/pafet_semantic_map.py --out semantic_evidence_new/static
 python scripts/pafet_semantic_probe.py --native scripts/native/native_probe --opcode-projection
+python scripts/pafet_controller_slice.py --native scripts/native/native_probe --out controller_evidence_new
 ```
 
 Para repetir también el inventario del ejemplo, clonar el repositorio fuente, fijar el commit citado y añadir `--revoid /ruta/VSEC-REVoid`. El script no requiere ese checkout para probar Pafet. `--tail-validation` añade únicamente el experimento separado de dependencia de memoria descrito en el informe de cobertura.

@@ -136,6 +136,10 @@ static int semantic_sha_fail,semantic_pad,semantic_shape,semantic_counter;
 static uint64_t semantic_unused_value;
 static uint64_t(MS *semantic_real_lookup)(void*,uint32_t,uint32_t);
 static uint64_t(MS *semantic_real_read_byte)(void*);
+static uint64_t(MS *semantic_real_read_u16)(void*);
+static uint64_t(MS *semantic_real_read_u32)(void*);
+static uint64_t(MS *semantic_real_push)(void*,uint64_t);
+static uint64_t(MS *semantic_real_pop)(void*);
 static unsigned semantic_lookup_calls;
 static uint64_t semantic_live_value(uint64_t vm,int i){
     uint64_t mask=q(vm+0x58)^(uint64_t)(i+1)*q(vm+0x60)^((uint64_t)*(uint8_t*)(vm+0xe8+i)*q(vm+0x68));
@@ -144,23 +148,59 @@ static uint64_t semantic_live_value(uint64_t vm,int i){
 static uint64_t MS semantic_read_byte(void *ctx){
     uint64_t vm=(uint64_t)ctx,pc=semantic_live_value(vm,1);
     uint64_t value=semantic_real_read_byte(ctx);
+    if(getenv("SEMANTIC_OPERANDS"))printf("SEMANTIC-OPERAND %u %lu 1 %lu\n",semantic_lookup_calls,pc,value&255);
     if(*(uint8_t*)(vm+0xf60)==58)printf("SEMANTIC-ARG58 %lu %lu\n",pc,value&255);
     return value;
+}
+static uint64_t MS semantic_read_u16(void *ctx){
+    uint64_t pc=semantic_live_value((uint64_t)ctx,1),value=semantic_real_read_u16(ctx);
+    printf("SEMANTIC-OPERAND %u %lu 2 %lu\n",semantic_lookup_calls,pc,value&65535);return value;
+}
+static uint64_t MS semantic_read_u32(void *ctx){
+    uint64_t pc=semantic_live_value((uint64_t)ctx,1),value=semantic_real_read_u32(ctx);
+    printf("SEMANTIC-OPERAND %u %lu 4 %lu\n",semantic_lookup_calls,pc,value&0xffffffff);return value;
+}
+static uint64_t MS semantic_push(void *ctx,uint64_t value){
+    uint64_t ret=semantic_real_push(ctx,value);
+    if(semantic_lookup_calls)printf("SEMANTIC-STACK %u PUSH %lu\n",semantic_lookup_calls,value);
+    return ret;
+}
+static uint64_t MS semantic_pop(void *ctx){
+    uint64_t value=semantic_real_pop(ctx);
+    if(semantic_lookup_calls)printf("SEMANTIC-STACK %u POP %lu\n",semantic_lookup_calls,value);
+    return value;
+}
+static void *semantic_trampoline(uint64_t addr,void *wrapper){
+    uint8_t *p=mmap(NULL,4096,7,MAP_PRIVATE|MAP_ANONYMOUS,-1,0);
+    memcpy(p,(void*)addr,15);patch((uint64_t)p+15,(void*)(addr+15));patch(addr,wrapper);return p;
+}
+static uint64_t semantic_resolve_thunk(uint64_t address){
+    uint8_t *b=(void*)address;
+    if(b[0]==0x48&&b[1]==0xb8)return q(address+2);
+    if(b[0]==0x4c&&b[1]==0x8b&&b[2]==0x1d&&b[7]==0x48&&b[8]==0xb8){
+        uint64_t key=q(address+7+*(int32_t*)(b+3)),imm=q(address+9);
+        if(b[17]==0x4c&&b[18]==0x31&&b[19]==0xd8)return key^imm;
+        if(b[17]==0x4c&&b[18]==0x01&&b[19]==0xd8)return key+imm;
+    }
+    return 0;
 }
 static uint64_t MS semantic_lookup(void *ctx,uint32_t table,uint32_t index){
     uint64_t result=semantic_real_lookup(ctx,table,index),vm=(uint64_t)ctx;
     if(++semantic_lookup_calls>8192){fprintf(stderr,"SEMANTIC opcode budget exceeded\n");exit(8);}
     printf("SEMANTIC-OP %lu %u %u %u %lx\n",semantic_live_value(vm,1),*(uint8_t*)(vm+0xf60),table,index,result);
+    if(getenv("SEMANTIC_OPERANDS")){
+        printf("SEMANTIC-TARGET %u %lx\n",semantic_lookup_calls,semantic_resolve_thunk(result));
+    }
+    if(getenv("SEMANTIC_WINDOWS")){
+        uint64_t start=(semantic_live_value(vm,1)-1)/26*26,code=q(vm+0xf40);
+        printf("SEMANTIC-WINDOW %u %lu ",semantic_lookup_calls,start);
+        for(int i=0;i<26;i++)printf("%02x",((uint8_t*)code)[start+i]);puts("");
+        printf("SEMANTIC-WIRE %u %lu ",semantic_lookup_calls,start);
+        uint64_t shadow=q(vm+0x760);for(int i=0;i<26;i++)printf("%02x",((uint8_t*)code)[start+i]^((uint8_t*)shadow)[start+i]);puts("");
+    }
     if(*(uint8_t*)(vm+0xf60)==58){
         printf("SEMANTIC-THUNK58 ");for(int i=0;i<32;i++)printf("%02x",((uint8_t*)result)[i]);puts("");
-        uint8_t *b=(void*)result;uint64_t target=0;
-        if(b[0]==0x48&&b[1]==0xb8)target=q(result+2);
-        if(b[0]==0x4c&&b[1]==0x8b&&b[2]==0x1d&&b[7]==0x48&&b[8]==0xb8){
-            uint64_t key=q(result+7+*(int32_t*)(b+3)),imm=q(result+9);
-            if(b[17]==0x4c&&b[18]==0x31&&b[19]==0xd8)target=key^imm;
-            if(b[17]==0x4c&&b[18]==0x01&&b[19]==0xd8)target=key+imm;
-        }
-        printf("SEMANTIC-TARGET58 %lx\n",target);
+        printf("SEMANTIC-TARGET58 %lx\n",semantic_resolve_thunk(result));
     }
     return result;
 }
@@ -185,6 +225,16 @@ static uint64_t MS semantic_host(void *ctx,uint32_t op,void *arg){
     if(op==18)ret=(int64_t)semantic_counter;
     if(op==20)ret=semantic_shape;
     printf("SEMANTIC-HOST %u %lu counter=%d\n",op,ret,semantic_counter);fflush(stdout);
+    if(getenv("SEMANTIC_DUMP_WIRE")){
+        uint64_t vm=q(0x30002060),n=d(vm+0xf48);
+        for(uint32_t block=0;block<n/26;block++){
+            ((void(MS*)(void*,uint32_t,uint32_t))(BASE+0x385b30))((void*)vm,0,block);
+            uint32_t start=((uint32_t(MS*)(uint32_t))(BASE+0x380ad0))(block);
+            ((void(MS*)(void*,uint32_t,uint32_t))(BASE+0x383e20))((void*)vm,start,start+25);
+            uint8_t *code=(void*)q(vm+0xf40),*shadow=(void*)q(vm+0x760);
+            printf("SEMANTIC-BLOCK %u ",start);for(int i=0;i<26;i++)printf("%02x",code[start+i]^shadow[start+i]);puts("");fflush(stdout);
+        }puts("SEMANTIC-DUMP-END");exit(0);
+    }
     if(getenv("SEMANTIC_LIVE")){
         uint64_t vm=q(0x30002060);printf("SEMANTIC-LIVE");
         for(int i=0;i<6;i++){
@@ -244,6 +294,12 @@ int main(int argc,char **argv){
             uint8_t *rd=mmap(NULL,4096,7,MAP_PRIVATE|MAP_ANONYMOUS,-1,0);
             memcpy(rd,(void*)(BASE+0x3858a0),15);patch((uint64_t)rd+15,(void*)(BASE+0x3858af));
             semantic_real_read_byte=(void*)rd;patch(BASE+0x3858a0,semantic_read_byte);
+            if(getenv("SEMANTIC_OPERANDS")){
+                semantic_real_read_u16=semantic_trampoline(BASE+0x385720,semantic_read_u16);
+                semantic_real_read_u32=semantic_trampoline(BASE+0x385590,semantic_read_u32);
+                semantic_real_push=semantic_trampoline(BASE+0x381e60,semantic_push);
+                semantic_real_pop=semantic_trampoline(BASE+0x382030,semantic_pop);
+            }
         }
         semantic_sha_fail=atoi(argv[2]);semantic_pad=atoi(argv[3]);semantic_shape=atoi(argv[4]);
         patch(BASE+0x396990,semantic_host);

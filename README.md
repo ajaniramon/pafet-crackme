@@ -6,15 +6,20 @@ No valid username, serial or flag has been recovered or accepted by an
 unmodified execution of the original challenge.
 
 The cryptographic phase closed with no practical key-recovery shortcut.
-The semantic audit remains **incomplete**: native callbacks and observed VM
-paths are characterized, but unobserved control/runtime paths are not excluded.
-The next bounded experiments concern the controller and user-VM return path.
+The main logical controller is now fully decoded: 105 blocks, 482 instructions,
+and a dataflow slice validated against original-instruction control projections.
+It adds no credential condition under explicit native-host contracts. Global
+coverage remains **incomplete**: nested wrappers and normal Windows/runtime
+behavior are not fully characterized. The next priority is the user-VM return
+divergence, not more DES reversing or credential guessing.
 
 Start with [the semantic coverage report](PAFET_SEMANTIC_COVERAGE.md) and
 [the REVoid assessment](PAFET_REVOID_ASSESSMENT.md) (Spanish). The new evidence
 includes native/virtual control projections, opcode 58 conversion tests and a
 memory-slack experiment that changes the isolated final predicate. None is
-original credential acceptance.
+original credential acceptance. The subsequent [controller slice](PAFET_CONTROLLER_SLICE.md)
+and [reproducible evidence](controller_evidence/README.md) close the logical-main
+coverage gap while keeping outcome D for the whole executable.
 
 For the previous phase, see [the cryptographic audit](PAFET_CRYPTO_AUDIT.md) (Spanish), then
 [the cipher recovery report](PAFET_DES3_RECOVERY.md) (English). The audit
@@ -159,6 +164,17 @@ The first probe command executes no DES. The last reuses the existing cipher
 for two directed tail tests; it does not repeat DES recovery or search real
 credentials. See [semantic_evidence/README.md](semantic_evidence/README.md) for
 exactly which dependencies are modeled and what the results do not prove.
+
+## Complete logical-controller audit
+
+```sh
+python scripts/pafet_controller_slice.py --native scripts/native/native_probe --out controller_evidence_new
+```
+
+This uses original materializer/reader/handler instructions with modeled native
+callbacks. It performs no DES, SHA or credential search. Recorded results and
+precise contracts are in `controller_evidence/README.md`. It is not original
+credential acceptance.
 
 ## Historical reversing notes
 

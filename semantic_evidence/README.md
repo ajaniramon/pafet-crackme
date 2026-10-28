@@ -71,4 +71,10 @@ check semantic invariants, not those changing values.
 
 The earlier `audit_evidence/manifest.json` describes the prior cryptographic
 snapshot; its historical source hashes are not rewritten to hide later source
-changes. Use this directory's manifest for the semantic update.
+changes. This directory's manifest is likewise the **frozen first semantic
+snapshot at commit `55567c0f09f32ac654a31764608cc363ef6d5bb5`**. It is not a
+manifest of later versions of the reports or instrumentation. Verify historical
+source/report hashes against `git show 55567c0:path`. The recorded test JSON and
+static evidence remain unchanged. The next controller phase and its current
+hashes are in `../controller_evidence/`; its main logical coverage supersedes
+the earlier limitation about unobserved instructions in that function.
