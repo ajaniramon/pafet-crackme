@@ -1,0 +1,32 @@
+{
+  "len0": {
+    "user": "",
+    "event_count": 61,
+    "unique_pair_count": 44
+  },
+  "len1_a": {
+    "user": "a",
+    "event_count": 179,
+    "unique_pair_count": 107
+  },
+  "len8_alice1": {
+    "user": "alice123",
+    "event_count": 965,
+    "unique_pair_count": 234
+  },
+  "len23_aaaaaa": {
+    "user": "aaaaaaaaaaaaaaaaaaaaaaa",
+    "event_count": 2718,
+    "unique_pair_count": 248
+  },
+  "len24_aaaaaa": {
+    "user": "aaaaaaaaaaaaaaaaaaaaaaaa",
+    "event_count": 2770,
+    "unique_pair_count": 248
+  },
+  "len25_aaaaaa": {
+    "user": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+    "event_count": 2918,
+    "unique_pair_count": 248
+  }
+}

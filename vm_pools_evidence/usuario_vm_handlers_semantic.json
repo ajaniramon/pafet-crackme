@@ -1,0 +1,1421 @@
+[
+  {
+    "handler_va": "0x140008b50",
+    "num_pairs": 10,
+    "pairs": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        19
+      ],
+      [
+        0,
+        29
+      ],
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        38
+      ],
+      [
+        0,
+        41
+      ],
+      [
+        0,
+        42
+      ],
+      [
+        0,
+        53
+      ],
+      [
+        0,
+        58
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x1400099c0",
+    "num_pairs": 9,
+    "pairs": [
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        18
+      ],
+      [
+        0,
+        27
+      ],
+      [
+        0,
+        28
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        0,
+        34
+      ],
+      [
+        0,
+        37
+      ],
+      [
+        0,
+        59
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r12"
+    ]
+  },
+  {
+    "handler_va": "0x14000a850",
+    "num_pairs": 5,
+    "pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        39
+      ],
+      [
+        0,
+        45
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x14000b670",
+    "num_pairs": 4,
+    "pairs": [
+      [
+        0,
+        23
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        0,
+        54
+      ],
+      [
+        0,
+        55
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbp",
+      "push rsi",
+      "push rdi"
+    ]
+  },
+  {
+    "handler_va": "0x1400110f0",
+    "num_pairs": 5,
+    "pairs": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        22
+      ],
+      [
+        0,
+        32
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x140011f10",
+    "num_pairs": 1,
+    "pairs": [
+      [
+        0,
+        24
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbp",
+      "push rsi",
+      "push rdi"
+    ]
+  },
+  {
+    "handler_va": "0x140012dc0",
+    "num_pairs": 1,
+    "pairs": [
+      [
+        0,
+        14
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x140013be0",
+    "num_pairs": 4,
+    "pairs": [
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        25
+      ],
+      [
+        0,
+        31
+      ],
+      [
+        0,
+        47
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x140014a00",
+    "num_pairs": 10,
+    "pairs": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        0,
+        21
+      ],
+      [
+        0,
+        43
+      ],
+      [
+        0,
+        56
+      ],
+      [
+        0,
+        57
+      ]
+    ],
+    "channels": [
+      0
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x140015820",
+    "num_pairs": 7,
+    "pairs": [
+      [
+        1,
+        13
+      ],
+      [
+        1,
+        17
+      ],
+      [
+        1,
+        25
+      ],
+      [
+        1,
+        31
+      ],
+      [
+        1,
+        35
+      ],
+      [
+        1,
+        36
+      ],
+      [
+        1,
+        59
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r12"
+    ]
+  },
+  {
+    "handler_va": "0x1400166b0",
+    "num_pairs": 6,
+    "pairs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        14
+      ],
+      [
+        1,
+        24
+      ],
+      [
+        1,
+        41
+      ],
+      [
+        1,
+        45
+      ],
+      [
+        1,
+        49
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x140018300",
+    "num_pairs": 1,
+    "pairs": [
+      [
+        1,
+        48
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x140019f40",
+    "num_pairs": 3,
+    "pairs": [
+      [
+        1,
+        18
+      ],
+      [
+        1,
+        22
+      ],
+      [
+        1,
+        40
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "push rbp",
+      "push rsi",
+      "push rdi",
+      "push r12",
+      "push r13"
+    ]
+  },
+  {
+    "handler_va": "0x14001c090",
+    "num_pairs": 14,
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        1,
+        16
+      ],
+      [
+        1,
+        20
+      ],
+      [
+        1,
+        28
+      ],
+      [
+        1,
+        30
+      ],
+      [
+        1,
+        33
+      ],
+      [
+        1,
+        34
+      ],
+      [
+        1,
+        42
+      ],
+      [
+        1,
+        51
+      ],
+      [
+        1,
+        52
+      ],
+      [
+        1,
+        57
+      ],
+      [
+        1,
+        60
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x14001cf00",
+    "num_pairs": 1,
+    "pairs": [
+      [
+        1,
+        29
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r12",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x14001dd30",
+    "num_pairs": 12,
+    "pairs": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        1,
+        19
+      ],
+      [
+        1,
+        37
+      ],
+      [
+        1,
+        38
+      ],
+      [
+        1,
+        39
+      ],
+      [
+        1,
+        44
+      ],
+      [
+        1,
+        50
+      ],
+      [
+        1,
+        53
+      ],
+      [
+        1,
+        54
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x1400208b0",
+    "num_pairs": 2,
+    "pairs": [
+      [
+        1,
+        26
+      ],
+      [
+        1,
+        56
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x1400216d0",
+    "num_pairs": 8,
+    "pairs": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        21
+      ],
+      [
+        1,
+        43
+      ],
+      [
+        1,
+        46
+      ],
+      [
+        1,
+        61
+      ]
+    ],
+    "channels": [
+      1
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbp",
+      "push rsi",
+      "push rdi"
+    ]
+  },
+  {
+    "handler_va": "0x140023380",
+    "num_pairs": 2,
+    "pairs": [
+      [
+        2,
+        29
+      ],
+      [
+        2,
+        43
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r12",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x1400241b0",
+    "num_pairs": 14,
+    "pairs": [
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        2,
+        27
+      ],
+      [
+        2,
+        37
+      ],
+      [
+        2,
+        44
+      ],
+      [
+        2,
+        52
+      ],
+      [
+        2,
+        55
+      ],
+      [
+        2,
+        59
+      ],
+      [
+        2,
+        60
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x140025020",
+    "num_pairs": 13,
+    "pairs": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        16
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        2,
+        23
+      ],
+      [
+        2,
+        24
+      ],
+      [
+        2,
+        25
+      ],
+      [
+        2,
+        26
+      ],
+      [
+        2,
+        32
+      ],
+      [
+        2,
+        34
+      ],
+      [
+        2,
+        35
+      ],
+      [
+        2,
+        41
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        2,
+        56
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r12"
+    ]
+  },
+  {
+    "handler_va": "0x140027b80",
+    "num_pairs": 2,
+    "pairs": [
+      [
+        2,
+        53
+      ],
+      [
+        2,
+        54
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbp",
+      "push rsi",
+      "push rdi"
+    ]
+  },
+  {
+    "handler_va": "0x140028a00",
+    "num_pairs": 2,
+    "pairs": [
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        39
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "push rbp",
+      "push rsi",
+      "push rdi",
+      "push r12",
+      "push r13"
+    ]
+  },
+  {
+    "handler_va": "0x14002ab60",
+    "num_pairs": 3,
+    "pairs": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        2,
+        19
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x14002d5d0",
+    "num_pairs": 7,
+    "pairs": [
+      [
+        2,
+        17
+      ],
+      [
+        2,
+        36
+      ],
+      [
+        2,
+        42
+      ],
+      [
+        2,
+        45
+      ],
+      [
+        2,
+        46
+      ],
+      [
+        2,
+        57
+      ],
+      [
+        2,
+        58
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x14002f2a0",
+    "num_pairs": 2,
+    "pairs": [
+      [
+        2,
+        33
+      ],
+      [
+        2,
+        48
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x1400300b0",
+    "num_pairs": 10,
+    "pairs": [
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        2,
+        28
+      ],
+      [
+        2,
+        30
+      ],
+      [
+        2,
+        38
+      ],
+      [
+        2,
+        40
+      ],
+      [
+        2,
+        47
+      ],
+      [
+        2,
+        49
+      ],
+      [
+        2,
+        61
+      ]
+    ],
+    "channels": [
+      2
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x140030ec0",
+    "num_pairs": 9,
+    "pairs": [
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        3,
+        19
+      ],
+      [
+        3,
+        22
+      ],
+      [
+        3,
+        33
+      ],
+      [
+        3,
+        36
+      ],
+      [
+        3,
+        37
+      ],
+      [
+        3,
+        50
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x140031ce0",
+    "num_pairs": 1,
+    "pairs": [
+      [
+        3,
+        31
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  },
+  {
+    "handler_va": "0x140033930",
+    "num_pairs": 9,
+    "pairs": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        3,
+        28
+      ],
+      [
+        3,
+        32
+      ],
+      [
+        3,
+        48
+      ],
+      [
+        3,
+        56
+      ],
+      [
+        3,
+        57
+      ],
+      [
+        3,
+        60
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x1400355c0",
+    "num_pairs": 10,
+    "pairs": [
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        3,
+        15
+      ],
+      [
+        3,
+        27
+      ],
+      [
+        3,
+        40
+      ],
+      [
+        3,
+        42
+      ],
+      [
+        3,
+        45
+      ],
+      [
+        3,
+        52
+      ],
+      [
+        3,
+        54
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r12"
+    ]
+  },
+  {
+    "handler_va": "0x140038fe0",
+    "num_pairs": 1,
+    "pairs": [
+      [
+        3,
+        18
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "push rbp",
+      "push rsi",
+      "push rdi",
+      "push r12",
+      "push r13"
+    ]
+  },
+  {
+    "handler_va": "0x14003a160",
+    "num_pairs": 4,
+    "pairs": [
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        23
+      ],
+      [
+        3,
+        39
+      ],
+      [
+        3,
+        43
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x20], rbx",
+      "mov qword ptr [rsp + 0x18], r8",
+      "mov dword ptr [rsp + 0x10], edx",
+      "push rbp",
+      "push rsi",
+      "push rdi"
+    ]
+  },
+  {
+    "handler_va": "0x14003bea0",
+    "num_pairs": 11,
+    "pairs": [
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        20
+      ],
+      [
+        3,
+        21
+      ],
+      [
+        3,
+        35
+      ],
+      [
+        3,
+        41
+      ],
+      [
+        3,
+        44
+      ],
+      [
+        3,
+        46
+      ],
+      [
+        3,
+        47
+      ],
+      [
+        3,
+        51
+      ],
+      [
+        3,
+        58
+      ],
+      [
+        3,
+        59
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x40",
+      "movsxd rax, dword ptr [rcx + 0x154]"
+    ]
+  },
+  {
+    "handler_va": "0x14003dae0",
+    "num_pairs": 3,
+    "pairs": [
+      [
+        3,
+        17
+      ],
+      [
+        3,
+        24
+      ],
+      [
+        3,
+        30
+      ]
+    ],
+    "channels": [
+      3
+    ],
+    "first_insns": [
+      "mov qword ptr [rsp + 0x18], r8",
+      "push rbx",
+      "push rsi",
+      "push rdi",
+      "push r15",
+      "sub rsp, 0x38"
+    ]
+  }
+]

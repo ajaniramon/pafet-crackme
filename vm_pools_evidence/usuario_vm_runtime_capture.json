@@ -1,4 +1,235 @@
 {
- "events": [],
- "stdout_tail": "==================================\r\n   VSEC  - Pafet Challenge\r\n==================================\r\n\r\nUsername: Serial  : \r\n[!] Wrong credentials\r\n"
+  "total_hits": 637,
+  "captures": [
+    {
+      "idx": 0,
+      "retaddr": "0x7ff66fd21178",
+      "retaddr_rel": "0x41178",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x3",
+        "rdx_dec": 3,
+        "r8": "0x31",
+        "r8_dec": 49,
+        "r9": "0xaea65f0facff50ee"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "17519573257383805930",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "971690841"
+      },
+      "handler_rax": "0x24eecf21d80",
+      "handler_prologue": "48b83039d16ff67f0000ffe01e7cf5ca"
+    },
+    {
+      "idx": 1,
+      "retaddr": "0x7ff66fd22ca3",
+      "retaddr_rel": "0x42ca3",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x2",
+        "rdx_dec": 2,
+        "r8": "0x20",
+        "r8_dec": 32,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "879743361578167576",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "971690841"
+      },
+      "handler_rax": "0x24eecf213a0",
+      "handler_prologue": "4c8b1d59ecffff48b849c136e8d5ccbc"
+    },
+    {
+      "idx": 2,
+      "retaddr": "0x7ff66fd21178",
+      "retaddr_rel": "0x41178",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x3",
+        "rdx_dec": 3,
+        "r8": "0x13",
+        "r8_dec": 19,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "8348053554437251548",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "971690841"
+      },
+      "handler_rax": "0x24eecf219c0",
+      "handler_prologue": "48b8a0bed16ff67f000048f7d048f7d0"
+    },
+    {
+      "idx": 3,
+      "retaddr": "0x7ff66fd21178",
+      "retaddr_rel": "0x41178",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x3",
+        "rdx_dec": 3,
+        "r8": "0x2",
+        "r8_dec": 2,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "14912392703176360615",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "971690841"
+      },
+      "handler_rax": "0x24eecf217a0",
+      "handler_prologue": "48b8c055d16ff67f000048f7d048f7d0"
+    },
+    {
+      "idx": 4,
+      "retaddr": "0x7ff66fd279e4",
+      "retaddr_rel": "0x479e4",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x0",
+        "rdx_dec": 0,
+        "r8": "0x25",
+        "r8_dec": 37,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "16831055271078594087",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "971690841"
+      },
+      "handler_rax": "0x24eecf204c0",
+      "handler_prologue": "4c8b1d39fbffff48b8e9ed34e8d5ccbc"
+    },
+    {
+      "idx": 5,
+      "retaddr": "0x7ff66fd21178",
+      "retaddr_rel": "0x41178",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x3",
+        "rdx_dec": 3,
+        "r8": "0x9",
+        "r8_dec": 9,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "9558273926965302506",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "971690841"
+      },
+      "handler_rax": "0x24eecf21880",
+      "handler_prologue": "4c8b1d79e7ffff48b8597137e8d5ccbc"
+    },
+    {
+      "idx": 6,
+      "retaddr": "0x7ff66fd22bd6",
+      "retaddr_rel": "0x42bd6",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x1",
+        "rdx_dec": 1,
+        "r8": "0x2b",
+        "r8_dec": 43,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "3321320132223199637",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "3584012833"
+      },
+      "handler_rax": "0x24eecf20d40",
+      "handler_prologue": "4c8b1db9f2ffff48b861c7a066ef3aa3"
+    },
+    {
+      "idx": 7,
+      "retaddr": "0x7ff66fd279e4",
+      "retaddr_rel": "0x479e4",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x0",
+        "rdx_dec": 0,
+        "r8": "0xe",
+        "r8_dec": 14,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "2560940513060726080",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "3584012833"
+      },
+      "handler_rax": "0x24eecf201e0",
+      "handler_prologue": "48b870b6ce6ff67f000048f7d048f7d0"
+    },
+    {
+      "idx": 8,
+      "retaddr": "0x7ff66fd279e4",
+      "retaddr_rel": "0x479e4",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x0",
+        "rdx_dec": 0,
+        "r8": "0x25",
+        "r8_dec": 37,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "14712483252347763564",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "3869104353"
+      },
+      "handler_rax": "0x24eecf204c0",
+      "handler_prologue": "48b8f0c4ce6ff67f0000ffe05a52df03"
+    },
+    {
+      "idx": 9,
+      "retaddr": "0x7ff66fd279e4",
+      "retaddr_rel": "0x479e4",
+      "args": {
+        "rcx": "0xc158396730",
+        "rdx": "0x0",
+        "rdx_dec": 0,
+        "r8": "0x6",
+        "r8_dec": 6,
+        "r9": "0x65873238a4ea1850"
+      },
+      "ctx_dump": {
+        "pc_offset_0x210": "7825136878898495609",
+        "buf_p_0x1b0": "0x24eeb068150",
+        "buf_sz_0x1b8": 1752,
+        "tbl_p_0xf40": "0xc158397940",
+        "base_h_0xf48": "0x24eecf20000",
+        "key_xor_0xf50": "688830701"
+      },
+      "handler_rax": "0x24eecf200e0",
+      "handler_prologue": "48b8508bce6ff67f000048f7d048f7d0"
+    }
+  ]
 }
