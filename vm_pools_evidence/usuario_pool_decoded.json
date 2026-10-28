@@ -1,0 +1,138 @@
+{
+  "pool_reader_va": "0x140048e10",
+  "num_slots": 12,
+  "slots": [
+    {
+      "slot": 0,
+      "offset": 0,
+      "length": 4,
+      "rax": 1610612736,
+      "rax_hex": "0x0000000060000000",
+      "rax_bytes_le": "0000006000000000",
+      "rax_bytes_be": "0000000060000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 1,
+      "offset": 16,
+      "length": 3,
+      "rax": 0,
+      "rax_hex": "0x0000000000000000",
+      "rax_bytes_le": "0000000000000000",
+      "rax_bytes_be": "0000000000000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 2,
+      "offset": 28,
+      "length": 3,
+      "rax": 0,
+      "rax_hex": "0x0000000000000000",
+      "rax_bytes_le": "0000000000000000",
+      "rax_bytes_be": "0000000000000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 3,
+      "offset": 40,
+      "length": 4,
+      "rax": 1610612736,
+      "rax_hex": "0x0000000060000000",
+      "rax_bytes_le": "0000006000000000",
+      "rax_bytes_be": "0000000060000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 4,
+      "offset": 56,
+      "length": 3,
+      "rax": 0,
+      "rax_hex": "0x0000000000000000",
+      "rax_bytes_le": "0000000000000000",
+      "rax_bytes_be": "0000000000000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 5,
+      "offset": 68,
+      "length": 4,
+      "rax": 0,
+      "rax_hex": "0x0000000000000000",
+      "rax_bytes_le": "0000000000000000",
+      "rax_bytes_be": "0000000000000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 6,
+      "offset": 84,
+      "length": 4,
+      "rax": 1610612736,
+      "rax_hex": "0x0000000060000000",
+      "rax_bytes_le": "0000006000000000",
+      "rax_bytes_be": "0000000060000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 7,
+      "offset": 100,
+      "length": 2,
+      "rax": 0,
+      "rax_hex": "0x0000000000000000",
+      "rax_bytes_le": "0000000000000000",
+      "rax_bytes_be": "0000000000000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 8,
+      "offset": 108,
+      "length": 3,
+      "rax": 0,
+      "rax_hex": "0x0000000000000000",
+      "rax_bytes_le": "0000000000000000",
+      "rax_bytes_be": "0000000000000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 9,
+      "offset": 120,
+      "length": 1,
+      "rax": 1610612736,
+      "rax_hex": "0x0000000060000000",
+      "rax_bytes_le": "0000006000000000",
+      "rax_bytes_be": "0000000060000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 10,
+      "offset": 124,
+      "length": 1,
+      "rax": 1610612736,
+      "rax_hex": "0x0000000060000000",
+      "rax_bytes_le": "0000006000000000",
+      "rax_bytes_be": "0000000060000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    },
+    {
+      "slot": 11,
+      "offset": 128,
+      "length": 1,
+      "rax": 1610612736,
+      "rax_hex": "0x0000000060000000",
+      "rax_bytes_le": "0000006000000000",
+      "rax_bytes_be": "0000000060000000",
+      "outbuf_untouched": true,
+      "outbuf_head_hex": "00000000000000000000000000000000"
+    }
+  ]
+}

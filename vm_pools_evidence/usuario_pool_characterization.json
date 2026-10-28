@@ -1,0 +1,1339 @@
+{
+  "pool_reader_va": "0x140048e10",
+  "abi": "rcx=depth(0..3), rdx=slot(0..11), r8=literal_1, r9=literal_2; returns rax=mini-VM local[3] after length iterations",
+  "opcode_map": {
+    "0": "OP0_LOAD_R14",
+    "1": "OP1_LOAD_R15",
+    "2": "OP2_COPY",
+    "3": "OP3_ADD",
+    "4": "OP4_SUB",
+    "5": "OP5_XOR",
+    "6": "OP6_AND",
+    "7": "OP7_OR",
+    "8": "OP8_NOT",
+    "9": "OP9_SHL1",
+    "10": "OP10_RECURSE"
+  },
+  "slots": [
+    {
+      "slot": 0,
+      "program_length": 10,
+      "opcode_trace": [
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 0
+        },
+        {
+          "opcode": 5,
+          "name": "OP5_XOR",
+          "dst": 3,
+          "src": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 2
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 9,
+          "name": "OP9_SHL1",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 3,
+          "name": "OP3_ADD",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 2,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 510,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 7141620141,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 11068046444225730969,
+          "err": null
+        }
+      ],
+      "classification": "xor_or_add_small"
+    },
+    {
+      "slot": 1,
+      "program_length": 6,
+      "opcode_trace": [
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 2
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 9,
+          "name": "OP9_SHL1",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 2,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 510,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 6800635228,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 19215651608740864,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 2,
+      "program_length": 3,
+      "opcode_trace": [
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 3400317614,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 9607825804370432,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 3,
+      "program_length": 11,
+      "opcode_trace": [
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 0
+        },
+        {
+          "opcode": 5,
+          "name": "OP5_XOR",
+          "dst": 3,
+          "src": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 4
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 5
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 8,
+          "name": "OP8_NOT",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 9,
+          "name": "OP9_SHL1",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 4,
+          "name": "OP4_SUB",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 18446744073709551615,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 18446744073709551361,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 330236977,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 9847908862356837751,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 4,
+      "program_length": 7,
+      "opcode_trace": [
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 5
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 8,
+          "name": "OP8_NOT",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 9,
+          "name": "OP9_SHL1",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 2,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 510,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 10747936,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 1200921930260152354,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 5,
+      "program_length": 4,
+      "opcode_trace": [
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 8,
+          "name": "OP8_NOT",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 5373968,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 9823833001984851985,
+          "err": null
+        }
+      ],
+      "classification": "identity_lit2"
+    },
+    {
+      "slot": 6,
+      "program_length": 9,
+      "opcode_trace": [
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 0
+        },
+        {
+          "opcode": 7,
+          "name": "OP7_OR",
+          "dst": 3,
+          "src": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 7
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 8
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 4,
+          "name": "OP4_SUB",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 340984913,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 11048830792616990105,
+          "err": null
+        }
+      ],
+      "classification": "xor_or_add_small"
+    },
+    {
+      "slot": 7,
+      "program_length": 5,
+      "opcode_trace": [
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 8
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 3400317614,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 9607825804370432,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 8,
+      "program_length": 3,
+      "opcode_trace": [
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 3400317614,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 9607825804370432,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 9,
+      "program_length": 11,
+      "opcode_trace": [
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 3,
+          "src": 0,
+          "recurse_slot": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 0
+        },
+        {
+          "opcode": 5,
+          "name": "OP5_XOR",
+          "dst": 3,
+          "src": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 2
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 9,
+          "name": "OP9_SHL1",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 3,
+          "name": "OP3_ADD",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 2,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 510,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 7141620141,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 11068046444225730969,
+          "err": null
+        }
+      ],
+      "classification": "xor_or_add_small"
+    },
+    {
+      "slot": 10,
+      "program_length": 12,
+      "opcode_trace": [
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 3,
+          "src": 0,
+          "recurse_slot": 3
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 0
+        },
+        {
+          "opcode": 5,
+          "name": "OP5_XOR",
+          "dst": 3,
+          "src": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 4
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 5
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 8,
+          "name": "OP8_NOT",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 9,
+          "name": "OP9_SHL1",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 4,
+          "name": "OP4_SUB",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 18446744073709551615,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 18446744073709551361,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 330236977,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 9847908862356837751,
+          "err": null
+        }
+      ],
+      "classification": "opaque"
+    },
+    {
+      "slot": 11,
+      "program_length": 10,
+      "opcode_trace": [
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 3,
+          "src": 0,
+          "recurse_slot": 6
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 0
+        },
+        {
+          "opcode": 7,
+          "name": "OP7_OR",
+          "dst": 3,
+          "src": 1
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 7
+        },
+        {
+          "opcode": 10,
+          "name": "OP10_RECURSE",
+          "dst": 2,
+          "src": 0,
+          "recurse_slot": 8
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 2,
+          "src": 0
+        },
+        {
+          "opcode": 6,
+          "name": "OP6_AND",
+          "dst": 2,
+          "src": 1
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 2,
+          "name": "OP2_COPY",
+          "dst": 3,
+          "src": 2
+        },
+        {
+          "opcode": 4,
+          "name": "OP4_SUB",
+          "dst": 3,
+          "src": 2
+        }
+      ],
+      "evaluations": [
+        {
+          "lit1": 0,
+          "lit2": 0,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 0,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 1,
+          "rax": 1,
+          "err": null
+        },
+        {
+          "lit1": 1,
+          "lit2": 1,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 0,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 0,
+          "lit2": 255,
+          "rax": 255,
+          "err": null
+        },
+        {
+          "lit1": 255,
+          "lit2": 255,
+          "rax": 0,
+          "err": null
+        },
+        {
+          "lit1": 3735928559,
+          "lit2": 3405691582,
+          "rax": 340984913,
+          "err": null
+        },
+        {
+          "lit1": 1234605616436508552,
+          "lit2": 9833440827789222417,
+          "rax": 11048830792616990105,
+          "err": null
+        }
+      ],
+      "classification": "xor_or_add_small"
+    }
+  ]
+}
