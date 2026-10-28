@@ -1,0 +1,247 @@
+{
+  "binary": "pafet.bin",
+  "vm": "usuario",
+  "executor_va": "0x140048960",
+  "dispatcher_va": "0x14003f540",
+  "blob_encrypted": {
+    "va": "0x1403e5020",
+    "size": 1752,
+    "sha256_enc_bytes": "fe89beb0ea9f67afa5e762c1be7fae2a8c338c0fed1dbdc8b39d8d4c0dab1147",
+    "attestation_sum_offline": "0xc4344faf7ef3b8df",
+    "attestation_sum_expected": "0xc4344faf7ef3b8df",
+    "attestation_matches": true,
+    "attestation_note": "This is an integrity hash computed by streaming fmix64 over encrypted bytes. It is NOT the decryption; the bytecode stays encrypted and is only decoded by the materializer at runtime."
+  },
+  "permute8_user_vm": {
+    "function_va": "0x140048ac0",
+    "inverse_va": "0x140048c20",
+    "multiplier": "0xd6e8feb86659fd93",
+    "feistel_seeds": [
+      "0xff7a8b2362bf776e",
+      "0x5d2301e8e361f351",
+      "0xbbeb9fb6602a7f44",
+      "0x1990147fe0dcfb2f"
+    ],
+    "note": "Analogue of main controller permute8 at 0x140380590 with 4 distinct seeds; same shape (nibble Feistel over fmix64)."
+  },
+  "pool_structure": {
+    "size": 12,
+    "bounds_check_va": "0x140048e49",
+    "pool_reader_va": "0x140048e10",
+    "tables": {
+      "indices_offset": {
+        "va": "0x1403e1240",
+        "entries": 12,
+        "word_size": 4,
+        "values": [
+          "0x00000000",
+          "0x00000010",
+          "0x0000001c",
+          "0x00000028",
+          "0x00000038",
+          "0x00000044",
+          "0x00000054",
+          "0x00000064",
+          "0x0000006c",
+          "0x00000078",
+          "0x0000007c",
+          "0x00000080"
+        ]
+      },
+      "indices_length": {
+        "va": "0x1403e7110",
+        "entries": 12,
+        "word_size": 4,
+        "values": [
+          "0x00000004",
+          "0x00000003",
+          "0x00000003",
+          "0x00000004",
+          "0x00000003",
+          "0x00000004",
+          "0x00000004",
+          "0x00000002",
+          "0x00000003",
+          "0x00000001",
+          "0x00000001",
+          "0x00000001"
+        ]
+      },
+      "aux_tbl": {
+        "va": "0x1403e2500",
+        "total_u32_words": 33,
+        "total_bytes": 132,
+        "words_hex": [
+          "0xc67598f0",
+          "0x423ceac8",
+          "0x6c694b4b",
+          "0x36387719",
+          "0xf5e32bb2",
+          "0x1d0f9d70",
+          "0x40f70af7",
+          "0xfe9ffb5d",
+          "0xb0e05dbc",
+          "0xc629a524",
+          "0xfde3ec9f",
+          "0x60eb56ae",
+          "0x9449e44e",
+          "0x15e867dc",
+          "0x52b85b82",
+          "0x77a76541",
+          "0x442352db",
+          "0xe9d7e06a",
+          "0xef89e1f8",
+          "0xe663ded0",
+          "0xf4b57a31",
+          "0xfbec2020",
+          "0x79a9ae5b",
+          "0x9647adc7",
+          "0x0b63a963",
+          "0x5abc7f07",
+          "0x37dbaff3",
+          "0x2318c847",
+          "0x1c229e7f",
+          "0x7ab0375e",
+          "0x4df23e82",
+          "0x4713bb7e",
+          "0xf737f551"
+        ]
+      }
+    },
+    "slots_raw": [
+      {
+        "slot": 0,
+        "offset_bytes": 0,
+        "length_words": 4,
+        "raw_words_hex": [
+          "0xc67598f0",
+          "0x423ceac8",
+          "0x6c694b4b",
+          "0x36387719"
+        ]
+      },
+      {
+        "slot": 1,
+        "offset_bytes": 16,
+        "length_words": 3,
+        "raw_words_hex": [
+          "0xf5e32bb2",
+          "0x1d0f9d70",
+          "0x40f70af7"
+        ]
+      },
+      {
+        "slot": 2,
+        "offset_bytes": 28,
+        "length_words": 3,
+        "raw_words_hex": [
+          "0xfe9ffb5d",
+          "0xb0e05dbc",
+          "0xc629a524"
+        ]
+      },
+      {
+        "slot": 3,
+        "offset_bytes": 40,
+        "length_words": 4,
+        "raw_words_hex": [
+          "0xfde3ec9f",
+          "0x60eb56ae",
+          "0x9449e44e",
+          "0x15e867dc"
+        ]
+      },
+      {
+        "slot": 4,
+        "offset_bytes": 56,
+        "length_words": 3,
+        "raw_words_hex": [
+          "0x52b85b82",
+          "0x77a76541",
+          "0x442352db"
+        ]
+      },
+      {
+        "slot": 5,
+        "offset_bytes": 68,
+        "length_words": 4,
+        "raw_words_hex": [
+          "0xe9d7e06a",
+          "0xef89e1f8",
+          "0xe663ded0",
+          "0xf4b57a31"
+        ]
+      },
+      {
+        "slot": 6,
+        "offset_bytes": 84,
+        "length_words": 4,
+        "raw_words_hex": [
+          "0xfbec2020",
+          "0x79a9ae5b",
+          "0x9647adc7",
+          "0x0b63a963"
+        ]
+      },
+      {
+        "slot": 7,
+        "offset_bytes": 100,
+        "length_words": 2,
+        "raw_words_hex": [
+          "0x5abc7f07",
+          "0x37dbaff3"
+        ]
+      },
+      {
+        "slot": 8,
+        "offset_bytes": 108,
+        "length_words": 3,
+        "raw_words_hex": [
+          "0x2318c847",
+          "0x1c229e7f",
+          "0x7ab0375e"
+        ]
+      },
+      {
+        "slot": 9,
+        "offset_bytes": 120,
+        "length_words": 1,
+        "raw_words_hex": [
+          "0x4df23e82"
+        ]
+      },
+      {
+        "slot": 10,
+        "offset_bytes": 124,
+        "length_words": 1,
+        "raw_words_hex": [
+          "0x4713bb7e"
+        ]
+      },
+      {
+        "slot": 11,
+        "offset_bytes": 128,
+        "length_words": 1,
+        "raw_words_hex": [
+          "0xf737f551"
+        ]
+      }
+    ],
+    "reader_constants": {
+      "phi64": "0x9e3779b97f4a7c15",
+      "phi_bias": "0x59b26b99084f4a7",
+      "phi_hi32": "0x9e3779b1",
+      "phi_lo32": "0x7a143595",
+      "splitmix_a": "0xc2b2ae35",
+      "splitmix_b": "0x27d4eb2f",
+      "splitmix64": "0xbf58476d1ce4e5b9",
+      "bias_pos": "0x59f554ae",
+      "bias_neg_a": "0x44422503",
+      "bias_neg_b": "0x7d331a1"
+    }
+  },
+  "open_blockers": {
+    "decoded_pool_values": "Final 64-bit (?) value per slot not yet extracted. Isolated Unicorn call of 0x140048e10 with ecx=0,edx=slot,r8=outbuf,r9=0 returns internal heap allocs but does not write final value to passed outbuf — the ctx shape and call signature expected by that frame differ from the plain resolver assumption.",
+    "bytecode_plaintext": "Full user-VM executor 0x140048960 invoked under IsolatedPE with zeroed ctx fails at RIP 0x140398502 with UC_ERR_READ_UNMAPPED. The executor needs a ctx with at least a vtable pointer and input/output std::string fields initialised. A viable next step is to replay the main dispatcher 0x14003f540 pattern: inspect every mov [rcx+offset] in both the dispatcher and the executor to recover the required field map, then alloc the ctx accordingly; alternatively, hook the running PE with Frida at the materializer to dump decoded blocks live."
+  }
+}
