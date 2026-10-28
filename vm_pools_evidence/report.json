@@ -1,0 +1,272 @@
+{
+  "binary": "C:\\Users\\Ram\u00f3n\\Desktop\\pafet_crackme\\pafet.bin",
+  "binary_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "expected_user_sha256": "9419f86b97bd379906be72ea80517c075a499d0db0a37499132c2d203cc21420",
+  "notes": [
+    "Each VM executor has exactly ONE .rdata lea target: its encrypted bytecode blob.",
+    "Nested VM pools (analogue of 0x3ea8b0/930/9e0 in main) were NOT found with a trivial scan;",
+    "per-VM decryption is required to extract the plaintext bytecode and locate CONST operands.",
+    "This script dumps raw blobs + runs ASCII/sha256/f_user_inverse heuristics on them as evidence."
+  ],
+  "vms": [
+    {
+      "name": "usuario",
+      "executor_va": "0x140048960",
+      "blob_va": "0x1403e5020",
+      "blob_size": 8192,
+      "blob_sha256": "0f4031160805d1a318fc4d4abc9d362638e750c988ea7e00b80de453db8d6f92",
+      "entropy_bits_per_byte": 7.7499,
+      "ascii_runs": [
+        {
+          "offset": 312,
+          "text": ",Uqq$rn"
+        },
+        {
+          "offset": 2137,
+          "text": "fQa oZ"
+        },
+        {
+          "offset": 2343,
+          "text": "G 2gQ~"
+        },
+        {
+          "offset": 3505,
+          "text": "'x.}_wu"
+        },
+        {
+          "offset": 6082,
+          "text": "v8?36x"
+        },
+        {
+          "offset": 7076,
+          "text": "a=lQ75l"
+        }
+      ],
+      "sha_iv_u32_hits": 0,
+      "sha_k_u32_hits": 0,
+      "fmix_u64_hits": 0,
+      "blob_sha256_matches_H": false,
+      "des3_key_candidates_producing_CMO": [],
+      "sha_preimage_hits": [],
+      "f_user_inverse_alnum_candidates": [
+        {
+          "len": 1,
+          "user": "T"
+        },
+        {
+          "len": 2,
+          "user": "OT"
+        },
+        {
+          "len": 3,
+          "user": "pOT"
+        }
+      ]
+    },
+    {
+      "name": "sha",
+      "executor_va": "0x14027aba0",
+      "blob_va": "0x1403e3f10",
+      "blob_size": 8192,
+      "blob_sha256": "d432261b15c909e5e141d974b4e890133cb596b6cfe5b64c35f601b8263973b9",
+      "entropy_bits_per_byte": 7.8623,
+      "ascii_runs": [
+        {
+          "offset": 982,
+          "text": "z\";H+28"
+        },
+        {
+          "offset": 2513,
+          "text": "=t!u]D1I]"
+        },
+        {
+          "offset": 2837,
+          "text": "Np*;e,"
+        },
+        {
+          "offset": 3611,
+          "text": "1.\"2=$/"
+        },
+        {
+          "offset": 4680,
+          "text": ",Uqq$rn"
+        },
+        {
+          "offset": 6505,
+          "text": "fQa oZ"
+        },
+        {
+          "offset": 6711,
+          "text": "G 2gQ~"
+        },
+        {
+          "offset": 7873,
+          "text": "'x.}_wu"
+        }
+      ],
+      "sha_iv_u32_hits": 0,
+      "sha_k_u32_hits": 0,
+      "fmix_u64_hits": 0,
+      "blob_sha256_matches_H": false,
+      "des3_key_candidates_producing_CMO": [],
+      "sha_preimage_hits": [],
+      "f_user_inverse_alnum_candidates": []
+    },
+    {
+      "name": "serial",
+      "executor_va": "0x14022a120",
+      "blob_va": "0x1403e9c10",
+      "blob_size": 8192,
+      "blob_sha256": "52e216d829ab6682527b0699a3d3e068187806531981567c32f62703b1c7cdd4",
+      "entropy_bits_per_byte": 7.4032,
+      "ascii_runs": [
+        {
+          "offset": 292,
+          "text": "x%T|(lQ"
+        },
+        {
+          "offset": 1034,
+          "text": "CSSy8q"
+        },
+        {
+          "offset": 1631,
+          "text": "ZZW~IQ"
+        },
+        {
+          "offset": 1845,
+          "text": "N W[Hk="
+        },
+        {
+          "offset": 2360,
+          "text": "#|z{f "
+        },
+        {
+          "offset": 2413,
+          "text": "%zbL.2"
+        },
+        {
+          "offset": 4427,
+          "text": ",Bvy/a"
+        },
+        {
+          "offset": 6581,
+          "text": "?ziYusp`6`~W}a"
+        },
+        {
+          "offset": 6936,
+          "text": "[a%spuS{"
+        },
+        {
+          "offset": 7088,
+          "text": "=~T|z'a"
+        },
+        {
+          "offset": 8116,
+          "text": "YSBw ,x"
+        }
+      ],
+      "sha_iv_u32_hits": 0,
+      "sha_k_u32_hits": 0,
+      "fmix_u64_hits": 0,
+      "blob_sha256_matches_H": false,
+      "des3_key_candidates_producing_CMO": [],
+      "sha_preimage_hits": [],
+      "f_user_inverse_alnum_candidates": [
+        {
+          "len": 1,
+          "user": "j"
+        }
+      ]
+    },
+    {
+      "name": "hex",
+      "executor_va": "0x1400804c0",
+      "blob_va": "0x1403ec120",
+      "blob_size": 8192,
+      "blob_sha256": "438d6d304983c163be395436537c647166dc11c6eaad09ce86e5064b1255dd86",
+      "entropy_bits_per_byte": 7.4851,
+      "ascii_runs": [
+        {
+          "offset": 416,
+          "text": "AV]kwa"
+        },
+        {
+          "offset": 850,
+          "text": "]8:B4|2"
+        },
+        {
+          "offset": 1224,
+          "text": "DIo3X1G"
+        },
+        {
+          "offset": 2048,
+          "text": "<4,$?7/'"
+        },
+        {
+          "offset": 2334,
+          "text": "=P;}q7h"
+        },
+        {
+          "offset": 3482,
+          "text": "=:(46902"
+        },
+        {
+          "offset": 3552,
+          "text": "xLrr[ih^ipfPlHmSqLJ@wrAo"
+        },
+        {
+          "offset": 3577,
+          "text": "RD_NGPWNMQ[{JvGAUy_"
+        },
+        {
+          "offset": 3597,
+          "text": "_whx|TDFdkiJPvY"
+        },
+        {
+          "offset": 3613,
+          "text": "oGu|FycIqYt`CWYlIjFFBusEEgZRvWsR@eY"
+        },
+        {
+          "offset": 3649,
+          "text": "m~aQouCfGBxCOjWM"
+        },
+        {
+          "offset": 3666,
+          "text": "wCFs^rWWeM@UfDEVmpNQ`TBpki~LZnhP~novjM[[aH_FFYJaYpqp~vBCqXKpNpK}hIEV|EdsDUWyXBzsUQMGRmN[sp~mxBhMcGqZWX|EQBNIzVoC{JtSrZDyglx[xTvg}eVomkBiwnbMEZ"
+        },
+        {
+          "offset": 4243,
+          "text": "Q*B!\"?"
+        },
+        {
+          "offset": 4458,
+          "text": "<FbFvC"
+        },
+        {
+          "offset": 4951,
+          "text": "(3-!0,1'8\"5.*2$"
+        },
+        {
+          "offset": 7050,
+          "text": "=#i(8L"
+        },
+        {
+          "offset": 7146,
+          "text": "=#i(8LJ5"
+        }
+      ],
+      "sha_iv_u32_hits": 0,
+      "sha_k_u32_hits": 0,
+      "fmix_u64_hits": 0,
+      "blob_sha256_matches_H": false,
+      "des3_key_candidates_producing_CMO": [],
+      "sha_preimage_hits": [],
+      "f_user_inverse_alnum_candidates": [
+        {
+          "len": 1,
+          "user": "X"
+        }
+      ]
+    }
+  ]
+}
