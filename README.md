@@ -8,10 +8,11 @@ unmodified execution of the original challenge.
 The cryptographic phase closed with no practical key-recovery shortcut.
 The main logical controller is now fully decoded: 105 blocks, 482 instructions,
 and a dataflow slice validated against original-instruction control projections.
-It adds no credential condition under explicit native-host contracts. Global
-coverage remains **incomplete**: nested wrappers and normal Windows/runtime
-behavior are not fully characterized. The next priority is the user-VM return
-divergence, not more DES reversing or credential guessing.
+It adds no credential condition under explicit native-host contracts. The user-VM
+constant pool is now also decoded end-to-end: 12 slots are ALU primitives (ADD,
+SUB, AND, XOR, carry/borrow), with 0 unexplained constants. The user-VM encrypted
+bytecode blob (1752 B at `0x1403E5020`) and the pools of the other three nested
+VMs (SHA, serial, hex) remain opaque. Global coverage remains **incomplete**.
 
 Start with [the semantic coverage report](PAFET_SEMANTIC_COVERAGE.md) and
 [the REVoid assessment](PAFET_REVOID_ASSESSMENT.md) (Spanish). The new evidence
@@ -126,6 +127,7 @@ real flag and do not exercise the original acceptance gate.
 | File or directory | Purpose |
 |---|---|
 | [PAFET_SEMANTIC_COVERAGE.md](PAFET_SEMANTIC_COVERAGE.md) | Current semantic coverage, unresolved regions and next experiments |
+| [PAFET_USERVM_POOL.md](PAFET_USERVM_POOL.md) | User-VM constant pool decoded: 12 slots, all ALU primitives, 0 credential constants |
 | [PAFET_REVOID_ASSESSMENT.md](PAFET_REVOID_ASSESSMENT.md) | Source assessment and limited interpreter-instrumentation proof of concept |
 | [scripts/pafet_semantic_probe.py](scripts/pafet_semantic_probe.py) | Bounded original-byte and control-flow semantic tests |
 | [scripts/pafet_semantic_map.py](scripts/pafet_semantic_map.py) | Native callback tables and focused disassembly from the original PE |
@@ -175,6 +177,19 @@ This uses original materializer/reader/handler instructions with modeled native
 callbacks. It performs no DES, SHA or credential search. Recorded results and
 precise contracts are in `controller_evidence/README.md`. It is not original
 credential acceptance.
+
+## Nested VM pools
+
+The user-VM constant pool is fully decoded and classified in
+[PAFET_USERVM_POOL.md](PAFET_USERVM_POOL.md). All 12 slots are ALU primitives
+(ADD, SUB, AND, XOR, carry, borrow, dup slots) exercised by `f_user`; no slot
+contains a username preimage, 3DES key or flag text. Raw structural dumps,
+decoded ABI and function characterization are reproducible from
+`scripts/pafet_uservm_pool_*.py` and `vm_pools_evidence/`.
+
+The user-VM encrypted bytecode blob (1752 B at `0x1403E5020`) and the pools of
+the SHA / serial / hex VMs remain opaque. Initial structural recon for all four
+blobs is in `vm_pools_evidence/` and `scripts/pafet_vm_recon.py`.
 
 ## Historical reversing notes
 
