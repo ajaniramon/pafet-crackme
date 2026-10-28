@@ -1,0 +1,2746 @@
+{
+  "0x140008b50": {
+    "va": "0x140008b50",
+    "size": 390,
+    "channel": 0,
+    "num_pairs": 10,
+    "features": {
+      "size_bytes": 419,
+      "num_insns": 88,
+      "calls": [
+        [
+          "0x140008c3e",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x140008c9f",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 4,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140008b5d",
+          "0x154",
+          4
+        ],
+        [
+          "0x140008c5c",
+          "0x3dd520",
+          4
+        ],
+        [
+          "0x140008c6c",
+          "0x3dd560",
+          8
+        ],
+        [
+          "0x140008c74",
+          "0x3dd5d0",
+          8
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x140008c55",
+          "0x140000000"
+        ]
+      ],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x1400099c0": {
+    "va": "0x1400099c0",
+    "size": 503,
+    "channel": 0,
+    "num_pairs": 9,
+    "features": {
+      "size_bytes": 535,
+      "num_insns": 112,
+      "calls": [
+        [
+          "0x140009ab7",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x140009b5c",
+          "0x140002330",
+          ""
+        ],
+        [
+          "0x140009b75",
+          "0x140006300",
+          ""
+        ],
+        [
+          "0x140009b80",
+          "0x140006010",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400099d6",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r15"
+      ]
+    }
+  },
+  "0x14000a850": {
+    "va": "0x14000a850",
+    "size": 314,
+    "channel": 0,
+    "num_pairs": 5,
+    "features": {
+      "size_bytes": 343,
+      "num_insns": 67,
+      "calls": [
+        [
+          "0x14000a93e",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x14000a948",
+          "0x1400036d0",
+          ""
+        ],
+        [
+          "0x14000a953",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14000a85d",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x14000b670": {
+    "va": "0x14000b670",
+    "size": 3705,
+    "channel": 0,
+    "num_pairs": 4,
+    "features": {
+      "size_bytes": 3735,
+      "num_insns": 879,
+      "calls": [
+        [
+          "0x14000b76e",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x14000b778",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14000bb5e",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14000bbf3",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14000bc98",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14000bd87",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x14000bf1f",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x14000bfb1",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x14000c0e1",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x14000c0ee",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x14000c3be",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x14000c3f6",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x14000c4d5",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x14000c4e3",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 15,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14000b68d",
+          "0x154",
+          4
+        ],
+        [
+          "0x14000c180",
+          "0x0",
+          1
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x14000c22d",
+          "0x140000000"
+        ],
+        [
+          "0x14000c373",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13"
+      ]
+    }
+  },
+  "0x1400110f0": {
+    "va": "0x1400110f0",
+    "size": 329,
+    "channel": 0,
+    "num_pairs": 5,
+    "features": {
+      "size_bytes": 358,
+      "num_insns": 72,
+      "calls": [
+        [
+          "0x1400111df",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x1400111ea",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140011202",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400110fe",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x140011f10": {
+    "va": "0x140011f10",
+    "size": 3753,
+    "channel": 0,
+    "num_pairs": 1,
+    "features": {
+      "size_bytes": 3784,
+      "num_insns": 891,
+      "calls": [
+        [
+          "0x14001200e",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x140012018",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x1400120cb",
+          "0x1400060c0",
+          ""
+        ],
+        [
+          "0x1400120d5",
+          "0x140002330",
+          ""
+        ],
+        [
+          "0x1400120f9",
+          "0x140006300",
+          ""
+        ],
+        [
+          "0x140012104",
+          "0x140006010",
+          ""
+        ],
+        [
+          "0x140012428",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x1400124bd",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140012562",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140012651",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x1400127e9",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x14001287b",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x1400129ab",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x1400129b8",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x140012c88",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x140012cc3",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x140012da5",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x140012db3",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 15,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140011f2d",
+          "0x154",
+          4
+        ],
+        [
+          "0x140012a4a",
+          "0x0",
+          1
+        ],
+        [
+          "0x140012dce",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x140012af7",
+          "0x140000000"
+        ],
+        [
+          "0x140012c3d",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13"
+      ]
+    }
+  },
+  "0x140012dc0": {
+    "va": "0x140012dc0",
+    "size": 321,
+    "channel": 0,
+    "num_pairs": 1,
+    "features": {
+      "size_bytes": 350,
+      "num_insns": 70,
+      "calls": [
+        [
+          "0x140012eaf",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140012eba",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140012eca",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140012dce",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x140013be0": {
+    "va": "0x140013be0",
+    "size": 317,
+    "channel": 0,
+    "num_pairs": 4,
+    "features": {
+      "size_bytes": 346,
+      "num_insns": 68,
+      "calls": [
+        [
+          "0x140013ccf",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140013cda",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140013ce6",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140013bee",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x140014a00": {
+    "va": "0x140014a00",
+    "size": 293,
+    "channel": 0,
+    "num_pairs": 10,
+    "features": {
+      "size_bytes": 322,
+      "num_insns": 61,
+      "calls": [
+        [
+          "0x140014aee",
+          "0x140003a50",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140014a0d",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x140015820": {
+    "va": "0x140015820",
+    "size": 503,
+    "channel": 1,
+    "num_pairs": 7,
+    "features": {
+      "size_bytes": 535,
+      "num_insns": 112,
+      "calls": [
+        [
+          "0x140015917",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x1400159bc",
+          "0x140002330",
+          ""
+        ],
+        [
+          "0x1400159d5",
+          "0x140006300",
+          ""
+        ],
+        [
+          "0x1400159e0",
+          "0x140006010",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140015836",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r15"
+      ]
+    }
+  },
+  "0x1400166b0": {
+    "va": "0x1400166b0",
+    "size": 314,
+    "channel": 1,
+    "num_pairs": 6,
+    "features": {
+      "size_bytes": 343,
+      "num_insns": 67,
+      "calls": [
+        [
+          "0x14001679e",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x1400167a8",
+          "0x1400036d0",
+          ""
+        ],
+        [
+          "0x1400167b3",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400166bd",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x140018300": {
+    "va": "0x140018300",
+    "size": 321,
+    "channel": 1,
+    "num_pairs": 1,
+    "features": {
+      "size_bytes": 350,
+      "num_insns": 70,
+      "calls": [
+        [
+          "0x1400183ef",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x1400183fa",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14001840a",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14001830e",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x140019f40": {
+    "va": "0x140019f40",
+    "size": 4763,
+    "channel": 1,
+    "num_pairs": 3,
+    "features": {
+      "size_bytes": 4793,
+      "num_insns": 1113,
+      "calls": [
+        [
+          "0x14001a050",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x14001a05c",
+          "0x140007370",
+          ""
+        ],
+        [
+          "0x14001a07a",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14001a1dc",
+          "0x1400043a0",
+          ""
+        ],
+        [
+          "0x14001a2c0",
+          "qword ptr [rax + 0x10]",
+          "indirect"
+        ],
+        [
+          "0x14001a37d",
+          "0x1400044f0",
+          ""
+        ],
+        [
+          "0x14001a4d8",
+          "0x140003880",
+          ""
+        ],
+        [
+          "0x14001a82b",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14001a8c0",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14001a965",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14001aa54",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x14001abec",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x14001ac85",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x14001adb7",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x14001adc4",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x14001b094",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x14001b0cc",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x14001b199",
+          "0x1403a3dc0",
+          ""
+        ],
+        [
+          "0x14001b1c1",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x14001b1c7",
+          "0x1403a17cc",
+          ""
+        ],
+        [
+          "0x14001b1d5",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 21,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140019f78",
+          "0x154",
+          4
+        ],
+        [
+          "0x14001a2ae",
+          "0x0",
+          8
+        ],
+        [
+          "0x14001a35d",
+          "0x0",
+          8
+        ],
+        [
+          "0x14001ae4b",
+          "0x0",
+          1
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x140019f57",
+          "0x14040d020"
+        ],
+        [
+          "0x14001af0a",
+          "0x140000000"
+        ],
+        [
+          "0x14001b04b",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r14",
+        "push r15"
+      ]
+    }
+  },
+  "0x14001c090": {
+    "va": "0x14001c090",
+    "size": 390,
+    "channel": 1,
+    "num_pairs": 14,
+    "features": {
+      "size_bytes": 419,
+      "num_insns": 88,
+      "calls": [
+        [
+          "0x14001c17e",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x14001c1df",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 4,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14001c09d",
+          "0x154",
+          4
+        ],
+        [
+          "0x14001c19c",
+          "0x3dd520",
+          4
+        ],
+        [
+          "0x14001c1ac",
+          "0x3dd560",
+          8
+        ],
+        [
+          "0x14001c1b4",
+          "0x3dd5d0",
+          8
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x14001c195",
+          "0x140000000"
+        ]
+      ],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x14001cf00": {
+    "va": "0x14001cf00",
+    "size": 336,
+    "channel": 1,
+    "num_pairs": 1,
+    "features": {
+      "size_bytes": 365,
+      "num_insns": 73,
+      "calls": [
+        [
+          "0x14001cfef",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14001cffa",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14001d00e",
+          "0x1400028a0",
+          ""
+        ],
+        [
+          "0x14001d019",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14001cf0e",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x14001dd30": {
+    "va": "0x14001dd30",
+    "size": 293,
+    "channel": 1,
+    "num_pairs": 12,
+    "features": {
+      "size_bytes": 322,
+      "num_insns": 61,
+      "calls": [
+        [
+          "0x14001de1e",
+          "0x140003a50",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14001dd3d",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x1400208b0": {
+    "va": "0x1400208b0",
+    "size": 319,
+    "channel": 1,
+    "num_pairs": 2,
+    "features": {
+      "size_bytes": 348,
+      "num_insns": 69,
+      "calls": [
+        [
+          "0x14002099f",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x1400209aa",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x1400209b8",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400208be",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x1400216d0": {
+    "va": "0x1400216d0",
+    "size": 3705,
+    "channel": 1,
+    "num_pairs": 8,
+    "features": {
+      "size_bytes": 3736,
+      "num_insns": 878,
+      "calls": [
+        [
+          "0x1400217ce",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x1400217d8",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140021bbe",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140021c53",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140021cf8",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140021de7",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x140021f7f",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x140022011",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x140022141",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x14002214e",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x14002241e",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x140022456",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x140022535",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x140022543",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 15,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400216ed",
+          "0x154",
+          4
+        ],
+        [
+          "0x1400221e0",
+          "0x0",
+          1
+        ],
+        [
+          "0x14002255e",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x14002228d",
+          "0x140000000"
+        ],
+        [
+          "0x1400223d3",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13"
+      ]
+    }
+  },
+  "0x140023380": {
+    "va": "0x140023380",
+    "size": 337,
+    "channel": 2,
+    "num_pairs": 2,
+    "features": {
+      "size_bytes": 366,
+      "num_insns": 73,
+      "calls": [
+        [
+          "0x14002346f",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14002347a",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14002349a",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14002338e",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x1400241b0": {
+    "va": "0x1400241b0",
+    "size": 390,
+    "channel": 2,
+    "num_pairs": 14,
+    "features": {
+      "size_bytes": 419,
+      "num_insns": 88,
+      "calls": [
+        [
+          "0x14002429e",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x1400242ff",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 4,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400241bd",
+          "0x154",
+          4
+        ],
+        [
+          "0x1400242bc",
+          "0x3dd520",
+          4
+        ],
+        [
+          "0x1400242cc",
+          "0x3dd560",
+          8
+        ],
+        [
+          "0x1400242d4",
+          "0x3dd5d0",
+          8
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x1400242b5",
+          "0x140000000"
+        ]
+      ],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x140025020": {
+    "va": "0x140025020",
+    "size": 503,
+    "channel": 2,
+    "num_pairs": 13,
+    "features": {
+      "size_bytes": 535,
+      "num_insns": 112,
+      "calls": [
+        [
+          "0x140025117",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x1400251bc",
+          "0x140002330",
+          ""
+        ],
+        [
+          "0x1400251d5",
+          "0x140006300",
+          ""
+        ],
+        [
+          "0x1400251e0",
+          "0x140006010",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140025036",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r15"
+      ]
+    }
+  },
+  "0x140027b80": {
+    "va": "0x140027b80",
+    "size": 3705,
+    "channel": 2,
+    "num_pairs": 2,
+    "features": {
+      "size_bytes": 3735,
+      "num_insns": 879,
+      "calls": [
+        [
+          "0x140027c7e",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x140027c88",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14002806e",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140028103",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x1400281a8",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140028297",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x14002842f",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x1400284c1",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x1400285f1",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x1400285fe",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x1400288ce",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x140028906",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x1400289e5",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x1400289f3",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 15,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140027b9d",
+          "0x154",
+          4
+        ],
+        [
+          "0x140028690",
+          "0x0",
+          1
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x14002873d",
+          "0x140000000"
+        ],
+        [
+          "0x140028883",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13"
+      ]
+    }
+  },
+  "0x140028a00": {
+    "va": "0x140028a00",
+    "size": 4763,
+    "channel": 2,
+    "num_pairs": 2,
+    "features": {
+      "size_bytes": 4793,
+      "num_insns": 1113,
+      "calls": [
+        [
+          "0x140028b10",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x140028b1c",
+          "0x140007370",
+          ""
+        ],
+        [
+          "0x140028b3a",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140028c9c",
+          "0x1400043a0",
+          ""
+        ],
+        [
+          "0x140028d80",
+          "qword ptr [rax + 0x10]",
+          "indirect"
+        ],
+        [
+          "0x140028e3d",
+          "0x1400044f0",
+          ""
+        ],
+        [
+          "0x140028f98",
+          "0x140003880",
+          ""
+        ],
+        [
+          "0x1400292eb",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140029380",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140029425",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x140029514",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x1400296ac",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x140029745",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x140029877",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x140029884",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x140029b54",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x140029b8c",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x140029c59",
+          "0x1403a3dc0",
+          ""
+        ],
+        [
+          "0x140029c81",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x140029c87",
+          "0x1403a17cc",
+          ""
+        ],
+        [
+          "0x140029c95",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 21,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140028a38",
+          "0x154",
+          4
+        ],
+        [
+          "0x140028d6e",
+          "0x0",
+          8
+        ],
+        [
+          "0x140028e1d",
+          "0x0",
+          8
+        ],
+        [
+          "0x14002990b",
+          "0x0",
+          1
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x140028a17",
+          "0x14040d020"
+        ],
+        [
+          "0x1400299ca",
+          "0x140000000"
+        ],
+        [
+          "0x140029b0b",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r14",
+        "push r15"
+      ]
+    }
+  },
+  "0x14002ab60": {
+    "va": "0x14002ab60",
+    "size": 339,
+    "channel": 2,
+    "num_pairs": 3,
+    "features": {
+      "size_bytes": 368,
+      "num_insns": 73,
+      "calls": [
+        [
+          "0x14002ac4f",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14002ac5a",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14002ac71",
+          "0x1400028a0",
+          ""
+        ],
+        [
+          "0x14002ac7c",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14002ab6e",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x14002d5d0": {
+    "va": "0x14002d5d0",
+    "size": 314,
+    "channel": 2,
+    "num_pairs": 7,
+    "features": {
+      "size_bytes": 343,
+      "num_insns": 67,
+      "calls": [
+        [
+          "0x14002d6be",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x14002d6c8",
+          "0x1400036d0",
+          ""
+        ],
+        [
+          "0x14002d6d3",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14002d5dd",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x14002f2a0": {
+    "va": "0x14002f2a0",
+    "size": 307,
+    "channel": 2,
+    "num_pairs": 2,
+    "features": {
+      "size_bytes": 336,
+      "num_insns": 65,
+      "calls": [
+        [
+          "0x14002f38e",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14002f39c",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14002f2ad",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x1400300b0": {
+    "va": "0x1400300b0",
+    "size": 293,
+    "channel": 2,
+    "num_pairs": 10,
+    "features": {
+      "size_bytes": 322,
+      "num_insns": 61,
+      "calls": [
+        [
+          "0x14003019e",
+          "0x140003a50",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400300bd",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x140030ec0": {
+    "va": "0x140030ec0",
+    "size": 321,
+    "channel": 3,
+    "num_pairs": 9,
+    "features": {
+      "size_bytes": 350,
+      "num_insns": 68,
+      "calls": [
+        [
+          "0x140030fb5",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x140030fbf",
+          "0x1400036d0",
+          ""
+        ],
+        [
+          "0x140030fca",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140030ecd",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x140031ce0": {
+    "va": "0x140031ce0",
+    "size": 328,
+    "channel": 3,
+    "num_pairs": 1,
+    "features": {
+      "size_bytes": 357,
+      "num_insns": 71,
+      "calls": [
+        [
+          "0x140031dd6",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140031de1",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140031df1",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140031cee",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  },
+  "0x140033930": {
+    "va": "0x140033930",
+    "size": 397,
+    "channel": 3,
+    "num_pairs": 9,
+    "features": {
+      "size_bytes": 426,
+      "num_insns": 89,
+      "calls": [
+        [
+          "0x140033a25",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x140033a86",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 4,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14003393d",
+          "0x154",
+          4
+        ],
+        [
+          "0x140033a43",
+          "0x3dd520",
+          4
+        ],
+        [
+          "0x140033a53",
+          "0x3dd560",
+          8
+        ],
+        [
+          "0x140033a5b",
+          "0x3dd5d0",
+          8
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x140033a3c",
+          "0x140000000"
+        ]
+      ],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x1400355c0": {
+    "va": "0x1400355c0",
+    "size": 510,
+    "channel": 3,
+    "num_pairs": 10,
+    "features": {
+      "size_bytes": 542,
+      "num_insns": 113,
+      "calls": [
+        [
+          "0x1400356be",
+          "0x140007040",
+          ""
+        ],
+        [
+          "0x140035763",
+          "0x140002330",
+          ""
+        ],
+        [
+          "0x14003577c",
+          "0x140006300",
+          ""
+        ],
+        [
+          "0x140035787",
+          "0x140006010",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x1400355d6",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r15"
+      ]
+    }
+  },
+  "0x140038fe0": {
+    "va": "0x140038fe0",
+    "size": 4474,
+    "channel": 3,
+    "num_pairs": 1,
+    "features": {
+      "size_bytes": 4505,
+      "num_insns": 1048,
+      "calls": [
+        [
+          "0x1400390f7",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x140039103",
+          "0x140007370",
+          ""
+        ],
+        [
+          "0x140039123",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x140039285",
+          "0x1400043a0",
+          ""
+        ],
+        [
+          "0x14003928f",
+          "0x140003610",
+          ""
+        ],
+        [
+          "0x140039337",
+          "qword ptr [rax + 0x10]",
+          "indirect"
+        ],
+        [
+          "0x140039340",
+          "0x140003610",
+          ""
+        ],
+        [
+          "0x1400393b0",
+          "0x1400044f0",
+          ""
+        ],
+        [
+          "0x140039413",
+          "0x140003610",
+          ""
+        ],
+        [
+          "0x140039469",
+          "0x140003880",
+          ""
+        ],
+        [
+          "0x1400397b5",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14003984a",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x1400398ef",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x1400399de",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x140039b76",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x140039c0f",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x140039d42",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x140039d4f",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x14003a013",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x14003a04b",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x14003a118",
+          "0x1403a3dc0",
+          ""
+        ],
+        [
+          "0x14003a140",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x14003a146",
+          "0x1403a17cc",
+          ""
+        ],
+        [
+          "0x14003a154",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 21,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x140039018",
+          "0x154",
+          4
+        ],
+        [
+          "0x140039325",
+          "0x0",
+          8
+        ],
+        [
+          "0x140039dcc",
+          "0x0",
+          1
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x140038ff7",
+          "0x14040d020"
+        ],
+        [
+          "0x140039e9f",
+          "0x140000000"
+        ],
+        [
+          "0x140039fca",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13",
+        "push r14",
+        "push r15"
+      ]
+    }
+  },
+  "0x14003a160": {
+    "va": "0x14003a160",
+    "size": 3712,
+    "channel": 3,
+    "num_pairs": 4,
+    "features": {
+      "size_bytes": 3741,
+      "num_insns": 875,
+      "calls": [
+        [
+          "0x14003a265",
+          "0x1400071e0",
+          "pc_reader"
+        ],
+        [
+          "0x14003a26f",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14003a655",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14003a6ea",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14003a78f",
+          "0x140005b50",
+          ""
+        ],
+        [
+          "0x14003a87e",
+          "0x140006770",
+          ""
+        ],
+        [
+          "0x14003aa16",
+          "0x140007bf0",
+          ""
+        ],
+        [
+          "0x14003aaa8",
+          "0x14003ebe0",
+          ""
+        ],
+        [
+          "0x14003abd8",
+          "0x140004930",
+          ""
+        ],
+        [
+          "0x14003abe5",
+          "0x1400058a0",
+          ""
+        ],
+        [
+          "0x14003aeb5",
+          "0x1400074d0",
+          "operand_reader"
+        ],
+        [
+          "0x14003aeed",
+          "r9",
+          "indirect"
+        ],
+        [
+          "0x14003afcc",
+          "0x1400029a0",
+          ""
+        ],
+        [
+          "0x14003afda",
+          "0x1400029a0",
+          ""
+        ]
+      ],
+      "cond_branches": 15,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14003a17d",
+          "0x154",
+          4
+        ],
+        [
+          "0x14003ac77",
+          "0x0",
+          1
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [
+        [
+          "0x14003ad24",
+          "0x140000000"
+        ],
+        [
+          "0x14003ae6a",
+          "0x140000000"
+        ]
+      ],
+      "returns": 1,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x20], rbx",
+        "mov qword ptr [rsp + 0x18], r8",
+        "mov dword ptr [rsp + 0x10], edx",
+        "push rbp",
+        "push rsi",
+        "push rdi",
+        "push r12",
+        "push r13"
+      ]
+    }
+  },
+  "0x14003bea0": {
+    "va": "0x14003bea0",
+    "size": 300,
+    "channel": 3,
+    "num_pairs": 11,
+    "features": {
+      "size_bytes": 329,
+      "num_insns": 62,
+      "calls": [
+        [
+          "0x14003bf95",
+          "0x140003a50",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14003bead",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x40",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx",
+        "mov r15d, edx"
+      ]
+    }
+  },
+  "0x14003dae0": {
+    "va": "0x14003dae0",
+    "size": 332,
+    "channel": 3,
+    "num_pairs": 3,
+    "features": {
+      "size_bytes": 361,
+      "num_insns": 72,
+      "calls": [
+        [
+          "0x14003dbd6",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14003dbe1",
+          "0x140003a50",
+          ""
+        ],
+        [
+          "0x14003dbf5",
+          "0x140003880",
+          ""
+        ]
+      ],
+      "cond_branches": 2,
+      "uncond_branches_internal": 0,
+      "rcx_mem_writes": [],
+      "rcx_mem_reads": [
+        [
+          "0x14003daee",
+          "0x154",
+          4
+        ]
+      ],
+      "reads_pc_field": false,
+      "writes_pc_field": false,
+      "reads_operand_tbl": false,
+      "reads_shadow_key": false,
+      "reads_handler_tbl": false,
+      "reads_buf_ptr": false,
+      "reads_buf_sz": false,
+      "rip_data_refs": [],
+      "returns": 0,
+      "first_insns": [
+        "mov qword ptr [rsp + 0x18], r8",
+        "push rbx",
+        "push rsi",
+        "push rdi",
+        "push r15",
+        "sub rsp, 0x38",
+        "movsxd rax, dword ptr [rcx + 0x154]",
+        "mov rdi, rcx"
+      ]
+    }
+  }
+}
