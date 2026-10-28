@@ -1,0 +1,20 @@
+{
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "pass8_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "same_file_size": true,
+  "byte_differences": [
+    {
+      "file_offset": "0x395efb",
+      "RVA": "0x396afb",
+      "original": "75",
+      "pass8": "90"
+    },
+    {
+      "file_offset": "0x395efc",
+      "RVA": "0x396afc",
+      "original": "12",
+      "pass8": "90"
+    }
+  ],
+  "Windows_behavior_verified_by_this_test": false
+}

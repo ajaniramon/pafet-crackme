@@ -1,0 +1,74 @@
+140270b50 48895c2410 mov qword ptr [rsp + 0x10], rbx
+140270b55 57 push rdi
+140270b56 4883ec20 sub rsp, 0x20
+140270b5a e831091300 call 0x1403a1490
+140270b5f 488bd8 mov rbx, rax
+140270b62 e80d091300 call 0x1403a1474
+140270b67 4881fb80969800 cmp rbx, 0x989680
+140270b6e 7506 jne 0x140270b76
+140270b70 486bd864 imul rbx, rax, 0x64
+140270b74 eb21 jmp 0x140270b97
+140270b76 4899 cqo 
+140270b78 48f7fb idiv rbx
+140270b7b 488bc8 mov rcx, rax
+140270b7e 4869c200ca9a3b imul rax, rdx, 0x3b9aca00
+140270b85 4899 cqo 
+140270b87 48f7fb idiv rbx
+140270b8a 488bd8 mov rbx, rax
+140270b8d 4869c100ca9a3b imul rax, rcx, 0x3b9aca00
+140270b94 4803d8 add rbx, rax
+140270b97 4533c0 xor r8d, r8d
+140270b9a 48b82427fb5db678f0e0 movabs rax, 0xe0f078b65dfb2724
+140270ba4 4889442430 mov qword ptr [rsp + 0x30], rax
+140270ba9 49bacd8c55edd7af51ff movabs r10, 0xff51afd7ed558ccd
+140270bb3 49bb53ec851afeb9cec4 movabs r11, 0xc4ceb9fe1a85ec53
+140270bbd 458d4840 lea r9d, [r8 + 0x40]
+140270bc1 488b442430 mov rax, qword ptr [rsp + 0x30]
+140270bc6 4903c0 add rax, r8
+140270bc9 49ffc0 inc r8
+140270bcc 488bc8 mov rcx, rax
+140270bcf 48c1e921 shr rcx, 0x21
+140270bd3 4833c8 xor rcx, rax
+140270bd6 490fafca imul rcx, r10
+140270bda 488bd1 mov rdx, rcx
+140270bdd 48c1ea21 shr rdx, 0x21
+140270be1 4833d1 xor rdx, rcx
+140270be4 490fafd3 imul rdx, r11
+140270be8 488bc2 mov rax, rdx
+140270beb 48c1e821 shr rax, 0x21
+140270bef 4833c2 xor rax, rdx
+140270bf2 4889442430 mov qword ptr [rsp + 0x30], rax
+140270bf7 4983e901 sub r9, 1
+140270bfb 75c4 jne 0x140270bc1
+140270bfd e88e081300 call 0x1403a1490
+140270c02 488bf8 mov rdi, rax
+140270c05 e86a081300 call 0x1403a1474
+140270c0a 4881ff80969800 cmp rdi, 0x989680
+140270c11 7506 jne 0x140270c19
+140270c13 486bc864 imul rcx, rax, 0x64
+140270c17 eb21 jmp 0x140270c3a
+140270c19 4899 cqo 
+140270c1b 48f7ff idiv rdi
+140270c1e 4c8bc0 mov r8, rax
+140270c21 4869c200ca9a3b imul rax, rdx, 0x3b9aca00
+140270c28 4899 cqo 
+140270c2a 48f7ff idiv rdi
+140270c2d 488bc8 mov rcx, rax
+140270c30 4969c000ca9a3b imul rax, r8, 0x3b9aca00
+140270c37 4803c8 add rcx, rax
+140270c3a 482bcb sub rcx, rbx
+140270c3d 48b8cff753e3a59bc420 movabs rax, 0x20c49ba5e353f7cf
+140270c47 488b5c2438 mov rbx, qword ptr [rsp + 0x38]
+140270c4c 48f7e9 imul rcx
+140270c4f 48c1fa07 sar rdx, 7
+140270c53 488bc2 mov rax, rdx
+140270c56 48c1e83f shr rax, 0x3f
+140270c5a 4803d0 add rdx, rax
+140270c5d 488b442430 mov rax, qword ptr [rsp + 0x30]
+140270c62 48c1ea3f shr rdx, 0x3f
+140270c66 83e001 and eax, 1
+140270c69 83f201 xor edx, 1
+140270c6c 0bc2 or eax, edx
+140270c6e 4883c420 add rsp, 0x20
+140270c72 5f pop rdi
+140270c73 c3 ret 

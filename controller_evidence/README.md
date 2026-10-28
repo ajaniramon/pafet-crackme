@@ -15,7 +15,7 @@ program is complete **under explicit host contracts**; global outcome remains
 | `operand_trace_success.txt` | Modeled favorable SHA/padding/shape; not an accepted original run |
 | `operand_trace_username_reject.txt` | Modeled SHA failure |
 | `semantic_regression.json` | Previous component and main/user projection suite repeated after native-hook changes; no tail/DES run |
-| `manifest.json` | Current source/report/evidence hashes, dependency versions and scope |
+| `manifest.json` | Frozen controller-phase source/report/evidence hashes, dependency versions and scope |
 
 Reproduce with the commands in the controller report, writing to a new output
 directory. Raw heap addresses, opaque VM state and clone choices can differ;
@@ -33,3 +33,9 @@ The previous manifests remain frozen: `audit_evidence/` belongs to commit
 `55567c0f09f32ac654a31764608cc363ef6d5bb5`. Verify their source hashes against
 those commits, not against subsequently edited reports and instrumentation.
 The current manifest excludes itself to avoid a recursive hash.
+
+This manifest is the controller snapshot at commit
+`a0599b984d9d94fb346a153f6d6fe76de5225d23`. Later wrapper-audit edits to
+reports/native sources do not invalidate that historical record: use
+`git show a0599b9:path` for its source hashes. Current wrapper changes have their
+own manifest in `../wrapper_evidence/`.

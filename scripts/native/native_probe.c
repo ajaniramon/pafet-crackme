@@ -243,6 +243,7 @@ static uint64_t MS semantic_host(void *ctx,uint32_t op,void *arg){
     }
     return ret;
 }
+#include "wrapper_audit.h"
 int main(int argc,char **argv){
     struct sigaction sa={.sa_sigaction=on_signal,.sa_flags=SA_SIGINFO};sigemptyset(&sa.sa_mask);sigaction(SIGSEGV,&sa,NULL);sigaction(SIGILL,&sa,NULL);sigaction(SIGBUS,&sa,NULL);
     void *image=mmap((void*)BASE,0x460000,PROT_READ|PROT_WRITE|PROT_EXEC,MAP_PRIVATE|MAP_ANONYMOUS|MAP_FIXED_NOREPLACE,-1,0);if(image==MAP_FAILED){perror("image mmap");return 1;}
@@ -276,6 +277,7 @@ int main(int argc,char **argv){
     *(uint8_t*)(BASE+0x3a49a0)=0xc3;*(uint8_t*)(BASE+0x3a3dc0)=0xc3;
     memset((void*)(BASE+0x1ecf9e),0x90,0x0f);
     memset((void*)(BASE+0x298cf4),0x90,0x0f);
+    int wa_result=wrapper_audit(argc,argv);if(wa_result>=0)return wa_result;
     if(argc>3&&!strcmp(argv[1],"--user-control")){
         semantic_user_length=atoi(argv[2]);semantic_user_value=strtoull(argv[3],NULL,0);
         if(semantic_user_length<0||semantic_user_length>65)return 2;

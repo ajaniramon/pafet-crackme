@@ -150,3 +150,32 @@ python scripts/pafet_controller_slice.py --native scripts/native/native_probe --
 The report distinguishes the
 complete logical program under host contracts from incomplete native runtime
 coverage. No DES/SHA runs are involved.
+
+## Wrapper boundary audit modes
+
+`wrapper_audit.h` is included by the probe and must accompany the source.
+
+```sh
+./native_probe --wrapper-sha 4100ff807a
+./native_probe --wrapper-serial 4100ff807a
+WRAPPER_FAULT=0x3e3f10 ./native_probe --wrapper-sha 4100ff807a
+```
+
+SHA mode retains its wrapper VM and native buffer/serialization callbacks,
+but replaces compression with a recorder that leaves state unchanged. Stream
+construction at `0x283270..0x28330c` and destruction at `0x28342b..0x283488`
+are bypassed in the copied image; hosts 38/39 use explicit hex/output adapters.
+Its output is the serialized initial state, never a real digest of the input.
+Separate Unicorn tests check the original host's formatting requests.
+
+Serial mode retains main 11, both serial VMs and the existing transformation.
+It logs copy boundaries, empty-key routing, output writes and the unchanged
+original source. The leaf-host trampoline relocates its RIP-relative LEA;
+blindly copying that prologue would break dispatch. These are target-specific
+instrumentation modes, not unmodified original executions.
+
+Only these modes install fail-stop recorders. `WRAPPER_FAULT` flips one selected
+RVA byte in the copied data area; the recorders report the original guard tag
+and terminate with status 79. The original fail-stop body is not executed by
+that experiment. Normal probe modes are unaffected. Full commands, limits and
+evidence are in `../../PAFET_WRAPPER_AUDIT.md`.

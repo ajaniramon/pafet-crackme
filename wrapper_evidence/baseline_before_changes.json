@@ -1,0 +1,8 @@
+{
+  "command": "python scripts/pafet_semantic_probe.py",
+  "source_commit": "a0599b984d9d94fb346a153f6d6fe76de5225d23",
+  "all_assertions_passed": true,
+  "full_output_sha256": "e8ff407cdbb81f9695932a013992a5033f08c9cc993fd9ced90de569b3f25e4b",
+  "DES_executions": 0,
+  "real_credential_searches": 0
+}

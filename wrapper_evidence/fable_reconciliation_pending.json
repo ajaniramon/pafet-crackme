@@ -1,0 +1,61 @@
+{
+  "case_id": "fable-x64dbg-alice-serial01-reported",
+  "comparison": "INCOMPLETE",
+  "stages": [
+    {
+      "stage": "input_username",
+      "status": "MISSING"
+    },
+    {
+      "stage": "input_serial",
+      "status": "MISSING"
+    },
+    {
+      "stage": "sha_hex",
+      "status": "MISSING"
+    },
+    {
+      "stage": "user_transform",
+      "status": "MISSING"
+    },
+    {
+      "stage": "serial_transform",
+      "status": "MISSING"
+    },
+    {
+      "stage": "key",
+      "status": "MISSING"
+    },
+    {
+      "stage": "cipher_1",
+      "status": "MISSING"
+    },
+    {
+      "stage": "cipher_2",
+      "status": "MISSING"
+    },
+    {
+      "stage": "plaintext",
+      "status": "MISSING"
+    }
+  ],
+  "earliest_observed_mismatch": null,
+  "first_exact_divergence": null,
+  "missing_or_undetermined_stages": [
+    "input_username",
+    "input_serial",
+    "sha_hex",
+    "user_transform",
+    "serial_transform",
+    "key",
+    "cipher_1",
+    "cipher_2",
+    "plaintext"
+  ],
+  "missing_provenance_fields": [
+    "binary_sha256"
+  ],
+  "capture_provenance_independently_verified": false,
+  "original_credential_acceptance_verified": false,
+  "scope": "byte comparison against supplied artifacts; provenance claims alone do not prove an unmodified original execution"
+}

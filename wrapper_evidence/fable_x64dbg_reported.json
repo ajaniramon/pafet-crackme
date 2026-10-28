@@ -1,0 +1,33 @@
+{
+  "schema": "pafet.capture.v1",
+  "case_id": "fable-x64dbg-alice-serial01-reported",
+  "evidence_status": "communicated_not_reproduced",
+  "communication_source": "User message in this task, attributed to Fable",
+  "claim": {
+    "input_text": [
+      "alice",
+      "serial01"
+    ],
+    "comparison": "Original with ZF forced at gate reportedly matched pass8 for f_user, serial transform, key and output",
+    "text_modification_reported": false
+  },
+  "intended_inputs": {
+    "username_hex": "616c696365",
+    "serial_hex": "73657269616c3031"
+  },
+  "provenance": {
+    "binary_sha256": null,
+    "gate_override": "ZF_ONLY_REPORTED",
+    "text_modifications": "reported none; not independently verified",
+    "capture_tool": "x64dbg (reported)"
+  },
+  "stages": {},
+  "raw_bin_files_available": false,
+  "raw_bin_hashes": null,
+  "missing": [
+    "Four .bin contents, filenames, lengths and hashes",
+    "Exact gate RVA, initial/final flags and instruction",
+    "Capture addresses, sizes, capacity and before/after markers",
+    "Executable and pass8 identity used in the reported Windows experiment"
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "original_binary_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "scope": "wrapper components and adapted original VMs; not Windows/original acceptance",
+  "SHA_compression_executions": 0,
+  "DES_executions": 0,
+  "credential_searches": 0,
+  "Windows_matrix_executions": 0,
+  "static": {
+    "sha": {
+      "VM": [
+        "0x14027aba0",
+        "0x140283192"
+      ],
+      "fail_stop": "0x14026e250",
+      "encrypted_blob": "0x1403e3f10",
+      "blob_size": 3510,
+      "blob_sha256": "c412ef37d8f57aeb4fc772db46a35158ba0670f7f8958a1fb76f72d46038f78f",
+      "guards": [
+        {
+          "call": "0x14027b5b2",
+          "tag": "0x41545453",
+          "instructions": [
+            "14027b579 mov edx, 0x58",
+            "14027b57e mov rax, qword ptr gs:[0x58]",
+            "14027b587 mov rcx, qword ptr [rax]",
+            "14027b58a lea rax, [rsp + 0x190]",
+            "14027b592 mov qword ptr [rdx + rcx], rax",
+            "14027b596 movabs rax, 0xfa0cd896d41a6139",
+            "14027b5a0 cmp rdi, rax",
+            "14027b5a3 je 0x14027b5b7",
+            "14027b5a5 mov edx, 0x41545453",
+            "14027b5aa lea rcx, [rsp + 0x190]",
+            "14027b5b2 call 0x14026e250"
+          ]
+        },
+        {
+          "call": "0x14027bd21",
+          "tag": "0x43414e59",
+          "instructions": [
+            "14027bcef xor edx, edi",
+            "14027bcf1 and edx, ebx",
+            "14027bcf3 xor edx, eax",
+            "14027bcf5 lea rcx, [rsp + 0x190]",
+            "14027bcfd call 0x14026ea10",
+            "14027bd02 mov rax, qword ptr [rsp + 0xe8]",
+            "14027bd0a cmp qword ptr [rsp + 0xf88], rax",
+            "14027bd12 je 0x14027bd26",
+            "14027bd14 mov edx, 0x43414e59",
+            "14027bd19 lea rcx, [rsp + 0x190]",
+            "14027bd21 call 0x14026e250"
+          ]
+        },
+        {
+          "call": "0x14027e35f",
+          "tag": "0x41545432",
+          "instructions": [
+            "14027e326 je 0x14027e50c",
+            "14027e32c cmp eax, 0x1147ee",
+            "14027e331 je 0x14027e379",
+            "14027e333 cmp eax, 0x119046",
+            "14027e338 jne 0x140282a11",
+            "14027e33e movabs rax, 0xfa0cd896d41a6139",
+            "14027e348 cmp qword ptr [rsp + 0xd8], rax",
+            "14027e350 je 0x14027e364",
+            "14027e352 mov edx, 0x41545432",
+            "14027e357 lea rcx, [rsp + 0x190]",
+            "14027e35f call 0x14026e250"
+          ]
+        },
+        {
+          "call": "0x140281b01",
+          "tag": "0x4154544c",
+          "instructions": [
+            "140281acd mov rax, qword ptr [rsp + 0x60]",
+            "140281ad2 sub rcx, rax",
+            "140281ad5 mov qword ptr [rsp + 0x68], rcx",
+            "140281ada mov rax, qword ptr [rsp + 0x68]",
+            "140281adf add rax, 0x3a6df6",
+            "140281ae5 jmp 0x14028305c",
+            "140281aea cmp dword ptr [rsp + 0xa8], 0",
+            "140281af2 jne 0x140281b06",
+            "140281af4 mov edx, 0x4154544c",
+            "140281af9 lea rcx, [rsp + 0x190]",
+            "140281b01 call 0x14026e250"
+          ]
+        },
+        {
+          "call": "0x140281e21",
+          "tag": "0x4252414e",
+          "instructions": [
+            "140281df6 xor r8d, r8d",
+            "140281df9 lea edx, [r8 + 0xc]",
+            "140281dfd lea rcx, [rsp + 0x190]",
+            "140281e05 call 0x14026e8c0",
+            "140281e0a test r12, r12",
+            "140281e0d je 0x140281e26",
+            "140281e0f test r14, r14",
+            "140281e12 jne 0x140281e26",
+            "140281e14 mov edx, 0x4252414e",
+            "140281e19 lea rcx, [rsp + 0x190]",
+            "140281e21 call 0x14026e250"
+          ]
+        }
+      ],
+      "fail_stop_has_no_RET": true,
+      "fail_stop_terminal_back_edge": [
+        "0x14026e77d",
+        "0x14026e740"
+      ]
+    },
+    "serial_outer": {
+      "VM": [
+        "0x140264a60",
+        "0x14026d9b6"
+      ],
+      "fail_stop": "0x1402338d0",
+      "encrypted_blob": "0x1403e12b0",
+      "blob_size": 1075,
+      "blob_sha256": "e2f1231c464a87607d69754e30ca0f7d00688f898a5dae5a998b66742bc1d114",
+      "guards": [
+        {
+          "call": "0x14026542b",
+          "tag": "0x41545453",
+          "instructions": [
+            "1402653ef mov rax, qword ptr gs:[0x58]",
+            "1402653f8 mov rcx, qword ptr [rax]",
+            "1402653fb lea rax, [rsp + 0x190]",
+            "140265403 mov qword ptr [rdx + rcx], rax",
+            "140265407 movabs rax, 0xc3bc185686624b81",
+            "140265411 cmp rsi, rax",
+            "140265414 mov r13, qword ptr [rsp + 0xd0]",
+            "14026541c je 0x140265430",
+            "14026541e mov edx, 0x41545453",
+            "140265423 lea rcx, [rsp + 0x190]",
+            "14026542b call 0x1402338d0"
+          ]
+        },
+        {
+          "call": "0x140265bd1",
+          "tag": "0x43414e59",
+          "instructions": [
+            "140265b9f xor edx, esi",
+            "140265ba1 and edx, ebx",
+            "140265ba3 xor edx, eax",
+            "140265ba5 lea rcx, [rsp + 0x190]",
+            "140265bad call 0x140234060",
+            "140265bb2 mov rdi, qword ptr [rsp + 0xf0]",
+            "140265bba cmp qword ptr [rsp + 0x838], rdi",
+            "140265bc2 je 0x140265bd6",
+            "140265bc4 mov edx, 0x43414e59",
+            "140265bc9 lea rcx, [rsp + 0x190]",
+            "140265bd1 call 0x1402338d0"
+          ]
+        },
+        {
+          "call": "0x140269415",
+          "tag": "0x4154544c",
+          "instructions": [
+            "1402693e1 cmp eax, 0x20aa91",
+            "1402693e6 je 0x140269591",
+            "1402693ec cmp eax, 0x20b265",
+            "1402693f1 je 0x14026942c",
+            "1402693f3 cmp eax, 0x20ea03",
+            "1402693f8 jne 0x14026d2ce",
+            "1402693fe cmp dword ptr [rsp + 0xa4], 0",
+            "140269406 jne 0x14026941a",
+            "140269408 mov edx, 0x4154544c",
+            "14026940d lea rcx, [rsp + 0x190]",
+            "140269415 call 0x1402338d0"
+          ]
+        },
+        {
+          "call": "0x14026ae50",
+          "tag": "0x41545432",
+          "instructions": [
+            "14026ae17 sub rcx, rax",
+            "14026ae1a mov qword ptr [rsp + 0x68], rcx",
+            "14026ae1f mov rax, qword ptr [rsp + 0x68]",
+            "14026ae24 add rax, 0x2f0c79",
+            "14026ae2a jmp 0x14026aa98",
+            "14026ae2f movabs rax, 0xc3bc185686624b81",
+            "14026ae39 cmp qword ptr [rsp + 0xe0], rax",
+            "14026ae41 je 0x14026ae55",
+            "14026ae43 mov edx, 0x41545432",
+            "14026ae48 lea rcx, [rsp + 0x190]",
+            "14026ae50 call 0x1402338d0"
+          ]
+        },
+        {
+          "call": "0x14026d6cd",
+          "tag": "0x4252414e",
+          "instructions": [
+            "14026d6a2 xor r8d, r8d",
+            "14026d6a5 lea edx, [r8 + 0xc]",
+            "14026d6a9 lea rcx, [rsp + 0x190]",
+            "14026d6b1 call 0x140233f30",
+            "14026d6b6 test r12, r12",
+            "14026d6b9 je 0x14026d6d2",
+            "14026d6bb test r14, r14",
+            "14026d6be jne 0x14026d6d2",
+            "14026d6c0 mov edx, 0x4252414e",
+            "14026d6c5 lea rcx, [rsp + 0x190]",
+            "14026d6cd call 0x1402338d0"
+          ]
+        }
+      ],
+      "fail_stop_has_no_RET": true,
+      "fail_stop_terminal_back_edge": [
+        "0x140233dfd",
+        "0x140233dc0"
+      ]
+    },
+    "serial_inner": {
+      "VM": [
+        "0x14022a120",
+        "0x140232df8"
+      ],
+      "fail_stop": "0x1401ed830",
+      "encrypted_blob": "0x1403e9c10",
+      "blob_size": 2678,
+      "blob_sha256": "3da417858475bca1acccf427ca80caa173db80a796cdf66dacdd09cbeaa29cea",
+      "guards": [
+        {
+          "call": "0x14022aafa",
+          "tag": "0x41545453",
+          "instructions": [
+            "14022aabe mov rax, qword ptr gs:[0x58]",
+            "14022aac7 mov rcx, qword ptr [rax]",
+            "14022aaca lea rax, [rsp + 0x190]",
+            "14022aad2 mov qword ptr [rdx + rcx], rax",
+            "14022aad6 movabs rax, 0xd46023193b81faaa",
+            "14022aae0 cmp rsi, rax",
+            "14022aae3 mov r13, qword ptr [rsp + 0xc8]",
+            "14022aaeb je 0x14022aaff",
+            "14022aaed mov edx, 0x41545453",
+            "14022aaf2 lea rcx, [rsp + 0x190]",
+            "14022aafa call 0x1401ed830"
+          ]
+        },
+        {
+          "call": "0x14022b267",
+          "tag": "0x43414e59",
+          "instructions": [
+            "14022b235 xor edx, esi",
+            "14022b237 and edx, ebx",
+            "14022b239 xor edx, eax",
+            "14022b23b lea rcx, [rsp + 0x190]",
+            "14022b243 call 0x1401edff0",
+            "14022b248 mov rdi, qword ptr [rsp + 0xf0]",
+            "14022b250 cmp qword ptr [rsp + 0x1348], rdi",
+            "14022b258 je 0x14022b26c",
+            "14022b25a mov edx, 0x43414e59",
+            "14022b25f lea rcx, [rsp + 0x190]",
+            "14022b267 call 0x1401ed830"
+          ]
+        },
+        {
+          "call": "0x14022b4c3",
+          "tag": "0x4154544c",
+          "instructions": [
+            "14022b491 je 0x14022b49d",
+            "14022b493 mov edx, 0x2c1549",
+            "14022b498 jmp 0x140232ce8",
+            "14022b49d mov edx, 0x3b6230",
+            "14022b4a2 call 0x1401f0db0",
+            "14022b4a7 jmp 0x140232daa",
+            "14022b4ac cmp dword ptr [rsp + 0xa4], 0",
+            "14022b4b4 jne 0x14022b4c8",
+            "14022b4b6 mov edx, 0x4154544c",
+            "14022b4bb lea rcx, [rsp + 0x190]",
+            "14022b4c3 call 0x1401ed830"
+          ]
+        },
+        {
+          "call": "0x14022f51a",
+          "tag": "0x41545432",
+          "instructions": [
+            "14022f4e1 sub rcx, rax",
+            "14022f4e4 mov qword ptr [rsp + 0x68], rcx",
+            "14022f4e9 mov rax, qword ptr [rsp + 0x68]",
+            "14022f4ee add rax, 0x9aaf3",
+            "14022f4f4 jmp 0x14022b880",
+            "14022f4f9 movabs rax, 0xd46023193b81faaa",
+            "14022f503 cmp qword ptr [rsp + 0xd8], rax",
+            "14022f50b je 0x14022f51f",
+            "14022f50d mov edx, 0x41545432",
+            "14022f512 lea rcx, [rsp + 0x190]",
+            "14022f51a call 0x1401ed830"
+          ]
+        },
+        {
+          "call": "0x1402301fb",
+          "tag": "0x4252414e",
+          "instructions": [
+            "1402301d0 xor r8d, r8d",
+            "1402301d3 lea edx, [r8 + 0xc]",
+            "1402301d7 lea rcx, [rsp + 0x190]",
+            "1402301df call 0x1401edea0",
+            "1402301e4 test r12, r12",
+            "1402301e7 je 0x140230200",
+            "1402301e9 test r14, r14",
+            "1402301ec jne 0x140230200",
+            "1402301ee mov edx, 0x4252414e",
+            "1402301f3 lea rcx, [rsp + 0x190]",
+            "1402301fb call 0x1401ed830"
+          ]
+        }
+      ],
+      "fail_stop_has_no_RET": true,
+      "fail_stop_terminal_back_edge": [
+        "0x1401edd5d",
+        "0x1401edd20"
+      ]
+    }
+  },
+  "components": [
+    {
+      "input_hex": "",
+      "size": 0,
+      "storage": "SSO",
+      "sha_copied_exactly_N_source_bytes": true,
+      "serial_inner_boundary": {
+        "data_hex": "",
+        "length": 0,
+        "key_hex": "",
+        "locals_count": 24,
+        "locals_zero": true
+      }
+    },
+    {
+      "input_hex": "4100ff807a",
+      "size": 5,
+      "storage": "SSO",
+      "sha_copied_exactly_N_source_bytes": true,
+      "serial_inner_boundary": {
+        "data_hex": "4100ff807a",
+        "length": 5,
+        "key_hex": "",
+        "locals_count": 24,
+        "locals_zero": true
+      }
+    },
+    {
+      "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+      "size": 33,
+      "storage": "heap",
+      "sha_copied_exactly_N_source_bytes": true,
+      "serial_inner_boundary": {
+        "data_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+        "length": 33,
+        "key_hex": "",
+        "locals_count": 24,
+        "locals_zero": true
+      }
+    },
+    {
+      "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f40",
+      "size": 65,
+      "storage": "heap",
+      "sha_copied_exactly_N_source_bytes": true,
+      "serial_inner_boundary": {
+        "data_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f40",
+        "length": 65,
+        "key_hex": "",
+        "locals_count": 24,
+        "locals_zero": true
+      }
+    }
+  ],
+  "hex_format_requests": [
+    {
+      "byte": 0,
+      "requests": [
+        "width=2",
+        {
+          "value": 0,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    },
+    {
+      "byte": 1,
+      "requests": [
+        "width=2",
+        {
+          "value": 1,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    },
+    {
+      "byte": 15,
+      "requests": [
+        "width=2",
+        {
+          "value": 15,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    },
+    {
+      "byte": 16,
+      "requests": [
+        "width=2",
+        {
+          "value": 16,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    },
+    {
+      "byte": 127,
+      "requests": [
+        "width=2",
+        {
+          "value": 127,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    },
+    {
+      "byte": 128,
+      "requests": [
+        "width=2",
+        {
+          "value": 128,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    },
+    {
+      "byte": 255,
+      "requests": [
+        "width=2",
+        {
+          "value": 255,
+          "fill": 48
+        }
+      ],
+      "stream_flags": 2048
+    }
+  ],
+  "timing_helpers": [
+    {
+      "address": "0x140236210",
+      "QPC_ticks": [
+        1,
+        1
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x140236210",
+      "QPC_ticks": [
+        1,
+        100000
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x140236210",
+      "QPC_ticks": [
+        100000,
+        1
+      ],
+      "QPF": 10000000,
+      "return": 0
+    },
+    {
+      "address": "0x1401f0160",
+      "QPC_ticks": [
+        1,
+        1
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x1401f0160",
+      "QPC_ticks": [
+        1,
+        100000
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x1401f0160",
+      "QPC_ticks": [
+        100000,
+        1
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x140270b50",
+      "QPC_ticks": [
+        1,
+        1
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x140270b50",
+      "QPC_ticks": [
+        1,
+        100000
+      ],
+      "QPF": 10000000,
+      "return": 1
+    },
+    {
+      "address": "0x140270b50",
+      "QPC_ticks": [
+        100000,
+        1
+      ],
+      "QPF": 10000000,
+      "return": 0
+    }
+  ],
+  "guard_fragments": [
+    {
+      "region": "serial_outer",
+      "guard": "CANY",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "serial_outer",
+      "guard": "CANY",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "serial_outer",
+      "guard": "ATTL",
+      "artificial_state": 0,
+      "failure_called": true
+    },
+    {
+      "region": "serial_outer",
+      "guard": "ATTL",
+      "artificial_state": 1,
+      "failure_called": false
+    },
+    {
+      "region": "serial_outer",
+      "guard": "ATT2",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "serial_outer",
+      "guard": "ATT2",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "serial_outer",
+      "guard": "BRAN",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "serial_outer",
+      "guard": "BRAN",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "serial_outer",
+      "guard": "BRAN",
+      "artificial_state": 2,
+      "failure_called": false
+    },
+    {
+      "region": "serial_outer",
+      "guard": "BRAN",
+      "artificial_state": 3,
+      "failure_called": false
+    },
+    {
+      "region": "serial_inner",
+      "guard": "CANY",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "serial_inner",
+      "guard": "CANY",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "serial_inner",
+      "guard": "ATTL",
+      "artificial_state": 0,
+      "failure_called": true
+    },
+    {
+      "region": "serial_inner",
+      "guard": "ATTL",
+      "artificial_state": 1,
+      "failure_called": false
+    },
+    {
+      "region": "serial_inner",
+      "guard": "ATT2",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "serial_inner",
+      "guard": "ATT2",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "serial_inner",
+      "guard": "BRAN",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "serial_inner",
+      "guard": "BRAN",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "serial_inner",
+      "guard": "BRAN",
+      "artificial_state": 2,
+      "failure_called": false
+    },
+    {
+      "region": "serial_inner",
+      "guard": "BRAN",
+      "artificial_state": 3,
+      "failure_called": false
+    },
+    {
+      "region": "sha",
+      "guard": "CANY",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "sha",
+      "guard": "CANY",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "sha",
+      "guard": "ATTL",
+      "artificial_state": 0,
+      "failure_called": true
+    },
+    {
+      "region": "sha",
+      "guard": "ATTL",
+      "artificial_state": 1,
+      "failure_called": false
+    },
+    {
+      "region": "sha",
+      "guard": "ATT2",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "sha",
+      "guard": "ATT2",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "sha",
+      "guard": "BRAN",
+      "artificial_state": 0,
+      "failure_called": false
+    },
+    {
+      "region": "sha",
+      "guard": "BRAN",
+      "artificial_state": 1,
+      "failure_called": true
+    },
+    {
+      "region": "sha",
+      "guard": "BRAN",
+      "artificial_state": 2,
+      "failure_called": false
+    },
+    {
+      "region": "sha",
+      "guard": "BRAN",
+      "artificial_state": 3,
+      "failure_called": false
+    }
+  ],
+  "native": {
+    "cases": [
+      {
+        "mode": "sha",
+        "input_hex": "",
+        "settings": {},
+        "trace": "sha_0_0.txt",
+        "output_hex": "36613039653636376262363761653835336336656633373261353466663533613531306535323766396230353638386331663833643961623562653063643139",
+        "matches": true
+      },
+      {
+        "mode": "sha",
+        "input_hex": "4100ff807a",
+        "settings": {},
+        "trace": "sha_1_0.txt",
+        "output_hex": "36613039653636376262363761653835336336656633373261353466663533613531306535323766396230353638386331663833643961623562653063643139",
+        "matches": true
+      },
+      {
+        "mode": "sha",
+        "input_hex": "4100ff807a",
+        "settings": {
+          "PROBE_TICK": "305419896",
+          "POISON_TAIL": "1"
+        },
+        "trace": "sha_1_1.txt",
+        "output_hex": "36613039653636376262363761653835336336656633373261353466663533613531306535323766396230353638386331663833643961623562653063643139",
+        "matches": true
+      },
+      {
+        "mode": "sha",
+        "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+        "settings": {},
+        "trace": "sha_2_0.txt",
+        "output_hex": "36613039653636376262363761653835336336656633373261353466663533613531306535323766396230353638386331663833643961623562653063643139",
+        "matches": true
+      },
+      {
+        "mode": "sha",
+        "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f40",
+        "settings": {},
+        "trace": "sha_3_0.txt",
+        "output_hex": "36613039653636376262363761653835336336656633373261353466663533613531306535323766396230353638386331663833643961623562653063643139",
+        "matches": true
+      },
+      {
+        "mode": "serial",
+        "input_hex": "",
+        "settings": {},
+        "trace": "serial_0_0.txt",
+        "output_hex": "",
+        "matches": true
+      },
+      {
+        "mode": "serial",
+        "input_hex": "4100ff807a",
+        "settings": {},
+        "trace": "serial_1_0.txt",
+        "output_hex": "9f1876c1d9",
+        "matches": true
+      },
+      {
+        "mode": "serial",
+        "input_hex": "4100ff807a",
+        "settings": {
+          "PROBE_TICK": "305419896",
+          "POISON_TAIL": "1"
+        },
+        "trace": "serial_1_1.txt",
+        "output_hex": "9f1876c1d9",
+        "matches": true
+      },
+      {
+        "mode": "serial",
+        "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f20",
+        "settings": {},
+        "trace": "serial_2_0.txt",
+        "output_hex": "de198b42a7325b3d820f146c5b639c62d70b6db0e4d9fd805d3257293b8b418188",
+        "matches": true
+      },
+      {
+        "mode": "serial",
+        "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f40",
+        "settings": {},
+        "trace": "serial_3_0.txt",
+        "output_hex": "de198b42a7325b3d820f146c5b639c62d70b6db0e4d9fd805d3257293b8b418188ed572449ba9fe269538fe01cd10c36bb05aa1e8f57a8f77376b13e9c4c366fd2",
+        "matches": true
+      }
+    ],
+    "fault_injections": [
+      {
+        "region": "sha",
+        "mutated_RVA": "0x3e3f10",
+        "returncode": 79,
+        "guard": "ATTS",
+        "normal_output_produced": false
+      },
+      {
+        "region": "serial_outer",
+        "mutated_RVA": "0x3e12b0",
+        "returncode": 79,
+        "guard": "ATTS",
+        "normal_output_produced": false
+      },
+      {
+        "region": "serial_inner",
+        "mutated_RVA": "0x3e9c10",
+        "returncode": 79,
+        "guard": "ATTS",
+        "normal_output_produced": false
+      }
+    ]
+  },
+  "all_assertions_passed": true
+}

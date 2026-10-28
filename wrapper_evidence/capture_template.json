@@ -1,0 +1,15 @@
+{
+  "schema": "pafet.capture.v1",
+  "case_id": "REPLACE_WITH_WINDOWS_CASE_ID",
+  "intended_inputs": {
+    "username_hex": "",
+    "serial_hex": ""
+  },
+  "provenance": {
+    "binary_sha256": null,
+    "gate_override": null,
+    "text_modifications": null,
+    "capture_tool": null
+  },
+  "stages": {}
+}

@@ -10,8 +10,12 @@ The main logical controller is now fully decoded: 105 blocks, 482 instructions,
 and a dataflow slice validated against original-instruction control projections.
 It adds no credential condition under explicit native-host contracts. Global
 coverage remains **incomplete**: nested wrappers and normal Windows/runtime
-behavior are not fully characterized. The next priority is the user-VM return
-divergence, not more DES reversing or credential guessing.
+behavior are not fully characterized. The [wrapper audit](PAFET_WRAPPER_AUDIT.md) now checks exact buffer boundaries,
+empty-key routing, formatting requests and runtime failure guards. The user-VM
+return divergence and end-to-end Windows/CRT behavior remain open. The
+[Windows reconciliation protocol](PAFET_WINDOWS_RECONCILIATION.md) compares
+supplied captures without repeating Opus’s length matrix. Fable’s reported
+x64dbg result is preserved as unverified until its raw dumps are available.
 
 Start with [the semantic coverage report](PAFET_SEMANTIC_COVERAGE.md) and
 [the REVoid assessment](PAFET_REVOID_ASSESSMENT.md) (Spanish). The new evidence
@@ -175,6 +179,19 @@ This uses original materializer/reader/handler instructions with modeled native
 callbacks. It performs no DES, SHA or credential search. Recorded results and
 precise contracts are in `controller_evidence/README.md`. It is not original
 credential acceptance.
+
+## Wrapper-only audit and Windows capture comparison
+
+```sh
+python scripts/pafet_wrapper_audit.py --native scripts/native/native_probe --out wrapper_evidence_new
+python scripts/pafet_reconcile.py --self-test
+python scripts/pafet_reconcile.py captures/case.json --out comparison.json
+```
+
+The native SHA tests replace compression and stream lifetime/formatting. Serial
+tests retain its existing transformation. Missing capture stages remain unknown;
+no comparison here establishes original credential acceptance. See
+`wrapper_evidence/README.md` for counts, provenance and reproduction.
 
 ## Historical reversing notes
 
