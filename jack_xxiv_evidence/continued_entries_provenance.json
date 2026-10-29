@@ -1,0 +1,163 @@
+{
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "entries_sha256": "dd9bf046578bd071a0bce4afbd293532b19116ae97b9c3cded5fb9e8ec273c99",
+  "budget": 3000000,
+  "per_wrapper": 6,
+  "count": {
+    "0x140015820": 18,
+    "0x140025020": 17,
+    "0x1400216d0": 3
+  },
+  "frames": [
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "alice/0",
+      "entries": [
+        "0x140015820",
+        "0x140025020",
+        "0x140015820",
+        "0x140025020",
+        "0x140015820",
+        "0x140015820"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "alice/1",
+      "entries": [
+        "0x140015820",
+        "0x140025020",
+        "0x140015820",
+        "0x140015820",
+        "0x1400216d0",
+        "0x140015820"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "ramon/0",
+      "entries": [
+        "0x140025020",
+        "0x140015820"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40bef0"
+      ]
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "ramon/1",
+      "entries": [
+        "0x1400216d0",
+        "0x140025020"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c252"
+      ]
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "long_a23/0",
+      "entries": [
+        "0x140025020",
+        "0x140025020",
+        "0x140015820",
+        "0x140025020",
+        "0x140025020",
+        "0x140015820"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c252"
+      ]
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "long_a23/1",
+      "entries": [
+        "0x140025020",
+        "0x140025020",
+        "0x140015820",
+        "0x140025020",
+        "0x140025020",
+        "0x140015820"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c252"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "alice/0",
+      "entries": [
+        "0x140015820",
+        "0x140015820",
+        "0x140025020",
+        "0x140015820"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40bef0"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "alice/1",
+      "entries": [],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c252"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "ramon/0",
+      "entries": [],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c1c0"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "ramon/1",
+      "entries": [
+        "0x140015820",
+        "0x140015820",
+        "0x1400216d0"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c252"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "long_a23/0",
+      "entries": [],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c1c0"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "long_a23/1",
+      "entries": [
+        "0x140025020",
+        "0x140025020",
+        "0x140025020"
+      ],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c252"
+      ]
+    }
+  ],
+  "scope": "Original resolver continued in Unicorn from fresh Windows frames with their real return address. Root entries only (RSP of the captured root call). Memory outside the captured regions is unavailable."
+}

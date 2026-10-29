@@ -1,0 +1,525 @@
+{
+  "entry": "0x140015820",
+  "body_instructions": 864,
+  "body_bytes": 3717,
+  "known_branch_edges": 34,
+  "observed_branch_edges": 7,
+  "proved_unreachable_edges": 27,
+  "uncovered_branch_edges": [],
+  "body_instruction_pcs_observed": 167,
+  "proved_unreachable_instructions": 697,
+  "unobserved_reachable_instructions": [],
+  "noreturn_callees": [
+    {
+      "entry": "0x1400029a0",
+      "reason": "Closed native CFG has no RET and no indirect-jump exit; control cannot come back to the call site successor."
+    }
+  ],
+  "branch_edges": [
+    {
+      "from": 5368797679,
+      "to": 5368800905,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797679,
+      "to": 5368797685,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797692,
+      "to": 5368800919,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797692,
+      "to": 5368797698,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797900,
+      "to": 5368800878,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797900,
+      "to": 5368797906,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797913,
+      "to": 5368800878,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368797913,
+      "to": 5368797919,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798035,
+      "to": 5368800878,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798035,
+      "to": 5368798041,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798051,
+      "to": 5368798120,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798051,
+      "to": 5368798053,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798115,
+      "to": 5368800867,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798787,
+      "to": 5368798836,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368798787,
+      "to": 5368798789,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799120,
+      "to": 5368799214,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799120,
+      "to": 5368799122,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799130,
+      "to": 5368799214,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799130,
+      "to": 5368799132,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799209,
+      "to": 5368800867,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799368,
+      "to": 5368799437,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799368,
+      "to": 5368799370,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799432,
+      "to": 5368800867,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799583,
+      "to": 5368799610,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799583,
+      "to": 5368799585,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799618,
+      "to": 5368799859,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799618,
+      "to": 5368799624,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799877,
+      "to": 5368799897,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368799877,
+      "to": 5368799879,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368800261,
+      "to": 5368800341,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368800261,
+      "to": 5368800263,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368800537,
+      "to": 5368800692,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368800537,
+      "to": 5368800543,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368800687,
+      "to": 5368800878,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    }
+  ],
+  "proofs": [
+    {
+      "branch": 5368799120,
+      "unreachable_target": 5368799214,
+      "reason": "For arbitrary uint32 x, x*(x+1) is even and x XOR (x+1) has bit zero set. Therefore (~product)&xor has bit zero set; TEST cl,1 clears ZF and JE cannot be taken.",
+      "instruction_bytes_sha256": "ee53e618a6f061433243cc0bea6627de70b7e96f921a15ac7b54947c7ded8b39"
+    },
+    {
+      "branch": 5368800537,
+      "unreachable_target": 5368800692,
+      "reason": "BPL is the original immutable LUT byte XOR 0xeb, unchanged up to CMP. All 256 LUT bytes, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
+      "lut_sha256": "e1a76f454453a8b7b5ce13ac5dc775ede843ff947920956c305c38bc9d00c4a4",
+      "outputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    },
+    {
+      "branch": 5368797913,
+      "unreachable_target": 5368797919,
+      "push_site": 5368797664,
+      "reason": "Every path to CMP [rdi+0x5b8],r8d (r8d==0 after TEST/JNE) passes the call to 0x140006010 with RCX=RDI, and no call, write to RDI, or memory write that could reach the counter follows (only RDI-based stores to other offsets and RSP-based stores; the stack is assumed not to alias the context). 0x140006010 returns only through INC [rbx+0x5b8] after CMP eax,0x40/JAE, so the counter is 1..64 and the JNE is always taken. Assumes callees preserve the nonvolatile RBX/RDI (Win64 ABI). Normal control flow only; the C++ throw at 0x1403a5fa0 does not return there."
+    }
+  ],
+  "cases": [
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#0",
+      "vector": 0,
+      "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#2",
+      "vector": 2,
+      "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#4",
+      "vector": 4,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#5",
+      "vector": 5,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#0",
+      "vector": 0,
+      "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#2",
+      "vector": 2,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#3",
+      "vector": 3,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#5",
+      "vector": 5,
+      "steps": 1026
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@ramon/0#1",
+      "vector": 1,
+      "steps": 1394
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/0#2",
+      "vector": 2,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/0#5",
+      "vector": 5,
+      "steps": 2324
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/1#2",
+      "vector": 2,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/1#5",
+      "vector": 5,
+      "steps": 2324
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#0",
+      "vector": 0,
+      "steps": 1208
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#1",
+      "vector": 1,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#3",
+      "vector": 3,
+      "steps": 1026
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@ramon/1#0",
+      "vector": 0,
+      "steps": 1022
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@ramon/1#1",
+      "vector": 1,
+      "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x1400216d0@ramon/1#2",
+      "vector": 2,
+      "steps": 3080
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x140015820@alice/0#0:positive_mode_guard",
+      "vector": 0,
+      "steps": 27179
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x140015820@alice/0#0:canary_guard",
+      "vector": 0,
+      "steps": 27181
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x140015820@alice/0#0:resume_slot_exit",
+      "vector": 0,
+      "steps": 838
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x1400216d0@alice/1#4:dummy_lookup",
+      "vector": 4,
+      "steps": 3762
+    },
+    {
+      "source": "native_lockstep.json",
+      "case": "alice",
+      "vector": 2,
+      "steps": 2248
+    },
+    {
+      "source": "native_lockstep.json",
+      "case": "ramon",
+      "vector": 1,
+      "steps": 2335
+    },
+    {
+      "source": "directed_native.json",
+      "case": "dummy_lookup",
+      "vector": 1,
+      "steps": 2315
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "periodic_register_maintenance",
+      "vector": 2,
+      "steps": 17041
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "maintenance_tls_active",
+      "vector": 2,
+      "steps": 17426
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "maintenance_tls_add_encoding",
+      "vector": 2,
+      "steps": 17426
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "dummy_lookup",
+      "vector": 2,
+      "steps": 2855
+    }
+  ],
+  "scope": "Local handler branch edges only; not exhaustive coverage of nested handlers, helpers, inputs or OS exception machinery."
+}

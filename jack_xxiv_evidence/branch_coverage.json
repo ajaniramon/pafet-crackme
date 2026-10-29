@@ -3,18 +3,18 @@
   "body_instructions": 821,
   "body_bytes": 3593,
   "known_branch_edges": 34,
-  "observed_branch_edges": 31,
+  "observed_branch_edges": 32,
   "proved_unreachable_edges": 2,
-  "uncovered_branch_edges": [
+  "uncovered_branch_edges": [],
+  "body_instruction_pcs_observed": 777,
+  "proved_unreachable_instructions": 44,
+  "unobserved_reachable_instructions": [],
+  "noreturn_callees": [
     {
-      "from": 5368956744,
-      "to": 5368956746,
-      "kind": "fallthrough",
-      "observed": false,
-      "proved_unreachable": false
+      "entry": "0x1400029a0",
+      "reason": "Closed native CFG has no RET and no indirect-jump exit; control cannot come back to the call site successor."
     }
   ],
-  "body_instruction_pcs_observed": 773,
   "branch_edges": [
     {
       "from": 5368954788,
@@ -188,7 +188,7 @@
       "from": 5368956744,
       "to": 5368956746,
       "kind": "fallthrough",
-      "observed": false,
+      "observed": true,
       "proved_unreachable": false
     },
     {
@@ -265,7 +265,7 @@
     {
       "branch": 5368957723,
       "unreachable_target": 5368957873,
-      "reason": "All 256 bytes of the original immutable LUT, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
+      "reason": "BPL is the original immutable LUT byte XOR 0xeb, unchanged up to CMP. All 256 LUT bytes, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
       "lut_sha256": "e1a76f454453a8b7b5ce13ac5dc775ede843ff947920956c305c38bc9d00c4a4",
       "outputs": [
         0,
@@ -456,9 +456,21 @@
     },
     {
       "source": "directed_native.json",
+      "case": "table_remap",
+      "vector": 1,
+      "steps": 111159
+    },
+    {
+      "source": "directed_native.json",
       "case": "dummy_lookup",
       "vector": 1,
       "steps": 2315
+    },
+    {
+      "source": "directed_native.json",
+      "case": "skip_state",
+      "vector": 1,
+      "steps": 820
     },
     {
       "source": "fresh_transfer_differential.json",

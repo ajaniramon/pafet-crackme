@@ -1,0 +1,19 @@
+{
+  "dummy_lookup": {
+    "nonce": 11980567519457618081,
+    "trial": 30,
+    "r10_at_predicate": 4554126075842197621
+  },
+  "table_remap": {
+    "nonce": 11980567519457618452,
+    "trial": 401,
+    "r10_at_predicate": 17160486281336118981
+  },
+  "trials": 402,
+  "skip_state": {
+    "value": 7565449142956139480,
+    "trial": 1,
+    "r8_at_predicate": 9443091264451562753
+  },
+  "skip_trials": 2
+}
