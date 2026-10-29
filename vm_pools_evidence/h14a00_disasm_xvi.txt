@@ -1,0 +1,56 @@
+140014a00: 4c89442418             mov      qword ptr [rsp + 0x18], r8
+140014a05: 53                     push     rbx
+140014a06: 57                     push     rdi
+140014a07: 4157                   push     r15
+140014a09: 4883ec40               sub      rsp, 0x40
+140014a0d: 48638154010000         movsxd   rax, dword ptr [rcx + 0x154]
+140014a14: 488bf9                 mov      rdi, rcx
+140014a17: 448bfa                 mov      r15d, edx
+140014a1a: 48b975ce75b4b5ae2843   movabs   rcx, 0x4328aeb5b475ce75
+140014a24: 480fafc1               imul     rax, rcx
+140014a28: 48b94a4aab357e2471e1   movabs   rcx, 0xe171247e35ab4a4a
+140014a32: 498bd8                 mov      rbx, r8
+140014a35: 483387e0000000         xor      rax, qword ptr [rdi + 0xe0]
+140014a3c: 4889442460             mov      qword ptr [rsp + 0x60], rax
+140014a41: 488b442460             mov      rax, qword ptr [rsp + 0x60]
+140014a46: 48638754010000         movsxd   rax, dword ptr [rdi + 0x154]
+140014a4d: 480fafc1               imul     rax, rcx
+140014a51: 48b95fc6e0b620bab907   movabs   rcx, 0x7b9ba20b6e0c65f
+140014a5b: 483387e0000000         xor      rax, qword ptr [rdi + 0xe0]
+140014a62: 4889442460             mov      qword ptr [rsp + 0x60], rax
+140014a67: 488b442460             mov      rax, qword ptr [rsp + 0x60]
+140014a6c: 48638754010000         movsxd   rax, dword ptr [rdi + 0x154]
+140014a73: 480fafc1               imul     rax, rcx
+140014a77: 483387e0000000         xor      rax, qword ptr [rdi + 0xe0]
+140014a7e: 4889442460             mov      qword ptr [rsp + 0x60], rax
+140014a83: 488b442460             mov      rax, qword ptr [rsp + 0x60]
+140014a88: 488b8700010000         mov      rax, qword ptr [rdi + 0x100]
+140014a8f: 48c1e80d               shr      rax, 0xd
+140014a93: 488bc8                 mov      rcx, rax
+140014a96: 48c1e921               shr      rcx, 0x21
+140014a9a: 4833c8                 xor      rcx, rax
+140014a9d: 48b8cd8c55edd7af51ff   movabs   rax, 0xff51afd7ed558ccd
+140014aa7: 480fafc8               imul     rcx, rax
+140014aab: 48b853ec851afeb9cec4   movabs   rax, 0xc4ceb9fe1a85ec53
+140014ab5: 488bd1                 mov      rdx, rcx
+140014ab8: 48c1ea21               shr      rdx, 0x21
+140014abc: 4833d1                 xor      rdx, rcx
+140014abf: 480fafd0               imul     rdx, rax
+140014ac3: 48b8f3e6e5dd65846e70   movabs   rax, 0x706e8465dde5e6f3
+140014acd: 488bca                 mov      rcx, rdx
+140014ad0: 48c1e921               shr      rcx, 0x21
+140014ad4: 4833ca                 xor      rcx, rdx
+140014ad7: 4833c8                 xor      rcx, rax
+140014ada: 488b8700010000         mov      rax, qword ptr [rdi + 0x100]
+140014ae1: 4803c8                 add      rcx, rax
+140014ae4: 48898f00010000         mov      qword ptr [rdi + 0x100], rcx
+140014aeb: 488bcf                 mov      rcx, rdi
+140014aee: e85deffeff             call     0x140003a50
+140014af3: 488b8700010000         mov      rax, qword ptr [rdi + 0x100]
+140014afa: 4585ff                 test     r15d, r15d
+140014afd: 0f89e30c0000           jns      0x1400157e6
+140014b03: 48399f70110000         cmp      qword ptr [rdi + 0x1170], rbx
+140014b0a: 0f85e40c0000           jne      0x1400157f4
+140014b10: 48638754010000         movsxd   rax, dword ptr [rdi + 0x154]
+140014b17: 48b951672a9657bcb71e   movabs   rcx, 0x1eb7bc57962a6751
+140014b21: 480fafc1               imul     rax, rcx
