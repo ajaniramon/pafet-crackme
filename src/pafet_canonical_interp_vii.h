@@ -18,8 +18,17 @@
 #include <cstdint>
 #include <string>
 #include <vector>
+#include "pafet_original_vm_xxiii.h"
 
 namespace pafet_vii {
+
+// Jack XXIII: a separate original-PE bytecode execution path. This overload
+// does not replay captured IR and does not call the functional writer.
+// Contract: logical PC/stack/register projection, not native encoded guards.
+pafet_xxiii::LogicalState run_original_pe_xxiii(
+    const std::string& pe_path,const std::vector<uint8_t>& user,
+    size_t& executed,pafet_xxiii::Trace trace={},
+    const std::array<uint64_t,256>& initial_registers={});
 
 struct IRInstr {
     int idx;

@@ -1,0 +1,160 @@
+{
+  "cases": [
+    {
+      "case": "a1",
+      "steps": 336,
+      "core_post_states": 336,
+      "all_decoded_states_match": true,
+      "native_output_hex": "42",
+      "cpp_output_hex": "42",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "13cb0496564db29d74309b2c8b50f4849a1b2eb886c9a64abc61d85371731a21"
+    },
+    {
+      "case": "a8",
+      "steps": 1862,
+      "core_post_states": 1861,
+      "all_decoded_states_match": true,
+      "native_output_hex": "3947494f514f5157",
+      "cpp_output_hex": "3947494f514f5157",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "9bdfd24edd74c06a09802478ad1e225cffb3ba6c3fdef66319653892ae937b6a"
+    },
+    {
+      "case": "alice",
+      "steps": 1208,
+      "core_post_states": 1208,
+      "all_decoded_states_match": true,
+      "native_output_hex": "464340464e",
+      "cpp_output_hex": "464340464e",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "844aa95ff406a46241f8bc5c4a061be6b53893cacaa7acbe62ffbbdcc0fe7e15"
+    },
+    {
+      "case": "alice123",
+      "steps": 1862,
+      "core_post_states": 1862,
+      "all_decoded_states_match": true,
+      "native_output_hex": "7072784f4c494f57",
+      "cpp_output_hex": "7072784f4c494f57",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "1a09e52f97a718f5359dd6e76317914ec8f6421507d60a7b183a536664498038"
+    },
+    {
+      "case": "empty",
+      "steps": 118,
+      "core_post_states": 118,
+      "all_decoded_states_match": true,
+      "native_output_hex": "",
+      "cpp_output_hex": "",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "3c738cd3b59be0b721bf3d894d5070bd8754ec748f44bc63464c9f6ef6945bc6"
+    },
+    {
+      "case": "long_a23",
+      "steps": 5132,
+      "core_post_states": 5132,
+      "all_decoded_states_match": true,
+      "native_output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e8184",
+      "cpp_output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e8184",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "05c84ce871ef17a7d7c6b7a57f097dad79b1f6a5ad5451c4ab90d66591f7596a"
+    },
+    {
+      "case": "long_a24",
+      "steps": 5350,
+      "core_post_states": 5350,
+      "all_decoded_states_match": true,
+      "native_output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e818487",
+      "cpp_output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e818487",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "c295d81053aee11efcca0f810c26fa8715ff5cd31cc5b678bcebe27353c1101e"
+    },
+    {
+      "case": "long_a25",
+      "steps": 5568,
+      "core_post_states": 5568,
+      "all_decoded_states_match": true,
+      "native_output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e8184878a",
+      "cpp_output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e8184878a",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "b03ef7a4aa8a03db3a04cbf5cf248c97c73baf3315d31da5fe8e507788dc5fcb"
+    },
+    {
+      "case": "long_pattern23",
+      "steps": 5132,
+      "core_post_states": 5132,
+      "all_decoded_states_match": true,
+      "native_output_hex": "14161c1e1c1e242634363c3e3c3e444654565c5e5c5e64",
+      "cpp_output_hex": "14161c1e1c1e242634363c3e3c3e444654565c5e5c5e64",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "54958ea219aefd0f0f2279a85895eb58e8162fd64c515b0cfdd16984798d291a"
+    },
+    {
+      "case": "long_pattern24",
+      "steps": 5350,
+      "core_post_states": 5350,
+      "all_decoded_states_match": true,
+      "native_output_hex": "0917191f211f21272937393f413f41474957595f615f6167",
+      "cpp_output_hex": "0917191f211f21272937393f413f41474957595f615f6167",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "fd3b1208934c75b6b36732d9b24aee3b3192e4c05324a266357fc1c05f7fedf1"
+    },
+    {
+      "case": "long_pattern25",
+      "steps": 5568,
+      "core_post_states": 5568,
+      "all_decoded_states_match": true,
+      "native_output_hex": "0a0c1a1c222422242a2c3a3c424442444a4c5a5c626462646a",
+      "cpp_output_hex": "0a0c1a1c222422242a2c3a3c424442444a4c5a5c626462646a",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "ce00bc7af77b624a99ce35173258f0d4da8df55bf7a5eeccf3d7a706176441a3"
+    },
+    {
+      "case": "ramon",
+      "steps": 1208,
+      "core_post_states": 1208,
+      "all_decoded_states_match": true,
+      "native_output_hex": "3b3f444b3b",
+      "cpp_output_hex": "3b3f444b3b",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "8f081ba3e9c6568edc96c86769ddc65eca19d5015a96f9d788ab1588a0291878"
+    },
+    {
+      "case": "ramonbarcelona",
+      "steps": 3170,
+      "core_post_states": 3170,
+      "all_decoded_states_match": true,
+      "native_output_hex": "423e4246524f415757565a5f6656",
+      "cpp_output_hex": "423e4246524f415757565a5f6656",
+      "initial_registers_are_only_capture_input": true,
+      "cpp_trace_sha256": "4c2e038694c64d26b5048d9ba517a4ecf7480202e565f971bfb07cc6d1fec02e"
+    }
+  ],
+  "materializer": [
+    {
+      "mode": "zero",
+      "period": 0,
+      "current": 0,
+      "all_1752_bytes_match": true,
+      "sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "mode": "nonzero",
+      "period": 0,
+      "current": 0,
+      "all_1752_bytes_match": true,
+      "sha256": "0e742937238048518f0a6345b9ed7bd195f3af8b9b9480d210458650a5b6f80f"
+    },
+    {
+      "mode": "nonzero",
+      "period": 24,
+      "current": 17,
+      "all_1752_bytes_match": true,
+      "sha256": "71133da9eb0982d6bd9c1e5f2f3db8db65cc88113df93ff8818a432e83fdb2c5"
+    }
+  ],
+  "functional_writer_linked": false,
+  "captured_ir_used_as_program": false,
+  "contract": "Logical decoded states only; native encoded state, dispatcher scheduling and guards not fully ported."
+}

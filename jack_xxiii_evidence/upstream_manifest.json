@@ -1,0 +1,313 @@
+{
+  "repository": "ajaniramon/pafet-crackme",
+  "ref": "e871c5d53a816c4a163423243d3347f3a8fd82dc",
+  "tree": "5d7012648a65cea379393a9267c595e5c4e3dd58",
+  "acquisition": "Read-only connector file/blob GETs; no Git command or repository mutation",
+  "files": [
+    {
+      "path": "PAFET_NIGHT_REPORT.md",
+      "blob_sha1": "5132973343fcc72904e32ba1153ec5a58a8bdf8a",
+      "bytes": 11539
+    },
+    {
+      "path": "PAFET_OUTPUT_PATHWAY_IX.md",
+      "blob_sha1": "d39f47c1af1afadbfb7d959f14803e1d2eacdf79",
+      "bytes": 6394
+    },
+    {
+      "path": "PAFET_USER_BYTECODE_VI.md",
+      "blob_sha1": "f778e230e00b388a7042ece4cc1391d7b39f9e75",
+      "bytes": 6518
+    },
+    {
+      "path": "README.md",
+      "blob_sha1": "1cb837295973b86b393d998d0d185541ad09ec02",
+      "bytes": 9121
+    },
+    {
+      "path": "docs/03-user-vm.md",
+      "blob_sha1": "82889a29500ba2ecae3f01ba2658361897d65d57",
+      "bytes": 11078
+    },
+    {
+      "path": "docs/09-bytecode.md",
+      "blob_sha1": "24cb63ed97a9df083ee6df5b1bcdd948094a49ef",
+      "bytes": 6544
+    },
+    {
+      "path": "docs/10-dispatch-topology.md",
+      "blob_sha1": "7cd797d291eb12ae414204ab89d52adcc4ae2a6d",
+      "bytes": 5706
+    },
+    {
+      "path": "docs/11-reproduce.md",
+      "blob_sha1": "897d3a597bfbfb421962bd960851988d7f076035",
+      "bytes": 6005
+    },
+    {
+      "path": "docs/13-open-gaps.md",
+      "blob_sha1": "302869192341e45b11f8beb58d8f4d8f25132ba3",
+      "bytes": 7338
+    },
+    {
+      "path": "pafet.bin",
+      "blob_sha1": "e68e12ce60a91bf8f42081ced4a9f0de8cd30e33",
+      "bytes": 4396544
+    },
+    {
+      "path": "scripts/decode_user_blob_vi.py",
+      "blob_sha1": "788c8626c4992007b94e633c54359f6393e580e7",
+      "bytes": 4003
+    },
+    {
+      "path": "scripts/pafet_capture_ir_xi.py",
+      "blob_sha1": "32aa7329e8f9cefdc40619a9da8ecec36cb1d421",
+      "bytes": 10619
+    },
+    {
+      "path": "scripts/pafet_dispatch_coverage_ivB.py",
+      "blob_sha1": "369bdd4d42d9c5b143d64aca27b21d2de0f2347b",
+      "bytes": 7274
+    },
+    {
+      "path": "scripts/pafet_h14a00_unicorn_xvi.py",
+      "blob_sha1": "41223921f0df51c37c55c002073ab78778cff834",
+      "bytes": 7576
+    },
+    {
+      "path": "scripts/pafet_h3bea0_capture_xiii.py",
+      "blob_sha1": "a6c35b353fd70e8af0f65131572a0331648081c1",
+      "bytes": 11720
+    },
+    {
+      "path": "scripts/pafet_h3bea0_unicorn_xiii.py",
+      "blob_sha1": "5182e6b17b10f3a72ee146542e347e66d6fa10b8",
+      "bytes": 7578
+    },
+    {
+      "path": "scripts/pafet_output_pathway_ix.py",
+      "blob_sha1": "feda952eff06653b491db1ae204740de956f5502",
+      "bytes": 2586
+    },
+    {
+      "path": "scripts/pafet_semantic_probe.py",
+      "blob_sha1": "150098e6d3db0228d78f9367401f63bbbafe9a57",
+      "bytes": 22252
+    },
+    {
+      "path": "scripts/pafet_uservm_helpers_validate.py",
+      "blob_sha1": "834ed9b8049fada606db593ebcfe538fd63f86fd",
+      "bytes": 18574
+    },
+    {
+      "path": "src/main_byte_exact_test_x.cpp",
+      "blob_sha1": "0ceceea4248c9045d69c95ad0bc7d69cdc8d001f",
+      "bytes": 3329
+    },
+    {
+      "path": "src/main_byte_exact_test_xi.cpp",
+      "blob_sha1": "2daff8f80ec2601fc7aeb5ffb7d0e4a7135cb77a",
+      "bytes": 4466
+    },
+    {
+      "path": "src/main_byte_exact_test_xv.cpp",
+      "blob_sha1": "7ecd0e7697e5cb313c486240eb5b32bd3dbb1887",
+      "bytes": 4859
+    },
+    {
+      "path": "src/main_canonical_test_vii.cpp",
+      "blob_sha1": "657c20cecc9079b40d650b5a5a04ed79aac5deda",
+      "bytes": 1947
+    },
+    {
+      "path": "src/main_h3880_native_test_vA.cpp",
+      "blob_sha1": "6df8f821b90c5c90601c1f87e729a6510b6405db",
+      "bytes": 4912
+    },
+    {
+      "path": "src/main_h3a50_native_test.cpp",
+      "blob_sha1": "003b9b8bc7c8be49383e3c4b2f19e8fe1b8b2da0",
+      "bytes": 5918
+    },
+    {
+      "path": "src/main_h6770_native_test_xv.cpp",
+      "blob_sha1": "ac20b52c2ccbad9438edcb97c828b68e4a88f888",
+      "bytes": 5501
+    },
+    {
+      "path": "src/main_hexvm_test_xx.cpp",
+      "blob_sha1": "e9377b500414af119d20658bd9cb540712eec3ca",
+      "bytes": 3229
+    },
+    {
+      "path": "src/main_serialvm_test_xviii.cpp",
+      "blob_sha1": "5f7c5018419632f280ea02af7721fac1e2360aad",
+      "bytes": 2396
+    },
+    {
+      "path": "src/main_shavm_test_xix.cpp",
+      "blob_sha1": "cf2e8ca8c9686f339624872f3e6594878bbcb19a",
+      "bytes": 2543
+    },
+    {
+      "path": "src/main_uservm_coverage_vA.cpp",
+      "blob_sha1": "f9e576286b37323c588ac57e9600488a292a60ba",
+      "bytes": 1232
+    },
+    {
+      "path": "src/main_uservm_helpers_test.cpp",
+      "blob_sha1": "891089e75e7d3ad4a1e02ae25840fee8f1246283",
+      "bytes": 6572
+    },
+    {
+      "path": "src/main_uservm_test.cpp",
+      "blob_sha1": "f54021d2e97043b210983e65046ea296b8a24f95",
+      "bytes": 4396
+    },
+    {
+      "path": "src/pafet_byte_writer_x.h",
+      "blob_sha1": "d3e5826abcb1bc07ba52ebbc76d7b60d73fbb6a3",
+      "bytes": 2314
+    },
+    {
+      "path": "src/pafet_canonical_interp_vii.cpp",
+      "blob_sha1": "39b0002cc710b574587de789647c706f1878a59c",
+      "bytes": 15251
+    },
+    {
+      "path": "src/pafet_canonical_interp_vii.h",
+      "blob_sha1": "7bfa9afc004fbcefb58bbceecb2f6ed7cdc3fef7",
+      "bytes": 3650
+    },
+    {
+      "path": "src/pafet_des3_xxi.h",
+      "blob_sha1": "578d7bd8fa45d6ca569f658a952c9f92b624840d",
+      "bytes": 9252
+    },
+    {
+      "path": "src/pafet_h3880_native_vA.cpp",
+      "blob_sha1": "cfab0454740bd8da707c744380a9219a13be0af8",
+      "bytes": 5802
+    },
+    {
+      "path": "src/pafet_h3880_native_vA.h",
+      "blob_sha1": "9eed9aba69b5b0805a2aff4ca2a824b17f489f8c",
+      "bytes": 1479
+    },
+    {
+      "path": "src/pafet_h3a50_native.cpp",
+      "blob_sha1": "612189f883d35bca9e54010ddff67b42c9f0b215",
+      "bytes": 5087
+    },
+    {
+      "path": "src/pafet_h3a50_native.h",
+      "blob_sha1": "d0aa0624750a20bb9210860529d725b8f6238339",
+      "bytes": 1649
+    },
+    {
+      "path": "src/pafet_h6770_native_xv.cpp",
+      "blob_sha1": "8b0bae8ae1fac6de255789c84c29a60694c23727",
+      "bytes": 11400
+    },
+    {
+      "path": "src/pafet_h6770_native_xv.h",
+      "blob_sha1": "1836c8d099b084291c93d2715b96c7e98bdb5abb",
+      "bytes": 901
+    },
+    {
+      "path": "src/pafet_hexvm_native_xx.h",
+      "blob_sha1": "645ec4212784758e7c58b276c08ed7c9b7039d3f",
+      "bytes": 1725
+    },
+    {
+      "path": "src/pafet_recompile_xxi.cpp",
+      "blob_sha1": "76c2a306c62ac4a8397d0db7358760e7c2ceef8c",
+      "bytes": 4839
+    },
+    {
+      "path": "src/pafet_serialvm_native_xviii.h",
+      "blob_sha1": "ac955d7f956fc26e40e60d0b6a255a8d4aff910f",
+      "bytes": 2170
+    },
+    {
+      "path": "src/pafet_shavm_native_xix.h",
+      "blob_sha1": "a6eca82ecb43ceb54e0c664ecfbf0c90a27a21c6",
+      "bytes": 3925
+    },
+    {
+      "path": "src/pafet_uservm.cpp",
+      "blob_sha1": "2b7d6d8bc0ebb4bec4a7968248946f43848968a7",
+      "bytes": 9688
+    },
+    {
+      "path": "src/pafet_uservm.h",
+      "blob_sha1": "88380f6f42b7573a529df0b429e5775c52b59f7e",
+      "bytes": 4160
+    },
+    {
+      "path": "src/pafet_uservm_helpers.cpp",
+      "blob_sha1": "faf9de34739889b5e541f1af7f7fa88834922988",
+      "bytes": 3966
+    },
+    {
+      "path": "src/pafet_uservm_helpers.h",
+      "blob_sha1": "a6aac9ea6aab1586ade4aa3182bf5c5520c2d137",
+      "bytes": 5816
+    },
+    {
+      "path": "src/pafet_uservm_native_vA.cpp",
+      "blob_sha1": "4eecce64c6b5db334ed02c5f8d17677be3b0f5b5",
+      "bytes": 4988
+    },
+    {
+      "path": "src/pafet_uservm_native_vA.h",
+      "blob_sha1": "b864054c089504115d29b0ef3f0ff7899f10b809",
+      "bytes": 2134
+    },
+    {
+      "path": "vm_pools_evidence/decode_user_blob_vi.json",
+      "blob_sha1": "d37926c49b5f1a310c9e17c918b78aa94365a536",
+      "bytes": 1650
+    },
+    {
+      "path": "vm_pools_evidence/h14a00_vectors_xvi.json",
+      "blob_sha1": "3bc9511d817c4f686aeba17bc793b47c0c493e0d",
+      "bytes": 3079721
+    },
+    {
+      "path": "vm_pools_evidence/h3bea0_vectors_xiii.json",
+      "blob_sha1": "90f3770821a92745cb4cd29df546293a2aee81e1",
+      "bytes": 3326050
+    },
+    {
+      "path": "vm_pools_evidence/hidden_dispatch_ivB.json",
+      "blob_sha1": "986eaf589364c3731b07cdb197bcbf116e1199a5",
+      "bytes": 4390
+    },
+    {
+      "path": "vm_pools_evidence/user_bytecode_at_executor_vi.bin",
+      "blob_sha1": "aa85a83e67456ff7a30d8e2e861b9d046490ad38",
+      "bytes": 1752
+    },
+    {
+      "path": "vm_pools_evidence/user_bytecode_canonical_vi.bin",
+      "blob_sha1": "37c4bacd685593cd5dd97aaa97000ac0b1cba45c",
+      "bytes": 1752
+    },
+    {
+      "path": "vm_pools_evidence/user_bytecode_dumped_vi.json",
+      "blob_sha1": "6717f67cb5938a358256cc85625b23957168e983",
+      "bytes": 7657
+    },
+    {
+      "path": "vm_pools_evidence/usuario_blob_enc.bin",
+      "blob_sha1": "a99629715965cfe703280ebf92dc6da34de28f55",
+      "bytes": 8192
+    },
+    {
+      "path": "vm_pools_evidence/usuario_vm_handlers_full.json",
+      "blob_sha1": "5ffd2931fb706852c7fbc7c3e12c2e7bfe71b6f1",
+      "bytes": 6411
+    }
+  ]
+}

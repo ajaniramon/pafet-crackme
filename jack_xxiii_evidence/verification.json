@@ -1,0 +1,26 @@
+{
+  "all_checks_pass": true,
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "materialized_bytes": 1752,
+  "materialized_blocks": 73,
+  "full_oracle_replays": 12,
+  "drop_core_native_state_cases": 12,
+  "writer_native_cases": 108,
+  "windows_executions": 13,
+  "logical_steps_compared": 41864,
+  "core_post_states_compared": 41863,
+  "core_post_snapshots_unavailable": 1,
+  "direct_store_sequences_observed": 185,
+  "static_logical_instructions": 339,
+  "reachable_under_abstract_contract": 334,
+  "observed_native_targets": 60,
+  "pairs_observed": 248,
+  "pairs_with_multiple_targets": 248,
+  "cpp_compilers": [
+    "MSVC Windows",
+    "GCC Linux"
+  ],
+  "whole_five_handler_wrappers_ported": 0,
+  "historical_linux_traces_recovered": false,
+  "git_commands_or_remote_mutations": 0
+}

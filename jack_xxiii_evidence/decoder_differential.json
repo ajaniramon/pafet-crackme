@@ -1,0 +1,122 @@
+{
+  "captures": [
+    {
+      "capture": "a1.jsonl.gz",
+      "operations": 336,
+      "post_states_compared": 336,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "42",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "a8.jsonl.gz",
+      "operations": 1862,
+      "post_states_compared": 1861,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "3947494f514f5157",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "alice.jsonl.gz",
+      "operations": 1208,
+      "post_states_compared": 1208,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "464340464e",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "alice123.jsonl.gz",
+      "operations": 1862,
+      "post_states_compared": 1862,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "7072784f4c494f57",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "empty.jsonl.gz",
+      "operations": 118,
+      "post_states_compared": 118,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "long_a23.jsonl.gz",
+      "operations": 5132,
+      "post_states_compared": 5132,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e8184",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "long_a24.jsonl.gz",
+      "operations": 5350,
+      "post_states_compared": 5350,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e818487",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "long_a25.jsonl.gz",
+      "operations": 5568,
+      "post_states_compared": 5568,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "4245484b4e5154575a5d606366696c6f7275787b7e8184878a",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "long_pattern23.jsonl.gz",
+      "operations": 5132,
+      "post_states_compared": 5132,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "14161c1e1c1e242634363c3e3c3e444654565c5e5c5e64",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "long_pattern24.jsonl.gz",
+      "operations": 5350,
+      "post_states_compared": 5350,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "0917191f211f21272937393f413f41474957595f615f6167",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "long_pattern25.jsonl.gz",
+      "operations": 5568,
+      "post_states_compared": 5568,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "0a0c1a1c222422242a2c3a3c424442444a4c5a5c626462646a",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "ramon.jsonl.gz",
+      "operations": 1208,
+      "post_states_compared": 1208,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "3b3f444b3b",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "capture": "ramonbarcelona.jsonl.gz",
+      "operations": 3170,
+      "post_states_compared": 3170,
+      "all_pre_decoded_pc_stack_256registers_match": true,
+      "all_available_post_decoded_pc_stack_256registers_match": true,
+      "output_hex": "423e4246524f415757565a5f6656",
+      "bytecode_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    }
+  ],
+  "scope": "Decoded logical state. Initial untouched registers supplied as initial state; no native encoded/guard state equivalence claim."
+}

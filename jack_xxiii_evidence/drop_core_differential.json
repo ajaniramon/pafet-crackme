@@ -1,0 +1,126 @@
+{
+  "cases": 12,
+  "all_match": true,
+  "results": [
+    {
+      "capture": "alice",
+      "vector": 0,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0xcc2c7cc6c3a836ab",
+      "boundary": "0x14003bfa4 before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "alice",
+      "vector": 1,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x79073b8ca40a2739",
+      "boundary": "0x14003bfa4 before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "alice",
+      "vector": 2,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x8d6a535b10d7154d",
+      "boundary": "0x14003bfa4 before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "ramon",
+      "vector": 0,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0xaf339dddb37c2d11",
+      "boundary": "0x14003bfa4 before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "ramon",
+      "vector": 1,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x9c4e45bf0b876c82",
+      "boundary": "0x14003bfa4 before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "ramon",
+      "vector": 2,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x10ed2b81aebab9e7",
+      "boundary": "0x14003bfa4 before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "alice",
+      "vector": 0,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0xf7b91edd80c466f0",
+      "boundary": "0x140014afd before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "alice",
+      "vector": 1,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x8fdc619d2e1adfb9",
+      "boundary": "0x140014afd before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "alice",
+      "vector": 2,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x7d0262bc220e4b1e",
+      "boundary": "0x140014afd before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "ramon",
+      "vector": 0,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0xda1aa755983c729",
+      "boundary": "0x140014afd before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "ramon",
+      "vector": 1,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0x61dddc69ac14d04b",
+      "boundary": "0x140014afd before JNS",
+      "whole_handler_continuation_ported": false
+    },
+    {
+      "capture": "ramon",
+      "vector": 2,
+      "context_8192_matches": true,
+      "encoded_stack_8192_matches": true,
+      "rax_matches": true,
+      "rax": "0xe5e0fa8c530a0815",
+      "boundary": "0x140014afd before JNS",
+      "whole_handler_continuation_ported": false
+    }
+  ]
+}

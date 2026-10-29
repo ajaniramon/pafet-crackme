@@ -1,5 +1,9 @@
 # Pafet Crackme — Full Reversing & Replication Writeup
 
+> **JACK XXIII recuperado, 29-10-2026:** fuentes, pruebas nuevas en Windows y
+> límites actuales en [PAFET_JACK_XXIII.md](PAFET_JACK_XXIII.md). El texto
+> anterior a esa recuperación se conserva debajo como documentación histórica.
+
 > **Status (2026-10-29).** The original flag **has not** been recovered: the
 > username gate is a SHA-256 preimage with no known match. However, the
 > program behind the gate — every nested VM, every helper, the full crypto

@@ -1,0 +1,42 @@
+{
+  "original_blob_va": "0x1403e5020",
+  "bytes": 1752,
+  "blocks": 73,
+  "permute8_native_cases": 256,
+  "extraction_uses_trace_plaintext": false,
+  "canonical_sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815",
+  "old_canonical_sha256": "5f522d73d93560a9f2cb1243730953a4138c8090b56db320a8963e12b2c858e5",
+  "old_canonical_byte_matches": 89,
+  "results": [
+    {
+      "shadow": "zero",
+      "period": 0,
+      "current": 0,
+      "blocks": 73,
+      "all_1752_bytes_match_after_every_call": true,
+      "materialization_counter": 73,
+      "sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "shadow": "nonzero",
+      "period": 0,
+      "current": 0,
+      "blocks": 73,
+      "all_1752_bytes_match_after_every_call": true,
+      "materialization_counter": 73,
+      "sha256": "0e742937238048518f0a6345b9ed7bd195f3af8b9b9480d210458650a5b6f80f"
+    },
+    {
+      "shadow": "nonzero",
+      "period": 24,
+      "current": 17,
+      "blocks": 73,
+      "all_1752_bytes_match_after_every_call": true,
+      "materialization_counter": 73,
+      "sha256": "71133da9eb0982d6bd9c1e5f2f3db8db65cc88113df93ff8818a432e83fdb2c5"
+    }
+  ],
+  "final_block_hex": "5b8dd8d7375b6d661f1f2c9c907ac050079014a246791b5d",
+  "block28_hex": "5b21e75c7a5b09424715e39c9096cbaac09049dcff7d8db5",
+  "block54_hex": "5bcc36fe415b3e7f285c2c9c9037a82ed89007f8e70df902"
+}

@@ -1,0 +1,7197 @@
+{
+  "entry": 0,
+  "nodes": [
+    {
+      "opcode_pc": 0,
+      "operand_pc": 1,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 1,
+          "width": 4,
+          "encoded_hex": "4afa72c8",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 5
+    },
+    {
+      "opcode_pc": 5,
+      "operand_pc": 6,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        1
+      ],
+      "reader_events": [
+        {
+          "pc": 6,
+          "width": 4,
+          "encoded_hex": "02b90ac6",
+          "decoded": 1
+        }
+      ],
+      "fallthrough_pc": 10
+    },
+    {
+      "opcode_pc": 10,
+      "operand_pc": 11,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 11
+    },
+    {
+      "opcode_pc": 11,
+      "operand_pc": 12,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 12,
+          "width": 2,
+          "encoded_hex": "abbf",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 14
+    },
+    {
+      "opcode_pc": 14,
+      "operand_pc": 15,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        0,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 15,
+          "width": 2,
+          "encoded_hex": "5886",
+          "decoded": 0
+        },
+        {
+          "pc": 17,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 18
+    },
+    {
+      "opcode_pc": 18,
+      "operand_pc": 19,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 19
+    },
+    {
+      "opcode_pc": 19,
+      "operand_pc": 20,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        1
+      ],
+      "reader_events": [
+        {
+          "pc": 20,
+          "width": 4,
+          "encoded_hex": "70c553bd",
+          "decoded": 1
+        }
+      ],
+      "fallthrough_pc": 24
+    },
+    {
+      "opcode_pc": 24,
+      "operand_pc": 25,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        2
+      ],
+      "reader_events": [
+        {
+          "pc": 25,
+          "width": 2,
+          "encoded_hex": "78dd",
+          "decoded": 2
+        }
+      ],
+      "fallthrough_pc": 27
+    },
+    {
+      "opcode_pc": 27,
+      "operand_pc": 28,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        6
+      ],
+      "reader_events": [
+        {
+          "pc": 28,
+          "width": 2,
+          "encoded_hex": "8da3",
+          "decoded": 6
+        }
+      ],
+      "fallthrough_pc": 30
+    },
+    {
+      "opcode_pc": 30,
+      "operand_pc": 31,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 31
+    },
+    {
+      "opcode_pc": 31,
+      "operand_pc": 32,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 32
+    },
+    {
+      "opcode_pc": 32,
+      "operand_pc": 33,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 33,
+          "width": 4,
+          "encoded_hex": "aec1c697",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 37
+    },
+    {
+      "opcode_pc": 48,
+      "operand_pc": 49,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 49,
+          "width": 4,
+          "encoded_hex": "73e5265d",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 53
+    },
+    {
+      "opcode_pc": 53,
+      "operand_pc": 54,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 54,
+          "width": 2,
+          "encoded_hex": "d082",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 56
+    },
+    {
+      "opcode_pc": 56,
+      "operand_pc": 57,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 57,
+          "width": 2,
+          "encoded_hex": "0b4b",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 59
+    },
+    {
+      "opcode_pc": 59,
+      "operand_pc": 60,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 60,
+          "width": 4,
+          "encoded_hex": "7752459e",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 64
+    },
+    {
+      "opcode_pc": 64,
+      "operand_pc": 65,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 65
+    },
+    {
+      "opcode_pc": 65,
+      "operand_pc": 66,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        60
+      ],
+      "reader_events": [
+        {
+          "pc": 66,
+          "width": 4,
+          "encoded_hex": "b10e18f0",
+          "decoded": 60
+        }
+      ],
+      "fallthrough_pc": 70
+    },
+    {
+      "opcode_pc": 72,
+      "operand_pc": 73,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        2
+      ],
+      "reader_events": [
+        {
+          "pc": 73,
+          "width": 4,
+          "encoded_hex": "d4e01896",
+          "decoded": 2
+        }
+      ],
+      "fallthrough_pc": 77
+    },
+    {
+      "opcode_pc": 77,
+      "operand_pc": 78,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 78,
+          "width": 2,
+          "encoded_hex": "7986",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 80
+    },
+    {
+      "opcode_pc": 80,
+      "operand_pc": 81,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 81,
+          "width": 2,
+          "encoded_hex": "525b",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 83
+    },
+    {
+      "opcode_pc": 83,
+      "operand_pc": 84,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        3
+      ],
+      "reader_events": [
+        {
+          "pc": 84,
+          "width": 4,
+          "encoded_hex": "fa17795a",
+          "decoded": 3
+        }
+      ],
+      "fallthrough_pc": 88
+    },
+    {
+      "opcode_pc": 88,
+      "operand_pc": 89,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 89
+    },
+    {
+      "opcode_pc": 89,
+      "operand_pc": 90,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        2
+      ],
+      "reader_events": [
+        {
+          "pc": 90,
+          "width": 4,
+          "encoded_hex": "0bfaeba0",
+          "decoded": 2
+        }
+      ],
+      "fallthrough_pc": 94
+    },
+    {
+      "opcode_pc": 96,
+      "operand_pc": 97,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 97,
+          "width": 4,
+          "encoded_hex": "eeb3b1db",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 101
+    },
+    {
+      "opcode_pc": 101,
+      "operand_pc": 102,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 102,
+          "width": 4,
+          "encoded_hex": "bdc6bab2",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 106
+    },
+    {
+      "opcode_pc": 106,
+      "operand_pc": 107,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 107
+    },
+    {
+      "opcode_pc": 107,
+      "operand_pc": 108,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 108
+    },
+    {
+      "opcode_pc": 108,
+      "operand_pc": 109,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        16
+      ],
+      "reader_events": [
+        {
+          "pc": 109,
+          "width": 4,
+          "encoded_hex": "b6ac4ebb",
+          "decoded": 16
+        }
+      ],
+      "fallthrough_pc": 113
+    },
+    {
+      "opcode_pc": 120,
+      "operand_pc": 121,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        4
+      ],
+      "reader_events": [
+        {
+          "pc": 121,
+          "width": 2,
+          "encoded_hex": "86b1",
+          "decoded": 4
+        }
+      ],
+      "fallthrough_pc": 123
+    },
+    {
+      "opcode_pc": 123,
+      "operand_pc": 124,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 124,
+          "width": 4,
+          "encoded_hex": "9a12dc59",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 128
+    },
+    {
+      "opcode_pc": 128,
+      "operand_pc": 129,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 129
+    },
+    {
+      "opcode_pc": 129,
+      "operand_pc": 130,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 130
+    },
+    {
+      "opcode_pc": 130,
+      "operand_pc": 131,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        53
+      ],
+      "reader_events": [
+        {
+          "pc": 131,
+          "width": 4,
+          "encoded_hex": "23c85587",
+          "decoded": 53
+        }
+      ],
+      "fallthrough_pc": 135
+    },
+    {
+      "opcode_pc": 144,
+      "operand_pc": 145,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        4
+      ],
+      "reader_events": [
+        {
+          "pc": 145,
+          "width": 2,
+          "encoded_hex": "ae48",
+          "decoded": 4
+        }
+      ],
+      "fallthrough_pc": 147
+    },
+    {
+      "opcode_pc": 147,
+      "operand_pc": 148,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        14
+      ],
+      "reader_events": [
+        {
+          "pc": 148,
+          "width": 2,
+          "encoded_hex": "edf7",
+          "decoded": 14
+        }
+      ],
+      "fallthrough_pc": 150
+    },
+    {
+      "opcode_pc": 150,
+      "operand_pc": 151,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 151
+    },
+    {
+      "opcode_pc": 151,
+      "operand_pc": 152,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 152
+    },
+    {
+      "opcode_pc": 152,
+      "operand_pc": 153,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        66
+      ],
+      "reader_events": [
+        {
+          "pc": 153,
+          "width": 4,
+          "encoded_hex": "04b8d0a6",
+          "decoded": 66
+        }
+      ],
+      "fallthrough_pc": 157
+    },
+    {
+      "opcode_pc": 168,
+      "operand_pc": 169,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 169,
+          "width": 2,
+          "encoded_hex": "1beb",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 171
+    },
+    {
+      "opcode_pc": 171,
+      "operand_pc": 172,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 172,
+          "width": 4,
+          "encoded_hex": "bb95b580",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 176
+    },
+    {
+      "opcode_pc": 176,
+      "operand_pc": 177,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 177
+    },
+    {
+      "opcode_pc": 177,
+      "operand_pc": 178,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 178
+    },
+    {
+      "opcode_pc": 178,
+      "operand_pc": 179,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        39
+      ],
+      "reader_events": [
+        {
+          "pc": 179,
+          "width": 4,
+          "encoded_hex": "b91939f1",
+          "decoded": 39
+        }
+      ],
+      "fallthrough_pc": 183
+    },
+    {
+      "opcode_pc": 192,
+      "operand_pc": 193,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 193,
+          "width": 2,
+          "encoded_hex": "2339",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 195
+    },
+    {
+      "opcode_pc": 195,
+      "operand_pc": 196,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 196,
+          "width": 4,
+          "encoded_hex": "537988f5",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 200
+    },
+    {
+      "opcode_pc": 200,
+      "operand_pc": 201,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 201
+    },
+    {
+      "opcode_pc": 201,
+      "operand_pc": 202,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 202
+    },
+    {
+      "opcode_pc": 202,
+      "operand_pc": 203,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 203,
+          "width": 4,
+          "encoded_hex": "a3f40a1d",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 207
+    },
+    {
+      "opcode_pc": 216,
+      "operand_pc": 217,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 217,
+          "width": 4,
+          "encoded_hex": "5ab2fae3",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 221
+    },
+    {
+      "opcode_pc": 221,
+      "operand_pc": 222,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 222,
+          "width": 4,
+          "encoded_hex": "98b63587",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 226
+    },
+    {
+      "opcode_pc": 226,
+      "operand_pc": 227,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 227
+    },
+    {
+      "opcode_pc": 227,
+      "operand_pc": 228,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 228
+    },
+    {
+      "opcode_pc": 228,
+      "operand_pc": 229,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        71
+      ],
+      "reader_events": [
+        {
+          "pc": 229,
+          "width": 4,
+          "encoded_hex": "6237721c",
+          "decoded": 71
+        }
+      ],
+      "fallthrough_pc": 233
+    },
+    {
+      "opcode_pc": 240,
+      "operand_pc": 241,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 241,
+          "width": 4,
+          "encoded_hex": "32d4ad68",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 245
+    },
+    {
+      "opcode_pc": 245,
+      "operand_pc": 246,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 246,
+          "width": 4,
+          "encoded_hex": "0c0c7e6d",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 250
+    },
+    {
+      "opcode_pc": 250,
+      "operand_pc": 251,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 251
+    },
+    {
+      "opcode_pc": 251,
+      "operand_pc": 252,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 252
+    },
+    {
+      "opcode_pc": 252,
+      "operand_pc": 253,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        52
+      ],
+      "reader_events": [
+        {
+          "pc": 253,
+          "width": 4,
+          "encoded_hex": "8bc2c275",
+          "decoded": 52
+        }
+      ],
+      "fallthrough_pc": 257
+    },
+    {
+      "opcode_pc": 264,
+      "operand_pc": 265,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 265,
+          "width": 4,
+          "encoded_hex": "7b3e8859",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 269
+    },
+    {
+      "opcode_pc": 269,
+      "operand_pc": 270,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 270,
+          "width": 4,
+          "encoded_hex": "54aa37e4",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 274
+    },
+    {
+      "opcode_pc": 274,
+      "operand_pc": 275,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 275
+    },
+    {
+      "opcode_pc": 275,
+      "operand_pc": 276,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 276
+    },
+    {
+      "opcode_pc": 276,
+      "operand_pc": 277,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        27
+      ],
+      "reader_events": [
+        {
+          "pc": 277,
+          "width": 4,
+          "encoded_hex": "16e1a50d",
+          "decoded": 27
+        }
+      ],
+      "fallthrough_pc": 281
+    },
+    {
+      "opcode_pc": 288,
+      "operand_pc": 289,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 289,
+          "width": 4,
+          "encoded_hex": "33d8dbd0",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 293
+    },
+    {
+      "opcode_pc": 293,
+      "operand_pc": 294,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 294,
+          "width": 4,
+          "encoded_hex": "e089402b",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 298
+    },
+    {
+      "opcode_pc": 298,
+      "operand_pc": 299,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 299
+    },
+    {
+      "opcode_pc": 299,
+      "operand_pc": 300,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 300
+    },
+    {
+      "opcode_pc": 300,
+      "operand_pc": 301,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        36
+      ],
+      "reader_events": [
+        {
+          "pc": 301,
+          "width": 4,
+          "encoded_hex": "8b20f6c9",
+          "decoded": 36
+        }
+      ],
+      "fallthrough_pc": 305
+    },
+    {
+      "opcode_pc": 312,
+      "operand_pc": 313,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        13
+      ],
+      "reader_events": [
+        {
+          "pc": 313,
+          "width": 2,
+          "encoded_hex": "d2ce",
+          "decoded": 13
+        }
+      ],
+      "fallthrough_pc": 315
+    },
+    {
+      "opcode_pc": 315,
+      "operand_pc": 316,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        14
+      ],
+      "reader_events": [
+        {
+          "pc": 316,
+          "width": 2,
+          "encoded_hex": "f44f",
+          "decoded": 14
+        }
+      ],
+      "fallthrough_pc": 318
+    },
+    {
+      "opcode_pc": 318,
+      "operand_pc": 319,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 319
+    },
+    {
+      "opcode_pc": 319,
+      "operand_pc": 320,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 320
+    },
+    {
+      "opcode_pc": 320,
+      "operand_pc": 321,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        42
+      ],
+      "reader_events": [
+        {
+          "pc": 321,
+          "width": 4,
+          "encoded_hex": "6567b8ee",
+          "decoded": 42
+        }
+      ],
+      "fallthrough_pc": 325
+    },
+    {
+      "opcode_pc": 336,
+      "operand_pc": 337,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 337,
+          "width": 4,
+          "encoded_hex": "a3143ccd",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 341
+    },
+    {
+      "opcode_pc": 341,
+      "operand_pc": 342,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 342,
+          "width": 2,
+          "encoded_hex": "f132",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 344
+    },
+    {
+      "opcode_pc": 344,
+      "operand_pc": 345,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 345,
+          "width": 2,
+          "encoded_hex": "eaf8",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 347
+    },
+    {
+      "opcode_pc": 347,
+      "operand_pc": 348,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 348,
+          "width": 4,
+          "encoded_hex": "8a75b905",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 352
+    },
+    {
+      "opcode_pc": 352,
+      "operand_pc": 353,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 353
+    },
+    {
+      "opcode_pc": 353,
+      "operand_pc": 354,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        15
+      ],
+      "reader_events": [
+        {
+          "pc": 354,
+          "width": 4,
+          "encoded_hex": "d19e8e0f",
+          "decoded": 15
+        }
+      ],
+      "fallthrough_pc": 358
+    },
+    {
+      "opcode_pc": 360,
+      "operand_pc": 361,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 361,
+          "width": 2,
+          "encoded_hex": "5a72",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 363
+    },
+    {
+      "opcode_pc": 363,
+      "operand_pc": 364,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 364,
+          "width": 2,
+          "encoded_hex": "d548",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 366
+    },
+    {
+      "opcode_pc": 366,
+      "operand_pc": 367,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 367
+    },
+    {
+      "opcode_pc": 367,
+      "operand_pc": 368,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 368
+    },
+    {
+      "opcode_pc": 368,
+      "operand_pc": 369,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        68
+      ],
+      "reader_events": [
+        {
+          "pc": 369,
+          "width": 4,
+          "encoded_hex": "f8754e1f",
+          "decoded": 68
+        }
+      ],
+      "fallthrough_pc": 373
+    },
+    {
+      "opcode_pc": 384,
+      "operand_pc": 385,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        3
+      ],
+      "reader_events": [
+        {
+          "pc": 385,
+          "width": 2,
+          "encoded_hex": "0be8",
+          "decoded": 3
+        }
+      ],
+      "fallthrough_pc": 387
+    },
+    {
+      "opcode_pc": 387,
+      "operand_pc": 388,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 388,
+          "width": 4,
+          "encoded_hex": "04d3b6f4",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 392
+    },
+    {
+      "opcode_pc": 392,
+      "operand_pc": 393,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 393
+    },
+    {
+      "opcode_pc": 393,
+      "operand_pc": 394,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 394
+    },
+    {
+      "opcode_pc": 394,
+      "operand_pc": 395,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 395,
+          "width": 4,
+          "encoded_hex": "2d6902e9",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 399
+    },
+    {
+      "opcode_pc": 408,
+      "operand_pc": 409,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 409,
+          "width": 4,
+          "encoded_hex": "f2d7df0b",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 413
+    },
+    {
+      "opcode_pc": 413,
+      "operand_pc": 414,
+      "encoded_opcode": 119,
+      "logical_opcode": 44,
+      "operation": "NOT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 414
+    },
+    {
+      "opcode_pc": 414,
+      "operand_pc": 415,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 415
+    },
+    {
+      "opcode_pc": 415,
+      "operand_pc": 416,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 416,
+          "width": 4,
+          "encoded_hex": "a4cda61d",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 420
+    },
+    {
+      "opcode_pc": 432,
+      "operand_pc": 433,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        30
+      ],
+      "reader_events": [
+        {
+          "pc": 433,
+          "width": 4,
+          "encoded_hex": "3e1b4a38",
+          "decoded": 30
+        }
+      ],
+      "fallthrough_pc": 437
+    },
+    {
+      "opcode_pc": 456,
+      "operand_pc": 457,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 457,
+          "width": 4,
+          "encoded_hex": "62135618",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 461
+    },
+    {
+      "opcode_pc": 461,
+      "operand_pc": 462,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 462,
+          "width": 4,
+          "encoded_hex": "2e12757e",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 466
+    },
+    {
+      "opcode_pc": 466,
+      "operand_pc": 467,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 467
+    },
+    {
+      "opcode_pc": 467,
+      "operand_pc": 468,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 468
+    },
+    {
+      "opcode_pc": 468,
+      "operand_pc": 469,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        13
+      ],
+      "reader_events": [
+        {
+          "pc": 469,
+          "width": 4,
+          "encoded_hex": "4f183a18",
+          "decoded": 13
+        }
+      ],
+      "fallthrough_pc": 473
+    },
+    {
+      "opcode_pc": 480,
+      "operand_pc": 481,
+      "encoded_opcode": 250,
+      "logical_opcode": 28,
+      "operation": "JNZ",
+      "operands": [
+        54
+      ],
+      "reader_events": [
+        {
+          "pc": 481,
+          "width": 4,
+          "encoded_hex": "16819b3c",
+          "decoded": 54
+        }
+      ],
+      "fallthrough_pc": 485
+    },
+    {
+      "opcode_pc": 485,
+      "operand_pc": 486,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        48
+      ],
+      "reader_events": [
+        {
+          "pc": 486,
+          "width": 4,
+          "encoded_hex": "6bae2624",
+          "decoded": 48
+        }
+      ],
+      "fallthrough_pc": 490
+    },
+    {
+      "opcode_pc": 504,
+      "operand_pc": 505,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 505,
+          "width": 4,
+          "encoded_hex": "583cfccb",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 509
+    },
+    {
+      "opcode_pc": 509,
+      "operand_pc": 510,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 510,
+          "width": 4,
+          "encoded_hex": "7b1dc6f6",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 514
+    },
+    {
+      "opcode_pc": 514,
+      "operand_pc": 515,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 515
+    },
+    {
+      "opcode_pc": 515,
+      "operand_pc": 516,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 516
+    },
+    {
+      "opcode_pc": 516,
+      "operand_pc": 517,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        62
+      ],
+      "reader_events": [
+        {
+          "pc": 517,
+          "width": 4,
+          "encoded_hex": "aa6a19e1",
+          "decoded": 62
+        }
+      ],
+      "fallthrough_pc": 521
+    },
+    {
+      "opcode_pc": 528,
+      "operand_pc": 529,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 529,
+          "width": 2,
+          "encoded_hex": "862f",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 531
+    },
+    {
+      "opcode_pc": 531,
+      "operand_pc": 532,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 532,
+          "width": 4,
+          "encoded_hex": "27e1341d",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 536
+    },
+    {
+      "opcode_pc": 536,
+      "operand_pc": 537,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 537
+    },
+    {
+      "opcode_pc": 537,
+      "operand_pc": 538,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 538
+    },
+    {
+      "opcode_pc": 538,
+      "operand_pc": 539,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 539,
+          "width": 4,
+          "encoded_hex": "9da64782",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 543
+    },
+    {
+      "opcode_pc": 552,
+      "operand_pc": 553,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        6
+      ],
+      "reader_events": [
+        {
+          "pc": 553,
+          "width": 4,
+          "encoded_hex": "ef458a5f",
+          "decoded": 6
+        }
+      ],
+      "fallthrough_pc": 557
+    },
+    {
+      "opcode_pc": 557,
+      "operand_pc": 558,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 558
+    },
+    {
+      "opcode_pc": 558,
+      "operand_pc": 559,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        2,
+        1
+      ],
+      "reader_events": [
+        {
+          "pc": 559,
+          "width": 2,
+          "encoded_hex": "7511",
+          "decoded": 2
+        },
+        {
+          "pc": 561,
+          "width": 1,
+          "encoded_hex": "ac",
+          "decoded": 1
+        }
+      ],
+      "fallthrough_pc": 562
+    },
+    {
+      "opcode_pc": 562,
+      "operand_pc": 563,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 563
+    },
+    {
+      "opcode_pc": 563,
+      "operand_pc": 564,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        5,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 564,
+          "width": 2,
+          "encoded_hex": "91c3",
+          "decoded": 5
+        },
+        {
+          "pc": 566,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 567
+    },
+    {
+      "opcode_pc": 567,
+      "operand_pc": 568,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 568
+    },
+    {
+      "opcode_pc": 568,
+      "operand_pc": 569,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 569,
+          "width": 4,
+          "encoded_hex": "a0416ae3",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 573
+    },
+    {
+      "opcode_pc": 576,
+      "operand_pc": 577,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 577,
+          "width": 4,
+          "encoded_hex": "5d479003",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 581
+    },
+    {
+      "opcode_pc": 581,
+      "operand_pc": 582,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 582,
+          "width": 4,
+          "encoded_hex": "c2f49e9a",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 586
+    },
+    {
+      "opcode_pc": 586,
+      "operand_pc": 587,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 587
+    },
+    {
+      "opcode_pc": 587,
+      "operand_pc": 588,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 588
+    },
+    {
+      "opcode_pc": 588,
+      "operand_pc": 589,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        38
+      ],
+      "reader_events": [
+        {
+          "pc": 589,
+          "width": 4,
+          "encoded_hex": "9ba6784f",
+          "decoded": 38
+        }
+      ],
+      "fallthrough_pc": 593
+    },
+    {
+      "opcode_pc": 600,
+      "operand_pc": 601,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 601,
+          "width": 4,
+          "encoded_hex": "f985e0ee",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 605
+    },
+    {
+      "opcode_pc": 605,
+      "operand_pc": 606,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 606,
+          "width": 4,
+          "encoded_hex": "1a92a91d",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 610
+    },
+    {
+      "opcode_pc": 610,
+      "operand_pc": 611,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 611
+    },
+    {
+      "opcode_pc": 611,
+      "operand_pc": 612,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 612
+    },
+    {
+      "opcode_pc": 612,
+      "operand_pc": 613,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        72
+      ],
+      "reader_events": [
+        {
+          "pc": 613,
+          "width": 4,
+          "encoded_hex": "d9ae463c",
+          "decoded": 72
+        }
+      ],
+      "fallthrough_pc": 617
+    },
+    {
+      "opcode_pc": 624,
+      "operand_pc": 625,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 625,
+          "width": 4,
+          "encoded_hex": "0d7a613c",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 629
+    },
+    {
+      "opcode_pc": 629,
+      "operand_pc": 630,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 630,
+          "width": 2,
+          "encoded_hex": "93ff",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 632
+    },
+    {
+      "opcode_pc": 632,
+      "operand_pc": 633,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 633,
+          "width": 2,
+          "encoded_hex": "c4a7",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 635
+    },
+    {
+      "opcode_pc": 635,
+      "operand_pc": 636,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 636,
+          "width": 4,
+          "encoded_hex": "7ee3960f",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 640
+    },
+    {
+      "opcode_pc": 640,
+      "operand_pc": 641,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 641
+    },
+    {
+      "opcode_pc": 641,
+      "operand_pc": 642,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        65
+      ],
+      "reader_events": [
+        {
+          "pc": 642,
+          "width": 4,
+          "encoded_hex": "bd82c73a",
+          "decoded": 65
+        }
+      ],
+      "fallthrough_pc": 646
+    },
+    {
+      "opcode_pc": 648,
+      "operand_pc": 649,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 649,
+          "width": 4,
+          "encoded_hex": "a325ddcd",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 653
+    },
+    {
+      "opcode_pc": 653,
+      "operand_pc": 654,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 654,
+          "width": 4,
+          "encoded_hex": "21f8379b",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 658
+    },
+    {
+      "opcode_pc": 658,
+      "operand_pc": 659,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 659
+    },
+    {
+      "opcode_pc": 659,
+      "operand_pc": 660,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 660
+    },
+    {
+      "opcode_pc": 660,
+      "operand_pc": 661,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        57
+      ],
+      "reader_events": [
+        {
+          "pc": 661,
+          "width": 4,
+          "encoded_hex": "52196df2",
+          "decoded": 57
+        }
+      ],
+      "fallthrough_pc": 665
+    },
+    {
+      "opcode_pc": 672,
+      "operand_pc": 673,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 673,
+          "width": 4,
+          "encoded_hex": "21e75c7a",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 677
+    },
+    {
+      "opcode_pc": 677,
+      "operand_pc": 678,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 678,
+          "width": 4,
+          "encoded_hex": "09424715",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 682
+    },
+    {
+      "opcode_pc": 682,
+      "operand_pc": 683,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 683
+    },
+    {
+      "opcode_pc": 683,
+      "operand_pc": 684,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 684
+    },
+    {
+      "opcode_pc": 684,
+      "operand_pc": 685,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        61
+      ],
+      "reader_events": [
+        {
+          "pc": 685,
+          "width": 4,
+          "encoded_hex": "96cbaac0",
+          "decoded": 61
+        }
+      ],
+      "fallthrough_pc": 689
+    },
+    {
+      "opcode_pc": 696,
+      "operand_pc": 697,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 697,
+          "width": 4,
+          "encoded_hex": "055497a0",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 701
+    },
+    {
+      "opcode_pc": 701,
+      "operand_pc": 702,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 702,
+          "width": 2,
+          "encoded_hex": "bb8b",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 704
+    },
+    {
+      "opcode_pc": 704,
+      "operand_pc": 705,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 705,
+          "width": 2,
+          "encoded_hex": "5cd4",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 707
+    },
+    {
+      "opcode_pc": 707,
+      "operand_pc": 708,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 708,
+          "width": 4,
+          "encoded_hex": "7ceaae4d",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 712
+    },
+    {
+      "opcode_pc": 712,
+      "operand_pc": 713,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 713
+    },
+    {
+      "opcode_pc": 713,
+      "operand_pc": 714,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        69
+      ],
+      "reader_events": [
+        {
+          "pc": 714,
+          "width": 4,
+          "encoded_hex": "8901d47b",
+          "decoded": 69
+        }
+      ],
+      "fallthrough_pc": 718
+    },
+    {
+      "opcode_pc": 720,
+      "operand_pc": 721,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 721,
+          "width": 4,
+          "encoded_hex": "9cba9a94",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 725
+    },
+    {
+      "opcode_pc": 725,
+      "operand_pc": 726,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 726,
+          "width": 4,
+          "encoded_hex": "43e2117d",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 730
+    },
+    {
+      "opcode_pc": 730,
+      "operand_pc": 731,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 731
+    },
+    {
+      "opcode_pc": 731,
+      "operand_pc": 732,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 732
+    },
+    {
+      "opcode_pc": 732,
+      "operand_pc": 733,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        41
+      ],
+      "reader_events": [
+        {
+          "pc": 733,
+          "width": 4,
+          "encoded_hex": "39167d69",
+          "decoded": 41
+        }
+      ],
+      "fallthrough_pc": 737
+    },
+    {
+      "opcode_pc": 744,
+      "operand_pc": 745,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 745,
+          "width": 2,
+          "encoded_hex": "6dee",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 747
+    },
+    {
+      "opcode_pc": 747,
+      "operand_pc": 748,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 748,
+          "width": 4,
+          "encoded_hex": "5a921b99",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 752
+    },
+    {
+      "opcode_pc": 752,
+      "operand_pc": 753,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 753
+    },
+    {
+      "opcode_pc": 753,
+      "operand_pc": 754,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 754
+    },
+    {
+      "opcode_pc": 754,
+      "operand_pc": 755,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        28
+      ],
+      "reader_events": [
+        {
+          "pc": 755,
+          "width": 4,
+          "encoded_hex": "5487e16a",
+          "decoded": 28
+        }
+      ],
+      "fallthrough_pc": 759
+    },
+    {
+      "opcode_pc": 768,
+      "operand_pc": 769,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 769,
+          "width": 2,
+          "encoded_hex": "1f4e",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 771
+    },
+    {
+      "opcode_pc": 771,
+      "operand_pc": 772,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        50
+      ],
+      "reader_events": [
+        {
+          "pc": 772,
+          "width": 4,
+          "encoded_hex": "b9f79e10",
+          "decoded": 50
+        }
+      ],
+      "fallthrough_pc": 776
+    },
+    {
+      "opcode_pc": 792,
+      "operand_pc": 793,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 793,
+          "width": 2,
+          "encoded_hex": "a79d",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 795
+    },
+    {
+      "opcode_pc": 795,
+      "operand_pc": 796,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        26
+      ],
+      "reader_events": [
+        {
+          "pc": 796,
+          "width": 4,
+          "encoded_hex": "29f9fbd7",
+          "decoded": 26
+        }
+      ],
+      "fallthrough_pc": 800
+    },
+    {
+      "opcode_pc": 816,
+      "operand_pc": 817,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 817,
+          "width": 4,
+          "encoded_hex": "7f223f8e",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 821
+    },
+    {
+      "opcode_pc": 821,
+      "operand_pc": 822,
+      "encoded_opcode": 119,
+      "logical_opcode": 44,
+      "operation": "NOT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 822
+    },
+    {
+      "opcode_pc": 822,
+      "operand_pc": 823,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 823
+    },
+    {
+      "opcode_pc": 823,
+      "operand_pc": 824,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        18
+      ],
+      "reader_events": [
+        {
+          "pc": 824,
+          "width": 4,
+          "encoded_hex": "75ca3471",
+          "decoded": 18
+        }
+      ],
+      "fallthrough_pc": 828
+    },
+    {
+      "opcode_pc": 840,
+      "operand_pc": 841,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 841,
+          "width": 4,
+          "encoded_hex": "b60a3cf8",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 845
+    },
+    {
+      "opcode_pc": 845,
+      "operand_pc": 846,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 846,
+          "width": 2,
+          "encoded_hex": "0422",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 848
+    },
+    {
+      "opcode_pc": 848,
+      "operand_pc": 849,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 849,
+          "width": 2,
+          "encoded_hex": "2ff9",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 851
+    },
+    {
+      "opcode_pc": 851,
+      "operand_pc": 852,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 852,
+          "width": 4,
+          "encoded_hex": "06256dff",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 856
+    },
+    {
+      "opcode_pc": 856,
+      "operand_pc": 857,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 857
+    },
+    {
+      "opcode_pc": 857,
+      "operand_pc": 858,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        44
+      ],
+      "reader_events": [
+        {
+          "pc": 858,
+          "width": 4,
+          "encoded_hex": "e5943e21",
+          "decoded": 44
+        }
+      ],
+      "fallthrough_pc": 862
+    },
+    {
+      "opcode_pc": 864,
+      "operand_pc": 865,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 865,
+          "width": 4,
+          "encoded_hex": "cfe7bebc",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 869
+    },
+    {
+      "opcode_pc": 869,
+      "operand_pc": 870,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 870,
+          "width": 4,
+          "encoded_hex": "b106ad81",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 874
+    },
+    {
+      "opcode_pc": 874,
+      "operand_pc": 875,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 875
+    },
+    {
+      "opcode_pc": 875,
+      "operand_pc": 876,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 876
+    },
+    {
+      "opcode_pc": 876,
+      "operand_pc": 877,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        34
+      ],
+      "reader_events": [
+        {
+          "pc": 877,
+          "width": 4,
+          "encoded_hex": "6c1e1f52",
+          "decoded": 34
+        }
+      ],
+      "fallthrough_pc": 881
+    },
+    {
+      "opcode_pc": 888,
+      "operand_pc": 889,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        6,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 889,
+          "width": 2,
+          "encoded_hex": "0016",
+          "decoded": 6
+        },
+        {
+          "pc": 891,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 892
+    },
+    {
+      "opcode_pc": 892,
+      "operand_pc": 893,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 893
+    },
+    {
+      "opcode_pc": 893,
+      "operand_pc": 894,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        4
+      ],
+      "reader_events": [
+        {
+          "pc": 894,
+          "width": 4,
+          "encoded_hex": "413144b0",
+          "decoded": 4
+        }
+      ],
+      "fallthrough_pc": 898
+    },
+    {
+      "opcode_pc": 898,
+      "operand_pc": 899,
+      "encoded_opcode": 80,
+      "logical_opcode": 29,
+      "operation": "RETURN",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 899
+    },
+    {
+      "opcode_pc": 912,
+      "operand_pc": 913,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        14
+      ],
+      "reader_events": [
+        {
+          "pc": 913,
+          "width": 2,
+          "encoded_hex": "71a5",
+          "decoded": 14
+        }
+      ],
+      "fallthrough_pc": 915
+    },
+    {
+      "opcode_pc": 915,
+      "operand_pc": 916,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        4
+      ],
+      "reader_events": [
+        {
+          "pc": 916,
+          "width": 2,
+          "encoded_hex": "3a1c",
+          "decoded": 4
+        }
+      ],
+      "fallthrough_pc": 918
+    },
+    {
+      "opcode_pc": 918,
+      "operand_pc": 919,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 919
+    },
+    {
+      "opcode_pc": 919,
+      "operand_pc": 920,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 920
+    },
+    {
+      "opcode_pc": 920,
+      "operand_pc": 921,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        22
+      ],
+      "reader_events": [
+        {
+          "pc": 921,
+          "width": 4,
+          "encoded_hex": "ad6dff30",
+          "decoded": 22
+        }
+      ],
+      "fallthrough_pc": 925
+    },
+    {
+      "opcode_pc": 936,
+      "operand_pc": 937,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 937,
+          "width": 2,
+          "encoded_hex": "16f0",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 939
+    },
+    {
+      "opcode_pc": 939,
+      "operand_pc": 940,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 940,
+          "width": 4,
+          "encoded_hex": "d57cace2",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 944
+    },
+    {
+      "opcode_pc": 960,
+      "operand_pc": 961,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 961,
+          "width": 2,
+          "encoded_hex": "2fd2",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 963
+    },
+    {
+      "opcode_pc": 963,
+      "operand_pc": 964,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        1,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 964,
+          "width": 2,
+          "encoded_hex": "7b57",
+          "decoded": 1
+        },
+        {
+          "pc": 966,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 967
+    },
+    {
+      "opcode_pc": 967,
+      "operand_pc": 968,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 968
+    },
+    {
+      "opcode_pc": 968,
+      "operand_pc": 969,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        4
+      ],
+      "reader_events": [
+        {
+          "pc": 969,
+          "width": 4,
+          "encoded_hex": "836759bd",
+          "decoded": 4
+        }
+      ],
+      "fallthrough_pc": 973
+    },
+    {
+      "opcode_pc": 973,
+      "operand_pc": 974,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        2,
+        1
+      ],
+      "reader_events": [
+        {
+          "pc": 974,
+          "width": 2,
+          "encoded_hex": "5631",
+          "decoded": 2
+        },
+        {
+          "pc": 976,
+          "width": 1,
+          "encoded_hex": "ac",
+          "decoded": 1
+        }
+      ],
+      "fallthrough_pc": 977
+    },
+    {
+      "opcode_pc": 977,
+      "operand_pc": 978,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 978
+    },
+    {
+      "opcode_pc": 978,
+      "operand_pc": 979,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        3
+      ],
+      "reader_events": [
+        {
+          "pc": 979,
+          "width": 4,
+          "encoded_hex": "d0ab6625",
+          "decoded": 3
+        }
+      ],
+      "fallthrough_pc": 983
+    },
+    {
+      "opcode_pc": 984,
+      "operand_pc": 985,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 985,
+          "width": 2,
+          "encoded_hex": "6640",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 987
+    },
+    {
+      "opcode_pc": 987,
+      "operand_pc": 988,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        17
+      ],
+      "reader_events": [
+        {
+          "pc": 988,
+          "width": 4,
+          "encoded_hex": "5d29312f",
+          "decoded": 17
+        }
+      ],
+      "fallthrough_pc": 992
+    },
+    {
+      "opcode_pc": 1008,
+      "operand_pc": 1009,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1009,
+          "width": 2,
+          "encoded_hex": "0e8b",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1011
+    },
+    {
+      "opcode_pc": 1011,
+      "operand_pc": 1012,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        3
+      ],
+      "reader_events": [
+        {
+          "pc": 1012,
+          "width": 4,
+          "encoded_hex": "1f8d720c",
+          "decoded": 3
+        }
+      ],
+      "fallthrough_pc": 1016
+    },
+    {
+      "opcode_pc": 1032,
+      "operand_pc": 1033,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1033,
+          "width": 4,
+          "encoded_hex": "520f91b6",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1037
+    },
+    {
+      "opcode_pc": 1037,
+      "operand_pc": 1038,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1038,
+          "width": 2,
+          "encoded_hex": "45bb",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1040
+    },
+    {
+      "opcode_pc": 1040,
+      "operand_pc": 1041,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1041,
+          "width": 2,
+          "encoded_hex": "6e72",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1043
+    },
+    {
+      "opcode_pc": 1043,
+      "operand_pc": 1044,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1044,
+          "width": 4,
+          "encoded_hex": "53af16fe",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1048
+    },
+    {
+      "opcode_pc": 1048,
+      "operand_pc": 1049,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1049
+    },
+    {
+      "opcode_pc": 1049,
+      "operand_pc": 1050,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        19
+      ],
+      "reader_events": [
+        {
+          "pc": 1050,
+          "width": 4,
+          "encoded_hex": "c126bfe3",
+          "decoded": 19
+        }
+      ],
+      "fallthrough_pc": 1054
+    },
+    {
+      "opcode_pc": 1056,
+      "operand_pc": 1057,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1057,
+          "width": 2,
+          "encoded_hex": "bef5",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1059
+    },
+    {
+      "opcode_pc": 1059,
+      "operand_pc": 1060,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        20
+      ],
+      "reader_events": [
+        {
+          "pc": 1060,
+          "width": 4,
+          "encoded_hex": "c2816519",
+          "decoded": 20
+        }
+      ],
+      "fallthrough_pc": 1064
+    },
+    {
+      "opcode_pc": 1080,
+      "operand_pc": 1081,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1081,
+          "width": 4,
+          "encoded_hex": "d10dd844",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1085
+    },
+    {
+      "opcode_pc": 1085,
+      "operand_pc": 1086,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1086,
+          "width": 4,
+          "encoded_hex": "911d3a2a",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1090
+    },
+    {
+      "opcode_pc": 1090,
+      "operand_pc": 1091,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1091
+    },
+    {
+      "opcode_pc": 1091,
+      "operand_pc": 1092,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1092
+    },
+    {
+      "opcode_pc": 1092,
+      "operand_pc": 1093,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        35
+      ],
+      "reader_events": [
+        {
+          "pc": 1093,
+          "width": 4,
+          "encoded_hex": "1578833b",
+          "decoded": 35
+        }
+      ],
+      "fallthrough_pc": 1097
+    },
+    {
+      "opcode_pc": 1104,
+      "operand_pc": 1105,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1105,
+          "width": 2,
+          "encoded_hex": "29a4",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1107
+    },
+    {
+      "opcode_pc": 1107,
+      "operand_pc": 1108,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        58
+      ],
+      "reader_events": [
+        {
+          "pc": 1108,
+          "width": 4,
+          "encoded_hex": "f32dd968",
+          "decoded": 58
+        }
+      ],
+      "fallthrough_pc": 1112
+    },
+    {
+      "opcode_pc": 1128,
+      "operand_pc": 1129,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        23
+      ],
+      "reader_events": [
+        {
+          "pc": 1129,
+          "width": 4,
+          "encoded_hex": "a56014e7",
+          "decoded": 23
+        }
+      ],
+      "fallthrough_pc": 1133
+    },
+    {
+      "opcode_pc": 1152,
+      "operand_pc": 1153,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1153,
+          "width": 4,
+          "encoded_hex": "181235a2",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1157
+    },
+    {
+      "opcode_pc": 1157,
+      "operand_pc": 1158,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1158,
+          "width": 4,
+          "encoded_hex": "e4efd690",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1162
+    },
+    {
+      "opcode_pc": 1162,
+      "operand_pc": 1163,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1163
+    },
+    {
+      "opcode_pc": 1163,
+      "operand_pc": 1164,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1164
+    },
+    {
+      "opcode_pc": 1164,
+      "operand_pc": 1165,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        31
+      ],
+      "reader_events": [
+        {
+          "pc": 1165,
+          "width": 4,
+          "encoded_hex": "59fea0c4",
+          "decoded": 31
+        }
+      ],
+      "fallthrough_pc": 1169
+    },
+    {
+      "opcode_pc": 1176,
+      "operand_pc": 1177,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        6
+      ],
+      "reader_events": [
+        {
+          "pc": 1177,
+          "width": 2,
+          "encoded_hex": "e643",
+          "decoded": 6
+        }
+      ],
+      "fallthrough_pc": 1179
+    },
+    {
+      "opcode_pc": 1179,
+      "operand_pc": 1180,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 1180,
+          "width": 2,
+          "encoded_hex": "952a",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 1182
+    },
+    {
+      "opcode_pc": 1182,
+      "operand_pc": 1183,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1183
+    },
+    {
+      "opcode_pc": 1183,
+      "operand_pc": 1184,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1184
+    },
+    {
+      "opcode_pc": 1184,
+      "operand_pc": 1185,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        43
+      ],
+      "reader_events": [
+        {
+          "pc": 1185,
+          "width": 4,
+          "encoded_hex": "a9b105ae",
+          "decoded": 43
+        }
+      ],
+      "fallthrough_pc": 1189
+    },
+    {
+      "opcode_pc": 1200,
+      "operand_pc": 1201,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 1201,
+          "width": 4,
+          "encoded_hex": "f9061210",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 1205
+    },
+    {
+      "opcode_pc": 1205,
+      "operand_pc": 1206,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 1206,
+          "width": 4,
+          "encoded_hex": "6e4f98f9",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 1210
+    },
+    {
+      "opcode_pc": 1210,
+      "operand_pc": 1211,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1211
+    },
+    {
+      "opcode_pc": 1211,
+      "operand_pc": 1212,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1212
+    },
+    {
+      "opcode_pc": 1212,
+      "operand_pc": 1213,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        64
+      ],
+      "reader_events": [
+        {
+          "pc": 1213,
+          "width": 4,
+          "encoded_hex": "cc6f4e7f",
+          "decoded": 64
+        }
+      ],
+      "fallthrough_pc": 1217
+    },
+    {
+      "opcode_pc": 1224,
+      "operand_pc": 1225,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1225,
+          "width": 4,
+          "encoded_hex": "66d2772c",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1229
+    },
+    {
+      "opcode_pc": 1229,
+      "operand_pc": 1230,
+      "encoded_opcode": 119,
+      "logical_opcode": 44,
+      "operation": "NOT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1230
+    },
+    {
+      "opcode_pc": 1230,
+      "operand_pc": 1231,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1231
+    },
+    {
+      "opcode_pc": 1231,
+      "operand_pc": 1232,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        51
+      ],
+      "reader_events": [
+        {
+          "pc": 1232,
+          "width": 4,
+          "encoded_hex": "d89e91a9",
+          "decoded": 51
+        }
+      ],
+      "fallthrough_pc": 1236
+    },
+    {
+      "opcode_pc": 1248,
+      "operand_pc": 1249,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1249,
+          "width": 2,
+          "encoded_hex": "08a4",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1251
+    },
+    {
+      "opcode_pc": 1251,
+      "operand_pc": 1252,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        14
+      ],
+      "reader_events": [
+        {
+          "pc": 1252,
+          "width": 2,
+          "encoded_hex": "dbb4",
+          "decoded": 14
+        }
+      ],
+      "fallthrough_pc": 1254
+    },
+    {
+      "opcode_pc": 1254,
+      "operand_pc": 1255,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1255
+    },
+    {
+      "opcode_pc": 1255,
+      "operand_pc": 1256,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1256
+    },
+    {
+      "opcode_pc": 1256,
+      "operand_pc": 1257,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1257,
+          "width": 4,
+          "encoded_hex": "5010b3b0",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1261
+    },
+    {
+      "opcode_pc": 1272,
+      "operand_pc": 1273,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1273,
+          "width": 4,
+          "encoded_hex": "961ed139",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1277
+    },
+    {
+      "opcode_pc": 1277,
+      "operand_pc": 1278,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1278,
+          "width": 4,
+          "encoded_hex": "1df3054f",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1282
+    },
+    {
+      "opcode_pc": 1282,
+      "operand_pc": 1283,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1283
+    },
+    {
+      "opcode_pc": 1283,
+      "operand_pc": 1284,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1284
+    },
+    {
+      "opcode_pc": 1284,
+      "operand_pc": 1285,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        55
+      ],
+      "reader_events": [
+        {
+          "pc": 1285,
+          "width": 4,
+          "encoded_hex": "a82ad7a8",
+          "decoded": 55
+        }
+      ],
+      "fallthrough_pc": 1289
+    },
+    {
+      "opcode_pc": 1296,
+      "operand_pc": 1297,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1297,
+          "width": 4,
+          "encoded_hex": "cc36fe41",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1301
+    },
+    {
+      "opcode_pc": 1301,
+      "operand_pc": 1302,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1302,
+          "width": 4,
+          "encoded_hex": "3e7f285c",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1306
+    },
+    {
+      "opcode_pc": 1306,
+      "operand_pc": 1307,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1307
+    },
+    {
+      "opcode_pc": 1307,
+      "operand_pc": 1308,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1308
+    },
+    {
+      "opcode_pc": 1308,
+      "operand_pc": 1309,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        46
+      ],
+      "reader_events": [
+        {
+          "pc": 1309,
+          "width": 4,
+          "encoded_hex": "37a82ed8",
+          "decoded": 46
+        }
+      ],
+      "fallthrough_pc": 1313
+    },
+    {
+      "opcode_pc": 1320,
+      "operand_pc": 1321,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1321,
+          "width": 4,
+          "encoded_hex": "7a48f8e9",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1325
+    },
+    {
+      "opcode_pc": 1325,
+      "operand_pc": 1326,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1326,
+          "width": 4,
+          "encoded_hex": "8d376242",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1330
+    },
+    {
+      "opcode_pc": 1330,
+      "operand_pc": 1331,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1331
+    },
+    {
+      "opcode_pc": 1331,
+      "operand_pc": 1332,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1332
+    },
+    {
+      "opcode_pc": 1332,
+      "operand_pc": 1333,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        40
+      ],
+      "reader_events": [
+        {
+          "pc": 1333,
+          "width": 4,
+          "encoded_hex": "0df304d2",
+          "decoded": 40
+        }
+      ],
+      "fallthrough_pc": 1337
+    },
+    {
+      "opcode_pc": 1344,
+      "operand_pc": 1345,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 1345,
+          "width": 4,
+          "encoded_hex": "c5590ba3",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 1349
+    },
+    {
+      "opcode_pc": 1349,
+      "operand_pc": 1350,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1350,
+          "width": 2,
+          "encoded_hex": "4fb0",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1352
+    },
+    {
+      "opcode_pc": 1352,
+      "operand_pc": 1353,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1353,
+          "width": 2,
+          "encoded_hex": "30f9",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1355
+    },
+    {
+      "opcode_pc": 1355,
+      "operand_pc": 1356,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 1356,
+          "width": 4,
+          "encoded_hex": "00018b7b",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 1360
+    },
+    {
+      "opcode_pc": 1360,
+      "operand_pc": 1361,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1361
+    },
+    {
+      "opcode_pc": 1361,
+      "operand_pc": 1362,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        56
+      ],
+      "reader_events": [
+        {
+          "pc": 1362,
+          "width": 4,
+          "encoded_hex": "4264613e",
+          "decoded": 56
+        }
+      ],
+      "fallthrough_pc": 1366
+    },
+    {
+      "opcode_pc": 1368,
+      "operand_pc": 1369,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        6
+      ],
+      "reader_events": [
+        {
+          "pc": 1369,
+          "width": 2,
+          "encoded_hex": "2724",
+          "decoded": 6
+        }
+      ],
+      "fallthrough_pc": 1371
+    },
+    {
+      "opcode_pc": 1371,
+      "operand_pc": 1372,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1372,
+          "width": 4,
+          "encoded_hex": "e75cb16b",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1376
+    },
+    {
+      "opcode_pc": 1376,
+      "operand_pc": 1377,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1377
+    },
+    {
+      "opcode_pc": 1377,
+      "operand_pc": 1378,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1378
+    },
+    {
+      "opcode_pc": 1378,
+      "operand_pc": 1379,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1379,
+          "width": 2,
+          "encoded_hex": "f799",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1381
+    },
+    {
+      "opcode_pc": 1381,
+      "operand_pc": 1382,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1382,
+          "width": 4,
+          "encoded_hex": "0b2ebf13",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1386
+    },
+    {
+      "opcode_pc": 1386,
+      "operand_pc": 1387,
+      "encoded_opcode": 209,
+      "logical_opcode": 24,
+      "operation": "SGT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1387
+    },
+    {
+      "opcode_pc": 1387,
+      "operand_pc": 1388,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        47
+      ],
+      "reader_events": [
+        {
+          "pc": 1388,
+          "width": 4,
+          "encoded_hex": "1142e378",
+          "decoded": 47
+        }
+      ],
+      "fallthrough_pc": 1392
+    },
+    {
+      "opcode_pc": 1392,
+      "operand_pc": 1393,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1393,
+          "width": 2,
+          "encoded_hex": "6336",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1395
+    },
+    {
+      "opcode_pc": 1395,
+      "operand_pc": 1396,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1396,
+          "width": 4,
+          "encoded_hex": "f1e6f6ca",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1400
+    },
+    {
+      "opcode_pc": 1400,
+      "operand_pc": 1401,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1401
+    },
+    {
+      "opcode_pc": 1401,
+      "operand_pc": 1402,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1402
+    },
+    {
+      "opcode_pc": 1402,
+      "operand_pc": 1403,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        14
+      ],
+      "reader_events": [
+        {
+          "pc": 1403,
+          "width": 4,
+          "encoded_hex": "cddc675c",
+          "decoded": 14
+        }
+      ],
+      "fallthrough_pc": 1407
+    },
+    {
+      "opcode_pc": 1416,
+      "operand_pc": 1417,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 1417,
+          "width": 4,
+          "encoded_hex": "6d8078cf",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 1421
+    },
+    {
+      "opcode_pc": 1421,
+      "operand_pc": 1422,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1422,
+          "width": 4,
+          "encoded_hex": "63626649",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1426
+    },
+    {
+      "opcode_pc": 1426,
+      "operand_pc": 1427,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1427
+    },
+    {
+      "opcode_pc": 1427,
+      "operand_pc": 1428,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1428
+    },
+    {
+      "opcode_pc": 1428,
+      "operand_pc": 1429,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        49
+      ],
+      "reader_events": [
+        {
+          "pc": 1429,
+          "width": 4,
+          "encoded_hex": "7ecf677e",
+          "decoded": 49
+        }
+      ],
+      "fallthrough_pc": 1433
+    },
+    {
+      "opcode_pc": 1440,
+      "operand_pc": 1441,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1441,
+          "width": 4,
+          "encoded_hex": "ef420167",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1445
+    },
+    {
+      "opcode_pc": 1445,
+      "operand_pc": 1446,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1446,
+          "width": 2,
+          "encoded_hex": "ef77",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1448
+    },
+    {
+      "opcode_pc": 1448,
+      "operand_pc": 1449,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1449,
+          "width": 2,
+          "encoded_hex": "103e",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1451
+    },
+    {
+      "opcode_pc": 1451,
+      "operand_pc": 1452,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1452,
+          "width": 4,
+          "encoded_hex": "bcd3064a",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1456
+    },
+    {
+      "opcode_pc": 1456,
+      "operand_pc": 1457,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1457
+    },
+    {
+      "opcode_pc": 1457,
+      "operand_pc": 1458,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        29
+      ],
+      "reader_events": [
+        {
+          "pc": 1458,
+          "width": 4,
+          "encoded_hex": "82f2a560",
+          "decoded": 29
+        }
+      ],
+      "fallthrough_pc": 1462
+    },
+    {
+      "opcode_pc": 1464,
+      "operand_pc": 1465,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        59
+      ],
+      "reader_events": [
+        {
+          "pc": 1465,
+          "width": 4,
+          "encoded_hex": "a3855367",
+          "decoded": 59
+        }
+      ],
+      "fallthrough_pc": 1469
+    },
+    {
+      "opcode_pc": 1488,
+      "operand_pc": 1489,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1489,
+          "width": 4,
+          "encoded_hex": "b5657a4e",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1493
+    },
+    {
+      "opcode_pc": 1493,
+      "operand_pc": 1494,
+      "encoded_opcode": 119,
+      "logical_opcode": 44,
+      "operation": "NOT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1494
+    },
+    {
+      "opcode_pc": 1494,
+      "operand_pc": 1495,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1495,
+          "width": 2,
+          "encoded_hex": "d057",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1497
+    },
+    {
+      "opcode_pc": 1497,
+      "operand_pc": 1498,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        4,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 1498,
+          "width": 2,
+          "encoded_hex": "d13e",
+          "decoded": 4
+        },
+        {
+          "pc": 1500,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 1501
+    },
+    {
+      "opcode_pc": 1501,
+      "operand_pc": 1502,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1502
+    },
+    {
+      "opcode_pc": 1502,
+      "operand_pc": 1503,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        5,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 1503,
+          "width": 2,
+          "encoded_hex": "a947",
+          "decoded": 5
+        },
+        {
+          "pc": 1505,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 1506
+    },
+    {
+      "opcode_pc": 1506,
+      "operand_pc": 1507,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        6
+      ],
+      "reader_events": [
+        {
+          "pc": 1507,
+          "width": 4,
+          "encoded_hex": "7e4cab76",
+          "decoded": 6
+        }
+      ],
+      "fallthrough_pc": 1511
+    },
+    {
+      "opcode_pc": 1512,
+      "operand_pc": 1513,
+      "encoded_opcode": 30,
+      "logical_opcode": 5,
+      "operation": "STORE_REG",
+      "operands": [
+        5
+      ],
+      "reader_events": [
+        {
+          "pc": 1513,
+          "width": 2,
+          "encoded_hex": "d36b",
+          "decoded": 5
+        }
+      ],
+      "fallthrough_pc": 1515
+    },
+    {
+      "opcode_pc": 1515,
+      "operand_pc": 1516,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        21
+      ],
+      "reader_events": [
+        {
+          "pc": 1516,
+          "width": 4,
+          "encoded_hex": "4cdaba84",
+          "decoded": 21
+        }
+      ],
+      "fallthrough_pc": 1520
+    },
+    {
+      "opcode_pc": 1536,
+      "operand_pc": 1537,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1537,
+          "width": 4,
+          "encoded_hex": "cccb5e42",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1541
+    },
+    {
+      "opcode_pc": 1541,
+      "operand_pc": 1542,
+      "encoded_opcode": 119,
+      "logical_opcode": 44,
+      "operation": "NOT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1542
+    },
+    {
+      "opcode_pc": 1542,
+      "operand_pc": 1543,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1543
+    },
+    {
+      "opcode_pc": 1543,
+      "operand_pc": 1544,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        24
+      ],
+      "reader_events": [
+        {
+          "pc": 1544,
+          "width": 4,
+          "encoded_hex": "47aece34",
+          "decoded": 24
+        }
+      ],
+      "fallthrough_pc": 1548
+    },
+    {
+      "opcode_pc": 1560,
+      "operand_pc": 1561,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1561,
+          "width": 2,
+          "encoded_hex": "d23d",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1563
+    },
+    {
+      "opcode_pc": 1563,
+      "operand_pc": 1564,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1564,
+          "width": 2,
+          "encoded_hex": "237a",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1566
+    },
+    {
+      "opcode_pc": 1566,
+      "operand_pc": 1567,
+      "encoded_opcode": 3,
+      "logical_opcode": 21,
+      "operation": "NEQ",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1567
+    },
+    {
+      "opcode_pc": 1567,
+      "operand_pc": 1568,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1568
+    },
+    {
+      "opcode_pc": 1568,
+      "operand_pc": 1569,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        70
+      ],
+      "reader_events": [
+        {
+          "pc": 1569,
+          "width": 4,
+          "encoded_hex": "0070fff0",
+          "decoded": 70
+        }
+      ],
+      "fallthrough_pc": 1573
+    },
+    {
+      "opcode_pc": 1584,
+      "operand_pc": 1585,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1585,
+          "width": 4,
+          "encoded_hex": "9c17284f",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1589
+    },
+    {
+      "opcode_pc": 1589,
+      "operand_pc": 1590,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        11
+      ],
+      "reader_events": [
+        {
+          "pc": 1590,
+          "width": 4,
+          "encoded_hex": "e8aa8b43",
+          "decoded": 11
+        }
+      ],
+      "fallthrough_pc": 1594
+    },
+    {
+      "opcode_pc": 1594,
+      "operand_pc": 1595,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1595
+    },
+    {
+      "opcode_pc": 1595,
+      "operand_pc": 1596,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1596
+    },
+    {
+      "opcode_pc": 1596,
+      "operand_pc": 1597,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        33
+      ],
+      "reader_events": [
+        {
+          "pc": 1597,
+          "width": 4,
+          "encoded_hex": "b5ba7577",
+          "decoded": 33
+        }
+      ],
+      "fallthrough_pc": 1601
+    },
+    {
+      "opcode_pc": 1608,
+      "operand_pc": 1609,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1609,
+          "width": 4,
+          "encoded_hex": "e4f5ebd6",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1613
+    },
+    {
+      "opcode_pc": 1613,
+      "operand_pc": 1614,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 1614,
+          "width": 4,
+          "encoded_hex": "1ddeb853",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 1618
+    },
+    {
+      "opcode_pc": 1618,
+      "operand_pc": 1619,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1619
+    },
+    {
+      "opcode_pc": 1619,
+      "operand_pc": 1620,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1620
+    },
+    {
+      "opcode_pc": 1620,
+      "operand_pc": 1621,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        25
+      ],
+      "reader_events": [
+        {
+          "pc": 1621,
+          "width": 4,
+          "encoded_hex": "b52d3545",
+          "decoded": 25
+        }
+      ],
+      "fallthrough_pc": 1625
+    },
+    {
+      "opcode_pc": 1632,
+      "operand_pc": 1633,
+      "encoded_opcode": 103,
+      "logical_opcode": 4,
+      "operation": "LOAD_REG",
+      "operands": [
+        14
+      ],
+      "reader_events": [
+        {
+          "pc": 1633,
+          "width": 2,
+          "encoded_hex": "644e",
+          "decoded": 14
+        }
+      ],
+      "fallthrough_pc": 1635
+    },
+    {
+      "opcode_pc": 1635,
+      "operand_pc": 1636,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1636,
+          "width": 4,
+          "encoded_hex": "5ecb2d0c",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1640
+    },
+    {
+      "opcode_pc": 1640,
+      "operand_pc": 1641,
+      "encoded_opcode": 221,
+      "logical_opcode": 8,
+      "operation": "ADD",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1641
+    },
+    {
+      "opcode_pc": 1641,
+      "operand_pc": 1642,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1642
+    },
+    {
+      "opcode_pc": 1642,
+      "operand_pc": 1643,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        37
+      ],
+      "reader_events": [
+        {
+          "pc": 1643,
+          "width": 4,
+          "encoded_hex": "22c9b933",
+          "decoded": 37
+        }
+      ],
+      "fallthrough_pc": 1647
+    },
+    {
+      "opcode_pc": 1656,
+      "operand_pc": 1657,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1657,
+          "width": 4,
+          "encoded_hex": "2829984c",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1661
+    },
+    {
+      "opcode_pc": 1661,
+      "operand_pc": 1662,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        8
+      ],
+      "reader_events": [
+        {
+          "pc": 1662,
+          "width": 4,
+          "encoded_hex": "f0ba8e30",
+          "decoded": 8
+        }
+      ],
+      "fallthrough_pc": 1666
+    },
+    {
+      "opcode_pc": 1666,
+      "operand_pc": 1667,
+      "encoded_opcode": 227,
+      "logical_opcode": 22,
+      "operation": "SLT",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1667
+    },
+    {
+      "opcode_pc": 1667,
+      "operand_pc": 1668,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1668
+    },
+    {
+      "opcode_pc": 1668,
+      "operand_pc": 1669,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        67
+      ],
+      "reader_events": [
+        {
+          "pc": 1669,
+          "width": 4,
+          "encoded_hex": "76771437",
+          "decoded": 67
+        }
+      ],
+      "fallthrough_pc": 1673
+    },
+    {
+      "opcode_pc": 1680,
+      "operand_pc": 1681,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        9
+      ],
+      "reader_events": [
+        {
+          "pc": 1681,
+          "width": 4,
+          "encoded_hex": "008fd1c5",
+          "decoded": 9
+        }
+      ],
+      "fallthrough_pc": 1685
+    },
+    {
+      "opcode_pc": 1685,
+      "operand_pc": 1686,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        12
+      ],
+      "reader_events": [
+        {
+          "pc": 1686,
+          "width": 4,
+          "encoded_hex": "2401e5fe",
+          "decoded": 12
+        }
+      ],
+      "fallthrough_pc": 1690
+    },
+    {
+      "opcode_pc": 1690,
+      "operand_pc": 1691,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1691
+    },
+    {
+      "opcode_pc": 1691,
+      "operand_pc": 1692,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1692
+    },
+    {
+      "opcode_pc": 1692,
+      "operand_pc": 1693,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        32
+      ],
+      "reader_events": [
+        {
+          "pc": 1693,
+          "width": 4,
+          "encoded_hex": "8f479c1d",
+          "decoded": 32
+        }
+      ],
+      "fallthrough_pc": 1697
+    },
+    {
+      "opcode_pc": 1704,
+      "operand_pc": 1705,
+      "encoded_opcode": 54,
+      "logical_opcode": 32,
+      "operation": "CALL",
+      "operands": [
+        3,
+        0
+      ],
+      "reader_events": [
+        {
+          "pc": 1705,
+          "width": 2,
+          "encoded_hex": "84a0",
+          "decoded": 3
+        },
+        {
+          "pc": 1707,
+          "width": 1,
+          "encoded_hex": "ad",
+          "decoded": 0
+        }
+      ],
+      "fallthrough_pc": 1708
+    },
+    {
+      "opcode_pc": 1708,
+      "operand_pc": 1709,
+      "encoded_opcode": 64,
+      "logical_opcode": 27,
+      "operation": "JZ",
+      "operands": [
+        45
+      ],
+      "reader_events": [
+        {
+          "pc": 1709,
+          "width": 4,
+          "encoded_hex": "c0af603a",
+          "decoded": 45
+        }
+      ],
+      "fallthrough_pc": 1713
+    },
+    {
+      "opcode_pc": 1713,
+      "operand_pc": 1714,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        4
+      ],
+      "reader_events": [
+        {
+          "pc": 1714,
+          "width": 4,
+          "encoded_hex": "20735ec5",
+          "decoded": 4
+        }
+      ],
+      "fallthrough_pc": 1718
+    },
+    {
+      "opcode_pc": 1728,
+      "operand_pc": 1729,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        10
+      ],
+      "reader_events": [
+        {
+          "pc": 1729,
+          "width": 4,
+          "encoded_hex": "8dd8d737",
+          "decoded": 10
+        }
+      ],
+      "fallthrough_pc": 1733
+    },
+    {
+      "opcode_pc": 1733,
+      "operand_pc": 1734,
+      "encoded_opcode": 91,
+      "logical_opcode": 1,
+      "operation": "LOAD_CONST",
+      "operands": [
+        7
+      ],
+      "reader_events": [
+        {
+          "pc": 1734,
+          "width": 4,
+          "encoded_hex": "6d661f1f",
+          "decoded": 7
+        }
+      ],
+      "fallthrough_pc": 1738
+    },
+    {
+      "opcode_pc": 1738,
+      "operand_pc": 1739,
+      "encoded_opcode": 44,
+      "logical_opcode": 41,
+      "operation": "XOR",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1739
+    },
+    {
+      "opcode_pc": 1739,
+      "operand_pc": 1740,
+      "encoded_opcode": 156,
+      "logical_opcode": 31,
+      "operation": "DROP",
+      "operands": [],
+      "reader_events": [],
+      "fallthrough_pc": 1740
+    },
+    {
+      "opcode_pc": 1740,
+      "operand_pc": 1741,
+      "encoded_opcode": 144,
+      "logical_opcode": 26,
+      "operation": "JUMP",
+      "operands": [
+        63
+      ],
+      "reader_events": [
+        {
+          "pc": 1741,
+          "width": 4,
+          "encoded_hex": "7ac05007",
+          "decoded": 63
+        }
+      ],
+      "fallthrough_pc": 1745
+    }
+  ],
+  "edges": [
+    {
+      "from": 0,
+      "to": 5,
+      "deferred": false
+    },
+    {
+      "from": 5,
+      "to": 10,
+      "deferred": false
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "deferred": false
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "deferred": false
+    },
+    {
+      "from": 14,
+      "to": 18,
+      "deferred": false
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "deferred": false
+    },
+    {
+      "from": 19,
+      "to": 72,
+      "deferred": true
+    },
+    {
+      "from": 72,
+      "to": 77,
+      "deferred": false
+    },
+    {
+      "from": 77,
+      "to": 80,
+      "deferred": false
+    },
+    {
+      "from": 80,
+      "to": 83,
+      "deferred": false
+    },
+    {
+      "from": 83,
+      "to": 88,
+      "deferred": false
+    },
+    {
+      "from": 88,
+      "to": 89,
+      "deferred": false
+    },
+    {
+      "from": 89,
+      "to": 960,
+      "deferred": true
+    },
+    {
+      "from": 960,
+      "to": 963,
+      "deferred": false
+    },
+    {
+      "from": 963,
+      "to": 967,
+      "deferred": false
+    },
+    {
+      "from": 967,
+      "to": 968,
+      "deferred": false
+    },
+    {
+      "from": 968,
+      "to": 973,
+      "deferred": false
+    },
+    {
+      "from": 973,
+      "to": 977,
+      "deferred": false
+    },
+    {
+      "from": 977,
+      "to": 978,
+      "deferred": false
+    },
+    {
+      "from": 978,
+      "to": 1704,
+      "deferred": true
+    },
+    {
+      "from": 1704,
+      "to": 1708,
+      "deferred": false
+    },
+    {
+      "from": 1708,
+      "to": 1632,
+      "deferred": true
+    },
+    {
+      "from": 1708,
+      "to": 1713,
+      "deferred": true
+    },
+    {
+      "from": 1713,
+      "to": 1464,
+      "deferred": true
+    },
+    {
+      "from": 1464,
+      "to": 48,
+      "deferred": true
+    },
+    {
+      "from": 48,
+      "to": 53,
+      "deferred": false
+    },
+    {
+      "from": 53,
+      "to": 56,
+      "deferred": false
+    },
+    {
+      "from": 56,
+      "to": 59,
+      "deferred": false
+    },
+    {
+      "from": 59,
+      "to": 64,
+      "deferred": false
+    },
+    {
+      "from": 64,
+      "to": 65,
+      "deferred": false
+    },
+    {
+      "from": 65,
+      "to": 1056,
+      "deferred": true
+    },
+    {
+      "from": 1056,
+      "to": 1059,
+      "deferred": false
+    },
+    {
+      "from": 1059,
+      "to": 1080,
+      "deferred": true
+    },
+    {
+      "from": 1080,
+      "to": 1085,
+      "deferred": false
+    },
+    {
+      "from": 1085,
+      "to": 1090,
+      "deferred": false
+    },
+    {
+      "from": 1090,
+      "to": 1091,
+      "deferred": false
+    },
+    {
+      "from": 1091,
+      "to": 1092,
+      "deferred": false
+    },
+    {
+      "from": 1092,
+      "to": 1200,
+      "deferred": true
+    },
+    {
+      "from": 1200,
+      "to": 1205,
+      "deferred": false
+    },
+    {
+      "from": 1205,
+      "to": 1210,
+      "deferred": false
+    },
+    {
+      "from": 1210,
+      "to": 1211,
+      "deferred": false
+    },
+    {
+      "from": 1211,
+      "to": 1212,
+      "deferred": false
+    },
+    {
+      "from": 1212,
+      "to": 624,
+      "deferred": true
+    },
+    {
+      "from": 624,
+      "to": 629,
+      "deferred": false
+    },
+    {
+      "from": 629,
+      "to": 632,
+      "deferred": false
+    },
+    {
+      "from": 632,
+      "to": 635,
+      "deferred": false
+    },
+    {
+      "from": 635,
+      "to": 640,
+      "deferred": false
+    },
+    {
+      "from": 640,
+      "to": 641,
+      "deferred": false
+    },
+    {
+      "from": 641,
+      "to": 936,
+      "deferred": true
+    },
+    {
+      "from": 936,
+      "to": 939,
+      "deferred": false
+    },
+    {
+      "from": 939,
+      "to": 264,
+      "deferred": true
+    },
+    {
+      "from": 264,
+      "to": 269,
+      "deferred": false
+    },
+    {
+      "from": 269,
+      "to": 274,
+      "deferred": false
+    },
+    {
+      "from": 274,
+      "to": 275,
+      "deferred": false
+    },
+    {
+      "from": 275,
+      "to": 276,
+      "deferred": false
+    },
+    {
+      "from": 276,
+      "to": 1152,
+      "deferred": true
+    },
+    {
+      "from": 1152,
+      "to": 1157,
+      "deferred": false
+    },
+    {
+      "from": 1157,
+      "to": 1162,
+      "deferred": false
+    },
+    {
+      "from": 1162,
+      "to": 1163,
+      "deferred": false
+    },
+    {
+      "from": 1163,
+      "to": 1164,
+      "deferred": false
+    },
+    {
+      "from": 1164,
+      "to": 744,
+      "deferred": true
+    },
+    {
+      "from": 744,
+      "to": 747,
+      "deferred": false
+    },
+    {
+      "from": 747,
+      "to": 752,
+      "deferred": false
+    },
+    {
+      "from": 752,
+      "to": 753,
+      "deferred": false
+    },
+    {
+      "from": 753,
+      "to": 754,
+      "deferred": false
+    },
+    {
+      "from": 754,
+      "to": 1440,
+      "deferred": true
+    },
+    {
+      "from": 1440,
+      "to": 1445,
+      "deferred": false
+    },
+    {
+      "from": 1445,
+      "to": 1448,
+      "deferred": false
+    },
+    {
+      "from": 1448,
+      "to": 1451,
+      "deferred": false
+    },
+    {
+      "from": 1451,
+      "to": 1456,
+      "deferred": false
+    },
+    {
+      "from": 1456,
+      "to": 1457,
+      "deferred": false
+    },
+    {
+      "from": 1457,
+      "to": 1104,
+      "deferred": true
+    },
+    {
+      "from": 1104,
+      "to": 1107,
+      "deferred": false
+    },
+    {
+      "from": 1107,
+      "to": 192,
+      "deferred": true
+    },
+    {
+      "from": 192,
+      "to": 195,
+      "deferred": false
+    },
+    {
+      "from": 195,
+      "to": 200,
+      "deferred": false
+    },
+    {
+      "from": 200,
+      "to": 201,
+      "deferred": false
+    },
+    {
+      "from": 201,
+      "to": 202,
+      "deferred": false
+    },
+    {
+      "from": 202,
+      "to": 120,
+      "deferred": true
+    },
+    {
+      "from": 120,
+      "to": 123,
+      "deferred": false
+    },
+    {
+      "from": 123,
+      "to": 128,
+      "deferred": false
+    },
+    {
+      "from": 128,
+      "to": 129,
+      "deferred": false
+    },
+    {
+      "from": 129,
+      "to": 130,
+      "deferred": false
+    },
+    {
+      "from": 130,
+      "to": 288,
+      "deferred": true
+    },
+    {
+      "from": 288,
+      "to": 293,
+      "deferred": false
+    },
+    {
+      "from": 293,
+      "to": 298,
+      "deferred": false
+    },
+    {
+      "from": 298,
+      "to": 299,
+      "deferred": false
+    },
+    {
+      "from": 299,
+      "to": 300,
+      "deferred": false
+    },
+    {
+      "from": 300,
+      "to": 360,
+      "deferred": true
+    },
+    {
+      "from": 360,
+      "to": 363,
+      "deferred": false
+    },
+    {
+      "from": 363,
+      "to": 366,
+      "deferred": false
+    },
+    {
+      "from": 366,
+      "to": 367,
+      "deferred": false
+    },
+    {
+      "from": 367,
+      "to": 368,
+      "deferred": false
+    },
+    {
+      "from": 368,
+      "to": 696,
+      "deferred": true
+    },
+    {
+      "from": 696,
+      "to": 701,
+      "deferred": false
+    },
+    {
+      "from": 701,
+      "to": 704,
+      "deferred": false
+    },
+    {
+      "from": 704,
+      "to": 707,
+      "deferred": false
+    },
+    {
+      "from": 707,
+      "to": 712,
+      "deferred": false
+    },
+    {
+      "from": 712,
+      "to": 713,
+      "deferred": false
+    },
+    {
+      "from": 713,
+      "to": 792,
+      "deferred": true
+    },
+    {
+      "from": 792,
+      "to": 795,
+      "deferred": false
+    },
+    {
+      "from": 795,
+      "to": 216,
+      "deferred": true
+    },
+    {
+      "from": 216,
+      "to": 221,
+      "deferred": false
+    },
+    {
+      "from": 221,
+      "to": 226,
+      "deferred": false
+    },
+    {
+      "from": 226,
+      "to": 227,
+      "deferred": false
+    },
+    {
+      "from": 227,
+      "to": 228,
+      "deferred": false
+    },
+    {
+      "from": 228,
+      "to": 576,
+      "deferred": true
+    },
+    {
+      "from": 576,
+      "to": 581,
+      "deferred": false
+    },
+    {
+      "from": 581,
+      "to": 586,
+      "deferred": false
+    },
+    {
+      "from": 586,
+      "to": 587,
+      "deferred": false
+    },
+    {
+      "from": 587,
+      "to": 588,
+      "deferred": false
+    },
+    {
+      "from": 588,
+      "to": 1296,
+      "deferred": true
+    },
+    {
+      "from": 1296,
+      "to": 1301,
+      "deferred": false
+    },
+    {
+      "from": 1301,
+      "to": 1306,
+      "deferred": false
+    },
+    {
+      "from": 1306,
+      "to": 1307,
+      "deferred": false
+    },
+    {
+      "from": 1307,
+      "to": 1308,
+      "deferred": false
+    },
+    {
+      "from": 1308,
+      "to": 1368,
+      "deferred": true
+    },
+    {
+      "from": 1368,
+      "to": 1371,
+      "deferred": false
+    },
+    {
+      "from": 1371,
+      "to": 1376,
+      "deferred": false
+    },
+    {
+      "from": 1376,
+      "to": 1377,
+      "deferred": false
+    },
+    {
+      "from": 1377,
+      "to": 1378,
+      "deferred": false
+    },
+    {
+      "from": 1378,
+      "to": 1381,
+      "deferred": false
+    },
+    {
+      "from": 1381,
+      "to": 1386,
+      "deferred": false
+    },
+    {
+      "from": 1386,
+      "to": 1387,
+      "deferred": false
+    },
+    {
+      "from": 1387,
+      "to": 480,
+      "deferred": true
+    },
+    {
+      "from": 480,
+      "to": 384,
+      "deferred": true
+    },
+    {
+      "from": 480,
+      "to": 485,
+      "deferred": true
+    },
+    {
+      "from": 485,
+      "to": 432,
+      "deferred": true
+    },
+    {
+      "from": 432,
+      "to": 528,
+      "deferred": true
+    },
+    {
+      "from": 528,
+      "to": 531,
+      "deferred": false
+    },
+    {
+      "from": 531,
+      "to": 536,
+      "deferred": false
+    },
+    {
+      "from": 536,
+      "to": 537,
+      "deferred": false
+    },
+    {
+      "from": 537,
+      "to": 538,
+      "deferred": false
+    },
+    {
+      "from": 538,
+      "to": 1488,
+      "deferred": true
+    },
+    {
+      "from": 1488,
+      "to": 1493,
+      "deferred": false
+    },
+    {
+      "from": 1493,
+      "to": 1494,
+      "deferred": false
+    },
+    {
+      "from": 1494,
+      "to": 1497,
+      "deferred": false
+    },
+    {
+      "from": 1497,
+      "to": 1501,
+      "deferred": false
+    },
+    {
+      "from": 1501,
+      "to": 1502,
+      "deferred": false
+    },
+    {
+      "from": 1502,
+      "to": 1506,
+      "deferred": false
+    },
+    {
+      "from": 1506,
+      "to": 552,
+      "deferred": true
+    },
+    {
+      "from": 552,
+      "to": 557,
+      "deferred": false
+    },
+    {
+      "from": 557,
+      "to": 558,
+      "deferred": false
+    },
+    {
+      "from": 558,
+      "to": 562,
+      "deferred": false
+    },
+    {
+      "from": 562,
+      "to": 563,
+      "deferred": false
+    },
+    {
+      "from": 563,
+      "to": 567,
+      "deferred": false
+    },
+    {
+      "from": 567,
+      "to": 568,
+      "deferred": false
+    },
+    {
+      "from": 568,
+      "to": 1128,
+      "deferred": true
+    },
+    {
+      "from": 1128,
+      "to": 1272,
+      "deferred": true
+    },
+    {
+      "from": 1272,
+      "to": 1277,
+      "deferred": false
+    },
+    {
+      "from": 1277,
+      "to": 1282,
+      "deferred": false
+    },
+    {
+      "from": 1282,
+      "to": 1283,
+      "deferred": false
+    },
+    {
+      "from": 1283,
+      "to": 1284,
+      "deferred": false
+    },
+    {
+      "from": 1284,
+      "to": 1344,
+      "deferred": true
+    },
+    {
+      "from": 1344,
+      "to": 1349,
+      "deferred": false
+    },
+    {
+      "from": 1349,
+      "to": 1352,
+      "deferred": false
+    },
+    {
+      "from": 1352,
+      "to": 1355,
+      "deferred": false
+    },
+    {
+      "from": 1355,
+      "to": 1360,
+      "deferred": false
+    },
+    {
+      "from": 1360,
+      "to": 1361,
+      "deferred": false
+    },
+    {
+      "from": 1361,
+      "to": 768,
+      "deferred": true
+    },
+    {
+      "from": 768,
+      "to": 771,
+      "deferred": false
+    },
+    {
+      "from": 771,
+      "to": 864,
+      "deferred": true
+    },
+    {
+      "from": 864,
+      "to": 869,
+      "deferred": false
+    },
+    {
+      "from": 869,
+      "to": 874,
+      "deferred": false
+    },
+    {
+      "from": 874,
+      "to": 875,
+      "deferred": false
+    },
+    {
+      "from": 875,
+      "to": 876,
+      "deferred": false
+    },
+    {
+      "from": 876,
+      "to": 1536,
+      "deferred": true
+    },
+    {
+      "from": 1536,
+      "to": 1541,
+      "deferred": false
+    },
+    {
+      "from": 1541,
+      "to": 1542,
+      "deferred": false
+    },
+    {
+      "from": 1542,
+      "to": 1543,
+      "deferred": false
+    },
+    {
+      "from": 1543,
+      "to": 312,
+      "deferred": true
+    },
+    {
+      "from": 312,
+      "to": 315,
+      "deferred": false
+    },
+    {
+      "from": 315,
+      "to": 318,
+      "deferred": false
+    },
+    {
+      "from": 318,
+      "to": 319,
+      "deferred": false
+    },
+    {
+      "from": 319,
+      "to": 320,
+      "deferred": false
+    },
+    {
+      "from": 320,
+      "to": 1560,
+      "deferred": true
+    },
+    {
+      "from": 1560,
+      "to": 1563,
+      "deferred": false
+    },
+    {
+      "from": 1563,
+      "to": 1566,
+      "deferred": false
+    },
+    {
+      "from": 1566,
+      "to": 1567,
+      "deferred": false
+    },
+    {
+      "from": 1567,
+      "to": 1568,
+      "deferred": false
+    },
+    {
+      "from": 1568,
+      "to": 1320,
+      "deferred": true
+    },
+    {
+      "from": 1320,
+      "to": 1325,
+      "deferred": false
+    },
+    {
+      "from": 1325,
+      "to": 1330,
+      "deferred": false
+    },
+    {
+      "from": 1330,
+      "to": 1331,
+      "deferred": false
+    },
+    {
+      "from": 1331,
+      "to": 1332,
+      "deferred": false
+    },
+    {
+      "from": 1332,
+      "to": 240,
+      "deferred": true
+    },
+    {
+      "from": 240,
+      "to": 245,
+      "deferred": false
+    },
+    {
+      "from": 245,
+      "to": 250,
+      "deferred": false
+    },
+    {
+      "from": 250,
+      "to": 251,
+      "deferred": false
+    },
+    {
+      "from": 251,
+      "to": 252,
+      "deferred": false
+    },
+    {
+      "from": 252,
+      "to": 600,
+      "deferred": true
+    },
+    {
+      "from": 600,
+      "to": 605,
+      "deferred": false
+    },
+    {
+      "from": 605,
+      "to": 610,
+      "deferred": false
+    },
+    {
+      "from": 610,
+      "to": 611,
+      "deferred": false
+    },
+    {
+      "from": 611,
+      "to": 612,
+      "deferred": false
+    },
+    {
+      "from": 612,
+      "to": 408,
+      "deferred": true
+    },
+    {
+      "from": 408,
+      "to": 413,
+      "deferred": false
+    },
+    {
+      "from": 413,
+      "to": 414,
+      "deferred": false
+    },
+    {
+      "from": 414,
+      "to": 415,
+      "deferred": false
+    },
+    {
+      "from": 415,
+      "to": 1224,
+      "deferred": true
+    },
+    {
+      "from": 1224,
+      "to": 1229,
+      "deferred": false
+    },
+    {
+      "from": 1229,
+      "to": 1230,
+      "deferred": false
+    },
+    {
+      "from": 1230,
+      "to": 1231,
+      "deferred": false
+    },
+    {
+      "from": 1231,
+      "to": 1584,
+      "deferred": true
+    },
+    {
+      "from": 1584,
+      "to": 1589,
+      "deferred": false
+    },
+    {
+      "from": 1589,
+      "to": 1594,
+      "deferred": false
+    },
+    {
+      "from": 1594,
+      "to": 1595,
+      "deferred": false
+    },
+    {
+      "from": 1595,
+      "to": 1596,
+      "deferred": false
+    },
+    {
+      "from": 1596,
+      "to": 1176,
+      "deferred": true
+    },
+    {
+      "from": 1176,
+      "to": 1179,
+      "deferred": false
+    },
+    {
+      "from": 1179,
+      "to": 1182,
+      "deferred": false
+    },
+    {
+      "from": 1182,
+      "to": 1183,
+      "deferred": false
+    },
+    {
+      "from": 1183,
+      "to": 1184,
+      "deferred": false
+    },
+    {
+      "from": 1184,
+      "to": 840,
+      "deferred": true
+    },
+    {
+      "from": 840,
+      "to": 845,
+      "deferred": false
+    },
+    {
+      "from": 845,
+      "to": 848,
+      "deferred": false
+    },
+    {
+      "from": 848,
+      "to": 851,
+      "deferred": false
+    },
+    {
+      "from": 851,
+      "to": 856,
+      "deferred": false
+    },
+    {
+      "from": 856,
+      "to": 857,
+      "deferred": false
+    },
+    {
+      "from": 857,
+      "to": 984,
+      "deferred": true
+    },
+    {
+      "from": 984,
+      "to": 987,
+      "deferred": false
+    },
+    {
+      "from": 987,
+      "to": 504,
+      "deferred": true
+    },
+    {
+      "from": 504,
+      "to": 509,
+      "deferred": false
+    },
+    {
+      "from": 509,
+      "to": 514,
+      "deferred": false
+    },
+    {
+      "from": 514,
+      "to": 515,
+      "deferred": false
+    },
+    {
+      "from": 515,
+      "to": 516,
+      "deferred": false
+    },
+    {
+      "from": 516,
+      "to": 1392,
+      "deferred": true
+    },
+    {
+      "from": 1392,
+      "to": 1395,
+      "deferred": false
+    },
+    {
+      "from": 1395,
+      "to": 1400,
+      "deferred": false
+    },
+    {
+      "from": 1400,
+      "to": 1401,
+      "deferred": false
+    },
+    {
+      "from": 1401,
+      "to": 1402,
+      "deferred": false
+    },
+    {
+      "from": 1402,
+      "to": 336,
+      "deferred": true
+    },
+    {
+      "from": 336,
+      "to": 341,
+      "deferred": false
+    },
+    {
+      "from": 341,
+      "to": 344,
+      "deferred": false
+    },
+    {
+      "from": 344,
+      "to": 347,
+      "deferred": false
+    },
+    {
+      "from": 347,
+      "to": 352,
+      "deferred": false
+    },
+    {
+      "from": 352,
+      "to": 353,
+      "deferred": false
+    },
+    {
+      "from": 353,
+      "to": 1008,
+      "deferred": true
+    },
+    {
+      "from": 1008,
+      "to": 1011,
+      "deferred": false
+    },
+    {
+      "from": 1011,
+      "to": 1704,
+      "deferred": true
+    },
+    {
+      "from": 384,
+      "to": 387,
+      "deferred": false
+    },
+    {
+      "from": 387,
+      "to": 392,
+      "deferred": false
+    },
+    {
+      "from": 392,
+      "to": 393,
+      "deferred": false
+    },
+    {
+      "from": 393,
+      "to": 394,
+      "deferred": false
+    },
+    {
+      "from": 394,
+      "to": 1488,
+      "deferred": true
+    },
+    {
+      "from": 1632,
+      "to": 1635,
+      "deferred": false
+    },
+    {
+      "from": 1635,
+      "to": 1640,
+      "deferred": false
+    },
+    {
+      "from": 1640,
+      "to": 1641,
+      "deferred": false
+    },
+    {
+      "from": 1641,
+      "to": 1642,
+      "deferred": false
+    },
+    {
+      "from": 1642,
+      "to": 1416,
+      "deferred": true
+    },
+    {
+      "from": 1416,
+      "to": 1421,
+      "deferred": false
+    },
+    {
+      "from": 1421,
+      "to": 1426,
+      "deferred": false
+    },
+    {
+      "from": 1426,
+      "to": 1427,
+      "deferred": false
+    },
+    {
+      "from": 1427,
+      "to": 1428,
+      "deferred": false
+    },
+    {
+      "from": 1428,
+      "to": 456,
+      "deferred": true
+    },
+    {
+      "from": 456,
+      "to": 461,
+      "deferred": false
+    },
+    {
+      "from": 461,
+      "to": 466,
+      "deferred": false
+    },
+    {
+      "from": 466,
+      "to": 467,
+      "deferred": false
+    },
+    {
+      "from": 467,
+      "to": 468,
+      "deferred": false
+    },
+    {
+      "from": 468,
+      "to": 1608,
+      "deferred": true
+    },
+    {
+      "from": 1608,
+      "to": 1613,
+      "deferred": false
+    },
+    {
+      "from": 1613,
+      "to": 1618,
+      "deferred": false
+    },
+    {
+      "from": 1618,
+      "to": 1619,
+      "deferred": false
+    },
+    {
+      "from": 1619,
+      "to": 1620,
+      "deferred": false
+    },
+    {
+      "from": 1620,
+      "to": 168,
+      "deferred": true
+    },
+    {
+      "from": 168,
+      "to": 171,
+      "deferred": false
+    },
+    {
+      "from": 171,
+      "to": 176,
+      "deferred": false
+    },
+    {
+      "from": 176,
+      "to": 177,
+      "deferred": false
+    },
+    {
+      "from": 177,
+      "to": 178,
+      "deferred": false
+    },
+    {
+      "from": 178,
+      "to": 1728,
+      "deferred": true
+    },
+    {
+      "from": 1728,
+      "to": 1733,
+      "deferred": false
+    },
+    {
+      "from": 1733,
+      "to": 1738,
+      "deferred": false
+    },
+    {
+      "from": 1738,
+      "to": 1739,
+      "deferred": false
+    },
+    {
+      "from": 1739,
+      "to": 1740,
+      "deferred": false
+    },
+    {
+      "from": 1740,
+      "to": 816,
+      "deferred": true
+    },
+    {
+      "from": 816,
+      "to": 821,
+      "deferred": false
+    },
+    {
+      "from": 821,
+      "to": 822,
+      "deferred": false
+    },
+    {
+      "from": 822,
+      "to": 823,
+      "deferred": false
+    },
+    {
+      "from": 823,
+      "to": 1032,
+      "deferred": true
+    },
+    {
+      "from": 1032,
+      "to": 1037,
+      "deferred": false
+    },
+    {
+      "from": 1037,
+      "to": 1040,
+      "deferred": false
+    },
+    {
+      "from": 1040,
+      "to": 1043,
+      "deferred": false
+    },
+    {
+      "from": 1043,
+      "to": 1048,
+      "deferred": false
+    },
+    {
+      "from": 1048,
+      "to": 1049,
+      "deferred": false
+    },
+    {
+      "from": 1049,
+      "to": 1512,
+      "deferred": true
+    },
+    {
+      "from": 1512,
+      "to": 1515,
+      "deferred": false
+    },
+    {
+      "from": 1515,
+      "to": 912,
+      "deferred": true
+    },
+    {
+      "from": 912,
+      "to": 915,
+      "deferred": false
+    },
+    {
+      "from": 915,
+      "to": 918,
+      "deferred": false
+    },
+    {
+      "from": 918,
+      "to": 919,
+      "deferred": false
+    },
+    {
+      "from": 919,
+      "to": 920,
+      "deferred": false
+    },
+    {
+      "from": 920,
+      "to": 720,
+      "deferred": true
+    },
+    {
+      "from": 720,
+      "to": 725,
+      "deferred": false
+    },
+    {
+      "from": 725,
+      "to": 730,
+      "deferred": false
+    },
+    {
+      "from": 730,
+      "to": 731,
+      "deferred": false
+    },
+    {
+      "from": 731,
+      "to": 732,
+      "deferred": false
+    },
+    {
+      "from": 732,
+      "to": 96,
+      "deferred": true
+    },
+    {
+      "from": 96,
+      "to": 101,
+      "deferred": false
+    },
+    {
+      "from": 101,
+      "to": 106,
+      "deferred": false
+    },
+    {
+      "from": 106,
+      "to": 107,
+      "deferred": false
+    },
+    {
+      "from": 107,
+      "to": 108,
+      "deferred": false
+    },
+    {
+      "from": 108,
+      "to": 648,
+      "deferred": true
+    },
+    {
+      "from": 648,
+      "to": 653,
+      "deferred": false
+    },
+    {
+      "from": 653,
+      "to": 658,
+      "deferred": false
+    },
+    {
+      "from": 658,
+      "to": 659,
+      "deferred": false
+    },
+    {
+      "from": 659,
+      "to": 660,
+      "deferred": false
+    },
+    {
+      "from": 660,
+      "to": 1680,
+      "deferred": true
+    },
+    {
+      "from": 1680,
+      "to": 1685,
+      "deferred": false
+    },
+    {
+      "from": 1685,
+      "to": 1690,
+      "deferred": false
+    },
+    {
+      "from": 1690,
+      "to": 1691,
+      "deferred": false
+    },
+    {
+      "from": 1691,
+      "to": 1692,
+      "deferred": false
+    },
+    {
+      "from": 1692,
+      "to": 144,
+      "deferred": true
+    },
+    {
+      "from": 144,
+      "to": 147,
+      "deferred": false
+    },
+    {
+      "from": 147,
+      "to": 150,
+      "deferred": false
+    },
+    {
+      "from": 150,
+      "to": 151,
+      "deferred": false
+    },
+    {
+      "from": 151,
+      "to": 152,
+      "deferred": false
+    },
+    {
+      "from": 152,
+      "to": 1656,
+      "deferred": true
+    },
+    {
+      "from": 1656,
+      "to": 1661,
+      "deferred": false
+    },
+    {
+      "from": 1661,
+      "to": 1666,
+      "deferred": false
+    },
+    {
+      "from": 1666,
+      "to": 1667,
+      "deferred": false
+    },
+    {
+      "from": 1667,
+      "to": 1668,
+      "deferred": false
+    },
+    {
+      "from": 1668,
+      "to": 24,
+      "deferred": true
+    },
+    {
+      "from": 24,
+      "to": 27,
+      "deferred": false
+    },
+    {
+      "from": 27,
+      "to": 30,
+      "deferred": false
+    },
+    {
+      "from": 30,
+      "to": 31,
+      "deferred": false
+    },
+    {
+      "from": 31,
+      "to": 32,
+      "deferred": false
+    },
+    {
+      "from": 32,
+      "to": 672,
+      "deferred": true
+    },
+    {
+      "from": 672,
+      "to": 677,
+      "deferred": false
+    },
+    {
+      "from": 677,
+      "to": 682,
+      "deferred": false
+    },
+    {
+      "from": 682,
+      "to": 683,
+      "deferred": false
+    },
+    {
+      "from": 683,
+      "to": 684,
+      "deferred": false
+    },
+    {
+      "from": 684,
+      "to": 1248,
+      "deferred": true
+    },
+    {
+      "from": 1248,
+      "to": 1251,
+      "deferred": false
+    },
+    {
+      "from": 1251,
+      "to": 1254,
+      "deferred": false
+    },
+    {
+      "from": 1254,
+      "to": 1255,
+      "deferred": false
+    },
+    {
+      "from": 1255,
+      "to": 1256,
+      "deferred": false
+    },
+    {
+      "from": 1256,
+      "to": 888,
+      "deferred": true
+    },
+    {
+      "from": 888,
+      "to": 892,
+      "deferred": false
+    },
+    {
+      "from": 892,
+      "to": 893,
+      "deferred": false
+    },
+    {
+      "from": 893,
+      "to": 898,
+      "deferred": false
+    }
+  ],
+  "instructions": 339,
+  "physical_blocks": 73,
+  "scope": "Conservative logical CFG: both conditional edges. Not native dispatcher/guard CFG."
+}

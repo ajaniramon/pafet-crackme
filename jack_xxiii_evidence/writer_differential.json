@@ -1,0 +1,1738 @@
+{
+  "cases": 108,
+  "all_match": true,
+  "native_entry": "0x140048960 op=4",
+  "store": "0x140048a3a",
+  "expected_output_uses_f_user_formula": false,
+  "scope": "Component objects; no Windows/console acceptance claim",
+  "results": [
+    {
+      "index": 0,
+      "mode": "sso",
+      "input_byte": 0,
+      "rax": 97,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612736,
+          "size": 1,
+          "value": 97
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "sso",
+      "input_byte": 1,
+      "rax": 98,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612736,
+          "size": 1,
+          "value": 98
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "sso",
+      "input_byte": 65,
+      "rax": 34,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612736,
+          "size": 1,
+          "value": 34
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "sso",
+      "input_byte": 127,
+      "rax": 44,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612736,
+          "size": 1,
+          "value": 44
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "sso",
+      "input_byte": 128,
+      "rax": 18446744073709551585,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612736,
+          "size": 1,
+          "value": 225
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "sso",
+      "input_byte": 255,
+      "rax": 18446744073709551532,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612736,
+          "size": 1,
+          "value": 172
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 97,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612784,
+          "size": 1,
+          "value": 97
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 98,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612784,
+          "size": 1,
+          "value": 98
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 34,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612784,
+          "size": 1,
+          "value": 34
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 44,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612784,
+          "size": 1,
+          "value": 44
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 18446744073709551585,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612784,
+          "size": 1,
+          "value": 225
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551532,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612784,
+          "size": 1,
+          "value": 172
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "sso",
+      "input_byte": 0,
+      "rax": 100,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612737,
+          "size": 1,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "sso",
+      "input_byte": 1,
+      "rax": 101,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612737,
+          "size": 1,
+          "value": 101
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "sso",
+      "input_byte": 65,
+      "rax": 37,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612737,
+          "size": 1,
+          "value": 37
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "sso",
+      "input_byte": 127,
+      "rax": 47,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612737,
+          "size": 1,
+          "value": 47
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "sso",
+      "input_byte": 128,
+      "rax": 18446744073709551588,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612737,
+          "size": 1,
+          "value": 228
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "sso",
+      "input_byte": 255,
+      "rax": 18446744073709551535,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612737,
+          "size": 1,
+          "value": 175
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 100,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612785,
+          "size": 1,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 101,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612785,
+          "size": 1,
+          "value": 101
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 37,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612785,
+          "size": 1,
+          "value": 37
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 47,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612785,
+          "size": 1,
+          "value": 47
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 18446744073709551588,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612785,
+          "size": 1,
+          "value": 228
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551535,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612785,
+          "size": 1,
+          "value": 175
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "sso",
+      "input_byte": 0,
+      "rax": 118,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612743,
+          "size": 1,
+          "value": 118
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "sso",
+      "input_byte": 1,
+      "rax": 119,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612743,
+          "size": 1,
+          "value": 119
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "sso",
+      "input_byte": 65,
+      "rax": 55,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612743,
+          "size": 1,
+          "value": 55
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "sso",
+      "input_byte": 127,
+      "rax": 65,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612743,
+          "size": 1,
+          "value": 65
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "sso",
+      "input_byte": 128,
+      "rax": 18446744073709551606,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612743,
+          "size": 1,
+          "value": 246
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "sso",
+      "input_byte": 255,
+      "rax": 18446744073709551553,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612743,
+          "size": 1,
+          "value": 193
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 118,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612791,
+          "size": 1,
+          "value": 118
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 119,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612791,
+          "size": 1,
+          "value": 119
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 55,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612791,
+          "size": 1,
+          "value": 55
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 65,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612791,
+          "size": 1,
+          "value": 65
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 18446744073709551606,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612791,
+          "size": 1,
+          "value": 246
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551553,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612791,
+          "size": 1,
+          "value": 193
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "sso",
+      "input_byte": 0,
+      "rax": 18446744073709551499,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612750,
+          "size": 1,
+          "value": 139
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "sso",
+      "input_byte": 1,
+      "rax": 18446744073709551500,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612750,
+          "size": 1,
+          "value": 140
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "sso",
+      "input_byte": 65,
+      "rax": 76,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612750,
+          "size": 1,
+          "value": 76
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "sso",
+      "input_byte": 127,
+      "rax": 86,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612750,
+          "size": 1,
+          "value": 86
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "sso",
+      "input_byte": 128,
+      "rax": 11,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612750,
+          "size": 1,
+          "value": 11
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "sso",
+      "input_byte": 255,
+      "rax": 18446744073709551574,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612750,
+          "size": 1,
+          "value": 214
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551499,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612798,
+          "size": 1,
+          "value": 139
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551500,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612798,
+          "size": 1,
+          "value": 140
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 76,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612798,
+          "size": 1,
+          "value": 76
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 86,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612798,
+          "size": 1,
+          "value": 86
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 11,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612798,
+          "size": 1,
+          "value": 11
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551574,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612798,
+          "size": 1,
+          "value": 214
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551502,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612799,
+          "size": 1,
+          "value": 142
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551503,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612799,
+          "size": 1,
+          "value": 143
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 79,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612799,
+          "size": 1,
+          "value": 79
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 89,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612799,
+          "size": 1,
+          "value": 89
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 14,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612799,
+          "size": 1,
+          "value": 14
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551577,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612799,
+          "size": 1,
+          "value": 217
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551505,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612800,
+          "size": 1,
+          "value": 145
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551506,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612800,
+          "size": 1,
+          "value": 146
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 82,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612800,
+          "size": 1,
+          "value": 82
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 92,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612800,
+          "size": 1,
+          "value": 92
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 17,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612800,
+          "size": 1,
+          "value": 17
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551580,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612800,
+          "size": 1,
+          "value": 220
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551523,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612806,
+          "size": 1,
+          "value": 163
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551524,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612806,
+          "size": 1,
+          "value": 164
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 100,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612806,
+          "size": 1,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 110,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612806,
+          "size": 1,
+          "value": 110
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 35,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612806,
+          "size": 1,
+          "value": 35
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551598,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612806,
+          "size": 1,
+          "value": 238
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551526,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612807,
+          "size": 1,
+          "value": 166
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551527,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612807,
+          "size": 1,
+          "value": 167
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 103,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612807,
+          "size": 1,
+          "value": 103
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 113,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612807,
+          "size": 1,
+          "value": 113
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 38,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612807,
+          "size": 1,
+          "value": 38
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551601,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612807,
+          "size": 1,
+          "value": 241
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551529,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612808,
+          "size": 1,
+          "value": 169
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551530,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612808,
+          "size": 1,
+          "value": 170
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 106,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612808,
+          "size": 1,
+          "value": 106
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 116,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612808,
+          "size": 1,
+          "value": 116
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 41,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612808,
+          "size": 1,
+          "value": 41
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551604,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612808,
+          "size": 1,
+          "value": 244
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551532,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612809,
+          "size": 1,
+          "value": 172
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551533,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612809,
+          "size": 1,
+          "value": 173
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 109,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612809,
+          "size": 1,
+          "value": 109
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 119,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612809,
+          "size": 1,
+          "value": 119
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 44,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612809,
+          "size": 1,
+          "value": 44
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551607,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612809,
+          "size": 1,
+          "value": 247
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551582,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612911,
+          "size": 1,
+          "value": 222
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551583,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612911,
+          "size": 1,
+          "value": 223
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 18446744073709551519,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612911,
+          "size": 1,
+          "value": 159
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 18446744073709551529,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612911,
+          "size": 1,
+          "value": 169
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 94,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612911,
+          "size": 1,
+          "value": 94
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 41,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612911,
+          "size": 1,
+          "value": 41
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 18446744073709551585,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612912,
+          "size": 1,
+          "value": 225
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 18446744073709551586,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612912,
+          "size": 1,
+          "value": 226
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 18446744073709551522,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612912,
+          "size": 1,
+          "value": 162
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 18446744073709551532,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612912,
+          "size": 1,
+          "value": 172
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 97,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612912,
+          "size": 1,
+          "value": 97
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 44,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610612912,
+          "size": 1,
+          "value": 44
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 94,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613039,
+          "size": 1,
+          "value": 94
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 95,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613039,
+          "size": 1,
+          "value": 95
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 31,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613039,
+          "size": 1,
+          "value": 31
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 41,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613039,
+          "size": 1,
+          "value": 41
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 18446744073709551582,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613039,
+          "size": 1,
+          "value": 222
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551529,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613039,
+          "size": 1,
+          "value": 169
+        }
+      ]
+    },
+    {
+      "index": 256,
+      "mode": "heap",
+      "input_byte": 0,
+      "rax": 97,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613040,
+          "size": 1,
+          "value": 97
+        }
+      ]
+    },
+    {
+      "index": 256,
+      "mode": "heap",
+      "input_byte": 1,
+      "rax": 98,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613040,
+          "size": 1,
+          "value": 98
+        }
+      ]
+    },
+    {
+      "index": 256,
+      "mode": "heap",
+      "input_byte": 65,
+      "rax": 34,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613040,
+          "size": 1,
+          "value": 34
+        }
+      ]
+    },
+    {
+      "index": 256,
+      "mode": "heap",
+      "input_byte": 127,
+      "rax": 44,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613040,
+          "size": 1,
+          "value": 44
+        }
+      ]
+    },
+    {
+      "index": 256,
+      "mode": "heap",
+      "input_byte": 128,
+      "rax": 18446744073709551585,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613040,
+          "size": 1,
+          "value": 225
+        }
+      ]
+    },
+    {
+      "index": 256,
+      "mode": "heap",
+      "input_byte": 255,
+      "rax": 18446744073709551532,
+      "all_five_registers_match": true,
+      "object_and_buffer_match": true,
+      "stores": [
+        {
+          "rip": "0x140048a3a",
+          "address": 1610613040,
+          "size": 1,
+          "value": 172
+        }
+      ]
+    }
+  ]
+}

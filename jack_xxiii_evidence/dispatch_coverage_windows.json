@@ -1,0 +1,344 @@
+{
+  "captures": [
+    {
+      "case": "a1",
+      "handler_invocations": 336,
+      "resolver_roots": 175,
+      "inline_call_r9_invocations": 161,
+      "native_addresses": 47,
+      "table_slots_observed": 124,
+      "trace_gzip_sha256": "e2c146faa4ad4496e60ba3e6fe16fc32b678e1b0e89a41d135c37e1a101067d7"
+    },
+    {
+      "case": "a8",
+      "handler_invocations": 1862,
+      "resolver_roots": 979,
+      "inline_call_r9_invocations": 883,
+      "native_addresses": 56,
+      "table_slots_observed": 245,
+      "trace_gzip_sha256": "5f1381d06225b5b6a0d9e525f5b63f386c0aa3e3488e485833ec85bcd88dde8f"
+    },
+    {
+      "case": "alice",
+      "handler_invocations": 1208,
+      "resolver_roots": 629,
+      "inline_call_r9_invocations": 579,
+      "native_addresses": 52,
+      "table_slots_observed": 223,
+      "trace_gzip_sha256": "b3d2a9aa8bafcbb86f9cb8b59ef711a7e5c7f6d4091b1a9a54d292cd3e4e8b97"
+    },
+    {
+      "case": "alice123",
+      "handler_invocations": 1862,
+      "resolver_roots": 963,
+      "inline_call_r9_invocations": 899,
+      "native_addresses": 57,
+      "table_slots_observed": 242,
+      "trace_gzip_sha256": "13641d7d665c4c32b676d7c8fb7bb244671c991309ff155a10f493d933e4227a"
+    },
+    {
+      "case": "empty",
+      "handler_invocations": 118,
+      "resolver_roots": 53,
+      "inline_call_r9_invocations": 65,
+      "native_addresses": 37,
+      "table_slots_observed": 71,
+      "trace_gzip_sha256": "76740d94159f42f667ddfa692496210b98e1fa89dfa272502f86c326ee1bd132"
+    },
+    {
+      "case": "long_a23",
+      "handler_invocations": 5132,
+      "resolver_roots": 2695,
+      "inline_call_r9_invocations": 2437,
+      "native_addresses": 57,
+      "table_slots_observed": 248,
+      "trace_gzip_sha256": "cf54ffe6dfbbfa1b081af066496422bbfa008499bd677a81a41bace980baaa79"
+    },
+    {
+      "case": "long_a24",
+      "handler_invocations": 5350,
+      "resolver_roots": 2768,
+      "inline_call_r9_invocations": 2582,
+      "native_addresses": 57,
+      "table_slots_observed": 248,
+      "trace_gzip_sha256": "4e39f13502815f33532f1196e208be861ac1aebeaacfde94a4f91f6a2e4509f0"
+    },
+    {
+      "case": "long_a25",
+      "handler_invocations": 5568,
+      "resolver_roots": 2905,
+      "inline_call_r9_invocations": 2663,
+      "native_addresses": 57,
+      "table_slots_observed": 248,
+      "trace_gzip_sha256": "c96b095710d70bc1dc498b58e223bcf5952df02078c7211f49786448cbf603a7"
+    },
+    {
+      "case": "long_pattern23",
+      "handler_invocations": 5132,
+      "resolver_roots": 2699,
+      "inline_call_r9_invocations": 2433,
+      "native_addresses": 57,
+      "table_slots_observed": 248,
+      "trace_gzip_sha256": "7591e0a1d9ab82fba855392de75cea09afe172088fefe0b545a54a0620a264aa"
+    },
+    {
+      "case": "long_pattern24",
+      "handler_invocations": 5350,
+      "resolver_roots": 2807,
+      "inline_call_r9_invocations": 2543,
+      "native_addresses": 57,
+      "table_slots_observed": 248,
+      "trace_gzip_sha256": "44b95c6c428bb1dbd6ae80eba31e56bd4169b085610328df8476257d185aa847"
+    },
+    {
+      "case": "long_pattern25",
+      "handler_invocations": 5568,
+      "resolver_roots": 2897,
+      "inline_call_r9_invocations": 2671,
+      "native_addresses": 57,
+      "table_slots_observed": 248,
+      "trace_gzip_sha256": "e29b7a006292e3979b6abc86f16bc0fe336ef3b8c9c6a004ea49c20e8b71e413"
+    },
+    {
+      "case": "ramon",
+      "handler_invocations": 1208,
+      "resolver_roots": 638,
+      "inline_call_r9_invocations": 570,
+      "native_addresses": 52,
+      "table_slots_observed": 237,
+      "trace_gzip_sha256": "03777da560bdc851d83f405116c761c1b5c239400aa1e9ba380f2b0005d7ab27"
+    },
+    {
+      "case": "ramonbarcelona",
+      "handler_invocations": 3170,
+      "resolver_roots": 1664,
+      "inline_call_r9_invocations": 1506,
+      "native_addresses": 57,
+      "table_slots_observed": 247,
+      "trace_gzip_sha256": "308c1697a16cf27e09fb6f1a6ebb9527804844345a725ea9168b42e73c2a001a"
+    }
+  ],
+  "invocations": 41864,
+  "native_target_count": 60,
+  "native_targets": {
+    "0x140007ca0": [
+      28
+    ],
+    "0x140008b50": [
+      1
+    ],
+    "0x1400099c0": [
+      26
+    ],
+    "0x14000a850": [
+      4
+    ],
+    "0x14000b670": [
+      5
+    ],
+    "0x14000c4f0": [
+      32
+    ],
+    "0x14000d7d0": [
+      44
+    ],
+    "0x14000e5e0": [
+      24
+    ],
+    "0x14000f410": [
+      29
+    ],
+    "0x1400102d0": [
+      21
+    ],
+    "0x1400110f0": [
+      41
+    ],
+    "0x140011f10": [
+      27
+    ],
+    "0x140012dc0": [
+      22
+    ],
+    "0x140013be0": [
+      8
+    ],
+    "0x140014a00": [
+      31
+    ],
+    "0x140015820": [
+      26
+    ],
+    "0x1400166b0": [
+      4
+    ],
+    "0x1400174d0": [
+      24
+    ],
+    "0x140018300": [
+      21
+    ],
+    "0x140019120": [
+      44
+    ],
+    "0x140019f40": [
+      32
+    ],
+    "0x14001b1e0": [
+      27
+    ],
+    "0x14001c090": [
+      1
+    ],
+    "0x14001cf00": [
+      8
+    ],
+    "0x14001dd30": [
+      31
+    ],
+    "0x14001eb40": [
+      29
+    ],
+    "0x14001fa00": [
+      28
+    ],
+    "0x1400208b0": [
+      41
+    ],
+    "0x1400216d0": [
+      5
+    ],
+    "0x140022550": [
+      22
+    ],
+    "0x140023380": [
+      22
+    ],
+    "0x1400241b0": [
+      1
+    ],
+    "0x140025020": [
+      26
+    ],
+    "0x140025eb0": [
+      8
+    ],
+    "0x140026cd0": [
+      28
+    ],
+    "0x140027b80": [
+      5
+    ],
+    "0x140028a00": [
+      32
+    ],
+    "0x140029ca0": [
+      29
+    ],
+    "0x14002ab60": [
+      41
+    ],
+    "0x14002b990": [
+      24
+    ],
+    "0x14002c7b0": [
+      21
+    ],
+    "0x14002d5d0": [
+      4
+    ],
+    "0x14002e3f0": [
+      27
+    ],
+    "0x14002f2a0": [
+      44
+    ],
+    "0x1400300b0": [
+      31
+    ],
+    "0x140030ec0": [
+      4
+    ],
+    "0x140031ce0": [
+      21
+    ],
+    "0x140032b00": [
+      24
+    ],
+    "0x140033930": [
+      1
+    ],
+    "0x1400347a0": [
+      44
+    ],
+    "0x1400355c0": [
+      26
+    ],
+    "0x140036450": [
+      27
+    ],
+    "0x140037300": [
+      8
+    ],
+    "0x140038120": [
+      28
+    ],
+    "0x140038fe0": [
+      32
+    ],
+    "0x14003a160": [
+      5
+    ],
+    "0x14003afe0": [
+      29
+    ],
+    "0x14003bea0": [
+      31
+    ],
+    "0x14003ccb0": [
+      22
+    ],
+    "0x14003dae0": [
+      41
+    ]
+  },
+  "observed_table_slots": 248,
+  "possible_non_escape_table_slots": 248,
+  "slots_with_multiple_targets": 248,
+  "baseline_catalog_native_addresses": 35,
+  "observed_addresses_outside_baseline": [
+    "0x140007ca0",
+    "0x14000c4f0",
+    "0x14000d7d0",
+    "0x14000e5e0",
+    "0x14000f410",
+    "0x1400102d0",
+    "0x1400174d0",
+    "0x140019120",
+    "0x14001b1e0",
+    "0x14001eb40",
+    "0x14001fa00",
+    "0x140022550",
+    "0x140025eb0",
+    "0x140026cd0",
+    "0x140029ca0",
+    "0x14002b990",
+    "0x14002c7b0",
+    "0x14002e3f0",
+    "0x140032b00",
+    "0x1400347a0",
+    "0x140036450",
+    "0x140037300",
+    "0x140038120",
+    "0x14003afe0",
+    "0x14003ccb0"
+  ],
+  "baseline_addresses_not_observed": [],
+  "native_vas_are_unique_code_entries": true,
+  "trampolines_and_aliases_kept_separate": true,
+  "inline_call_sites_checked_against_original_code": true,
+  "helper_invocations_in_denominator": false,
+  "helper_invocations_instrumented": false,
+  "parent_ids_and_budget_decrements_verified": false,
+  "coverage_limit": "Observed selected handler entries in thirteen inputs. Not all native branches, guard states or escape opcodes."
+}
