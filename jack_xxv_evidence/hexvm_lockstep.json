@@ -1,0 +1,39 @@
+{
+ "total": 281205,
+ "passes": 165,
+ "first_mismatch": {
+  "push_idx": 0,
+  "item": "0x2d409a",
+  "K_in": "0xe19a5202aac7ed57",
+  "A_in": "0x671ae3e65cd34f0d",
+  "B_in": "0xc4dda7b5e73c05eb",
+  "K_computed": "0x9e4a9126081207ba",
+  "K_expected": "0x9e4a9126081207ba",
+  "A_computed": "0x671ae3e65cd34f0d",
+  "A_expected": "0xa8f5d0c9e9c07d9b",
+  "B_computed": "0xc4dda7b5e73c05eb",
+  "B_expected": "0xc4dda7b5e73c05eb",
+  "handler_idx": 5,
+  "sel": 6
+ },
+ "handler_hits_model": [
+  18368,
+  27572,
+  46102,
+  39190,
+  49408,
+  27949,
+  62544,
+  10072
+ ],
+ "handler_hits_expected": [
+  38880,
+  23433,
+  33272,
+  25764,
+  45658,
+  31641,
+  34103,
+  52634
+ ]
+}

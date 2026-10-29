@@ -15,32 +15,31 @@ tractable without context about the author's choice.
 `CMO{...}` fragments the author might have used, phrases related to
 the author's handle or affiliation). Needs GPU and luck.
 
-## 2. Atomic byte-writers at x64 instruction level
+## 2. ~~Atomic byte-writers at x64 instruction level~~ CLOSED
 
-**Status**: 0/5 reversed byte-by-byte x64.
+**Status (JACK XXIV, commit `0f1d96d`)**: all 5 wrappers have body
+translation, lockstep validation, and CFG coverage closed:
 
-| byte | handler       | size (real) | Unicorn 6/6 | C++ x64 port |
-|------|---------------|-------------|-------------|--------------|
-| 0    | `0x14003bea0` | 1997 B      | yes         | no           |
-| 1    | `0x140015820` | 503 B       | no          | no           |
-| 2    | `0x140025020` | 503 B       | no          | no           |
-| 3    | `0x140014a00` | 3586 B (.pdata-fragmented) | yes | no |
-| 4    | `0x1400216d0` | 3705 B      | no          | no           |
+| byte | handler       | real size (CFG) | kind                | edges   | instructions |
+|------|---------------|-----------------|---------------------|---------|--------------|
+| 0    | `0x14003bea0` | 3593 B / 821 i  | DROP                | 32+2/34 | 777+44/821   |
+| 1    | `0x140015820` | 3717 B / 864 i  | block transfer      | 7+27/34 | 167+697/864  |
+| 2    | `0x140025020` | 3717 B / 864 i  | block transfer      | 7+27/34 | 167+697/864  |
+| 3    | `0x140014a00` | 3586 B / 820 i  | DROP                | 32+2/34 | 776+44/820   |
+| 4    | `0x1400216d0` | 3705 B / 863 i  | STORE_REG           | 32+2/34 | 819+44/863   |
 
-The behavioral port in `src/pafet_byte_writer_x.h` reproduces the
-observed input→output transform. It is not an x64 instruction-by-
-instruction clone.
+The "+N" in the coverage columns are edges/instructions proven
+unreachable under the observed data contract (e.g. `opcode >= 62`
+branch is dead because the LUT only produces 0..61).
 
-**Why not closed**: each handler is a few hundred to a few thousand
-bytes of x64 that calls out to the shared helpers (`0x140003a50`,
-`0x140003880`, `0x140005b50`, `0x140006770` — all 4 reversed x64).
-Writing the ports is mechanical but slow; the overnight session ran
-out of effective time with Unicorn oracles up for 2/5.
+See `PAFET_JACK_XXIV.md` and `jack_xxiv_evidence/*`.
 
-**Next step**: port `0x14003bea0` (1997 B, Unicorn ready) using the
-same recipe as `0x140003a50` and `0x140003880`. Then `0x140014a00`
-(3586 B, Unicorn ready). Then the remaining 3 writers (need Unicorn
-oracle + port each).
+**Note**: the earlier docs/13 version mislabelled these as "atomic
+byte-writers" with wrong sizes (1997 B / 503 B / etc). The correct
+categorisation is: 2 DROP cores, 2 block-transfer wrappers, 1
+STORE_REG. The actual byte store that produces `f_user` output is
+`mov [r8+r9], dl` at `0x140048a3a` inside the user-VM host's
+operation 4.
 
 ## 3. Byte-exact validation for lengths 23, 24, 25
 
@@ -171,7 +170,7 @@ with PC advancement and op=0 halt. No x64 port.
 
 **Next step**: port the dispatcher as a C++ main loop.
 
-## 12. SHA / serial / hex VMs at x64 level
+## 12. SHA / serial VMs at x64 level
 
 **Status**: byte-exact replicas exist in standard C++. No instruction-
 by-instruction ports.
@@ -179,6 +178,40 @@ by-instruction ports.
 For `NIMA`'s purpose (seeing that the pipeline is understood), this is
 sufficient. For a maximum-fidelity clone, these would also need x64
 ports.
+
+## 13. hex-VM virtual program (72 blocks)
+
+**Status (JACK XXV)**: hex-VM is a full virtual machine of its own.
+Architecture reversed:
+
+- 8 state handlers (byte-exact x64→C++, 400/400 Unicorn differential)
+- Secondary dispatcher 0x14004c720 (semantics from disasm)
+- Queue push 0x14004c880 with throw-as-control-flow (counter==1 or hash probe)
+- 72-block virtual CFG with transitions and visit counts
+- Shared library with user-VM (queue, remap, panic, slot encoder)
+- Invariants confirmed: `push.item == next_VPC`, `push.counter == push_index`
+
+What's **not** reversed: the 72 virtual blocks' internal arithmetic.
+K/A/B evolution between pushes depends on block bodies; without
+block semantics, (K, A, B) lockstep is 49.7% K-only, 165/281K full.
+
+**Next step**: XXVI would reverse the 72 blocks or at least the main
+loop and the DROP paths. The 29-block main chain + 22-block secondary
+chain are the heavy ones.
+
+See `PAFET_JACK_XXV.md` and `jack_xxv_evidence/*`.
+
+## 14. Table remap for hex-VM and user-VM
+
+**Status**: observed, not modelled.
+
+`0x14007fb70` (hex-VM) and `0x14003ebe0` (user-VM) are byte-identical
+remappers that reshuffle the 8-entry rotated handler table. Triggers
+every ~0x200 queue pushes aligned by `ctx[0x700]`. The function body is
+~400 instructions involving ctx hash + LCG + conditional rotations.
+
+**Next step**: reverse the remap function statically or validate via
+Unicorn differential.
 
 ## Summary
 

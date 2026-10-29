@@ -1,0 +1,727 @@
+{
+ "summary": {
+  "total_pushes": 284863,
+  "total_vpc_reads": 586343,
+  "total_vpc_writes": 289098,
+  "total_secdisps": 289098,
+  "total_outputs": 16,
+  "total_throws": 72,
+  "unique_vpc_values": 72,
+  "main_loop_count": 8148
+ },
+ "entry_sequence": [
+  "0x1746e",
+  "0x2d409a",
+  "0x8453b",
+  "0x171a87",
+  "0x295b7f",
+  "0x36da17"
+ ],
+ "exit_sequence": [
+  "0x31f8f7",
+  "0x949f0",
+  "0x136b61",
+  "0x29b3fa",
+  "0x85014",
+  "0xf2064",
+  "0x20ff08",
+  "0x295b7f",
+  "0x36da17",
+  "0x14b3da"
+ ],
+ "blocks": {
+  "0x1746e": {
+   "visits": 1,
+   "fanout": 1,
+   "kind": "entry",
+   "transitions": {
+    "0x2d409a": 1
+   }
+  },
+  "0x2d409a": {
+   "visits": 1,
+   "fanout": 1,
+   "kind": "entry",
+   "transitions": {
+    "0x8453b": 1
+   }
+  },
+  "0x8453b": {
+   "visits": 1,
+   "fanout": 1,
+   "kind": "entry",
+   "transitions": {
+    "0x171a87": 1
+   }
+  },
+  "0x171a87": {
+   "visits": 1,
+   "fanout": 1,
+   "kind": "entry",
+   "transitions": {
+    "0x295b7f": 1
+   }
+  },
+  "0x295b7f": {
+   "visits": 8148,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x36da17": 8148
+   }
+  },
+  "0x36da17": {
+   "visits": 8148,
+   "fanout": 4,
+   "kind": "branch",
+   "transitions": {
+    "0x2a7d9c": 2068,
+    "0x14b3da": 2060,
+    "0x44746": 2044,
+    "0x322898": 1976
+   }
+  },
+  "0x44746": {
+   "visits": 2044,
+   "fanout": 9,
+   "kind": "hub",
+   "transitions": {
+    "0xe0bf0": 965,
+    "0x119872": 462,
+    "0x35606a": 110,
+    "0x38f6c0": 89,
+    "0x3edeff": 86,
+    "0x101651": 85,
+    "0x2e08cf": 84,
+    "0x15c9": 83,
+    "0xcaa88": 80
+   }
+  },
+  "0xcaa88": {
+   "visits": 323,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x229f6f": 243,
+    "0x38f6c0": 80
+   }
+  },
+  "0x229f6f": {
+   "visits": 243,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x295b7f": 160,
+    "0x144c84": 83
+   }
+  },
+  "0xe0bf0": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x4fe3f": 6944
+   }
+  },
+  "0x4fe3f": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x1afe0": 6944
+   }
+  },
+  "0x1afe0": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x3c543b": 6944
+   }
+  },
+  "0x3c543b": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2a9a5a": 6944
+   }
+  },
+  "0x2a9a5a": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2c9934": 6944
+   }
+  },
+  "0x2c9934": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2e4e6e": 6944
+   }
+  },
+  "0x2e4e6e": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2e7580": 6944
+   }
+  },
+  "0x2e7580": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x132233": 6944
+   }
+  },
+  "0x132233": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x167eac": 6944
+   }
+  },
+  "0x167eac": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x3d1c9d": 6944
+   }
+  },
+  "0x3d1c9d": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0xa665": 6944
+   }
+  },
+  "0xa665": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2511e6": 6944
+   }
+  },
+  "0x2511e6": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0xe72f0": 6944
+   }
+  },
+  "0xe72f0": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x148e03": 6944
+   }
+  },
+  "0x148e03": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x260a3a": 6944
+   }
+  },
+  "0x260a3a": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x1e8688": 6944
+   }
+  },
+  "0x1e8688": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2bdfbf": 6944
+   }
+  },
+  "0x2bdfbf": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x3a94e2": 6944
+   }
+  },
+  "0x3a94e2": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x3070be": 6944
+   }
+  },
+  "0x3070be": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x31f8f7": 6944
+   }
+  },
+  "0x31f8f7": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x949f0": 6944
+   }
+  },
+  "0x949f0": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x136b61": 6944
+   }
+  },
+  "0x136b61": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x29b3fa": 6944
+   }
+  },
+  "0x29b3fa": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x85014": 6944
+   }
+  },
+  "0x85014": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0xf2064": 6944
+   }
+  },
+  "0xf2064": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x20ff08": 6944
+   }
+  },
+  "0x20ff08": {
+   "visits": 6944,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x295b7f": 6944
+   }
+  },
+  "0x322898": {
+   "visits": 1976,
+   "fanout": 9,
+   "kind": "hub",
+   "transitions": {
+    "0xe0bf0": 940,
+    "0x35606a": 436,
+    "0x38f6c0": 112,
+    "0x119872": 95,
+    "0x3edeff": 91,
+    "0x15c9": 90,
+    "0x2e08cf": 75,
+    "0xcaa88": 73,
+    "0x101651": 64
+   }
+  },
+  "0x2a7d9c": {
+   "visits": 2068,
+   "fanout": 9,
+   "kind": "hub",
+   "transitions": {
+    "0xe0bf0": 1050,
+    "0x38f6c0": 433,
+    "0x15c9": 104,
+    "0x35606a": 87,
+    "0x119872": 87,
+    "0x101651": 85,
+    "0x3edeff": 77,
+    "0xcaa88": 76,
+    "0x2e08cf": 69
+   }
+  },
+  "0x2e08cf": {
+   "visits": 321,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0xce50c": 315,
+    "0x119872": 6
+   }
+  },
+  "0xce50c": {
+   "visits": 315,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x295b7f": 225,
+    "0x144c84": 90
+   }
+  },
+  "0x14b3da": {
+   "visits": 2060,
+   "fanout": 9,
+   "kind": "hub",
+   "transitions": {
+    "0xe0bf0": 958,
+    "0x15c9": 480,
+    "0x35606a": 96,
+    "0xcaa88": 94,
+    "0x2e08cf": 93,
+    "0x38f6c0": 87,
+    "0x119872": 87,
+    "0x101651": 84,
+    "0x3edeff": 80
+   }
+  },
+  "0x3edeff": {
+   "visits": 334,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x26503a": 330,
+    "0x15c9": 4
+   }
+  },
+  "0x26503a": {
+   "visits": 330,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x295b7f": 245,
+    "0x144c84": 85
+   }
+  },
+  "0x15c9": {
+   "visits": 761,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x38f6c0": 761
+   }
+  },
+  "0x38f6c0": {
+   "visits": 1562,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x35606a": 1562
+   }
+  },
+  "0x35606a": {
+   "visits": 2294,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x119872": 2294
+   }
+  },
+  "0x119872": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x1b381f": 3031
+   }
+  },
+  "0x1b381f": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x42cef": 3031
+   }
+  },
+  "0x42cef": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x123c34": 3031
+   }
+  },
+  "0x123c34": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x265774": 3031
+   }
+  },
+  "0x265774": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x15ca0a": 3031
+   }
+  },
+  "0x15ca0a": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x3ffe82": 3031
+   }
+  },
+  "0x3ffe82": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x94219": 3031
+   }
+  },
+  "0x94219": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0xab5d2": 3031
+   }
+  },
+  "0xab5d2": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x2216c9": 3031
+   }
+  },
+  "0x2216c9": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x15ba79": 3031
+   }
+  },
+  "0x15ba79": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x133867": 3031
+   }
+  },
+  "0x133867": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x10776f": 3031
+   }
+  },
+  "0x10776f": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x290921": 3031
+   }
+  },
+  "0x290921": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x24ad19": 3031
+   }
+  },
+  "0x24ad19": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x17d650": 3031
+   }
+  },
+  "0x17d650": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x14ebd6": 3031
+   }
+  },
+  "0x14ebd6": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x1d88b9": 3031
+   }
+  },
+  "0x1d88b9": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x15649b": 3031
+   }
+  },
+  "0x15649b": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x378d95": 3031
+   }
+  },
+  "0x378d95": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x17d925": 3031
+   }
+  },
+  "0x17d925": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x19a3f9": 3031
+   }
+  },
+  "0x19a3f9": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x32966a": 3031
+   }
+  },
+  "0x32966a": {
+   "visits": 3031,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0xe0bf0": 3031
+   }
+  },
+  "0x144c84": {
+   "visits": 333,
+   "fanout": 1,
+   "kind": "chain",
+   "transitions": {
+    "0x295b7f": 333
+   }
+  },
+  "0x101651": {
+   "visits": 318,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x3c061e": 315,
+    "0x35606a": 3
+   }
+  },
+  "0x3c061e": {
+   "visits": 315,
+   "fanout": 2,
+   "kind": "branch",
+   "transitions": {
+    "0x295b7f": 240,
+    "0x144c84": 75
+   }
+  }
+ },
+ "cfg_summary": [
+  "0x00295b7f  visits=   8148  fanout=1  -> 0x36da17@8148",
+  "0x0036da17  visits=   8148  fanout=4  -> 0x2a7d9c@2068, 0x14b3da@2060, 0x44746@2044, 0x322898@1976",
+  "0x000e0bf0  visits=   6944  fanout=1  -> 0x4fe3f@6944",
+  "0x0004fe3f  visits=   6944  fanout=1  -> 0x1afe0@6944",
+  "0x0001afe0  visits=   6944  fanout=1  -> 0x3c543b@6944",
+  "0x003c543b  visits=   6944  fanout=1  -> 0x2a9a5a@6944",
+  "0x002a9a5a  visits=   6944  fanout=1  -> 0x2c9934@6944",
+  "0x002c9934  visits=   6944  fanout=1  -> 0x2e4e6e@6944",
+  "0x002e4e6e  visits=   6944  fanout=1  -> 0x2e7580@6944",
+  "0x002e7580  visits=   6944  fanout=1  -> 0x132233@6944",
+  "0x00132233  visits=   6944  fanout=1  -> 0x167eac@6944",
+  "0x00167eac  visits=   6944  fanout=1  -> 0x3d1c9d@6944",
+  "0x003d1c9d  visits=   6944  fanout=1  -> 0xa665@6944",
+  "0x0000a665  visits=   6944  fanout=1  -> 0x2511e6@6944",
+  "0x002511e6  visits=   6944  fanout=1  -> 0xe72f0@6944",
+  "0x000e72f0  visits=   6944  fanout=1  -> 0x148e03@6944",
+  "0x00148e03  visits=   6944  fanout=1  -> 0x260a3a@6944",
+  "0x00260a3a  visits=   6944  fanout=1  -> 0x1e8688@6944",
+  "0x001e8688  visits=   6944  fanout=1  -> 0x2bdfbf@6944",
+  "0x002bdfbf  visits=   6944  fanout=1  -> 0x3a94e2@6944",
+  "0x003a94e2  visits=   6944  fanout=1  -> 0x3070be@6944",
+  "0x003070be  visits=   6944  fanout=1  -> 0x31f8f7@6944",
+  "0x0031f8f7  visits=   6944  fanout=1  -> 0x949f0@6944",
+  "0x000949f0  visits=   6944  fanout=1  -> 0x136b61@6944",
+  "0x00136b61  visits=   6944  fanout=1  -> 0x29b3fa@6944",
+  "0x0029b3fa  visits=   6944  fanout=1  -> 0x85014@6944",
+  "0x00085014  visits=   6944  fanout=1  -> 0xf2064@6944",
+  "0x000f2064  visits=   6944  fanout=1  -> 0x20ff08@6944",
+  "0x0020ff08  visits=   6944  fanout=1  -> 0x295b7f@6944",
+  "0x00119872  visits=   3031  fanout=1  -> 0x1b381f@3031",
+  "0x001b381f  visits=   3031  fanout=1  -> 0x42cef@3031",
+  "0x00042cef  visits=   3031  fanout=1  -> 0x123c34@3031",
+  "0x00123c34  visits=   3031  fanout=1  -> 0x265774@3031",
+  "0x00265774  visits=   3031  fanout=1  -> 0x15ca0a@3031",
+  "0x0015ca0a  visits=   3031  fanout=1  -> 0x3ffe82@3031",
+  "0x003ffe82  visits=   3031  fanout=1  -> 0x94219@3031",
+  "0x00094219  visits=   3031  fanout=1  -> 0xab5d2@3031",
+  "0x000ab5d2  visits=   3031  fanout=1  -> 0x2216c9@3031",
+  "0x002216c9  visits=   3031  fanout=1  -> 0x15ba79@3031",
+  "0x0015ba79  visits=   3031  fanout=1  -> 0x133867@3031",
+  "0x00133867  visits=   3031  fanout=1  -> 0x10776f@3031",
+  "0x0010776f  visits=   3031  fanout=1  -> 0x290921@3031",
+  "0x00290921  visits=   3031  fanout=1  -> 0x24ad19@3031",
+  "0x0024ad19  visits=   3031  fanout=1  -> 0x17d650@3031",
+  "0x0017d650  visits=   3031  fanout=1  -> 0x14ebd6@3031",
+  "0x0014ebd6  visits=   3031  fanout=1  -> 0x1d88b9@3031",
+  "0x001d88b9  visits=   3031  fanout=1  -> 0x15649b@3031",
+  "0x0015649b  visits=   3031  fanout=1  -> 0x378d95@3031",
+  "0x00378d95  visits=   3031  fanout=1  -> 0x17d925@3031",
+  "0x0017d925  visits=   3031  fanout=1  -> 0x19a3f9@3031",
+  "0x0019a3f9  visits=   3031  fanout=1  -> 0x32966a@3031",
+  "0x0032966a  visits=   3031  fanout=1  -> 0xe0bf0@3031",
+  "0x0035606a  visits=   2294  fanout=1  -> 0x119872@2294",
+  "0x002a7d9c  visits=   2068  fanout=9  -> 0xe0bf0@1050, 0x38f6c0@433, 0x15c9@104, 0x35606a@87, 0x119872@87, 0x101651@85, 0x3edeff@77, 0xcaa88@76, 0x2e08cf@69",
+  "0x0014b3da  visits=   2060  fanout=9  -> 0xe0bf0@958, 0x15c9@480, 0x35606a@96, 0xcaa88@94, 0x2e08cf@93, 0x38f6c0@87, 0x119872@87, 0x101651@84, 0x3edeff@80",
+  "0x00044746  visits=   2044  fanout=9  -> 0xe0bf0@965, 0x119872@462, 0x35606a@110, 0x38f6c0@89, 0x3edeff@86, 0x101651@85, 0x2e08cf@84, 0x15c9@83, 0xcaa88@80",
+  "0x00322898  visits=   1976  fanout=9  -> 0xe0bf0@940, 0x35606a@436, 0x38f6c0@112, 0x119872@95, 0x3edeff@91, 0x15c9@90, 0x2e08cf@75, 0xcaa88@73, 0x101651@64",
+  "0x0038f6c0  visits=   1562  fanout=1  -> 0x35606a@1562",
+  "0x000015c9  visits=    761  fanout=1  -> 0x38f6c0@761",
+  "0x003edeff  visits=    334  fanout=2  -> 0x26503a@330, 0x15c9@4",
+  "0x00144c84  visits=    333  fanout=1  -> 0x295b7f@333",
+  "0x0026503a  visits=    330  fanout=2  -> 0x295b7f@245, 0x144c84@85",
+  "0x000caa88  visits=    323  fanout=2  -> 0x229f6f@243, 0x38f6c0@80",
+  "0x002e08cf  visits=    321  fanout=2  -> 0xce50c@315, 0x119872@6",
+  "0x00101651  visits=    318  fanout=2  -> 0x3c061e@315, 0x35606a@3",
+  "0x000ce50c  visits=    315  fanout=2  -> 0x295b7f@225, 0x144c84@90",
+  "0x003c061e  visits=    315  fanout=2  -> 0x295b7f@240, 0x144c84@75",
+  "0x00229f6f  visits=    243  fanout=2  -> 0x295b7f@160, 0x144c84@83",
+  "0x0001746e  visits=      1  fanout=1  -> 0x2d409a@1",
+  "0x002d409a  visits=      1  fanout=1  -> 0x8453b@1",
+  "0x0008453b  visits=      1  fanout=1  -> 0x171a87@1",
+  "0x00171a87  visits=      1  fanout=1  -> 0x295b7f@1"
+ ]
+}
