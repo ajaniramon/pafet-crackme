@@ -20,7 +20,7 @@ Desde la raíz del repositorio:
 
 ```powershell
 python scripts/pafet_audit_xxiv.py
-python scripts/pafet_lift_xxiv.py --observed-families 1,5,26,32 --entry 0x14003bea0 --entry 0x14039df30 --entry 0x140048960 --entry 0x1403a3dc0 --entry 0x140014a00
+python scripts/pafet_lift_xxiv.py --observed-families 1,5,26,32 --entry 0x14003bea0 --entry 0x14039df30 --entry 0x140048960 --entry 0x1403a3dc0 --entry 0x140014a00 --entry 0x140030ec0
 python scripts/pafet_capture_native_xxiv.py
 ```
 
@@ -34,11 +34,12 @@ python3 scripts/pafet_coverage_xxiv.py
 python3 scripts/pafet_native_diff_xxiv.py --no-build --handler 14a00
 python3 scripts/pafet_directed_xxiv.py --no-build --handler 14a00
 python3 scripts/pafet_coverage_xxiv.py --handler 14a00
-python3 scripts/pafet_continue_xxiv.py
+python3 scripts/pafet_continue_xxiv.py --per-wrapper 6 --budget 3000000
 python3 scripts/pafet_continued_diff_xxiv.py --no-build
 python3 scripts/pafet_continued_diff_xxiv.py --no-build --directed
 python3 scripts/pafet_coverage_xxiv.py --handler 15820
 python3 scripts/pafet_coverage_xxiv.py --handler 25020
+python3 scripts/pafet_coverage_xxiv.py --handler 216d0
 ```
 
 Si las dependencias Python no están instaladas en WSL, esta máquina dispone
@@ -123,9 +124,38 @@ guardan en el repositorio del escritorio; las copias de checkpoint están en
 - `0x140006010` puede lanzar una excepción C++ (`0x1403a5fa0`) en lugar de
   retornar; esa ruta no se ha ejercitado.
 
-Próximo cierre: recapturar el cookie del proceso para `alice` 0, ejercitar
-la ruta de excepción de `0x140006010` y seguir con `0x1400216d0`, cuyo
-replay continuado se detiene en un destino no traducido (`0x140030ec0`).
+- STORE_REG `0x1400216d0` (863 instrucciones): lee un operando de 16 bits
+  (`0x1400071e0`, pánico `RDU2` si `pc+1` no cabe), saca el valor con el
+  helper de DROP `0x140003a50` y lo guarda codificado en el banco de
+  registros `ctx+0x1158`. No encola trabajo: su continuación en línea está
+  viva. Se tradujo el envoltorio anidado `0x140030ec0` (familia 4) que
+  detenía su replay. La continuación recoge ahora 38 entradas raíz (18, 17
+  y 3); las 38 pasan en lockstep.
+- Sobre su primera entrada se aplican los diecisiete casos dirigidos, con
+  nonces buscados en el propio snapshot, y `cursor_at_last_operand`
+  (pc 1750): con pc 1751 o 1752 el lector de 16 bits entra en pánico antes
+  de llegar a las comprobaciones de fin de programa. Los veinticuatro casos
+  dirigidos continuados pasan; un fallo sólo se acepta si C++ y x64 fallan
+  en la misma instrucción.
+- Cobertura de `0x1400216d0`: 32 aristas observadas y 2 inalcanzables de
+  34; 819 instrucciones observadas y 44 inalcanzables de 863.
+
+Los cinco envoltorios propuestos en XXIII tienen ya el cuerpo traducido,
+en lockstep y con cobertura completa (observada o demostrada):
+
+| Envoltorio | Núcleo | Aristas | Instrucciones |
+|---|---|---:|---:|
+| `0x14003bea0` | DROP | 32 + 2 / 34 | 777 + 44 / 821 |
+| `0x140014a00` | DROP | 32 + 2 / 34 | 776 + 44 / 820 |
+| `0x140015820` | transferencia | 7 + 27 / 34 | 167 + 697 / 864 |
+| `0x140025020` | transferencia | 7 + 27 / 34 | 167 + 697 / 864 |
+| `0x1400216d0` | STORE_REG | 32 + 2 / 34 | 819 + 44 / 863 |
+
+Cobertura local del cuerpo de cada envoltorio; no de todos los helpers,
+entradas ni de la maquinaria de excepciones del sistema.
+
+Próximo cierre: recapturar el cookie del proceso para `alice` 0 y
+ejercitar la ruta de excepción C++ de `0x140006010`.
 
 Los resultados incrementales están en `jack_xxiv_evidence/`. El original
 `pafet.bin` debe conservar SHA-256

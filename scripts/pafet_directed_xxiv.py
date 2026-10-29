@@ -51,49 +51,46 @@ HANDLERS={'3bea0':{'harness':'pafet_h3bea0_unicorn_xiii.py','vectors':'h3bea0_ve
     '14a00':{'harness':'pafet_h14a00_unicorn_xvi.py','vectors':'h14a00_vectors_xvi.json','vector':2,'predicate':BASE+0x15296,'skip_predicate':BASE+0x150ce,'suffix':'_14a00'}}
 def old_oracle(harness):
     spec=importlib.util.spec_from_file_location('historical_directed',ROOT/'scripts'/harness);old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old);return old
-def search_state(lib,old,vector,runtime,offset,stop,register,tests,field,limit=8192):
+def search_uc(lib,uc,runtime,ctx,entry,offset,stop,register,tests,field,limit=8192):
     """Try successive values of one context qword in the C++ model and keep, per test, the first
-    value whose register at the stop PC satisfies it. Unicorn only supplies the mapped entry state."""
+    value whose register at the stop PC satisfies it. Unicorn only supplies the mapped entry state;
+    every candidate is checked again later by a full lockstep run."""
+    result={};uc.reg_write(UC_X86_REG_RIP,entry);initial=snapshot(uc,runtime);model=lib.xxiv_new();regions=[]
+    try:
+        for lo,hi,prot in uc.mem_regions():
+            data=bytes(uc.mem_read(lo,hi-lo+1));buf=ctypes.create_string_buffer(data,len(data));assert lib.xxiv_map(model,lo,buf,len(data))==0
+            if not (BASE<=lo<BASE+0x460000 or runtime<=lo<runtime+0x460000):regions.append((lo,buf,len(data)))
+        base=bytes(uc.mem_read(ctx,8192));origin=q(base,offset)
+        for trial in range(limit):
+            lib.xxiv_set_cpu(model,ctypes.byref(initial))
+            for lo,buf,size in regions:assert lib.xxiv_write(model,lo,buf,size)==0
+            candidate=(origin+trial)&MASK;buf=ctypes.create_string_buffer(struct.pack('<Q',candidate));assert lib.xxiv_write(model,ctx+offset,buf,8)==0
+            status=lib.xxiv_run_until(model,stop,2500)
+            if status:continue
+            c=Cpu();lib.xxiv_get_cpu(model,ctypes.byref(c));value=c.r[register]
+            for label,condition in tests:
+                if condition(value) and label not in result:result[label]={field:candidate,'trial':trial,f'{NAMES[register]}_at_predicate':value}
+            if len(result)==len(tests):break
+        result['trials']=trial+1
+    finally:lib.xxiv_delete(model)
+    assert all(label in result for label,_ in tests),result
+    return result
+def search_state(lib,old,vector,runtime,offset,stop,register,tests,field,limit=8192):
     result={};saved_uc=unicorn.Uc
     def factory(*a,**k):
         uc=saved_uc(*a,**k)
-        def start(entry,end,*a,**k):
-            uc.reg_write(UC_X86_REG_RIP,entry);initial=snapshot(uc,runtime);model=lib.xxiv_new();regions=[]
-            try:
-                for lo,hi,prot in uc.mem_regions():
-                    data=bytes(uc.mem_read(lo,hi-lo+1));buf=ctypes.create_string_buffer(data,len(data));assert lib.xxiv_map(model,lo,buf,len(data))==0
-                    if not (BASE<=lo<BASE+0x460000 or runtime<=lo<runtime+0x460000):regions.append((lo,buf,len(data)))
-                ctx=int(vector['regs']['rcx'],16);base=bytes(uc.mem_read(ctx,8192));origin=q(base,offset)
-                for trial in range(limit):
-                    lib.xxiv_set_cpu(model,ctypes.byref(initial))
-                    for lo,buf,size in regions:assert lib.xxiv_write(model,lo,buf,size)==0
-                    candidate=(origin+trial)&MASK;buf=ctypes.create_string_buffer(struct.pack('<Q',candidate));assert lib.xxiv_write(model,ctx+offset,buf,8)==0
-                    status=lib.xxiv_run_until(model,stop,2500)
-                    if status:continue
-                    c=Cpu();lib.xxiv_get_cpu(model,ctypes.byref(c));value=c.r[register]
-                    for label,condition in tests:
-                        if condition(value) and label not in result:result[label]={field:candidate,'trial':trial,f'{NAMES[register]}_at_predicate':value}
-                    if len(result)==len(tests):break
-                result['trials']=trial+1
-            finally:lib.xxiv_delete(model)
+        def start(entry,end,*a,**k):result.update(search_uc(lib,uc,runtime,int(vector['regs']['rcx'],16),entry,offset,stop,register,tests,field,limit))
         uc.emu_start=start;return uc
     old.Uc=factory;old.emulate_one(vector,pe_runtime_base=runtime)
-    assert all(label in result for label,_ in tests),result
     return result
+NONCE_TESTS=[('table_remap',lambda v:(v&1023)==0x2c5),('dummy_lookup',lambda v:(v&31)==0x15)]
+SKIP_TESTS=[('skip_state',lambda v:(v&3)==1)]
 def find_nonces(lib,old,vector,runtime,predicate):
-    return search_state(lib,old,vector,runtime,0x688,predicate,10,[('table_remap',lambda v:(v&1023)==0x2c5),('dummy_lookup',lambda v:(v&31)==0x15)],'nonce')
+    return search_state(lib,old,vector,runtime,0x688,predicate,10,NONCE_TESTS,'nonce')
 def find_skip_state(lib,old,vector,runtime,predicate):
-    return search_state(lib,old,vector,runtime,0xce0,predicate,8,[('skip_state',lambda v:(v&3)==1)],'value')
-def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--no-build',action='store_true');ap.add_argument('--only');ap.add_argument('--search',action='store_true')
-    ap.add_argument('--handler',choices=sorted(HANDLERS),default='3bea0');args=ap.parse_args();lib=library(not args.no_build);h=HANDLERS[args.handler]
-    caps=json.loads((ROOT/'vm_pools_evidence'/h['vectors']).read_text());vector=caps['alice']['vectors'][h['vector']];runtime=int(caps['alice']['pe_base'],16)
-    old=old_oracle(h['harness']);saved=OUT/('directed_nonces'+h['suffix']+'.json')
-    nonces=find_nonces(lib,old,vector,runtime,h['predicate']) if args.search or not saved.exists() else json.loads(saved.read_text())
-    if args.search or 'skip_state' not in nonces:
-        skip=find_skip_state(lib,old,vector,runtime,h['skip_predicate']);nonces['skip_state']=skip['skip_state'];nonces['skip_trials']=skip['trials']
-    saved.write_text(json.dumps(nonces,indent=2)+'\n');print('Native-state branch inputs',nonces,flush=True)
-    cases=[('positive_mode_guard',{'mode':3},True),('canary_guard',{'canary':0},True),
+    return search_state(lib,old,vector,runtime,0xce0,predicate,8,SKIP_TESTS,'value')
+def directed_cases(nonces):
+    return[('positive_mode_guard',{'mode':3},True),('canary_guard',{'canary':0},True),
         ('resume_slot_exit',{'resume_slot':1},False),('pending_work_exit',{'pending_work':1},False),
         ('guard_magic_exit',{'guard_magic':0},False),('budget_zero',{'mode':0x80000000},False),
         ('budget_one',{'mode':0x80000001},False),('cursor_out_of_bounds',{'pc':1752},False),
@@ -106,6 +103,16 @@ def main():
         ('table_remap',{'opaque_nonce':nonces['table_remap']['nonce']},False),
         ('dummy_lookup',{'opaque_nonce':nonces['dummy_lookup']['nonce']},False),
         ('skip_state',{'skip_state':nonces['skip_state']['value']},False)]
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--no-build',action='store_true');ap.add_argument('--only');ap.add_argument('--search',action='store_true')
+    ap.add_argument('--handler',choices=sorted(HANDLERS),default='3bea0');args=ap.parse_args();lib=library(not args.no_build);h=HANDLERS[args.handler]
+    caps=json.loads((ROOT/'vm_pools_evidence'/h['vectors']).read_text());vector=caps['alice']['vectors'][h['vector']];runtime=int(caps['alice']['pe_base'],16)
+    old=old_oracle(h['harness']);saved=OUT/('directed_nonces'+h['suffix']+'.json')
+    nonces=find_nonces(lib,old,vector,runtime,h['predicate']) if args.search or not saved.exists() else json.loads(saved.read_text())
+    if args.search or 'skip_state' not in nonces:
+        skip=find_skip_state(lib,old,vector,runtime,h['skip_predicate']);nonces['skip_state']=skip['skip_state'];nonces['skip_trials']=skip['trials']
+    saved.write_text(json.dumps(nonces,indent=2)+'\n');print('Native-state branch inputs',nonces,flush=True)
+    cases=directed_cases(nonces)
     results=[];failures=[]
     for label,changes,fault in cases:
         if args.only and label!=args.only:continue

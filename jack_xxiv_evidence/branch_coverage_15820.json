@@ -348,9 +348,93 @@
     },
     {
       "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#2",
+      "vector": 2,
+      "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#4",
+      "vector": 4,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#5",
+      "vector": 5,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
       "case": "0x140015820@alice/1#0",
       "vector": 0,
       "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#2",
+      "vector": 2,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#3",
+      "vector": 3,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/1#5",
+      "vector": 5,
+      "steps": 1026
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@ramon/0#1",
+      "vector": 1,
+      "steps": 1394
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/0#2",
+      "vector": 2,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/0#5",
+      "vector": 5,
+      "steps": 2324
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/1#2",
+      "vector": 2,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@long_a23/1#5",
+      "vector": 5,
+      "steps": 2324
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#0",
+      "vector": 0,
+      "steps": 1208
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#1",
+      "vector": 1,
+      "steps": 836
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140015820@alice/0#3",
+      "vector": 3,
+      "steps": 1026
     },
     {
       "source": "continued_lockstep.json",
@@ -363,6 +447,12 @@
       "case": "0x140015820@ramon/1#1",
       "vector": 1,
       "steps": 840
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x1400216d0@ramon/1#2",
+      "vector": 2,
+      "steps": 3080
     },
     {
       "source": "continued_directed.json",
@@ -381,6 +471,12 @@
       "case": "0x140015820@alice/0#0:resume_slot_exit",
       "vector": 0,
       "steps": 838
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x1400216d0@alice/1#4:dummy_lookup",
+      "vector": 4,
+      "steps": 3762
     },
     {
       "source": "native_lockstep.json",

@@ -22,7 +22,9 @@ HANDLERS={'3bea0':{'entry':BASE+0x3bea0,'polynomial':BASE+0x3c55e,'lut_load':BAS
         'sources':('native_lockstep_14a00.json','directed_native_14a00.json')},
     # Block-transfer twins: root entries reached by the original resolver, plus their nested calls.
     '15820':{'entry':BASE+0x15820,'polynomial':BASE+0x15f7f,'lut_load':BASE+0x163e0,'lut_branch':BASE+0x16519,'report':'branch_coverage_15820.json','sources':NESTED,'pending_queue':True},
-    '25020':{'entry':BASE+0x25020,'polynomial':BASE+0x2577f,'lut_load':BASE+0x25be0,'lut_branch':BASE+0x25d19,'report':'branch_coverage_25020.json','sources':NESTED,'pending_queue':True}}
+    '25020':{'entry':BASE+0x25020,'polynomial':BASE+0x2577f,'lut_load':BASE+0x25be0,'lut_branch':BASE+0x25d19,'report':'branch_coverage_25020.json','sources':NESTED,'pending_queue':True},
+    # STORE_REG: no queued work, its inline continuation is live like the DROP cores.
+    '216d0':{'entry':BASE+0x216d0,'polynomial':BASE+0x21e2c,'lut_load':BASE+0x2228d,'lut_branch':BASE+0x223c6,'report':'branch_coverage_216d0.json','sources':NESTED}}
 BP={'rbp','ebp','bp','bpl'}
 def reach(edges,start,removed=()):
     successors=collections.defaultdict(list)
