@@ -101,6 +101,81 @@ bool load_ir(const std::string& json_path, std::vector<IRInstr>& out) {
     return !out.empty();
 }
 
+// Jack XI: parse "atomic_pairs":[[c,o,i],[c,o,i],...]
+bool load_atomic_pairs(const std::string& json_path,
+                        std::vector<AtomicWriterEntry>& out) {
+    std::string s;
+    if (!read_file(json_path, s)) return false;
+    out.clear();
+    size_t p = s.find("\"atomic_pairs\":");
+    if (p == std::string::npos) return false;
+    p += std::strlen("\"atomic_pairs\":");
+    // Find outer [
+    while (p < s.size() && s[p] != '[') p++;
+    if (p >= s.size()) return false;
+    p++;
+    // Parse inner lists [c,o,i]
+    auto is_ws = [](char c) { return c==' '||c=='\t'||c=='\n'||c=='\r'; };
+    while (p < s.size() && s[p] != ']') {
+        while (p < s.size() && (is_ws(s[p])||s[p]==',')) p++;
+        if (p < s.size() && s[p] == ']') break;
+        if (p < s.size() && s[p] == '[') {
+            p++;
+            long long vals[3] = {0,0,0};
+            int found = 0;
+            for (int k = 0; k < 3 && p < s.size() && s[p] != ']'; k++) {
+                while (p < s.size() && (is_ws(s[p])||s[p]==',')) p++;
+                bool neg = false;
+                if (p < s.size() && s[p] == '-') { neg = true; p++; }
+                long long v = 0; bool got = false;
+                while (p < s.size() && s[p]>='0' && s[p]<='9') { v = v*10 + (s[p]-'0'); p++; got = true; }
+                if (got) { vals[k] = neg ? -v : v; found++; }
+                while (p < s.size() && is_ws(s[p])) p++;
+            }
+            while (p < s.size() && s[p] != ']') p++;
+            if (p < s.size() && s[p] == ']') p++;
+            if (found == 3) {
+                AtomicWriterEntry e;
+                e.ch = (int)vals[0];
+                e.op = (int)vals[1];
+                e.byte_index = (int)vals[2];
+                out.push_back(e);
+            }
+        } else {
+            p++;
+        }
+    }
+    return true;
+}
+
+bool load_user(const std::string& json_path, std::string& out) {
+    std::string s;
+    if (!read_file(json_path, s)) return false;
+    size_t p = s.find("\"user\":");
+    if (p == std::string::npos) return false;
+    p += std::strlen("\"user\":");
+    while (p < s.size() && (s[p]==' '||s[p]=='\t'||s[p]=='\n')) p++;
+    if (p >= s.size() || s[p] != '"') return false;
+    p++;
+    out.clear();
+    while (p < s.size() && s[p] != '"') {
+        if (s[p] == '\\' && p + 1 < s.size()) {
+            char nx = s[p+1];
+            if (nx == 'n') out.push_back('\n');
+            else if (nx == 't') out.push_back('\t');
+            else if (nx == 'r') out.push_back('\r');
+            else if (nx == '"') out.push_back('"');
+            else if (nx == '\\') out.push_back('\\');
+            else out.push_back(nx);
+            p += 2;
+        } else {
+            out.push_back(s[p]);
+            p++;
+        }
+    }
+    return true;
+}
+
 // ---------- Threaded-code property verification ----------
 
 std::pair<int, int> verify_threaded_code(const std::vector<IRInstr>& ir) {
@@ -209,6 +284,53 @@ InterpStats run_ir(const std::vector<IRInstr>& ir) {
 #include "pafet_byte_writer_x.h"
 
 namespace pafet_vii {
+
+InterpStats run_ir_with_user_dynamic(
+    const std::vector<IRInstr>& ir,
+    const std::string& user,
+    const std::vector<AtomicWriterEntry>& atomic_pairs) {
+    init_helper_table();
+    InterpStats st;
+    std::set<uint16_t> covered_pairs;
+    const uint8_t* u = reinterpret_cast<const uint8_t*>(user.data());
+    const size_t L = user.size();
+
+    // Sequential iteration: match (ch, op) to the NEXT expected atomic
+    // pair. Handles duplicated (ch, op) pairs that encode different byte
+    // positions (observed in ASLR-affected captures like alice where
+    // byte 0 and byte 4 can share a pair).
+    size_t next_atomic = 0;
+
+    int byte_pos = 0;
+    for (const auto& e : ir) {
+        st.instructions_executed++;
+        if (e.ch < 0 || e.ch >= 4 || e.op < 0 || e.op >= 62) continue;
+        PairHelpers& ph = g_helpers[e.ch][e.op];
+        bool any = false;
+        if (ph.h3a50) { st.helper_h3a50_calls++; any = true; }
+        if (ph.h3880) { st.helper_h3880_calls++; any = true; }
+        if (ph.h5b50) { st.helper_h5b50_calls++; any = true; }
+        if (any) covered_pairs.insert(static_cast<uint16_t>(e.ch * 100 + e.op));
+
+        // Check if this instr matches the next expected atomic pair in sequence
+        if (next_atomic < atomic_pairs.size()
+            && atomic_pairs[next_atomic].ch == e.ch
+            && atomic_pairs[next_atomic].op == e.op
+            && byte_pos < static_cast<int>(L)) {
+            uint8_t out = pafet_x::byte_writer(u, L, byte_pos);
+            st.output_buffer.push_back(out);
+            st.byte_writer_hits++;
+            byte_pos++;
+            next_atomic++;
+        }
+    }
+    st.helper_coverage_pairs = static_cast<int>(covered_pairs.size());
+    auto thr = verify_threaded_code(ir);
+    st.threaded_chain_matches = thr.first;
+    st.threaded_chain_mismatches = thr.second;
+    st.completed = true;
+    return st;
+}
 
 InterpStats run_ir_with_user(const std::vector<IRInstr>& ir,
                               const std::string& user) {

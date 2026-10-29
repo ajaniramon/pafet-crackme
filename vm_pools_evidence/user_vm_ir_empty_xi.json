@@ -1,0 +1,452 @@
+{
+ "user": "",
+ "len": 0,
+ "serial": "serial01",
+ "expected_f_user_hex": "",
+ "atomic_pairs": [],
+ "atomic_pairs_found": 0,
+ "program": [
+  {
+   "idx": 0,
+   "ch": 1,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 1,
+   "ch": 3,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 7
+  },
+  {
+   "idx": 2,
+   "ch": 2,
+   "op": 7,
+   "operands": [],
+   "next_op_encoded": 53
+  },
+  {
+   "idx": 3,
+   "ch": 0,
+   "op": 53,
+   "operands": [],
+   "next_op_encoded": 17
+  },
+  {
+   "idx": 4,
+   "ch": 0,
+   "op": 17,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 5,
+   "ch": 3,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 6,
+   "ch": 1,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 24
+  },
+  {
+   "idx": 7,
+   "ch": 0,
+   "op": 24,
+   "operands": [],
+   "next_op_encoded": 17
+  },
+  {
+   "idx": 8,
+   "ch": 0,
+   "op": 17,
+   "operands": [],
+   "next_op_encoded": 6
+  },
+  {
+   "idx": 9,
+   "ch": 3,
+   "op": 6,
+   "operands": [],
+   "next_op_encoded": 54
+  },
+  {
+   "idx": 10,
+   "ch": 0,
+   "op": 54,
+   "operands": [],
+   "next_op_encoded": 22
+  },
+  {
+   "idx": 11,
+   "ch": 0,
+   "op": 22,
+   "operands": [],
+   "next_op_encoded": 28
+  },
+  {
+   "idx": 12,
+   "ch": 3,
+   "op": 28,
+   "operands": [],
+   "next_op_encoded": 19
+  },
+  {
+   "idx": 13,
+   "ch": 2,
+   "op": 19,
+   "operands": [],
+   "next_op_encoded": 59
+  },
+  {
+   "idx": 14,
+   "ch": 2,
+   "op": 59,
+   "operands": [],
+   "next_op_encoded": 31
+  },
+  {
+   "idx": 15,
+   "ch": 3,
+   "op": 31,
+   "operands": [],
+   "next_op_encoded": 37
+  },
+  {
+   "idx": 16,
+   "ch": 0,
+   "op": 37,
+   "operands": [],
+   "next_op_encoded": 59
+  },
+  {
+   "idx": 17,
+   "ch": 2,
+   "op": 59,
+   "operands": [],
+   "next_op_encoded": 59
+  },
+  {
+   "idx": 18,
+   "ch": 2,
+   "op": 59,
+   "operands": [],
+   "next_op_encoded": 44
+  },
+  {
+   "idx": 19,
+   "ch": 1,
+   "op": 44,
+   "operands": [],
+   "next_op_encoded": 31
+  },
+  {
+   "idx": 20,
+   "ch": 3,
+   "op": 31,
+   "operands": [],
+   "next_op_encoded": 1
+  },
+  {
+   "idx": 21,
+   "ch": 1,
+   "op": 1,
+   "operands": [],
+   "next_op_encoded": 46
+  },
+  {
+   "idx": 22,
+   "ch": 0,
+   "op": 46,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 23,
+   "ch": 0,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 4
+  },
+  {
+   "idx": 24,
+   "ch": 2,
+   "op": 4,
+   "operands": [],
+   "next_op_encoded": 14
+  },
+  {
+   "idx": 25,
+   "ch": 2,
+   "op": 14,
+   "operands": [],
+   "next_op_encoded": 9
+  },
+  {
+   "idx": 26,
+   "ch": 3,
+   "op": 9,
+   "operands": [],
+   "next_op_encoded": 18
+  },
+  {
+   "idx": 27,
+   "ch": 2,
+   "op": 18,
+   "operands": [],
+   "next_op_encoded": 1
+  },
+  {
+   "idx": 28,
+   "ch": 0,
+   "op": 1,
+   "operands": [],
+   "next_op_encoded": 12
+  },
+  {
+   "idx": 29,
+   "ch": 0,
+   "op": 12,
+   "operands": [],
+   "next_op_encoded": 53
+  },
+  {
+   "idx": 30,
+   "ch": 0,
+   "op": 53,
+   "operands": [],
+   "next_op_encoded": 55
+  },
+  {
+   "idx": 31,
+   "ch": 1,
+   "op": 55,
+   "operands": [],
+   "next_op_encoded": 36
+  },
+  {
+   "idx": 32,
+   "ch": 0,
+   "op": 36,
+   "operands": [],
+   "next_op_encoded": 40
+  },
+  {
+   "idx": 33,
+   "ch": 3,
+   "op": 40,
+   "operands": [],
+   "next_op_encoded": 36
+  },
+  {
+   "idx": 34,
+   "ch": 3,
+   "op": 36,
+   "operands": [],
+   "next_op_encoded": 60
+  },
+  {
+   "idx": 35,
+   "ch": 0,
+   "op": 60,
+   "operands": [],
+   "next_op_encoded": 12
+  },
+  {
+   "idx": 36,
+   "ch": 2,
+   "op": 12,
+   "operands": [],
+   "next_op_encoded": 30
+  },
+  {
+   "idx": 37,
+   "ch": 1,
+   "op": 30,
+   "operands": [],
+   "next_op_encoded": 41
+  },
+  {
+   "idx": 38,
+   "ch": 2,
+   "op": 41,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 39,
+   "ch": 1,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 52
+  },
+  {
+   "idx": 40,
+   "ch": 3,
+   "op": 52,
+   "operands": [],
+   "next_op_encoded": 33
+  },
+  {
+   "idx": 41,
+   "ch": 2,
+   "op": 33,
+   "operands": [],
+   "next_op_encoded": 36
+  },
+  {
+   "idx": 42,
+   "ch": 0,
+   "op": 36,
+   "operands": [],
+   "next_op_encoded": 52
+  },
+  {
+   "idx": 43,
+   "ch": 3,
+   "op": 52,
+   "operands": [],
+   "next_op_encoded": 3
+  },
+  {
+   "idx": 44,
+   "ch": 1,
+   "op": 3,
+   "operands": [],
+   "next_op_encoded": 52
+  },
+  {
+   "idx": 45,
+   "ch": 3,
+   "op": 52,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 46,
+   "ch": 1,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 47
+  },
+  {
+   "idx": 47,
+   "ch": 3,
+   "op": 47,
+   "operands": [],
+   "next_op_encoded": 34
+  },
+  {
+   "idx": 48,
+   "ch": 1,
+   "op": 34,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 49,
+   "ch": 3,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 4
+  },
+  {
+   "idx": 50,
+   "ch": 2,
+   "op": 4,
+   "operands": [],
+   "next_op_encoded": 56
+  },
+  {
+   "idx": 51,
+   "ch": 1,
+   "op": 56,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 52,
+   "ch": 2,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 55
+  },
+  {
+   "idx": 53,
+   "ch": 2,
+   "op": 55,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 54,
+   "ch": 0,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 42
+  },
+  {
+   "idx": 55,
+   "ch": 0,
+   "op": 42,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 56,
+   "ch": 3,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 57,
+   "ch": 0,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 58,
+   "ch": 2,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 34
+  },
+  {
+   "idx": 59,
+   "ch": 1,
+   "op": 34,
+   "operands": [],
+   "next_op_encoded": 6
+  },
+  {
+   "idx": 60,
+   "ch": 3,
+   "op": 6,
+   "operands": [],
+   "next_op_encoded": 39
+  },
+  {
+   "idx": 61,
+   "ch": 0,
+   "op": 39,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 62,
+   "ch": 3,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 0
+  }
+ ],
+ "transitions_count": 2
+}

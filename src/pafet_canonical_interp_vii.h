@@ -42,8 +42,17 @@ struct InterpStats {
     bool completed = false;
 };
 
+// Jack XI: full definition before any use.
+struct AtomicWriterEntry { int ch; int op; int byte_index; };
+
 // Load IR from JSON (format: {"user": "...", "program": [{idx, ch, op, operands, next_op_encoded}, ...]})
 bool load_ir(const std::string& json_path, std::vector<IRInstr>& out);
+
+// Jack XI: load atomic_pairs array from JSON (format: "atomic_pairs": [[ch, op, byte_index], ...])
+bool load_atomic_pairs(const std::string& json_path,
+                        std::vector<AtomicWriterEntry>& out);
+// Jack XI: load the user string field from JSON (format: "user": "...")
+bool load_user(const std::string& json_path, std::string& out);
 
 // Run the IR. The interpreter maintains a tiny simulated ctx state;
 // native helpers are called where mapped. Returns stats.
@@ -55,6 +64,16 @@ InterpStats run_ir(const std::vector<IRInstr>& ir);
 // the output buffer in the stats. Verify byte-exact against f_user.
 InterpStats run_ir_with_user(const std::vector<IRInstr>& ir,
                               const std::string& user);
+
+// Jack XI: Run the IR with an input username AND an explicit list of
+// atomic byte-writer (ch, op) pairs captured for THIS input (position in
+// the list is the byte_index for that writer). This generalises
+// run_ir_with_user to arbitrary lengths without hardcoding the atomic
+// pairs for length 5.
+InterpStats run_ir_with_user_dynamic(
+    const std::vector<IRInstr>& ir,
+    const std::string& user,
+    const std::vector<AtomicWriterEntry>& atomic_pairs);
 
 // Verify the threaded-code property: for every i, ir[i].next_op_encoded
 // should equal ir[i+1].op. Returns {matches, mismatches}.
