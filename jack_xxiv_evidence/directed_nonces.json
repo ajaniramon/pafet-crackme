@@ -1,0 +1,13 @@
+{
+  "dummy_lookup": {
+    "nonce": 17457021554351477263,
+    "trial": 46,
+    "r10_at_predicate": 5251152041018021397
+  },
+  "table_remap": {
+    "nonce": 17457021554351478479,
+    "trial": 1262,
+    "r10_at_predicate": 11943454332719584965
+  },
+  "trials": 1263
+}

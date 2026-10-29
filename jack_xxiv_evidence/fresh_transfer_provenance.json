@@ -1,0 +1,8 @@
+{
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "oracle_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "collector_sha256": "863f0791ccdb060b629a03d20804d32797f79ce7e21c7d3eae1920ff5dd3582a",
+  "frames": 6,
+  "selection_policy": "entry next opcode is block transfer",
+  "scope": "Windows original user-VM instructions in preexisting two-byte gate variant. All GPRs and selected memory at native entry/return; initial RFLAGS/XMM not exposed by Frida."
+}

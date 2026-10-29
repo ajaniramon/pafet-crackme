@@ -1,0 +1,6 @@
+{
+  "case": "alice",
+  "vector": 0,
+  "failure": "AssertionError(('C++ translation failed', 'alice', 0, '0x1400489d0', 'mov', 'rax, qword ptr [r8]', 3, 'instruction not in translated CFG', '0x1400489d0'))",
+  "selection": "unfiltered"
+}
