@@ -1,6 +1,6 @@
 {
   "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
-  "generated_source_sha256": "56d5d5e7b319f4dc3a136e1b757e22647afc69d14baf6e9b0a9f0c8bc1f24f83",
+  "generated_source_sha256": "4a5cc4b0c1de61a50b0774039fb1b69ce79d82701157551741c0bf17c0aceac5",
   "entry_points": [
     5368714384,
     5368714432,
@@ -36,6 +36,7 @@
     5368748480,
     5368755824,
     5368759536,
+    5368793600,
     5368797216,
     5368815424,
     5368823952,
@@ -57,7 +58,7 @@
     5372501808,
     5372526016
   ],
-  "instructions": 19900,
+  "instructions": 20720,
   "untranslated_direct_targets": [
     5372516300,
     5372522480,

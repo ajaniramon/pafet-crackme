@@ -20,7 +20,7 @@ Desde la raíz del repositorio:
 
 ```powershell
 python scripts/pafet_audit_xxiv.py
-python scripts/pafet_lift_xxiv.py --observed-families 1,5,26,32 --entry 0x14003bea0 --entry 0x14039df30 --entry 0x140048960 --entry 0x1403a3dc0
+python scripts/pafet_lift_xxiv.py --observed-families 1,5,26,32 --entry 0x14003bea0 --entry 0x14039df30 --entry 0x140048960 --entry 0x1403a3dc0 --entry 0x140014a00
 python scripts/pafet_capture_native_xxiv.py
 ```
 
@@ -30,6 +30,10 @@ En Linux/WSL con GCC, pefile, capstone y unicorn:
 python3 scripts/pafet_native_diff_xxiv.py
 python3 scripts/pafet_directed_xxiv.py --no-build
 python3 scripts/pafet_fresh_diff_xxiv.py --no-build
+python3 scripts/pafet_coverage_xxiv.py
+python3 scripts/pafet_native_diff_xxiv.py --no-build --handler 14a00
+python3 scripts/pafet_directed_xxiv.py --no-build --handler 14a00
+python3 scripts/pafet_coverage_xxiv.py --handler 14a00
 ```
 
 Si las dependencias Python no están instaladas en WSL, esta máquina dispone
@@ -81,8 +85,20 @@ guardan en el repositorio del escritorio; las copias de checkpoint están en
   CFG cerrado no tiene `ret` ni saltos indirectos. No cubre la maquinaria
   de excepciones del sistema.
 
-Próximo cierre: recapturar el cookie del proceso para `alice` 0 y revisar
-la dependencia de lanzamiento de excepciones de los handlers anidados.
+- Segundo núcleo DROP, `0x140014a00` (820 instrucciones, 3586 bytes): el
+  cuerpo es un 98% idéntico al de `0x14003bea0` y comparte todos sus callees.
+  Sus seis vectores históricos pasan en lockstep. Los casos dirigidos usan el
+  mismo layout de contexto y las pruebas se anclan en sus propias
+  direcciones, verificando que la LUT, el `xor bpl,0xeb` y el `cmp bpl,0x3e`
+  son los mismos. Cobertura: 32 aristas observadas y 2 inalcanzables de 34;
+  776 instrucciones observadas y 44 inalcanzables de 820.
+- Nuevo caso dirigido `skip_state` en ambos handlers: el valor de
+  `ctx+0xce0` se busca con el modelo C++ hasta que `cmp r8b,1`, tras el
+  polinomio de paridad, se cumple. Los diecisiete casos pasan en los dos.
+
+Próximo cierre: recapturar el cookie del proceso para `alice` 0, revisar
+la dependencia de lanzamiento de excepciones de los handlers anidados y
+seguir con `0x140015820`, `0x140025020` y `0x1400216d0`.
 
 Los resultados incrementales están en `jack_xxiv_evidence/`. El original
 `pafet.bin` debe conservar SHA-256

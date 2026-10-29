@@ -22458,6 +22458,2466 @@ c.rip=next;return;}
 case UINT64_C(0x14000d7ce): {next=c.rip+1; // int3 
 throw Fault(5,c.rip,"INT3");
 c.rip=next;return;}
+case UINT64_C(0x140014a00): {next=c.rip+5; // mov qword ptr [rsp + 0x18], r8
+put(Operand{2,0,64,0,4,-1,1,0,24,UINT64_C(0x0)},get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a05): {next=c.rip+1; // push rbx
+push(get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a06): {next=c.rip+1; // push rdi
+push(get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a07): {next=c.rip+2; // push r15
+push(get(Operand{0,15,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a09): {next=c.rip+4; // sub rsp, 0x40
+put(Operand{0,4,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,4,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x40)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014a0d): {next=c.rip+7; // movsxd rax, dword ptr [rcx + 0x154]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,1,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140014a14): {next=c.rip+3; // mov rdi, rcx
+put(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a17): {next=c.rip+3; // mov r15d, edx
+put(Operand{0,15,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a1a): {next=c.rip+10; // movabs rcx, 0x4328aeb5b475ce75
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x4328aeb5b475ce75)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a24): {next=c.rip+4; // imul rax, rcx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014a28): {next=c.rip+10; // movabs rcx, 0xe171247e35ab4a4a
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xe171247e35ab4a4a)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a32): {next=c.rip+3; // mov rbx, r8
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a35): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xe0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,224,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014a3c): {next=c.rip+5; // mov qword ptr [rsp + 0x60], rax
+put(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a41): {next=c.rip+5; // mov rax, qword ptr [rsp + 0x60]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a46): {next=c.rip+7; // movsxd rax, dword ptr [rdi + 0x154]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140014a4d): {next=c.rip+4; // imul rax, rcx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014a51): {next=c.rip+10; // movabs rcx, 0x7b9ba20b6e0c65f
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x7b9ba20b6e0c65f)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a5b): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xe0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,224,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014a62): {next=c.rip+5; // mov qword ptr [rsp + 0x60], rax
+put(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a67): {next=c.rip+5; // mov rax, qword ptr [rsp + 0x60]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a6c): {next=c.rip+7; // movsxd rax, dword ptr [rdi + 0x154]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140014a73): {next=c.rip+4; // imul rax, rcx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014a77): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xe0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,224,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014a7e): {next=c.rip+5; // mov qword ptr [rsp + 0x60], rax
+put(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a83): {next=c.rip+5; // mov rax, qword ptr [rsp + 0x60]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a88): {next=c.rip+7; // mov rax, qword ptr [rdi + 0x100]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,256,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a8f): {next=c.rip+4; // shr rax, 0xd
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0xd)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014a93): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014a96): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014a9a): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014a9d): {next=c.rip+10; // movabs rax, 0xff51afd7ed558ccd
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x140014aa7): {next=c.rip+4; // imul rcx, rax
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014aab): {next=c.rip+10; // movabs rax, 0xc4ceb9fe1a85ec53
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ab5): {next=c.rip+3; // mov rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ab8): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014abc): {next=c.rip+3; // xor rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014abf): {next=c.rip+4; // imul rdx, rax
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014ac3): {next=c.rip+10; // movabs rax, 0x706e8465dde5e6f3
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x706e8465dde5e6f3)}));
+c.rip=next;return;}
+case UINT64_C(0x140014acd): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ad0): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014ad4): {next=c.rip+3; // xor rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ad7): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ada): {next=c.rip+7; // mov rax, qword ptr [rdi + 0x100]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,256,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ae1): {next=c.rip+3; // add rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014ae4): {next=c.rip+7; // mov qword ptr [rdi + 0x100], rcx
+put(Operand{2,0,64,0,7,-1,1,0,256,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014aeb): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014aee): {next=c.rip+5; // call 0x140003a50
+{uint64_t target=next+UINT64_C(0xfffffffffffeef5d);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x140014af3): {next=c.rip+7; // mov rax, qword ptr [rdi + 0x100]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,256,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014afa): {next=c.rip+3; // test r15d, r15d
+logic(get(Operand{0,15,32,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,15,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32);
+c.rip=next;return;}
+case UINT64_C(0x140014afd): {next=c.rip+6; // jns 0x1400157e6
+if(condition(11))next=next+UINT64_C(0xce3);
+c.rip=next;return;}
+case UINT64_C(0x140014b03): {next=c.rip+7; // cmp qword ptr [rdi + 0x1170], rbx
+arithmetic(get(Operand{2,0,64,0,7,-1,1,0,4464,UINT64_C(0x0)}),get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true);
+c.rip=next;return;}
+case UINT64_C(0x140014b0a): {next=c.rip+6; // jne 0x1400157f4
+if(condition(1))next=next+UINT64_C(0xce4);
+c.rip=next;return;}
+case UINT64_C(0x140014b10): {next=c.rip+7; // movsxd rax, dword ptr [rdi + 0x154]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140014b17): {next=c.rip+10; // movabs rcx, 0x1eb7bc57962a6751
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x1eb7bc57962a6751)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b21): {next=c.rip+4; // imul rax, rcx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014b25): {next=c.rip+5; // mov qword ptr [rsp + 0x68], rbp
+put(Operand{2,0,64,0,4,-1,1,0,104,UINT64_C(0x0)},get(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b2a): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xe0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,224,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014b31): {next=c.rip+5; // mov qword ptr [rsp + 0x60], rax
+put(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b36): {next=c.rip+5; // mov rax, qword ptr [rsp + 0x60]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,96,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b3b): {next=c.rip+7; // mov r8, qword ptr [rdi + 0x258]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,600,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b42): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x282]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,642,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b49): {next=c.rip+3; // mov rax, r8
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b4c): {next=c.rip+7; // mov r11, qword ptr [rdi + 0x1f8]
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b53): {next=c.rip+7; // mov rbx, qword ptr [rdi + 0x1e8]
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b5a): {next=c.rip+4; // mov r10, qword ptr [rdi + 0x28]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b5e): {next=c.rip+4; // mov rbp, qword ptr [rdi + 0x30]
+put(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b62): {next=c.rip+4; // imul rcx, r11
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014b66): {next=c.rip+5; // mov qword ptr [rsp + 0x38], rsi
+put(Operand{2,0,64,0,4,-1,1,0,56,UINT64_C(0x0)},get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b6b): {next=c.rip+7; // movzx esi, byte ptr [rdi + 0x200]
+put(Operand{0,6,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b72): {next=c.rip+3; // xor rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014b75): {next=c.rip+5; // mov qword ptr [rsp + 0x30], r12
+put(Operand{2,0,64,0,4,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b7a): {next=c.rip+10; // movabs r12, 0x9e3779b97f4a7c15
+put(Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x9e3779b97f4a7c15)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b84): {next=c.rip+5; // mov qword ptr [rsp + 0x28], r13
+put(Operand{2,0,64,0,4,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b89): {next=c.rip+10; // movabs r13, 0x2545f4914f6cdd1d
+put(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2545f4914f6cdd1d)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b93): {next=c.rip+5; // mov qword ptr [rsp + 0x20], r14
+put(Operand{2,0,64,0,4,-1,1,0,32,UINT64_C(0x0)},get(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b98): {next=c.rip+7; // mov r14, qword ptr [rdi + 0x1f0]
+put(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014b9f): {next=c.rip+4; // imul r9, r14, 0xb
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xb)});
+c.rip=next;return;}
+case UINT64_C(0x140014ba3): {next=c.rip+3; // xor rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ba6): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ba9): {next=c.rip+3; // sub r8, rcx
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014bac): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014baf): {next=c.rip+4; // cmove r8, rax
+if(condition(0))put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bb3): {next=c.rip+3; // inc rbp
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140014bb6): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014bba): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rbp
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bbe): {next=c.rip+3; // mov rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bc1): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014bc4): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r10
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bc8): {next=c.rip+3; // mov rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bcb): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014bcf): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bd2): {next=c.rip+6; // mov byte ptr [rdi + 0x282], dl
+put(Operand{2,0,8,0,7,-1,1,0,642,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bd8): {next=c.rip+4; // imul rdx, r11
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014bdc): {next=c.rip+3; // xor rdx, rbx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014bdf): {next=c.rip+3; // xor rdx, r9
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014be2): {next=c.rip+3; // xor rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014be5): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014be8): {next=c.rip+4; // lea rax, [r8 + rdx]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,8,2,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bec): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bf0): {next=c.rip+7; // mov qword ptr [rdi + 0x258], rax
+put(Operand{2,0,64,0,7,-1,1,0,600,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014bf7): {next=c.rip+3; // test r8d, r8d
+logic(get(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32);
+c.rip=next;return;}
+case UINT64_C(0x140014bfa): {next=c.rip+6; // jne 0x1400157c4
+if(condition(1))next=next+UINT64_C(0xbc4);
+c.rip=next;return;}
+case UINT64_C(0x140014c00): {next=c.rip+7; // cmp dword ptr [rdi + 0x5b8], r8d
+arithmetic(get(Operand{2,0,32,0,7,-1,1,0,1464,UINT64_C(0x0)}),get(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32,true);
+c.rip=next;return;}
+case UINT64_C(0x140014c07): {next=c.rip+6; // jne 0x1400157c4
+if(condition(1))next=next+UINT64_C(0xbb7);
+c.rip=next;return;}
+case UINT64_C(0x140014c0d): {next=c.rip+7; // mov r8, qword ptr [rdi + 0x208]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,520,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c14): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x278]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c1b): {next=c.rip+4; // imul rcx, r11
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014c1f): {next=c.rip+3; // xor rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014c22): {next=c.rip+3; // xor rcx, r14
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014c25): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c28): {next=c.rip+3; // xor rax, r8
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014c2b): {next=c.rip+3; // sub r8, rcx
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014c2e): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014c31): {next=c.rip+4; // cmove r8, rax
+if(condition(0))put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c35): {next=c.rip+4; // lea rax, [rbp + 1]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,5,-1,1,0,1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c39): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c3d): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014c41): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014c44): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r10
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c48): {next=c.rip+3; // mov rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c4b): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014c4f): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c52): {next=c.rip+6; // mov byte ptr [rdi + 0x278], dl
+put(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c58): {next=c.rip+4; // imul rdx, r11
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014c5c): {next=c.rip+3; // xor rdx, rbx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014c5f): {next=c.rip+3; // xor rdx, r14
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014c62): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c65): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014c68): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014c6b): {next=c.rip+4; // lea rax, [rdx + r8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,8,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c6f): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c73): {next=c.rip+7; // mov qword ptr [rdi + 0x208], rax
+put(Operand{2,0,64,0,7,-1,1,0,520,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c7a): {next=c.rip+7; // cmp r8d, 0x3a9671
+arithmetic(get(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x3a9671)}),32,true);
+c.rip=next;return;}
+case UINT64_C(0x140014c81): {next=c.rip+6; // jne 0x1400157c4
+if(condition(1))next=next+UINT64_C(0xb3d);
+c.rip=next;return;}
+case UINT64_C(0x140014c87): {next=c.rip+3; // mov eax, r15d
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,15,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c8a): {next=c.rip+4; // btr eax, 0x1f
+bitop(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1f)},false);
+c.rip=next;return;}
+case UINT64_C(0x140014c8e): {next=c.rip+3; // cmp eax, 2
+arithmetic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x2)}),32,true);
+c.rip=next;return;}
+case UINT64_C(0x140014c91): {next=c.rip+2; // jae 0x140014cd6
+if(condition(3))next=next+UINT64_C(0x43);
+c.rip=next;return;}
+case UINT64_C(0x140014c93): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014c97): {next=c.rip+4; // lea rax, [rbp + 2]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,5,-1,1,0,2,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c9b): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014c9f): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014ca2): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r10
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ca6): {next=c.rip+4; // shr r10, 0x1b
+shift(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014caa): {next=c.rip+4; // movzx eax, r10b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014cae): {next=c.rip+6; // mov byte ptr [rdi + 0x278], al
+put(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014cb4): {next=c.rip+4; // imul rax, r11
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014cb8): {next=c.rip+3; // xor rax, rbx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014cbb): {next=c.rip+3; // xor rax, r14
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014cbe): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014cc1): {next=c.rip+6; // add rax, 0x2316dd
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2316dd)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014cc7): {next=c.rip+7; // xor rcx, 0x2316dd
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2316dd)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014cce): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014cd1): {next=c.rip+5; // jmp 0x1400157b9
+next=next+UINT64_C(0xae3);
+c.rip=next;return;}
+case UINT64_C(0x140014cd6): {next=c.rip+7; // mov r9, qword ptr [rdi + 0x210]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014cdd): {next=c.rip+4; // lea r8, [r14 + r14]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,14,14,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ce1): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x279]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ce8): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ceb): {next=c.rip+4; // imul rcx, r11
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014cef): {next=c.rip+3; // xor rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014cf2): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014cf5): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014cf8): {next=c.rip+3; // sub r9, rcx
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014cfb): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014cfe): {next=c.rip+4; // cmove r9, rax
+if(condition(0))put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d02): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014d06): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014d09): {next=c.rip+3; // mov rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d0c): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014d10): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d13): {next=c.rip+6; // mov byte ptr [rdi + 0x279], dl
+put(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d19): {next=c.rip+4; // imul rdx, r11
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014d1d): {next=c.rip+3; // xor rdx, rbx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d20): {next=c.rip+3; // xor rdx, r8
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d23): {next=c.rip+10; // movabs r8, 0xff51afd7ed558ccd
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d2d): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d30): {next=c.rip+3; // xor rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d33): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014d36): {next=c.rip+4; // lea rax, [rdx + r9]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,9,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d3a): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d3e): {next=c.rip+7; // mov qword ptr [rdi + 0x210], rax
+put(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d45): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0xf09]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,3849,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d4c): {next=c.rip+3; // mov eax, r9d
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d4f): {next=c.rip+10; // movabs r9, 0xc4ceb9fe1a85ec53
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d59): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d5c): {next=c.rip+7; // xor rcx, qword ptr [rdi + 0x158]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,344,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d63): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d66): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014d6a): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d6d): {next=c.rip+4; // imul rax, r8
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014d71): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d74): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014d78): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d7b): {next=c.rip+4; // imul rcx, r9
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014d7f): {next=c.rip+3; // mov rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d82): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014d86): {next=c.rip+3; // xor rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d89): {next=c.rip+7; // mov qword ptr [rdi + 0x158], rdx
+put(Operand{2,0,64,0,7,-1,1,0,344,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014d90): {next=c.rip+7; // xor rdx, qword ptr [rdi + 0xd8]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d97): {next=c.rip+7; // xor rdx, qword ptr [rdi + 0xe0]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,224,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014d9e): {next=c.rip+3; // mov rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014da1): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014da5): {next=c.rip+3; // xor rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014da8): {next=c.rip+4; // imul rax, r8
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014dac): {next=c.rip+4; // lea r8, [r14 + r14*4]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,14,14,4,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014db0): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014db3): {next=c.rip+3; // add r8, r8
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014db6): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014dba): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014dbd): {next=c.rip+4; // imul rcx, r9
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014dc1): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014dc4): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014dc8): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014dcb): {next=c.rip+7; // mov qword ptr [rdi + 0xd8], rax
+put(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014dd2): {next=c.rip+7; // mov rdx, qword ptr [rdi + 0x250]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,592,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014dd9): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x281]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,641,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014de0): {next=c.rip+4; // imul rcx, r11
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014de4): {next=c.rip+3; // xor rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014de7): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014dea): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ded): {next=c.rip+3; // xor rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014df0): {next=c.rip+3; // sub rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014df3): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014df6): {next=c.rip+4; // cmove rdx, rax
+if(condition(0))put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014dfa): {next=c.rip+4; // lea rax, [rbp + 3]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,5,-1,1,0,3,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014dfe): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e02): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014e06): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014e09): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r10
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e0d): {next=c.rip+4; // shr r10, 0x1b
+shift(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014e11): {next=c.rip+4; // movzx eax, r10b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e15): {next=c.rip+6; // mov byte ptr [rdi + 0x281], al
+put(Operand{2,0,8,0,7,-1,1,0,641,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e1b): {next=c.rip+4; // imul rax, r11
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014e1f): {next=c.rip+3; // xor rax, rbx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014e22): {next=c.rip+3; // xor rax, r8
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014e25): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e28): {next=c.rip+3; // add rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014e2b): {next=c.rip+3; // xor rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014e2e): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014e31): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e35): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e38): {next=c.rip+7; // mov qword ptr [rdi + 0x250], rax
+put(Operand{2,0,64,0,7,-1,1,0,592,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e3f): {next=c.rip+5; // call 0x140005b50
+{uint64_t target=next+UINT64_C(0xffffffffffff0d0c);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x140014e44): {next=c.rip+7; // mov rdx, qword ptr [rdi + 0x248]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,584,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e4b): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x280]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,640,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e52): {next=c.rip+7; // mov r10, qword ptr [rdi + 0x1f8]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e59): {next=c.rip+7; // mov rax, qword ptr [rdi + 0x1f0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e60): {next=c.rip+7; // mov rbx, qword ptr [rdi + 0x1e8]
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e67): {next=c.rip+8; // movzx r9d, byte ptr [rdi + 0x200]
+put(Operand{0,9,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e6f): {next=c.rip+4; // imul rcx, r10
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014e73): {next=c.rip+4; // lea r11, [rax + rax*8]
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,0,0,8,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e77): {next=c.rip+3; // mov rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e7a): {next=c.rip+3; // xor rcx, r11
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014e7d): {next=c.rip+3; // xor rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014e80): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014e83): {next=c.rip+3; // sub rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014e86): {next=c.rip+3; // test r9b, r9b
+logic(get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014e89): {next=c.rip+4; // cmove rdx, rax
+if(condition(0))put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e8d): {next=c.rip+4; // mov rax, qword ptr [rdi + 0x28]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e91): {next=c.rip+4; // inc qword ptr [rdi + 0x30]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},arithmetic(get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140014e95): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014e98): {next=c.rip+4; // imul rax, r12
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014e9c): {next=c.rip+3; // add rax, r13
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014e9f): {next=c.rip+4; // mov qword ptr [rdi + 0x28], rax
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ea3): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014ea7): {next=c.rip+4; // movzx r8d, al
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014eab): {next=c.rip+7; // mov byte ptr [rdi + 0x280], r8b
+put(Operand{2,0,8,0,7,-1,1,0,640,UINT64_C(0x0)},get(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014eb2): {next=c.rip+4; // imul r8, r10
+imul(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014eb6): {next=c.rip+3; // xor r8, r11
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014eb9): {next=c.rip+3; // xor r8, rbx
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ebc): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ebf): {next=c.rip+3; // test r9b, r9b
+logic(get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014ec2): {next=c.rip+4; // lea rax, [rdx + r8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,8,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ec6): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014eca): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ecd): {next=c.rip+7; // mov qword ptr [rdi + 0x248], rax
+put(Operand{2,0,64,0,7,-1,1,0,584,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ed4): {next=c.rip+5; // call 0x140005b50
+{uint64_t target=next+UINT64_C(0xffffffffffff0c77);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x140014ed9): {next=c.rip+7; // mov r9, qword ptr [rdi + 0x210]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ee0): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x279]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ee7): {next=c.rip+7; // mov rbx, qword ptr [rdi + 0x1f8]
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014eee): {next=c.rip+7; // mov rsi, qword ptr [rdi + 0x1e8]
+put(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ef5): {next=c.rip+7; // movzx ebp, byte ptr [rdi + 0x200]
+put(Operand{0,5,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014efc): {next=c.rip+4; // mov r10, qword ptr [rdi + 0x28]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f00): {next=c.rip+7; // mov r11, qword ptr [rdi + 0x1f0]
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f07): {next=c.rip+4; // imul rcx, rbx
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014f0b): {next=c.rip+4; // lea r8, [r11 + r11]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,11,11,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f0f): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014f12): {next=c.rip+3; // xor rcx, rsi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014f15): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f18): {next=c.rip+3; // xor rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014f1b): {next=c.rip+3; // sub r9, rcx
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014f1e): {next=c.rip+3; // test bpl, bpl
+logic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014f21): {next=c.rip+4; // cmove r9, rax
+if(condition(0))put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f25): {next=c.rip+4; // inc qword ptr [rdi + 0x30]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},arithmetic(get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140014f29): {next=c.rip+4; // mov r14, qword ptr [rdi + 0x30]
+put(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f2d): {next=c.rip+3; // mov rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f30): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014f34): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014f37): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r10
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f3b): {next=c.rip+3; // mov rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f3e): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014f42): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f45): {next=c.rip+6; // mov byte ptr [rdi + 0x279], dl
+put(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f4b): {next=c.rip+4; // imul rdx, rbx
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014f4f): {next=c.rip+3; // xor rdx, r8
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014f52): {next=c.rip+3; // xor rdx, rsi
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014f55): {next=c.rip+3; // xor rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014f58): {next=c.rip+3; // test bpl, bpl
+logic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014f5b): {next=c.rip+4; // lea rax, [r9 + rdx]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,9,2,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f5f): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f63): {next=c.rip+7; // mov qword ptr [rdi + 0x210], rax
+put(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f6a): {next=c.rip+7; // cmp r9d, dword ptr [rdi + 0x1b8]
+arithmetic(get(Operand{0,9,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{2,0,32,0,7,-1,1,0,440,UINT64_C(0x0)}),32,true);
+c.rip=next;return;}
+case UINT64_C(0x140014f71): {next=c.rip+2; // jae 0x140014fa2
+if(condition(3))next=next+UINT64_C(0x2f);
+c.rip=next;return;}
+case UINT64_C(0x140014f73): {next=c.rip+3; // mov edx, r9d
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f76): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f79): {next=c.rip+5; // call 0x140005b50
+{uint64_t target=next+UINT64_C(0xffffffffffff0bd2);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x140014f7e): {next=c.rip+7; // mov r11, qword ptr [rdi + 0x1f0]
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f85): {next=c.rip+4; // mov r10, qword ptr [rdi + 0x28]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f89): {next=c.rip+7; // mov rbx, qword ptr [rdi + 0x1f8]
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f90): {next=c.rip+7; // mov rsi, qword ptr [rdi + 0x1e8]
+put(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f97): {next=c.rip+7; // movzx ebp, byte ptr [rdi + 0x200]
+put(Operand{0,5,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014f9e): {next=c.rip+4; // mov r14, qword ptr [rdi + 0x30]
+put(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fa2): {next=c.rip+7; // mov r9, qword ptr [rdi + 0x248]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,584,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fa9): {next=c.rip+4; // lea r8, [r11 + r11*8]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,11,11,8,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fad): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x280]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,640,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fb4): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fb7): {next=c.rip+4; // imul rcx, rbx
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014fbb): {next=c.rip+3; // xor rcx, rsi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014fbe): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014fc1): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014fc4): {next=c.rip+3; // sub r9, rcx
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x140014fc7): {next=c.rip+3; // test bpl, bpl
+logic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014fca): {next=c.rip+4; // cmove r9, rax
+if(condition(0))put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fce): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014fd2): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140014fd5): {next=c.rip+3; // mov rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fd8): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140014fdc): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fdf): {next=c.rip+6; // mov byte ptr [rdi + 0x280], dl
+put(Operand{2,0,8,0,7,-1,1,0,640,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014fe5): {next=c.rip+4; // imul rdx, rbx
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140014fe9): {next=c.rip+3; // xor rdx, rsi
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014fec): {next=c.rip+3; // xor rdx, r8
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014fef): {next=c.rip+6; // mov r8d, 0xedba
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0xedba)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ff5): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140014ff8): {next=c.rip+3; // xor rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140014ffb): {next=c.rip+3; // test bpl, bpl
+logic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140014ffe): {next=c.rip+4; // lea rax, [rdx + r9]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,9,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015002): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015006): {next=c.rip+7; // mov qword ptr [rdi + 0x248], rax
+put(Operand{2,0,64,0,7,-1,1,0,584,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001500d): {next=c.rip+4; // lea rax, [r14 + 2]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,14,-1,1,0,2,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015011): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015015): {next=c.rip+4; // lea rax, [r11 + r11*4]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,11,11,4,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015019): {next=c.rip+3; // add rax, rax
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x14001501c): {next=c.rip+4; // imul r10, r12
+imul(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015020): {next=c.rip+3; // add r10, r13
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140015023): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r10
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015027): {next=c.rip+4; // shr r10, 0x1b
+shift(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001502b): {next=c.rip+4; // movzx edx, r10b
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001502f): {next=c.rip+6; // mov byte ptr [rdi + 0x281], dl
+put(Operand{2,0,8,0,7,-1,1,0,641,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015035): {next=c.rip+4; // imul rdx, rbx
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015039): {next=c.rip+3; // xor rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001503c): {next=c.rip+3; // xor rdx, rsi
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001503f): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015042): {next=c.rip+3; // xor rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015045): {next=c.rip+3; // test bpl, bpl
+logic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140015048): {next=c.rip+4; // lea rax, [rdx + r9]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,9,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001504c): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015050): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015053): {next=c.rip+7; // mov qword ptr [rdi + 0x250], rax
+put(Operand{2,0,64,0,7,-1,1,0,592,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001505a): {next=c.rip+7; // movzx edx, byte ptr [rdi + 0xf09]
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,3849,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015061): {next=c.rip+7; // xor rdx, qword ptr [rdi + 0xce0]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,3296,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015068): {next=c.rip+5; // call 0x140006770
+{uint64_t target=next+UINT64_C(0xffffffffffff1703);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x14001506d): {next=c.rip+7; // mov r8, qword ptr [rdi + 0xce0]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,3296,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015074): {next=c.rip+10; // movabs rbx, 0xff51afd7ed558ccd
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x14001507e): {next=c.rip+3; // mov rax, r8
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015081): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xd8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015088): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001508b): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001508f): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015092): {next=c.rip+4; // imul rcx, rbx
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015096): {next=c.rip+10; // movabs rbx, 0xc4ceb9fe1a85ec53
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150a0): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150a3): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400150a7): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400150aa): {next=c.rip+4; // imul rax, rbx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400150ae): {next=c.rip+3; // mov rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150b1): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400150b5): {next=c.rip+2; // xor edx, eax
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32));
+c.rip=next;return;}
+case UINT64_C(0x1400150b7): {next=c.rip+3; // lea eax, [rdx + 1]
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,32,0,2,-1,1,0,1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150ba): {next=c.rip+2; // mov ecx, eax
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150bc): {next=c.rip+2; // xor eax, edx
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32));
+c.rip=next;return;}
+case UINT64_C(0x1400150be): {next=c.rip+3; // imul ecx, edx
+imul(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400150c1): {next=c.rip+2; // not ecx
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},~get(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150c3): {next=c.rip+2; // and ecx, eax
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32));
+c.rip=next;return;}
+case UINT64_C(0x1400150c5): {next=c.rip+3; // test cl, 1
+logic(get(Operand{0,1,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1)}),8);
+c.rip=next;return;}
+case UINT64_C(0x1400150c8): {next=c.rip+2; // je 0x140015126
+if(condition(0))next=next+UINT64_C(0x5c);
+c.rip=next;return;}
+case UINT64_C(0x1400150ca): {next=c.rip+4; // and r8b, 3
+put(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x3)}),8));
+c.rip=next;return;}
+case UINT64_C(0x1400150ce): {next=c.rip+4; // cmp r8b, 1
+arithmetic(get(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1)}),8,true);
+c.rip=next;return;}
+case UINT64_C(0x1400150d2): {next=c.rip+2; // jne 0x140015126
+if(condition(1))next=next+UINT64_C(0x52);
+c.rip=next;return;}
+case UINT64_C(0x1400150d4): {next=c.rip+4; // mov rax, qword ptr [rdi + 0x28]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150d8): {next=c.rip+4; // inc qword ptr [rdi + 0x30]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},arithmetic(get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x1400150dc): {next=c.rip+4; // imul rax, r12
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400150e0): {next=c.rip+3; // add rax, r13
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400150e3): {next=c.rip+4; // mov qword ptr [rdi + 0x28], rax
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150e7): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400150eb): {next=c.rip+3; // movzx eax, al
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150ee): {next=c.rip+6; // mov byte ptr [rdi + 0x278], al
+put(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400150f4): {next=c.rip+8; // imul rax, qword ptr [rdi + 0x1f8]
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400150fc): {next=c.rip+7; // xor rax, qword ptr [rdi + 0x1f0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015103): {next=c.rip+7; // xor rax, qword ptr [rdi + 0x1e8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001510a): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001510d): {next=c.rip+6; // add rax, 0x2b37a3
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2b37a3)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140015113): {next=c.rip+7; // xor rcx, 0x2b37a3
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2b37a3)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001511a): {next=c.rip+7; // cmp byte ptr [rdi + 0x200], 0
+arithmetic(get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}),get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8,true);
+c.rip=next;return;}
+case UINT64_C(0x140015121): {next=c.rip+5; // jmp 0x1400157b9
+next=next+UINT64_C(0x693);
+c.rip=next;return;}
+case UINT64_C(0x140015126): {next=c.rip+7; // mov rbx, qword ptr [rdi + 0x210]
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001512d): {next=c.rip+7; // movzx ecx, byte ptr [rdi + 0x279]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015134): {next=c.rip+7; // mov r10, qword ptr [rdi + 0x1f8]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001513b): {next=c.rip+7; // mov r11, qword ptr [rdi + 0x1e8]
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015142): {next=c.rip+7; // movzx esi, byte ptr [rdi + 0x200]
+put(Operand{0,6,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015149): {next=c.rip+4; // mov r9, qword ptr [rdi + 0x28]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001514d): {next=c.rip+7; // mov r14, qword ptr [rdi + 0x1f0]
+put(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015154): {next=c.rip+4; // mov rbp, qword ptr [rdi + 0x30]
+put(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015158): {next=c.rip+4; // imul rcx, r10
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001515c): {next=c.rip+4; // lea r8, [r14 + r14]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,14,14,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015160): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015163): {next=c.rip+3; // xor rcx, r11
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015166): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015169): {next=c.rip+3; // xor rax, rbx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001516c): {next=c.rip+3; // sub rbx, rcx
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,true));
+c.rip=next;return;}
+case UINT64_C(0x14001516f): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140015172): {next=c.rip+4; // cmove rbx, rax
+if(condition(0))put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015176): {next=c.rip+3; // inc rbp
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140015179): {next=c.rip+4; // imul r9, r12
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001517d): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rbp
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015181): {next=c.rip+3; // mov rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015184): {next=c.rip+3; // add r9, r13
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140015187): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r9
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001518b): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001518e): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015192): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015195): {next=c.rip+6; // mov byte ptr [rdi + 0x279], dl
+put(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001519b): {next=c.rip+4; // imul rdx, r10
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001519f): {next=c.rip+3; // xor rdx, r8
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400151a2): {next=c.rip+3; // xor rdx, r11
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400151a5): {next=c.rip+3; // xor rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400151a8): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x1400151ab): {next=c.rip+4; // lea rax, [rbx + rdx]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,3,2,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151af): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151b3): {next=c.rip+7; // mov qword ptr [rdi + 0x210], rax
+put(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151ba): {next=c.rip+6; // cmp ebx, dword ptr [rdi + 0x1b8]
+arithmetic(get(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{2,0,32,0,7,-1,1,0,440,UINT64_C(0x0)}),32,true);
+c.rip=next;return;}
+case UINT64_C(0x1400151c0): {next=c.rip+2; // jb 0x140015205
+if(condition(2))next=next+UINT64_C(0x43);
+c.rip=next;return;}
+case UINT64_C(0x1400151c2): {next=c.rip+4; // imul r9, r12
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400151c6): {next=c.rip+4; // lea rax, [rbp + 1]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,5,-1,1,0,1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151ca): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151ce): {next=c.rip+3; // add r9, r13
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400151d1): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r9
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151d5): {next=c.rip+4; // shr r9, 0x1b
+shift(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400151d9): {next=c.rip+4; // movzx eax, r9b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151dd): {next=c.rip+6; // mov byte ptr [rdi + 0x278], al
+put(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151e3): {next=c.rip+4; // imul rax, r10
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400151e7): {next=c.rip+3; // xor rax, r11
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400151ea): {next=c.rip+3; // xor rax, r14
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400151ed): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400151f0): {next=c.rip+6; // add rax, 0x2a669
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2a669)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400151f6): {next=c.rip+7; // xor rcx, 0x2a669
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2a669)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400151fd): {next=c.rip+3; // test sil, sil
+logic(get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,6,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140015200): {next=c.rip+5; // jmp 0x1400157b9
+next=next+UINT64_C(0x5b4);
+c.rip=next;return;}
+case UINT64_C(0x140015205): {next=c.rip+2; // mov edx, ebx
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015207): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001520a): {next=c.rip+5; // call 0x140007bf0
+{uint64_t target=next+UINT64_C(0xffffffffffff29e1);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x14001520f): {next=c.rip+7; // movsxd rcx, dword ptr [rdi + 0x154]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140015216): {next=c.rip+10; // movabs r8, 0xd6e8feb86659fd93
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xd6e8feb86659fd93)}));
+c.rip=next;return;}
+case UINT64_C(0x140015220): {next=c.rip+7; // mov rdx, qword ptr [rdi + 0xd8]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015227): {next=c.rip+10; // movabs r11, 0xff51afd7ed558ccd
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x140015231): {next=c.rip+4; // imul rcx, r12
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015235): {next=c.rip+4; // rol rdx, 0x11
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x11)},2);
+c.rip=next;return;}
+case UINT64_C(0x140015239): {next=c.rip+10; // movabs rsi, 0xc4ceb9fe1a85ec53
+put(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x140015243): {next=c.rip+7; // xor rcx, qword ptr [rdi + 0x688]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,1672,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001524a): {next=c.rip+2; // mov eax, ebx
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001524c): {next=c.rip+4; // imul rax, r8
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015250): {next=c.rip+2; // mov ebp, ebx
+put(Operand{0,5,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015252): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015255): {next=c.rip+3; // xor rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015258): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001525b): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001525f): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015262): {next=c.rip+4; // imul rcx, r11
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015266): {next=c.rip+3; // mov rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015269): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001526d): {next=c.rip+3; // xor rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015270): {next=c.rip+4; // imul rdx, rsi
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015274): {next=c.rip+3; // mov rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015277): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001527b): {next=c.rip+3; // xor rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001527e): {next=c.rip+3; // mov r10, rax
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015281): {next=c.rip+4; // shr r10, 0x1d
+shift(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1d)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015285): {next=c.rip+3; // xor r10, rax
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015288): {next=c.rip+4; // or r10, 1
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)})|get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x1)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001528c): {next=c.rip+3; // mov rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001528f): {next=c.rip+7; // mov qword ptr [rdi + 0x688], r10
+put(Operand{2,0,64,0,7,-1,1,0,1672,UINT64_C(0x0)},get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015296): {next=c.rip+5; // and eax, 0x3ff
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x3ff)}),32));
+c.rip=next;return;}
+case UINT64_C(0x14001529b): {next=c.rip+6; // cmp rax, 0x2c5
+arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2c5)}),64,true);
+c.rip=next;return;}
+case UINT64_C(0x1400152a1): {next=c.rip+2; // jne 0x1400152bc
+if(condition(1))next=next+UINT64_C(0x19);
+c.rip=next;return;}
+case UINT64_C(0x1400152a3): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152a6): {next=c.rip+5; // call 0x14003ebe0
+{uint64_t target=next+UINT64_C(0x29935);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x1400152ab): {next=c.rip+7; // mov r10, qword ptr [rdi + 0x688]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,1672,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152b2): {next=c.rip+10; // movabs r11, 0xff51afd7ed558ccd
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152bc): {next=c.rip+4; // movzx eax, r10b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,10,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152c0): {next=c.rip+2; // and al, 0x1f
+put(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1f)}),8));
+c.rip=next;return;}
+case UINT64_C(0x1400152c2): {next=c.rip+2; // cmp al, 0x15
+arithmetic(get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x15)}),8,true);
+c.rip=next;return;}
+case UINT64_C(0x1400152c4): {next=c.rip+6; // jne 0x1400153b5
+if(condition(1))next=next+UINT64_C(0xeb);
+c.rip=next;return;}
+case UINT64_C(0x1400152ca): {next=c.rip+7; // movsxd rcx, dword ptr [rdi + 0x154]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x1400152d1): {next=c.rip+7; // mov rax, qword ptr [rdi + 0xd8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152d8): {next=c.rip+7; // xor rcx, 0x5a5a
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x5a5a)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400152df): {next=c.rip+4; // rol rax, 0x11
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x11)},2);
+c.rip=next;return;}
+case UINT64_C(0x1400152e3): {next=c.rip+4; // imul rcx, r12
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400152e7): {next=c.rip+3; // xor rcx, r10
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400152ea): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400152ed): {next=c.rip+10; // movabs rax, 0x8f70feda99a6026d
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x8f70feda99a6026d)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152f7): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400152fa): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400152fd): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015301): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015304): {next=c.rip+4; // imul rax, r11
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015308): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001530b): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001530f): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015312): {next=c.rip+4; // imul rcx, rsi
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015316): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015319): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001531d): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015320): {next=c.rip+3; // mov r9, rax
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015323): {next=c.rip+4; // shr r9, 0x1d
+shift(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1d)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015327): {next=c.rip+3; // xor r9, rax
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001532a): {next=c.rip+4; // or r9, 1
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)})|get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x1)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001532e): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015331): {next=c.rip+3; // mov rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015334): {next=c.rip+4; // shr rax, 8
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x8)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015338): {next=c.rip+3; // and eax, 3
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x3)}),32));
+c.rip=next;return;}
+case UINT64_C(0x14001533b): {next=c.rip+4; // shr rcx, 0x28
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x28)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001533f): {next=c.rip+4; // imul r8, rax, 0x3e
+imul(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x3e)});
+c.rip=next;return;}
+case UINT64_C(0x140015343): {next=c.rip+5; // mov eax, 0x8421085
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x8421085)}));
+c.rip=next;return;}
+case UINT64_C(0x140015348): {next=c.rip+2; // mul ecx
+mul(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001534a): {next=c.rip+2; // mov eax, ecx
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001534c): {next=c.rip+2; // sub eax, edx
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32,true));
+c.rip=next;return;}
+case UINT64_C(0x14001534e): {next=c.rip+2; // shr eax, 1
+shift(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x1)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015350): {next=c.rip+2; // add eax, edx
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32,false));
+c.rip=next;return;}
+case UINT64_C(0x140015352): {next=c.rip+3; // shr eax, 5
+shift(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x5)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015355): {next=c.rip+3; // imul eax, eax, 0x3e
+imul(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x3e)});
+c.rip=next;return;}
+case UINT64_C(0x140015358): {next=c.rip+2; // sub ecx, eax
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32,true));
+c.rip=next;return;}
+case UINT64_C(0x14001535a): {next=c.rip+2; // mov eax, ecx
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001535c): {next=c.rip+3; // add r8, rax
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x14001535f): {next=c.rip+7; // mov rax, qword ptr [rdi + 0xf40]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,3904,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015366): {next=c.rip+4; // movsxd rcx, dword ptr [rax + r8*4]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,0,8,4,0,0,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x14001536a): {next=c.rip+7; // movsxd rax, dword ptr [rdi + 0xf50]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,3920,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140015371): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015374): {next=c.rip+7; // add rcx, qword ptr [rdi + 0xf48]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{2,0,64,0,7,-1,1,0,3912,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x14001537b): {next=c.rip+3; // xor rcx, r9
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001537e): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015381): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015385): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015388): {next=c.rip+4; // imul rax, r11
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001538c): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001538f): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015393): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015396): {next=c.rip+4; // imul rcx, rsi
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001539a): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001539d): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400153a1): {next=c.rip+3; // xor rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400153a4): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400153a7): {next=c.rip+7; // inc qword ptr [rdi + 0x690]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,64,0,7,-1,1,0,1680,UINT64_C(0x0)},arithmetic(get(Operand{2,0,64,0,7,-1,1,0,1680,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x1400153ae): {next=c.rip+7; // mov qword ptr [rdi + 0x688], rax
+put(Operand{2,0,64,0,7,-1,1,0,1672,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153b5): {next=c.rip+6; // inc dword ptr [rdi + 0x1194]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,32,0,7,-1,1,0,4500,UINT64_C(0x0)},arithmetic(get(Operand{2,0,32,0,7,-1,1,0,4500,UINT64_C(0x0)}),1,32,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x1400153bb): {next=c.rip+6; // mov eax, dword ptr [rdi + 0x1194]
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,32,0,7,-1,1,0,4500,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153c1): {next=c.rip+6; // cmp eax, dword ptr [rdi + 0x1190]
+arithmetic(get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{2,0,32,0,7,-1,1,0,4496,UINT64_C(0x0)}),32,true);
+c.rip=next;return;}
+case UINT64_C(0x1400153c7): {next=c.rip+2; // jb 0x1400153db
+if(condition(2))next=next+UINT64_C(0x12);
+c.rip=next;return;}
+case UINT64_C(0x1400153c9): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153cc): {next=c.rip+10; // mov dword ptr [rdi + 0x1194], 0
+put(Operand{2,0,32,0,7,-1,1,0,4500,UINT64_C(0x0)},get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153d6): {next=c.rip+5; // call 0x140004930
+{uint64_t target=next+UINT64_C(0xfffffffffffef555);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x1400153db): {next=c.rip+3; // mov r8d, ebx
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153de): {next=c.rip+2; // mov edx, ebx
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153e0): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153e3): {next=c.rip+5; // call 0x1400058a0
+{uint64_t target=next+UINT64_C(0xffffffffffff04b8);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x1400153e8): {next=c.rip+4; // inc qword ptr [rdi + 0x30]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},arithmetic(get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x1400153ec): {next=c.rip+4; // mov r9, qword ptr [rdi + 0x28]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153f0): {next=c.rip+4; // imul r9, r12
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400153f4): {next=c.rip+4; // lea r12d, [rbx + 1]
+put(Operand{0,12,32,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,32,0,3,-1,1,0,1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400153f8): {next=c.rip+10; // movabs rbx, 0xff51afd7ed558ccd
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x140015402): {next=c.rip+3; // add r9, r13
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140015405): {next=c.rip+4; // mov r13, qword ptr [rdi + 0x30]
+put(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015409): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r9
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001540d): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015410): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015414): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015417): {next=c.rip+6; // mov byte ptr [rdi + 0x280], dl
+put(Operand{2,0,8,0,7,-1,1,0,640,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001541d): {next=c.rip+7; // mov r11, qword ptr [rdi + 0x1f8]
+put(Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,504,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015424): {next=c.rip+7; // mov r10, qword ptr [rdi + 0x1f0]
+put(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,496,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001542b): {next=c.rip+7; // mov rsi, qword ptr [rdi + 0x1e8]
+put(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,488,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015432): {next=c.rip+8; // movzx r14d, byte ptr [rdi + 0x200]
+put(Operand{0,14,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,7,-1,1,0,512,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001543a): {next=c.rip+4; // imul rdx, r11
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001543e): {next=c.rip+4; // lea rax, [r10 + r10*8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,10,10,8,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015442): {next=c.rip+3; // xor rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015445): {next=c.rip+3; // xor rdx, rsi
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015448): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001544b): {next=c.rip+3; // xor rcx, rbp
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001544e): {next=c.rip+3; // test r14b, r14b
+logic(get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x140015451): {next=c.rip+4; // lea rax, [rdx + rbp]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,5,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015455): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015459): {next=c.rip+3; // inc r13
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x14001545c): {next=c.rip+7; // mov qword ptr [rdi + 0x248], rax
+put(Operand{2,0,64,0,7,-1,1,0,584,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015463): {next=c.rip+7; // mov rcx, qword ptr [rdi + 0x1b0]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,432,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001546a): {next=c.rip+7; // mov rax, qword ptr [rdi + 0xa8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,168,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015471): {next=c.rip+5; // movzx r8d, byte ptr [rcx + rbp]
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,1,5,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015476): {next=c.rip+3; // mov ecx, r12d
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,12,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015479): {next=c.rip+4; // xor r8b, byte ptr [rax + rbp]
+put(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,8,0,0,5,1,0,0,UINT64_C(0x0)}),8));
+c.rip=next;return;}
+case UINT64_C(0x14001547d): {next=c.rip+10; // movabs rax, 0x9e3779b97f4a7c15
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x9e3779b97f4a7c15)}));
+c.rip=next;return;}
+case UINT64_C(0x140015487): {next=c.rip+4; // imul r9, rax
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001548b): {next=c.rip+10; // movabs rax, 0x2545f4914f6cdd1d
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2545f4914f6cdd1d)}));
+c.rip=next;return;}
+case UINT64_C(0x140015495): {next=c.rip+4; // mov qword ptr [rdi + 0x30], r13
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015499): {next=c.rip+3; // add r9, rax
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x14001549c): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001549f): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400154a3): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154a6): {next=c.rip+4; // lea rax, [r10 + r10]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,10,10,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154aa): {next=c.rip+6; // mov byte ptr [rdi + 0x279], dl
+put(Operand{2,0,8,0,7,-1,1,0,633,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154b0): {next=c.rip+4; // imul rdx, r11
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400154b4): {next=c.rip+3; // xor rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154b7): {next=c.rip+3; // xor rdx, rsi
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154ba): {next=c.rip+3; // xor rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154bd): {next=c.rip+3; // test r14b, r14b
+logic(get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x1400154c0): {next=c.rip+4; // lea rax, [r12 + rdx]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,12,2,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154c4): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154c8): {next=c.rip+7; // mov qword ptr [rdi + 0x210], rax
+put(Operand{2,0,64,0,7,-1,1,0,528,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154cf): {next=c.rip+7; // movsxd rdx, dword ptr [rdi + 0x154]
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x1400154d6): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154d9): {next=c.rip+7; // xor rcx, qword ptr [rdi + 0xce8]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,3304,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154e0): {next=c.rip+3; // xor rcx, r12
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154e3): {next=c.rip+7; // xor rcx, qword ptr [rdi + 0xce0]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,3296,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154ea): {next=c.rip+7; // xor rcx, qword ptr [rdi + 0xd8]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154f1): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400154f4): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400154f8): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400154fb): {next=c.rip+4; // imul rax, rbx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400154ff): {next=c.rip+10; // movabs rbx, 0xc4ceb9fe1a85ec53
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x140015509): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001550c): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015510): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015513): {next=c.rip+4; // movzx eax, r8b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,8,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015517): {next=c.rip+4; // imul rcx, rbx
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001551b): {next=c.rip+4; // xor rax, 0x33
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x33)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001551f): {next=c.rip+3; // mov rbx, rcx
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015522): {next=c.rip+4; // shr rbx, 0x21
+shift(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015526): {next=c.rip+3; // xor rbx, rcx
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015529): {next=c.rip+7; // lea rcx, [rip - 0x15530]
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,16,-1,1,0,-87344,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015530): {next=c.rip+8; // movzx ebp, byte ptr [rax + rcx + 0x3dfcb0]
+put(Operand{0,5,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,8,0,0,1,1,0,4062384,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015538): {next=c.rip+4; // xor bpl, 0xeb
+put(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0xeb)}),8));
+c.rip=next;return;}
+case UINT64_C(0x14001553c): {next=c.rip+7; // mov qword ptr [rdi + 0xe0], rbx
+put(Operand{2,0,64,0,7,-1,1,0,224,UINT64_C(0x0)},get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015543): {next=c.rip+2; // inc edx
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),1,32,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140015545): {next=c.rip+6; // mov dword ptr [rdi + 0x154], edx
+put(Operand{2,0,32,0,7,-1,1,0,340,UINT64_C(0x0)},get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001554b): {next=c.rip+3; // test dl, 0x1f
+logic(get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1f)}),8);
+c.rip=next;return;}
+case UINT64_C(0x14001554e): {next=c.rip+2; // jne 0x1400155a2
+if(condition(1))next=next+UINT64_C(0x52);
+c.rip=next;return;}
+case UINT64_C(0x140015550): {next=c.rip+3; // movsxd rax, edx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x140015553): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xce0]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,3296,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001555a): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xd8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015561): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015564): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015568): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001556b): {next=c.rip+10; // movabs rax, 0xff51afd7ed558ccd
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x140015575): {next=c.rip+4; // imul rcx, rax
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015579): {next=c.rip+10; // movabs rax, 0xc4ceb9fe1a85ec53
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x140015583): {next=c.rip+3; // mov rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015586): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001558a): {next=c.rip+3; // xor rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001558d): {next=c.rip+4; // imul rdx, rax
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015591): {next=c.rip+3; // mov rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015594): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015598): {next=c.rip+3; // xor rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001559b): {next=c.rip+7; // mov qword ptr [rdi + 0xce0], rax
+put(Operand{2,0,64,0,7,-1,1,0,3296,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155a2): {next=c.rip+4; // movzx r8d, bpl
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155a6): {next=c.rip+3; // mov eax, r8d
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155a9): {next=c.rip+7; // mov byte ptr [rdi + 0xf09], bpl
+put(Operand{2,0,8,0,7,-1,1,0,3849,UINT64_C(0x0)},get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155b0): {next=c.rip+3; // xor rax, r12
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400155b3): {next=c.rip+10; // movabs r12, 0x9e3779b97f4a7c15
+put(Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x9e3779b97f4a7c15)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155bd): {next=c.rip+7; // xor rax, qword ptr [rdi + 0xd8]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400155c4): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155c7): {next=c.rip+4; // shr rcx, 0x21
+shift(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400155cb): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400155ce): {next=c.rip+10; // movabs rax, 0xff51afd7ed558ccd
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155d8): {next=c.rip+4; // imul rcx, rax
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400155dc): {next=c.rip+4; // imul r8, r12
+imul(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400155e0): {next=c.rip+4; // imul r9, r12
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400155e4): {next=c.rip+3; // mov rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155e7): {next=c.rip+10; // movabs rax, 0xc4ceb9fe1a85ec53
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155f1): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x1400155f5): {next=c.rip+3; // xor rdx, rcx
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400155f8): {next=c.rip+3; // mov ecx, dword ptr [rdi + 0xc]
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,32,0,7,-1,1,0,12,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400155fb): {next=c.rip+4; // imul rdx, rax
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400155ff): {next=c.rip+3; // mov rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015602): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015606): {next=c.rip+3; // xor rax, rdx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015609): {next=c.rip+7; // mov qword ptr [rdi + 0xd8], rax
+put(Operand{2,0,64,0,7,-1,1,0,216,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015610): {next=c.rip+10; // movabs rax, 0xd6e8feb86659fd93
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xd6e8feb86659fd93)}));
+c.rip=next;return;}
+case UINT64_C(0x14001561a): {next=c.rip+4; // imul rcx, rax
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001561e): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015621): {next=c.rip+3; // xor rcx, rbx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015624): {next=c.rip+10; // movabs rbx, 0xff51afd7ed558ccd
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xff51afd7ed558ccd)}));
+c.rip=next;return;}
+case UINT64_C(0x14001562e): {next=c.rip+3; // mov rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015631): {next=c.rip+4; // shr rax, 0x21
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015635): {next=c.rip+3; // xor rax, rcx
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015638): {next=c.rip+4; // imul rax, rbx
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001563c): {next=c.rip+10; // movabs rbx, 0x2545f4914f6cdd1d
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2545f4914f6cdd1d)}));
+c.rip=next;return;}
+case UINT64_C(0x140015646): {next=c.rip+3; // mov rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015649): {next=c.rip+3; // add r9, rbx
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x14001564c): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015650): {next=c.rip+3; // xor rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015653): {next=c.rip+10; // movabs rax, 0xc4ceb9fe1a85ec53
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xc4ceb9fe1a85ec53)}));
+c.rip=next;return;}
+case UINT64_C(0x14001565d): {next=c.rip+4; // imul rdx, rax
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015661): {next=c.rip+4; // lea rax, [r13 + 1]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,13,-1,1,0,1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015665): {next=c.rip+4; // shr rdx, 0x21
+shift(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x21)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015669): {next=c.rip+3; // and edx, 3
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x3)}),32));
+c.rip=next;return;}
+case UINT64_C(0x14001566c): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015670): {next=c.rip+4; // cmp bpl, 0x3e
+arithmetic(get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x3e)}),8,true);
+c.rip=next;return;}
+case UINT64_C(0x140015674): {next=c.rip+6; // jae 0x14001570a
+if(condition(3))next=next+UINT64_C(0x90);
+c.rip=next;return;}
+case UINT64_C(0x14001567a): {next=c.rip+7; // inc qword ptr [rdi + 0x80]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,64,0,7,-1,1,0,128,UINT64_C(0x0)},arithmetic(get(Operand{2,0,64,0,7,-1,1,0,128,UINT64_C(0x0)}),1,64,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140015681): {next=c.rip+7; // lea rax, [rip - 0x15688]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,16,-1,1,0,-87688,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015688): {next=c.rip+8; // mov r8d, dword ptr [rax + rdx*4 + 0x3df8f0]
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,32,0,0,2,4,0,4061424,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015690): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r9
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015694): {next=c.rip+4; // shr r9, 0x1b
+shift(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015698): {next=c.rip+4; // movzx eax, r9b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001569c): {next=c.rip+6; // mov byte ptr [rdi + 0x278], al
+put(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156a2): {next=c.rip+4; // imul rax, r11
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400156a6): {next=c.rip+2; // mov ebx, edx
+put(Operand{0,3,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156a8): {next=c.rip+3; // xor rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400156ab): {next=c.rip+3; // xor rax, rsi
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400156ae): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156b1): {next=c.rip+3; // add rax, r8
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400156b4): {next=c.rip+3; // xor rcx, r8
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400156b7): {next=c.rip+4; // movzx r8d, bpl
+put(Operand{0,8,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,5,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156bb): {next=c.rip+3; // test r14b, r14b
+logic(get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x1400156be): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156c2): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156c5): {next=c.rip+7; // mov qword ptr [rdi + 0x208], rax
+put(Operand{2,0,64,0,7,-1,1,0,520,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156cc): {next=c.rip+5; // call 0x1400074d0
+{uint64_t target=next+UINT64_C(0xffffffffffff1dff);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x1400156d1): {next=c.rip+5; // mov r8, qword ptr [rsp + 0x70]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,112,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156d6): {next=c.rip+4; // lea edx, [r15 - 1]
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,32,0,15,-1,1,0,-1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156da): {next=c.rip+2; // mov eax, eax
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156dc): {next=c.rip+4; // imul rcx, rbx, 0x3e
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x3e)});
+c.rip=next;return;}
+case UINT64_C(0x1400156e0): {next=c.rip+3; // add rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400156e3): {next=c.rip+7; // mov rax, qword ptr [rdi + 0xf40]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,3904,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156ea): {next=c.rip+4; // movsxd r9, dword ptr [rax + rcx*4]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,0,1,4,0,0,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x1400156ee): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400156f1): {next=c.rip+7; // movsxd rax, dword ptr [rdi + 0xf50]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},uint64_t(signed_value(get(Operand{2,0,32,0,7,-1,1,0,3920,UINT64_C(0x0)}),32)));
+c.rip=next;return;}
+case UINT64_C(0x1400156f8): {next=c.rip+3; // xor r9, rax
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400156fb): {next=c.rip+7; // add r9, qword ptr [rdi + 0xf48]
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{2,0,64,0,7,-1,1,0,3912,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140015702): {next=c.rip+3; // call r9
+{uint64_t target=get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)});push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x140015705): {next=c.rip+5; // jmp 0x1400157c4
+next=next+UINT64_C(0xba);
+c.rip=next;return;}
+case UINT64_C(0x14001570a): {next=c.rip+6; // inc dword ptr [rdi + 0x88]
+{uint64_t cf=c.flags&CF,defined=c.defined&CF;put(Operand{2,0,32,0,7,-1,1,0,136,UINT64_C(0x0)},arithmetic(get(Operand{2,0,32,0,7,-1,1,0,136,UINT64_C(0x0)}),1,32,false));c.flags=(c.flags&~CF)|cf;c.defined=(c.defined&~CF)|defined;}
+c.rip=next;return;}
+case UINT64_C(0x140015710): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015713): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015717): {next=c.rip+3; // movzx ecx, al
+put(Operand{0,1,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001571a): {next=c.rip+8; // lea rax, [r10*4]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,-1,10,4,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015722): {next=c.rip+6; // mov byte ptr [rdi + 0x27b], cl
+put(Operand{2,0,8,0,7,-1,1,0,635,UINT64_C(0x0)},get(Operand{0,1,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015728): {next=c.rip+4; // imul rcx, r11
+imul(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001572c): {next=c.rip+4; // imul r9, r12
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015730): {next=c.rip+3; // xor rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015733): {next=c.rip+3; // xor rcx, rsi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015736): {next=c.rip+7; // mov qword ptr [rdi + 0x220], rcx
+put(Operand{2,0,64,0,7,-1,1,0,544,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001573d): {next=c.rip+4; // mov r8, qword ptr [rdi + 0x30]
+put(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015741): {next=c.rip+3; // add r9, rbx
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x140015744): {next=c.rip+3; // mov rax, r9
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015747): {next=c.rip+4; // shr rax, 0x1b
+shift(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x14001574b): {next=c.rip+3; // movzx edx, al
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001574e): {next=c.rip+6; // mov byte ptr [rdi + 0x282], dl
+put(Operand{2,0,8,0,7,-1,1,0,642,UINT64_C(0x0)},get(Operand{0,2,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015754): {next=c.rip+4; // imul rax, r10, 0xb
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0xb)});
+c.rip=next;return;}
+case UINT64_C(0x140015758): {next=c.rip+4; // imul rdx, r11
+imul(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x14001575c): {next=c.rip+3; // xor rdx, rax
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x14001575f): {next=c.rip+3; // xor rdx, rsi
+put(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015762): {next=c.rip+3; // mov rcx, rdx
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,2,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015765): {next=c.rip+4; // xor rcx, 1
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x1)}),64));
+c.rip=next;return;}
+case UINT64_C(0x140015769): {next=c.rip+3; // test r14b, r14b
+logic(get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x14001576c): {next=c.rip+4; // lea rax, [rdx + 1]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,2,-1,1,0,1,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015770): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015774): {next=c.rip+7; // mov qword ptr [rdi + 0x258], rax
+put(Operand{2,0,64,0,7,-1,1,0,600,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001577b): {next=c.rip+4; // lea rax, [r8 + 2]
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},address(Operand{2,0,64,0,8,-1,1,0,2,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001577f): {next=c.rip+4; // mov qword ptr [rdi + 0x30], rax
+put(Operand{2,0,64,0,7,-1,1,0,48,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015783): {next=c.rip+4; // imul r9, r12
+imul(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x140015787): {next=c.rip+3; // add r9, rbx
+put(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x14001578a): {next=c.rip+4; // mov qword ptr [rdi + 0x28], r9
+put(Operand{2,0,64,0,7,-1,1,0,40,UINT64_C(0x0)},get(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001578e): {next=c.rip+4; // shr r9, 0x1b
+shift(Operand{0,9,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{1,0,8,0,-1,-1,1,0,0,UINT64_C(0x1b)},1);
+c.rip=next;return;}
+case UINT64_C(0x140015792): {next=c.rip+4; // movzx eax, r9b
+put(Operand{0,0,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,9,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x140015796): {next=c.rip+6; // mov byte ptr [rdi + 0x278], al
+put(Operand{2,0,8,0,7,-1,1,0,632,UINT64_C(0x0)},get(Operand{0,0,8,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x14001579c): {next=c.rip+4; // imul rax, r11
+imul(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},Operand{0,11,64,0,-1,-1,1,0,0,UINT64_C(0x0)});
+c.rip=next;return;}
+case UINT64_C(0x1400157a0): {next=c.rip+3; // xor rax, rsi
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400157a3): {next=c.rip+3; // xor rax, r10
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{0,10,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400157a6): {next=c.rip+3; // mov rcx, rax
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157a9): {next=c.rip+6; // add rax, 0x2a669
+put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2a669)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400157af): {next=c.rip+7; // xor rcx, 0x2a669
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},logic(get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)})^get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x2a669)}),64));
+c.rip=next;return;}
+case UINT64_C(0x1400157b6): {next=c.rip+3; // test r14b, r14b
+logic(get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)})&get(Operand{0,14,8,0,-1,-1,1,0,0,UINT64_C(0x0)}),8);
+c.rip=next;return;}
+case UINT64_C(0x1400157b9): {next=c.rip+4; // cmove rax, rcx
+if(condition(0))put(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157bd): {next=c.rip+7; // mov qword ptr [rdi + 0x208], rax
+put(Operand{2,0,64,0,7,-1,1,0,520,UINT64_C(0x0)},get(Operand{0,0,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157c4): {next=c.rip+5; // mov r13, qword ptr [rsp + 0x28]
+put(Operand{0,13,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,40,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157c9): {next=c.rip+5; // mov r12, qword ptr [rsp + 0x30]
+put(Operand{0,12,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,48,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157ce): {next=c.rip+5; // mov rsi, qword ptr [rsp + 0x38]
+put(Operand{0,6,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,56,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157d3): {next=c.rip+5; // mov rbp, qword ptr [rsp + 0x68]
+put(Operand{0,5,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,104,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157d8): {next=c.rip+5; // mov r14, qword ptr [rsp + 0x20]
+put(Operand{0,14,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{2,0,64,0,4,-1,1,0,32,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157dd): {next=c.rip+4; // add rsp, 0x40
+put(Operand{0,4,64,0,-1,-1,1,0,0,UINT64_C(0x0)},arithmetic(get(Operand{0,4,64,0,-1,-1,1,0,0,UINT64_C(0x0)}),get(Operand{1,0,64,0,-1,-1,1,0,0,UINT64_C(0x40)}),64,false));
+c.rip=next;return;}
+case UINT64_C(0x1400157e1): {next=c.rip+2; // pop r15
+put(Operand{0,15,64,0,-1,-1,1,0,0,UINT64_C(0x0)},pop());
+c.rip=next;return;}
+case UINT64_C(0x1400157e3): {next=c.rip+1; // pop rdi
+put(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)},pop());
+c.rip=next;return;}
+case UINT64_C(0x1400157e4): {next=c.rip+1; // pop rbx
+put(Operand{0,3,64,0,-1,-1,1,0,0,UINT64_C(0x0)},pop());
+c.rip=next;return;}
+case UINT64_C(0x1400157e5): {next=c.rip+1; // ret 
+next=pop();
+c.rip=next;return;}
+case UINT64_C(0x1400157e6): {next=c.rip+5; // mov edx, 0x54485254
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x54485254)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157eb): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157ee): {next=c.rip+5; // call 0x1400029a0
+{uint64_t target=next+UINT64_C(0xfffffffffffed1ad);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x1400157f3): {next=c.rip+1; // int3 
+throw Fault(5,c.rip,"INT3");
+c.rip=next;return;}
+case UINT64_C(0x1400157f4): {next=c.rip+5; // mov edx, 0x43414e59
+put(Operand{0,2,32,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{1,0,32,0,-1,-1,1,0,0,UINT64_C(0x43414e59)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157f9): {next=c.rip+3; // mov rcx, rdi
+put(Operand{0,1,64,0,-1,-1,1,0,0,UINT64_C(0x0)},get(Operand{0,7,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
+c.rip=next;return;}
+case UINT64_C(0x1400157fc): {next=c.rip+5; // call 0x1400029a0
+{uint64_t target=next+UINT64_C(0xfffffffffffed19f);push(next);next=target;}
+c.rip=next;return;}
+case UINT64_C(0x140015801): {next=c.rip+1; // int3 
+throw Fault(5,c.rip,"INT3");
+c.rip=next;return;}
 case UINT64_C(0x140015820): {next=c.rip+5; // mov qword ptr [rsp + 0x18], r8
 put(Operand{2,0,64,0,4,-1,1,0,24,UINT64_C(0x0)},get(Operand{0,8,64,0,-1,-1,1,0,0,UINT64_C(0x0)}));
 c.rip=next;return;}

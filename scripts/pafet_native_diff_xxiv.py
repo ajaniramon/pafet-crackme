@@ -91,20 +91,25 @@ def run_vector(lib,old,label,index,vector,runtime,mutate=None,limit=100000,allow
     state['historical_capture_comparison']=result
     if mutate is None:assert result['ok'],result
     return state
+# Historical Unicorn harness, its captured vectors and the lockstep report of each handler.
+HANDLERS={'3bea0':('pafet_h3bea0_unicorn_xiii.py','h3bea0_vectors_xiii.json','native_lockstep.json'),
+    '14a00':('pafet_h14a00_unicorn_xvi.py','h14a00_vectors_xvi.json','native_lockstep_14a00.json')}
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--no-build',action='store_true');args=ap.parse_args();lib=library(not args.no_build)
-    spec=importlib.util.spec_from_file_location('historical',ROOT/'scripts/pafet_h3bea0_unicorn_xiii.py');old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
-    caps=json.loads((ROOT/'vm_pools_evidence/h3bea0_vectors_xiii.json').read_text());results=[]
+    ap=argparse.ArgumentParser();ap.add_argument('--no-build',action='store_true')
+    ap.add_argument('--handler',choices=sorted(HANDLERS),default='3bea0');args=ap.parse_args();lib=library(not args.no_build)
+    harness,vectors,report_name=HANDLERS[args.handler]
+    spec=importlib.util.spec_from_file_location('historical',ROOT/'scripts'/harness);old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
+    caps=json.loads((ROOT/'vm_pools_evidence'/vectors).read_text());results=[];partial=OUT/report_name.replace('.json','.partial.json')
     for label,capture in caps.items():
         if not isinstance(capture,dict) or 'vectors' not in capture:continue
         for i,v in enumerate(capture['vectors']):
             try:result=run_vector(lib,old,label,i,v,int(capture['pe_base'],16))
             except Exception as error:
-                (OUT/'native_lockstep.partial.json').write_text(json.dumps({'completed_cases':results,'failure':repr(error)},indent=2)+'\n');raise
+                partial.write_text(json.dumps({'completed_cases':results,'failure':repr(error)},indent=2)+'\n');raise
             results.append(result)
-            (OUT/'native_lockstep.partial.json').write_text(json.dumps({'completed_cases':results},indent=2)+'\n')
+            partial.write_text(json.dumps({'completed_cases':results},indent=2)+'\n')
             print(label,i,result['steps'],'every instruction: registers, defined flags, XMM, writes and flow match',flush=True)
     report={'cases':results,'all_match':True,'original_sha256':hashlib.sha256((ROOT/'pafet.bin').read_bytes()).hexdigest(),
         'scope':'Lockstep native instruction semantics. Historical component contexts, not all possible branches or original acceptance.'}
-    (OUT/'native_lockstep.json').write_text(json.dumps(report,indent=2)+'\n')
+    (OUT/report_name).write_text(json.dumps(report,indent=2)+'\n')
 if __name__=='__main__':main()

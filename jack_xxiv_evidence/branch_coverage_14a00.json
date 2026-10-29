@@ -1,0 +1,477 @@
+{
+  "entry": "0x140014a00",
+  "body_instructions": 820,
+  "body_bytes": 3586,
+  "known_branch_edges": 34,
+  "observed_branch_edges": 32,
+  "proved_unreachable_edges": 2,
+  "uncovered_branch_edges": [],
+  "body_instruction_pcs_observed": 776,
+  "proved_unreachable_instructions": 44,
+  "unobserved_reachable_instructions": [],
+  "noreturn_callees": [
+    {
+      "entry": "0x1400029a0",
+      "reason": "Closed native CFG has no RET and no indirect-jump exit; control cannot come back to the call site successor."
+    }
+  ],
+  "branch_edges": [
+    {
+      "from": 5368793853,
+      "to": 5368797158,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368793853,
+      "to": 5368793859,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368793866,
+      "to": 5368797172,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368793866,
+      "to": 5368793872,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794106,
+      "to": 5368797124,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794106,
+      "to": 5368794112,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794119,
+      "to": 5368797124,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794119,
+      "to": 5368794125,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794241,
+      "to": 5368797124,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794241,
+      "to": 5368794247,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794257,
+      "to": 5368794326,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794257,
+      "to": 5368794259,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794321,
+      "to": 5368797113,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794993,
+      "to": 5368795042,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368794993,
+      "to": 5368794995,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795336,
+      "to": 5368795430,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368795336,
+      "to": 5368795338,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795346,
+      "to": 5368795430,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795346,
+      "to": 5368795348,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795425,
+      "to": 5368797113,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795584,
+      "to": 5368795653,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795584,
+      "to": 5368795586,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795648,
+      "to": 5368797113,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795809,
+      "to": 5368795836,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795809,
+      "to": 5368795811,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795844,
+      "to": 5368796085,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368795844,
+      "to": 5368795850,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368796103,
+      "to": 5368796123,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368796103,
+      "to": 5368796105,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368796494,
+      "to": 5368796578,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368796494,
+      "to": 5368796496,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368796788,
+      "to": 5368796938,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368796788,
+      "to": 5368796794,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368796933,
+      "to": 5368797124,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    }
+  ],
+  "proofs": [
+    {
+      "branch": 5368795336,
+      "unreachable_target": 5368795430,
+      "reason": "For arbitrary uint32 x, x*(x+1) is even and x XOR (x+1) has bit zero set. Therefore (~product)&xor has bit zero set; TEST cl,1 clears ZF and JE cannot be taken.",
+      "instruction_bytes_sha256": "ed6398a9e4506f9743fe7ee60c93bfbe3da6a8631cf75d057d105b7321c64a72"
+    },
+    {
+      "branch": 5368796788,
+      "unreachable_target": 5368796938,
+      "reason": "BPL is the original immutable LUT byte XOR 0xeb, unchanged up to CMP. All 256 LUT bytes, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
+      "lut_sha256": "e1a76f454453a8b7b5ce13ac5dc775ede843ff947920956c305c38bc9d00c4a4",
+      "outputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "source": "native_lockstep_14a00.json",
+      "case": "alice",
+      "vector": 0,
+      "steps": 281
+    },
+    {
+      "source": "native_lockstep_14a00.json",
+      "case": "alice",
+      "vector": 1,
+      "steps": 280
+    },
+    {
+      "source": "native_lockstep_14a00.json",
+      "case": "alice",
+      "vector": 2,
+      "steps": 2794
+    },
+    {
+      "source": "native_lockstep_14a00.json",
+      "case": "ramon",
+      "vector": 0,
+      "steps": 281
+    },
+    {
+      "source": "native_lockstep_14a00.json",
+      "case": "ramon",
+      "vector": 1,
+      "steps": 2796
+    },
+    {
+      "source": "native_lockstep_14a00.json",
+      "case": "ramon",
+      "vector": 2,
+      "steps": 2715
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "positive_mode_guard",
+      "vector": 2,
+      "steps": 26562
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "canary_guard",
+      "vector": 2,
+      "steps": 26564
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "resume_slot_exit",
+      "vector": 2,
+      "steps": 226
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "pending_work_exit",
+      "vector": 2,
+      "steps": 228
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "guard_magic_exit",
+      "vector": 2,
+      "steps": 258
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "budget_zero",
+      "vector": 2,
+      "steps": 280
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "budget_one",
+      "vector": 2,
+      "steps": 280
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "cursor_out_of_bounds",
+      "vector": 2,
+      "steps": 804
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "alternate_live_encoding",
+      "vector": 2,
+      "steps": 2794
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "maintenance_missing_tls",
+      "vector": 2,
+      "steps": 15446
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "periodic_register_maintenance",
+      "vector": 2,
+      "steps": 17041
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "maintenance_tls_active",
+      "vector": 2,
+      "steps": 17426
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "maintenance_tls_add_encoding",
+      "vector": 2,
+      "steps": 17426
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "periodic_epoch",
+      "vector": 2,
+      "steps": 2812
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "table_remap",
+      "vector": 2,
+      "steps": 113323
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "dummy_lookup",
+      "vector": 2,
+      "steps": 2855
+    },
+    {
+      "source": "directed_native_14a00.json",
+      "case": "skip_state",
+      "vector": 2,
+      "steps": 818
+    }
+  ],
+  "scope": "Local handler branch edges only; not exhaustive coverage of nested handlers, helpers, inputs or OS exception machinery."
+}

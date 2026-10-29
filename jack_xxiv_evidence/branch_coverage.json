@@ -265,7 +265,7 @@
     {
       "branch": 5368957723,
       "unreachable_target": 5368957873,
-      "reason": "All 256 bytes of the original immutable LUT, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
+      "reason": "BPL is the original immutable LUT byte XOR 0xeb, unchanged up to CMP. All 256 LUT bytes, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
       "lut_sha256": "e1a76f454453a8b7b5ce13ac5dc775ede843ff947920956c305c38bc9d00c4a4",
       "outputs": [
         0,
@@ -465,6 +465,12 @@
       "case": "dummy_lookup",
       "vector": 1,
       "steps": 2315
+    },
+    {
+      "source": "directed_native.json",
+      "case": "skip_state",
+      "vector": 1,
+      "steps": 820
     },
     {
       "source": "fresh_transfer_differential.json",
