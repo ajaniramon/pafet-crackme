@@ -1,0 +1,2375 @@
+{
+  "num_instrs_in_trace": 629,
+  "num_unique_pairs_in_trace": 212,
+  "num_unique_handlers": 35,
+  "isa_by_handler": {
+    "0x140008b50": {
+      "num_pairs": 10,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          33
+        ],
+        [
+          0,
+          38
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        18,
+        20
+      ],
+      "observed_in_trace": 9
+    },
+    "0x1400099c0": {
+      "num_pairs": 9,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        10,
+        11,
+        14,
+        15,
+        18,
+        20
+      ],
+      "observed_in_trace": 7
+    },
+    "0x14000a850": {
+      "num_pairs": 5,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          39
+        ],
+        [
+          0,
+          45
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        13,
+        14,
+        20,
+        21,
+        22,
+        24,
+        30,
+        32,
+        37,
+        42,
+        45,
+        48
+      ],
+      "observed_in_trace": 3
+    },
+    "0x14000b670": {
+      "num_pairs": 4,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          52
+        ],
+        [
+          0,
+          54
+        ],
+        [
+          0,
+          55
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "operand_value_examples": [
+        2,
+        11,
+        16,
+        26,
+        30,
+        32,
+        35,
+        37,
+        47,
+        48,
+        55,
+        57
+      ],
+      "observed_in_trace": 4
+    },
+    "0x1400110f0": {
+      "num_pairs": 5,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "operand_arity_set": [
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        5,
+        7,
+        8,
+        9,
+        11,
+        17,
+        18,
+        20,
+        24,
+        27,
+        28
+      ],
+      "observed_in_trace": 5
+    },
+    "0x140011f10": {
+      "num_pairs": 1,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          24
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "operand_value_examples": [
+        3,
+        19,
+        24,
+        56
+      ],
+      "observed_in_trace": 1
+    },
+    "0x140012dc0": {
+      "num_pairs": 1,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          14
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        4,
+        10,
+        11,
+        14,
+        28,
+        30,
+        40,
+        54
+      ],
+      "observed_in_trace": 1
+    },
+    "0x140013be0": {
+      "num_pairs": 4,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          47
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        4,
+        6,
+        14,
+        22,
+        30,
+        31,
+        34,
+        48,
+        56,
+        57,
+        58
+      ],
+      "observed_in_trace": 3
+    },
+    "0x140014a00": {
+      "num_pairs": 10,
+      "channels": [
+        0
+      ],
+      "pairs_sample": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "operand_arity_set": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        3,
+        6,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "observed_in_trace": 9
+    },
+    "0x140015820": {
+      "num_pairs": 7,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          1,
+          35
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24
+      ],
+      "observed_in_trace": 6
+    },
+    "0x1400166b0": {
+      "num_pairs": 6,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          1,
+          41
+        ],
+        [
+          1,
+          45
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        6,
+        7,
+        9,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        27,
+        28
+      ],
+      "observed_in_trace": 5
+    },
+    "0x140018300": {
+      "num_pairs": 1,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          48
+        ]
+      ],
+      "operand_arity_set": [],
+      "operand_value_examples": [],
+      "observed_in_trace": 0
+    },
+    "0x140019f40": {
+      "num_pairs": 3,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          1,
+          40
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "operand_value_examples": [
+        1,
+        15,
+        19,
+        20,
+        24,
+        30,
+        31,
+        33,
+        34,
+        35,
+        43,
+        44
+      ],
+      "observed_in_trace": 3
+    },
+    "0x14001c090": {
+      "num_pairs": 14,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        1,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        18,
+        24,
+        30
+      ],
+      "observed_in_trace": 11
+    },
+    "0x14001cf00": {
+      "num_pairs": 1,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          29
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "operand_value_examples": [
+        21,
+        29,
+        49
+      ],
+      "observed_in_trace": 1
+    },
+    "0x14001dd30": {
+      "num_pairs": 12,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "observed_in_trace": 11
+    },
+    "0x1400208b0": {
+      "num_pairs": 2,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          56
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "operand_value_examples": [
+        10,
+        20,
+        43,
+        44,
+        52,
+        61
+      ],
+      "observed_in_trace": 2
+    },
+    "0x1400216d0": {
+      "num_pairs": 8,
+      "channels": [
+        1
+      ],
+      "pairs_sample": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        3,
+        5,
+        10,
+        12,
+        14,
+        17,
+        18,
+        19,
+        20,
+        23,
+        24
+      ],
+      "observed_in_trace": 7
+    },
+    "0x140023380": {
+      "num_pairs": 2,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          29
+        ],
+        [
+          2,
+          43
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        3,
+        17,
+        19,
+        29,
+        33,
+        37,
+        48,
+        56,
+        58
+      ],
+      "observed_in_trace": 2
+    },
+    "0x1400241b0": {
+      "num_pairs": 14,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "observed_in_trace": 11
+    },
+    "0x140025020": {
+      "num_pairs": 13,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          2,
+          23
+        ],
+        [
+          2,
+          24
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        4,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18
+      ],
+      "observed_in_trace": 12
+    },
+    "0x140027b80": {
+      "num_pairs": 2,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          53
+        ],
+        [
+          2,
+          54
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "operand_value_examples": [
+        19,
+        52,
+        61
+      ],
+      "observed_in_trace": 2
+    },
+    "0x140028a00": {
+      "num_pairs": 2,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          39
+        ]
+      ],
+      "operand_arity_set": [
+        2
+      ],
+      "operand_value_examples": [
+        3,
+        59
+      ],
+      "observed_in_trace": 1
+    },
+    "0x14002ab60": {
+      "num_pairs": 3,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          19
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        3
+      ],
+      "operand_value_examples": [
+        5,
+        12,
+        14,
+        19,
+        23,
+        27,
+        30,
+        36,
+        38,
+        41,
+        43,
+        47
+      ],
+      "observed_in_trace": 3
+    },
+    "0x14002d5d0": {
+      "num_pairs": 7,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          17
+        ],
+        [
+          2,
+          36
+        ],
+        [
+          2,
+          42
+        ],
+        [
+          2,
+          45
+        ],
+        [
+          2,
+          46
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        4,
+        7,
+        8,
+        9,
+        11,
+        12,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "observed_in_trace": 7
+    },
+    "0x14002f2a0": {
+      "num_pairs": 2,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          33
+        ],
+        [
+          2,
+          48
+        ]
+      ],
+      "operand_arity_set": [
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        18,
+        22,
+        24,
+        30,
+        33,
+        39,
+        46,
+        58
+      ],
+      "observed_in_trace": 2
+    },
+    "0x1400300b0": {
+      "num_pairs": 10,
+      "channels": [
+        2
+      ],
+      "pairs_sample": [
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          2,
+          30
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        3,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13,
+        16,
+        18,
+        22,
+        23
+      ],
+      "observed_in_trace": 8
+    },
+    "0x140030ec0": {
+      "num_pairs": 9,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          3,
+          22
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        3,
+        4,
+        5,
+        9,
+        12,
+        14,
+        16,
+        18,
+        21,
+        28,
+        30
+      ],
+      "observed_in_trace": 7
+    },
+    "0x140031ce0": {
+      "num_pairs": 1,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          31
+        ]
+      ],
+      "operand_arity_set": [
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        12,
+        24,
+        25,
+        31,
+        42,
+        48,
+        51,
+        54
+      ],
+      "observed_in_trace": 1
+    },
+    "0x140033930": {
+      "num_pairs": 9,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          3,
+          28
+        ],
+        [
+          3,
+          32
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        14,
+        15
+      ],
+      "observed_in_trace": 8
+    },
+    "0x1400355c0": {
+      "num_pairs": 10,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          3,
+          27
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        3,
+        5,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19,
+        21,
+        22
+      ],
+      "observed_in_trace": 9
+    },
+    "0x140038fe0": {
+      "num_pairs": 1,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          18
+        ]
+      ],
+      "operand_arity_set": [
+        2
+      ],
+      "operand_value_examples": [
+        12,
+        44
+      ],
+      "observed_in_trace": 1
+    },
+    "0x14003a160": {
+      "num_pairs": 4,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          23
+        ],
+        [
+          3,
+          39
+        ],
+        [
+          3,
+          43
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        3,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        18,
+        21,
+        24,
+        27
+      ],
+      "observed_in_trace": 4
+    },
+    "0x14003bea0": {
+      "num_pairs": 11,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          3,
+          35
+        ],
+        [
+          3,
+          41
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        14,
+        15,
+        16
+      ],
+      "observed_in_trace": 9
+    },
+    "0x14003dae0": {
+      "num_pairs": 3,
+      "channels": [
+        3
+      ],
+      "pairs_sample": [
+        [
+          3,
+          17
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          3,
+          30
+        ]
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "operand_value_examples": [
+        1,
+        2,
+        3,
+        9,
+        11,
+        12,
+        14,
+        17,
+        19,
+        21,
+        26,
+        29
+      ],
+      "observed_in_trace": 3
+    }
+  },
+  "fine_grained_virt_ops": [
+    {
+      "name": "VIRT_OP_00",
+      "channels": [
+        0
+      ],
+      "operand_arity_set": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x140014a00"
+      ]
+    },
+    {
+      "name": "VIRT_OP_01",
+      "channels": [
+        0
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "helpers_called": [],
+      "handler_count": 2,
+      "handler_vas": [
+        "0x14000b670",
+        "0x140011f10"
+      ]
+    },
+    {
+      "name": "VIRT_OP_02",
+      "channels": [
+        0
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 5,
+      "handler_vas": [
+        "0x140008b50",
+        "0x1400099c0",
+        "0x14000a850",
+        "0x140012dc0",
+        "0x140013be0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_03",
+      "channels": [
+        0
+      ],
+      "operand_arity_set": [
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x1400110f0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_04",
+      "channels": [
+        1
+      ],
+      "operand_arity_set": [],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x140018300"
+      ]
+    },
+    {
+      "name": "VIRT_OP_05",
+      "channels": [
+        1
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "helpers_called": [],
+      "handler_count": 3,
+      "handler_vas": [
+        "0x140019f40",
+        "0x14001cf00",
+        "0x1400208b0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_06",
+      "channels": [
+        1
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 5,
+      "handler_vas": [
+        "0x140015820",
+        "0x1400166b0",
+        "0x14001c090",
+        "0x14001dd30",
+        "0x1400216d0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_07",
+      "channels": [
+        2
+      ],
+      "operand_arity_set": [
+        1,
+        2
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x140027b80"
+      ]
+    },
+    {
+      "name": "VIRT_OP_08",
+      "channels": [
+        2
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 5,
+      "handler_vas": [
+        "0x140023380",
+        "0x1400241b0",
+        "0x140025020",
+        "0x14002d5d0",
+        "0x1400300b0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_09",
+      "channels": [
+        2
+      ],
+      "operand_arity_set": [
+        1,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x14002ab60"
+      ]
+    },
+    {
+      "name": "VIRT_OP_10",
+      "channels": [
+        2
+      ],
+      "operand_arity_set": [
+        2
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x140028a00"
+      ]
+    },
+    {
+      "name": "VIRT_OP_11",
+      "channels": [
+        2
+      ],
+      "operand_arity_set": [
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x14002f2a0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_12",
+      "channels": [
+        3
+      ],
+      "operand_arity_set": [
+        1,
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 6,
+      "handler_vas": [
+        "0x140030ec0",
+        "0x140033930",
+        "0x1400355c0",
+        "0x14003a160",
+        "0x14003bea0",
+        "0x14003dae0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_13",
+      "channels": [
+        3
+      ],
+      "operand_arity_set": [
+        2
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x140038fe0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_14",
+      "channels": [
+        3
+      ],
+      "operand_arity_set": [
+        2,
+        3
+      ],
+      "helpers_called": [],
+      "handler_count": 1,
+      "handler_vas": [
+        "0x140031ce0"
+      ]
+    }
+  ],
+  "num_virt_ops": 15,
+  "combined_virt_ops": [
+    {
+      "name": "VIRT_OP_00",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140014a00"
+      ]
+    },
+    {
+      "name": "VIRT_OP_01",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        1,
+        2
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003a50",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14000b670"
+      ]
+    },
+    {
+      "name": "VIRT_OP_02",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        1,
+        2
+      ],
+      "helpers": [
+        "0x140002330",
+        "0x1400029a0",
+        "0x140003a50",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006010",
+        "0x1400060c0",
+        "0x140006300",
+        "0x140006770",
+        "0x140007040",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140011f10"
+      ]
+    },
+    {
+      "name": "VIRT_OP_03",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140008b50"
+      ]
+    },
+    {
+      "name": "VIRT_OP_04",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140002330",
+        "0x140006010",
+        "0x140006300",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400099c0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_05",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x1400036d0",
+        "0x140003880",
+        "0x1400071e0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14000a850"
+      ]
+    },
+    {
+      "name": "VIRT_OP_06",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 2,
+      "handlers": [
+        "0x140012dc0",
+        "0x140013be0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_07",
+      "channels": [
+        0
+      ],
+      "operand_arity": [
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400110f0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_08",
+      "channels": [
+        1
+      ],
+      "operand_arity": [],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140018300"
+      ]
+    },
+    {
+      "name": "VIRT_OP_09",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003880",
+        "0x140003a50",
+        "0x1400043a0",
+        "0x1400044f0",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x140007370",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0",
+        "0x1403a17cc",
+        "0x1403a3dc0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140019f40"
+      ]
+    },
+    {
+      "name": "VIRT_OP_10",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2
+      ],
+      "helpers": [
+        "0x1400028a0",
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14001cf00"
+      ]
+    },
+    {
+      "name": "VIRT_OP_11",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400208b0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_12",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140002330",
+        "0x140006010",
+        "0x140006300",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140015820"
+      ]
+    },
+    {
+      "name": "VIRT_OP_13",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x1400036d0",
+        "0x140003880",
+        "0x1400071e0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400166b0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_14",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14001c090"
+      ]
+    },
+    {
+      "name": "VIRT_OP_15",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14001dd30"
+      ]
+    },
+    {
+      "name": "VIRT_OP_16",
+      "channels": [
+        1
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003a50",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400216d0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_17",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        2
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003a50",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140027b80"
+      ]
+    },
+    {
+      "name": "VIRT_OP_18",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140023380"
+      ]
+    },
+    {
+      "name": "VIRT_OP_19",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400241b0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_20",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140002330",
+        "0x140006010",
+        "0x140006300",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140025020"
+      ]
+    },
+    {
+      "name": "VIRT_OP_21",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x1400036d0",
+        "0x140003880",
+        "0x1400071e0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14002d5d0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_22",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400300b0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_23",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        1,
+        3
+      ],
+      "helpers": [
+        "0x1400028a0",
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14002ab60"
+      ]
+    },
+    {
+      "name": "VIRT_OP_24",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        2
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003880",
+        "0x140003a50",
+        "0x1400043a0",
+        "0x1400044f0",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x140007370",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0",
+        "0x1403a17cc",
+        "0x1403a3dc0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140028a00"
+      ]
+    },
+    {
+      "name": "VIRT_OP_25",
+      "channels": [
+        2
+      ],
+      "operand_arity": [
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14002f2a0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_26",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x1400036d0",
+        "0x140003880",
+        "0x1400071e0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140030ec0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_27",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140033930"
+      ]
+    },
+    {
+      "name": "VIRT_OP_28",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140002330",
+        "0x140006010",
+        "0x140006300",
+        "0x140007040"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x1400355c0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_29",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003a50",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14003a160"
+      ]
+    },
+    {
+      "name": "VIRT_OP_30",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14003bea0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_31",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        1,
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x14003dae0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_32",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        2
+      ],
+      "helpers": [
+        "0x1400029a0",
+        "0x140003610",
+        "0x140003880",
+        "0x140003a50",
+        "0x1400043a0",
+        "0x1400044f0",
+        "0x140004930",
+        "0x1400058a0",
+        "0x140005b50",
+        "0x140006770",
+        "0x1400071e0",
+        "0x140007370",
+        "0x1400074d0",
+        "0x140007bf0",
+        "0x14003ebe0",
+        "0x1403a17cc",
+        "0x1403a3dc0"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140038fe0"
+      ]
+    },
+    {
+      "name": "VIRT_OP_33",
+      "channels": [
+        3
+      ],
+      "operand_arity": [
+        2,
+        3
+      ],
+      "helpers": [
+        "0x140003880",
+        "0x140003a50"
+      ],
+      "num_handlers": 1,
+      "handlers": [
+        "0x140031ce0"
+      ]
+    }
+  ],
+  "num_combined_virt_ops": 34
+}
