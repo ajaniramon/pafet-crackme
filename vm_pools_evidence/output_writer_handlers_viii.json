@@ -1,0 +1,244 @@
+{
+  "5368744784": {
+    "calls": 75,
+    "writes": 2,
+    "writes_offsets": [
+      0,
+      5,
+      10,
+      0,
+      5,
+      10
+    ],
+    "writes_vals": [
+      229,
+      252,
+      229,
+      229,
+      252,
+      229
+    ]
+  },
+  "5368748480": {
+    "calls": 63,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368752208": {
+    "calls": 36,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368755824": {
+    "calls": 16,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368778992": {
+    "calls": 26,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368782608": {
+    "calls": 2,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368786368": {
+    "calls": 10,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368789984": {
+    "calls": 7,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368793600": {
+    "calls": 37,
+    "writes": 1,
+    "writes_offsets": [
+      14
+    ],
+    "writes_vals": [
+      196
+    ]
+  },
+  "5368797216": {
+    "calls": 68,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368800944": {
+    "calls": 38,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368808192": {
+    "calls": 10,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368815424": {
+    "calls": 10,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368823952": {
+    "calls": 83,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368827648": {
+    "calls": 12,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368831280": {
+    "calls": 46,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368842416": {
+    "calls": 19,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368846032": {
+    "calls": 22,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368853376": {
+    "calls": 13,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368857008": {
+    "calls": 83,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368860704": {
+    "calls": 73,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368871808": {
+    "calls": 22,
+    "writes": 1,
+    "writes_offsets": [
+      10,
+      11,
+      14
+    ],
+    "writes_vals": [
+      103,
+      182,
+      106
+    ]
+  },
+  "5368875520": {
+    "calls": 8,
+    "writes": 1,
+    "writes_offsets": [
+      11,
+      14
+    ],
+    "writes_vals": [
+      182,
+      106
+    ]
+  },
+  "5368884064": {
+    "calls": 24,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368894928": {
+    "calls": 19,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368902304": {
+    "calls": 1,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368905904": {
+    "calls": 42,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368909504": {
+    "calls": 29,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368913120": {
+    "calls": 3,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368920368": {
+    "calls": 70,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368927680": {
+    "calls": 62,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368942560": {
+    "calls": 5,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368947040": {
+    "calls": 20,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368954528": {
+    "calls": 50,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  },
+  "5368961760": {
+    "calls": 19,
+    "writes": 0,
+    "writes_offsets": [],
+    "writes_vals": []
+  }
+}

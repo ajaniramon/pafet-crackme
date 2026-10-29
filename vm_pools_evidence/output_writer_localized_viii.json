@@ -1,0 +1,43 @@
+{
+  "fork": "Jack VIII",
+  "target_output": "464340464e",
+  "target_input": "alice/serial01",
+  "target_input_f_user": "f_user(alice) = 464340464e",
+  "method": "Memory.scanSync of RW regions for the known output pattern, performed every resolver call in range 500-540",
+  "finding": {
+    "output_writer_resolver_call": 517,
+    "output_writer_ch": 2,
+    "output_writer_op": 26,
+    "output_writer_handler_va": "0x140025020",
+    "handler_is_shared_by": [
+      {"ch": 2, "op": 24},
+      {"ch": 2, "op": 25},
+      {"ch": 2, "op": 26}
+    ]
+  },
+  "pattern_count_trajectory": [
+    {"call": 516, "ch": 1, "op": 9,  "pattern_count": 0, "note": "before: output does not exist"},
+    {"call": 517, "ch": 2, "op": 26, "pattern_count": 1, "note": "AFTER: output just appeared"}
+  ],
+  "output_location_in_memory": {
+    "two_copies_seen": true,
+    "example_addrs_this_run": ["0x198d3baf60", "0x198d3baff0"],
+    "distance_between_copies": "0x90",
+    "reachable_from_ctx_direct": false,
+    "reachable_from_ctx_1_level_pointer": false,
+    "reachable_from_ctx_2_level_pointer": false,
+    "note": "Output lives in a heap region not directly indexed from the user-VM ctx; the write-path is INSIDE handler 0x140025020"
+  },
+  "handler_prologue_disasm": [
+    "0x140025020  mov qword ptr [rsp + 0x18], r8",
+    "0x140025025  mov dword ptr [rsp + 0x10], edx",
+    "...",
+    "0x140025036  movsxd rax, dword ptr [rcx + 0x154]",
+    "0x140025117  call 0x140007040  (external helper)",
+    "0x14002511c  mov rbx, qword ptr [rdi + 0x210]  (reads VM PC?)",
+    "0x140025126  movzx ecx, byte ptr [rdi + 0x279]",
+    "0x140025130  mov r9, qword ptr [rdi + 0x1f8]",
+    "0x140025141  mov r8, qword ptr [rdi + 0x1e8]"
+  ],
+  "status": "Handler IDENTIFIED. Full reversing + C++ port PENDING for next iteration. Not yet byte-exact in the interpreter."
+}
