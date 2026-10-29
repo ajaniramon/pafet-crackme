@@ -1,0 +1,57 @@
+{
+ "kind": "done",
+ "scans": [
+  {
+   "label": "sha_exec_enter",
+   "hits": {
+    "sha256_alice_pfx": [],
+    "sha256_alice_8": [],
+    "sha256_alice_tail": [],
+    "gate_target_pfx": [],
+    "alice_ascii": [
+     "0xee6d99f7e8",
+     "0x2e0a5148560"
+    ],
+    "sha_iv_h0_le": [
+     "0xee6d99a960"
+    ],
+    "sha_k0_le": []
+   }
+  },
+  {
+   "label": "sha_exec_leave",
+   "hits": {
+    "sha256_alice_pfx": [
+     "0xee6d99aa40"
+    ],
+    "sha256_alice_8": [
+     "0xee6d99aa40"
+    ],
+    "sha256_alice_tail": [],
+    "gate_target_pfx": [],
+    "alice_ascii": [
+     "0xee6d99aa60",
+     "0xee6d99f7e8",
+     "0x2e0a5148560"
+    ],
+    "sha_iv_h0_le": [],
+    "sha_k0_le": []
+   }
+  },
+  {
+   "label": "h20_enter",
+   "hits": {
+    "sha256_alice_pfx": [],
+    "sha256_alice_8": [],
+    "sha256_alice_tail": [],
+    "gate_target_pfx": [],
+    "alice_ascii": [
+     "0xee6d99f7e8",
+     "0x2e0a5148560"
+    ],
+    "sha_iv_h0_le": [],
+    "sha_k0_le": []
+   }
+  }
+ ]
+}
