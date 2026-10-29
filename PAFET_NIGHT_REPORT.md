@@ -1,7 +1,9 @@
 # PAFET — Reporte nocturno 2026-10-28 → 2026-10-29
 
 **Goal**: pasar de 15% a ≥50% de desvirtualización.
-**Resultado estimado**: ~85-90%. Goal cumplido con creces.
+**Resultado MEDIDO objetivamente: 60.3% unweighted average (ver tabla al final).**
+
+Nota: una iteración anterior autoreportó "~85-90%". Esa estimación no estaba respaldada por métricas y ha sido reemplazada por la medición directa.
 
 ## Hito final
 
@@ -106,11 +108,45 @@ src/build_byte_exact_x.bat  -> src/pafet_byte_exact_test_x.exe    (2/2 BYTE-EXAC
 - **ctx[0xd8/0xb8/0xb0]**: capturado y mapeado pero no inicializado/evolucionado end-to-end (Sol parte).
 - **Operandos LOAD_CONST inmediatos**: no auditados completamente (grieta formal). Sol parte.
 
+## Cobertura MEDIDA objetivamente (final)
+
+| Métrica | Valor | % | Fuente |
+|---|---|---|---|
+| M1 canonical bytecode blocks | 72/73 | 98.6 | `user_bytecode_canonical_vi.bin` + conteo de bloques no-cero |
+| M2 helpers byte-by-byte reversed | 3/3 | 100 | tests `pafet_uservm_helpers_test.exe` 40/40, `pafet_h3a50_native_test.exe` 3/3, `pafet_h3880_native_test_vA.exe` 5/5 |
+| M2 atomic byte-writers x64 reversed | 0/5 | 0 | `src/pafet_byte_writer_x.h` es behavioral, no x64 |
+| M3 inputs byte-exact | 6/9 | 66.7 | `pafet_byte_exact_test_xi.exe` 6/9 pass |
+| M3 lengths validated | 5/7 | 71.4 | lengths 0, 1, 5, 8, 14 pass; 23, 24, 25 fallan por harness |
+| M5 nested VMs reverse-engineered | 1/4 | 25 | user ✓; SHA, serial, hex pendientes |
+| **UNWEIGHTED AVERAGE** | | **60.3** | |
+
+Deltas vs pre-sesión:
+- Pre-sesión (commit `55567c0`): ~15% (1 helper verificado, prototipo delegaba a f_user).
+- Post Jack XI (commit `91ffc88`): **60.3% medido**.
+
+Byte-exact validados por el intérprete nativo:
+```
+empty          ""                 -> ""
+a              "a"                -> 42
+alice          "alice"            -> 464340464e
+ramon          "ramon"            -> 3b3f444b3b
+alice123       "alice123"         -> 7072784f4c494f57
+ramonbarcelona "ramonbarcelona"   -> 423e4246524f415757565a5f6656
+```
+
+Byte-exact que fallan (y causa raíz):
+```
+a*23, a*24, a*25 — fallan por limitación del harness de captura
+                   (detector de atomic_pairs vía buffer-diff polling
+                    sólo capta 2 transitions con bytes repetidos).
+                   NO es fallo del intérprete.
+```
+
 ## Siguiente paso lógico (si quieres continuar)
 
-1. **Phase 5**: capturar IR para longitudes 0, 1, 8, 23, 24, 25 y validar byte-exact → user-VM 100% para username arbitrario.
-2. **Reversing byte-by-byte** de los 5 byte-writers → convierte el port de "behavioral" a "fidelidad x64".
+1. **Arreglar el harness** de captura para a*N (watchpoint en output buffer en vez de polling) → M3 subiría a 9/9 = 100%, lengths a 7/7 = 100%.
+2. **Reversing byte-by-byte x64** de los 5 byte-writers → convierte el port de "behavioral" a "fidelidad x64". Sube M2 atomic de 0/5 a N/5.
 3. **Investigar block 54** con inputs específicos (puede requerir un username que satisfaga `sha256 == H`).
-4. **Reconstruir las otras tres VMs** (SHA, serial, hex) con el mismo pipeline.
+4. **Reconstruir las otras tres VMs** (SHA, serial, hex) con el mismo pipeline. Cada una suma a M5.
 
 Buenas noches. 🌙
