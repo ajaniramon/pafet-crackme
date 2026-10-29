@@ -7,3 +7,5 @@ scripts/pafet_hexvm_*xxvi* -text
 jack_xxvi_evidence/** -text
 # Generated instruction comments retain Capstone's empty operand separator.
 src/pafet_hexvm_lifted_xxvi.cpp -text whitespace=-blank-at-eol
+scripts/pafet_cookie_*xxvii.py -text
+jack_xxvii_evidence/** -text

@@ -1,0 +1,259 @@
+{
+  "historical_capture_sha256": "2bf3e46ac4ca116263b048ff3ec5dabf680d1064d722734a99e6f0be73079198",
+  "cases": [
+    {
+      "case": "alice",
+      "frame": 0,
+      "memory_matches": true,
+      "memory_comparison": {
+        "ok": true,
+        "ctx_ok": true,
+        "ctx_diff": 0,
+        "extras": [
+          [
+            3030213853184,
+            "OK",
+            0
+          ],
+          [
+            3030179856384,
+            "OK",
+            0
+          ],
+          [
+            3030179524608,
+            "OK",
+            0
+          ],
+          [
+            3030179852288,
+            "OK",
+            0
+          ],
+          [
+            3030179430400,
+            "OK",
+            0
+          ],
+          [
+            3030179786752,
+            "OK",
+            0
+          ]
+        ]
+      },
+      "register_differences": {
+        "rcx": {
+          "replay": "0x2b992ddfa2320000",
+          "native": "0xcabbb0220f20000"
+        }
+      }
+    },
+    {
+      "case": "alice",
+      "frame": 1,
+      "memory_matches": true,
+      "memory_comparison": {
+        "ok": true,
+        "ctx_ok": true,
+        "ctx_diff": 0,
+        "extras": [
+          [
+            3030213853184,
+            "OK",
+            0
+          ],
+          [
+            3030179856384,
+            "OK",
+            0
+          ],
+          [
+            3030179524608,
+            "OK",
+            0
+          ],
+          [
+            3030179852288,
+            "OK",
+            0
+          ],
+          [
+            3030179430400,
+            "OK",
+            0
+          ],
+          [
+            3030179786752,
+            "OK",
+            0
+          ]
+        ]
+      },
+      "register_differences": {}
+    },
+    {
+      "case": "ramon",
+      "frame": 0,
+      "memory_matches": true,
+      "memory_comparison": {
+        "ok": true,
+        "ctx_ok": true,
+        "ctx_diff": 0,
+        "extras": [
+          [
+            1494367993856,
+            "OK",
+            0
+          ],
+          [
+            1494335242240,
+            "OK",
+            0
+          ],
+          [
+            1494334930944,
+            "OK",
+            0
+          ],
+          [
+            1494334799872,
+            "OK",
+            0
+          ],
+          [
+            1494335164416,
+            "OK",
+            0
+          ]
+        ]
+      },
+      "register_differences": {}
+    },
+    {
+      "case": "ramon",
+      "frame": 1,
+      "memory_matches": true,
+      "memory_comparison": {
+        "ok": true,
+        "ctx_ok": true,
+        "ctx_diff": 0,
+        "extras": [
+          [
+            1494367993856,
+            "OK",
+            0
+          ],
+          [
+            1494335242240,
+            "OK",
+            0
+          ],
+          [
+            1494334930944,
+            "OK",
+            0
+          ],
+          [
+            1494334799872,
+            "OK",
+            0
+          ],
+          [
+            1494335164416,
+            "OK",
+            0
+          ]
+        ]
+      },
+      "register_differences": {}
+    },
+    {
+      "case": "long_a23",
+      "frame": 0,
+      "memory_matches": true,
+      "memory_comparison": {
+        "ok": true,
+        "ctx_ok": true,
+        "ctx_diff": 0,
+        "extras": [
+          [
+            2209200865280,
+            "OK",
+            0
+          ],
+          [
+            2209168510976,
+            "OK",
+            0
+          ],
+          [
+            2209168179200,
+            "OK",
+            0
+          ],
+          [
+            2209168506880,
+            "OK",
+            0
+          ],
+          [
+            2209168195584,
+            "OK",
+            0
+          ],
+          [
+            2209168441344,
+            "OK",
+            0
+          ]
+        ]
+      },
+      "register_differences": {}
+    },
+    {
+      "case": "long_a23",
+      "frame": 1,
+      "memory_matches": true,
+      "memory_comparison": {
+        "ok": true,
+        "ctx_ok": true,
+        "ctx_diff": 0,
+        "extras": [
+          [
+            2209200865280,
+            "OK",
+            0
+          ],
+          [
+            2209168510976,
+            "OK",
+            0
+          ],
+          [
+            2209168179200,
+            "OK",
+            0
+          ],
+          [
+            2209168506880,
+            "OK",
+            0
+          ],
+          [
+            2209168195584,
+            "OK",
+            0
+          ],
+          [
+            2209168441344,
+            "OK",
+            0
+          ]
+        ]
+      },
+      "register_differences": {}
+    }
+  ],
+  "scope": "Historical missing-cookie negative control; the old capture has no process cookie and cannot validate its restoration."
+}

@@ -72,7 +72,7 @@ JACK XXIV translates these five selected wrapper bodies and checks them instruct
 | `0x140025020` | Block transfer | 7 + 27 / 34 |
 | `0x1400216d0` | STORE_REG | 32 + 2 / 34 |
 
-They are **not five atomic output-byte writers**. The comparisons include GPRs, RIP, defined arithmetic flags, XMM state and written memory. Local coverage accounts for the bodies under explicit LUT, ABI and non-aliasing assumptions; it does not cover every helper or OS exception path. The report still records a fresh-frame RCX/security-cookie discrepancy and an unexercised User-VM queue-throw path.
+They are **not five atomic output-byte writers**. The comparisons include GPRs, RIP, defined arithmetic flags, XMM state and written memory. Local coverage accounts for the bodies under explicit LUT, ABI and non-aliasing assumptions; it does not cover every helper or OS exception path. [JACK XXVII](PAFET_JACK_XXVII.md) reproduces the historical RCX/security-cookie discrepancy and adds process-cookie capture. Its new replay stops at a separate context-memory mismatch, so fresh-frame closure remains open, along with the User-VM queue-throw path.
 
 Sources and detailed evidence: [JACK XXIII](PAFET_JACK_XXIII.md), [JACK XXIV](PAFET_JACK_XXIV.md), [logical verification](jack_xxiii_evidence/verification.json), [wrapper coverage](jack_xxiv_evidence/).
 
@@ -268,12 +268,13 @@ These are primitive/oracle tests, not instruction-level Serial-VM or SHA-VM reco
 | [scripts/](scripts/) | PE/CFG extraction, collectors, differential harnesses, build and packaging tools |
 | [jack_xxiii_evidence/](jack_xxiii_evidence/) | Recovered User-VM bytecode, logical program, native traces and comparisons |
 | [jack_xxiv_evidence/](jack_xxiv_evidence/) | Wrapper CFGs, lockstep results, directed cases and conditional coverage proofs |
+| [jack_xxvii_evidence/](jack_xxvii_evidence/) | Process-cookie captures, historical negative control and the first failing fresh User-VM frame |
 | [jack_xxvi_evidence/](jack_xxvi_evidence/) | Hex-VM manifests, native frames, full/standalone comparisons, arithmetic tests and Windows package |
 | [vm_pools_evidence/](vm_pools_evidence/) | Earlier pool, bytecode and primitive observations; provenance and scope vary by artifact |
 | [docs/](docs/) | Detailed topic notes, including historical interpretations superseded by the later JACK work |
 | [historical_recovery/](historical_recovery/) | Preserved earlier sources and reports |
 
-Research sequence: [XXIII recovery](PAFET_JACK_XXIII.md) → [XXIV wrappers](PAFET_JACK_XXIV.md) → [XXV Hex-VM study](PAFET_JACK_XXV.md) → [XXVI audit](PAFET_JACK_XXVI.md) → [Windows continuation](PAFET_JACK_XXVI_WINDOWS.md) → [literal executor and validation](PAFET_JACK_XXVI_CLOSURE.md). Older assertions should be read in that chronology, with the linked primary evidence taking precedence.
+Research sequence: [XXIII recovery](PAFET_JACK_XXIII.md) → [XXIV wrappers](PAFET_JACK_XXIV.md) → [XXV Hex-VM study](PAFET_JACK_XXV.md) → [XXVI audit](PAFET_JACK_XXVI.md) → [Windows continuation](PAFET_JACK_XXVI_WINDOWS.md) → [literal executor and validation](PAFET_JACK_XXVI_CLOSURE.md) → [XXVII User-VM replay diagnosis](PAFET_JACK_XXVII.md). Older assertions should be read in that chronology, with the linked primary evidence taking precedence.
 
 ## Credits and license
 
