@@ -1,7 +1,9 @@
 {
   "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
-  "generated_source_sha256": "73050971181ff72d6dff38a35ce0f9dc3b06c2ee2cfa13d50298256241a61e98",
+  "generated_source_sha256": "56d5d5e7b319f4dc3a136e1b757e22647afc69d14baf6e9b0a9f0c8bc1f24f83",
   "entry_points": [
+    5368714384,
+    5368714432,
     5368717440,
     5368717792,
     5368718128,
@@ -50,13 +52,22 @@
     5368965536,
     5368966112,
     5369006432,
-    5372501808
+    5372478688,
+    5372483520,
+    5372501808,
+    5372526016
   ],
-  "instructions": 19673,
+  "instructions": 19900,
   "untranslated_direct_targets": [
     5372516300,
-    5372526016,
-    5372534688
+    5372522480,
+    5372526048,
+    5372526720,
+    5372529136,
+    5372529688,
+    5372534688,
+    5372534896,
+    5372577812
   ],
   "scope": "Native instruction-by-instruction C++ state projection. Untranslated direct and indirect targets fail explicitly at runtime."
 }
