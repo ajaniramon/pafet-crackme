@@ -1,0 +1,765 @@
+[
+  {
+    "pc": "0x15c9",
+    "visits": 721,
+    "native_entry": "0x140081b67",
+    "observed_successors": {
+      "0x38f6c0": 721
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xa665",
+    "visits": 6878,
+    "native_entry": "0x1400819ce",
+    "observed_successors": {
+      "0x2511e6": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x1746e",
+    "visits": 1,
+    "native_entry": "0x1400819a3",
+    "observed_successors": {
+      "0x2d409a": 1
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x1afe0",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x3c543b": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x42cef",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x123c34": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x44746",
+    "visits": 2019,
+    "native_entry": "0x1400822cc",
+    "observed_successors": {
+      "0x119872": 432,
+      "0xe0bf0": 957,
+      "0x38f6c0": 96,
+      "0x35606a": 105,
+      "0x2e08cf": 85,
+      "0x3edeff": 96,
+      "0xcaa88": 90,
+      "0x101651": 75,
+      "0x15c9": 83
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x4fe3f",
+    "visits": 6878,
+    "native_entry": "0x140082107",
+    "observed_successors": {
+      "0x1afe0": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x8453b",
+    "visits": 1,
+    "native_entry": "0x1400820c4",
+    "observed_successors": {
+      "0x171a87": 1
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x85014",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0xf2064": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x94219",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0xab5d2": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x949f0",
+    "visits": 6878,
+    "native_entry": "0x14008296a",
+    "observed_successors": {
+      "0x136b61": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xab5d2",
+    "visits": 2965,
+    "native_entry": "0x1400827e9",
+    "observed_successors": {
+      "0x2216c9": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xcaa88",
+    "visits": 337,
+    "native_entry": "0x1400825e7",
+    "observed_successors": {
+      "0x229f6f": 248,
+      "0x38f6c0": 89
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xce50c",
+    "visits": 305,
+    "native_entry": null,
+    "observed_successors": {
+      "0x144c84": 88,
+      "0x295b7f": 217
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xe0bf0",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x4fe3f": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xe72f0",
+    "visits": 6878,
+    "native_entry": "0x140083367",
+    "observed_successors": {
+      "0x148e03": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0xf2064",
+    "visits": 6878,
+    "native_entry": "0x140083137",
+    "observed_successors": {
+      "0x20ff08": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x101651",
+    "visits": 303,
+    "native_entry": "0x140082f0e",
+    "observed_successors": {
+      "0x3c061e": 300,
+      "0x35606a": 3
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x10776f",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x290921": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x119872",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x1b381f": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x123c34",
+    "visits": 2965,
+    "native_entry": "0x140083c5e",
+    "observed_successors": {
+      "0x265774": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x132233",
+    "visits": 6878,
+    "native_entry": "0x140083aca",
+    "observed_successors": {
+      "0x167eac": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x133867",
+    "visits": 2965,
+    "native_entry": "0x14008394c",
+    "observed_successors": {
+      "0x10776f": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x136b61",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x29b3fa": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x144c84",
+    "visits": 309,
+    "native_entry": null,
+    "observed_successors": {
+      "0x295b7f": 309
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x148e03",
+    "visits": 6878,
+    "native_entry": "0x140084276",
+    "observed_successors": {
+      "0x260a3a": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x14b3da",
+    "visits": 2021,
+    "native_entry": "0x1400841af",
+    "observed_successors": {
+      "0x15c9": 449,
+      "0xe0bf0": 975,
+      "0x119872": 90,
+      "0x2e08cf": 80,
+      "0x35606a": 106,
+      "0xcaa88": 86,
+      "0x101651": 74,
+      "0x38f6c0": 105,
+      "0x3edeff": 56
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x14ebd6",
+    "visits": 2965,
+    "native_entry": "0x140084076",
+    "observed_successors": {
+      "0x1d88b9": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x15649b",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x378d95": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x15ba79",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x133867": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x15ca0a",
+    "visits": 2965,
+    "native_entry": "0x140084aa6",
+    "observed_successors": {
+      "0x3ffe82": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x167eac",
+    "visits": 6878,
+    "native_entry": "0x140084905",
+    "observed_successors": {
+      "0x3d1c9d": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x171a87",
+    "visits": 1,
+    "native_entry": "0x140084837",
+    "observed_successors": {
+      "0x295b7f": 1
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x17d650",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x14ebd6": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x17d925",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x19a3f9": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x19a3f9",
+    "visits": 2965,
+    "native_entry": "0x140085361",
+    "observed_successors": {
+      "0x32966a": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x1b381f",
+    "visits": 2965,
+    "native_entry": "0x14008503c",
+    "observed_successors": {
+      "0x42cef": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x1d88b9",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x15649b": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x1e8688",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x2bdfbf": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x20ff08",
+    "visits": 6878,
+    "native_entry": "0x14008578d",
+    "observed_successors": {
+      "0x295b7f": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2216c9",
+    "visits": 2965,
+    "native_entry": null,
+    "observed_successors": {
+      "0x15ba79": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x229f6f",
+    "visits": 248,
+    "native_entry": "0x140085f86",
+    "observed_successors": {
+      "0x295b7f": 190,
+      "0x144c84": 58
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x24ad19",
+    "visits": 2965,
+    "native_entry": "0x140085cf4",
+    "observed_successors": {
+      "0x17d650": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2511e6",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0xe72f0": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x260a3a",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x1e8688": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x26503a",
+    "visits": 314,
+    "native_entry": "0x140086569",
+    "observed_successors": {
+      "0x295b7f": 228,
+      "0x144c84": 86
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x265774",
+    "visits": 2965,
+    "native_entry": "0x14008643f",
+    "observed_successors": {
+      "0x15ca0a": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x290921",
+    "visits": 2965,
+    "native_entry": "0x140086249",
+    "observed_successors": {
+      "0x24ad19": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x295b7f",
+    "visits": 8046,
+    "native_entry": null,
+    "observed_successors": {
+      "0x36da17": 8046
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x29b3fa",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x85014": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2a7d9c",
+    "visits": 2037,
+    "native_entry": "0x140086c1e",
+    "observed_successors": {
+      "0x38f6c0": 445,
+      "0xe0bf0": 1006,
+      "0x3edeff": 98,
+      "0xcaa88": 80,
+      "0x15c9": 83,
+      "0x35606a": 94,
+      "0x101651": 81,
+      "0x2e08cf": 63,
+      "0x119872": 87
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2a9a5a",
+    "visits": 6878,
+    "native_entry": "0x140086a66",
+    "observed_successors": {
+      "0x2c9934": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2bdfbf",
+    "visits": 6878,
+    "native_entry": "0x1400868eb",
+    "observed_successors": {
+      "0x3a94e2": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2c9934",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x2e4e6e": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2d409a",
+    "visits": 1,
+    "native_entry": "0x14008735f",
+    "observed_successors": {
+      "0x8453b": 1
+    },
+    "semantic_status": "PARCIAL",
+    "ir": "A ^= fmix64(A + 1); enqueue(0x8453b)"
+  },
+  {
+    "pc": "0x2e08cf",
+    "visits": 308,
+    "native_entry": "0x14008718a",
+    "observed_successors": {
+      "0xce50c": 305,
+      "0x119872": 3
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2e4e6e",
+    "visits": 6878,
+    "native_entry": "0x140087041",
+    "observed_successors": {
+      "0x2e7580": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x2e7580",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x132233": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3070be",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x31f8f7": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x31f8f7",
+    "visits": 6878,
+    "native_entry": "0x1400879b3",
+    "observed_successors": {
+      "0x949f0": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x322898",
+    "visits": 1969,
+    "native_entry": "0x1400878e6",
+    "observed_successors": {
+      "0x35606a": 423,
+      "0xcaa88": 81,
+      "0xe0bf0": 975,
+      "0x38f6c0": 95,
+      "0x119872": 71,
+      "0x3edeff": 68,
+      "0x15c9": 102,
+      "0x2e08cf": 80,
+      "0x101651": 73
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x32966a",
+    "visits": 2965,
+    "native_entry": "0x14008771c",
+    "observed_successors": {
+      "0xe0bf0": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x35606a",
+    "visits": 2282,
+    "native_entry": null,
+    "observed_successors": {
+      "0x119872": 2282
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x36da17",
+    "visits": 8046,
+    "native_entry": null,
+    "observed_successors": {
+      "0x2a7d9c": 2037,
+      "0x14b3da": 2021,
+      "0x322898": 1969,
+      "0x44746": 2019
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x378d95",
+    "visits": 2965,
+    "native_entry": "0x140088088",
+    "observed_successors": {
+      "0x17d925": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x38f6c0",
+    "visits": 1551,
+    "native_entry": "0x140087e72",
+    "observed_successors": {
+      "0x35606a": 1551
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3a94e2",
+    "visits": 6878,
+    "native_entry": "0x140087c75",
+    "observed_successors": {
+      "0x3070be": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3c061e",
+    "visits": 300,
+    "native_entry": null,
+    "observed_successors": {
+      "0x295b7f": 223,
+      "0x144c84": 77
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3c543b",
+    "visits": 6878,
+    "native_entry": null,
+    "observed_successors": {
+      "0x2a9a5a": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3d1c9d",
+    "visits": 6878,
+    "native_entry": "0x1400887df",
+    "observed_successors": {
+      "0xa665": 6878
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3edeff",
+    "visits": 318,
+    "native_entry": "0x1400885fe",
+    "observed_successors": {
+      "0x26503a": 314,
+      "0x15c9": 4
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  },
+  {
+    "pc": "0x3ffe82",
+    "visits": 2965,
+    "native_entry": "0x140088455",
+    "observed_successors": {
+      "0x94219": 2965
+    },
+    "semantic_status": "NO DEMOSTRADO",
+    "ir": null
+  }
+]

@@ -1,176 +1,128 @@
-# 06 — hex-VM
+# 06 — Hex-VM
 
-## What it computes (output semantics)
+The Hex-VM executes at `0x1400804c0`. Earlier work observed 72 output bytes
+from 144 ASCII hex characters at `0x1403dbbc0`; matching those bytes does not
+reconstruct its architecture. JACK XXVI is a partial reconstruction; see
+[PAFET_JACK_XXVI.md](../PAFET_JACK_XXVI.md) for classifications and evidence.
 
-```python
-hex_vm(ascii_hex) = bytes.fromhex(ascii_hex)
-```
+## State and dispatch
 
-72 output bytes from 144 ASCII hex characters at `0x1403dbbc0`. That is the
-semantic contract of the function — the on-disk VM, however, is far from a
-one-liner.
+The real virtual context lives on the executor's stack at `rsp+0x180`.
+Executor-entry RCX is an external output-state argument, not this context.
 
-## Where in the PE
+| Offset | Meaning |
+|---|---|
+| `0x230`, `0x4b0`, `0x940` | A, K, B |
+| `0x2b0`, `0x4b8` | Pending LIFO entries, length (capacity 64) |
+| `0x4c0` | Push counter |
+| `0x9b8` | Persistent eight-entry secondary handler table |
+| `0x10d0` | Encoded VPC |
+| `0x1180`, `0x1188` | LCG, step counter |
+
+At initialization (`0x1400811c4..0x140081277`), the handler table is rotated
+by the initial K's low three bits. It is not recomputed from K on every drain.
+The secondary dispatcher (`0x14004c720`) consumes at most eight entries:
 
 ```text
-Executor VA        : 0x1400804c0
-Executor size      : 34,065 B (6512 x86-64 instructions) per .pdata
-Only caller        : the main controller at 0x140396f96 (fn 0x140396990)
-ABI (per XXV)      : rcx = output state (0x80 bytes zeroed at rbp+0x20)
-                     edx = 0x10 (fixed selector)
-                     r8  = function object (vtable at 0x1403f1ba0, 6 callbacks)
-Virtual context    : lives on the executor's own stack at rsp + 0x180
-Source hex         : 0x1403dbbc0 (144 ASCII characters)
-Dynamic buffer     : 0x1f20 B of PAGE_EXECUTE_READWRITE via 0x14007fa70 (used once)
+encoded = pending[--length]
+decoded = K_before XOR encoded
+selector = high3(K_before * phi + encoded) // uint64 wrapping
+K = fmix64(decoded)
+execute persistent_table[selector]
+advance LCG and step counter
+tag = byte(LCG >> 27)
+mask = tag*ctx[0x10c0] XOR ctx[0x10b8] XOR ctx[0x10b0]
+encoded_VPC = ctx[0x10c8] != 0 ? mask + uint32(decoded)
+                              : mask XOR uint32(decoded)
 ```
 
-A Phase 1 locator (`scripts/pafet_hexvm_locate_xx.py`) found the decoded 72
-bytes at multiple RW addresses in the process after `exec_leave`. The output
-is written through a `std::string` constructed inside the output state.
+The selector uses pre-fmix K; the handler sees post-fmix K. The logical VPC
+returned by the VPC reader differs from the encoded value in memory.
 
-## Internal architecture (JACK XXV)
+| Handler | State transformation |
+|---|---|
+| H0 | `A = fmix64(K ^ A)` |
+| H1 | `B = fmix64((K >> 7) ^ B); K += phi` |
+| H2 | `K ^= fmix64(A + 1)` |
+| H3 | `A += (K & 6) \| 1` |
+| H4 | `B ^= fmix64(K ^ A)` |
+| H5 | `K = fmix64(B ^ K)` |
+| H6 | `A ^= (K >> 32) & 255` |
+| H7 | `B = fmix64(K + B)` |
 
-The hex-VM is NOT a simple ASCII-to-byte decoder wrapped in a VM. It is a
-full virtual machine of its own, structurally parallel to the user-VM. For
-the full reconstruction, see [PAFET_JACK_XXV.md](../PAFET_JACK_XXV.md).
+Here fmix64 is the MurmurHash3 finalizer. `phi = 0x9e3779b97f4a7c15`.
 
-### Components
+## Queue and exceptions
 
-```mermaid
-flowchart TB
-  subgraph Exec["Executor 0x1400804c0 (34 KB, 1 ret)"]
-    PCbank["VPC bank ctx+0x10d0"]
-    QueueBuf["Queue ctx+0x2b0 (LIFO, cap 0x40)"]
-    State["K ctx+0x4b0  ·  A ctx+0x230  ·  B ctx+0x940"]
-    LCG["LCG ctx+0x1180  (phi + 0x2545f4914f6cdd1d)"]
-    RotT["Rotated handler table ctx+0x9b8"]
-  end
+`0x14004c880` increments counter, forms `uint32(item) ^ K`, conditionally
+remaps, then throws if counter is 1 or `((counter * -0x3eb) ^ K) & 0xfff`
+equals `0x1f`. Otherwise it appends the encoded item, subject to capacity.
+The thrown payload carries the encoded item; reconstruction needs the catch
+path, not merely a boolean reporting a throw.
 
-  subgraph Dispatch["Secondary dispatch"]
-    Push["queue_push 0x14004c880"]
-    Drain["sec_disp 0x14004c720 (up to 8 items / call)"]
-    Push -->|LIFO| QueueBuf
-    QueueBuf --> Drain
-    Drain -->|sel = (K*phi + item)>>61| RotT
-    RotT -->|rotated[sel]| Handlers
-  end
+The historical trace records 59 throws. The full-executor Unicorn host still
+stops at unsupported `RtlPcToFileHeader`; MSVC unwind is not implemented.
 
-  subgraph Handlers["8 state handlers (0x14004c490..0x14004c6a0)"]
-    H0["H0 A = fmix(K^A)"]
-    H1["H1 B = fmix((K>>7)^B); K = phi+K"]
-    H2["H2 K ^= fmix(A+1)"]
-    H3["H3 A += (K&6)|1"]
-    H4["H4 B ^= fmix(K^A)"]
-    H5["H5 K = fmix(B^K)"]
-    H6["H6 A ^= byte(K>>32)"]
-    H7["H7 B = fmix(K+B)"]
-  end
+## Observed graph and local predictions
 
-  Drain --> LCG
-  LCG -->|byte_tag·mult ⊕/+ item| PCbank
-  Drain --> State
-  Handlers --> State
+The committed XXV capture contains 72 logical PCs. Its observed fanouts are
+59 with one successor, eight with two, one with four and four with nine.
+These are observations from one run, not proof of exhaustive CFG coverage.
+`jack_xxvi_evidence/blocks.json` records each PC, observed successors, native
+anchor where found and explicit semantic status.
+
+Both invariants hold for all 281206 captured pushes:
+
+- item equals the next VPC-write callback's logical PC argument;
+- counter before push equals the zero-based push index.
+
+The original CFG script uses the wrong column for counter in the ten-field
+trace. Use `scripts/pafet_hexvm_audit_xxvi.py` for the corrected audit.
+
+Keeping the table's initial rotation raises K prediction from 139873/281205
+to 281205/281205. This corrects the previous claim that unmatched K values
+demonstrated block writes to K. Predictions start from each captured push's
+state; this is not full instruction lockstep or an autonomous execution.
+
+K/A/B together match only 8047/281205 without block bodies. The first A
+difference is explained by PC `0x2d409a` at native `0x14008735f`:
+
+```text
+A ^= fmix64(A + 1)
+enqueue(0x8453b)
 ```
 
-Validated: `src/pafet_hexvm_handlers_xxv.h` ports all 8 handlers; a Unicorn
-differential (`scripts/pafet_hexvm_handlers_unicorn_xxv.py`) runs 50 random
-triples against each handler's original x64 body — **400/400 PASS**.
+This block is implemented and differentially checked. The other 71 bodies
+remain unreconstructed here. No blocks are unified merely from graph shape.
 
-### The virtual program (72 blocks)
+## Remap and the supposed output_build
 
-The hex-VM carries a 72-block virtual control-flow graph in which the
-virtual PC lives at `ctx+0x10d0`. Each block pushes an item (= next VPC) to
-the queue, the drain cycle computes a pseudo-random handler selection and
-state mix, and the LCG + context mixers compute the actual next VPC.
+`0x14007fb70` rebuilds four groups of 62 entries, with permutations, inverse
+maps, encoded targets and optional generated thunks. It differs from the
+eight-entry secondary handler table. The report and saved disassembly describe
+its dependencies; a complete C++ remap and differential are still missing.
 
-Entry sequence (visited once each):
+`0x1400889e0`, previously called output_build, forwards to `0x14004a0e0`:
+it reads a virtual slot selected by the low byte of RDX, decodes the selected
+bank cell, advances the LCG, changes its byte tag and reencodes the same value.
+It returns a uint64. The new C++ preserves these effects. Sixteen calls in the
+capture do not show how the final 72-byte buffer is constructed. That path
+remains open; no conventional hex decoder substitutes for it in the new core.
 
-```
-0x1746e → 0x2d409a → 0x8453b → 0x171a87 → 0x295b7f
-```
+## Reproducible candidate and limits
 
-The main loop header is `0x295b7f` (8,148 iterations for `alice/serial01`).
-From it, a 4-way branch at `0x36da17` splits into four DROP-style sub-paths:
+`src/pafet_hexvm_core_xxvi.h` contains clean primitives, separately from
+`src/main_hexvm_probe_xxvi.cpp` and the Python harnesses. Its supported program
+block is explicit; requesting an unreconstructed block fails.
 
-```
-0x36da17 → 0x2a7d9c (2068) | 0x14b3da (2060) | 0x44746 (2044) | 0x322898 (1976)
-```
+`scripts/pafet_hexvm_diff_xxvi.py` compiles C++ and compares against original
+`pafet.bin` x64 under Unicorn: 512 handler, 256 dispatcher, 256 slot-adapter and
+64 block cases pass. Emulation failures abort. Requirements and exact commands
+are in the XXVI report. Finite tests do not establish universal equivalence.
 
-Each DROP has a 9-way fanout that mostly funnels back into a 29-block
-sequential chain (6944 visits each: `0xe0bf0 → 0x4fe3f → … → 0x20ff08 →
-0x295b7f`) or a 22-block secondary chain (3031 visits each, entered at
-`0x119872`).
-
-Fanout distribution across the 72 blocks:
-
-```
-fanout=1:  59 blocks (sequential)
-fanout=2:   8 blocks
-fanout=4:   1 block  (0x36da17)
-fanout=9:   4 blocks (the DROPs)
-```
-
-Full dump: `jack_xxv_evidence/hexvm_cfg.txt` and `hexvm_structure.json`.
-
-### Observed invariants (JACK XXV)
-
-- `pushes[i].item == next vpc_write.pc` for every push sampled — the
-  pushed value **is** the next virtual PC value verbatim.
-- `pushes[i].counter == i` — the counter progresses monotonically with the
-  push stream.
-
-### Throw-as-control-flow
-
-`queue_push` throws a C++ exception on two conditions:
-
-1. `counter == 1` (the very first push)
-2. `((counter * -0x3eb) ^ K) & 0xfff == 0x1f` (hash probe)
-
-Both throws run `_CxxThrowException` at `0x1403a5fa0`. The catch landing
-lives inside the executor (resolved by MSVC EH scope tables; found
-reliably by Frida Stalker on a per-throw basis).
-
-Observed throws per hex-VM run: **59** (over 285K pushes = 1 throw per
-~4700 pushes). The first-push throw accounts for the single counter==1
-trigger; the remaining ~58 come from the hash probe.
-
-The earlier `scripts/pafet_hexvm_host_xxv.py` Unicorn harness halted at
-the first throw because its stub for `RtlPcToFileHeader` (needed by MSVC's
-unwind) returned a plain `ret` instead of modelling the full C++ EH. For
-reconstruction purposes we model the throw as a rare control-flow signal
-without emulating full MSVC EH.
-
-### Shared library with the user-VM
-
-| hex-VM        | user-VM        | Function                       |
-|---------------|----------------|--------------------------------|
-| `0x14004c880` | `0x140006010`  | Queue of pending work          |
-| `0x14007fb70` | `0x14003ebe0`  | Table remap                    |
-| `0x140049330` | `0x1400029a0`  | Panic                          |
-| `0x14004c3c0` | `0x140005b50`  | Live-slot encoder              |
-
-The dispatcher and the 8 state handlers are specific to the hex-VM. The
-VPC accessors `0x140049a30` (read) and `0x140049af0` (write) are also
-specific; they encode the virtual PC inside the live-slot bank.
-
-## Replicas and tests
-
-| Artifact                                              | Status                      |
-|-------------------------------------------------------|-----------------------------|
-| `src/pafet_hexvm_native_xx.h` (JACK XX)              | Byte-exact output: `bytes.fromhex` (12/12 inputs) |
-| `src/pafet_hexvm_handlers_xxv.h` (JACK XXV)          | 8 state handlers byte-exact (Unicorn 400/400) |
-| `pafet_hexvm_handlers_test_xxv.exe` (JACK XXV)       | Self-consistency 8/8 PASS   |
-| `scripts/pafet_hexvm_handlers_unicorn_xxv.py` (XXV)  | 50 random triples/handler → 400/400 PASS |
-| `scripts/pafet_hexvm_cfg_xxv.py` (XXV)                | 72-block CFG + invariants   |
-
-The behavioural replica from JACK XX stays the only one that produces 72
-output bytes from any input. The XXV artefacts prove the VM machinery
-underneath, not the full byte-exact end-to-end structural equivalence.
-
-## Pre-overnight sources
-
-| Report                      | Content                                              |
-|-----------------------------|------------------------------------------------------|
-| `PAFET_CRYPTO_AUDIT.md`     | Static view of the hex blob and its only call site   |
-| `PAFET_JACK_XX.md` family   | Byte-exact output replica, Phase 1 output locator    |
-| `PAFET_JACK_XXV.md` (this)  | Full architectural reconstruction of the hex-VM      |
+Historical evidence is preserved. Its Windows capture used a PE with two changed
+bytes and lacks handler events, effective tables, thread IDs and proper executor
+context snapshots. No new Windows capture, final-buffer comparison or complete
+input differential is claimed. Next: the first B divergence at push 3 / PC
+`0x295b7f`, exceptions, remaining blocks and actual buffer stores. The other
+three VMs are outside this operation.

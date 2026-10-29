@@ -1,0 +1,17 @@
+{
+  "pafet.bin": {
+    "sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+    "length": 4396544,
+    "different_file_bytes_vs_bin": 0,
+    "first_difference_offsets": []
+  },
+  "pafet_pass8.exe": {
+    "sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+    "length": 4396544,
+    "different_file_bytes_vs_bin": 2,
+    "first_difference_offsets": [
+      "0x395efb",
+      "0x395efc"
+    ]
+  }
+}
