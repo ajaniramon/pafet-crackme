@@ -2,15 +2,37 @@
 """Independent recursive native CFG audit, before relying on XXIII labels."""
 import collections,hashlib,json,pathlib
 import capstone,pefile
-from capstone.x86_const import X86_OP_IMM
+from capstone.x86_const import X86_OP_IMM,X86_REG_RIP
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'jack_xxiv_evidence';BASE=0x140000000
+WIDE={**{'e'+r[1:]:r for r in ('rax','rcx','rdx','rbx','rsp','rbp','rsi','rdi')},**{f'r{i}d':f'r{i}' for i in range(8,16)}}
+def jump_table(pe,seen,jmp):
+    """MSVC switch: cmp idx,N; ja; mov eax,idx; lea base,[rip]; mov r32,[base+rax*4+T]; add r,base; jmp r.
+    Walk back through forward-decoded instructions and read the N+1 table entries from the PE;
+    any other shape stays an indirect exit."""
+    ends={i.address+i.size:i for i in seen.values()};window=[jmp]
+    while len(window)<7 and window[-1].address in ends:window.append(ends[window[-1].address])
+    if len(window)<7:return None
+    jmp,add,load,lea,move,ja,cmp=window
+    if [x.mnemonic for x in (cmp,ja,move,lea,load,add)]!=['cmp','ja','mov','lea','mov','add']:return None
+    if cmp.operands[1].type!=X86_OP_IMM or lea.operands[1].mem.base!=X86_REG_RIP:return None
+    full=lambda o:WIDE.get(jmp.reg_name(o.reg),jmp.reg_name(o.reg))
+    target,base,index=full(jmp.operands[0]),full(lea.operands[0]),full(move.operands[0])
+    m=load.operands[1].mem
+    if (full(add.operands[0]),full(add.operands[1]),full(load.operands[0]))!=(target,base,target):return None
+    if (jmp.reg_name(m.base),jmp.reg_name(m.index),m.scale)!=(base,index,4):return None
+    # A 32-bit MOV zero-extends the index, so the bound checked by CMP/JA is the bound of the table read.
+    if move.operands[0].size!=4 or move.operands[1].reg!=cmp.operands[0].reg:return None
+    origin=lea.address+lea.size+lea.operands[1].mem.disp;count=cmp.operands[1].imm+1
+    table=pe.get_data(origin+m.disp-BASE,4*count)
+    return [origin+int.from_bytes(table[4*k:4*k+4],'little') for k in range(count)]
 def cfg(pe,entry):
     md=capstone.Cs(capstone.CS_ARCH_X86,capstone.CS_MODE_64);md.detail=True
+    text=next(s for s in pe.sections if s.Name.rstrip(b'\0')==b'.text');lo=BASE+text.VirtualAddress;hi=lo+text.Misc_VirtualSize
     pending=[entry];seen={};edges=[];calls=[];exits=[]
     while pending:
         pc=pending.pop()
         if pc in seen:continue
-        if not BASE+0x1000<=pc<BASE+0x3a0000:raise ValueError(('outside native text',hex(pc)))
+        if not lo<=pc<hi:raise ValueError(('outside native text',hex(pc)))
         i=next(md.disasm(pe.get_data(pc-BASE,15),pc),None)
         if i is None:raise ValueError(('undecodable',hex(pc)))
         seen[pc]=i;assert len(seen)<20000
@@ -20,7 +42,11 @@ def cfg(pe,entry):
             exits.append({'site':pc,'kind':i.mnemonic});continue
         if i.mnemonic.startswith('j'):
             if i.operands[0].type!=X86_OP_IMM:
-                exits.append({'site':pc,'kind':'indirect_jump','operand':i.op_str});continue
+                targets=jump_table(pe,seen,i)
+                if targets is None:
+                    exits.append({'site':pc,'kind':'indirect_jump','operand':i.op_str});continue
+                for to in targets:edges.append({'from':pc,'to':to,'kind':'table'});pending.append(to)
+                continue
             to=i.operands[0].imm;edges.append({'from':pc,'to':to,'kind':'taken'});pending.append(to)
             if i.mnemonic=='jmp':continue
         edges.append({'from':pc,'to':end,'kind':'fallthrough'});pending.append(end)

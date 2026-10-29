@@ -78,9 +78,11 @@ def emit(md,i):
         target=f'next+UINT64_C(0x{(os[0].imm-i.address-i.size)&((1<<64)-1):x})'
         return f'next={target};' if op=='jmp' else f'if(condition({CC[op[1:]]}))next={target};'
     if op.startswith('cmov'):return f'if(condition({CC[op[4:]]}))'+write(a,read(b))
+    if op.startswith('set'):return write(a,f'uint64_t(condition({CC[op[3:]]}))')
     if op in ('nop','endbr64'):return ''
     if op=='int3':return 'throw Fault(5,c.rip,"INT3");'
-    if op in ('movdqu','movdqa'):
+    if op=='int':return f'throw Fault(5,c.rip,"INT 0x{os[0].imm:x}");'
+    if op in ('movdqu','movdqa','movups'):
         aligned='if(('+a+'.kind==2&&address('+a+')%16)||('+b+'.kind==2&&address('+b+')%16))throw Fault(4,c.rip,"unaligned MOVDQA");' if op=='movdqa' else ''
         return '{'+aligned+f'uint8_t v[16];vector_get({b},v);vector_put({a},v);'+'}'
     if op=='movd':

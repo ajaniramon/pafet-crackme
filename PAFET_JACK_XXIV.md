@@ -20,7 +20,7 @@ Desde la raíz del repositorio:
 
 ```powershell
 python scripts/pafet_audit_xxiv.py
-python scripts/pafet_lift_xxiv.py --observed-families 1,5,26
+python scripts/pafet_lift_xxiv.py --observed-families 1,5,26,32 --entry 0x14003bea0 --entry 0x14039df30 --entry 0x140048960 --entry 0x1403a3dc0
 python scripts/pafet_capture_native_xxiv.py
 ```
 
