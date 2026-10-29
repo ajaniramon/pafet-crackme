@@ -59,7 +59,7 @@ flowchart TB
     HEX[hex-VM 0x1400804c0<br>decode 144 ASCII hex] --> CT[72-B ciphertext]
     KEY --> D[DES3-EDE 3 passes<br>D-E-D with K1 K2 K3<br>+ permissive unpad]
     CT --> D
-    D --> SH{starts CMO{<br>and ends }?}
+    D --> SH{"starts CMO{<br>and ends }?"}
     SH -->|yes| PRINT[Print flag]
     SH -->|no| WRONG[Wrong credentials]
 ```

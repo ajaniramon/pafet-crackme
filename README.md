@@ -45,7 +45,7 @@ flowchart LR
     HEX[hex-VM<br>decode 144 ASCII hex] --> CT[72-byte ciphertext]
     CT --> D[DES3-EDE<br>3 passes · permissive unpad]
     K --> D
-    D --> SH{starts CMO{<br>ends }?}
+    D --> SH{"starts CMO{<br>ends }?"}
     SH -->|yes| OUT[print flag]
     SH -->|no| REJ2[Wrong credentials]
 ```
