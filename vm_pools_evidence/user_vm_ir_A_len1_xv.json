@@ -1,0 +1,1207 @@
+{
+ "user": "A",
+ "len": 1,
+ "serial": "serial01",
+ "expected_f_user_hex": "22",
+ "atomic_pairs": [
+  [
+   2,
+   30,
+   0
+  ]
+ ],
+ "atomic_pairs_found": 1,
+ "program": [
+  {
+   "idx": 0,
+   "ch": 3,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 56
+  },
+  {
+   "idx": 1,
+   "ch": 1,
+   "op": 56,
+   "operands": [],
+   "next_op_encoded": 24
+  },
+  {
+   "idx": 2,
+   "ch": 0,
+   "op": 24,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 3,
+   "ch": 3,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 9
+  },
+  {
+   "idx": 4,
+   "ch": 2,
+   "op": 9,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 5,
+   "ch": 3,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 52
+  },
+  {
+   "idx": 6,
+   "ch": 2,
+   "op": 52,
+   "operands": [],
+   "next_op_encoded": 46
+  },
+  {
+   "idx": 7,
+   "ch": 0,
+   "op": 46,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 8,
+   "ch": 1,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 3
+  },
+  {
+   "idx": 9,
+   "ch": 1,
+   "op": 3,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 10,
+   "ch": 0,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 11,
+   "ch": 2,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 12,
+   "ch": 3,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 15
+  },
+  {
+   "idx": 13,
+   "ch": 3,
+   "op": 15,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 14,
+   "ch": 2,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 18
+  },
+  {
+   "idx": 15,
+   "ch": 1,
+   "op": 18,
+   "operands": [],
+   "next_op_encoded": 49
+  },
+  {
+   "idx": 16,
+   "ch": 0,
+   "op": 49,
+   "operands": [],
+   "next_op_encoded": 4
+  },
+  {
+   "idx": 17,
+   "ch": 0,
+   "op": 4,
+   "operands": [],
+   "next_op_encoded": 52
+  },
+  {
+   "idx": 18,
+   "ch": 2,
+   "op": 52,
+   "operands": [],
+   "next_op_encoded": 16
+  },
+  {
+   "idx": 19,
+   "ch": 1,
+   "op": 16,
+   "operands": [],
+   "next_op_encoded": 37
+  },
+  {
+   "idx": 20,
+   "ch": 3,
+   "op": 37,
+   "operands": [],
+   "next_op_encoded": 18
+  },
+  {
+   "idx": 21,
+   "ch": 1,
+   "op": 18,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 22,
+   "ch": 0,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 56
+  },
+  {
+   "idx": 23,
+   "ch": 0,
+   "op": 56,
+   "operands": [],
+   "next_op_encoded": 8
+  },
+  {
+   "idx": 24,
+   "ch": 1,
+   "op": 8,
+   "operands": [],
+   "next_op_encoded": 30
+  },
+  {
+   "idx": 25,
+   "ch": 2,
+   "op": 30,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 26,
+   "ch": 1,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 13
+  },
+  {
+   "idx": 27,
+   "ch": 2,
+   "op": 13,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 28,
+   "ch": 1,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 15
+  },
+  {
+   "idx": 29,
+   "ch": 1,
+   "op": 15,
+   "operands": [],
+   "next_op_encoded": 55
+  },
+  {
+   "idx": 30,
+   "ch": 0,
+   "op": 55,
+   "operands": [],
+   "next_op_encoded": 61
+  },
+  {
+   "idx": 31,
+   "ch": 3,
+   "op": 61,
+   "operands": [],
+   "next_op_encoded": 53
+  },
+  {
+   "idx": 32,
+   "ch": 2,
+   "op": 53,
+   "operands": [],
+   "next_op_encoded": 34
+  },
+  {
+   "idx": 33,
+   "ch": 3,
+   "op": 34,
+   "operands": [],
+   "next_op_encoded": 33
+  },
+  {
+   "idx": 34,
+   "ch": 2,
+   "op": 33,
+   "operands": [],
+   "next_op_encoded": 13
+  },
+  {
+   "idx": 35,
+   "ch": 1,
+   "op": 13,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 36,
+   "ch": 2,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 37,
+   "ch": 0,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 49
+  },
+  {
+   "idx": 38,
+   "ch": 2,
+   "op": 49,
+   "operands": [],
+   "next_op_encoded": 33
+  },
+  {
+   "idx": 39,
+   "ch": 2,
+   "op": 33,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 40,
+   "ch": 0,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 41,
+   "ch": 0,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 42,
+   "ch": 0,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 43,
+   "ch": 0,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 49
+  },
+  {
+   "idx": 44,
+   "ch": 0,
+   "op": 49,
+   "operands": [],
+   "next_op_encoded": 33
+  },
+  {
+   "idx": 45,
+   "ch": 2,
+   "op": 33,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 46,
+   "ch": 0,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 5
+  },
+  {
+   "idx": 47,
+   "ch": 2,
+   "op": 5,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 48,
+   "ch": 1,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 13
+  },
+  {
+   "idx": 49,
+   "ch": 1,
+   "op": 13,
+   "operands": [],
+   "next_op_encoded": 18
+  },
+  {
+   "idx": 50,
+   "ch": 3,
+   "op": 18,
+   "operands": [],
+   "next_op_encoded": 13
+  },
+  {
+   "idx": 51,
+   "ch": 0,
+   "op": 13,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 52,
+   "ch": 1,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 30
+  },
+  {
+   "idx": 53,
+   "ch": 3,
+   "op": 30,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 54,
+   "ch": 1,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 55,
+   "ch": 1,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 56,
+   "ch": 1,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 57,
+   "ch": 1,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 58,
+   "ch": 0,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 59,
+   "ch": 1,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 28
+  },
+  {
+   "idx": 60,
+   "ch": 2,
+   "op": 28,
+   "operands": [],
+   "next_op_encoded": 14
+  },
+  {
+   "idx": 61,
+   "ch": 2,
+   "op": 14,
+   "operands": [],
+   "next_op_encoded": 36
+  },
+  {
+   "idx": 62,
+   "ch": 2,
+   "op": 36,
+   "operands": [],
+   "next_op_encoded": 8
+  },
+  {
+   "idx": 63,
+   "ch": 2,
+   "op": 8,
+   "operands": [],
+   "next_op_encoded": 8
+  },
+  {
+   "idx": 64,
+   "ch": 2,
+   "op": 8,
+   "operands": [],
+   "next_op_encoded": 23
+  },
+  {
+   "idx": 65,
+   "ch": 1,
+   "op": 23,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 66,
+   "ch": 3,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 67,
+   "ch": 3,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 30
+  },
+  {
+   "idx": 68,
+   "ch": 2,
+   "op": 30,
+   "operands": [],
+   "next_op_encoded": 44
+  },
+  {
+   "idx": 69,
+   "ch": 3,
+   "op": 44,
+   "operands": [],
+   "next_op_encoded": 14
+  },
+  {
+   "idx": 70,
+   "ch": 2,
+   "op": 14,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 71,
+   "ch": 1,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 72,
+   "ch": 3,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 8
+  },
+  {
+   "idx": 73,
+   "ch": 2,
+   "op": 8,
+   "operands": [],
+   "next_op_encoded": 37
+  },
+  {
+   "idx": 74,
+   "ch": 1,
+   "op": 37,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 75,
+   "ch": 3,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 76,
+   "ch": 0,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 60
+  },
+  {
+   "idx": 77,
+   "ch": 1,
+   "op": 60,
+   "operands": [],
+   "next_op_encoded": 60
+  },
+  {
+   "idx": 78,
+   "ch": 1,
+   "op": 60,
+   "operands": [],
+   "next_op_encoded": 53
+  },
+  {
+   "idx": 79,
+   "ch": 0,
+   "op": 53,
+   "operands": [],
+   "next_op_encoded": 14
+  },
+  {
+   "idx": 80,
+   "ch": 2,
+   "op": 14,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 81,
+   "ch": 3,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 15
+  },
+  {
+   "idx": 82,
+   "ch": 0,
+   "op": 15,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 83,
+   "ch": 3,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 37
+  },
+  {
+   "idx": 84,
+   "ch": 1,
+   "op": 37,
+   "operands": [],
+   "next_op_encoded": 11
+  },
+  {
+   "idx": 85,
+   "ch": 2,
+   "op": 11,
+   "operands": [],
+   "next_op_encoded": 45
+  },
+  {
+   "idx": 86,
+   "ch": 3,
+   "op": 45,
+   "operands": [],
+   "next_op_encoded": 41
+  },
+  {
+   "idx": 87,
+   "ch": 0,
+   "op": 41,
+   "operands": [],
+   "next_op_encoded": 57
+  },
+  {
+   "idx": 88,
+   "ch": 2,
+   "op": 57,
+   "operands": [],
+   "next_op_encoded": 15
+  },
+  {
+   "idx": 89,
+   "ch": 0,
+   "op": 15,
+   "operands": [],
+   "next_op_encoded": 19
+  },
+  {
+   "idx": 90,
+   "ch": 0,
+   "op": 19,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 91,
+   "ch": 2,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 33
+  },
+  {
+   "idx": 92,
+   "ch": 2,
+   "op": 33,
+   "operands": [],
+   "next_op_encoded": 28
+  },
+  {
+   "idx": 93,
+   "ch": 1,
+   "op": 28,
+   "operands": [],
+   "next_op_encoded": 33
+  },
+  {
+   "idx": 94,
+   "ch": 2,
+   "op": 33,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 95,
+   "ch": 0,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 96,
+   "ch": 2,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 29
+  },
+  {
+   "idx": 97,
+   "ch": 3,
+   "op": 29,
+   "operands": [],
+   "next_op_encoded": 14
+  },
+  {
+   "idx": 98,
+   "ch": 3,
+   "op": 14,
+   "operands": [],
+   "next_op_encoded": 49
+  },
+  {
+   "idx": 99,
+   "ch": 2,
+   "op": 49,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 100,
+   "ch": 2,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 4
+  },
+  {
+   "idx": 101,
+   "ch": 3,
+   "op": 4,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 102,
+   "ch": 2,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 103,
+   "ch": 0,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 19
+  },
+  {
+   "idx": 104,
+   "ch": 1,
+   "op": 19,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 105,
+   "ch": 1,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 18
+  },
+  {
+   "idx": 106,
+   "ch": 1,
+   "op": 18,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 107,
+   "ch": 0,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 3
+  },
+  {
+   "idx": 108,
+   "ch": 0,
+   "op": 3,
+   "operands": [],
+   "next_op_encoded": 40
+  },
+  {
+   "idx": 109,
+   "ch": 3,
+   "op": 40,
+   "operands": [],
+   "next_op_encoded": 6
+  },
+  {
+   "idx": 110,
+   "ch": 3,
+   "op": 6,
+   "operands": [],
+   "next_op_encoded": 17
+  },
+  {
+   "idx": 111,
+   "ch": 0,
+   "op": 17,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 112,
+   "ch": 2,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 18
+  },
+  {
+   "idx": 113,
+   "ch": 1,
+   "op": 18,
+   "operands": [],
+   "next_op_encoded": 44
+  },
+  {
+   "idx": 114,
+   "ch": 3,
+   "op": 44,
+   "operands": [],
+   "next_op_encoded": 30
+  },
+  {
+   "idx": 115,
+   "ch": 3,
+   "op": 30,
+   "operands": [],
+   "next_op_encoded": 34
+  },
+  {
+   "idx": 116,
+   "ch": 3,
+   "op": 34,
+   "operands": [],
+   "next_op_encoded": 9
+  },
+  {
+   "idx": 117,
+   "ch": 1,
+   "op": 9,
+   "operands": [],
+   "next_op_encoded": 25
+  },
+  {
+   "idx": 118,
+   "ch": 3,
+   "op": 25,
+   "operands": [],
+   "next_op_encoded": 41
+  },
+  {
+   "idx": 119,
+   "ch": 0,
+   "op": 41,
+   "operands": [],
+   "next_op_encoded": 47
+  },
+  {
+   "idx": 120,
+   "ch": 1,
+   "op": 47,
+   "operands": [],
+   "next_op_encoded": 35
+  },
+  {
+   "idx": 121,
+   "ch": 1,
+   "op": 35,
+   "operands": [],
+   "next_op_encoded": 53
+  },
+  {
+   "idx": 122,
+   "ch": 1,
+   "op": 53,
+   "operands": [],
+   "next_op_encoded": 28
+  },
+  {
+   "idx": 123,
+   "ch": 3,
+   "op": 28,
+   "operands": [],
+   "next_op_encoded": 13
+  },
+  {
+   "idx": 124,
+   "ch": 0,
+   "op": 13,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 125,
+   "ch": 2,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 126,
+   "ch": 0,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 32
+  },
+  {
+   "idx": 127,
+   "ch": 3,
+   "op": 32,
+   "operands": [],
+   "next_op_encoded": 3
+  },
+  {
+   "idx": 128,
+   "ch": 1,
+   "op": 3,
+   "operands": [],
+   "next_op_encoded": 0
+  },
+  {
+   "idx": 129,
+   "ch": 2,
+   "op": 0,
+   "operands": [],
+   "next_op_encoded": 22
+  },
+  {
+   "idx": 130,
+   "ch": 3,
+   "op": 22,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 131,
+   "ch": 0,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 32
+  },
+  {
+   "idx": 132,
+   "ch": 3,
+   "op": 32,
+   "operands": [],
+   "next_op_encoded": 40
+  },
+  {
+   "idx": 133,
+   "ch": 2,
+   "op": 40,
+   "operands": [],
+   "next_op_encoded": 28
+  },
+  {
+   "idx": 134,
+   "ch": 3,
+   "op": 28,
+   "operands": [],
+   "next_op_encoded": 3
+  },
+  {
+   "idx": 135,
+   "ch": 1,
+   "op": 3,
+   "operands": [],
+   "next_op_encoded": 11
+  },
+  {
+   "idx": 136,
+   "ch": 0,
+   "op": 11,
+   "operands": [],
+   "next_op_encoded": 50
+  },
+  {
+   "idx": 137,
+   "ch": 0,
+   "op": 50,
+   "operands": [],
+   "next_op_encoded": 32
+  },
+  {
+   "idx": 138,
+   "ch": 3,
+   "op": 32,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 139,
+   "ch": 2,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 22
+  },
+  {
+   "idx": 140,
+   "ch": 3,
+   "op": 22,
+   "operands": [],
+   "next_op_encoded": 32
+  },
+  {
+   "idx": 141,
+   "ch": 0,
+   "op": 32,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 142,
+   "ch": 2,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 36
+  },
+  {
+   "idx": 143,
+   "ch": 1,
+   "op": 36,
+   "operands": [],
+   "next_op_encoded": 49
+  },
+  {
+   "idx": 144,
+   "ch": 1,
+   "op": 49,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 145,
+   "ch": 2,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 3
+  },
+  {
+   "idx": 146,
+   "ch": 1,
+   "op": 3,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 147,
+   "ch": 2,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 20
+  },
+  {
+   "idx": 148,
+   "ch": 2,
+   "op": 20,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 149,
+   "ch": 3,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 150,
+   "ch": 0,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 46
+  },
+  {
+   "idx": 151,
+   "ch": 2,
+   "op": 46,
+   "operands": [],
+   "next_op_encoded": 17
+  },
+  {
+   "idx": 152,
+   "ch": 2,
+   "op": 17,
+   "operands": [],
+   "next_op_encoded": 46
+  },
+  {
+   "idx": 153,
+   "ch": 2,
+   "op": 46,
+   "operands": [],
+   "next_op_encoded": 17
+  },
+  {
+   "idx": 154,
+   "ch": 2,
+   "op": 17,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 155,
+   "ch": 0,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 61
+  },
+  {
+   "idx": 156,
+   "ch": 3,
+   "op": 61,
+   "operands": [],
+   "next_op_encoded": 21
+  },
+  {
+   "idx": 157,
+   "ch": 3,
+   "op": 21,
+   "operands": [],
+   "next_op_encoded": 25
+  },
+  {
+   "idx": 158,
+   "ch": 1,
+   "op": 25,
+   "operands": [],
+   "next_op_encoded": 43
+  },
+  {
+   "idx": 159,
+   "ch": 3,
+   "op": 43,
+   "operands": [],
+   "next_op_encoded": 40
+  },
+  {
+   "idx": 160,
+   "ch": 1,
+   "op": 40,
+   "operands": [],
+   "next_op_encoded": 25
+  },
+  {
+   "idx": 161,
+   "ch": 0,
+   "op": 25,
+   "operands": [],
+   "next_op_encoded": 59
+  },
+  {
+   "idx": 162,
+   "ch": 1,
+   "op": 59,
+   "operands": [],
+   "next_op_encoded": 58
+  },
+  {
+   "idx": 163,
+   "ch": 1,
+   "op": 58,
+   "operands": [],
+   "next_op_encoded": 22
+  },
+  {
+   "idx": 164,
+   "ch": 3,
+   "op": 22,
+   "operands": [],
+   "next_op_encoded": 16
+  },
+  {
+   "idx": 165,
+   "ch": 2,
+   "op": 16,
+   "operands": [],
+   "next_op_encoded": 48
+  },
+  {
+   "idx": 166,
+   "ch": 1,
+   "op": 48,
+   "operands": [],
+   "next_op_encoded": 23
+  },
+  {
+   "idx": 167,
+   "ch": 0,
+   "op": 23,
+   "operands": [],
+   "next_op_encoded": 4
+  },
+  {
+   "idx": 168,
+   "ch": 3,
+   "op": 4,
+   "operands": [],
+   "next_op_encoded": 46
+  },
+  {
+   "idx": 169,
+   "ch": 0,
+   "op": 46,
+   "operands": [],
+   "next_op_encoded": 0
+  }
+ ],
+ "transitions_count": 3
+}
