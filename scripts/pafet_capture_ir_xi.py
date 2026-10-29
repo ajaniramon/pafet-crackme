@@ -92,7 +92,12 @@ Interceptor.attach(H20, {
 AGENT_SIMPLE = r"""
 const base = Process.enumerateModules().find(m => m.name.toLowerCase().endsWith('.exe')).base;
 const RESOLVER = base.add(0x3ebb0);
+const OPREADER = base.add(0x74d0);
 const H20      = base.add(0x397239);
+
+// Known atomic-writer handler VAs (observed in alice): poll on entry+leave
+// of these specifically — they are where the output bytes are produced.
+const ATOMIC_WRITERS = [0x3bea0, 0x15820, 0x25020, 0x14a00, 0x216d0];
 
 let callN = 0;
 let ctx = null;
@@ -100,30 +105,58 @@ let last_bytes = null;
 let transitions = [];
 let program = [];
 
+// Record the (ch, op) context from the most recent resolver call.
+let last_ch = -1;
+let last_op = -1;
+
+function poll_buffer(ch, op, src) {
+  if (!ctx) return;
+  try {
+    const p = ctx.add(0x5e8).readPointer();
+    const b = Array.from(new Uint8Array(p.readByteArray(128)))
+      .map(x => x.toString(16).padStart(2,'0')).join('');
+    if (b !== last_bytes) {
+      transitions.push({
+        call: callN,
+        ch: ch, op: op,
+        bytes: b, src: src,
+      });
+      last_bytes = b;
+    }
+  } catch(e) {}
+}
+
 Interceptor.attach(RESOLVER, {
   onEnter() {
     callN++;
     const r_ctx = this.context.rcx;
-    const r_ch  = this.context.rdx.toInt32();
-    const r_op  = this.context.r8.toInt32();
+    last_ch = this.context.rdx.toInt32();
+    last_op = this.context.r8.toInt32();
     if (!ctx) ctx = r_ctx;
-    program.push({idx: callN - 1, ch: r_ch, op: r_op});
-    try {
-      const p = ctx.add(0x5e8).readPointer();
-      const b = Array.from(new Uint8Array(p.readByteArray(128)))
-        .map(x => x.toString(16).padStart(2,'0')).join('');
-      if (b !== last_bytes) {
-        transitions.push({
-          call: callN,
-          ch:   r_ch,
-          op:   r_op,
-          bytes: b,
-        });
-        last_bytes = b;
-      }
-    } catch(e) {}
+    program.push({idx: callN - 1, ch: last_ch, op: last_op});
+    poll_buffer(last_ch, last_op, 'resolver_enter');
+  },
+  onLeave() {
+    poll_buffer(last_ch, last_op, 'resolver_leave');
   }
 });
+
+// Dense polling on the operand reader (~1200 triggers vs 629 resolver)
+Interceptor.attach(OPREADER, {
+  onLeave() {
+    poll_buffer(last_ch, last_op, 'opreader_leave');
+  }
+});
+
+// Dense polling at the entry+leave of each known atomic-writer handler
+for (const rva of ATOMIC_WRITERS) {
+  try {
+    Interceptor.attach(base.add(rva), {
+      onEnter() { poll_buffer(last_ch, last_op, 'writer_enter_' + rva.toString(16)); },
+      onLeave() { poll_buffer(last_ch, last_op, 'writer_leave_' + rva.toString(16)); }
+    });
+  } catch(e) {}
+}
 
 Interceptor.attach(H20, {
   onEnter() {
@@ -164,10 +197,21 @@ def f_user_oracle(u):
 
 
 def identify_atomic_pairs(transitions, user, expected_output):
-    """A transition is an atomic byte-writer iff:
-       - Compared to the previous buffer state, EXACTLY ONE byte changed
-       - That changed byte is at position i where new_value == expected_output[i]
-       - i is the next expected atomic byte position (sequential: 0, 1, 2, ...)
+    """Detect atomic byte-writer pairs across the transition stream.
+
+    Original strict rule (one byte diff per transition) misses inputs whose
+    writes land between two consecutive resolver polls (common with
+    repeated-byte inputs like 'a'*23 where the pipeline runs faster).
+
+    Relaxed rule:
+      - For each transition, iterate through diffs in position order.
+      - For each diff that equals the next expected atomic byte, record
+        the current (ch, op) as the atomic writer for that position.
+      - This assumes contiguous writes within a single transition were
+        made under the same (ch, op) context (sequential-handler
+        hypothesis). Validity is checked downstream when the native
+        interpreter runs the resulting atomic_pairs sequence byte-exact
+        against the oracle.
     """
     L = len(user)
     if L == 0:
@@ -184,13 +228,15 @@ def identify_atomic_pairs(transitions, user, expected_output):
             continue
         curr = curr_full[:L]
         prev = prev_buf[:L]
-        # Find positions where curr differs from prev
         diffs = [i for i in range(L) if prev[i] != curr[i]]
-        if len(diffs) == 1:
-            i = diffs[0]
-            # Must be the next expected atomic position
+        for i in sorted(diffs):
+            # Only accept writes that advance the sequential byte position
+            # and match the oracle. This guards against intermediate
+            # non-atomic states (e.g. reversed-ASCII copy stage).
             if i == len(atomic_pairs) and curr[i] == expected_output[i]:
                 atomic_pairs.append([t['ch'], t['op'], i])
+            if len(atomic_pairs) == L:
+                return atomic_pairs, L
         prev_buf = curr_full
 
     return atomic_pairs, len(atomic_pairs)

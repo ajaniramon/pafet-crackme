@@ -134,12 +134,26 @@ alice123       "alice123"         -> 7072784f4c494f57
 ramonbarcelona "ramonbarcelona"   -> 423e4246524f415757565a5f6656
 ```
 
-Byte-exact que fallan (y causa raíz):
+Byte-exact que fallan (y causa raíz, actualizada tras investigación extra):
 ```
-a*23, a*24, a*25 — fallan por limitación del harness de captura
-                   (detector de atomic_pairs vía buffer-diff polling
-                    sólo capta 2 transitions con bytes repetidos).
-                   NO es fallo del intérprete.
+a*23, a*24, a*25 — gap de OBSERVABILIDAD, no fallo del intérprete.
+
+Diagnóstico medido:
+  - [ctx+0x5e8] (donde vive el output de f_user para strings SSO) es
+    NULL cuando el host 20 call se dispara, para a*23.
+  - Un escaneo full-memory de la secuencia esperada
+    `4245484b4e5154575a5d6063...` (f_user(a*23)) devuelve
+    0 ocurrencias en todas las regiones RW del proceso.
+  - El output para strings > SSO threshold vive en una ubicación
+    distinta que todavía no hemos localizado, o se libera antes
+    del host 20 call.
+  - No hemos podido validar byte-exact porque no sabemos dónde
+    comparar. El intérprete nativo podría estar produciendo el
+    output correcto; simplemente no tenemos oracle observable.
+
+Dense polling (resolver_enter/leave + opreader_leave + 5 atomic
+writer entries/leaves) sigue viendo solo 2 transitions totales en
+el buffer SSO, consistente con la hipótesis de ubicación distinta.
 ```
 
 ## Siguiente paso lógico (si quieres continuar)
