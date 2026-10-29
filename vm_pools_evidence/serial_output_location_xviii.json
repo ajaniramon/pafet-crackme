@@ -1,0 +1,74 @@
+{
+ "kind": "done",
+ "scans": [
+  {
+   "label": "disp_enter",
+   "hits": {
+    "g_serial_out": [],
+    "rc4_stream_8": [],
+    "rc4_stream_16": [],
+    "serial01_ascii": [
+     "0x753dd7f778",
+     "0x180ba3c5006"
+    ]
+   }
+  },
+  {
+   "label": "mid_enter",
+   "hits": {
+    "g_serial_out": [],
+    "rc4_stream_8": [],
+    "rc4_stream_16": [],
+    "serial01_ascii": [
+     "0x753dd7f778",
+     "0x180ba3c5006"
+    ]
+   }
+  },
+  {
+   "label": "exec_enter",
+   "hits": {
+    "g_serial_out": [],
+    "rc4_stream_8": [],
+    "rc4_stream_16": [],
+    "serial01_ascii": [
+     "0x753dd75ec0",
+     "0x753dd7aab0",
+     "0x753dd7f778",
+     "0x180ba3c5006"
+    ]
+   }
+  },
+  {
+   "label": "exec_leave",
+   "hits": {
+    "g_serial_out": [
+     "0x753dd7aab0"
+    ],
+    "rc4_stream_8": [],
+    "rc4_stream_16": [],
+    "serial01_ascii": [
+     "0x753dd75ec0",
+     "0x753dd7f778",
+     "0x180ba3c5006"
+    ]
+   }
+  },
+  {
+   "label": "h20_enter",
+   "hits": {
+    "g_serial_out": [
+     "0x753dd7f69d",
+     "0x753dd7f6c0",
+     "0x180ba377605"
+    ],
+    "rc4_stream_8": [],
+    "rc4_stream_16": [],
+    "serial01_ascii": [
+     "0x753dd7f778",
+     "0x180ba3c5006"
+    ]
+   }
+  }
+ ]
+}

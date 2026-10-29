@@ -1,0 +1,187 @@
+[
+ {
+  "serial": "serial01",
+  "expected_g_serial_hex": "ad7dfb28c25b6d0b",
+  "exec_leave_locs": [
+   [
+    "0x4b41cfaca0"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x4b41cff88d",
+    "0x4b41cff8b0",
+    "0x2026b8d0e45"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "hola",
+  "expected_g_serial_hex": "b677e520",
+  "exec_leave_locs": [
+   [
+    "0xaedaeface0"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0xaedaeff8cd",
+    "0xaedaeff8f0",
+    "0x240a0b806f5"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "test",
+  "expected_g_serial_hex": "aa7dfa35",
+  "exec_leave_locs": [
+   [
+    "0x4a4bafacb0"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x4a4baff89d",
+    "0x4a4baff8c0",
+    "0x23a1fcaa6b5"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "xxxxxxxx",
+  "expected_g_serial_hex": "a660f139db4f2542",
+  "exec_leave_locs": [
+   [
+    "0x17622faed0"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x17622faf45",
+    "0x17622ffabd",
+    "0x17622ffae0",
+    "0x1d7280a1ed5"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "aaaaaaaa",
+  "expected_g_serial_hex": "bf79e820c2563c5b",
+  "exec_leave_locs": [
+   [
+    "0x405336ad30"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x405336ada5",
+    "0x405336f91d",
+    "0x405336f940",
+    "0x223f350a6e5"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "serial02",
+  "expected_g_serial_hex": "ad7dfb28c25b6d08",
+  "exec_leave_locs": [
+   [
+    "0x46aebba980"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x46aebba9f5",
+    "0x46aebbf56d",
+    "0x46aebbf590",
+    "0x244e66add55"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "ab",
+  "expected_g_serial_hex": "bf7a",
+  "exec_leave_locs": [
+   [
+    "0x5808b7ee15",
+    "0x5808b8afe0",
+    "0x17833824477"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x5808b8b055",
+    "0x5808b8fbcd",
+    "0x5808b8fbf0",
+    "0x178337d7f65",
+    "0x17833824477"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "0",
+  "expected_g_serial_hex": "ee",
+  "exec_leave_locs": [
+   [
+    "0xa318bc78e8",
+    "0xa318bc85b9",
+    "0xa318bc8b6b",
+    "0xa318bc9191",
+    "0xa318bc9317"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0xa318bc7cd8",
+    "0xa318bc7d4e",
+    "0xa318bc831c",
+    "0xa318bc85d4",
+    "0xa318bc8ac9"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "longerserial123",
+  "expected_g_serial_hex": "b277e726c6452e5ff86f7f0b665ca1",
+  "exec_leave_locs": [
+   [
+    "0x5cbdafadf0"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x5cbdafae65",
+    "0x5cbdaffa00",
+    "0x1f1f81cc085",
+    "0x1f1f81cc625"
+   ]
+  ],
+  "validated": true
+ },
+ {
+  "serial": "abcdefgh",
+  "expected_g_serial_hex": "bf7aea25c6513a52",
+  "exec_leave_locs": [
+   [
+    "0x2d0dafae40"
+   ]
+  ],
+  "h20_enter_locs": [
+   [
+    "0x2d0dafaeb5",
+    "0x2d0daffa2d",
+    "0x2d0daffa50",
+    "0x17b1c327e85"
+   ]
+  ],
+  "validated": true
+ }
+]
