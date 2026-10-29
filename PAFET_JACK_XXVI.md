@@ -245,3 +245,11 @@ Para continuar:
 El core limpio está separado de los probes. Las operaciones aún no
 reconstruidas no tienen implementaciones ficticias. La PR es de progreso
 verificable y no debe interpretarse como cumplimiento del criterio de victoria.
+
+## Continuación en Windows
+
+La continuación nativa, la resolución de la divergencia de B y las nuevas evidencias están en [PAFET_JACK_XXVI_WINDOWS.md](PAFET_JACK_XXVI_WINDOWS.md). La cola del decoder queda validada, pero la Hex-VM completa sigue abierta.
+
+## Cierre funcional posterior de XXVI
+
+Ya existe un ejecutor literal autónomo para Windows, con inicialización completa y comparación de los buffers finales. Véase [PAFET_JACK_XXVI_CLOSURE.md](PAFET_JACK_XXVI_CLOSURE.md) para resultados, reproducción y límites. La reducción semántica sigue separada y parcial.

@@ -1,0 +1,76 @@
+{
+  "native_cases_sha256": "1038e795ee9d79fa60467f9a77cfbae136b460f6540c5bf23893aac3032da25c",
+  "executable_sha256": "2fd10c9a1bcf44b3e3e324004883e894b172519054879ef6729049fe58ba7597",
+  "pe_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "passes": 10,
+  "cases": [
+    {
+      "case": "builtin144",
+      "input": "6f56f79c3e348835aa3c3fc5f551d501dea5dfcdcf3a013b0e3f8292ff4954b3455024b373acad827d1fc843f19f3a9ca9907f072ef55099ceadf0798f782d09abb0a67da54ba93b",
+      "output_hex": "6f56f79c3e348835aa3c3fc5f551d501dea5dfcdcf3a013b0e3f8292ff4954b3455024b373acad827d1fc843f19f3a9ca9907f072ef55099ceadf0798f782d09abb0a67da54ba93b",
+      "execution": "steps 289400094 pushes 282643 callbacks 435 exceptions 74 return 0"
+    },
+    {
+      "case": "empty",
+      "input": "",
+      "output_hex": "",
+      "execution": "steps 3141889 pushes 1957 callbacks 3 exceptions 1 return 0"
+    },
+    {
+      "case": "single",
+      "input": "00",
+      "output_hex": "00",
+      "execution": "steps 8406512 pushes 5793 callbacks 9 exceptions 2 return 0"
+    },
+    {
+      "case": "deadbeef",
+      "input": "deadbeef",
+      "output_hex": "deadbeef",
+      "execution": "steps 19832301 pushes 18009 callbacks 27 exceptions 4 return 0"
+    },
+    {
+      "case": "mixed",
+      "input": "DeAdBeEf",
+      "output_hex": "deadbeef",
+      "execution": "steps 19832301 pushes 18009 callbacks 27 exceptions 4 return 0"
+    },
+    {
+      "case": "upper",
+      "input": "CAFE01FF",
+      "output_hex": "cafe01ff",
+      "execution": "steps 19832301 pushes 18009 callbacks 27 exceptions 4 return 0"
+    },
+    {
+      "case": "random64",
+      "input": "f015abe391204587ddc810267baf0833569c42de8701fca513782d14b50ace29",
+      "output_hex": "f015abe391204587ddc810267baf0833569c42de8701fca513782d14b50ace29",
+      "execution": "steps 129189293 pushes 126096 callbacks 195 exceptions 40 return 0"
+    },
+    {
+      "case": "odd",
+      "input": "abc",
+      "output_hex": "ab0c",
+      "execution": "steps 12824923 pushes 10406 callbacks 15 exceptions 3 return 0"
+    },
+    {
+      "case": "invalid",
+      "input": "g0",
+      "output_hex": "00",
+      "execution": "steps 8406512 pushes 5793 callbacks 9 exceptions 2 return 0"
+    },
+    {
+      "case": "whitespace",
+      "input": " a",
+      "output_hex": "0a",
+      "execution": "steps 8406512 pushes 5793 callbacks 9 exceptions 2 return 0"
+    }
+  ],
+  "scope": "Full literal VM initialization, program execution, queue exceptions, callbacks, cleanup and native return from fresh synthetic ABI state; no VM snapshot or trace supplied to candidate.",
+  "limitations": [
+    "finite corpus",
+    "native oracle uses preexisting two-byte gate variant",
+    "stdlib callback implemented with standard C++ stream/string operations",
+    "deterministic clock and arena allocator are explicit host services",
+    "literal translation is separate from the partial reduced core"
+  ]
+}

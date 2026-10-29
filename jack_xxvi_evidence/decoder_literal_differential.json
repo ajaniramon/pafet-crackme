@@ -1,0 +1,60 @@
+{
+  "capture_sha256": "5acb54e7bd1fab378dddf91f2de77b43ef643d7ce1e903e2f69b1c3fb6a85af9",
+  "literal_executable_sha256": "c0317c6890a714faeb871076f10b6db26f4680429d9ab0f6a6d8f86cfaa9151f",
+  "frames": [
+    {
+      "kind": "remap",
+      "ordinal": 1,
+      "instructions": 109463,
+      "all_16_native_gprs_match": true,
+      "all_cpp_unicorn_memory_match": true,
+      "native_nonstack_pages": 44
+    },
+    {
+      "kind": "decoder",
+      "ordinal": 1,
+      "instructions": 5463,
+      "all_16_native_gprs_match": true,
+      "all_cpp_unicorn_memory_match": true,
+      "native_nonstack_pages": 44
+    },
+    {
+      "kind": "decoder",
+      "ordinal": 2,
+      "instructions": 339,
+      "all_16_native_gprs_match": true,
+      "all_cpp_unicorn_memory_match": true,
+      "native_nonstack_pages": 44
+    },
+    {
+      "kind": "decoder",
+      "ordinal": 15,
+      "instructions": 626,
+      "all_16_native_gprs_match": true,
+      "all_cpp_unicorn_memory_match": true,
+      "native_nonstack_pages": 44
+    },
+    {
+      "kind": "remap",
+      "ordinal": 2,
+      "instructions": 109070,
+      "all_16_native_gprs_match": true,
+      "all_cpp_unicorn_memory_match": true,
+      "native_nonstack_pages": 44
+    },
+    {
+      "kind": "remap",
+      "ordinal": 3,
+      "instructions": 108858,
+      "all_16_native_gprs_match": true,
+      "all_cpp_unicorn_memory_match": true,
+      "native_nonstack_pages": 44
+    }
+  ],
+  "limitations": [
+    "finite captured frames",
+    "native initial RFLAGS/XMM unavailable",
+    "literal translation, not reduced decoder IR",
+    "not complete executor"
+  ]
+}

@@ -503,12 +503,12 @@
   {
     "pc": "0x295b7f",
     "visits": 8046,
-    "native_entry": null,
+    "native_entry": "0x14008621b",
     "observed_successors": {
       "0x36da17": 8046
     },
-    "semantic_status": "NO DEMOSTRADO",
-    "ir": null
+    "semantic_status": "PARCIAL: decoder commit tail independently verified; full decoder prefix open",
+    "ir": "call decoder 0x80000; verified tail: periodic A refresh, B=fmix64(B XOR next_index XOR opcode), enqueue(0x36da17); prefix side effects not lifted"
   },
   {
     "pc": "0x29b3fa",

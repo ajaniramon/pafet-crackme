@@ -49,6 +49,16 @@ inline uint32_t execute_verified_block(State& s, uint32_t pc) {
     s.a ^= fmix(s.a + 1);
     return 0x8453b; // argument to queue_push, not an encoded VPC assignment
 }
+// Verified tail of decoder 0x80000, reached by virtual block 0x295b7f.
+// Caller supplies the decoded opcode and updated index/counter. The byte
+// decoder, its remap and slot side effects are still separate open work.
+inline uint32_t commit_decoded_instruction(State& s, uint32_t next_index,
+                                            uint8_t opcode, int32_t counter) {
+    if ((static_cast<uint32_t>(counter) & 31) == 0)
+        s.a = fmix(static_cast<uint64_t>(static_cast<int64_t>(counter)) ^ s.a ^ s.b);
+    s.b = fmix(uint64_t(opcode) ^ uint64_t(next_index) ^ s.b);
+    return 0x36da17;
+}
 inline void drain(State& s) {
     if (s.length > s.pending.size()) throw std::out_of_range("Hex-VM queue");
     for (unsigned n=0; n<8 && s.length; ++n) {

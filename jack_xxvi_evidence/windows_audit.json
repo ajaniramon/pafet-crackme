@@ -1,0 +1,63 @@
+{
+  "run_id": "13500778-5a1d-4297-b32e-f15c5aa36009",
+  "trace_sha256": "8707bbf142b8a1dae702f40e02b942bd04460abe14dbbc1d0652f4a5ec196daa",
+  "probe_sha256": "0839392533ddf390cdebbe7819ff76a65e67a7e96f666d4f859547a36593dd10",
+  "passes": {
+    "native_handler": 128,
+    "native_drain": 126,
+    "native_decoder_commit": 128
+  },
+  "native_counts": {
+    "executor_enter": 1,
+    "remap_enter": 567,
+    "remap_leave": 567,
+    "drain_enter": 291964,
+    "drain_leave": 291964,
+    "vpc_read": 592076,
+    "push_enter": 287727,
+    "throw": 86,
+    "catch": 172,
+    "handler_enter": 287727,
+    "handler_leave": 287727,
+    "push_leave": 287641,
+    "decoder_commit": 8150,
+    "decoder_next_push": 128,
+    "slot_enter": 16,
+    "slot_leave": 16,
+    "before_cleanup": 1,
+    "executor_leave": 1
+  },
+  "first_B_commit": {
+    "before": "0x9ef294e6486f4f7a",
+    "after": "0xfb8736eea923b09f",
+    "opcode": 1,
+    "next_index": 1
+  },
+  "throw_payloads_delivered": 86,
+  "output_qwords": [
+    0,
+    108,
+    0,
+    16646444199322587946,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "output_bytes": 128,
+  "limitations": [
+    "bounded prefix samples, not full instruction lockstep",
+    "two-byte gate variant, not intact PE execution",
+    "no unhooked internal-state control",
+    "decoder prefix/remap and remaining program blocks not implemented",
+    "128-byte executor output is not yet related to final 72-byte object"
+  ]
+}

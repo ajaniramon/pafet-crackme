@@ -234,3 +234,11 @@ dispatcher / sub-VMs are not instruction-ported.
 
 For "pop the flag" purposes: the SHA-256 preimage is the actual block
 and is not computationally reachable with the current tools.
+
+## JACK XXVI Windows update
+
+The lack-of-Windows capture blocker is resolved. The first B divergence at PC 0x295b7f is explained and its decoder commit tail passes compiled C++/original-x64 and native boundary comparisons. The 16 slot returns form an observed 128-byte executor output. The full decoder prefix, remap/thunks, remaining blocks and relationship to the final 72-byte object remain open. See [Windows evidence and limitations](../PAFET_JACK_XXVI_WINDOWS.md).
+
+## XXVI functional closure update
+
+The literal executor now covers initialization, decoder/remap/thunks, indirect opcode bodies, nested queue throws, callbacks, cleanup and native return. Ten independent input/output cases match the Windows oracle in final string, all 128 register bytes and return. The detailed initialized-state replay matches every native push and full final context. Remaining work concerns reduced semantic IR, wider branch/seed coverage and general host failure modes. See [current results](../PAFET_JACK_XXVI_CLOSURE.md).

@@ -29,16 +29,21 @@ int main() {
                      >> slots.index_multiplier >> slots.tag_multiplier >> slots.mask
                      >> flag >> old_tag >> encoded;
             slots.additive = flag;
-            slots.tags.at(index) = old_tag;
+            slots.tags.at(index) = static_cast<uint8_t>(old_tag);
             unsigned cell = (((slots.bank_parity + index) & 1) << 8) + index;
             slots.values.at(cell) = encoded;
-            auto value = read_slot(s, slots, index);
+            auto value = read_slot(s, slots, static_cast<uint8_t>(index));
             std::cout << std::hex << value << ' ' << s.lcg << ' ' << s.steps << ' '
                       << unsigned(slots.tags[index]) << ' ' << slots.values[cell] << '\n';
         } else if (op == 3) {
             std::cin >> s.a;
             auto next = execute_verified_block(s, 0x2d409a);
             std::cout << std::hex << s.a << ' ' << next << '\n';
+        } else if (op == 4) {
+            uint32_t index, opcode, counter;
+            std::cin >> s.a >> s.b >> index >> opcode >> counter;
+            auto next = commit_decoded_instruction(s, index, static_cast<uint8_t>(opcode), static_cast<int32_t>(counter));
+            std::cout << std::hex << s.a << ' ' << s.b << ' ' << next << '\n';
         } else return 2;
         if (!std::cin) return 3;
     }

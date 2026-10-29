@@ -1,0 +1,27 @@
+{
+  "run_id": "c68106a5-0adb-4eb6-8daf-e25d417405d4",
+  "capture_sha256": "3d662e739e0debcee71b44ecce65302d5498814b957250effc16bfb3d14afdef",
+  "executable_sha256": "ead23e55abc38626fac7fc134bdd839df2812053fcfb370d6301dbf0a2f7e20f",
+  "result": "steps 293250162 pushes 286214 callbacks 435 exceptions 78 native_pcs 41005",
+  "steps": 293250162,
+  "all_native_pushes_match": 286214,
+  "all_16_native_final_gprs_match": true,
+  "full_0x1200_context_matches": true,
+  "executor_output_128_bytes_match": true,
+  "callback_output_size": 72,
+  "callback_output_hex": "6f56f79c3e348835aa3c3fc5f551d501dea5dfcdcf3a013b0e3f8292ff4954b3455024b373acad827d1fc843f19f3a9ca9907f072ef55099ceadf0798f782d09abb0a67da54ba93b",
+  "native_backing_buffers_match": {
+    "slots": 4096,
+    "remap_table": 992,
+    "bytecode": 1975,
+    "bytecode_mask": 1975
+  },
+  "limitations": [
+    "starts from captured initialized state",
+    "clock readings supplied as external inputs",
+    "host callback modeled separately with standard C++ stream/string operations",
+    "finite native corpus, not universal equivalence",
+    "queue qword EH adapter only"
+  ],
+  "compiler": "MSVC /O2 /std:c++17"
+}

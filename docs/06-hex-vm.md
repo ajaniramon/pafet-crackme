@@ -126,3 +126,11 @@ context snapshots. No new Windows capture, final-buffer comparison or complete
 input differential is claimed. Next: the first B divergence at push 3 / PC
 `0x295b7f`, exceptions, remaining blocks and actual buffer stores. The other
 three VMs are outside this operation.
+
+## Windows continuation after JACK XXVI
+
+See [PAFET_JACK_XXVI_WINDOWS.md](../PAFET_JACK_XXVI_WINDOWS.md). Native Windows capture now records real contexts, effective handler tables, throw/catch payload delivery and the 128-byte immediate executor output. The first B divergence at 0x295b7f is explained by the independently checked decoder commit tail. The decoder prefix and full executor remain open.
+
+## Complete literal executor (XXVI continuation)
+
+A standalone Windows C++ executor now initializes and executes the full program, remap/thunks and queue exceptions, then compares both the 128-byte register buffer and final string with the native PE. Ten independent inputs pass, including odd and malformed strings. The 144-character input produces the full 72-byte result. A separate detailed replay matches 286214 native pushes and the full final context. See [functional closure and limitations](../PAFET_JACK_XXVI_CLOSURE.md). Reduced semantic IR remains partial.

@@ -233,3 +233,7 @@ Ramón, Barcelona. This was a hobby grind done with Claude Code
 has not been popped, but your program has been studied end to end and
 rebuilt. If you want to pair on recovering the actual preimage, open an
 issue or ping me.
+
+## JACK XXVI: ejecutor Hex-VM autónomo para Windows
+
+La continuación de XXVI ya ejecuta la VM completa en C++ y valida sus buffers finales contra el PE en Windows. Incluye inicialización, remap/thunks, excepciones y limpieza; 10 entradas independientes coinciden. Véase [estado, compilación y límites](PAFET_JACK_XXVI_CLOSURE.md). El core semántico reducido se mantiene separado de la traducción literal.

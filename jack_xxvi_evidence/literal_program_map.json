@@ -1,0 +1,434 @@
+[
+  {
+    "pc": "0x15c9",
+    "native_entry": "0x140081b67",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xa665",
+    "native_entry": "0x1400819ce",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x1746e",
+    "native_entry": "0x1400819a3",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x1afe0",
+    "native_entry": "0x1400817a9",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x42cef",
+    "native_entry": "0x140081d68",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x44746",
+    "native_entry": "0x14008238f",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x4fe3f",
+    "native_entry": "0x140082107",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x8453b",
+    "native_entry": "0x1400820c4",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x85014",
+    "native_entry": "0x140081f0f",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x94219",
+    "native_entry": "0x140082399",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x949f0",
+    "native_entry": "0x14008296a",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xab5d2",
+    "native_entry": "0x1400827e9",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xcaa88",
+    "native_entry": "0x1400825e7",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xce50c",
+    "native_entry": "0x140082545",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xe0bf0",
+    "native_entry": "0x140082ac6",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xe72f0",
+    "native_entry": "0x140083367",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0xf2064",
+    "native_entry": "0x140083137",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x101651",
+    "native_entry": "0x140082f0e",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x10776f",
+    "native_entry": "0x140082d1d",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x119872",
+    "native_entry": "0x14008353b",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x123c34",
+    "native_entry": "0x140083c5e",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x132233",
+    "native_entry": "0x140083aca",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x133867",
+    "native_entry": "0x14008394c",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x136b61",
+    "native_entry": "0x1400837d8",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x144c84",
+    "native_entry": "0x140083e4c",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x148e03",
+    "native_entry": "0x140084276",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x14b3da",
+    "native_entry": "0x14008426c",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x14ebd6",
+    "native_entry": "0x140084076",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x15649b",
+    "native_entry": "0x140083ec9",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x15ba79",
+    "native_entry": "0x140084436",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x15ca0a",
+    "native_entry": "0x140084aa6",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x167eac",
+    "native_entry": "0x140084905",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x171a87",
+    "native_entry": "0x140084837",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x17d650",
+    "native_entry": "0x1400846b2",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x17d925",
+    "native_entry": "0x140084c68",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x19a3f9",
+    "native_entry": "0x140085361",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x1b381f",
+    "native_entry": "0x14008503c",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x1d88b9",
+    "native_entry": "0x140084e91",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x1e8688",
+    "native_entry": "0x1400854d4",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x20ff08",
+    "native_entry": "0x14008578d",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2216c9",
+    "native_entry": "0x140085921",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x229f6f",
+    "native_entry": "0x140085f86",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x24ad19",
+    "native_entry": "0x140085cf4",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2511e6",
+    "native_entry": "0x140085b63",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x260a3a",
+    "native_entry": "0x140086006",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x26503a",
+    "native_entry": "0x140086569",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x265774",
+    "native_entry": "0x14008643f",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x290921",
+    "native_entry": "0x140086249",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x295b7f",
+    "native_entry": "0x14008621b",
+    "literal_translation": true,
+    "reduced_semantics": "PARCIAL: decoder commit tail independently verified; full decoder prefix open"
+  },
+  {
+    "pc": "0x29b3fa",
+    "native_entry": "0x140086645",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2a7d9c",
+    "native_entry": "0x140086ce1",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2a9a5a",
+    "native_entry": "0x140086a66",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2bdfbf",
+    "native_entry": "0x1400868eb",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2c9934",
+    "native_entry": "0x140086ceb",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2d409a",
+    "native_entry": "0x14008735f",
+    "literal_translation": true,
+    "reduced_semantics": "PARCIAL"
+  },
+  {
+    "pc": "0x2e08cf",
+    "native_entry": "0x14008718a",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2e4e6e",
+    "native_entry": "0x140087041",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x2e7580",
+    "native_entry": "0x140086e72",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3070be",
+    "native_entry": "0x140087445",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x31f8f7",
+    "native_entry": "0x1400879b3",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x322898",
+    "native_entry": "0x1400879a9",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x32966a",
+    "native_entry": "0x14008771c",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x35606a",
+    "native_entry": "0x1400875b3",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x36da17",
+    "native_entry": "0x140087b67",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x378d95",
+    "native_entry": "0x140088088",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x38f6c0",
+    "native_entry": "0x140087e72",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3a94e2",
+    "native_entry": "0x140087c75",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3c061e",
+    "native_entry": "0x140087c14",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3c543b",
+    "native_entry": "0x1400881f6",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3d1c9d",
+    "native_entry": "0x1400887df",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3edeff",
+    "native_entry": "0x1400885fe",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  },
+  {
+    "pc": "0x3ffe82",
+    "native_entry": "0x140088455",
+    "literal_translation": true,
+    "reduced_semantics": "NO DEMOSTRADO"
+  }
+]

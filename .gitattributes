@@ -1,0 +1,9 @@
+# These files participate in byte-level provenance hashes. Preserve their bytes
+# on every platform, including when core.autocrlf is enabled.
+src/hexvm_lifted_xxvi/*.cpp -text whitespace=-blank-at-eol
+src/pafet_hexvm_*xxvi* -text
+src/main_hexvm_*xxvi* -text
+scripts/pafet_hexvm_*xxvi* -text
+jack_xxvi_evidence/** -text
+# Generated instruction comments retain Capstone's empty operand separator.
+src/pafet_hexvm_lifted_xxvi.cpp -text whitespace=-blank-at-eol

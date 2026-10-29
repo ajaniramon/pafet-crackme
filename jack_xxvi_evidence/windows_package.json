@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "scope": "complete literal Hex-VM executor; finite native corpus, semantic reduction remains partial",
+  "files": {
+    "pafet_hexvm_xxvi.exe": "a9f7d4ef164b2a5e24a0c80a16687e63832ae4e1ea35ff454f0c6735ca70b92f",
+    "original_mapped_image.bin": "e8f6f9e3fe1db246b927ddf76edc5fc861eeb18a42d3c4953eff5d596c232837",
+    "standalone_msvc_differential.json": "60ad70b44804cbaaaa418b0bfc53bb04bfd2836f8f9edd1216ffc7530336418b"
+  },
+  "native_input_cases": 10,
+  "detailed_matching_pushes": 286214,
+  "archive_sha256": "1f77abd5723b69fd90c44013f49f1f80d237366bc47031349e32ae790af0cca9",
+  "archive_bytes": 6481869,
+  "versioned_archive": "jack_xxvi_evidence/releases/pafet_hexvm_xxvi_windows.zip"
+}

@@ -1,0 +1,62 @@
+// Generated partition dispatcher.
+#include "pafet_hexvm_cpu_xxvi.h"
+namespace pafet_xxiv {
+bool hexvm_part_0(Machine&);
+bool hexvm_part_5(Machine&);
+bool hexvm_part_f(Machine&);
+bool hexvm_part_12(Machine&);
+bool hexvm_part_13(Machine&);
+bool hexvm_part_14(Machine&);
+bool hexvm_part_15(Machine&);
+bool hexvm_part_16(Machine&);
+bool hexvm_part_17(Machine&);
+bool hexvm_part_18(Machine&);
+bool hexvm_part_19(Machine&);
+bool hexvm_part_1a(Machine&);
+bool hexvm_part_1b(Machine&);
+bool hexvm_part_1c(Machine&);
+bool hexvm_part_1d(Machine&);
+bool hexvm_part_1e(Machine&);
+bool hexvm_part_1f(Machine&);
+bool hexvm_part_20(Machine&);
+bool hexvm_part_21(Machine&);
+bool hexvm_part_22(Machine&);
+bool hexvm_part_e5(Machine&);
+bool hexvm_part_e6(Machine&);
+bool hexvm_part_e7(Machine&);
+bool hexvm_part_e8(Machine&);
+bool hexvm_part_e9(Machine&);
+bool hexvm_part_ec(Machine&);
+bool hexvm_part_ee(Machine&);
+bool hexvm_part_f2(Machine&);
+void Machine::step(){bool found=false;switch((canonical(c.rip)-UINT64_C(0x140000000))>>14){
+case 0:found=hexvm_part_0(*this);break;
+case 5:found=hexvm_part_5(*this);break;
+case 15:found=hexvm_part_f(*this);break;
+case 18:found=hexvm_part_12(*this);break;
+case 19:found=hexvm_part_13(*this);break;
+case 20:found=hexvm_part_14(*this);break;
+case 21:found=hexvm_part_15(*this);break;
+case 22:found=hexvm_part_16(*this);break;
+case 23:found=hexvm_part_17(*this);break;
+case 24:found=hexvm_part_18(*this);break;
+case 25:found=hexvm_part_19(*this);break;
+case 26:found=hexvm_part_1a(*this);break;
+case 27:found=hexvm_part_1b(*this);break;
+case 28:found=hexvm_part_1c(*this);break;
+case 29:found=hexvm_part_1d(*this);break;
+case 30:found=hexvm_part_1e(*this);break;
+case 31:found=hexvm_part_1f(*this);break;
+case 32:found=hexvm_part_20(*this);break;
+case 33:found=hexvm_part_21(*this);break;
+case 34:found=hexvm_part_22(*this);break;
+case 229:found=hexvm_part_e5(*this);break;
+case 230:found=hexvm_part_e6(*this);break;
+case 231:found=hexvm_part_e7(*this);break;
+case 232:found=hexvm_part_e8(*this);break;
+case 233:found=hexvm_part_e9(*this);break;
+case 236:found=hexvm_part_ec(*this);break;
+case 238:found=hexvm_part_ee(*this);break;
+case 242:found=hexvm_part_f2(*this);break;
+}if(found)return;if(trampoline())return;throw Fault(3,c.rip,"instruction not in Hex-VM translated CFG");}
+}
