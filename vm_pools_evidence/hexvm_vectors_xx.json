@@ -1,0 +1,23 @@
+{
+ "vectors": [
+  {
+   "input_hex_ascii_prefix": "",
+   "output_bytes_hex": "",
+   "oracle_bytes_hex": "6f56f79c3e348835aa3c3fc5f551d501dea5dfcdcf3a013b0e3f8292ff4954b3455024b373acad827d1fc843f19f3a9ca9907f072ef55099ceadf0798f782d09abb0a67da54ba93b",
+   "match": false
+  }
+ ],
+ "records": [
+  {
+   "phase": "enter",
+   "rcx": "0x6a100fafb0",
+   "rdx": "0x10",
+   "r8": "0x6a100faee8",
+   "r9": "0xa0"
+  },
+  {
+   "phase": "leave",
+   "rax": "0x0"
+  }
+ ]
+}

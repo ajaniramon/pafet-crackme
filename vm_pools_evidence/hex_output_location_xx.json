@@ -1,0 +1,73 @@
+{
+ "kind": "done",
+ "scans": [
+  {
+   "label": "hex_exec_enter_call1",
+   "hits": {
+    "hex_decoded_pfx": [],
+    "hex_decoded_8": [],
+    "hex_decoded_tail": [],
+    "hex_decoded_mid": [],
+    "hex_ascii_pfx": [
+     "0x29c01f43f80"
+    ]
+   }
+  },
+  {
+   "label": "hex_exec_leave_call1",
+   "hits": {
+    "hex_decoded_pfx": [
+     "0x29c01f36790",
+     "0x29c01f58c80",
+     "0x29c01f59ce0",
+     "0x29c01f5b940",
+     "0x29c01fa57c0"
+    ],
+    "hex_decoded_8": [
+     "0x29c01f36790",
+     "0x29c01f58c80",
+     "0x29c01f59ce0",
+     "0x29c01f5b940",
+     "0x29c01fa57c0"
+    ],
+    "hex_decoded_tail": [
+     "0x29c01f367d0",
+     "0x29c01f58cc0"
+    ],
+    "hex_decoded_mid": [
+     "0x29c01f367b0",
+     "0x29c01f58ca0",
+     "0x29c01f5b960",
+     "0x29c01fa57e0"
+    ],
+    "hex_ascii_pfx": [
+     "0x29c01f43f80"
+    ]
+   }
+  },
+  {
+   "label": "h20_enter",
+   "hits": {
+    "hex_decoded_pfx": [
+     "0x29c01f58c80"
+    ],
+    "hex_decoded_8": [
+     "0x29c01f58c80",
+     "0x29c01f59ce0"
+    ],
+    "hex_decoded_tail": [
+     "0x29c01f367d0",
+     "0x29c01f58cc0"
+    ],
+    "hex_decoded_mid": [
+     "0x29c01f367b0",
+     "0x29c01f58ca0"
+    ],
+    "hex_ascii_pfx": [
+     "0x29c01f43f80"
+    ]
+   }
+  }
+ ],
+ "total_calls": 1
+}
