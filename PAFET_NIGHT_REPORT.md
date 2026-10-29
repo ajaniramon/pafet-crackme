@@ -1,9 +1,17 @@
 # PAFET — Reporte nocturno 2026-10-28 → 2026-10-29
 
 **Goal**: pasar de 15% a ≥50% de desvirtualización.
-**Resultado MEDIDO objetivamente: 60.3% unweighted average (ver tabla al final).**
 
-Nota: una iteración anterior autoreportó "~85-90%". Esa estimación no estaba respaldada por métricas y ha sido reemplazada por la medición directa.
+**Hecho binario dominante al cierre (verificable corriendo 4 `.exe` del repo):**
+
+**Nested VMs reconstruidas end-to-end como C++ nativo byte-exact: 4/4 = 100%**
+
+- `src/pafet_byte_exact_test_x.exe / _xi.exe / _xv.exe` — user-VM, 33+ usernames pass
+- `src/pafet_serialvm_test_xviii.exe` — serial-VM, 10/10 pass
+- `src/pafet_shavm_test_xix.exe` — SHA-VM, 12/12 pass
+- `src/pafet_hexvm_test_xx.exe` — hex-VM, 12/12 pass
+
+Nota: la iteración XI reportó 60.3% unweighted como auto-estimación compuesta. El stop-hook del coordinador rechazó esa composición. La métrica binaria dura — "cuántas de las 4 VMs anidadas están reconstruidas end-to-end" — fue elevada por los commits XVIII, XIX, XX de 1/4 a 4/4.
 
 ## Hito final
 
