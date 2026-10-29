@@ -1,0 +1,187 @@
+{
+  "summary": {
+    "total_events": 1131,
+    "via_dispatcher": 618,
+    "hidden": 513,
+    "hidden_unique_ra_count": 42
+  },
+  "top_hidden_sites_disasm": [
+    {
+      "ra_va": "0x14001ea35",
+      "target_handler": "0x140015820",
+      "count": 11,
+      "caller_insn": "14001ea32  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003cbac",
+      "target_handler": "0x1400355c0",
+      "count": 11,
+      "caller_insn": "14003cba9  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140030db5",
+      "target_handler": "0x140015820",
+      "count": 10,
+      "caller_insn": "140030db2  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003cbac",
+      "target_handler": "0x1400099c0",
+      "count": 9,
+      "caller_insn": "14003cba9  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140030db5",
+      "target_handler": "0x1400355c0",
+      "count": 8,
+      "caller_insn": "140030db2  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x1400098b6",
+      "target_handler": "0x14001c090",
+      "count": 7,
+      "caller_insn": "1400098b3  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14001cdf6",
+      "target_handler": "0x1400110f0",
+      "count": 7,
+      "caller_insn": "14001cdf3  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140024f16",
+      "target_handler": "0x1400110f0",
+      "count": 7,
+      "caller_insn": "140024f13  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003cbac",
+      "target_handler": "0x140025020",
+      "count": 7,
+      "caller_insn": "14003cba9  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140024f16",
+      "target_handler": "0x14001c090",
+      "count": 7,
+      "caller_insn": "140024f13  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003469d",
+      "target_handler": "0x1400208b0",
+      "count": 7,
+      "caller_insn": "14003469a  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14001cdf6",
+      "target_handler": "0x14003dae0",
+      "count": 6,
+      "caller_insn": "14001cdf3  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140015705",
+      "target_handler": "0x140015820",
+      "count": 6,
+      "caller_insn": "140015702  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003469d",
+      "target_handler": "0x140008b50",
+      "count": 6,
+      "caller_insn": "14003469a  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003469d",
+      "target_handler": "0x14003dae0",
+      "count": 5,
+      "caller_insn": "14003469a  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140024f16",
+      "target_handler": "0x140033930",
+      "count": 5,
+      "caller_insn": "140024f13  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x140015705",
+      "target_handler": "0x140025020",
+      "count": 5,
+      "caller_insn": "140015702  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x1400098b6",
+      "target_handler": "0x140033930",
+      "count": 5,
+      "caller_insn": "1400098b3  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14003469d",
+      "target_handler": "0x1400241b0",
+      "count": 5,
+      "caller_insn": "14003469a  call r9",
+      "in_dispatcher": false
+    },
+    {
+      "ra_va": "0x14001ea35",
+      "target_handler": "0x1400099c0",
+      "count": 5,
+      "caller_insn": "14001ea32  call r9",
+      "in_dispatcher": false
+    }
+  ],
+  "perHandler": {
+    "5368920368": 88,
+    "5368823952": 78,
+    "5368789984": 11,
+    "5368947040": 18,
+    "5368815424": 8,
+    "5368905904": 38,
+    "5368797216": 68,
+    "5368857008": 74,
+    "5368755824": 19,
+    "5368894928": 33,
+    "5368961760": 20,
+    "5368871808": 23,
+    "5368875520": 11,
+    "5368954528": 53,
+    "5368748480": 65,
+    "5368927680": 67,
+    "5368846032": 20,
+    "5368842416": 17,
+    "5368860704": 67,
+    "5368744784": 71,
+    "5368831280": 45,
+    "5368752208": 27,
+    "5368793600": 40,
+    "5368800944": 27,
+    "5368827648": 10,
+    "5368909504": 35,
+    "5368884064": 23,
+    "5368913120": 12,
+    "5368778992": 28,
+    "5368902304": 5,
+    "5368942560": 7,
+    "5368853376": 8,
+    "5368786368": 8,
+    "5368808192": 5,
+    "5368782608": 2
+  }
+}
