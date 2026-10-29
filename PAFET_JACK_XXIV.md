@@ -64,9 +64,25 @@ guardan en el repositorio del escritorio; las copias de checkpoint están en
   caller: el RSP de Frida onLeave aún señala el slot de retorno y no debe
   confundirse con el RSP después del RET.
 
-Próximo cierre: validar esos frames nuevos, agregar la cobertura del cuerpo
-con los casos dirigidos, documentar rutas no cubiertas y revisar la
-dependencia de lanzamiento de excepciones de los handlers anidados.
+- El CFG resuelve ahora la tabla de saltos MSVC del host `0x140048960`
+  (siete casos, acotados por su `cmp/ja`) y toma los límites de `.text`
+  del PE. Se traducen `setcc`, `movups`, `int n` y el camino rápido de
+  `__security_check_cookie` (`0x1403a3dc0`), añadido como entrada explícita.
+- Frames nuevos: los seis pasan el lockstep por instrucción y la memoria;
+  cinco coinciden además en los dieciséis GPRs de retorno. En `alice` 0
+  sólo difiere RCX, que vale `rol(__security_cookie,16)`: el replay usa el
+  cookie por defecto del PE (`0x2b992ddfa232` en `0x14040d020`) y el colector
+  no captura el del proceso. Falta recapturar leyendo `imagen+0x40d020`.
+- Los dieciséis casos dirigidos, regenerados con el lift nuevo, pasan;
+  `table_remap` recorre la última arista pendiente en 111159 pasos.
+- Cobertura del cuerpo: 32 aristas observadas y 2 inalcanzables de 34;
+  777 instrucciones observadas y 44 inalcanzables de 821. Las 44 son el
+  bloque del opcode >=62 y dos `int3` tras llamadas a `0x1400029a0`, cuyo
+  CFG cerrado no tiene `ret` ni saltos indirectos. No cubre la maquinaria
+  de excepciones del sistema.
+
+Próximo cierre: recapturar el cookie del proceso para `alice` 0 y revisar
+la dependencia de lanzamiento de excepciones de los handlers anidados.
 
 Los resultados incrementales están en `jack_xxiv_evidence/`. El original
 `pafet.bin` debe conservar SHA-256

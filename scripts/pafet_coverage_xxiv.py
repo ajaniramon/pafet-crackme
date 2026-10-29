@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Known native branch edges, observed edges and explicit unreachable proofs."""
-import hashlib,json
+import collections,hashlib,json
 import capstone,pefile
-from pafet_audit_xxiv import ROOT,OUT,BASE
+from pafet_audit_xxiv import ROOT,OUT,BASE,cfg as native_cfg
 def main():
     pe=pefile.PE(str(ROOT/'pafet.bin'));md=capstone.Cs(capstone.CS_ARCH_X86,capstone.CS_MODE_64)
-    cfg=json.loads((OUT/'native_cfg.json').read_text())['functions'][0]
+    cfg=json.loads((OUT/'native_cfg.json').read_text())['functions'][0];report_entry='0x14003bea0'
     observed=set();pcs=set();cases=[]
     for name in ('native_lockstep.json','directed_native.json','fresh_transfer_differential.json','fresh_native_differential.json'):
         p=OUT/name
@@ -37,10 +37,26 @@ def main():
     sites={e['from'] for e in cfg['edges'] if e['kind']=='taken'}
     edges=[{**e,'observed':(e['from'],e['to']) in observed,'proved_unreachable':(e['from'],e['to']) in impossible} for e in cfg['edges'] if e['from'] in sites]
     missing=[e for e in edges if not e['observed'] and not e['proved_unreachable']]
-    report={'entry':'0x14003bea0','body_instructions':cfg['instructions'],'body_bytes':cfg['end']-cfg['first'],
+    # Body instructions: reachable from the entry without the impossible edges and without
+    # falling through a call to a callee whose closed CFG has neither RET nor indirect-jump exits.
+    noreturn=sorted({c['target'] for c in cfg['calls'] if c['target'] is not None and not any(x['kind'].startswith('ret') or x['kind']=='indirect_jump' for x in native_cfg(pe,c['target'])[1]['exits'])})
+    after_noreturn={c['site'] for c in cfg['calls'] if c['target'] in noreturn}
+    successors=collections.defaultdict(list)
+    for e in cfg['edges']:
+        if (e['from'],e['to']) not in impossible and not (e['kind']=='fallthrough' and e['from'] in after_noreturn):successors[e['from']].append(e['to'])
+    reachable=set();pending=[int(report_entry,16)]
+    while pending:
+        pc=pending.pop()
+        if pc not in reachable:reachable.add(pc);pending.extend(successors[pc])
+    body=set(native_cfg(pe,int(report_entry,16))[0]);unreachable=body-reachable
+    assert len(body)==cfg['instructions'] and not (unreachable&pcs),sorted(map(hex,unreachable&pcs))
+    unobserved=sorted(body-pcs-unreachable)
+    instruction_report={'proved_unreachable_instructions':len(unreachable),'unobserved_reachable_instructions':list(map(hex,unobserved)),
+        'noreturn_callees':[{'entry':hex(t),'reason':'Closed native CFG has no RET and no indirect-jump exit; control cannot come back to the call site successor.'} for t in noreturn]}
+    report={'entry':report_entry,'body_instructions':cfg['instructions'],'body_bytes':cfg['end']-cfg['first'],
         'known_branch_edges':len(edges),'observed_branch_edges':sum(x['observed'] for x in edges),
         'proved_unreachable_edges':sum(x['proved_unreachable'] for x in edges),'uncovered_branch_edges':missing,
-        'body_instruction_pcs_observed':len(pcs),'branch_edges':edges,'proofs':proofs,'cases':cases,
+        'body_instruction_pcs_observed':len(pcs),**instruction_report,'branch_edges':edges,'proofs':proofs,'cases':cases,
         'scope':'Local handler branch edges only; not exhaustive coverage of nested handlers, helpers, inputs or OS exception machinery.'}
     (OUT/'branch_coverage.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ('branch_edges','proofs','cases')},indent=2))

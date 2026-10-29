@@ -3,18 +3,18 @@
   "body_instructions": 821,
   "body_bytes": 3593,
   "known_branch_edges": 34,
-  "observed_branch_edges": 31,
+  "observed_branch_edges": 32,
   "proved_unreachable_edges": 2,
-  "uncovered_branch_edges": [
+  "uncovered_branch_edges": [],
+  "body_instruction_pcs_observed": 777,
+  "proved_unreachable_instructions": 44,
+  "unobserved_reachable_instructions": [],
+  "noreturn_callees": [
     {
-      "from": 5368956744,
-      "to": 5368956746,
-      "kind": "fallthrough",
-      "observed": false,
-      "proved_unreachable": false
+      "entry": "0x1400029a0",
+      "reason": "Closed native CFG has no RET and no indirect-jump exit; control cannot come back to the call site successor."
     }
   ],
-  "body_instruction_pcs_observed": 773,
   "branch_edges": [
     {
       "from": 5368954788,
@@ -188,7 +188,7 @@
       "from": 5368956744,
       "to": 5368956746,
       "kind": "fallthrough",
-      "observed": false,
+      "observed": true,
       "proved_unreachable": false
     },
     {
@@ -453,6 +453,12 @@
       "case": "periodic_epoch",
       "vector": 1,
       "steps": 2270
+    },
+    {
+      "source": "directed_native.json",
+      "case": "table_remap",
+      "vector": 1,
+      "steps": 111159
     },
     {
       "source": "directed_native.json",
