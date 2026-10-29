@@ -1,0 +1,106 @@
+{
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "entries_sha256": "82c93a5d37dc1bd94f255164a31c274e402bf5b123d0b59abbefe46f118ede3a",
+  "budget": 300000,
+  "per_wrapper": 2,
+  "count": {
+    "0x140015820": 4,
+    "0x140025020": 3,
+    "0x1400216d0": 1
+  },
+  "frames": [
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "alice/0",
+      "entries": [
+        "0x140015820",
+        "0x140025020"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "alice/1",
+      "entries": [
+        "0x140015820"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "ramon/0",
+      "entries": [],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "ramon/1",
+      "entries": [
+        "0x1400216d0"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "long_a23/0",
+      "entries": [
+        "0x140025020"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_transfer_vectors.json.gz",
+      "frame": "long_a23/1",
+      "entries": [
+        "0x140025020"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "alice/0",
+      "entries": [],
+      "stopped": null
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "alice/1",
+      "entries": [],
+      "stopped": null
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "ramon/0",
+      "entries": [],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c1c0"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "ramon/1",
+      "entries": [
+        "0x140015820",
+        "0x140015820"
+      ],
+      "stopped": null
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "long_a23/0",
+      "entries": [],
+      "stopped": [
+        "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+        "0x40c1c0"
+      ]
+    },
+    {
+      "source": "fresh_native_vectors.json.gz",
+      "frame": "long_a23/1",
+      "entries": [],
+      "stopped": null
+    }
+  ],
+  "scope": "Original resolver continued in Unicorn from fresh Windows frames with their real return address. Root entries only (RSP of the captured root call). Memory outside the captured regions is unavailable."
+}

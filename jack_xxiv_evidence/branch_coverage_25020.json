@@ -1,0 +1,429 @@
+{
+  "entry": "0x140025020",
+  "body_instructions": 864,
+  "body_bytes": 3717,
+  "known_branch_edges": 34,
+  "observed_branch_edges": 7,
+  "proved_unreachable_edges": 27,
+  "uncovered_branch_edges": [],
+  "body_instruction_pcs_observed": 167,
+  "proved_unreachable_instructions": 697,
+  "unobserved_reachable_instructions": [],
+  "noreturn_callees": [
+    {
+      "entry": "0x1400029a0",
+      "reason": "Closed native CFG has no RET and no indirect-jump exit; control cannot come back to the call site successor."
+    }
+  ],
+  "branch_edges": [
+    {
+      "from": 5368861167,
+      "to": 5368864393,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861167,
+      "to": 5368861173,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861180,
+      "to": 5368864407,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861180,
+      "to": 5368861186,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861388,
+      "to": 5368864366,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861388,
+      "to": 5368861394,
+      "kind": "fallthrough",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861401,
+      "to": 5368864366,
+      "kind": "taken",
+      "observed": true,
+      "proved_unreachable": false
+    },
+    {
+      "from": 5368861401,
+      "to": 5368861407,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368861523,
+      "to": 5368864366,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368861523,
+      "to": 5368861529,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368861539,
+      "to": 5368861608,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368861539,
+      "to": 5368861541,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368861603,
+      "to": 5368864355,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862275,
+      "to": 5368862324,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862275,
+      "to": 5368862277,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862608,
+      "to": 5368862702,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862608,
+      "to": 5368862610,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862618,
+      "to": 5368862702,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862618,
+      "to": 5368862620,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862697,
+      "to": 5368864355,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862856,
+      "to": 5368862925,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862856,
+      "to": 5368862858,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368862920,
+      "to": 5368864355,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863071,
+      "to": 5368863098,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863071,
+      "to": 5368863073,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863106,
+      "to": 5368863347,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863106,
+      "to": 5368863112,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863365,
+      "to": 5368863385,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863365,
+      "to": 5368863367,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863749,
+      "to": 5368863829,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368863749,
+      "to": 5368863751,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368864025,
+      "to": 5368864180,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368864025,
+      "to": 5368864031,
+      "kind": "fallthrough",
+      "observed": false,
+      "proved_unreachable": true
+    },
+    {
+      "from": 5368864175,
+      "to": 5368864366,
+      "kind": "taken",
+      "observed": false,
+      "proved_unreachable": true
+    }
+  ],
+  "proofs": [
+    {
+      "branch": 5368862608,
+      "unreachable_target": 5368862702,
+      "reason": "For arbitrary uint32 x, x*(x+1) is even and x XOR (x+1) has bit zero set. Therefore (~product)&xor has bit zero set; TEST cl,1 clears ZF and JE cannot be taken.",
+      "instruction_bytes_sha256": "ed6398a9e4506f9743fe7ee60c93bfbe3da6a8631cf75d057d105b7321c64a72"
+    },
+    {
+      "branch": 5368864025,
+      "unreachable_target": 5368864180,
+      "reason": "BPL is the original immutable LUT byte XOR 0xeb, unchanged up to CMP. All 256 LUT bytes, after XOR 0xeb, are in 0..61. CMP bpl,62 cannot set the JAE condition. Requires the original LUT unchanged.",
+      "lut_sha256": "e1a76f454453a8b7b5ce13ac5dc775ede843ff947920956c305c38bc9d00c4a4",
+      "outputs": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    },
+    {
+      "branch": 5368861401,
+      "unreachable_target": 5368861407,
+      "push_site": 5368861152,
+      "reason": "Every path to CMP [rdi+0x5b8],r8d (r8d==0 after TEST/JNE) passes the call to 0x140006010 with RCX=RDI, and no call, write to RDI, or memory write that could reach the counter follows (only RDI-based stores to other offsets and RSP-based stores; the stack is assumed not to alias the context). 0x140006010 returns only through INC [rbx+0x5b8] after CMP eax,0x40/JAE, so the counter is 1..64 and the JNE is always taken. Assumes callees preserve the nonvolatile RBX/RDI (Win64 ABI). Normal control flow only; the C++ throw at 0x1403a5fa0 does not return there."
+    }
+  ],
+  "cases": [
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140025020@alice/0#1",
+      "vector": 1,
+      "steps": 1394
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140025020@long_a23/0#0",
+      "vector": 0,
+      "steps": 1208
+    },
+    {
+      "source": "continued_lockstep.json",
+      "case": "0x140025020@long_a23/1#0",
+      "vector": 0,
+      "steps": 1208
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x140025020@alice/0#1:positive_mode_guard",
+      "vector": 1,
+      "steps": 27733
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x140025020@alice/0#1:canary_guard",
+      "vector": 1,
+      "steps": 27735
+    },
+    {
+      "source": "continued_directed.json",
+      "case": "0x140025020@alice/0#1:resume_slot_exit",
+      "vector": 1,
+      "steps": 1392
+    },
+    {
+      "source": "native_lockstep.json",
+      "case": "alice",
+      "vector": 1,
+      "steps": 2254
+    },
+    {
+      "source": "directed_native.json",
+      "case": "alternate_live_encoding",
+      "vector": 1,
+      "steps": 2254
+    },
+    {
+      "source": "directed_native.json",
+      "case": "periodic_register_maintenance",
+      "vector": 1,
+      "steps": 16501
+    },
+    {
+      "source": "directed_native.json",
+      "case": "maintenance_tls_active",
+      "vector": 1,
+      "steps": 16886
+    },
+    {
+      "source": "directed_native.json",
+      "case": "maintenance_tls_add_encoding",
+      "vector": 1,
+      "steps": 16886
+    },
+    {
+      "source": "fresh_transfer_differential.json",
+      "case": "alice",
+      "vector": 1,
+      "steps": 3587
+    },
+    {
+      "source": "fresh_transfer_differential.json",
+      "case": "ramon",
+      "vector": 1,
+      "steps": 2262
+    },
+    {
+      "source": "fresh_transfer_differential.json",
+      "case": "long_a23",
+      "vector": 0,
+      "steps": 3589
+    }
+  ],
+  "scope": "Local handler branch edges only; not exhaustive coverage of nested handlers, helpers, inputs or OS exception machinery."
+}

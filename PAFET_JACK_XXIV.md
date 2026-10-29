@@ -34,6 +34,11 @@ python3 scripts/pafet_coverage_xxiv.py
 python3 scripts/pafet_native_diff_xxiv.py --no-build --handler 14a00
 python3 scripts/pafet_directed_xxiv.py --no-build --handler 14a00
 python3 scripts/pafet_coverage_xxiv.py --handler 14a00
+python3 scripts/pafet_continue_xxiv.py
+python3 scripts/pafet_continued_diff_xxiv.py --no-build
+python3 scripts/pafet_continued_diff_xxiv.py --no-build --directed
+python3 scripts/pafet_coverage_xxiv.py --handler 15820
+python3 scripts/pafet_coverage_xxiv.py --handler 25020
 ```
 
 Si las dependencias Python no están instaladas en WSL, esta máquina dispone
@@ -96,9 +101,31 @@ guardan en el repositorio del escritorio; las copias de checkpoint están en
   `ctx+0xce0` se busca con el modelo C++ hasta que `cmp r8b,1`, tras el
   polinomio de paridad, se cumple. Los diecisiete casos pasan en los dos.
 
-Próximo cierre: recapturar el cookie del proceso para `alice` 0, revisar
-la dependencia de lanzamiento de excepciones de los handlers anidados y
-seguir con `0x140015820`, `0x140025020` y `0x1400216d0`.
+- Transferencias de bloque `0x140015820` y `0x140025020` (gemelos al 98%,
+  864 instrucciones cada uno). No hay frames capturados de ellos. Las
+  entradas se obtienen dejando seguir al programa original: cada frame
+  fresco de Windows entra en `0x14003bea0` con su dirección de retorno real
+  y el resolver original decodifica los opcodes siguientes y llama a los
+  envoltorios con sus `(ctx, modo, canario)` reales. En cada entrada raíz se
+  guarda el estado completo (`continued_entries.json.gz`) y se reproduce en
+  lockstep hasta el retorno: 4/4 y 3/3 pasan, y nueve casos dirigidos
+  (guardas y `resume_slot`) también.
+- Su núcleo lee un operando de 32 bits codificado (`0x140007040`), lo valida
+  como índice de bloque menor que 73 (`0x140002330`, pánicos `BLKI`/`BLKP`) y
+  encola trabajo pendiente en `ctx+0x3b0` (`0x140006010`, contador en
+  `ctx+0x5b8`, pánico `JOPF` si se llena). Tras encolar, el contador vale
+  1..64, así que el handler siempre vuelve al resolver: las 697
+  instrucciones de continuación en línea son inalcanzables. La prueba está
+  mecanizada en `pafet_coverage_xxiv.py` y supone el ABI Win64 para RBX/RDI
+  y que la pila no solapa el contexto.
+- Cobertura de ambos: 7 aristas observadas y 27 inalcanzables de 34; 167
+  instrucciones observadas y 697 inalcanzables de 864.
+- `0x140006010` puede lanzar una excepción C++ (`0x1403a5fa0`) en lugar de
+  retornar; esa ruta no se ha ejercitado.
+
+Próximo cierre: recapturar el cookie del proceso para `alice` 0, ejercitar
+la ruta de excepción de `0x140006010` y seguir con `0x1400216d0`, cuyo
+replay continuado se detiene en un destino no traducido (`0x140030ec0`).
 
 Los resultados incrementales están en `jack_xxiv_evidence/`. El original
 `pafet.bin` debe conservar SHA-256
