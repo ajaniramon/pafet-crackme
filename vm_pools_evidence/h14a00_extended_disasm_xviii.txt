@@ -1,0 +1,105 @@
+PAFET — 0x140014a00 extended disasm (beyond .pdata end 0x140014b25)
+======================================================================
+
+Finding: the .pdata entry for 0x140014a00 reports [0x140014a00..0x140014b25]
+(293 B), but the real function body continues after 0x140014b25. The code at
+0x140014b25+ reads/writes the ctx extensively and uses the same splitmix
+constants as the main helpers (phi64 and 0x2545f4914f6cdd1d), making it part
+of the same logical atomic byte-writer unit, not padding or an adjacent
+function.
+
+Evidence (inline disasm 0x140014b25..0x140014c80):
+
+  0x140014b25  mov     [rsp+0x68], rbp         <- callee-saved spill (not padding)
+  0x140014b2a  xor     rax, [rdi+0xe0]
+  0x140014b31  mov     [rsp+0x60], rax
+  0x140014b36  mov     rax, [rsp+0x60]
+  0x140014b3b  mov     r8,  [rdi+0x258]        <- read ctx+0x258 (fmix state)
+  0x140014b42  movzx   ecx, byte ptr [rdi+0x282]
+  0x140014b49  mov     rax, r8
+  0x140014b4c  mov     r11, [rdi+0x1f8]
+  0x140014b53  mov     rbx, [rdi+0x1e8]
+  0x140014b5a  mov     r10, [rdi+0x28]
+  0x140014b5e  mov     rbp, [rdi+0x30]         <- read counter
+  0x140014b62  imul    rcx, r11
+  0x140014b66  mov     [rsp+0x38], rsi
+  0x140014b6b  movzx   esi, byte ptr [rdi+0x200]
+  0x140014b72  xor     rcx, rbx
+  0x140014b75  mov     [rsp+0x30], r12
+  0x140014b7a  movabs  r12, 0x9e3779b97f4a7c15      <- phi64
+  0x140014b84  mov     [rsp+0x28], r13
+  0x140014b89  movabs  r13, 0x2545f4914f6cdd1d      <- splitmix seed
+  0x140014b93  mov     [rsp+0x20], r14
+  0x140014b98  mov     r14, [rdi+0x1f0]
+  0x140014b9f  imul    r9,  r14, 0xb
+  0x140014ba3  xor     rcx, r9
+  0x140014ba6  xor     rax, rcx
+  0x140014ba9  sub     r8,  rcx
+  0x140014bac  test    sil, sil
+  0x140014baf  cmove   r8, rax
+  0x140014bb3  inc     rbp                          <- counter++
+  0x140014bb6  imul    r10, r12                     <- phi64 multiply
+  0x140014bba  mov     [rdi+0x30], rbp              <- store counter back
+  0x140014bbe  mov     rcx, r8
+  0x140014bc1  add     r10, r13                     <- splitmix add
+  0x140014bc4  mov     [rdi+0x28], r10
+  0x140014bc8  mov     rax, r10
+  0x140014bcb  shr     rax, 0x1b
+  0x140014bcf  movzx   edx, al
+  0x140014bd2  mov     [rdi+0x282], dl              <- store derived byte to ctx+0x282
+  0x140014bd8  imul    rdx, r11
+  0x140014bdc  xor     rdx, rbx
+  0x140014bdf  xor     rdx, r9
+  0x140014be2  xor     rcx, rdx
+  0x140014be5  test    sil, sil
+  0x140014be8  lea     rax, [r8+rdx]
+  0x140014bec  cmove   rax, rcx
+  0x140014bf0  mov     [rdi+0x258], rax             <- store back fmix state
+  0x140014bf7  test    r8d, r8d
+  0x140014bfa  jne     0x1400157c4                  <- long branch to another block
+
+  0x140014c00  cmp     dword ptr [rdi+0x5b8], r8d
+  0x140014c07  jne     0x1400157c4
+  0x140014c0d  mov     r8,  [rdi+0x208]             <- another fmix slot
+  0x140014c14  movzx   ecx, byte ptr [rdi+0x278]
+  0x140014c1b  imul    rcx, r11
+  0x140014c1f  xor     rcx, rbx
+  0x140014c22  xor     rcx, r14
+  0x140014c25  mov     rax, rcx
+  0x140014c28  xor     rax, r8
+  0x140014c2b  sub     r8,  rcx
+  0x140014c2e  test    sil, sil
+  0x140014c31  cmove   r8, rax
+  0x140014c35  lea     rax, [rbp+1]
+  0x140014c39  mov     [rdi+0x30], rax              <- increment counter again
+  0x140014c3d  imul    r10, r12
+  0x140014c41  add     r10, r13
+  0x140014c44  mov     [rdi+0x28], r10
+  0x140014c48  mov     rax, r10
+  0x140014c4b  shr     rax, 0x1b
+  0x140014c4f  movzx   edx, al
+  0x140014c52  mov     [rdi+0x278], dl              <- another ctx byte
+  0x140014c58  imul    rdx, r11
+  0x140014c5c  xor     rdx, rbx
+  0x140014c5f  xor     rdx, r14
+  0x140014c62  mov     rcx, rdx
+  0x140014c65  xor     rcx, r8
+  0x140014c68  test    sil, sil
+  0x140014c6b  lea     rax, [rdx+r8]
+  0x140014c6f  cmove   rax, rcx
+  0x140014c73  mov     [rdi+0x208], rax
+
+Pattern: the fragment past 0x140014b25 is a long sequence of fmix64-style
+rounds, each round consuming a byte of state (shr 0x1b -> store) and
+updating two ctx slots (0x258/0x278/0x208/... + 0x28/0x30 counter) under
+a `test sil, sil` predicate that controls the cmove.
+
+Implication for the Jack XIV/XVI blocker:
+  The handler 0x140014a00 is NOT 293 B. The .pdata report is partial;
+  the real function body extends at least through 0x140014c80 and
+  includes long branches (jne 0x1400157c4) to yet-another block.
+  Any C++ port must include this extended region.
+
+Next step: continue the disasm from 0x140014c80 until the first `ret`
+or confirmed `int3` padding, then redo Fase 2-4 of Jack XVI (capture +
+Unicorn + C++ port) using the real function extent, not the .pdata one.
