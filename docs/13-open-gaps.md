@@ -179,39 +179,50 @@ For `NIMA`'s purpose (seeing that the pipeline is understood), this is
 sufficient. For a maximum-fidelity clone, these would also need x64
 ports.
 
-## 13. hex-VM virtual program (72 blocks)
+## 13. Hex-VM virtual program (72 observed PCs)
 
-**Status (JACK XXV)**: hex-VM is a full virtual machine of its own.
-Architecture reversed:
+**Status (JACK XXVI): partial, not closed.** See
+[PAFET_JACK_XXVI.md](../PAFET_JACK_XXVI.md) and `jack_xxvi_evidence/`.
 
-- 8 state handlers (byte-exact x64→C++, 400/400 Unicorn differential)
-- Secondary dispatcher 0x14004c720 (semantics from disasm)
-- Queue push 0x14004c880 with throw-as-control-flow (counter==1 or hash probe)
-- 72-block virtual CFG with transitions and visit counts
-- Shared library with user-VM (queue, remap, panic, slot encoder)
-- Invariants confirmed: `push.item == next_VPC`, `push.counter == push_index`
+The historical 49.7% K match was caused by recalculating the handler-table
+rotation from the current K. The x64 initializes that table once. Keeping
+its initial rotation gives 281205/281205 K matches between captured pushes.
+This is local prediction from captured state, not full program lockstep.
+The previous explanation that the remaining half was caused by block writes
+to K is unsupported.
 
-What's **not** reversed: the 72 virtual blocks' internal arithmetic.
-K/A/B evolution between pushes depends on block bodies; without
-block semantics, (K, A, B) lockstep is 49.7% K-only, 165/281K full.
+Compiled clean C++ now passes 512 handler, 256 dispatcher, 256 slot-adapter
+and 64 block differential cases against original x64 under Unicorn. Dispatcher
+VPC decoding and XOR/add selection errors in XXV are corrected in the separate
+XXVI core. Both trace invariants hold for all 281206 pushes with the correct
+10-column schema. The old CFG script reads A instead of counter.
 
-**Next step**: XXVI would reverse the 72 blocks or at least the main
-loop and the DROP paths. The 29-block main chain + 22-block secondary
-chain are the heavy ones.
+Only block `0x2d409a` has a recovered, independently checked body:
+`A ^= fmix64(A+1); enqueue(0x8453b)`. It explains the first A divergence.
+`blocks.json` lists every observed PC and marks unrecovered semantics explicitly.
+The next B divergence is at push 3 toward `0x295b7f`.
 
-See `PAFET_JACK_XXV.md` and `jack_xxv_evidence/*`.
+Missing: 71 block bodies, complete decoder and initialization, catch/unwind,
+new complete input runs, final-buffer comparisons and unvisited paths. The
+Unicorn executor still stops at unsupported `RtlPcToFileHeader`; full Windows
+exception support or a new Windows capture is required. Exact capture fields
+and continuation steps are specified in the XXVI report.
 
-## 14. Table remap for hex-VM and user-VM
+## 14. Hex-VM table_remap and final output
 
-**Status**: observed, not modelled.
+**Status (JACK XXVI): statically characterized, not fully implemented.**
 
-`0x14007fb70` (hex-VM) and `0x14003ebe0` (user-VM) are byte-identical
-remappers that reshuffle the 8-entry rotated handler table. Triggers
-every ~0x200 queue pushes aligned by `ctx[0x700]`. The function body is
-~400 instructions involving ctx hash + LCG + conditional rotations.
+`0x14007fb70` rebuilds four domains of 62 entries, their permutations and
+encoded target tables, with optional generated thunks. It is not the eight-entry
+secondary handler-table rotation. Its trigger depends on evolving cookie state;
+queue alignment is not a proof of a fixed 512-push schedule. A second call site
+exists at `0x140080163`. This operation makes no new claim about other VMs.
 
-**Next step**: reverse the remap function statically or validate via
-Unicorn differential.
+The historical name `output_build` for `0x1400889e0` is misleading: it forwards
+to the virtual slot reader `0x14004a0e0`, returns a decoded uint64, advances the
+LCG and reencodes the cell. Its clean C++ equivalent passes 256 differential
+cases. Sixteen recorded calls do not establish construction of the 72-byte
+buffer. Follow their consumers and actual buffer stores before closing output.
 
 ## Summary
 

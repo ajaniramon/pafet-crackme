@@ -1,0 +1,2 @@
+00000001400889e0  mov rcx, qword ptr [rcx]
+00000001400889e3  jmp 0x14004a0e0

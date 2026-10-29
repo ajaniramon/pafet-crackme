@@ -1,0 +1,103 @@
+{
+  "trace_sha256": "7d26d8c0f079f1ac1fa728e6d28eaaff259680be7d90f45887cdf27500e512d3",
+  "historical_structure_summary": {
+    "total_pushes": 284863,
+    "total_vpc_reads": 586343,
+    "total_vpc_writes": 289098,
+    "total_secdisps": 289098,
+    "total_outputs": 16,
+    "total_throws": 72,
+    "unique_vpc_values": 72,
+    "main_loop_count": 8148
+  },
+  "current_main_loop_visits": 8046,
+  "counts": {
+    "vpc_reads": 578723,
+    "vpc_writes": 285339,
+    "pushes": 281206,
+    "secdisps": 285339,
+    "allocs": 1,
+    "outputs": 16,
+    "throws": 59,
+    "panics": 0
+  },
+  "push_rows": 281206,
+  "invariants": {
+    "counter_matches": 281206,
+    "item_matches_next_write": 281206
+  },
+  "push_without_later_write": 0,
+  "unique_pcs": 72,
+  "observed_fanout": {
+    "1": 59,
+    "4": 1,
+    "9": 4,
+    "2": 8
+  },
+  "unique_ticks": 1430683,
+  "events": 1430683,
+  "ticks_contiguous": true,
+  "fixed_rotation": 7,
+  "comparisons": 281205,
+  "matches": {
+    "old_K": 139873,
+    "K": 281205,
+    "A": 18018,
+    "B": 8049,
+    "KAB": 8047
+  },
+  "first_mismatches": {
+    "A": {
+      "push_index": 0,
+      "item": "0x2d409a",
+      "selector": 6,
+      "predicted_handler": 5,
+      "before": [
+        "0xe19a5202aac7ed57",
+        "0x671ae3e65cd34f0d",
+        "0xc4dda7b5e73c05eb"
+      ],
+      "predicted": [
+        "0x9e4a9126081207ba",
+        "0x671ae3e65cd34f0d",
+        "0xc4dda7b5e73c05eb"
+      ],
+      "observed": [
+        "0x9e4a9126081207ba",
+        "0xa8f5d0c9e9c07d9b",
+        "0xc4dda7b5e73c05eb"
+      ],
+      "actual_handler": "not captured",
+      "effective_table": "not captured"
+    },
+    "B": {
+      "push_index": 3,
+      "item": "0x295b7f",
+      "selector": 1,
+      "predicted_handler": 0,
+      "before": [
+        "0x4c613fa366a80bcc",
+        "0xa8f5d0c9e9c07d9a",
+        "0xee0926be8b4db586"
+      ],
+      "predicted": [
+        "0x234ca37cd837dc92",
+        "0x3083ee7d1d66a642",
+        "0xee0926be8b4db586"
+      ],
+      "observed": [
+        "0x234ca37cd837dc92",
+        "0x3083ee7d1d66a642",
+        "0x632c971c07011acc"
+      ],
+      "actual_handler": "not captured",
+      "effective_table": "not captured"
+    }
+  },
+  "first_A_block_check": "0xa8f5d0c9e9c07d9b",
+  "limitations": [
+    "event tick continuity does not prove hooks caught all original events",
+    "push-to-push predictions are not instruction-level lockstep",
+    "no recorded handler table, selected handler, post-handler state or thread ID"
+  ]
+}

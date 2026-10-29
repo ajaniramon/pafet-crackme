@@ -1,0 +1,18 @@
+{
+  "pe_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "seed": 2490406,
+  "passes": {
+    "handler": 512,
+    "dispatcher": 256,
+    "slot_adapter": 256,
+    "block_2d409a": 64
+  },
+  "oracle": "original pafet.bin x64 under Unicorn",
+  "candidate": "compiled src/pafet_hexvm_core_xxvi.h",
+  "limitations": [
+    "finite synthetic states",
+    "no Windows unwind",
+    "no complete virtual program",
+    "no final buffer comparison"
+  ]
+}
