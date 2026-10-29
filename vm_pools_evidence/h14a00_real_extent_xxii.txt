@@ -1,0 +1,31 @@
+PAFET - 0x140014a00 real extent measurement (Jack XXII)
+========================================================
+
+The handler at 0x140014a00 is NOT 293 B as the first .pdata entry
+suggests. The real extent is 3586 B.
+
+.pdata fragmentation observed:
+  Entry 1: [0x140014a00..0x140014b25] = 293 B
+  Entry 2: [0x140014b25..0x1400157e6] = 3265 B
+  Entry 3: [0x1400157e6..0x140015802] = 28 B epilogue
+
+First real `ret`:   0x1400157e5
+End padding (int3): 0x140015801
+
+This is standard Windows SEH behavior: a single logical function can
+be split across multiple consecutive .pdata entries. XIV and XVI
+treated the function as 293 B because they stopped at the first
+entry's end address.
+
+Implication for a future C++ port of this handler:
+  - Target extent: 3586 B (not 293 B).
+  - Requires enumerating all 3 .pdata entries and treating them as
+    one contiguous function.
+  - Realistic cost: comparable to 5-6 Jack IV-A / Jack XV sized
+    iterations (each of those ported ~500-700 B).
+  - Unicorn oracle (scripts/pafet_h14a00_unicorn_xvi.py) is already
+    PASS 6/6 against the full extent (ctx + post-exec state); it is
+    valid as-is for incremental validation of the port.
+
+No .exe or port shipped in this iteration. The deliverable is the
+measurement.
