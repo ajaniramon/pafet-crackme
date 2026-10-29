@@ -202,3 +202,53 @@ InterpStats run_ir(const std::vector<IRInstr>& ir) {
 }
 
 }  // namespace pafet_vii
+
+// =====================================================================
+// Jack X — byte-writer integration
+// =====================================================================
+#include "pafet_byte_writer_x.h"
+
+namespace pafet_vii {
+
+InterpStats run_ir_with_user(const std::vector<IRInstr>& ir,
+                              const std::string& user) {
+    init_helper_table();
+    InterpStats st;
+    std::set<uint16_t> covered_pairs;
+    const uint8_t* u = reinterpret_cast<const uint8_t*>(user.data());
+    const size_t L = user.size();
+
+    // The IR captures ONE execution for ONE username. For the atomic
+    // byte-writer pairs, we dispatch to the native byte_writer. The
+    // atomic writers fire in order (byte 0, 1, 2, ...), so we count
+    // the position by the hit index.
+    int byte_pos = 0;
+    for (const auto& e : ir) {
+        st.instructions_executed++;
+        if (e.ch < 0 || e.ch >= 4 || e.op < 0 || e.op >= 62) continue;
+        PairHelpers& ph = g_helpers[e.ch][e.op];
+        bool any = false;
+        if (ph.h3a50) { st.helper_h3a50_calls++; any = true; }
+        if (ph.h3880) { st.helper_h3880_calls++; any = true; }
+        if (ph.h5b50) { st.helper_h5b50_calls++; any = true; }
+        if (any) covered_pairs.insert(static_cast<uint16_t>(e.ch * 100 + e.op));
+
+        // Jack X: is this one of the 5 atomic byte-writers?
+        int bi = pafet_x::find_byte_index(e.ch, e.op);
+        if (bi >= 0 && byte_pos < static_cast<int>(L)) {
+            // Produce output[byte_pos] from reversed input
+            uint8_t out = pafet_x::byte_writer(u, L, byte_pos);
+            st.output_buffer.push_back(out);
+            st.byte_writer_hits++;
+            byte_pos++;
+        }
+    }
+    st.helper_coverage_pairs = static_cast<int>(covered_pairs.size());
+    auto thr = verify_threaded_code(ir);
+    st.threaded_chain_matches = thr.first;
+    st.threaded_chain_mismatches = thr.second;
+    st.completed = true;
+    return st;
+}
+
+}  // namespace pafet_vii

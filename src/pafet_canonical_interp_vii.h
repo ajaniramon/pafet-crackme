@@ -37,6 +37,8 @@ struct InterpStats {
     int helper_coverage_pairs = 0;  // (ch,op) pairs that invoke at least one helper
     int threaded_chain_matches = 0; // next_op_encoded == next.op
     int threaded_chain_mismatches = 0;
+    int byte_writer_hits = 0;       // Jack X: how many atomic byte-writer dispatches fired
+    std::vector<uint8_t> output_buffer;  // Jack X: produced output
     bool completed = false;
 };
 
@@ -46,6 +48,13 @@ bool load_ir(const std::string& json_path, std::vector<IRInstr>& out);
 // Run the IR. The interpreter maintains a tiny simulated ctx state;
 // native helpers are called where mapped. Returns stats.
 InterpStats run_ir(const std::vector<IRInstr>& ir);
+
+// Jack X: Run the IR with an input username. For every (ch, op) that matches
+// one of the 5 atomic byte-writers identified by Jack IX, the native
+// byte-writer transform is applied and the resulting byte is appended to
+// the output buffer in the stats. Verify byte-exact against f_user.
+InterpStats run_ir_with_user(const std::vector<IRInstr>& ir,
+                              const std::string& user);
 
 // Verify the threaded-code property: for every i, ir[i].next_op_encoded
 // should equal ir[i+1].op. Returns {matches, mismatches}.
