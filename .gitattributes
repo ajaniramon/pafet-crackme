@@ -41,3 +41,9 @@ jack_xxxiv_evidence/** -text whitespace=cr-at-eol
 jack_xxxiv_evidence/*.asm -text whitespace=-blank-at-eol
 scripts/pafet_serial_audit_xxxiv.py -text
 scripts/pafet_serial_metrics_xxxiv.py -text
+jack_xxxv_evidence/** -text whitespace=cr-at-eol
+jack_xxxv_evidence/*.asm -text whitespace=-blank-at-eol
+scripts/pafet_serial_audit_xxxv.py -text
+scripts/pafet_serial_graph_xxxv.py -text
+scripts/pafet_serial_metrics_xxxv.py -text
+scripts/pafet_serial_arithmetic_xxxv.py -text

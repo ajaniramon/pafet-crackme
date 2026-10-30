@@ -1,0 +1,2565 @@
+{
+  "all_required_checks_pass": true,
+  "rows": [
+    {
+      "case": "drop_control/frame_00",
+      "category": "baseline",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 820,
+        "candidate_instructions": 820,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 10,
+          "pc": "0x7ff7bcb3bec4",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 820,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": true,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 73,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff7bcb00000",
+          "cookie": "0x1fb46b5e27e3",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "negative_controls": {
+        "legacy": {
+          "coverage": "legacy",
+          "instructions_compared": 820,
+          "candidate_instructions": 820,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": {
+            "step": 129,
+            "pc": "0x7ff7bcb03baa",
+            "preferred_pc": "0x140003baa",
+            "instruction": "xor rdx, qword ptr [rbx + rax]",
+            "preceding_instructions_match": 128,
+            "differences": {
+              "rdx": [
+                "0xf16b9c83d5a539a4",
+                "0x0"
+              ],
+              "defined_flags": [
+                "0x282",
+                "0x246",
+                "0x8c5"
+              ],
+              "memory_reads": {
+                "replay": [
+                  [
+                    983217769504,
+                    "0000000000000000"
+                  ]
+                ],
+                "native": [
+                  [
+                    983217769504,
+                    "a439a5d5839c6bf1"
+                  ]
+                ]
+              }
+            }
+          },
+          "first_read_difference": {
+            "step": 129,
+            "pc": "0x7ff7bcb03baa",
+            "differences": {
+              "replay": [
+                [
+                  983217769504,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  983217769504,
+                  "a439a5d5839c6bf1"
+                ]
+              ]
+            }
+          },
+          "first_raw_arithmetic_flag_difference": {
+            "step": 10,
+            "pc": "0x7ff7bcb3bec4",
+            "different_bits": "0x4",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 820,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 758
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 8
+              },
+              {
+                "role": "context",
+                "different_bytes": 0
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x1fb46b5e27e3",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        },
+        "missing-register-tail": {
+          "coverage": "missing-register-tail",
+          "instructions_compared": 820,
+          "candidate_instructions": 820,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": null,
+          "first_read_difference": null,
+          "first_raw_arithmetic_flag_difference": {
+            "step": 10,
+            "pc": "0x7ff7bcb3bec4",
+            "different_bits": "0x4",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 820,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 758
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 0
+              },
+              {
+                "role": "context",
+                "different_bytes": 0
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x1fb46b5e27e3",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "drop_control/frame_01",
+      "category": "baseline",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 2588,
+        "candidate_instructions": 2588,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 10,
+          "pc": "0x7ff7bcb3bec4",
+          "different_bits": "0x84",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2588,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": true,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 73,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff7bcb00000",
+          "cookie": "0x1fb46b5e27e3",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "negative_controls": {
+        "legacy": {
+          "coverage": "legacy",
+          "instructions_compared": 2588,
+          "candidate_instructions": 2588,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": {
+            "step": 129,
+            "pc": "0x7ff7bcb03baa",
+            "preferred_pc": "0x140003baa",
+            "instruction": "xor rdx, qword ptr [rbx + rax]",
+            "preceding_instructions_match": 128,
+            "differences": {
+              "rdx": [
+                "0xb6fdd47ef366b06b",
+                "0x0"
+              ],
+              "defined_flags": [
+                "0x282",
+                "0x246",
+                "0x8c5"
+              ],
+              "memory_reads": {
+                "replay": [
+                  [
+                    983217769504,
+                    "0000000000000000"
+                  ]
+                ],
+                "native": [
+                  [
+                    983217769504,
+                    "6bb066f37ed4fdb6"
+                  ]
+                ]
+              }
+            }
+          },
+          "first_read_difference": {
+            "step": 129,
+            "pc": "0x7ff7bcb03baa",
+            "differences": {
+              "replay": [
+                [
+                  983217769504,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  983217769504,
+                  "6bb066f37ed4fdb6"
+                ]
+              ]
+            }
+          },
+          "first_raw_arithmetic_flag_difference": {
+            "step": 10,
+            "pc": "0x7ff7bcb3bec4",
+            "different_bits": "0x84",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 2588,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 758
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 8
+              },
+              {
+                "role": "context",
+                "different_bytes": 0
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x1fb46b5e27e3",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        },
+        "missing-register-tail": {
+          "coverage": "missing-register-tail",
+          "instructions_compared": 2588,
+          "candidate_instructions": 2588,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": null,
+          "first_read_difference": null,
+          "first_raw_arithmetic_flag_difference": {
+            "step": 10,
+            "pc": "0x7ff7bcb3bec4",
+            "different_bits": "0x84",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 2588,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 758
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 0
+              },
+              {
+                "role": "context",
+                "different_bytes": 0
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x1fb46b5e27e3",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "second_rekey/frame_00",
+      "category": "baseline",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 14338,
+        "candidate_instructions": 14338,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 14338,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": true,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 73,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff7bcb00000",
+          "cookie": "0x47bcf397451",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "negative_controls": {
+        "legacy": {
+          "coverage": "legacy",
+          "instructions_compared": 14338,
+          "candidate_instructions": 14338,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": {
+            "step": 13646,
+            "pc": "0x7ff7bcb04f7f",
+            "preferred_pc": "0x140004f7f",
+            "instruction": "xor rdx, qword ptr [r8 + r9]",
+            "preceding_instructions_match": 13645,
+            "differences": {
+              "rdx": [
+                "0xdb37cef75b4dcb37",
+                "0xc14ad865762b9d92"
+              ],
+              "memory_reads": {
+                "replay": [
+                  [
+                    689691789552,
+                    "0000000000000000"
+                  ]
+                ],
+                "native": [
+                  [
+                    689691789552,
+                    "a556662d92167d1a"
+                  ]
+                ]
+              }
+            }
+          },
+          "first_read_difference": {
+            "step": 13646,
+            "pc": "0x7ff7bcb04f7f",
+            "differences": {
+              "replay": [
+                [
+                  689691789552,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  689691789552,
+                  "a556662d92167d1a"
+                ]
+              ]
+            }
+          },
+          "first_raw_arithmetic_flag_difference": {
+            "step": 36,
+            "pc": "0x7ff7bcb049e5",
+            "different_bits": "0x4",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 14338,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 0
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 16
+              },
+              {
+                "role": "context",
+                "different_bytes": 8
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x47bcf397451",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        },
+        "missing-register-tail": {
+          "coverage": "missing-register-tail",
+          "instructions_compared": 14338,
+          "candidate_instructions": 14338,
+          "native_complete": true,
+          "all_match": true,
+          "first_state_difference": null,
+          "first_read_difference": null,
+          "first_raw_arithmetic_flag_difference": {
+            "step": 36,
+            "pc": "0x7ff7bcb049e5",
+            "different_bits": "0x4",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 14338,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 0
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 0
+              },
+              {
+                "role": "context",
+                "different_bytes": 0
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x47bcf397451",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "second_rekey/frame_01",
+      "category": "baseline",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 14244,
+        "candidate_instructions": 14244,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 14244,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": true,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 73,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff7bcb00000",
+          "cookie": "0x47bcf397451",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "negative_controls": {
+        "legacy": {
+          "coverage": "legacy",
+          "instructions_compared": 14244,
+          "candidate_instructions": 14244,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": {
+            "step": 3747,
+            "pc": "0x7ff7bcb04e4e",
+            "preferred_pc": "0x140004e4e",
+            "instruction": "mov rdx, qword ptr [rax + rcx*8]",
+            "preceding_instructions_match": 3746,
+            "differences": {
+              "rdx": [
+                "0x0",
+                "0x23d10f32b7a9fa3"
+              ],
+              "memory_reads": {
+                "replay": [
+                  [
+                    689691788032,
+                    "0000000000000000"
+                  ]
+                ],
+                "native": [
+                  [
+                    689691788032,
+                    "a39f7a2bf3103d02"
+                  ]
+                ]
+              }
+            }
+          },
+          "first_read_difference": {
+            "step": 3747,
+            "pc": "0x7ff7bcb04e4e",
+            "differences": {
+              "replay": [
+                [
+                  689691788032,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  689691788032,
+                  "a39f7a2bf3103d02"
+                ]
+              ]
+            }
+          },
+          "first_raw_arithmetic_flag_difference": {
+            "step": 36,
+            "pc": "0x7ff7bcb049e5",
+            "different_bits": "0x4",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 14244,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 1508
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 16
+              },
+              {
+                "role": "context",
+                "different_bytes": 762
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x47bcf397451",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        },
+        "missing-register-tail": {
+          "coverage": "missing-register-tail",
+          "instructions_compared": 14244,
+          "candidate_instructions": 14244,
+          "native_complete": true,
+          "all_match": false,
+          "first_state_difference": {
+            "step": 3747,
+            "pc": "0x7ff7bcb04e4e",
+            "preferred_pc": "0x140004e4e",
+            "instruction": "mov rdx, qword ptr [rax + rcx*8]",
+            "preceding_instructions_match": 3746,
+            "differences": {
+              "rdx": [
+                "0x0",
+                "0x23d10f32b7a9fa3"
+              ],
+              "memory_reads": {
+                "replay": [
+                  [
+                    689691788032,
+                    "0000000000000000"
+                  ]
+                ],
+                "native": [
+                  [
+                    689691788032,
+                    "a39f7a2bf3103d02"
+                  ]
+                ]
+              }
+            }
+          },
+          "first_read_difference": {
+            "step": 3747,
+            "pc": "0x7ff7bcb04e4e",
+            "differences": {
+              "replay": [
+                [
+                  689691788032,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  689691788032,
+                  "a39f7a2bf3103d02"
+                ]
+              ]
+            }
+          },
+          "first_raw_arithmetic_flag_difference": {
+            "step": 36,
+            "pc": "0x7ff7bcb049e5",
+            "different_bits": "0x4",
+            "defined_mask": "0x801",
+            "only_architecturally_undefined_bits": true
+          },
+          "failure": null,
+          "terminal_comparison": {
+            "steps": 14244,
+            "error": null,
+            "regions": [
+              {
+                "role": "encoded register banks",
+                "different_bytes": 1508
+              },
+              {
+                "role": "encoded virtual stack",
+                "different_bytes": 0
+              },
+              {
+                "role": "context",
+                "different_bytes": 762
+              }
+            ]
+          },
+          "contract": {
+            "profile": "user-v1",
+            "legacy_transport": true,
+            "declared_inputs_valid": true,
+            "array_count": 2,
+            "captured_pages": 73,
+            "consistent_alias_bytes": 0,
+            "runtime_base": "0x7ff7bcb00000",
+            "cookie": "0x47bcf397451",
+            "cookie_differs_from_static_default": true,
+            "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+            "unavailable": [
+              "FS base unless explicitly captured",
+              "arbitrary transitive pointer closure",
+              "unvisited host/exception dependencies"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case": "cookie/frame_00",
+      "category": "additional",
+      "component": "CRT",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 6,
+        "candidate_instructions": 6,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": null,
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 6,
+          "error": null,
+          "regions": []
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 54,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x4301b452f73",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "queue/frame_00",
+      "category": "blocked",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 31,
+        "candidate_instructions": 31,
+        "native_complete": false,
+        "all_match": false,
+        "first_state_difference": {
+          "step": 32,
+          "differences": {
+            "trace_length": [
+              31,
+              32
+            ]
+          }
+        },
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": null,
+        "failure": {
+          "classification": "unmapped-dependency",
+          "message": "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+          "pc": "0x7ff90ff57d30"
+        },
+        "terminal_comparison": {
+          "steps": 31,
+          "error": {
+            "classification": "unmapped-dependency",
+            "message": "Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+            "pc": "0x7ff90ff57d30"
+          },
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 74,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x647f99ae6cc1",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "expected_block_preserved": true
+    },
+    {
+      "case": "remap_empty/frame_00",
+      "category": "additional",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 55,
+        "candidate_instructions": 55,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 20,
+          "pc": "0x7ff64e497575",
+          "different_bits": "0x94",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 55,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 74,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x10ccfa32ee56",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "resolver_len1/frame_00",
+      "category": "additional",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 10,
+        "candidate_instructions": 10,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": null,
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 10,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 74,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x2656864339ef",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "serial_seed/frame_00",
+      "category": "additional",
+      "component": "Serial",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 18,
+        "candidate_instructions": 18,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 6,
+          "pc": "0x7ff64e492043",
+          "different_bits": "0x10",
+          "defined_mask": "0x8c5",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 18,
+          "error": null,
+          "regions": []
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 67,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x4d5cff35cc34",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "store_len16/frame_00",
+      "category": "additional",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 2490,
+        "candidate_instructions": 2490,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 31,
+          "pc": "0x7ff64e4b1767",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2490,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 74,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x7458fce121d1",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "transfer_len25/frame_00",
+      "category": "additional",
+      "component": "User",
+      "native_replay": {
+        "coverage": "complete",
+        "instructions_compared": 3258,
+        "candidate_instructions": 3258,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 21,
+          "pc": "0x7ff64e4b5076",
+          "different_bits": "0x84",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 3258,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 74,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x51a9a1ce1913",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    }
+  ],
+  "negative_controls_detected": {
+    "legacy": true,
+    "missing-register-tail": true
+  },
+  "additional_complete_instructions": 5837,
+  "additional_complete_regions": 6,
+  "additional_user_instructions": 5813,
+  "new_unique_native_pcs": 1287,
+  "new_observed_control_edges": 82,
+  "new_unique_native_pcs_rva": [
+    "-0x7d5ed28bef40",
+    "-0x7d5ed28bef36",
+    "0x2040",
+    "0x2043",
+    "0x2047",
+    "0x204a",
+    "0x2054",
+    "0x2058",
+    "0x205b",
+    "0x205f",
+    "0x2062",
+    "0x206c",
+    "0x2070",
+    "0x2073",
+    "0x2077",
+    "0x207a",
+    "0x36d0",
+    "0x36d7",
+    "0x36da",
+    "0x36de",
+    "0x36e1",
+    "0x36e4",
+    "0x36ec",
+    "0x36f5",
+    "0x36f9",
+    "0x36fe",
+    "0x3702",
+    "0x3705",
+    "0x3708",
+    "0x370f",
+    "0x3716",
+    "0x371a",
+    "0x371d",
+    "0x3720",
+    "0x3723",
+    "0x372a",
+    "0x3734",
+    "0x3738",
+    "0x373c",
+    "0x3740",
+    "0x3744",
+    "0x374e",
+    "0x3751",
+    "0x3755",
+    "0x3759",
+    "0x375c",
+    "0x375f",
+    "0x3767",
+    "0x376c",
+    "0x3774",
+    "0x3777",
+    "0x377e",
+    "0x3781",
+    "0x3784",
+    "0x3787",
+    "0x378f",
+    "0x3793",
+    "0x379a",
+    "0x379e",
+    "0x3880",
+    "0x3885",
+    "0x388a",
+    "0x388f",
+    "0x3894",
+    "0x3896",
+    "0x3898",
+    "0x389a",
+    "0x389e",
+    "0x38a5",
+    "0x38a8",
+    "0x38af",
+    "0x38b2",
+    "0x38ba",
+    "0x38c4",
+    "0x38cb",
+    "0x38d5",
+    "0x38dc",
+    "0x38e4",
+    "0x38e8",
+    "0x38ec",
+    "0x38f0",
+    "0x38f3",
+    "0x38f6",
+    "0x38f9",
+    "0x38fc",
+    "0x38ff",
+    "0x3903",
+    "0x3906",
+    "0x390a",
+    "0x390d",
+    "0x3911",
+    "0x3915",
+    "0x3918",
+    "0x391c",
+    "0x391f",
+    "0x3923",
+    "0x3926",
+    "0x392c",
+    "0x392f",
+    "0x3933",
+    "0x3936",
+    "0x3939",
+    "0x393c",
+    "0x393f",
+    "0x3943",
+    "0x3947",
+    "0x394e",
+    "0x3955",
+    "0x395b",
+    "0x395f",
+    "0x3963",
+    "0x3966",
+    "0x396a",
+    "0x396d",
+    "0x3971",
+    "0x3975",
+    "0x3979",
+    "0x397d",
+    "0x3980",
+    "0x3988",
+    "0x398b",
+    "0x3993",
+    "0x3998",
+    "0x399b",
+    "0x39a2",
+    "0x39a5",
+    "0x39a9",
+    "0x39ab",
+    "0x39ad",
+    "0x39af",
+    "0x39b2",
+    "0x39b9",
+    "0x39bc",
+    "0x39c1",
+    "0x39c6",
+    "0x39ca",
+    "0x39ce",
+    "0x39d2",
+    "0x39d7",
+    "0x39db",
+    "0x39de",
+    "0x39e2",
+    "0x39e6",
+    "0x39e9",
+    "0x39f0",
+    "0x39f6",
+    "0x39fe",
+    "0x3a02",
+    "0x3a05",
+    "0x3a0c",
+    "0x3a0f",
+    "0x3a12",
+    "0x3a19",
+    "0x3a1d",
+    "0x3a21",
+    "0x3a28",
+    "0x3a2d",
+    "0x3a31",
+    "0x3a33",
+    "0x3a35",
+    "0x3a37",
+    "0x5973",
+    "0x5976",
+    "0x597c",
+    "0x597e",
+    "0x71e0",
+    "0x71e5",
+    "0x71ea",
+    "0x71ef",
+    "0x71f0",
+    "0x71f4",
+    "0x71fb",
+    "0x71fe",
+    "0x7206",
+    "0x7210",
+    "0x7217",
+    "0x7221",
+    "0x7228",
+    "0x722f",
+    "0x7236",
+    "0x723a",
+    "0x723d",
+    "0x7240",
+    "0x7243",
+    "0x7246",
+    "0x7249",
+    "0x724c",
+    "0x724f",
+    "0x7253",
+    "0x7257",
+    "0x725b",
+    "0x725f",
+    "0x7262",
+    "0x7266",
+    "0x726a",
+    "0x726d",
+    "0x7273",
+    "0x7277",
+    "0x727a",
+    "0x727d",
+    "0x7280",
+    "0x7283",
+    "0x7286",
+    "0x728a",
+    "0x728e",
+    "0x7292",
+    "0x7295",
+    "0x729c",
+    "0x72a3",
+    "0x72a9",
+    "0x72ab",
+    "0x72b0",
+    "0x72b2",
+    "0x72b6",
+    "0x72bd",
+    "0x72c2",
+    "0x72c6",
+    "0x72ca",
+    "0x72ce",
+    "0x72d2",
+    "0x72d7",
+    "0x72da",
+    "0x72df",
+    "0x72e3",
+    "0x72e7",
+    "0x72ea",
+    "0x72f1",
+    "0x72f7",
+    "0x72fa",
+    "0x7302",
+    "0x7305",
+    "0x730c",
+    "0x730f",
+    "0x7312",
+    "0x7319",
+    "0x731d",
+    "0x7320",
+    "0x7324",
+    "0x7327",
+    "0x732e",
+    "0x7331",
+    "0x7336",
+    "0x733c",
+    "0x733e",
+    "0x7341",
+    "0x7343",
+    "0x7345",
+    "0x734b",
+    "0x7351",
+    "0x7354",
+    "0x7358",
+    "0x7359",
+    "0x7c4c",
+    "0x7c4e",
+    "0x7c51",
+    "0x216d0",
+    "0x216d5",
+    "0x216da",
+    "0x216de",
+    "0x216df",
+    "0x216e0",
+    "0x216e1",
+    "0x216e3",
+    "0x216e5",
+    "0x216e7",
+    "0x216e9",
+    "0x216ed",
+    "0x216f4",
+    "0x216f7",
+    "0x216fa",
+    "0x21704",
+    "0x21708",
+    "0x21712",
+    "0x2171c",
+    "0x21723",
+    "0x2172d",
+    "0x21732",
+    "0x21735",
+    "0x2173a",
+    "0x21741",
+    "0x21745",
+    "0x2174f",
+    "0x21756",
+    "0x2175b",
+    "0x21760",
+    "0x21767",
+    "0x2176b",
+    "0x21775",
+    "0x2177c",
+    "0x21781",
+    "0x21786",
+    "0x2178d",
+    "0x21790",
+    "0x21793",
+    "0x21797",
+    "0x2179a",
+    "0x2179e",
+    "0x217a1",
+    "0x217a5",
+    "0x217a8",
+    "0x217ab",
+    "0x217af",
+    "0x217b2",
+    "0x217b6",
+    "0x217b9",
+    "0x217c0",
+    "0x217c4",
+    "0x217c7",
+    "0x217ce",
+    "0x217d3",
+    "0x217d6",
+    "0x217d8",
+    "0x217dd",
+    "0x217e1",
+    "0x217e4",
+    "0x217e8",
+    "0x217f2",
+    "0x217f9",
+    "0x21803",
+    "0x21807",
+    "0x2180a",
+    "0x2180d",
+    "0x21811",
+    "0x21815",
+    "0x21818",
+    "0x2181c",
+    "0x21820",
+    "0x21823",
+    "0x2182b",
+    "0x21833",
+    "0x21838",
+    "0x2183b",
+    "0x21842",
+    "0x21845",
+    "0x21848",
+    "0x2184b",
+    "0x21852",
+    "0x21856",
+    "0x2185d",
+    "0x21861",
+    "0x21864",
+    "0x21868",
+    "0x2186f",
+    "0x21872",
+    "0x21875",
+    "0x21879",
+    "0x2187c",
+    "0x21880",
+    "0x21883",
+    "0x21887",
+    "0x2188a",
+    "0x2188e",
+    "0x21891",
+    "0x21895",
+    "0x21898",
+    "0x2189f",
+    "0x218a6",
+    "0x218a9",
+    "0x218af",
+    "0x218b6",
+    "0x218bc",
+    "0x218c3",
+    "0x218cd",
+    "0x218d1",
+    "0x218d8",
+    "0x218dd",
+    "0x218e2",
+    "0x218e9",
+    "0x218f0",
+    "0x218f3",
+    "0x218fa",
+    "0x21901",
+    "0x21908",
+    "0x2190c",
+    "0x21913",
+    "0x21917",
+    "0x2191b",
+    "0x2191f",
+    "0x21922",
+    "0x21925",
+    "0x21928",
+    "0x2192b",
+    "0x2192e",
+    "0x21932",
+    "0x21935",
+    "0x21939",
+    "0x2193d",
+    "0x21940",
+    "0x21944",
+    "0x21947",
+    "0x2194b",
+    "0x2194e",
+    "0x21954",
+    "0x21958",
+    "0x2195b",
+    "0x2195e",
+    "0x21961",
+    "0x21964",
+    "0x21967",
+    "0x2196b",
+    "0x2196f",
+    "0x21976",
+    "0x21979",
+    "0x2197f",
+    "0x21986",
+    "0x2198c",
+    "0x21993",
+    "0x2199a",
+    "0x2199d",
+    "0x219a1",
+    "0x219a4",
+    "0x219a7",
+    "0x219aa",
+    "0x219ad",
+    "0x219b0",
+    "0x219b4",
+    "0x219b8",
+    "0x219bc",
+    "0x219bf",
+    "0x219c3",
+    "0x219c6",
+    "0x219ca",
+    "0x219cd",
+    "0x219d1",
+    "0x219d4",
+    "0x219da",
+    "0x219de",
+    "0x219e1",
+    "0x219e4",
+    "0x219e7",
+    "0x219ea",
+    "0x219ee",
+    "0x219f2",
+    "0x219f9",
+    "0x21a00",
+    "0x21a06",
+    "0x21a09",
+    "0x21a0d",
+    "0x21a10",
+    "0x21a55",
+    "0x21a5c",
+    "0x21a60",
+    "0x21a67",
+    "0x21a6a",
+    "0x21a6e",
+    "0x21a78",
+    "0x21a7b",
+    "0x21a7e",
+    "0x21a81",
+    "0x21a84",
+    "0x21a87",
+    "0x21a8b",
+    "0x21a8f",
+    "0x21a92",
+    "0x21a95",
+    "0x21a98",
+    "0x21a9c",
+    "0x21a9f",
+    "0x21aa5",
+    "0x21aa9",
+    "0x21aac",
+    "0x21aaf",
+    "0x21ab9",
+    "0x21abc",
+    "0x21abf",
+    "0x21ac3",
+    "0x21ac7",
+    "0x21ace",
+    "0x21ad5",
+    "0x21ad8",
+    "0x21adb",
+    "0x21ae2",
+    "0x21ae5",
+    "0x21ae9",
+    "0x21aec",
+    "0x21af0",
+    "0x21af3",
+    "0x21af7",
+    "0x21afa",
+    "0x21afe",
+    "0x21b01",
+    "0x21b05",
+    "0x21b08",
+    "0x21b0f",
+    "0x21b16",
+    "0x21b1d",
+    "0x21b20",
+    "0x21b24",
+    "0x21b27",
+    "0x21b2b",
+    "0x21b2e",
+    "0x21b32",
+    "0x21b35",
+    "0x21b39",
+    "0x21b3d",
+    "0x21b40",
+    "0x21b43",
+    "0x21b47",
+    "0x21b4a",
+    "0x21b51",
+    "0x21b58",
+    "0x21b5f",
+    "0x21b62",
+    "0x21b66",
+    "0x21b69",
+    "0x21b6c",
+    "0x21b6f",
+    "0x21b72",
+    "0x21b75",
+    "0x21b79",
+    "0x21b7d",
+    "0x21b81",
+    "0x21b85",
+    "0x21b88",
+    "0x21b8c",
+    "0x21b90",
+    "0x21b94",
+    "0x21b9a",
+    "0x21b9e",
+    "0x21ba1",
+    "0x21ba4",
+    "0x21ba7",
+    "0x21baa",
+    "0x21bad",
+    "0x21bb0",
+    "0x21bb4",
+    "0x21bb7",
+    "0x21bbe",
+    "0x21bc3",
+    "0x21bca",
+    "0x21bd1",
+    "0x21bd8",
+    "0x21bdf",
+    "0x21be6",
+    "0x21bee",
+    "0x21bf2",
+    "0x21bf6",
+    "0x21bf9",
+    "0x21bfc",
+    "0x21bff",
+    "0x21c02",
+    "0x21c05",
+    "0x21c08",
+    "0x21c0c",
+    "0x21c10",
+    "0x21c14",
+    "0x21c17",
+    "0x21c1b",
+    "0x21c1e",
+    "0x21c22",
+    "0x21c26",
+    "0x21c2a",
+    "0x21c31",
+    "0x21c35",
+    "0x21c38",
+    "0x21c3b",
+    "0x21c3e",
+    "0x21c41",
+    "0x21c45",
+    "0x21c49",
+    "0x21c4c",
+    "0x21c53",
+    "0x21c58",
+    "0x21c5f",
+    "0x21c66",
+    "0x21c6d",
+    "0x21c74",
+    "0x21c7b",
+    "0x21c7f",
+    "0x21c86",
+    "0x21c8a",
+    "0x21c8e",
+    "0x21c91",
+    "0x21c94",
+    "0x21c97",
+    "0x21c9a",
+    "0x21c9d",
+    "0x21ca0",
+    "0x21ca4",
+    "0x21ca8",
+    "0x21cac",
+    "0x21cb0",
+    "0x21cb3",
+    "0x21cb7",
+    "0x21cba",
+    "0x21cbe",
+    "0x21cc1",
+    "0x21cc7",
+    "0x21ccb",
+    "0x21cce",
+    "0x21cd1",
+    "0x21cd4",
+    "0x21cd7",
+    "0x21cda",
+    "0x21cde",
+    "0x21ce2",
+    "0x21ce9",
+    "0x21cf0",
+    "0x21cf2",
+    "0x21cf5",
+    "0x21cf8",
+    "0x21cfd",
+    "0x21d04",
+    "0x21d08",
+    "0x21d0f",
+    "0x21d16",
+    "0x21d1d",
+    "0x21d21",
+    "0x21d28",
+    "0x21d2c",
+    "0x21d33",
+    "0x21d36",
+    "0x21d3a",
+    "0x21d3d",
+    "0x21d40",
+    "0x21d43",
+    "0x21d46",
+    "0x21d49",
+    "0x21d4d",
+    "0x21d51",
+    "0x21d54",
+    "0x21d57",
+    "0x21d5b",
+    "0x21d5e",
+    "0x21d64",
+    "0x21d68",
+    "0x21d6b",
+    "0x21d6e",
+    "0x21d74",
+    "0x21d77",
+    "0x21d7a",
+    "0x21d7d",
+    "0x21d81",
+    "0x21d85",
+    "0x21d8c",
+    "0x21d90",
+    "0x21d94",
+    "0x21d98",
+    "0x21d9b",
+    "0x21d9f",
+    "0x21da2",
+    "0x21da6",
+    "0x21daa",
+    "0x21dae",
+    "0x21db4",
+    "0x21db8",
+    "0x21dbb",
+    "0x21dbe",
+    "0x21dc1",
+    "0x21dc4",
+    "0x21dc7",
+    "0x21dcb",
+    "0x21dcf",
+    "0x21dd2",
+    "0x21dd9",
+    "0x21de0",
+    "0x21de7",
+    "0x21dec",
+    "0x21df3",
+    "0x21dfd",
+    "0x21e00",
+    "0x21e07",
+    "0x21e0a",
+    "0x21e0e",
+    "0x21e11",
+    "0x21e15",
+    "0x21e18",
+    "0x21e1c",
+    "0x21e1f",
+    "0x21e23",
+    "0x21e26",
+    "0x21e2a",
+    "0x21e2c",
+    "0x21e2f",
+    "0x21e31",
+    "0x21e33",
+    "0x21e36",
+    "0x21e38",
+    "0x21e3a",
+    "0x21e3d",
+    "0x21e3f",
+    "0x21e43",
+    "0x21e47",
+    "0x21e9b",
+    "0x21ea2",
+    "0x21ea9",
+    "0x21eb0",
+    "0x21eb7",
+    "0x21ebe",
+    "0x21ec2",
+    "0x21ec9",
+    "0x21ecd",
+    "0x21ed1",
+    "0x21ed5",
+    "0x21ed8",
+    "0x21edb",
+    "0x21ede",
+    "0x21ee1",
+    "0x21ee4",
+    "0x21ee7",
+    "0x21eeb",
+    "0x21eee",
+    "0x21ef2",
+    "0x21ef6",
+    "0x21ef9",
+    "0x21efd",
+    "0x21f00",
+    "0x21f04",
+    "0x21f07",
+    "0x21f0d",
+    "0x21f11",
+    "0x21f14",
+    "0x21f17",
+    "0x21f1a",
+    "0x21f1d",
+    "0x21f20",
+    "0x21f24",
+    "0x21f28",
+    "0x21f2f",
+    "0x21f35",
+    "0x21f7a",
+    "0x21f7c",
+    "0x21f7f",
+    "0x21f84",
+    "0x21f8b",
+    "0x21f95",
+    "0x21f9c",
+    "0x21fa6",
+    "0x21faa",
+    "0x21fae",
+    "0x21fb5",
+    "0x21fb7",
+    "0x21fbb",
+    "0x21fbd",
+    "0x21fc0",
+    "0x21fc3",
+    "0x21fc6",
+    "0x21fca",
+    "0x21fcd",
+    "0x21fd1",
+    "0x21fd4",
+    "0x21fd8",
+    "0x21fdb",
+    "0x21fdf",
+    "0x21fe2",
+    "0x21fe6",
+    "0x21fe9",
+    "0x21fec",
+    "0x21ff0",
+    "0x21ff3",
+    "0x21ff7",
+    "0x21ffa",
+    "0x22001",
+    "0x22006",
+    "0x2200c",
+    "0x22027",
+    "0x2202b",
+    "0x2202d",
+    "0x2202f",
+    "0x22120",
+    "0x22126",
+    "0x2212c",
+    "0x22132",
+    "0x22146",
+    "0x22149",
+    "0x2214b",
+    "0x2214e",
+    "0x22153",
+    "0x22157",
+    "0x2215b",
+    "0x2215f",
+    "0x22169",
+    "0x2216d",
+    "0x22170",
+    "0x22174",
+    "0x22178",
+    "0x2217b",
+    "0x2217f",
+    "0x22182",
+    "0x22188",
+    "0x2218f",
+    "0x22196",
+    "0x2219d",
+    "0x221a5",
+    "0x221a9",
+    "0x221ad",
+    "0x221b0",
+    "0x221b3",
+    "0x221b6",
+    "0x221b9",
+    "0x221bc",
+    "0x221c0",
+    "0x221c4",
+    "0x221c7",
+    "0x221ce",
+    "0x221d5",
+    "0x221dc",
+    "0x221e0",
+    "0x221e5",
+    "0x221e8",
+    "0x221ec",
+    "0x221f6",
+    "0x221f9",
+    "0x221fd",
+    "0x22200",
+    "0x22204",
+    "0x22207",
+    "0x2220b",
+    "0x22211",
+    "0x22215",
+    "0x22218",
+    "0x2221b",
+    "0x2221e",
+    "0x22221",
+    "0x22225",
+    "0x22229",
+    "0x22230",
+    "0x22237",
+    "0x2223e",
+    "0x22241",
+    "0x22248",
+    "0x2224b",
+    "0x22252",
+    "0x22255",
+    "0x22258",
+    "0x2225c",
+    "0x2225f",
+    "0x22269",
+    "0x2226d",
+    "0x22270",
+    "0x22274",
+    "0x22277",
+    "0x2227b",
+    "0x2227f",
+    "0x22283",
+    "0x22286",
+    "0x2228a",
+    "0x2228d",
+    "0x22294",
+    "0x2229c",
+    "0x222a0",
+    "0x222a7",
+    "0x222a9",
+    "0x222af",
+    "0x222b2",
+    "0x22302",
+    "0x22306",
+    "0x22309",
+    "0x22310",
+    "0x22313",
+    "0x2231d",
+    "0x22320",
+    "0x2232a",
+    "0x2232d",
+    "0x22331",
+    "0x22334",
+    "0x2233e",
+    "0x22342",
+    "0x22346",
+    "0x2234a",
+    "0x2234d",
+    "0x22351",
+    "0x22354",
+    "0x22357",
+    "0x2235b",
+    "0x2235e",
+    "0x22362",
+    "0x22365",
+    "0x2236c",
+    "0x22376",
+    "0x2237a",
+    "0x2237d",
+    "0x22380",
+    "0x2238a",
+    "0x2238d",
+    "0x22390",
+    "0x22394",
+    "0x22397",
+    "0x2239b",
+    "0x2239e",
+    "0x223a2",
+    "0x223a5",
+    "0x223af",
+    "0x223b3",
+    "0x223b7",
+    "0x223bb",
+    "0x223be",
+    "0x223c2",
+    "0x223c6",
+    "0x223cc",
+    "0x223d3",
+    "0x223da",
+    "0x223e2",
+    "0x223e6",
+    "0x223ea",
+    "0x223ee",
+    "0x223f4",
+    "0x223f8",
+    "0x223fa",
+    "0x223fd",
+    "0x22400",
+    "0x22403",
+    "0x22406",
+    "0x22409",
+    "0x2240d",
+    "0x22410",
+    "0x22414",
+    "0x22417",
+    "0x2241e",
+    "0x22423",
+    "0x22427",
+    "0x2242c",
+    "0x2242e",
+    "0x22430",
+    "0x22434",
+    "0x22437",
+    "0x2243e",
+    "0x22442",
+    "0x22445",
+    "0x2244c",
+    "0x2244f",
+    "0x22456",
+    "0x22459",
+    "0x22518",
+    "0x2251d",
+    "0x22521",
+    "0x22523",
+    "0x22525",
+    "0x22527",
+    "0x22529",
+    "0x2252a",
+    "0x2252b",
+    "0x2252c",
+    "0x25020",
+    "0x25025",
+    "0x25029",
+    "0x2502a",
+    "0x2502b",
+    "0x2502c",
+    "0x2502e",
+    "0x25030",
+    "0x25032",
+    "0x25036",
+    "0x2503d",
+    "0x25040",
+    "0x25043",
+    "0x2504d",
+    "0x25051",
+    "0x2505b",
+    "0x2505e",
+    "0x25065",
+    "0x2506a",
+    "0x2506f",
+    "0x25076",
+    "0x2507a",
+    "0x25084",
+    "0x2508b",
+    "0x25090",
+    "0x25095",
+    "0x2509c",
+    "0x250a0",
+    "0x250aa",
+    "0x250b1",
+    "0x250b6",
+    "0x250bb",
+    "0x250c2",
+    "0x250c5",
+    "0x250c8",
+    "0x250cc",
+    "0x250cf",
+    "0x250d9",
+    "0x250dd",
+    "0x250e7",
+    "0x250ea",
+    "0x250ee",
+    "0x250f1",
+    "0x250f4",
+    "0x250f8",
+    "0x250fb",
+    "0x250ff",
+    "0x25102",
+    "0x25109",
+    "0x2510d",
+    "0x25110",
+    "0x25117",
+    "0x2511c",
+    "0x25123",
+    "0x25126",
+    "0x2512d",
+    "0x25130",
+    "0x25137",
+    "0x25141",
+    "0x25148",
+    "0x25152",
+    "0x25159",
+    "0x25160",
+    "0x25164",
+    "0x25167",
+    "0x2516a",
+    "0x2516d",
+    "0x25170",
+    "0x25173",
+    "0x25175",
+    "0x25179",
+    "0x2517d",
+    "0x25181",
+    "0x25184",
+    "0x25188",
+    "0x2518b",
+    "0x2518f",
+    "0x25193",
+    "0x25196",
+    "0x2519c",
+    "0x251a0",
+    "0x251a3",
+    "0x251a6",
+    "0x251a9",
+    "0x251ac",
+    "0x251ae",
+    "0x251b2",
+    "0x251b5",
+    "0x251bc",
+    "0x251c1",
+    "0x251c5",
+    "0x251c8",
+    "0x251cc",
+    "0x251ce",
+    "0x251d1",
+    "0x251d5",
+    "0x251da",
+    "0x251dd",
+    "0x251e0",
+    "0x251e5",
+    "0x251ec",
+    "0x251ef",
+    "0x251f5",
+    "0x251fc",
+    "0x25202",
+    "0x25209",
+    "0x25213",
+    "0x25217",
+    "0x2521f",
+    "0x25226",
+    "0x2522b",
+    "0x25230",
+    "0x25237",
+    "0x2523e",
+    "0x25241",
+    "0x25248",
+    "0x2524f",
+    "0x25256",
+    "0x2525a",
+    "0x2525e",
+    "0x25262",
+    "0x25267",
+    "0x2526e",
+    "0x25272",
+    "0x25275",
+    "0x25278",
+    "0x2527b",
+    "0x2527e",
+    "0x25281",
+    "0x25285",
+    "0x25288",
+    "0x2528c",
+    "0x25290",
+    "0x25293",
+    "0x25296",
+    "0x2529a",
+    "0x2529d",
+    "0x252a1",
+    "0x252a4",
+    "0x252aa",
+    "0x252ae",
+    "0x252b1",
+    "0x252b4",
+    "0x252b7",
+    "0x252ba",
+    "0x252be",
+    "0x252c2",
+    "0x252c9",
+    "0x252cc",
+    "0x252d2",
+    "0x252d9",
+    "0x25e6e",
+    "0x25e76",
+    "0x25e7b",
+    "0x25e7f",
+    "0x25e81",
+    "0x25e83",
+    "0x25e85",
+    "0x25e86",
+    "0x25e87",
+    "0x25e88",
+    "0x2d5d0",
+    "0x2d5d5",
+    "0x2d5d6",
+    "0x2d5d7",
+    "0x2d5d9",
+    "0x2d5dd",
+    "0x2d5e4",
+    "0x2d5e7",
+    "0x2d5ea",
+    "0x2d5f4",
+    "0x2d5f8",
+    "0x2d602",
+    "0x2d605",
+    "0x2d60c",
+    "0x2d611",
+    "0x2d616",
+    "0x2d61d",
+    "0x2d621",
+    "0x2d62b",
+    "0x2d632",
+    "0x2d637",
+    "0x2d63c",
+    "0x2d643",
+    "0x2d647",
+    "0x2d651",
+    "0x2d658",
+    "0x2d65d",
+    "0x2d662",
+    "0x2d669",
+    "0x2d66c",
+    "0x2d66f",
+    "0x2d673",
+    "0x2d676",
+    "0x2d680",
+    "0x2d684",
+    "0x2d68e",
+    "0x2d691",
+    "0x2d695",
+    "0x2d698",
+    "0x2d69b",
+    "0x2d69f",
+    "0x2d6a2",
+    "0x2d6a6",
+    "0x2d6a9",
+    "0x2d6b0",
+    "0x2d6b4",
+    "0x2d6b7",
+    "0x2d6be",
+    "0x2d6c3",
+    "0x2d6c5",
+    "0x2d6c8",
+    "0x2d6cd",
+    "0x2d6d0",
+    "0x2d6d3",
+    "0x2d6d8",
+    "0x2d6df",
+    "0x2d6e2",
+    "0x2d6e8",
+    "0x2d6ef",
+    "0x2d6f5",
+    "0x2d6fc",
+    "0x2d706",
+    "0x2d70a",
+    "0x2d70f",
+    "0x2d716",
+    "0x2d71b",
+    "0x2d720",
+    "0x2d727",
+    "0x2d72e",
+    "0x2d731",
+    "0x2d738",
+    "0x2d73f",
+    "0x2d743",
+    "0x2d747",
+    "0x2d74b",
+    "0x2d750",
+    "0x2d757",
+    "0x2d75a",
+    "0x2d75f",
+    "0x2d769",
+    "0x2d76e",
+    "0x2d778",
+    "0x2d77d",
+    "0x2d784",
+    "0x2d788",
+    "0x2d78b",
+    "0x2d78e",
+    "0x2d791",
+    "0x2d794",
+    "0x2d798",
+    "0x2d79b",
+    "0x2d79f",
+    "0x2d7a3",
+    "0x2d7a6",
+    "0x2d7a9",
+    "0x2d7ad",
+    "0x2d7b0",
+    "0x2d7b4",
+    "0x2d7b7",
+    "0x2d7bd",
+    "0x2d7c1",
+    "0x2d7c4",
+    "0x2d7c7",
+    "0x2d7ca",
+    "0x2d7cd",
+    "0x2d7d1",
+    "0x2d7d5",
+    "0x2d7dc",
+    "0x2d7df",
+    "0x2d7e5",
+    "0x2d7ec",
+    "0x2d7f2",
+    "0x2d7f9",
+    "0x2d800",
+    "0x2d804",
+    "0x2d807",
+    "0x2d80a",
+    "0x2d80d",
+    "0x2d810",
+    "0x2d813",
+    "0x2d816",
+    "0x2d81a",
+    "0x2d81e",
+    "0x2d822",
+    "0x2d826",
+    "0x2d829",
+    "0x2d82d",
+    "0x2d830",
+    "0x2d834",
+    "0x2d837",
+    "0x2d83d",
+    "0x2d841",
+    "0x2d844",
+    "0x2d847",
+    "0x2d84a",
+    "0x2d84d",
+    "0x2d850",
+    "0x2d854",
+    "0x2d858",
+    "0x2d85f",
+    "0x2d866",
+    "0x2d86c",
+    "0x2d86f",
+    "0x2d873",
+    "0x2d876",
+    "0x2d878",
+    "0x2d87c",
+    "0x2d880",
+    "0x2d884",
+    "0x2d887",
+    "0x2d88b",
+    "0x2d88f",
+    "0x2d893",
+    "0x2d899",
+    "0x2d89d",
+    "0x2d8a0",
+    "0x2d8a3",
+    "0x2d8a6",
+    "0x2d8ac",
+    "0x2d8b3",
+    "0x2d8b6",
+    "0x2e39e",
+    "0x2e3a2",
+    "0x2e3a9",
+    "0x2e3ae",
+    "0x2e3b3",
+    "0x2e3b8",
+    "0x2e3bd",
+    "0x2e3c2",
+    "0x2e3c6",
+    "0x2e3c8",
+    "0x2e3c9",
+    "0x2e3ca",
+    "0x3ebb0",
+    "0x3ebb2",
+    "0x3ebb6",
+    "0x3ebb9",
+    "0x3ebbc",
+    "0x3ebc3",
+    "0x3ebc7",
+    "0x3ebce",
+    "0x3ebd1",
+    "0x3ebd8",
+    "0x22a2e0",
+    "0x22a2e3",
+    "0x22a2e6",
+    "0x22a2e9",
+    "0x3a3dc0",
+    "0x3a3dc7",
+    "0x3a3dc9",
+    "0x3a3dcd",
+    "0x3a3dd2",
+    "0x3a3dd4"
+  ],
+  "environment": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "capstone": "5.0.7",
+    "unicorn": "2.1.4"
+  },
+  "source_sha256": {
+    "pafet_lab_xxviii.py": "a23c70dc5fe2774eba93ad3e2854b4df5f9faebb55daae2de0a9ed1d585ee7d9",
+    "pafet_state_contract.py": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54",
+    "pafet_state_replay.py": "a0c2ae798c03eba710853c8a46b3dea263319d631fb26478b9134a876231bd6f",
+    "pafet_state_compare.py": "e24717c8fd31f6fb8f6f0394cf2bc097a93623fe4365b6d63e3b514d2d2e4c21"
+  },
+  "scope": "Finite observed paths. Expected trace is consumed only for comparisons; replay uses entry inputs. Blocked prefixes never count as complete routes."
+}

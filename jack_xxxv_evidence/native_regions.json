@@ -1,0 +1,1931 @@
+{
+  "0x1f8210": {
+    "opcode": 1,
+    "domain": 0,
+    "noise_offset": 760,
+    "noise_constant_rva": 2065097,
+    "marker_rva": 2066319,
+    "core_end": 2065240,
+    "decode_entry": 2066612,
+    "exit_label_rva": 2066585,
+    "return_rva": 2068252,
+    "budget_label_rva": 2065617,
+    "unwind_tail": [
+      {
+        "rva": "0x1f8e2d",
+        "instruction": "jmp 0x1401f8ef9"
+      },
+      {
+        "rva": "0x1f8ef9",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x1f8efe",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x1f8f03",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x1f8f08",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x1f8f0d",
+        "instruction": "mov r12, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x1f8f12",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x1f8f16",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x1f8f18",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1f8f1a",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1f8f1c",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x209290": {
+    "opcode": 1,
+    "domain": 1,
+    "noise_offset": 736,
+    "noise_constant_rva": 2134784,
+    "marker_rva": 2136079,
+    "core_end": 2135000,
+    "decode_entry": 2136372,
+    "exit_label_rva": 2136345,
+    "return_rva": 2138013,
+    "budget_label_rva": 2135377,
+    "unwind_tail": [
+      {
+        "rva": "0x209eae",
+        "instruction": "jmp 0x140209f7a"
+      },
+      {
+        "rva": "0x209f7a",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x209f7f",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x209f84",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x209f89",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x209f8e",
+        "instruction": "mov r12, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x209f93",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x209f97",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x209f99",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x209f9b",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x209f9d",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x20e060": {
+    "opcode": 1,
+    "domain": 2,
+    "noise_offset": 744,
+    "noise_constant_rva": 2154704,
+    "marker_rva": 2155996,
+    "core_end": 2154920,
+    "decode_entry": 2156289,
+    "exit_label_rva": 2156262,
+    "return_rva": 2157930,
+    "budget_label_rva": 2155297,
+    "unwind_tail": [
+      {
+        "rva": "0x20ec7b",
+        "instruction": "jmp 0x14020ed47"
+      },
+      {
+        "rva": "0x20ed47",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x20ed4c",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x20ed51",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x20ed56",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x20ed5b",
+        "instruction": "mov r12, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x20ed60",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x20ed64",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x20ed66",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x20ed68",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20ed6a",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x21d530": {
+    "opcode": 1,
+    "domain": 3,
+    "noise_offset": 752,
+    "noise_constant_rva": 2217376,
+    "marker_rva": 2218678,
+    "core_end": 2217599,
+    "decode_entry": 2218971,
+    "exit_label_rva": 2218944,
+    "return_rva": 2220612,
+    "budget_label_rva": 2217976,
+    "unwind_tail": [
+      {
+        "rva": "0x21e155",
+        "instruction": "jmp 0x14021e221"
+      },
+      {
+        "rva": "0x21e221",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x21e226",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x21e22b",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x21e230",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x21e235",
+        "instruction": "mov r12, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x21e23a",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x21e23e",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x21e240",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x21e242",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x21e244",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1fcef0": {
+    "opcode": 5,
+    "domain": 0,
+    "noise_offset": 760,
+    "noise_constant_rva": 2084774,
+    "marker_rva": 2086052,
+    "core_end": 2085055,
+    "decode_entry": 2086342,
+    "exit_label_rva": 2086315,
+    "return_rva": 2087935,
+    "budget_label_rva": 2085387,
+    "unwind_tail": [
+      {
+        "rva": "0x1fdb1f",
+        "instruction": "jmp 0x1401fdbeb"
+      },
+      {
+        "rva": "0x1fdbeb",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x1fdbf0",
+        "instruction": "add rsp, 0x20"
+      },
+      {
+        "rva": "0x1fdbf4",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x1fdbf6",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1fdbf8",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1fdbfa",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x1fdbfc",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x1fdbfd",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x1fdbfe",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x1fdbff",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x202800": {
+    "opcode": 5,
+    "domain": 1,
+    "noise_offset": 736,
+    "noise_constant_rva": 2107539,
+    "marker_rva": 2108852,
+    "core_end": 2107855,
+    "decode_entry": 2109142,
+    "exit_label_rva": 2109115,
+    "return_rva": 2110735,
+    "budget_label_rva": 2108187,
+    "unwind_tail": [
+      {
+        "rva": "0x20342f",
+        "instruction": "jmp 0x1402034fb"
+      },
+      {
+        "rva": "0x2034fb",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x203500",
+        "instruction": "add rsp, 0x20"
+      },
+      {
+        "rva": "0x203504",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x203506",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x203508",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20350a",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x20350c",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x20350d",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x20350e",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x20350f",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x20fa70": {
+    "opcode": 5,
+    "domain": 2,
+    "noise_offset": 744,
+    "noise_constant_rva": 2161411,
+    "marker_rva": 2162721,
+    "core_end": 2161727,
+    "decode_entry": 2163011,
+    "exit_label_rva": 2162984,
+    "return_rva": 2164604,
+    "budget_label_rva": 2162059,
+    "unwind_tail": [
+      {
+        "rva": "0x21069c",
+        "instruction": "jmp 0x140210768"
+      },
+      {
+        "rva": "0x210768",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x21076d",
+        "instruction": "add rsp, 0x20"
+      },
+      {
+        "rva": "0x210771",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x210773",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x210775",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x210777",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x210779",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x21077a",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x21077b",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x21077c",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x21e270": {
+    "opcode": 5,
+    "domain": 3,
+    "noise_offset": 752,
+    "noise_constant_rva": 2220803,
+    "marker_rva": 2222123,
+    "core_end": 2221126,
+    "decode_entry": 2222413,
+    "exit_label_rva": 2222386,
+    "return_rva": 2224006,
+    "budget_label_rva": 2221458,
+    "unwind_tail": [
+      {
+        "rva": "0x21eea6",
+        "instruction": "jmp 0x14021ef72"
+      },
+      {
+        "rva": "0x21ef72",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x21ef77",
+        "instruction": "add rsp, 0x20"
+      },
+      {
+        "rva": "0x21ef7b",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x21ef7d",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x21ef7f",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x21ef81",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x21ef83",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x21ef84",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x21ef85",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x21ef86",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1f4f20": {
+    "opcode": 4,
+    "domain": 0,
+    "noise_offset": 752,
+    "noise_constant_rva": 2052057,
+    "marker_rva": 2053200,
+    "core_end": 2052124,
+    "decode_entry": 2053493,
+    "exit_label_rva": 2053466,
+    "return_rva": 2055110,
+    "budget_label_rva": 2052501,
+    "unwind_tail": [
+      {
+        "rva": "0x1f5ad7",
+        "instruction": "jmp 0x1401f5ba3"
+      },
+      {
+        "rva": "0x1f5ba3",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x1f5ba8",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x1f5bad",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x1f5bb2",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x1f5bb7",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x1f5bbc",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x1f5bc0",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1f5bc2",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1f5bc4",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x1f5bc6",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x205fa0": {
+    "opcode": 4,
+    "domain": 1,
+    "noise_offset": 744,
+    "noise_constant_rva": 2121744,
+    "marker_rva": 2122960,
+    "core_end": 2121884,
+    "decode_entry": 2123253,
+    "exit_label_rva": 2123226,
+    "return_rva": 2124870,
+    "budget_label_rva": 2122261,
+    "unwind_tail": [
+      {
+        "rva": "0x206b57",
+        "instruction": "jmp 0x140206c23"
+      },
+      {
+        "rva": "0x206c23",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x206c28",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x206c2d",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x206c32",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x206c37",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x206c3c",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x206c40",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x206c42",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x206c44",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x206c46",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x214950": {
+    "opcode": 4,
+    "domain": 2,
+    "noise_offset": 736,
+    "noise_constant_rva": 2181568,
+    "marker_rva": 2182784,
+    "core_end": 2181708,
+    "decode_entry": 2183077,
+    "exit_label_rva": 2183050,
+    "return_rva": 2184694,
+    "budget_label_rva": 2182085,
+    "unwind_tail": [
+      {
+        "rva": "0x215507",
+        "instruction": "jmp 0x1402155d3"
+      },
+      {
+        "rva": "0x2155d3",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x2155d8",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x2155dd",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x2155e2",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x2155e7",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x2155ec",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x2155f0",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x2155f2",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x2155f4",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x2155f6",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x228a10": {
+    "opcode": 4,
+    "domain": 3,
+    "noise_offset": 760,
+    "noise_constant_rva": 2263680,
+    "marker_rva": 2264903,
+    "core_end": 2263827,
+    "decode_entry": 2265196,
+    "exit_label_rva": 2265169,
+    "return_rva": 2266813,
+    "budget_label_rva": 2264204,
+    "unwind_tail": [
+      {
+        "rva": "0x2295ce",
+        "instruction": "jmp 0x14022969a"
+      },
+      {
+        "rva": "0x22969a",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x22969f",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x2296a4",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x2296a9",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x2296ae",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x2296b3",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x2296b7",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x2296b9",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x2296bb",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x2296bd",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1fb5c0": {
+    "opcode": 41,
+    "domain": 0,
+    "noise_offset": 760,
+    "noise_constant_rva": 2078335,
+    "marker_rva": 2079435,
+    "core_end": 2078406,
+    "decode_entry": 2079725,
+    "exit_label_rva": 2079698,
+    "return_rva": 2081293,
+    "budget_label_rva": 2078773,
+    "unwind_tail": [
+      {
+        "rva": "0x1fc127",
+        "instruction": "jmp 0x1401fc1f3"
+      },
+      {
+        "rva": "0x1fc1f3",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x1fc1f8",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x1fc1fd",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x1fc202",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x1fc206",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1fc208",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1fc20a",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x1fc20b",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x1fc20c",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x1fc20d",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x20c650": {
+    "opcode": 41,
+    "domain": 1,
+    "noise_offset": 736,
+    "noise_constant_rva": 2148034,
+    "marker_rva": 2149266,
+    "core_end": 2148195,
+    "decode_entry": 2149559,
+    "exit_label_rva": 2149532,
+    "return_rva": 2151172,
+    "budget_label_rva": 2148567,
+    "unwind_tail": [
+      {
+        "rva": "0x20d219",
+        "instruction": "jmp 0x14020d2e5"
+      },
+      {
+        "rva": "0x20d2e5",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x20d2ea",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x20d2ef",
+        "instruction": "mov rbp, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x20d2f4",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x20d2f9",
+        "instruction": "add rsp, 0x38"
+      },
+      {
+        "rva": "0x20d2fd",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x20d2ff",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20d301",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x20d303",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x20d304",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x2162d0": {
+    "opcode": 41,
+    "domain": 2,
+    "noise_offset": 744,
+    "noise_constant_rva": 2188112,
+    "marker_rva": 2189281,
+    "core_end": 2188252,
+    "decode_entry": 2189571,
+    "exit_label_rva": 2189544,
+    "return_rva": 2191139,
+    "budget_label_rva": 2188619,
+    "unwind_tail": [
+      {
+        "rva": "0x216e3d",
+        "instruction": "jmp 0x140216f09"
+      },
+      {
+        "rva": "0x216f09",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x216f0e",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x216f13",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x216f18",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x216f1c",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x216f1e",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x216f20",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x216f21",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x216f22",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x216f23",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x220b70": {
+    "opcode": 41,
+    "domain": 3,
+    "noise_offset": 752,
+    "noise_constant_rva": 2231280,
+    "marker_rva": 2232460,
+    "core_end": 2231431,
+    "decode_entry": 2232750,
+    "exit_label_rva": 2232723,
+    "return_rva": 2234318,
+    "budget_label_rva": 2231798,
+    "unwind_tail": [
+      {
+        "rva": "0x2216e8",
+        "instruction": "jmp 0x1402217b4"
+      },
+      {
+        "rva": "0x2217b4",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x2217b9",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x2217be",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x2217c3",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x2217c7",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x2217c9",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x2217cb",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x2217cc",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x2217cd",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x2217ce",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1f5bf0": {
+    "opcode": 26,
+    "domain": 0,
+    "noise_offset": 736,
+    "noise_constant_rva": 2055340,
+    "marker_rva": 2056507,
+    "core_end": 2055441,
+    "decode_entry": 2056800,
+    "exit_label_rva": 2056773,
+    "return_rva": 2058415,
+    "budget_label_rva": 2055808,
+    "unwind_tail": [
+      {
+        "rva": "0x1f67c8",
+        "instruction": "jmp 0x1401f6894"
+      },
+      {
+        "rva": "0x1f6894",
+        "instruction": "mov rsi, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x1f6899",
+        "instruction": "mov rbp, qword ptr [rsp + 0x78]"
+      },
+      {
+        "rva": "0x1f689e",
+        "instruction": "mov r15, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x1f68a3",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x1f68a7",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1f68a9",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1f68ab",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x1f68ad",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x1f68ae",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x1f68af",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x20d330": {
+    "opcode": 26,
+    "domain": 1,
+    "noise_offset": 760,
+    "noise_constant_rva": 2151348,
+    "marker_rva": 2152669,
+    "core_end": 2151670,
+    "decode_entry": 2152959,
+    "exit_label_rva": 2152932,
+    "return_rva": 2154555,
+    "budget_label_rva": 2152007,
+    "unwind_tail": [
+      {
+        "rva": "0x20df5b",
+        "instruction": "jmp 0x14020e027"
+      },
+      {
+        "rva": "0x20e027",
+        "instruction": "mov rsi, qword ptr [rsp + 0x78]"
+      },
+      {
+        "rva": "0x20e02c",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x20e030",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x20e032",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x20e034",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20e036",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x20e038",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x20e039",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x20e03a",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x20e03b",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x20ed90": {
+    "opcode": 26,
+    "domain": 2,
+    "noise_offset": 752,
+    "noise_constant_rva": 2158083,
+    "marker_rva": 2159323,
+    "core_end": 2158257,
+    "decode_entry": 2159616,
+    "exit_label_rva": 2159589,
+    "return_rva": 2161231,
+    "budget_label_rva": 2158624,
+    "unwind_tail": [
+      {
+        "rva": "0x20f968",
+        "instruction": "jmp 0x14020fa34"
+      },
+      {
+        "rva": "0x20fa34",
+        "instruction": "mov rsi, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x20fa39",
+        "instruction": "mov rbp, qword ptr [rsp + 0x78]"
+      },
+      {
+        "rva": "0x20fa3e",
+        "instruction": "mov r15, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x20fa43",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x20fa47",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x20fa49",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20fa4b",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x20fa4d",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x20fa4e",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x20fa4f",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x225710": {
+    "opcode": 26,
+    "domain": 3,
+    "noise_offset": 744,
+    "noise_constant_rva": 2250627,
+    "marker_rva": 2251874,
+    "core_end": 2250808,
+    "decode_entry": 2252167,
+    "exit_label_rva": 2252140,
+    "return_rva": 2253782,
+    "budget_label_rva": 2251175,
+    "unwind_tail": [
+      {
+        "rva": "0x2262ef",
+        "instruction": "jmp 0x1402263bb"
+      },
+      {
+        "rva": "0x2263bb",
+        "instruction": "mov rsi, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x2263c0",
+        "instruction": "mov rbp, qword ptr [rsp + 0x78]"
+      },
+      {
+        "rva": "0x2263c5",
+        "instruction": "mov r15, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x2263ca",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x2263ce",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x2263d0",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x2263d2",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x2263d4",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x2263d5",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x2263d6",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1f35e0": {
+    "opcode": 58,
+    "domain": 0,
+    "noise_offset": 736,
+    "noise_constant_rva": 2045599,
+    "marker_rva": 2046711,
+    "core_end": 2045682,
+    "decode_entry": 2047001,
+    "exit_label_rva": 2046974,
+    "return_rva": 2048569,
+    "noise_subtract": false,
+    "budget_label_rva": 2046049,
+    "unwind_tail": [
+      {
+        "rva": "0x1f4153",
+        "instruction": "jmp 0x1401f421f"
+      },
+      {
+        "rva": "0x1f421f",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x1f4224",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x1f4229",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x1f422e",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x1f4232",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1f4234",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1f4236",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x1f4237",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x1f4238",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x1f4239",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x20b9d0": {
+    "opcode": 58,
+    "domain": 1,
+    "noise_offset": 760,
+    "noise_constant_rva": 2144848,
+    "marker_rva": 2146023,
+    "core_end": 2144994,
+    "decode_entry": 2146313,
+    "exit_label_rva": 2146286,
+    "return_rva": 2147881,
+    "noise_subtract": true,
+    "budget_label_rva": 2145361,
+    "unwind_tail": [
+      {
+        "rva": "0x20c543",
+        "instruction": "jmp 0x14020c60f"
+      },
+      {
+        "rva": "0x20c60f",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x20c614",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x20c619",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x20c61e",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x20c622",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x20c624",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20c626",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x20c627",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x20c628",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x20c629",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x2120e0": {
+    "opcode": 58,
+    "domain": 2,
+    "noise_offset": 752,
+    "noise_constant_rva": 2171232,
+    "marker_rva": 2172407,
+    "core_end": 2171378,
+    "decode_entry": 2172697,
+    "exit_label_rva": 2172670,
+    "return_rva": 2174265,
+    "noise_subtract": false,
+    "budget_label_rva": 2171745,
+    "unwind_tail": [
+      {
+        "rva": "0x212c53",
+        "instruction": "jmp 0x140212d1f"
+      },
+      {
+        "rva": "0x212d1f",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x212d24",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x212d29",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x212d2e",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x212d32",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x212d34",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x212d36",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x212d37",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x212d38",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x212d39",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x2217f0": {
+    "opcode": 58,
+    "domain": 3,
+    "noise_offset": 744,
+    "noise_constant_rva": 2234480,
+    "marker_rva": 2235662,
+    "core_end": 2234633,
+    "decode_entry": 2235952,
+    "exit_label_rva": 2235925,
+    "return_rva": 2237520,
+    "noise_subtract": true,
+    "budget_label_rva": 2235000,
+    "unwind_tail": [
+      {
+        "rva": "0x22236a",
+        "instruction": "jmp 0x140222436"
+      },
+      {
+        "rva": "0x222436",
+        "instruction": "mov r12, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x22243b",
+        "instruction": "mov rsi, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x222440",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x222445",
+        "instruction": "add rsp, 0x30"
+      },
+      {
+        "rva": "0x222449",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x22244b",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x22244d",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x22244e",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x22244f",
+        "instruction": "pop rbx"
+      },
+      {
+        "rva": "0x222450",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1f2660": {
+    "opcode": 32,
+    "domain": 0,
+    "noise_offset": 752,
+    "noise_constant_rva": 2041671,
+    "marker_rva": 2043477,
+    "core_end": 2042375,
+    "decode_entry": 2043698,
+    "exit_label_rva": 2043679,
+    "return_rva": 2045373,
+    "noise_subtract": false,
+    "budget_label_rva": 2042719,
+    "unwind_precondition": "TLS depth equals wrapper-entry depth; clamp is inactive",
+    "unwind_tail": [
+      {
+        "rva": "0x1f34bf",
+        "instruction": "jmp 0x1401f3587"
+      },
+      {
+        "rva": "0x1f3587",
+        "instruction": "mov eax, dword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x1f358b",
+        "instruction": "cmp dword ptr [r15], eax"
+      },
+      {
+        "rva": "0x1f358e",
+        "instruction": "jbe 0x1401f3593"
+      },
+      {
+        "rva": "0x1f3593",
+        "instruction": "mov rcx, qword ptr [rsp + 0x150]"
+      },
+      {
+        "rva": "0x1f359b",
+        "instruction": "xor rcx, rsp"
+      },
+      {
+        "rva": "0x1f359e",
+        "instruction": "call 0x1403a3dc0"
+      },
+      {
+        "rva": "0x1f35a3",
+        "instruction": "mov rbx, qword ptr [rsp + 0x1b8]"
+      },
+      {
+        "rva": "0x1f35ab",
+        "instruction": "add rsp, 0x160"
+      },
+      {
+        "rva": "0x1f35b2",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x1f35b4",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1f35b6",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1f35b8",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x1f35ba",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x1f35bb",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x1f35bc",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x1f35bd",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x203530": {
+    "opcode": 32,
+    "domain": 1,
+    "noise_offset": 744,
+    "noise_constant_rva": 2110934,
+    "marker_rva": 2113346,
+    "core_end": 2112237,
+    "decode_entry": 2113552,
+    "exit_label_rva": 2113533,
+    "return_rva": 2115137,
+    "noise_subtract": true,
+    "budget_label_rva": 2112618,
+    "unwind_tail": [
+      {
+        "rva": "0x20454f",
+        "instruction": "jmp 0x140204617"
+      },
+      {
+        "rva": "0x204617",
+        "instruction": "mov rcx, qword ptr [rsp + 0x160]"
+      },
+      {
+        "rva": "0x20461f",
+        "instruction": "xor rcx, rsp"
+      },
+      {
+        "rva": "0x204622",
+        "instruction": "call 0x1403a3dc0"
+      },
+      {
+        "rva": "0x204627",
+        "instruction": "mov rbx, qword ptr [rsp + 0x1c8]"
+      },
+      {
+        "rva": "0x20462f",
+        "instruction": "add rsp, 0x170"
+      },
+      {
+        "rva": "0x204636",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x204638",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x20463a",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x20463c",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x20463e",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x20463f",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x204640",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x204641",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x213a20": {
+    "opcode": 32,
+    "domain": 2,
+    "noise_offset": 736,
+    "noise_constant_rva": 2177737,
+    "marker_rva": 2179600,
+    "core_end": 2178498,
+    "decode_entry": 2179806,
+    "exit_label_rva": 2179787,
+    "return_rva": 2181414,
+    "noise_subtract": false,
+    "budget_label_rva": 2178862,
+    "unwind_tail": [
+      {
+        "rva": "0x214834",
+        "instruction": "jmp 0x1402148fc"
+      },
+      {
+        "rva": "0x2148fc",
+        "instruction": "mov rcx, qword ptr [rsp + 0x150]"
+      },
+      {
+        "rva": "0x214904",
+        "instruction": "xor rcx, rsp"
+      },
+      {
+        "rva": "0x214907",
+        "instruction": "call 0x1403a3dc0"
+      },
+      {
+        "rva": "0x21490c",
+        "instruction": "mov rbx, qword ptr [rsp + 0x1b8]"
+      },
+      {
+        "rva": "0x214914",
+        "instruction": "add rsp, 0x160"
+      },
+      {
+        "rva": "0x21491b",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x21491d",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x21491f",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x214921",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x214923",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x214924",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x214925",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x214926",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x21fc40": {
+    "opcode": 32,
+    "domain": 3,
+    "noise_offset": 760,
+    "noise_constant_rva": 2227440,
+    "marker_rva": 2229296,
+    "core_end": 2228194,
+    "decode_entry": 2229502,
+    "exit_label_rva": 2229483,
+    "return_rva": 2231110,
+    "noise_subtract": true,
+    "budget_label_rva": 2228558,
+    "unwind_tail": [
+      {
+        "rva": "0x220a54",
+        "instruction": "jmp 0x140220b1c"
+      },
+      {
+        "rva": "0x220b1c",
+        "instruction": "mov rcx, qword ptr [rsp + 0x150]"
+      },
+      {
+        "rva": "0x220b24",
+        "instruction": "xor rcx, rsp"
+      },
+      {
+        "rva": "0x220b27",
+        "instruction": "call 0x1403a3dc0"
+      },
+      {
+        "rva": "0x220b2c",
+        "instruction": "mov rbx, qword ptr [rsp + 0x1b8]"
+      },
+      {
+        "rva": "0x220b34",
+        "instruction": "add rsp, 0x160"
+      },
+      {
+        "rva": "0x220b3b",
+        "instruction": "pop r15"
+      },
+      {
+        "rva": "0x220b3d",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x220b3f",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x220b41",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x220b43",
+        "instruction": "pop rdi"
+      },
+      {
+        "rva": "0x220b44",
+        "instruction": "pop rsi"
+      },
+      {
+        "rva": "0x220b45",
+        "instruction": "pop rbp"
+      },
+      {
+        "rva": "0x220b46",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x1fe8a0": {
+    "opcode": 31,
+    "domain": 0,
+    "noise_offset": 744,
+    "noise_constant_rva": 2091353,
+    "marker_rva": 2092475,
+    "core_end": 2091399,
+    "decode_entry": 2092768,
+    "exit_label_rva": 2092741,
+    "return_rva": 2094385,
+    "noise_subtract": false,
+    "budget_label_rva": 2091776,
+    "unwind_tail": [
+      {
+        "rva": "0x1ff442",
+        "instruction": "jmp 0x1401ff50e"
+      },
+      {
+        "rva": "0x1ff50e",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x1ff513",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x1ff518",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x1ff51d",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x1ff522",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x1ff527",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x1ff52b",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x1ff52d",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x1ff52f",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x1ff531",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x2052f0": {
+    "opcode": 31,
+    "domain": 1,
+    "noise_offset": 752,
+    "noise_constant_rva": 2118496,
+    "marker_rva": 2119691,
+    "core_end": 2118615,
+    "decode_entry": 2119984,
+    "exit_label_rva": 2119957,
+    "return_rva": 2121601,
+    "noise_subtract": true,
+    "budget_label_rva": 2118992,
+    "unwind_tail": [
+      {
+        "rva": "0x205e92",
+        "instruction": "jmp 0x140205f5e"
+      },
+      {
+        "rva": "0x205f5e",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x205f63",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x205f68",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x205f6d",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x205f72",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x205f77",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x205f7b",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x205f7d",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x205f7f",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x205f81",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x215620": {
+    "opcode": 31,
+    "domain": 2,
+    "noise_offset": 760,
+    "noise_constant_rva": 2184848,
+    "marker_rva": 2186043,
+    "core_end": 2184967,
+    "decode_entry": 2186336,
+    "exit_label_rva": 2186309,
+    "return_rva": 2187953,
+    "noise_subtract": false,
+    "budget_label_rva": 2185344,
+    "unwind_tail": [
+      {
+        "rva": "0x2161c2",
+        "instruction": "jmp 0x14021628e"
+      },
+      {
+        "rva": "0x21628e",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x216293",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x216298",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x21629d",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x2162a2",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x2162a7",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x2162ab",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x2162ad",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x2162af",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x2162b1",
+        "instruction": "ret "
+      }
+    ]
+  },
+  "0x227080": {
+    "opcode": 31,
+    "domain": 3,
+    "noise_offset": 736,
+    "noise_constant_rva": 2257136,
+    "marker_rva": 2258338,
+    "core_end": 2257262,
+    "decode_entry": 2258631,
+    "exit_label_rva": 2258604,
+    "return_rva": 2260248,
+    "noise_subtract": true,
+    "budget_label_rva": 2257639,
+    "unwind_tail": [
+      {
+        "rva": "0x227c29",
+        "instruction": "jmp 0x140227cf5"
+      },
+      {
+        "rva": "0x227cf5",
+        "instruction": "mov rdi, qword ptr [rsp + 0x28]"
+      },
+      {
+        "rva": "0x227cfa",
+        "instruction": "mov rsi, qword ptr [rsp + 0x30]"
+      },
+      {
+        "rva": "0x227cff",
+        "instruction": "mov rbp, qword ptr [rsp + 0x38]"
+      },
+      {
+        "rva": "0x227d04",
+        "instruction": "mov rbx, qword ptr [rsp + 0x68]"
+      },
+      {
+        "rva": "0x227d09",
+        "instruction": "mov r15, qword ptr [rsp + 0x20]"
+      },
+      {
+        "rva": "0x227d0e",
+        "instruction": "add rsp, 0x40"
+      },
+      {
+        "rva": "0x227d12",
+        "instruction": "pop r14"
+      },
+      {
+        "rva": "0x227d14",
+        "instruction": "pop r13"
+      },
+      {
+        "rva": "0x227d16",
+        "instruction": "pop r12"
+      },
+      {
+        "rva": "0x227d18",
+        "instruction": "ret "
+      }
+    ]
+  }
+}

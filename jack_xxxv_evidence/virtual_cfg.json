@@ -1,0 +1,3084 @@
+{
+  "schema": "pafet-serial-partial-cfg-v1",
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "nodes": [
+    {
+      "pc": 0,
+      "opcode": 1,
+      "mnemonic": "PUSH_POOL_U32",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 5,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 5,
+          "body_rva": "0x1f8210",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 5,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 3,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 3,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 5,
+          "body_rva": "0x1f8210",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 5,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "21113ecdf1",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 5,
+      "opcode": 5,
+      "mnemonic": "STORE_REG_U16",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 1493,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 1493,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 1494,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 1493,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 1494,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 1495,
+          "body_rva": "0x20fa70",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 39242,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 3,
+      "materialized_bytes": "a3ebc3",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 8,
+      "opcode": 4,
+      "mnemonic": "LOAD_REG_U16",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 56267,
+          "body_rva": "0x228a10",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 17273,
+          "body_rva": "0x214950",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 17274,
+          "body_rva": "0x228a10",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 17273,
+          "body_rva": "0x214950",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 17272,
+          "body_rva": "0x205fa0",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 17335,
+          "body_rva": "0x205fa0",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 94777,
+          "body_rva": "0x205fa0",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 3,
+      "materialized_bytes": "8b14dd",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 11,
+      "opcode": 1,
+      "mnemonic": "PUSH_POOL_U32",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 95473,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 57426,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 56810,
+          "body_rva": "0x1f8210",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 20846,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 20807,
+          "body_rva": "0x1f8210",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 20884,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 135392,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "211eaa2192",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 16,
+      "opcode": 41,
+      "mnemonic": "XOR_U64",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 243625,
+          "body_rva": "0x220b70",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 97286,
+          "body_rva": "0x220b70",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 58298,
+          "body_rva": "0x2162d0",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 22337,
+          "body_rva": "0x20c650",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 22297,
+          "body_rva": "0x1fb5c0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 60089,
+          "body_rva": "0x1fb5c0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 136881,
+          "body_rva": "0x1fb5c0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 1,
+      "materialized_bytes": "cf",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 17,
+      "opcode": 5,
+      "mnemonic": "STORE_REG_U16",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 245136,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 98798,
+          "body_rva": "0x21e270",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 98221,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 25588,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 23806,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 61598,
+          "body_rva": "0x21e270",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 138390,
+          "body_rva": "0x21e270",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 3,
+      "materialized_bytes": "a33db9",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 20,
+      "opcode": 26,
+      "mnemonic": "REQUEST_BRANCH_UNIT_U32",
+      "logical_unit": 0,
+      "physical_unit_start": 0,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 246657,
+          "body_rva": "0x20ed90",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 100320,
+          "body_rva": "0x1f5bf0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 99742,
+          "body_rva": "0x20ed90",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 29148,
+          "body_rva": "0x20d330",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 27365,
+          "body_rva": "0x20d330",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 63120,
+          "body_rva": "0x20d330",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 178013,
+          "body_rva": "0x20ed90",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "34ad772e43",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics",
+      "consumption_pc": 25,
+      "target_unit": 1,
+      "target_pc": 2028
+    },
+    {
+      "pc": 1742,
+      "opcode": 32,
+      "mnemonic": "HOST_CALL_U16_U8",
+      "logical_unit": 2,
+      "physical_unit_start": 1742,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 179177,
+          "body_rva": "0x21fc40",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 285477,
+          "body_rva": "0x21fc40",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 329888,
+          "body_rva": "0x213a20",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 4,
+      "materialized_bytes": "b1a37a80",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 1746,
+      "opcode": 58,
+      "mnemonic": "SIGN_EXTEND_LOW_U8",
+      "logical_unit": 2,
+      "physical_unit_start": 1742,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 181986,
+          "body_rva": "0x2120e0",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 288286,
+          "body_rva": "0x2217f0",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 332696,
+          "body_rva": "0x1f35e0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 2,
+      "materialized_bytes": "96a0",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 1748,
+      "opcode": 1,
+      "mnemonic": "PUSH_POOL_U32",
+      "logical_unit": 2,
+      "physical_unit_start": 1742,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 183735,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 327797,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 334447,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "21301c63fc",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 1753,
+      "opcode": 22,
+      "mnemonic": "UNKNOWN",
+      "logical_unit": 2,
+      "physical_unit_start": 1742,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 187909,
+          "body_rva": "0x21bb70",
+          "domains": [
+            3
+          ],
+          "terminal_entry": true,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 329463,
+          "body_rva": "0x204670",
+          "domains": [
+            1
+          ],
+          "terminal_entry": true,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 338178,
+          "body_rva": "0x21bb70",
+          "domains": [
+            3
+          ],
+          "terminal_entry": true,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": false
+    },
+    {
+      "pc": 2028,
+      "opcode": 1,
+      "mnemonic": "PUSH_POOL_U32",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 299667,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 153363,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 152728,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 82189,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 80364,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 116084,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 231033,
+          "body_rva": "0x1f8210",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "2141802d96",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 2033,
+      "opcode": 5,
+      "mnemonic": "STORE_REG_U16",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 301421,
+          "body_rva": "0x202800",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 155115,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 154483,
+          "body_rva": "0x21e270",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 83943,
+          "body_rva": "0x20fa70",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 82119,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 117838,
+          "body_rva": "0x21e270",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 232786,
+          "body_rva": "0x1fcef0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 3,
+      "materialized_bytes": "a32d41",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 2036,
+      "opcode": 1,
+      "mnemonic": "PUSH_POOL_U32",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 303208,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 156904,
+          "body_rva": "0x21d530",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 193994,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 85790,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 123702,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 119628,
+          "body_rva": "0x20e060",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 274299,
+          "body_rva": "0x209290",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "219150d4a2",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 2041,
+      "opcode": 58,
+      "mnemonic": "SIGN_EXTEND_LOW_U8",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 307466,
+          "body_rva": "0x20b9d0",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 306500,
+          "body_rva": "0x1f35e0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 234100,
+          "body_rva": "0x1f35e0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 89585,
+          "body_rva": "0x20b9d0",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 125459,
+          "body_rva": "0x1f35e0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 123855,
+          "body_rva": "0x2217f0",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 276055,
+          "body_rva": "0x1f35e0",
+          "domains": [
+            0
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 2,
+      "materialized_bytes": "96a0",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 2043,
+      "opcode": 32,
+      "mnemonic": "HOST_CALL_U16_U8",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "trace_index": 309306,
+          "body_rva": "0x203530",
+          "domains": [
+            1
+          ],
+          "terminal_entry": true,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "trace_index": 348044,
+          "body_rva": "0x21fc40",
+          "domains": [
+            3
+          ],
+          "terminal_entry": true,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "trace_index": 275668,
+          "body_rva": "0x213a20",
+          "domains": [
+            2
+          ],
+          "terminal_entry": true,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 91424,
+          "body_rva": "0x213a20",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 127299,
+          "body_rva": "0x203530",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 125694,
+          "body_rva": "0x213a20",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 277893,
+          "body_rva": "0x213a20",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 4,
+      "materialized_bytes": "b1d5cd81",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 2047,
+      "opcode": 31,
+      "mnemonic": "DROP_U64",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 132841,
+          "body_rva": "0x227080",
+          "domains": [
+            3
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 132297,
+          "body_rva": "0x215620",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 128725,
+          "body_rva": "0x215620",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 282998,
+          "body_rva": "0x215620",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 1,
+      "materialized_bytes": "05",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics"
+    },
+    {
+      "pc": 2048,
+      "opcode": 26,
+      "mnemonic": "REQUEST_BRANCH_UNIT_U32",
+      "logical_unit": 1,
+      "physical_unit_start": 2028,
+      "observations": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "trace_index": 134403,
+          "body_rva": "0x20ed90",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "trace_index": 133858,
+          "body_rva": "0x20d330",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "trace_index": 132359,
+          "body_rva": "0x20ed90",
+          "domains": [
+            2
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "trace_index": 284559,
+          "body_rva": "0x20d330",
+          "domains": [
+            1
+          ],
+          "terminal_entry": false,
+          "capture_complete": true
+        }
+      ],
+      "executed_in_verified_candidate": true,
+      "instruction_length": 5,
+      "materialized_bytes": "343c3e7554",
+      "static_source": "Pinned original PE materializer and recovered opcode semantics",
+      "consumption_pc": 2053,
+      "target_unit": 2,
+      "target_pc": 1742
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 5,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 5,
+          "to_trace_index": 1493,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 5,
+          "to_trace_index": 1493,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 5,
+          "to_trace_index": 1494,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 3,
+          "to_trace_index": 1493,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 3,
+          "to_trace_index": 1494,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 5,
+          "to_trace_index": 1495,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 5,
+          "to_trace_index": 39242,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 1493,
+          "to_trace_index": 56267,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 1493,
+          "to_trace_index": 17273,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 1494,
+          "to_trace_index": 17274,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 1493,
+          "to_trace_index": 17273,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 1494,
+          "to_trace_index": 17272,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 1495,
+          "to_trace_index": 17335,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 39242,
+          "to_trace_index": 94777,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 56267,
+          "to_trace_index": 95473,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 17273,
+          "to_trace_index": 57426,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 17274,
+          "to_trace_index": 56810,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 17273,
+          "to_trace_index": 20846,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 17272,
+          "to_trace_index": 20807,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 17335,
+          "to_trace_index": 20884,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 94777,
+          "to_trace_index": 135392,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 11,
+      "target": 16,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 95473,
+          "to_trace_index": 243625,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 57426,
+          "to_trace_index": 97286,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 56810,
+          "to_trace_index": 58298,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 20846,
+          "to_trace_index": 22337,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 20807,
+          "to_trace_index": 22297,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 20884,
+          "to_trace_index": 60089,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 135392,
+          "to_trace_index": 136881,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 16,
+      "target": 17,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 243625,
+          "to_trace_index": 245136,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 97286,
+          "to_trace_index": 98798,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 58298,
+          "to_trace_index": 98221,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 22337,
+          "to_trace_index": 25588,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 22297,
+          "to_trace_index": 23806,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 60089,
+          "to_trace_index": 61598,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 136881,
+          "to_trace_index": 138390,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 17,
+      "target": 20,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 245136,
+          "to_trace_index": 246657,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 98798,
+          "to_trace_index": 100320,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 98221,
+          "to_trace_index": 99742,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 25588,
+          "to_trace_index": 29148,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 23806,
+          "to_trace_index": 27365,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 61598,
+          "to_trace_index": 63120,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 138390,
+          "to_trace_index": 178013,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 20,
+      "target": 2028,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 246657,
+          "to_trace_index": 299667,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 100320,
+          "to_trace_index": 153363,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 99742,
+          "to_trace_index": 152728,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 29148,
+          "to_trace_index": 82189,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 27365,
+          "to_trace_index": 80364,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 63120,
+          "to_trace_index": 116084,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 178013,
+          "to_trace_index": 231033,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 1742,
+      "target": 1746,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 179177,
+          "to_trace_index": 181986,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 285477,
+          "to_trace_index": 288286,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 329888,
+          "to_trace_index": 332696,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 1746,
+      "target": 1748,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 181986,
+          "to_trace_index": 183735,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 288286,
+          "to_trace_index": 327797,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 332696,
+          "to_trace_index": 334447,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 1748,
+      "target": 1753,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 183735,
+          "to_trace_index": 187909,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 327797,
+          "to_trace_index": 329463,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 334447,
+          "to_trace_index": 338178,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2028,
+      "target": 2033,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 299667,
+          "to_trace_index": 301421,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 153363,
+          "to_trace_index": 155115,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 152728,
+          "to_trace_index": 154483,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 82189,
+          "to_trace_index": 83943,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 80364,
+          "to_trace_index": 82119,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 116084,
+          "to_trace_index": 117838,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 231033,
+          "to_trace_index": 232786,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2033,
+      "target": 2036,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 301421,
+          "to_trace_index": 303208,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 155115,
+          "to_trace_index": 156904,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 154483,
+          "to_trace_index": 193994,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 83943,
+          "to_trace_index": 85790,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 82119,
+          "to_trace_index": 123702,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 117838,
+          "to_trace_index": 119628,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 232786,
+          "to_trace_index": 274299,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2036,
+      "target": 2041,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 303208,
+          "to_trace_index": 307466,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 156904,
+          "to_trace_index": 306500,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 193994,
+          "to_trace_index": 234100,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 85790,
+          "to_trace_index": 89585,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 123702,
+          "to_trace_index": 125459,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 119628,
+          "to_trace_index": 123855,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 274299,
+          "to_trace_index": 276055,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2041,
+      "target": 2043,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_a",
+          "from_trace_index": 307466,
+          "to_trace_index": 309306,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_b",
+          "from_trace_index": 306500,
+          "to_trace_index": 348044,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/eleven_c",
+          "from_trace_index": 234100,
+          "to_trace_index": 275668,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 89585,
+          "to_trace_index": 91424,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 125459,
+          "to_trace_index": 127299,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 123855,
+          "to_trace_index": 125694,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 276055,
+          "to_trace_index": 277893,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2043,
+      "target": 2047,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 91424,
+          "to_trace_index": 132841,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 127299,
+          "to_trace_index": 132297,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 125694,
+          "to_trace_index": 128725,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 277893,
+          "to_trace_index": 282998,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2047,
+      "target": 2048,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_a",
+          "from_trace_index": 132841,
+          "to_trace_index": 134403,
+          "capture_complete": false
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 132297,
+          "to_trace_index": 133858,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 128725,
+          "to_trace_index": 132359,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 282998,
+          "to_trace_index": 284559,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 2048,
+      "target": 1742,
+      "kind": "observed_successor",
+      "confidence": "direct Windows context observation",
+      "provenance": [
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_b",
+          "from_trace_index": 133858,
+          "to_trace_index": 179177,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_c",
+          "from_trace_index": 132359,
+          "to_trace_index": 285477,
+          "capture_complete": true
+        },
+        {
+          "case": "jack_xxxv_evidence/captures/seventeen_d",
+          "from_trace_index": 284559,
+          "to_trace_index": 329888,
+          "capture_complete": true
+        }
+      ]
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 11,
+      "target": 16,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 16,
+      "target": 17,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 17,
+      "target": 20,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 20,
+      "target": 2028,
+      "kind": "deferred_branch",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Valid armed/taken request commits normally; exception/failure routes are separate",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 1742,
+      "target": 1746,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Verified callback functions 0/1, non-reentrant frame/return contract",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 1746,
+      "target": 1748,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 1748,
+      "target": 1753,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2028,
+      "target": 2033,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2033,
+      "target": 2036,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2036,
+      "target": 2041,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2041,
+      "target": 2043,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2043,
+      "target": 2047,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Verified callback functions 0/1, non-reentrant frame/return contract",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2047,
+      "target": 2048,
+      "kind": "static_sequential",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Recovered normal continuation",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    },
+    {
+      "source": 2048,
+      "target": 1742,
+      "kind": "deferred_branch",
+      "confidence": "static reconstruction under explicit contract",
+      "condition": "Valid armed/taken request commits normally; exception/failure routes are separate",
+      "provenance": [
+        "devirt/serial_signextend.py",
+        "devirt/serial_hostcall.py",
+        "devirt/serial_branch.py",
+        "devirt/serial_continuous.py"
+      ]
+    }
+  ],
+  "physical_bytes": 2678,
+  "materialization_units": 103,
+  "unit_bytes": 26,
+  "inventory": [
+    {
+      "logical_unit": 0,
+      "physical_start": 0,
+      "physical_end": 26,
+      "encrypted_blob_rva": "0x3e9c10",
+      "confirmed_headers": [
+        0,
+        5,
+        8,
+        11,
+        16,
+        17,
+        20
+      ],
+      "classification": "Contains observed headers; remaining bytes unclassified"
+    },
+    {
+      "logical_unit": 1,
+      "physical_start": 2028,
+      "physical_end": 2054,
+      "encrypted_blob_rva": "0x3ea3fc",
+      "confirmed_headers": [
+        2028,
+        2033,
+        2036,
+        2041,
+        2043,
+        2047,
+        2048
+      ],
+      "classification": "Contains observed headers; remaining bytes unclassified"
+    },
+    {
+      "logical_unit": 2,
+      "physical_start": 1742,
+      "physical_end": 1768,
+      "encrypted_blob_rva": "0x3ea2de",
+      "confirmed_headers": [
+        1742,
+        1746,
+        1748,
+        1753
+      ],
+      "classification": "Contains observed headers; remaining bytes unclassified"
+    },
+    {
+      "logical_unit": 3,
+      "physical_start": 572,
+      "physical_end": 598,
+      "encrypted_blob_rva": "0x3e9e4c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 4,
+      "physical_start": 78,
+      "physical_end": 104,
+      "encrypted_blob_rva": "0x3e9c5e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 5,
+      "physical_start": 156,
+      "physical_end": 182,
+      "encrypted_blob_rva": "0x3e9cac",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 6,
+      "physical_start": 2496,
+      "physical_end": 2522,
+      "encrypted_blob_rva": "0x3ea5d0",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 7,
+      "physical_start": 1794,
+      "physical_end": 1820,
+      "encrypted_blob_rva": "0x3ea312",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 8,
+      "physical_start": 806,
+      "physical_end": 832,
+      "encrypted_blob_rva": "0x3e9f36",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 9,
+      "physical_start": 2522,
+      "physical_end": 2548,
+      "encrypted_blob_rva": "0x3ea5ea",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 10,
+      "physical_start": 1508,
+      "physical_end": 1534,
+      "encrypted_blob_rva": "0x3ea1f4",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 11,
+      "physical_start": 1196,
+      "physical_end": 1222,
+      "encrypted_blob_rva": "0x3ea0bc",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 12,
+      "physical_start": 2392,
+      "physical_end": 2418,
+      "encrypted_blob_rva": "0x3ea568",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 13,
+      "physical_start": 962,
+      "physical_end": 988,
+      "encrypted_blob_rva": "0x3e9fd2",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 14,
+      "physical_start": 832,
+      "physical_end": 858,
+      "encrypted_blob_rva": "0x3e9f50",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 15,
+      "physical_start": 1768,
+      "physical_end": 1794,
+      "encrypted_blob_rva": "0x3ea2f8",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 16,
+      "physical_start": 2314,
+      "physical_end": 2340,
+      "encrypted_blob_rva": "0x3ea51a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 17,
+      "physical_start": 260,
+      "physical_end": 286,
+      "encrypted_blob_rva": "0x3e9d14",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 18,
+      "physical_start": 468,
+      "physical_end": 494,
+      "encrypted_blob_rva": "0x3e9de4",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 19,
+      "physical_start": 1638,
+      "physical_end": 1664,
+      "encrypted_blob_rva": "0x3ea276",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 20,
+      "physical_start": 1170,
+      "physical_end": 1196,
+      "encrypted_blob_rva": "0x3ea0a2",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 21,
+      "physical_start": 2184,
+      "physical_end": 2210,
+      "encrypted_blob_rva": "0x3ea498",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 22,
+      "physical_start": 2054,
+      "physical_end": 2080,
+      "encrypted_blob_rva": "0x3ea416",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 23,
+      "physical_start": 52,
+      "physical_end": 78,
+      "encrypted_blob_rva": "0x3e9c44",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 24,
+      "physical_start": 26,
+      "physical_end": 52,
+      "encrypted_blob_rva": "0x3e9c2a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 25,
+      "physical_start": 1144,
+      "physical_end": 1170,
+      "encrypted_blob_rva": "0x3ea088",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 26,
+      "physical_start": 104,
+      "physical_end": 130,
+      "encrypted_blob_rva": "0x3e9c78",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 27,
+      "physical_start": 1118,
+      "physical_end": 1144,
+      "encrypted_blob_rva": "0x3ea06e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 28,
+      "physical_start": 2652,
+      "physical_end": 2678,
+      "encrypted_blob_rva": "0x3ea66c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 29,
+      "physical_start": 2106,
+      "physical_end": 2132,
+      "encrypted_blob_rva": "0x3ea44a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 30,
+      "physical_start": 416,
+      "physical_end": 442,
+      "encrypted_blob_rva": "0x3e9db0",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 31,
+      "physical_start": 1352,
+      "physical_end": 1378,
+      "encrypted_blob_rva": "0x3ea158",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 32,
+      "physical_start": 1976,
+      "physical_end": 2002,
+      "encrypted_blob_rva": "0x3ea3c8",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 33,
+      "physical_start": 312,
+      "physical_end": 338,
+      "encrypted_blob_rva": "0x3e9d48",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 34,
+      "physical_start": 2626,
+      "physical_end": 2652,
+      "encrypted_blob_rva": "0x3ea652",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 35,
+      "physical_start": 1586,
+      "physical_end": 1612,
+      "encrypted_blob_rva": "0x3ea242",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 36,
+      "physical_start": 286,
+      "physical_end": 312,
+      "encrypted_blob_rva": "0x3e9d2e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 37,
+      "physical_start": 338,
+      "physical_end": 364,
+      "encrypted_blob_rva": "0x3e9d62",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 38,
+      "physical_start": 1716,
+      "physical_end": 1742,
+      "encrypted_blob_rva": "0x3ea2c4",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 39,
+      "physical_start": 2470,
+      "physical_end": 2496,
+      "encrypted_blob_rva": "0x3ea5b6",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 40,
+      "physical_start": 2002,
+      "physical_end": 2028,
+      "encrypted_blob_rva": "0x3ea3e2",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 41,
+      "physical_start": 1248,
+      "physical_end": 1274,
+      "encrypted_blob_rva": "0x3ea0f0",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 42,
+      "physical_start": 494,
+      "physical_end": 520,
+      "encrypted_blob_rva": "0x3e9dfe",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 43,
+      "physical_start": 780,
+      "physical_end": 806,
+      "encrypted_blob_rva": "0x3e9f1c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 44,
+      "physical_start": 1378,
+      "physical_end": 1404,
+      "encrypted_blob_rva": "0x3ea172",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 45,
+      "physical_start": 2366,
+      "physical_end": 2392,
+      "encrypted_blob_rva": "0x3ea54e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 46,
+      "physical_start": 884,
+      "physical_end": 910,
+      "encrypted_blob_rva": "0x3e9f84",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 47,
+      "physical_start": 1534,
+      "physical_end": 1560,
+      "encrypted_blob_rva": "0x3ea20e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 48,
+      "physical_start": 1092,
+      "physical_end": 1118,
+      "encrypted_blob_rva": "0x3ea054",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 49,
+      "physical_start": 1040,
+      "physical_end": 1066,
+      "encrypted_blob_rva": "0x3ea020",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 50,
+      "physical_start": 1404,
+      "physical_end": 1430,
+      "encrypted_blob_rva": "0x3ea18c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 51,
+      "physical_start": 936,
+      "physical_end": 962,
+      "encrypted_blob_rva": "0x3e9fb8",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 52,
+      "physical_start": 702,
+      "physical_end": 728,
+      "encrypted_blob_rva": "0x3e9ece",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 53,
+      "physical_start": 364,
+      "physical_end": 390,
+      "encrypted_blob_rva": "0x3e9d7c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 54,
+      "physical_start": 2236,
+      "physical_end": 2262,
+      "encrypted_blob_rva": "0x3ea4cc",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 55,
+      "physical_start": 676,
+      "physical_end": 702,
+      "encrypted_blob_rva": "0x3e9eb4",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 56,
+      "physical_start": 910,
+      "physical_end": 936,
+      "encrypted_blob_rva": "0x3e9f9e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 57,
+      "physical_start": 2158,
+      "physical_end": 2184,
+      "encrypted_blob_rva": "0x3ea47e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 58,
+      "physical_start": 1820,
+      "physical_end": 1846,
+      "encrypted_blob_rva": "0x3ea32c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 59,
+      "physical_start": 2574,
+      "physical_end": 2600,
+      "encrypted_blob_rva": "0x3ea61e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 60,
+      "physical_start": 1222,
+      "physical_end": 1248,
+      "encrypted_blob_rva": "0x3ea0d6",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 61,
+      "physical_start": 2600,
+      "physical_end": 2626,
+      "encrypted_blob_rva": "0x3ea638",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 62,
+      "physical_start": 1950,
+      "physical_end": 1976,
+      "encrypted_blob_rva": "0x3ea3ae",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 63,
+      "physical_start": 390,
+      "physical_end": 416,
+      "encrypted_blob_rva": "0x3e9d96",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 64,
+      "physical_start": 858,
+      "physical_end": 884,
+      "encrypted_blob_rva": "0x3e9f6a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 65,
+      "physical_start": 2548,
+      "physical_end": 2574,
+      "encrypted_blob_rva": "0x3ea604",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 66,
+      "physical_start": 1560,
+      "physical_end": 1586,
+      "encrypted_blob_rva": "0x3ea228",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 67,
+      "physical_start": 2262,
+      "physical_end": 2288,
+      "encrypted_blob_rva": "0x3ea4e6",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 68,
+      "physical_start": 1898,
+      "physical_end": 1924,
+      "encrypted_blob_rva": "0x3ea37a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 69,
+      "physical_start": 1326,
+      "physical_end": 1352,
+      "encrypted_blob_rva": "0x3ea13e",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 70,
+      "physical_start": 624,
+      "physical_end": 650,
+      "encrypted_blob_rva": "0x3e9e80",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 71,
+      "physical_start": 1482,
+      "physical_end": 1508,
+      "encrypted_blob_rva": "0x3ea1da",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 72,
+      "physical_start": 546,
+      "physical_end": 572,
+      "encrypted_blob_rva": "0x3e9e32",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 73,
+      "physical_start": 728,
+      "physical_end": 754,
+      "encrypted_blob_rva": "0x3e9ee8",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 74,
+      "physical_start": 130,
+      "physical_end": 156,
+      "encrypted_blob_rva": "0x3e9c92",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 75,
+      "physical_start": 988,
+      "physical_end": 1014,
+      "encrypted_blob_rva": "0x3e9fec",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 76,
+      "physical_start": 1066,
+      "physical_end": 1092,
+      "encrypted_blob_rva": "0x3ea03a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 77,
+      "physical_start": 442,
+      "physical_end": 468,
+      "encrypted_blob_rva": "0x3e9dca",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 78,
+      "physical_start": 2288,
+      "physical_end": 2314,
+      "encrypted_blob_rva": "0x3ea500",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 79,
+      "physical_start": 208,
+      "physical_end": 234,
+      "encrypted_blob_rva": "0x3e9ce0",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 80,
+      "physical_start": 234,
+      "physical_end": 260,
+      "encrypted_blob_rva": "0x3e9cfa",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 81,
+      "physical_start": 754,
+      "physical_end": 780,
+      "encrypted_blob_rva": "0x3e9f02",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 82,
+      "physical_start": 1924,
+      "physical_end": 1950,
+      "encrypted_blob_rva": "0x3ea394",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 83,
+      "physical_start": 2132,
+      "physical_end": 2158,
+      "encrypted_blob_rva": "0x3ea464",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 84,
+      "physical_start": 1430,
+      "physical_end": 1456,
+      "encrypted_blob_rva": "0x3ea1a6",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 85,
+      "physical_start": 2444,
+      "physical_end": 2470,
+      "encrypted_blob_rva": "0x3ea59c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 86,
+      "physical_start": 598,
+      "physical_end": 624,
+      "encrypted_blob_rva": "0x3e9e66",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 87,
+      "physical_start": 1014,
+      "physical_end": 1040,
+      "encrypted_blob_rva": "0x3ea006",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 88,
+      "physical_start": 650,
+      "physical_end": 676,
+      "encrypted_blob_rva": "0x3e9e9a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 89,
+      "physical_start": 1300,
+      "physical_end": 1326,
+      "encrypted_blob_rva": "0x3ea124",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 90,
+      "physical_start": 1274,
+      "physical_end": 1300,
+      "encrypted_blob_rva": "0x3ea10a",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 91,
+      "physical_start": 182,
+      "physical_end": 208,
+      "encrypted_blob_rva": "0x3e9cc6",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 92,
+      "physical_start": 1664,
+      "physical_end": 1690,
+      "encrypted_blob_rva": "0x3ea290",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 93,
+      "physical_start": 1612,
+      "physical_end": 1638,
+      "encrypted_blob_rva": "0x3ea25c",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 94,
+      "physical_start": 1846,
+      "physical_end": 1872,
+      "encrypted_blob_rva": "0x3ea346",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 95,
+      "physical_start": 2418,
+      "physical_end": 2444,
+      "encrypted_blob_rva": "0x3ea582",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 96,
+      "physical_start": 520,
+      "physical_end": 546,
+      "encrypted_blob_rva": "0x3e9e18",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 97,
+      "physical_start": 1872,
+      "physical_end": 1898,
+      "encrypted_blob_rva": "0x3ea360",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 98,
+      "physical_start": 1456,
+      "physical_end": 1482,
+      "encrypted_blob_rva": "0x3ea1c0",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 99,
+      "physical_start": 2340,
+      "physical_end": 2366,
+      "encrypted_blob_rva": "0x3ea534",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 100,
+      "physical_start": 2080,
+      "physical_end": 2106,
+      "encrypted_blob_rva": "0x3ea430",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 101,
+      "physical_start": 2210,
+      "physical_end": 2236,
+      "encrypted_blob_rva": "0x3ea4b2",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    },
+    {
+      "logical_unit": 102,
+      "physical_start": 1690,
+      "physical_end": 1716,
+      "encrypted_blob_rva": "0x3ea2aa",
+      "confirmed_headers": [],
+      "classification": "Unexplored; code/data classification unknown"
+    }
+  ],
+  "termination_evidence": {
+    "naturally_observed": false,
+    "static_guard": "Outer decoder PC >= ctx[0x1d8]",
+    "runtime_work_label": "0xfe1ab",
+    "static_effect": "Helper 0x1ee510 sets logical control 10 to 1",
+    "decoder_rva": "0x229c70",
+    "job_rva": "0x22c8f6",
+    "cleanup_and_final_return_verified": false
+  },
+  "scope": "Partial CFG. A physical backward edge is not proof of a loop. Unknown nodes have no invented successors; a terminal handler entry is not a completed opcode."
+}

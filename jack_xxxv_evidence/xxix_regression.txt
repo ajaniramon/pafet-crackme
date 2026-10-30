@@ -1,0 +1,9 @@
+decoder_len16 Windows/Unicorn PASS 5719 semantic=unknown
+domain1_first Windows/Unicorn PASS 2757 semantic=not-claimed
+first_decode_v2 Windows/Unicorn PASS 5658 semantic=PASS
+first_opcode Windows/Unicorn PASS 2599 semantic=not-claimed
+first_remap Windows/Unicorn PASS 61 semantic=not-claimed
+first_resolve Windows/Unicorn PASS 10 semantic=not-claimed
+opcode1 Windows/Unicorn PASS 17816 semantic=PASS
+opcode1_len16 Windows/Unicorn PASS 1079 semantic=PASS
+PASS: pinned native paths and claimed semantic boundaries; unknown route retained

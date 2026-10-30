@@ -1,0 +1,40 @@
+{
+  "scheduler_exception": {
+    "case": "jack_xxxv_evidence/captures/seventeen_a",
+    "status": "REJECTED_INCOMPLETE",
+    "completed_candidate_steps": 14,
+    "virtual_pc": 2053,
+    "reason": "Scheduler exception delivery",
+    "enqueue_counter": 112,
+    "throw_predicate": 31,
+    "throws": true,
+    "observed_native_instructions": 136246,
+    "terminal": {
+      "kind": "external-code-boundary",
+      "pc": "0x7ff90ff57d30"
+    },
+    "prefix_root_diagnostic_match": true,
+    "treatment": "Preserved, rejected as a complete proof, not repaired or included in maximum-depth/kernel/domain counts."
+  },
+  "unsupported_eighteenth": {
+    "opcode": "0x16",
+    "virtual_pc": 1753,
+    "decoded_pc": 1754,
+    "executed": false,
+    "cases": [
+      "jack_xxxv_evidence/captures/seventeen_b",
+      "jack_xxxv_evidence/captures/seventeen_c",
+      "jack_xxxv_evidence/captures/seventeen_d"
+    ]
+  },
+  "synthetic_controls": [
+    "nonzero sign-extension values/zero-width masking",
+    "nonzero/signed callback values",
+    "TLS-frame tag corruption",
+    "missing TLS input byte",
+    "unbalanced TLS-depth unwind",
+    "unsupported callback ID",
+    "one-byte context/queue/TLS/host-index comparison changes"
+  ],
+  "scope": "Model guard controls are synthetic. No natural exception/guard-failure delivery equivalence is claimed."
+}

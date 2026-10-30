@@ -1,0 +1,6 @@
+test_cfg_keeps_unknown_frontier_and_uncertainty (devirt.test_serial_program.ProgramTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK

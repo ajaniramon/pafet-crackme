@@ -1,0 +1,92 @@
+[
+  {
+    "name": "xxviii",
+    "command": [
+      "python",
+      "scripts/pafet_lab_xxviii.py",
+      "--output",
+      "jack_xxxv_evidence\\xxviii_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 32.904,
+    "output": "jack_xxxv_evidence/xxviii_regression.txt"
+  },
+  {
+    "name": "xxix",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_validate",
+      "--output",
+      "jack_xxxv_evidence\\xxix_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 16.849,
+    "output": "jack_xxxv_evidence/xxix_regression.txt"
+  },
+  {
+    "name": "xxx",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_continuous_validate",
+      "--output",
+      "jack_xxxv_evidence\\xxx_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 31.108,
+    "output": "jack_xxxv_evidence/xxx_regression.txt"
+  },
+  {
+    "name": "xxxi",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_extended_validate",
+      "--output",
+      "jack_xxxv_evidence\\xxxi_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 34.169,
+    "output": "jack_xxxv_evidence/xxxi_regression.txt"
+  },
+  {
+    "name": "xxxii",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_scheduler_validate",
+      "--output",
+      "jack_xxxv_evidence\\xxxii_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 151.249,
+    "output": "jack_xxxv_evidence/xxxii_regression.txt"
+  },
+  {
+    "name": "xxxiii",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_depth_validate",
+      "--output",
+      "jack_xxxv_evidence\\xxxiii_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 140.931,
+    "output": "jack_xxxv_evidence/xxxiii_regression.txt"
+  },
+  {
+    "name": "xxxiv",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_branch_validate",
+      "--output",
+      "jack_xxxv_evidence\\xxxiv_regression.json"
+    ],
+    "exit_code": 0,
+    "seconds": 241.708,
+    "output": "jack_xxxv_evidence/xxxiv_regression.txt"
+  }
+]

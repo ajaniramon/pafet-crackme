@@ -1,0 +1,75 @@
+{
+  "maximum_consecutive_instructions": 17,
+  "implemented_opcodes": [
+    1,
+    4,
+    5,
+    26,
+    31,
+    32,
+    41,
+    58
+  ],
+  "dynamically_verified_body_bindings": {
+    "0x1": [
+      "0x1f8210",
+      "0x209290",
+      "0x20e060",
+      "0x21d530"
+    ],
+    "0x4": [
+      "0x205fa0",
+      "0x214950",
+      "0x228a10"
+    ],
+    "0x5": [
+      "0x1fcef0",
+      "0x202800",
+      "0x20fa70",
+      "0x21e270"
+    ],
+    "0x1a": [
+      "0x1f5bf0",
+      "0x20d330",
+      "0x20ed90"
+    ],
+    "0x1f": [
+      "0x215620"
+    ],
+    "0x20": [
+      "0x203530",
+      "0x213a20",
+      "0x21fc40"
+    ],
+    "0x29": [
+      "0x1fb5c0",
+      "0x2162d0",
+      "0x220b70"
+    ],
+    "0x3a": [
+      "0x1f35e0",
+      "0x20b9d0",
+      "0x2120e0",
+      "0x2217f0"
+    ]
+  },
+  "distinct_virtual_pcs_observed": 18,
+  "distinct_pcs_executed_in_candidate": 17,
+  "explored_materialization_units": [
+    0,
+    1,
+    2
+  ],
+  "known_branch_destinations": [
+    1742,
+    2028
+  ],
+  "pending_outer_states": 7,
+  "generated_kernel_coverage": "61/64 baseline; new corpus coverage evaluated separately",
+  "total_program_instructions": null,
+  "instructions_to_termination": null,
+  "global_devirtualization_percentage": null,
+  "reason": "Only a finite prefix CFG is observed. Global reachable code, loops, iteration counts, call effects and termination remain unresolved.",
+  "physical_bytes_are_not_instruction_count": true,
+  "source_sha256": "913fd02d91c4da408a8023f05608a7de5903242a8c0f85b6d29e356f536b2d02"
+}

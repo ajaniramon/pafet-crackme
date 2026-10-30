@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "cases": 4096,
+  "operands": 256,
+  "values_per_operand": 16,
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "slice_rva": "0x1f36da",
+  "slice_hex": "b9400000002bcb48d3e048d3f8",
+  "scope": "Synthetic isolated arithmetic, not natural Windows VM coverage. No native values enter the candidate."
+}

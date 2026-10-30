@@ -1,0 +1,50 @@
+{
+  "baseline_commit": "5d9b29767feb32520548c63e53ba5c2741026974",
+  "maximum_verified_prefix": 17,
+  "independent_maximum_depth_processes": 3,
+  "accepted_prefix_processes": 6,
+  "rejected_capture_attempts": 1,
+  "native_instruction_observations": 1788568,
+  "semantic_instruction_instances": 84,
+  "semantic_memory_boundaries": 3489,
+  "natural_remap_processes": 3,
+  "distinct_implemented_opcodes": [
+    1,
+    4,
+    5,
+    26,
+    31,
+    32,
+    41,
+    58
+  ],
+  "virtual_pcs_observed": 18,
+  "verified_executed_pcs": 17,
+  "known_branch_destinations": [
+    1742,
+    2028
+  ],
+  "explored_units": [
+    0,
+    1,
+    2
+  ],
+  "observed_kernels": 62,
+  "total_generated_kernels": 64,
+  "pending_outer_states": 7,
+  "global_progress_percentage": null,
+  "instructions_remaining": null,
+  "reason": "Only a finite prefix CFG is observed. Global reachable code, loops, iteration counts, call effects and termination remain unresolved.",
+  "VM_status": {
+    "User": "unchanged: logical program IR and selected native mechanisms",
+    "Serial": "PARTIAL: seventeen-instruction prefix, callback/TLS protocol, partial native-derived CFG",
+    "SHA": "unchanged: functional digest and initialization evidence; virtual program unknown",
+    "Hex": "unchanged: finite literal execution proof; compact semantics partial"
+  },
+  "source_sha256": {
+    "scripts/pafet_serial_graph_xxxv.py": "913fd02d91c4da408a8023f05608a7de5903242a8c0f85b6d29e356f536b2d02",
+    "scripts/pafet_serial_metrics_xxxv.py": "32034aa784aa75625785fb24eac2e860b7ea5b155fb4e3ad7dec2295fed34559",
+    "scripts/pafet_serial_audit_xxxv.py": "e554d69529c63d216d5f5323502c908761e306ca0e5cd8e46c27fdef9e1f4048",
+    "scripts/pafet_serial_arithmetic_xxxv.py": "09ad104dc82f9e9c107780834334be8fd5eeb9c75866ec25e1456cc509b21618"
+  }
+}

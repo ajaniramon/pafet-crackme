@@ -1,0 +1,1299 @@
+[
+  {
+    "case": "jack_xxxv_evidence/captures/eleven_a",
+    "status": "PREFIX_EQUIVALENT",
+    "trace_sha256": "b9e978a49bb4d3ce60f1a229b34c348438534d78ffe5bbb5556bd57c09f8dbb0",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 5,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 1493,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x228a10",
+        "domains": [
+          3
+        ],
+        "trace_index": 56267,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 95473,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x220b70",
+        "domains": [
+          3
+        ],
+        "trace_index": 243625,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 245136,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20ed90",
+        "domains": [
+          2
+        ],
+        "trace_index": 246657,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 299667,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 301421,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 303208,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x20b9d0",
+        "domains": [
+          1
+        ],
+        "trace_index": 307466,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x203530",
+        "domains": [
+          1
+        ],
+        "trace_index": 309306,
+        "terminal_entry": true
+      }
+    ]
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/eleven_b",
+    "status": "PREFIX_EQUIVALENT",
+    "trace_sha256": "6d6b01f628cb2b9fa1fc42ee7d8dfeb1235ae8afdf214940819bc850bccecd6b",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x1f8210",
+        "domains": [
+          0
+        ],
+        "trace_index": 5,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 1493,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x214950",
+        "domains": [
+          2
+        ],
+        "trace_index": 17273,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 57426,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x220b70",
+        "domains": [
+          3
+        ],
+        "trace_index": 97286,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x21e270",
+        "domains": [
+          3
+        ],
+        "trace_index": 98798,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x1f5bf0",
+        "domains": [
+          0
+        ],
+        "trace_index": 100320,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 153363,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 155115,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 156904,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x1f35e0",
+        "domains": [
+          0
+        ],
+        "trace_index": 306500,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x21fc40",
+        "domains": [
+          3
+        ],
+        "trace_index": 348044,
+        "terminal_entry": true
+      }
+    ]
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/eleven_c",
+    "status": "PREFIX_EQUIVALENT",
+    "trace_sha256": "9806ae17a153bd843de35a50e9f7220b3fab93679734fac43c4f1861f828c431",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 5,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 1494,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x228a10",
+        "domains": [
+          3
+        ],
+        "trace_index": 17274,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x1f8210",
+        "domains": [
+          0
+        ],
+        "trace_index": 56810,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x2162d0",
+        "domains": [
+          2
+        ],
+        "trace_index": 58298,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 98221,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20ed90",
+        "domains": [
+          2
+        ],
+        "trace_index": 99742,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 152728,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x21e270",
+        "domains": [
+          3
+        ],
+        "trace_index": 154483,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 193994,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x1f35e0",
+        "domains": [
+          0
+        ],
+        "trace_index": 234100,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x213a20",
+        "domains": [
+          2
+        ],
+        "trace_index": 275668,
+        "terminal_entry": true
+      }
+    ]
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_a",
+    "status": "REJECTED_INCOMPLETE",
+    "trace_sha256": "3b3d6d894a1bf4e70084200418409003d16acf22585b65d4536bcab8e6542e0d",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 3,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 1493,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x214950",
+        "domains": [
+          2
+        ],
+        "trace_index": 17273,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 20846,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x20c650",
+        "domains": [
+          1
+        ],
+        "trace_index": 22337,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 25588,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20d330",
+        "domains": [
+          1
+        ],
+        "trace_index": 29148,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 82189,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x20fa70",
+        "domains": [
+          2
+        ],
+        "trace_index": 83943,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 85790,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x20b9d0",
+        "domains": [
+          1
+        ],
+        "trace_index": 89585,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x213a20",
+        "domains": [
+          2
+        ],
+        "trace_index": 91424,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2047,
+        "operand_pc": 2048,
+        "sp": 1,
+        "opcode": 31,
+        "body_rva": "0x227080",
+        "domains": [
+          3
+        ],
+        "trace_index": 132841,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2048,
+        "operand_pc": 2049,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20ed90",
+        "domains": [
+          2
+        ],
+        "trace_index": 134403,
+        "terminal_entry": false
+      }
+    ]
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_b",
+    "status": "PREFIX_EQUIVALENT",
+    "trace_sha256": "d0f26a4be6c23820866647f908568d0f787fe6dc61ff98e6932c53cae3f5dd3a",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 3,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 1494,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x205fa0",
+        "domains": [
+          1
+        ],
+        "trace_index": 17272,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x1f8210",
+        "domains": [
+          0
+        ],
+        "trace_index": 20807,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x1fb5c0",
+        "domains": [
+          0
+        ],
+        "trace_index": 22297,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x202800",
+        "domains": [
+          1
+        ],
+        "trace_index": 23806,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20d330",
+        "domains": [
+          1
+        ],
+        "trace_index": 27365,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 80364,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 82119,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 123702,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x1f35e0",
+        "domains": [
+          0
+        ],
+        "trace_index": 125459,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x203530",
+        "domains": [
+          1
+        ],
+        "trace_index": 127299,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2047,
+        "operand_pc": 2048,
+        "sp": 1,
+        "opcode": 31,
+        "body_rva": "0x215620",
+        "domains": [
+          2
+        ],
+        "trace_index": 132297,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2048,
+        "operand_pc": 2049,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20d330",
+        "domains": [
+          1
+        ],
+        "trace_index": 133858,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1742,
+        "operand_pc": 1743,
+        "sp": 0,
+        "opcode": 32,
+        "body_rva": "0x21fc40",
+        "domains": [
+          3
+        ],
+        "trace_index": 179177,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1746,
+        "operand_pc": 1747,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x2120e0",
+        "domains": [
+          2
+        ],
+        "trace_index": 181986,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1748,
+        "operand_pc": 1749,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 183735,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1753,
+        "operand_pc": 1754,
+        "sp": 2,
+        "opcode": 22,
+        "body_rva": "0x21bb70",
+        "domains": [
+          3
+        ],
+        "trace_index": 187909,
+        "terminal_entry": true
+      }
+    ]
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_c",
+    "status": "PREFIX_EQUIVALENT",
+    "trace_sha256": "c38ae7f5a041f6a7e8e12ad265486b1e078526b5b5583834772d59b8edb20f8e",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x1f8210",
+        "domains": [
+          0
+        ],
+        "trace_index": 5,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x20fa70",
+        "domains": [
+          2
+        ],
+        "trace_index": 1495,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x205fa0",
+        "domains": [
+          1
+        ],
+        "trace_index": 17335,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 20884,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x1fb5c0",
+        "domains": [
+          0
+        ],
+        "trace_index": 60089,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x21e270",
+        "domains": [
+          3
+        ],
+        "trace_index": 61598,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20d330",
+        "domains": [
+          1
+        ],
+        "trace_index": 63120,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 116084,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x21e270",
+        "domains": [
+          3
+        ],
+        "trace_index": 117838,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x20e060",
+        "domains": [
+          2
+        ],
+        "trace_index": 119628,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x2217f0",
+        "domains": [
+          3
+        ],
+        "trace_index": 123855,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x213a20",
+        "domains": [
+          2
+        ],
+        "trace_index": 125694,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2047,
+        "operand_pc": 2048,
+        "sp": 1,
+        "opcode": 31,
+        "body_rva": "0x215620",
+        "domains": [
+          2
+        ],
+        "trace_index": 128725,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2048,
+        "operand_pc": 2049,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20ed90",
+        "domains": [
+          2
+        ],
+        "trace_index": 132359,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1742,
+        "operand_pc": 1743,
+        "sp": 0,
+        "opcode": 32,
+        "body_rva": "0x21fc40",
+        "domains": [
+          3
+        ],
+        "trace_index": 285477,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1746,
+        "operand_pc": 1747,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x2217f0",
+        "domains": [
+          3
+        ],
+        "trace_index": 288286,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1748,
+        "operand_pc": 1749,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 327797,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1753,
+        "operand_pc": 1754,
+        "sp": 2,
+        "opcode": 22,
+        "body_rva": "0x204670",
+        "domains": [
+          1
+        ],
+        "trace_index": 329463,
+        "terminal_entry": true
+      }
+    ]
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_d",
+    "status": "PREFIX_EQUIVALENT",
+    "trace_sha256": "5bc557e78d356e80fdc7141c03d7224afc9680570e03f705d26143d62fba3bbf",
+    "entries": [
+      {
+        "pc": 0,
+        "operand_pc": 1,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x21d530",
+        "domains": [
+          3
+        ],
+        "trace_index": 5,
+        "terminal_entry": false
+      },
+      {
+        "pc": 5,
+        "operand_pc": 6,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 39242,
+        "terminal_entry": false
+      },
+      {
+        "pc": 8,
+        "operand_pc": 9,
+        "sp": 0,
+        "opcode": 4,
+        "body_rva": "0x205fa0",
+        "domains": [
+          1
+        ],
+        "trace_index": 94777,
+        "terminal_entry": false
+      },
+      {
+        "pc": 11,
+        "operand_pc": 12,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 135392,
+        "terminal_entry": false
+      },
+      {
+        "pc": 16,
+        "operand_pc": 17,
+        "sp": 2,
+        "opcode": 41,
+        "body_rva": "0x1fb5c0",
+        "domains": [
+          0
+        ],
+        "trace_index": 136881,
+        "terminal_entry": false
+      },
+      {
+        "pc": 17,
+        "operand_pc": 18,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x21e270",
+        "domains": [
+          3
+        ],
+        "trace_index": 138390,
+        "terminal_entry": false
+      },
+      {
+        "pc": 20,
+        "operand_pc": 21,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20ed90",
+        "domains": [
+          2
+        ],
+        "trace_index": 178013,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2028,
+        "operand_pc": 2029,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x1f8210",
+        "domains": [
+          0
+        ],
+        "trace_index": 231033,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2033,
+        "operand_pc": 2034,
+        "sp": 1,
+        "opcode": 5,
+        "body_rva": "0x1fcef0",
+        "domains": [
+          0
+        ],
+        "trace_index": 232786,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2036,
+        "operand_pc": 2037,
+        "sp": 0,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 274299,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2041,
+        "operand_pc": 2042,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x1f35e0",
+        "domains": [
+          0
+        ],
+        "trace_index": 276055,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2043,
+        "operand_pc": 2044,
+        "sp": 1,
+        "opcode": 32,
+        "body_rva": "0x213a20",
+        "domains": [
+          2
+        ],
+        "trace_index": 277893,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2047,
+        "operand_pc": 2048,
+        "sp": 1,
+        "opcode": 31,
+        "body_rva": "0x215620",
+        "domains": [
+          2
+        ],
+        "trace_index": 282998,
+        "terminal_entry": false
+      },
+      {
+        "pc": 2048,
+        "operand_pc": 2049,
+        "sp": 0,
+        "opcode": 26,
+        "body_rva": "0x20d330",
+        "domains": [
+          1
+        ],
+        "trace_index": 284559,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1742,
+        "operand_pc": 1743,
+        "sp": 0,
+        "opcode": 32,
+        "body_rva": "0x213a20",
+        "domains": [
+          2
+        ],
+        "trace_index": 329888,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1746,
+        "operand_pc": 1747,
+        "sp": 1,
+        "opcode": 58,
+        "body_rva": "0x1f35e0",
+        "domains": [
+          0
+        ],
+        "trace_index": 332696,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1748,
+        "operand_pc": 1749,
+        "sp": 1,
+        "opcode": 1,
+        "body_rva": "0x209290",
+        "domains": [
+          1
+        ],
+        "trace_index": 334447,
+        "terminal_entry": false
+      },
+      {
+        "pc": 1753,
+        "operand_pc": 1754,
+        "sp": 2,
+        "opcode": 22,
+        "body_rva": "0x21bb70",
+        "domains": [
+          3
+        ],
+        "trace_index": 338178,
+        "terminal_entry": true
+      }
+    ]
+  }
+]

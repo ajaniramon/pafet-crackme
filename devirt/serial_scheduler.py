@@ -94,7 +94,15 @@ class ScheduledSerialVMState(ExtendedSerialVMState):
         self.record('remap_entry',0x2297e0);result=rebuild(self)
         self.remaps.append(result);self.record('remap_exit',0x229c6d)
 
-    def _step(self):
+    def prepare_next_instruction(self):
+        """Reach the next handler entry without counting/executing its opcode."""
+        if self.fault is not None:self.fail('Stopped state: '+self.fault)
+        try:self._prepare_next_instruction()
+        except ValueError as error:
+            self.fault=str(error)
+            raise
+
+    def _prepare_next_instruction(self):
         if self.phase in ('outer_dispatch','outer_jobs','outer_decode'):
             for _ in range(8):
                 if self.phase=='execute':break
@@ -103,6 +111,10 @@ class ScheduledSerialVMState(ExtendedSerialVMState):
                     self.enqueue(0x825f);self.phase='outer_jobs';self.record('job_end',0x232daa)
                 else:self.dispatch_next()
             if self.phase!='execute':self.fail('Semantic scheduler handoff bound')
+        if self.phase=='decode':self.decode_next()
+
+    def _step(self):
+        self.prepare_next_instruction()
         return super()._step()
 
     def kernel(self,job):

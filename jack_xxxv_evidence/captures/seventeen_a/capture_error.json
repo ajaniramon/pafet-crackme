@@ -1,0 +1,21 @@
+{
+  "status": "blocked",
+  "classification": "capture",
+  "error": "Capture blocked/incomplete; before inputs and observed prefix preserved in jack_xxxv_evidence\\captures\\seventeen_a",
+  "frames": [
+    {
+      "stem": "frame_00",
+      "steps": 136246,
+      "rekey": false,
+      "status": "blocked",
+      "entry_sha256": "65461e1f65d668a5417af4b2605b33928d6908076cc1b6b5b2cb492c9c83912c",
+      "trace_sha256": "3b3d6d894a1bf4e70084200418409003d16acf22585b65d4536bcab8e6542e0d",
+      "terminal": {
+        "kind": "external-code-boundary",
+        "pc": "0x7ff90ff57d30"
+      }
+    }
+  ],
+  "entry_rva": "0x3bea0",
+  "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2"
+}

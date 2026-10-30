@@ -1,6 +1,6 @@
 # 13 — Open gaps and research priorities
 
-The current [JACK XXXIV matrix](../jack_xxxiv_evidence/status.json), earlier
+The current [JACK XXXV matrix](../jack_xxxv_evidence/status.json), earlier
 [mechanism matrix](../jack_xvii_evidence/status_matrix.json) and
 [JACK XVII report](jack-xvii.md) distinguish demonstrated facts, partial
 reconstruction, hypotheses and unknowns. No VM is declared completely
@@ -66,19 +66,34 @@ intermediate native state. New evidence also closes LOAD domain 2; all four
 LOAD and XOR domains have natural comparisons. Opcode `0x1a` has natural
 evidence for domains 0, 1 and 3; domain 2 is static only.
 
-Next: reconstruct opcode `0x3a` at PC2041 and its continuation. A complete
-capture matches the ten-step prefix plus the next decoder/handler entry
-at native RVA `0x2217f0`; its eleventh core is not executed semantically.
-The observation-only summary must retain preceding boundaries when matching
-repeated RVAs; XXXIV preserves and fixes a new summary-prototype counterexample.
+[JACK XXXV](../PAFET_JACK_XXXV.md) recovers opcode `0x3a` (sign extension),
+`0x1f` (DROP) and `0x20` (host CALL with encoded TLS frames). The candidate
+supports native callback functions 0/1, a scalar index setter/signed getter;
+other callbacks fail explicitly. Three processes validate seventeen continuous
+instructions plus the next handler entry. The third materialization unit and
+second deferred destination, PC1742, are covered. New evidence also closes
+domain 2 of `0x1a`; all four branch and sign-extension domains have natural
+proofs. HOST CALL domain 0 and DROP domains 0/1/3 remain static-only.
 
-Other deferred-request conditions, native guard-failure delivery, scheduler
-exceptions, rekey TLS callbacks, seven cataloged outer states and fallback
-branches remain open. Windows beyond the observed 0-to-2028 transition and
-the full ISA/CFG require further comparisons. Kernel coverage stays 61/64;
-`0xaf41e`, `0x2c1549` and `0x32a5e8` remain unobserved. SHA's materializer,
-ISA and state still need independent discovery. Historical truncated captures
-remain rejected; new complete runs do not repair missing old observations.
+Next: recover opcode `0x16` at PC1753 and its continuation. Its header is
+observed through PC1754, but its core is not executed by the model. The
+[partial native-derived CFG](../jack_xxxv_evidence/virtual_cfg.json) contains
+18 observed PCs and 17 executed PCs, with observed/static edges distinguished.
+No virtual cycle, return opcode or natural termination is demonstrated. The
+static decoder's out-of-range route sets runtime work `0xfe1ab` and a halt
+control; complete cleanup/return and its reachability remain unverified.
+Total reachable instructions, iteration counts and a global percentage are
+still unknown.
+
+A natural scheduler exception is preserved in `seventeen_a`: its 136,246-step
+capture stops outside the PE and is rejected as a complete proof. The model
+also stops on the actual enqueue predicate; no repair or skipped frame turns
+it into a success. Seven cataloged outer states, other callback functions,
+reentrant/clamped TLS-frame paths, native guard/exception delivery, rekey TLS
+callbacks, halt/cleanup and further window routes remain open. Kernel
+`0xaf41e` is now observed in complete runs; coverage is 62/64, with
+`0x2c1549` and `0x32a5e8` still unobserved. SHA's independent state/ISA work
+and the User/Hex limits above remain unchanged.
 Do not substitute standard primitive rounds for unproved virtual semantics.
 JACK XXVIII supplies a generic capture profile and an 18-instruction Windows/
 Unicorn Serial seed-region comparison. It validates reusable transport, not a

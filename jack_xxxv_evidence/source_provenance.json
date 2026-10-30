@@ -1,0 +1,51 @@
+[
+  {
+    "case": "jack_xxxv_evidence/captures/eleven_a",
+    "run_id": "1505955b713b4b6782f8a5189921479d",
+    "status": "PREFIX_EQUIVALENT",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/eleven_b",
+    "run_id": "4a852af825f249a18708f3e4cce83189",
+    "status": "PREFIX_EQUIVALENT",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/eleven_c",
+    "run_id": "e5e3256fc0e843cab58996de984342e1",
+    "status": "PREFIX_EQUIVALENT",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_a",
+    "run_id": "c9063bdbfe1843a8b363a8a4fb0fe2ac",
+    "status": "REJECTED_INCOMPLETE",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_b",
+    "run_id": "7bd867db7fc64e81a7457e550335a7b2",
+    "status": "PREFIX_EQUIVALENT",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_c",
+    "run_id": "4bf068b3e8774b56a5ea58e9b2a8ae04",
+    "status": "PREFIX_EQUIVALENT",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxv_evidence/captures/seventeen_d",
+    "run_id": "bc1d5a9fb1cc4607872d7e7fcc27b2b4",
+    "status": "PREFIX_EQUIVALENT",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  }
+]
