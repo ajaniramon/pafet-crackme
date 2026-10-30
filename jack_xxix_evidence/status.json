@@ -1,0 +1,41 @@
+{
+  "operation": "JACK XXIX",
+  "components": {
+    "Serial": {
+      "blob_and_all_103_materialization_units": {
+        "status": "DEMOSTRADO",
+        "scope": "2678 bytes, isolated original-x64 helper tests; first natural materialization separately compared with Windows",
+        "evidence": "validation.json"
+      },
+      "first_decoder": {
+        "status": "PARCIAL",
+        "demonstrated": "first ordinary route: complete virtual-memory projection",
+        "unknown": "map refresh at RVA 0x229df4, register rekey and other routes"
+      },
+      "opcode_1": {
+        "status": "DEMOSTRADO",
+        "name": "PUSH_POOL_U32",
+        "scope": "two native wrapper/core boundaries, cached window, selector zero, add-encoded controls"
+      },
+      "full_isa_and_cfg": {
+        "status": "DESCONOCIDO"
+      },
+      "whole_vm": {
+        "status": "PARCIAL"
+      }
+    },
+    "User": {
+      "status": "PARCIAL",
+      "scope": "unchanged; XXVIII regression rerun"
+    },
+    "SHA": {
+      "status": "DESCONOCIDO",
+      "scope": "virtual ISA/materializer unchanged; functional hash and prior seed-region evidence remain"
+    },
+    "Hex": {
+      "status": "PARCIAL",
+      "scope": "XXVI literal corpus unchanged; reduced semantics partial"
+    }
+  },
+  "no_flag_search": true
+}

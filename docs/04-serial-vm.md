@@ -1,4 +1,4 @@
-# 04 — Serial-VM: behavior and unresolved virtualization
+# 04 — Serial-VM: first recovered instruction and remaining virtualization
 
 The executor is at `0x14022a120`. The existing
 [replacement](../src/pafet_serialvm_native_xviii.h) computes RC4 using a one-byte
@@ -28,15 +28,45 @@ That native region has an explicit effect IR and generated C++, checked against
 original x64 at every iteration. It hashes blob bytes; it does not decrypt them.
 The read count alone does not establish a decoded instruction-stream length.
 
+## First virtual instruction: JACK XXIX
+
+[JACK XXIX](../PAFET_JACK_XXIX.md) recovers the materializer at `RVA 0x1f1fe0`:
+103 permuted units of 26 bytes, three XOR passes, feedback, shadow and window
+masks. A scalar implementation checks all 2,678 bytes, the counter and bitmap
+after every original-x64 helper call in three synthetic cases. These helper
+tests run in isolated Unicorn and are not extra Windows paths.
+
+The observed internal context is at post-prologue RSP+0x190. Its register-bank
+and stack pointers are `+0x180/+0x188`, distinct from User-VM's layout.
+The first decoder at `RVA 0x229c70` maps unmasked header `0x21` through the
+table at `RVA 0x3ecf00` using XOR constants `0xdd/0x63`, producing opcode 1.
+Four remapped domains resolve through signed table entries and generated thunks.
+
+Opcode 1, `PUSH_POOL_U32`, reads a scrambled four-byte selector, resolves the
+constant pool, advances virtual PC and pushes an encoded uint64. The first
+instance uses selector 0 and advances PC 1→5, SP 0→1. A readable
+[semantic implementation](../devirt/serial.py) matches the whole declared
+virtual context and pointed roots in two Windows captures at the boundary
+after PUSH and before scheduler continuation. The first decoder transition
+also matches its native final virtual state. No RC4 output is used as input.
+
+Reproduce with `python -m devirt.serial_validate`. The
+[results](../jack_xxix_evidence/validation.json) separate eight full native/x64
+capture comparisons (35,699 instructions), reduced semantic comparisons and
+synthetic materializer tests. A natural domain-map refresh remains explicitly
+unknown to the reduced decoder despite matching Windows/Unicorn replay.
+
 ## Still unknown
 
-No validated Serial opcode grammar, materializer, instruction-to-handler map,
-complete internal state layout, virtual registers/stack/flags or virtual CFG
-is available. Entry RCX is an ABI argument, not sufficient evidence for the
-internal VM context base. Four pool-reader candidates have finite ALU-helper
+Only the first opcode's format/core, first decoder route and selected state
+mechanisms are demonstrated. The full ISA, virtual CFG, callbacks, register
+semantics, virtual flags, map/rekey/guard failures and native continuation remain
+partial or unknown. Entry RCX is the caller's argument array, not the internal
+context base. Four older pool-reader candidates have finite ALU-helper
 comparisons documented in [the pool report](../PAFET_SERIALVM_POOL.md). Their
 similarity to User-VM does not prove an identical ISA or dispatcher.
 
-Next: attribute reads of the verified blob to the first materialized buffer and
-capture opcode/operand boundaries. Keep RC4's algorithm state separate from
-unrecovered virtualization state. No complete Serial devirtualization is claimed.
+Next: reconstruct map refresh and other opcode-1 wrappers/windows, then decode
+the instruction at virtual PC 5. Keep RC4's algorithm state separate from
+the recovered virtualization mechanisms. No complete Serial devirtualization
+is claimed.

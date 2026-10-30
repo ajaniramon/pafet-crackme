@@ -1,0 +1,81 @@
+{
+  "frames": [
+    {
+      "frame": "frame_00",
+      "complete": {
+        "coverage": "complete",
+        "instructions_compared": 17816,
+        "candidate_instructions": 17816,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 21,
+          "pc": "0x7ff698fc8257",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 17816,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x7263bbfec30e",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    }
+  ],
+  "all_complete_inputs_match": true,
+  "scope": "Windows instruction observations; defined arithmetic flags; memory read/write events. Candidate uses captured inputs only."
+}

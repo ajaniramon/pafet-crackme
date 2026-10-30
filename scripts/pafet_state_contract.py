@@ -148,6 +148,9 @@ def validate_entry(entry,pe):
         require(entry.get('known_arrays')==arrays,'Pointed-array descriptors contradict the User profile','contradictory-memory')
     else:require(not entry.get('known_arrays'),'Generic profile cannot inherit User array descriptors','unsupported-profile')
     for region in meta.get('required_regions',[]):memory.read(region['address'],region['size'],region['role'])
+    for pointer in meta.get('pointer_roots',[]):
+        require(struct.unpack('<Q',memory.read(pointer['field'],8,'pointer field'))[0]==pointer['address'],'Declared pointer root contradicts before-memory','contradictory-memory')
+        memory.read(pointer['address'],pointer['size'],'declared pointer target')
     cookie=struct.unpack('<Q',memory.read(base+0x40d020,8,'runtime security cookie'))[0]
     # Populate initialized readonly PE memory, excluding uncaptured IAT bytes.
     initialized=Memory()

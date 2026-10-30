@@ -25,6 +25,18 @@ directories; the report gives generic and User profile commands.
 
 ## Semantic devirtualizer
 
+The Serial first-opcode operation is [JACK XXIX](../PAFET_JACK_XXIX.md):
+
+```bash
+python -m devirt.serial_validate
+python -m unittest devirt.test_ir devirt.test_serial -v
+```
+
+This verifies pinned Windows frames and reduced semantic boundaries, and
+regenerates the 2,678-byte unmasked buffer from the original PE. Its isolated
+helper tests use synthetic states and do not count as native Windows coverage.
+One decoder map-refresh route remains explicitly unknown in the semantic model.
+
 The reproducible source-to-IR-to-C++ operation is [JACK XVII](jack-xvii.md).
 Linux/WSL requires Python 3.10+, GCC C++17 and the pinned Python dependencies:
 

@@ -1,0 +1,8 @@
+{
+  "status": "blocked",
+  "classification": "capture",
+  "error": "[WinError 998] Se realiz\u00f3 un acceso no v\u00e1lido a la ubicaci\u00f3n de memoria.",
+  "frames": [],
+  "entry_rva": "0x229c70",
+  "collector_sha256": "b8a84da70b5066d655648b0f1a52150d4e509b496e0031308819fa00c1da694a"
+}

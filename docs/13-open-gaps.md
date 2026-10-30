@@ -33,12 +33,15 @@ coverage remain open.
 
 Behavioral RC4/SHA-256 replacements and output-pattern observations do not
 recover virtual programs. JACK XVII verifies initializer blob references and
-seed folds, but their materializers, opcode grammars, virtual states, handler
-maps, virtual CFGs and encoded execution remain unknown. Shared ALU helpers
-are not proof of identical VMs.
+seed folds. [JACK XXIX](../PAFET_JACK_XXIX.md) now recovers Serial's 103-unit
+materializer, first decoder route, selected encoded state and opcode 1
+(`PUSH_POOL_U32`), with two native semantic core comparisons. Its remaining
+opcode grammar/CFG, callbacks, map refresh, other rekey/window/guard cases and
+continuation remain open. SHA's materializer, ISA and virtual state still need
+independent discovery. Shared ALU helpers are not proof of identical VMs.
 
-Next: follow the verified blob reads into first materialized buffers, establish
-instruction boundaries, then lift one instruction with independent state tests.
+Next: close Serial's explicit map-refresh counterexample and follow virtual PC
+5; for SHA, follow the verified blob into its first materialized instruction.
 Do not substitute standard primitive rounds for unproved virtual semantics.
 JACK XXVIII supplies a generic capture profile and an 18-instruction Windows/
 Unicorn Serial seed-region comparison. It validates reusable transport, not a

@@ -109,7 +109,7 @@ def operands(ins,c,teb):
     return reads,writes
 
 
-def inputs(debugger,c,base,teb,pe,profile='user-v1',stop_rva=None,roots=()):
+def inputs(debugger,c,base,teb,pe,profile='user-v1',stop_rva=None,roots=(),pointer_roots=()):
     pages={};labels={};protections={}
     def capture(address,size,label):
         lo=address&~4095;end=(address+size+4095)&~4095
@@ -143,6 +143,14 @@ def inputs(debugger,c,base,teb,pe,profile='user-v1',stop_rva=None,roots=()):
     for register,size in roots:
         pointer=getattr(c,register.capitalize());capture(pointer,size,'declared root '+register)
         required.append({'address':pointer,'size':size,'role':'declared root '+register})
+    pointers=[]
+    for register,offset,size in pointer_roots:
+        field=getattr(c,register.capitalize())+offset
+        capture(field,8,'pointer-field provenance')
+        pointer=struct.unpack('<Q',debugger.read(field,8))[0]
+        capture(pointer,size,'pointed '+register+'+'+hex(offset))
+        required.append({'address':pointer,'size':size,'role':'pointed '+register+'+'+hex(offset)})
+        pointers.append({'field':field,'address':pointer,'size':size})
     capture(teb,4096,'GS base / TEB')
     tls=struct.unpack('<Q',debugger.read(teb+0x58,8))[0]
     pointed(tls,0x1000,'TLS pointer array')
@@ -158,7 +166,7 @@ def inputs(debugger,c,base,teb,pe,profile='user-v1',stop_rva=None,roots=()):
             'known_arrays':[{'address':struct.unpack_from('<Q',ctx,o)[0],'size':n,'role':role} for o,n,role in PROFILES[profile]['arrays']],
             'contract':{'version':1,'profile':profile,'stack':{'address':stack.Base,'size':stack.Size,'committed':True},
                         'selectors':{name:getattr(c,name) for name in ('SegCs','SegSs','SegDs','SegEs','SegFs','SegGs')},
-                        'fs_base':None,'required_regions':required,
+                        'fs_base':None,'required_regions':required,'pointer_roots':pointers,
                         'scope':'Discovered declared roots, not a universal transitive memory closure.'}}
     if stop_rva is not None:entry['stop']=base+stop_rva
     validate_entry(entry,pefile.PE(str(ROOT/'pafet.bin')))
@@ -191,6 +199,10 @@ def main():
     ap.add_argument('--profile',choices=sorted(PROFILES),default='user-v1')
     ap.add_argument('--stop-rva',type=lambda s:int(s,0),help='Explicit region boundary, instead of the entry return address')
     ap.add_argument('--region',action='append',default=[],help='Discovered required root REGISTER:SIZE, e.g. rdx:32')
+    ap.add_argument('--pointer-region',action='append',default=[],help='Discovered pointer field REGISTER:OFFSET:SIZE; verify its before value and capture its pointee')
+    ap.add_argument('--entry-any',action='append',type=lambda s:int(s,0),default=[],help='Up to four alternative entry RVAs, using DR0..DR3')
+    ap.add_argument('--stop-next',action='store_true',help='For a CALL-site entry, stop at its following instruction after the callee returns')
+    ap.add_argument('--select-counter',help='Capture only when dword [RCX+OFFSET] equals VALUE; read-only selection OFFSET:VALUE')
     args=ap.parse_args()
     require(C.sizeof(Context)==1232 and Context.Rip.offset==248 and C.sizeof(Event)==176 and C.sizeof(MemoryInfo)==48,'Unsupported Windows x64 context layout')
     require(args.frames>0,'Frame count must be positive','malformed-input')
@@ -198,6 +210,14 @@ def main():
     roots=[]
     for text in args.region:
         name,n=text.split(':');require(name in NAMES,'Unknown root register','malformed-input',register=name);roots.append((name,int(n,0)))
+    pointer_roots=[]
+    for text in args.pointer_region:
+        name,offset,n=text.split(':');require(name in NAMES and int(n,0)>0,'Invalid pointer root','malformed-input');pointer_roots.append((name,int(offset,0),int(n,0)))
+    entries=args.entry_any or [args.entry]
+    require(0<len(entries)<=4 and len(set(entries))==len(entries),'Hardware entry inventory must contain 1..4 distinct RVAs','malformed-input')
+    require(not(args.stop_next and args.stop_rva is not None),'Select one stop policy','malformed-input')
+    selection=tuple(int(n,0) for n in args.select_counter.split(':')) if args.select_counter else None
+    require(selection is None or len(selection)==2,'Counter selection needs OFFSET:VALUE','malformed-input')
     original=(ROOT/'pafet.bin').read_bytes();variant=(ROOT/'pafet_pass8.exe').read_bytes()
     require(hashlib.sha256(original).hexdigest()==ORIGINAL_SHA256 and hashlib.sha256(variant).hexdigest()==VARIANT_SHA256,'Research executable identity differs','integrity')
     require(len(original)==len(variant) and [i for i,(a,b) in enumerate(zip(original,variant)) if a!=b]==[0x395efb,0x395efc],'Unexpected executable changes','integrity')
@@ -207,6 +227,9 @@ def main():
     proc=subprocess.Popen([str(ROOT/'pafet_pass8.exe')],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,creationflags=0x2|0x08000000)
     proc.stdin.write(args.user.encode()+b'\r\nserial01\r\n');proc.stdin.flush()
     threads={};base=None;active=None;frames=[];event=Event();deadline=time.monotonic()+120;continued=True;invocations=0
+    def arm(c):
+        for i in range(4):setattr(c,'Dr'+str(i),base+entries[i] if i<len(entries) else 0)
+        c.Dr7=sum(1<<(2*i) for i in range(len(entries)));c.Dr6=0
     try:
         while time.monotonic()<deadline:
             if not debug.k.WaitForDebugEvent(C.byref(event),1000):continue
@@ -220,7 +243,7 @@ def main():
                 if h:debug.k.CloseHandle(h)
             elif event.Code==5:break
             if event.Code in (2,3):
-                h,_=threads[event.TID];backing,c=debug.get(h);c.Dr0=base+args.entry;c.Dr7=1;c.Dr6=0;debug.set(h,c)
+                h,_=threads[event.TID];backing,c=debug.get(h);arm(c);debug.set(h,c)
             elif event.Code==1:
                 code=event.u.exception.record.Code
                 if code==0x80000003:
@@ -228,15 +251,23 @@ def main():
                     pass
                 elif code==0x80000004:
                     h,teb=threads[event.TID];backing,c=debug.get(h)
-                    if active is None and c.Rip==base+args.entry:
+                    if active is None and c.Rip-base in entries:
                         invocations+=1
+                        if selection and struct.unpack('<I',debug.read(c.Rcx+selection[0],4))[0]!=selection[1]:
+                            c.Dr6=0;c.EFlags|=0x10000;debug.set(h,c)
+                            debug.checked(debug.k.ContinueDebugEvent(event.PID,event.TID,status));continued=True
+                            continue
                         if args.near_rekey and frames:
                             threshold,counter=struct.unpack('<II',debug.read(c.Rcx+0x1190,8))
                             if counter+16<threshold:
                                 c.Dr6=0;c.EFlags|=0x10000;debug.set(h,c)
                                 debug.checked(debug.k.ContinueDebugEvent(event.PID,event.TID,status));continued=True
                                 continue
-                        captured=inputs(debug,c,base,teb,pe,args.profile,args.stop_rva,roots)
+                        stop_rva=args.stop_rva
+                        if args.stop_next:
+                            call=next(md.disasm(debug.read(c.Rip,15),c.Rip));require(call.mnemonic=='call','--stop-next requires a CALL-site entry','capture')
+                            stop_rva=c.Rip-base+call.size
+                        captured=inputs(debug,c,base,teb,pe,args.profile,stop_rva,roots,pointer_roots)
                         captured['invocation']=invocations
                         active={'entry':captured,'trace':[],'thread':event.TID,'writes':[],'rekey':False}
                         print('entry',len(frames),hex(c.Rcx),'captured pages',len(captured['regions']),flush=True)
@@ -247,11 +278,11 @@ def main():
                         active['pending']['writes']=[[at,debug.read(at,size).hex()] for at,size in active['writes']]
                         active['trace'].append(active.pop('pending'))
                         if c.Rip==active['entry'].get('stop',active['entry']['native_return']):
-                            frame=save_frame(args.out,len(frames),active,debug,{'kind':'stop-rva' if args.stop_rva is not None else 'return','pc':hex(c.Rip)})
+                            frame=save_frame(args.out,len(frames),active,debug,{'kind':'stop-rva' if 'stop' in active['entry'] else 'return','pc':hex(c.Rip)})
                             frames.append(frame)
                             print(frame['stem'],frame['steps'],'instructions; rekey',active['rekey'],flush=True)
                             finish=len(frames)>=args.frames
-                            active=None;c.EFlags&=~0x100;c.Dr0=base+args.entry;c.Dr7=1;c.Dr6=0;debug.set(h,c)
+                            active=None;c.EFlags&=~0x100;arm(c);debug.set(h,c)
                             debug.checked(debug.k.ContinueDebugEvent(event.PID,event.TID,status));continued=True
                             if finish:break
                             continue
@@ -284,7 +315,8 @@ def main():
                   'contract_sha256':hashlib.sha256((ROOT/'scripts/pafet_state_contract.py').read_bytes()).hexdigest(),
                   'method':'Windows debug API; execution hardware breakpoint then trap-flag single step; no instruction patching',
                   'selection':'first control then counter within 16 of rekey threshold' if args.near_rekey else 'consecutive handler invocations',
-                  'entry_rva':hex(args.entry),
+                  'entry_rva':hex(entries[0]) if len(entries)==1 else None,
+                  'entry_rvas':list(map(hex,entries)),'select_counter':selection,'stop_next':args.stop_next,
                   'profile':args.profile,'stop_rva':hex(args.stop_rva) if args.stop_rva is not None else None,
                   'inputs':'Entry GPRs, RFLAGS, XMM, GS base and memory only; oracle after-state/reads are separate trace data.'}
         (args.out/'manifest.json').write_bytes(json.dumps(manifest,indent=2).encode()+b'\n')

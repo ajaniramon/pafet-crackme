@@ -1,0 +1,14 @@
+{
+  "relative_links_checked": 121,
+  "broken_links": [],
+  "original_pe_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "variant_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "unmasked_buffer_sha256": "3da8e439937fb6d275e309f2763248f1144c883853ed6c74f64f9298643bf7bf",
+  "archived_collector_sha256": "8692c415dbe2fa46ef122ca755222ca1a28fa65710556348e615a50e90a812a5",
+  "archived_contract_sha256": "bbb6aefba705adeddfa422d511e2cf635e87fdbe4d4503158c42ba5c9c57b5cc",
+  "archive_verified_for": [
+    "opcode1",
+    "opcode1_len16",
+    "decoder_len16"
+  ]
+}
