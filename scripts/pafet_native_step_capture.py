@@ -179,7 +179,7 @@ def dump(path,value):path.write_bytes(gzip.compress(json.dumps(value,separators=
 def save_frame(out,index,active,debugger,terminal):
     """Preserve observations and partial failures; never synthesize after states."""
     entry=active['entry'];oracle={k:v for k,v in active.items() if k not in ('entry','pending','writes')}
-    oracle['terminal']=terminal;oracle['complete']=terminal['kind'] in ('return','stop-rva')
+    oracle['terminal']=terminal;oracle['complete']=terminal['kind'] in ('return','stop-rva','stop-any')
     oracle['after_context_hex']=debugger.read(entry['context'],0x2000).hex() if entry.get('context') else None
     oracle['after_arrays']=[{'address':a['address'],'hex':debugger.read(a['address'],a['size']).hex(),'role':a['role']} for a in entry['known_arrays']]
     oracle['final_regions']=[{'address':a['address'],'hex':debugger.read(a['address'],a['size']).hex(),'role':a['role']} for a in entry.get('contract',{}).get('required_regions',[])]
@@ -198,6 +198,7 @@ def main():
     ap.add_argument('--entry',type=lambda s:int(s,0),default=0x3bea0,help='original native entry RVA (default DROP; 0x4930 for natural register rekey)')
     ap.add_argument('--profile',choices=sorted(PROFILES),default='user-v1')
     ap.add_argument('--stop-rva',type=lambda s:int(s,0),help='Explicit region boundary, instead of the entry return address')
+    ap.add_argument('--stop-any',action='append',type=lambda s:int(s,0),default=[],help='Alternative static terminal RVAs; stop at the first naturally reached one')
     ap.add_argument('--region',action='append',default=[],help='Discovered required root REGISTER:SIZE, e.g. rdx:32')
     ap.add_argument('--pointer-region',action='append',default=[],help='Discovered pointer field REGISTER:OFFSET:SIZE; verify its before value and capture its pointee')
     ap.add_argument('--entry-any',action='append',type=lambda s:int(s,0),default=[],help='Up to four alternative entry RVAs, using DR0..DR3')
@@ -216,6 +217,7 @@ def main():
     entries=args.entry_any or [args.entry]
     require(0<len(entries)<=4 and len(set(entries))==len(entries),'Hardware entry inventory must contain 1..4 distinct RVAs','malformed-input')
     require(not(args.stop_next and args.stop_rva is not None),'Select one stop policy','malformed-input')
+    require(not args.stop_any or (not args.stop_next and args.stop_rva is None),'Select one stop policy','malformed-input')
     selection=tuple(int(n,0) for n in args.select_counter.split(':')) if args.select_counter else None
     require(selection is None or len(selection)==2,'Counter selection needs OFFSET:VALUE','malformed-input')
     original=(ROOT/'pafet.bin').read_bytes();variant=(ROOT/'pafet_pass8.exe').read_bytes()
@@ -268,6 +270,7 @@ def main():
                             call=next(md.disasm(debug.read(c.Rip,15),c.Rip));require(call.mnemonic=='call','--stop-next requires a CALL-site entry','capture')
                             stop_rva=c.Rip-base+call.size
                         captured=inputs(debug,c,base,teb,pe,args.profile,stop_rva,roots,pointer_roots)
+                        if args.stop_any:captured['stop_any']=[base+x for x in args.stop_any];validate_entry(captured,pefile.PE(str(ROOT/'pafet.bin')))
                         captured['invocation']=invocations
                         active={'entry':captured,'trace':[],'thread':event.TID,'writes':[],'rekey':False}
                         print('entry',len(frames),hex(c.Rcx),'captured pages',len(captured['regions']),flush=True)
@@ -277,8 +280,8 @@ def main():
                         active['pending']['after']=state(c)
                         active['pending']['writes']=[[at,debug.read(at,size).hex()] for at,size in active['writes']]
                         active['trace'].append(active.pop('pending'))
-                        if c.Rip==active['entry'].get('stop',active['entry']['native_return']):
-                            frame=save_frame(args.out,len(frames),active,debug,{'kind':'stop-rva' if 'stop' in active['entry'] else 'return','pc':hex(c.Rip)})
+                        if c.Rip in active['entry'].get('stop_any',[active['entry'].get('stop',active['entry']['native_return'])]):
+                            frame=save_frame(args.out,len(frames),active,debug,{'kind':'stop-any' if 'stop_any' in active['entry'] else 'stop-rva' if 'stop' in active['entry'] else 'return','pc':hex(c.Rip)})
                             frames.append(frame)
                             print(frame['stem'],frame['steps'],'instructions; rekey',active['rekey'],flush=True)
                             finish=len(frames)>=args.frames
@@ -317,6 +320,7 @@ def main():
                   'selection':'first control then counter within 16 of rekey threshold' if args.near_rekey else 'consecutive handler invocations',
                   'entry_rva':hex(entries[0]) if len(entries)==1 else None,
                   'entry_rvas':list(map(hex,entries)),'select_counter':selection,'stop_next':args.stop_next,
+                  'stop_any_rvas':list(map(hex,args.stop_any)),
                   'profile':args.profile,'stop_rva':hex(args.stop_rva) if args.stop_rva is not None else None,
                   'inputs':'Entry GPRs, RFLAGS, XMM, GS base and memory only; oracle after-state/reads are separate trace data.'}
         (args.out/'manifest.json').write_bytes(json.dumps(manifest,indent=2).encode()+b'\n')

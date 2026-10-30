@@ -6,7 +6,7 @@ An independent reconstruction of **PAFET**, the Windows x64 crackme by **NIMA Ni
 
 The project's final objective is a **clean, readable `pafet.cpp` faithful to the original mechanisms of all four VMs**. Matching outputs or retaining a large literal x64-to-C++ translation is an intermediate result, not that final objective.
 
-Literal Hex-VM baseline: [JACK XXVI, `a3fd245`](https://github.com/ajaniramon/pafet-crackme/commit/a3fd245dfd39dd0cd36a1c47b5534c64f0f138c4). Current semantic work: [JACK XVII — DE VIRTUAL MACHINA](docs/jack-xvii.md), 30 October 2026, following XXVII.
+Literal Hex-VM baseline: [JACK XXVI, `a3fd245`](https://github.com/ajaniramon/pafet-crackme/commit/a3fd245dfd39dd0cd36a1c47b5534c64f0f138c4). Current semantic work: [JACK XXX — PC 5](PAFET_JACK_XXX.md), extending the [JACK XVII devirtualizer](docs/jack-xvii.md).
 
 ## Current state
 
@@ -14,7 +14,7 @@ Literal Hex-VM baseline: [JACK XXVI, `a3fd245`](https://github.com/ajaniramon/pa
 |---|---|---|---|
 | User-VM | [Semantic devirtualizer](devirt/), [structured C++](jack_xvii_evidence/generated/user.structured.cpp), [bytecode model](src/pafet_original_vm_xxiii.cpp) and [native wrappers](src/pafet_lifted_xxiv.cpp) | All 73 materialization segments; 339 instructions lifted; 17 Windows executions and 54,108 logical steps compared; five wrapper bodies checked against original x64 | Complete native encoded state, scheduling, guards and exception behavior; integration into a faithful whole-VM reconstruction |
 | Hex-VM | [Literal executor](src/pafet_hexvm_executor_lifted_xxvi.cpp), [translated instructions](src/hexvm_lifted_xxvi/), [CPU model](src/pafet_hexvm_cpu_xxvi.h) and [host services](src/pafet_hexvm_host_xxvi.h) | Initialization through cleanup and return for the validated corpus; 286,214 native push boundaries matched; 10 independent input/output cases | Reduce the literal translation to semantic IR; broaden seed, branch and failure-path coverage |
-| Serial-VM | [First-opcode semantic model](devirt/serial.py), materializer and [functional RC4 replacement](src/pafet_serialvm_native_xviii.h) | 103 materialization units verified against original x64; first decoder transition; opcode 1 (`PUSH_POOL_U32`) checked against Windows in two domains | Remaining opcode grammar/CFG, map refresh, other state and continuation paths, callbacks and virtualized RC4 program |
+| Serial-VM | [Continuous semantic model](devirt/serial_continuous.py), materializer and [functional RC4 replacement](src/pafet_serialvm_native_xviii.h) | 103 materialization units; two consecutive virtual instructions from one initial state, checked through the next inline decoder in three fresh Windows processes | Remaining ISA/CFG, PC 8/rekey, native caller/outer dispatcher resumption, full remap rebuild, other windows and virtualized RC4 program |
 | SHA-VM | [SHA-256 implementation](src/pafet_shavm_native_xix.h), plus [initialization IR](jack_xvii_evidence/regions/sha.seed.ir.json) | Twelve fixed-vector tests and historical digest observations; original blob-seed loop checked per iteration | Recover materialization, opcode format, state, dispatch and the virtualized SHA program |
 | Crypto/controller | [DES/3DES implementation](src/pafet_des3_xxi.h), [offline oracle](scripts/pafet_des3_offline.py), [behavioral demonstrator](src/pafet_recompile_xxi.cpp) | Recovered key construction, cipher composition and controlled rekeying example | Integrate the newer VM reconstructions; account for native partial-block memory behavior; recover the original credentials/flag |
 
@@ -36,7 +36,9 @@ The [new corpus](jack_xxviii_evidence/corpus.json) adds **5,837 Windows/Unicorn 
 
 Run `python scripts/pafet_lab_xxviii.py` for pinned native replay, or add `--cpp` under Linux/WSL with GCC for the translation comparison. See the report for reproduction, negative controls, the Serial/SHA reuse assessment and remaining OS/exception-state limitations.
 
-[JACK XXIX — First Opcode](PAFET_JACK_XXIX.md) follows Serial initialization from `0x14022a120` to its materializer, byte decoder and remapped dispatcher. The first instruction reads a scrambled four-byte pool selector and pushes the recovered constant through the original encoded-stack mechanism. A reduced model matches the whole declared virtual context and pointed roots at the core boundary in two independent Windows captures; full enclosing x64 replays and the separately labelled materializer-helper tests also pass. A second decoder route activates an explicitly unmodeled map refresh. Run `python -m devirt.serial_validate` to reproduce; this is one recovered instruction, not complete Serial devirtualization.
+[JACK XXIX — First Opcode](PAFET_JACK_XXIX.md) follows Serial initialization from `0x14022a120` to its materializer, byte decoder and remapped dispatcher. Its first PUSH model matches native core boundaries, before continuation. The decoder-key probe left open by that operation is reconstructed in JACK XXX; the historical XXIX model retains its original narrower contract.
+
+[JACK XXX — PC 5](PAFET_JACK_XXX.md) reaches **continuous semantic equivalence** for `PC 0: PUSH_POOL_U32 → PC 5: STORE_REG_U16 → PC 8`. The second step receives only the state produced by the first. Three fresh Windows processes match the full Serial context, register banks, all stack cells, buffers, bitmaps, dispatch tables, thunk pool and writable PE state at the next decoder frontiers. A fourth matches a child-wrapper return handoff to its pending parent; native caller resumption remains unsupported. Native replay, local semantics and continuous semantics are reported separately, and two incomplete captures are rejected. Run `python -m devirt.serial_continuous_validate` to reproduce.
 
 ## Executable architecture and evidence identity
 
@@ -296,6 +298,7 @@ These are primitive/oracle tests, not instruction-level Serial-VM or SHA-VM reco
 | [state_divergence_evidence/](state_divergence_evidence/) | Independent before/after native instruction data, missing-input counterfactuals and corrected capture regressions |
 | [jack_xxviii_evidence/](jack_xxviii_evidence/) | Pinned native-state corpus, new User/Serial/cookie captures, explicit queue/C++ blockers and laboratory regressions |
 | [jack_xxix_evidence/](jack_xxix_evidence/) | Serial materialization, first decoder/opcode models, native captures and explicit unknown map-refresh route |
+| [jack_xxx_evidence/](jack_xxx_evidence/) | Continuous two-instruction Serial comparisons, boundary map, key probe, counterexamples and regression results |
 | [jack_xxvi_evidence/](jack_xxvi_evidence/) | Hex-VM manifests, native frames, full/standalone comparisons, arithmetic tests and Windows package |
 | [vm_pools_evidence/](vm_pools_evidence/) | Earlier pool, bytecode and primitive observations; provenance and scope vary by artifact |
 | [docs/](docs/) | Detailed topic notes, including historical interpretations superseded by the later JACK work |

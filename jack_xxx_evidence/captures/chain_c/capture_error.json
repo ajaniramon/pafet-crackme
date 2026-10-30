@@ -1,0 +1,16 @@
+{
+  "status": "blocked",
+  "classification": "capture",
+  "error": "frame trace limit",
+  "frames": [
+    {
+      "stem": "frame_00",
+      "status": "blocked",
+      "steps": 100001,
+      "entry_sha256": "a4f44d128d7015b551e6d689db9d0a37b74357a5045527472abaa5efaef3e20b",
+      "trace_sha256": "f996468fafa52848b2ecf00de656ff167d9652e76b4970e1d15043c2d7dc6717"
+    }
+  ],
+  "entry_rva": "0x3bea0",
+  "collector_sha256": "b40510dbe673af7b551773a6c05d41dd882fd8f579e9a3dfa904f6ee90fe713d"
+}

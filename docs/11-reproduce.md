@@ -25,6 +25,19 @@ directories; the report gives generic and User profile commands.
 
 ## Semantic devirtualizer
 
+The current Serial continuous interval is [JACK XXX](../PAFET_JACK_XXX.md):
+
+```bash
+python scripts/pafet_serial_audit_xxx.py
+python -m devirt.serial_continuous_validate
+python -m unittest devirt.test_ir devirt.test_serial devirt.test_serial_continuous -v
+```
+
+The report separates native replay (A), isolated semantic equivalence (B) and
+two dependent virtual steps without restoration (C). Unknown native return
+continuations and incomplete captures remain explicit. Fresh Windows capture uses
+`jack_xxx_evidence/capture_command.ps1` in the existing research lab.
+
 The Serial first-opcode operation is [JACK XXIX](../PAFET_JACK_XXIX.md):
 
 ```bash
@@ -35,7 +48,8 @@ python -m unittest devirt.test_ir devirt.test_serial -v
 This verifies pinned Windows frames and reduced semantic boundaries, and
 regenerates the 2,678-byte unmasked buffer from the original PE. Its isolated
 helper tests use synthetic states and do not count as native Windows coverage.
-One decoder map-refresh route remains explicitly unknown in the semantic model.
+The historical model leaves one decoder key-probe route unknown; XXX validates
+that probe in its separate reduced decoder.
 
 The reproducible source-to-IR-to-C++ operation is [JACK XVII](jack-xvii.md).
 Linux/WSL requires Python 3.10+, GCC C++17 and the pinned Python dependencies:

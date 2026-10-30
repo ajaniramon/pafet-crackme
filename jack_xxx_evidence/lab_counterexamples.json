@@ -1,0 +1,31 @@
+{
+  "relocation_side_effect": {
+    "reproducer": "pe=pefile.PE(original); validate_entry(entry,pe); pe.get_data(0x3ead00,68)",
+    "result": {
+      "observed": true,
+      "type": "ValueError",
+      "message": "mmap closed or invalid"
+    },
+    "classification": "validation image ownership",
+    "fix": "Separate relocated validation PE and pristine semantic PE; no observed output is injected."
+  },
+  "short_thunk": {
+    "case": "captures/chain_b",
+    "classification": "resolver codec boundary",
+    "original_failure": "Unknown thunk template",
+    "cause": "A two-instruction movabs/jmp thunk was decoded as four instructions, including unrelated padding.",
+    "fix": "Stop at the first JMP; validate the fixed two/four-instruction templates.",
+    "regression": "devirt.test_serial_continuous.ContinuousSerialTests.test_return_handoff_after_second_instruction_is_exact"
+  },
+  "capture_boundaries": {
+    "cases": [
+      "captures/chain_c",
+      "captures/chain_d"
+    ],
+    "classification": "incomplete observation",
+    "cause": "The initial terminal set included inline decoder entries but omitted wrapper returns to their native callers.",
+    "observed_prefix_instructions_each": 100001,
+    "treatment": "Retain raw frames; reject before Level A/C execution. Add declared static wrapper-return terminals for fresh captures."
+  },
+  "one_byte_control": "validation.json: one_byte_negative_control"
+}

@@ -126,6 +126,8 @@ def validate_entry(entry,pe):
     require(isinstance(native_return,int),'Initial return address is required')
     require(struct.unpack('<Q',memory.read(rsp,8,'entry return slot'))[0]==native_return,'Return address contradicts entry stack','contradictory-memory')
     stop=entry.get('stop',native_return);require(isinstance(stop,int) and stop!=state['rip'],'A nonempty execution boundary is required','malformed-input')
+    if 'stop_any' in entry:
+        stops=entry['stop_any'];require(isinstance(stops,list) and stops and len(stops)==len(set(stops)) and all(isinstance(s,int) and base<=s<base+image_size and s!=state['rip'] for s in stops),'Invalid alternative boundaries','malformed-input')
     require(base<=state['rip']<base+image_size,'Entry RIP is outside the verified PE','malformed-input')
     stack=meta.get('stack')
     if stack:

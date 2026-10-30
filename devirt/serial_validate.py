@@ -98,7 +98,7 @@ def helper_validation(pe):
             'scope':'Original x64 helpers in isolated Unicorn with synthetic initialized memory. These are not additional Windows captures or proof of 103 opcode semantics.'}
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--skip-helpers',action='store_true');args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--skip-helpers',action='store_true');ap.add_argument('--output',type=pathlib.Path,default=OUT/'validation.json');args=ap.parse_args()
     require(sys.flags.optimize==0,'Reused isolated helper harness uses assertions; run without python -O','unsupported-runtime')
     registry=json.loads((OUT/'corpus.json').read_bytes())
     for path,sha in registry['artifacts'].items():load_verified(ROOT/path,sha)
@@ -121,6 +121,6 @@ def main():
             rows.append(row);print(folder.name,'Windows/Unicorn PASS',len(oracle['trace']),'semantic='+('PASS' if row.get('semantic',{}).get('all_virtual_regions_match') else row.get('semantic',{}).get('status','not-claimed')),flush=True)
     report={'all_claimed_checks_pass':True,'captures':rows,'native_windows_instructions':sum(r['windows_unicorn']['instructions_compared'] for r in rows),'first_instruction_semantic_cases':sum(r['kind']=='instruction' for r in rows),'helper_validation':None if args.skip_helpers else helper_validation(pe),
             'source_sha256':{p.as_posix():digest((ROOT/p).read_bytes()) for p in map(pathlib.Path,['devirt/serial.py','devirt/serial_validate.py','scripts/pafet_native_step_capture.py','scripts/pafet_state_contract.py','scripts/pafet_state_replay.py','scripts/pafet_state_compare.py','scripts/pafet_semantic_probe.py','scripts/pafet_audit_xxiv.py','scripts/pafet_serial_audit_xxix.py'])},'scope':'First opcode and bounded decoder routes; explicit unknown map-refresh branch; no full Serial VM or RC4-program claim.'}
-    (OUT/'validation.json').write_bytes(json.dumps(report,indent=2).encode()+b'\n')
+    args.output.write_bytes(json.dumps(report,indent=2).encode()+b'\n')
     print('PASS: pinned native paths and claimed semantic boundaries; unknown route retained')
 if __name__=='__main__':main()

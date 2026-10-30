@@ -1,0 +1,259 @@
+{
+  "all_checks_pass": true,
+  "fresh_frames": [
+    {
+      "case": "alice",
+      "frame": 0,
+      "steps": 2903,
+      "native_context_and_all_captured_regions_match": true,
+      "native_16_return_gprs_match": true,
+      "cpp_original_x64_instruction_lockstep": true
+    },
+    {
+      "case": "alice",
+      "frame": 1,
+      "steps": 2796,
+      "native_context_and_all_captured_regions_match": true,
+      "native_16_return_gprs_match": true,
+      "cpp_original_x64_instruction_lockstep": true
+    },
+    {
+      "case": "ramon",
+      "frame": 0,
+      "steps": 282,
+      "native_context_and_all_captured_regions_match": true,
+      "native_16_return_gprs_match": true,
+      "cpp_original_x64_instruction_lockstep": true
+    },
+    {
+      "case": "ramon",
+      "frame": 1,
+      "steps": 2796,
+      "native_context_and_all_captured_regions_match": true,
+      "native_16_return_gprs_match": true,
+      "cpp_original_x64_instruction_lockstep": true
+    },
+    {
+      "case": "long_a23",
+      "frame": 0,
+      "steps": 282,
+      "native_context_and_all_captured_regions_match": true,
+      "native_16_return_gprs_match": true,
+      "cpp_original_x64_instruction_lockstep": true
+    },
+    {
+      "case": "long_a23",
+      "frame": 1,
+      "steps": 3589,
+      "native_context_and_all_captured_regions_match": true,
+      "native_16_return_gprs_match": true,
+      "cpp_original_x64_instruction_lockstep": true
+    }
+  ],
+  "historical_frames_rejected": [
+    {
+      "case": "alice",
+      "frame": 0,
+      "missing_inputs": [
+        {
+          "role": "encoded register banks",
+          "pointer": "0xbe908f7b80",
+          "size": 4096,
+          "missing": [
+            [
+              "0xbe908f8590",
+              "0xbe908f8b80"
+            ]
+          ]
+        },
+        {
+          "role": "encoded virtual stack",
+          "pointer": "0xbe908f8b80",
+          "size": 8192,
+          "missing": [
+            [
+              "0xbe908f8b80",
+              "0xbe908fab80"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "alice",
+      "frame": 1,
+      "missing_inputs": [
+        {
+          "role": "encoded register banks",
+          "pointer": "0xbe908f7b80",
+          "size": 4096,
+          "missing": [
+            [
+              "0xbe908f8590",
+              "0xbe908f8b80"
+            ]
+          ]
+        },
+        {
+          "role": "encoded virtual stack",
+          "pointer": "0xbe908f8b80",
+          "size": 8192,
+          "missing": [
+            [
+              "0xbe908f8b80",
+              "0xbe908fab80"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "ramon",
+      "frame": 0,
+      "missing_inputs": [
+        {
+          "role": "encoded register banks",
+          "pointer": "0x3d99af7e30",
+          "size": 4096,
+          "missing": [
+            [
+              "0x3d99af8840",
+              "0x3d99af8e30"
+            ]
+          ]
+        },
+        {
+          "role": "encoded virtual stack",
+          "pointer": "0x3d99af8e30",
+          "size": 8192,
+          "missing": [
+            [
+              "0x3d99af8e30",
+              "0x3d99afae30"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "ramon",
+      "frame": 1,
+      "missing_inputs": [
+        {
+          "role": "encoded register banks",
+          "pointer": "0x3d99af7e30",
+          "size": 4096,
+          "missing": [
+            [
+              "0x3d99af8840",
+              "0x3d99af8e30"
+            ]
+          ]
+        },
+        {
+          "role": "encoded virtual stack",
+          "pointer": "0x3d99af8e30",
+          "size": 8192,
+          "missing": [
+            [
+              "0x3d99af8e30",
+              "0x3d99afae30"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "long_a23",
+      "frame": 0,
+      "missing_inputs": [
+        {
+          "role": "encoded register banks",
+          "pointer": "0x7fbf797b80",
+          "size": 4096,
+          "missing": [
+            [
+              "0x7fbf798590",
+              "0x7fbf798b80"
+            ]
+          ]
+        },
+        {
+          "role": "encoded virtual stack",
+          "pointer": "0x7fbf798b80",
+          "size": 8192,
+          "missing": [
+            [
+              "0x7fbf798b80",
+              "0x7fbf79ab80"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "case": "long_a23",
+      "frame": 1,
+      "missing_inputs": [
+        {
+          "role": "encoded register banks",
+          "pointer": "0x7fbf797b80",
+          "size": 4096,
+          "missing": [
+            [
+              "0x7fbf798590",
+              "0x7fbf798b80"
+            ]
+          ]
+        },
+        {
+          "role": "encoded virtual stack",
+          "pointer": "0x7fbf798b80",
+          "size": 8192,
+          "missing": [
+            [
+              "0x7fbf798b80",
+              "0x7fbf79ab80"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "windows_single_step_frames": [
+    {
+      "entry": "state_divergence_evidence/drop_control/frame_00.entry.json.gz",
+      "steps": 820,
+      "cpp_and_original_x64_instruction_lockstep": true,
+      "windows_final_gprs_context_and_pointed_arrays_match": true
+    },
+    {
+      "entry": "state_divergence_evidence/drop_control/frame_01.entry.json.gz",
+      "steps": 2588,
+      "cpp_and_original_x64_instruction_lockstep": true,
+      "windows_final_gprs_context_and_pointed_arrays_match": true
+    },
+    {
+      "entry": "state_divergence_evidence/second_rekey/frame_00.entry.json.gz",
+      "steps": 14338,
+      "cpp_and_original_x64_instruction_lockstep": true,
+      "windows_final_gprs_context_and_pointed_arrays_match": true
+    },
+    {
+      "entry": "state_divergence_evidence/second_rekey/frame_01.entry.json.gz",
+      "steps": 14244,
+      "cpp_and_original_x64_instruction_lockstep": true,
+      "windows_final_gprs_context_and_pointed_arrays_match": true
+    }
+  ],
+  "capture_sha256": "8009caac5dab52de42d637c90318681602cebe03aab7bd1d1a672b0894cebc31",
+  "validation_source_sha256": "999560c157a6f7ae425ce1a5953e7b49a909581221f279c8d8359de2af2de731",
+  "runtime_source_sha256": {
+    "scripts/pafet_capture_native_xxiv.py": "a1d1d6eb3f86310b470eeb428cb529f29adb1487d9c8967951a81ef5570dfb75",
+    "scripts/pafet_h3bea0_unicorn_xiii.py": "a11a9d5ffbf1ec05c0b8dd2158f42c4c9b49fe8a127116d8796d50b7aa0f3251",
+    "scripts/pafet_uservm_inputs.py": "056655c9717da5b5ad78f0d7912aecc184e3a7d0b3f4c1a25d44b3e3d6f6e92a",
+    "src/pafet_lifted_xxiv.cpp": "2ff54f80d096e1a2ae057043dad5f8e3c2835778f069c4f0ad0ce9e026d01dc8",
+    "src/pafet_native_state_xxiv.h": "f9d68b3fee44a29202b8380c6b25fa4def9c5a6c6ea590f783e25e572d49a617"
+  },
+  "scope": "Fresh native before-inputs only. Original incomplete snapshots are rejected, not repaired from their expected results. No complete VM/universal-equivalence claim."
+}

@@ -1,0 +1,55 @@
+{
+  "operation": "JACK XXX",
+  "baseline_commit": "8207c85ee15566cc18762ba3209ff0938a115872",
+  "Serial": {
+    "continuous_two_steps": {
+      "status": "DEMOSTRADO",
+      "level": "C",
+      "scope": "Three fresh processes through both next-inline-decoder frontiers; one additional process through second wrapper return handoff. No intermediate state restoration.",
+      "evidence": "validation.json"
+    },
+    "opcodes": {
+      "1": "PUSH_POOL_U32, selector zero",
+      "5": "STORE_REG_U16, register 16; PC 5 -> 8"
+    },
+    "inline_continuation": {
+      "status": "DEMOSTRADO",
+      "scope": "recorded guards/empty queue/thread budget, mutation, feedback and decoder routes"
+    },
+    "return_handoff": {
+      "status": "DEMOSTRADO",
+      "scope": "exact context at wrapper return; resumption is unsupported"
+    },
+    "native_return_resume": {
+      "status": "DESCONOCIDO"
+    },
+    "dispatch_table_probe": {
+      "status": "DEMOSTRADO",
+      "level": "B",
+      "scope": "retained natural XXIX decoder capture; key refresh, no table rewrite; not exercised in fresh C chains"
+    },
+    "full_remap_rebuild_register_rekey_other_windows": {
+      "status": "PARCIAL",
+      "scope": "explicit unsupported exits"
+    },
+    "full_isa_cfg_callbacks": {
+      "status": "DESCONOCIDO"
+    },
+    "whole_vm": {
+      "status": "PARCIAL"
+    }
+  },
+  "User": {
+    "status": "PARCIAL",
+    "change": "none; prior regressions rerun"
+  },
+  "Hex": {
+    "status": "PARCIAL",
+    "change": "none; portable arithmetic regression rerun"
+  },
+  "SHA": {
+    "status": "PARCIAL",
+    "change": "none; native ISA/state remain unknown"
+  },
+  "no_credential_search": true
+}

@@ -1,0 +1,79 @@
+{
+  "relative_file_links_checked": 128,
+  "missing": [],
+  "regression_summaries": {
+    "xxviii_regression.json": {
+      "summary_fields": {
+        "all_required_checks_pass": true,
+        "additional_complete_instructions": 5837,
+        "additional_complete_regions": 6,
+        "additional_user_instructions": 5813,
+        "new_unique_native_pcs": 1287,
+        "new_observed_control_edges": 82,
+        "scope": "Finite observed paths. Expected trace is consumed only for comparisons; replay uses entry inputs. Blocked prefixes never count as complete routes."
+      }
+    },
+    "xxix_regression.json": {
+      "summary_fields": {
+        "all_claimed_checks_pass": true,
+        "native_windows_instructions": 35699,
+        "first_instruction_semantic_cases": 2,
+        "scope": "First opcode and bounded decoder routes; explicit unknown map-refresh branch; no full Serial VM or RC4-program claim."
+      }
+    },
+    "uservm_regression.json": {
+      "summary_fields": {
+        "all_checks_pass": true,
+        "capture_sha256": "8009caac5dab52de42d637c90318681602cebe03aab7bd1d1a672b0894cebc31",
+        "validation_source_sha256": "999560c157a6f7ae425ce1a5953e7b49a909581221f279c8d8359de2af2de731",
+        "scope": "Fresh native before-inputs only. Original incomplete snapshots are rejected, not repaired from their expected results. No complete VM/universal-equivalence claim."
+      }
+    },
+    "wide_arithmetic_differential.json": {
+      "summary_fields": {
+        "seed": 2539742,
+        "passes": 1024,
+        "cases_per_operation": 128,
+        "executable_sha256": "1a26d7459381bce5ef4bdecbd7571bdfff013cee70092f813ca8aee2cc5d6aef",
+        "oracle": "independent x64 instructions under Unicorn",
+        "candidate": "MSVC CPU runtime, _mul128/_umul128/_udiv128",
+        "scope": "signed/unsigned wide multiply/divide, overflow faults, 32-bit multiply, carry/overflow/arithmetic flags"
+      }
+    }
+  },
+  "powershell_capture_command_parsed": true,
+  "final_model_source_hashes_match": true,
+  "unit_source_hashes_match": true,
+  "distinct_unit_tests": 54,
+  "optimized_repeat_tests": 25,
+  "complete_capture_archives": [
+    {
+      "case": "chain_a",
+      "run_id": "d8edc2d740a940f6941e08de39ea4fa1",
+      "source_hashes_match": true
+    },
+    {
+      "case": "chain_b",
+      "run_id": "4f210b58bf8a416e98a8a4bcfb4b8945",
+      "source_hashes_match": true
+    },
+    {
+      "case": "chain_e",
+      "run_id": "32f1800898434565ab8c056073749644",
+      "source_hashes_match": true
+    },
+    {
+      "case": "chain_f",
+      "run_id": "f817b69e00b348d8a16919c963a47a4c",
+      "source_hashes_match": true
+    }
+  ],
+  "document_sha256": {
+    "README.md": "5e5a3cab162e4fb4c6f147058e3a6690c5d06ce00b0808890f3a54a7908b52c1",
+    "PAFET_JACK_XXX.md": "3f12cd38f1adc7bd822cead573de144d9b0e2738be7a5693883e5c89ef33aa46",
+    "docs/04-serial-vm.md": "da97c663f1dafa16a4c8978c1697a8a58360ff5522c9e9a5114ecd4885d20f77",
+    "docs/11-reproduce.md": "0b0ad22ac0e38fe462f1b0d3fa8aa635d6e3c7a14c82f00f359386726d8a44c0",
+    "docs/13-open-gaps.md": "9a3b16d61d7c2061560a7346b352b006236cd34165b089f110f57a4a6875fce7"
+  },
+  "utf8_document_review_pass": true
+}

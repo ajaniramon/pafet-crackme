@@ -27,7 +27,7 @@ def validate_oracle(entry,oracle):
         require(0<len(bytes.fromhex(row['bytes']))<=15,'Invalid observed instruction','observation',step=number)
         pc=row['after']['rip']
     complete=oracle.get('complete',True)
-    if complete:require(pc==entry.get('stop',entry['native_return']),'Truncated native trace','observation',last_pc=hex(pc))
+    if complete:require(pc in entry.get('stop_any',[entry.get('stop',entry['native_return'])]),'Truncated native trace','observation',last_pc=hex(pc))
     return complete
 
 def compare(entry,oracle,coverage='complete'):

@@ -1,0 +1,19 @@
+{
+  "seed": 2539742,
+  "passes": 1024,
+  "cases_per_operation": 128,
+  "operations": [
+    "48f7eb",
+    "48f7e3",
+    "48f7f3",
+    "48f7fb",
+    "480fafc3",
+    "4801d8",
+    "4829d8",
+    "0fafc3"
+  ],
+  "executable_sha256": "1a26d7459381bce5ef4bdecbd7571bdfff013cee70092f813ca8aee2cc5d6aef",
+  "oracle": "independent x64 instructions under Unicorn",
+  "candidate": "MSVC CPU runtime, _mul128/_umul128/_udiv128",
+  "scope": "signed/unsigned wide multiply/divide, overflow faults, 32-bit multiply, carry/overflow/arithmetic flags"
+}

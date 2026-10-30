@@ -1,4 +1,4 @@
-# 04 — Serial-VM: first recovered instruction and remaining virtualization
+# 04 — Serial-VM: continuous first steps and remaining virtualization
 
 The executor is at `0x14022a120`. The existing
 [replacement](../src/pafet_serialvm_native_xviii.h) computes RC4 using a one-byte
@@ -53,20 +53,40 @@ also matches its native final virtual state. No RC4 output is used as input.
 Reproduce with `python -m devirt.serial_validate`. The
 [results](../jack_xxix_evidence/validation.json) separate eight full native/x64
 capture comparisons (35,699 instructions), reduced semantic comparisons and
-synthetic materializer tests. A natural domain-map refresh remains explicitly
-unknown to the reduced decoder despite matching Windows/Unicorn replay.
+synthetic materializer tests. XXIX left a natural table-dependent key refresh
+unknown to its reduced decoder; XXX recovers that branch separately below.
+
+## Continuous interval: JACK XXX
+
+[JACK XXX](../PAFET_JACK_XXX.md) closes the first PUSH continuation, identifies
+the actual next instruction as `STORE_REG_U16` at PC 5, and executes both from
+one captured initial state. The second instruction decodes register 16, pops
+and scrubs the stack cell, writes the encoded bank cell, and updates integrity
+state. Final logical state is PC 8, SP 0.
+
+Three fresh Windows processes match every declared virtual-state byte at the
+next inline decoder. A fourth matches a child-wrapper return handoff to its
+pending parent; native caller resumption is still unsupported. Both control
+encodings and both register encodings occur in the validated fresh cases. A separate retained decoder
+capture verifies the table-dependent key probe; that branch does not rewrite
+the remap table. See [validation](../jack_xxx_evidence/validation.json).
+
+The public API is `SerialVMState.from_initial_capture(before, original_pe)`
+followed by repeated `step()` calls, exported from `devirt.serial`. The second
+step consumes only the first step's state. Incomplete captures and unknown
+routes fail explicitly. Native replay and continuous semantics are distinct.
 
 ## Still unknown
 
-Only the first opcode's format/core, first decoder route and selected state
-mechanisms are demonstrated. The full ISA, virtual CFG, callbacks, register
-semantics, virtual flags, map/rekey/guard failures and native continuation remain
-partial or unknown. Entry RCX is the caller's argument array, not the internal
+The first two instructions and supported continuation paths are demonstrated
+within their recorded state contracts. The full ISA/CFG, callbacks, general
+register/flag architecture, native return continuation, full remap rebuild and
+other rekey/window/guard cases remain partial or unknown. Entry RCX is the caller's argument array, not the internal
 context base. Four older pool-reader candidates have finite ALU-helper
 comparisons documented in [the pool report](../PAFET_SERIALVM_POOL.md). Their
 similarity to User-VM does not prove an identical ISA or dispatcher.
 
-Next: reconstruct map refresh and other opcode-1 wrappers/windows, then decode
-the instruction at virtual PC 5. Keep RC4's algorithm state separate from
+Next: reconstruct the PC 8 register-rekey boundary, native return continuation and
+additional opcodes/windows. Keep RC4's algorithm state separate from
 the recovered virtualization mechanisms. No complete Serial devirtualization
 is claimed.

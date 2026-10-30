@@ -24,3 +24,5 @@ scripts/test_pafet_state_contract.py -text
 jack_xxix_evidence/** -text whitespace=cr-at-eol
 # Static Capstone listings retain a padded empty operand column.
 jack_xxix_evidence/*.asm -text whitespace=-blank-at-eol
+jack_xxx_evidence/** -text whitespace=cr-at-eol
+jack_xxx_evidence/*.asm -text whitespace=-blank-at-eol

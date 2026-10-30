@@ -102,11 +102,15 @@ class FirstOpcode:
         self.put(0xb5c,wanted,4)
     def run(self):
         if self.u(0x4ad,1)!=1:raise ValueError('Unknown Serial opcode')
+        self.noise_prefix()
+        return self.pool_push()
+    def noise_prefix(self):
         if self.body==0x1f8210:
             noise=self.u(0x2f8);self.put(0x2f8,noise+(mix(noise>>13)^0x475c1810bb749f1d))
         elif self.body==0x209290:
             noise=self.u(0x2e0);self.put(0x2e0,noise^(mix(noise-0x1afa6d24c555e4de)|1))
         else:raise ValueError('Unproved Serial opcode-1 wrapper flavor')
+    def pool_push(self):
         ip=self.control(1)&0xffffffff
         if ip+3>=self.u(0x1d8,4):raise ValueError('Operand outside bytecode')
         # 1f0660 fast window path; do not invent the other window effects.
@@ -129,6 +133,11 @@ class FirstDecode(FirstOpcode):
     Remap, domain-map refresh and register-rekey branches are explicit gaps.
     This is not a general Serial decoder implementation.
     """
+    def update_decode_key(self,pc,counter):
+        key=self.u(0x20);rot=((key<<17)|(key>>(64-17)))&MASK
+        x=mix(((pc*MUL)&MASK)^rot^((counter*PHI)&MASK)^self.u(0x260));live=(x^(x>>29))|1
+        if live&0x3ff==0x2c5 or live&31==0x15:raise ValueError('Unimplemented decoder map refresh')
+        self.put(0x260,live)
     def run(self):
         if self.u(0x11e0,4)!=0:raise ValueError('Only first decode is modeled')
         pc=self.control(1)&0xffffffff
@@ -140,10 +149,7 @@ class FirstDecode(FirstOpcode):
         lo,data=materialize(self.pe.get_data(0x3e9c10,2678),0,shadow,32,0)
         self.m.add(self.u(0x1d0)+lo,data,overwrite=True)
         self.m.add(self.u(0xb50),b'\1',overwrite=True);self.put(0xb20,self.u(0xb20)+1)
-        key=self.u(0x20);rot=((key<<17)|(key>>(64-17)))&MASK
-        x=mix(rot^self.u(0x260));live=(x^(x>>29))|1
-        if live&0x3ff==0x2c5 or live&31==0x15:raise ValueError('Unimplemented decoder map refresh')
-        self.put(0x260,live)
+        key=self.u(0x20);self.update_decode_key(pc,0)
         epoch=(self.u(0x200,4)+1)&0xffffffff
         if epoch>=self.u(0x1fc,4):raise ValueError('Unimplemented decoder register rekey')
         self.put(0x200,epoch,4);self.ensure_cached_window(pc,pc)
@@ -154,3 +160,9 @@ class FirstDecode(FirstOpcode):
         opcode=self.pe.get_data(0x3ecf00+(raw^0xdd),1)[0]^0x63
         self.put(0x11e0,1,4);self.put(0x4ad,opcode,1);self.put(0x20,mix(opcode^(pc+1)^key))
         return {'pc':pc,'raw_header':hex(raw),'opcode':opcode,'next_pc':pc+1,'materialized_bytes':len(data),'new_materializations':1,'next_native_state':hex(0x825f)}
+
+def __getattr__(name):
+    if name=='SerialVMState':
+        from .serial_continuous import SerialVMState
+        return SerialVMState
+    raise AttributeError(name)

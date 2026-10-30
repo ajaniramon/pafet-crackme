@@ -118,9 +118,9 @@ class Replay:
 
     def run(self,budget=100000):
         for _ in range(budget):
-            if self.uc.reg_read(UC_X86_REG_RIP)==self.entry.get('stop',self.entry['native_return']):return
+            if self.uc.reg_read(UC_X86_REG_RIP) in self.entry.get('stop_any',[self.entry.get('stop',self.entry['native_return'])]):return
             yield self.step()
-        if self.uc.reg_read(UC_X86_REG_RIP)==self.entry.get('stop',self.entry['native_return']):return
+        if self.uc.reg_read(UC_X86_REG_RIP) in self.entry.get('stop_any',[self.entry.get('stop',self.entry['native_return'])]):return
         raise RuntimeError('replay instruction budget')
 
 
