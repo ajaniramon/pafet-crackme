@@ -1,0 +1,280 @@
+{
+  "programs": {
+    "0": [
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 0
+      },
+      {
+        "opcode": 5,
+        "dst": 3,
+        "src": 1,
+        "program": 0,
+        "encrypted_word_index": 4
+      },
+      {
+        "opcode": 10,
+        "dst": 2,
+        "src": 0,
+        "program": 1,
+        "encrypted_word_index": 8
+      },
+      {
+        "opcode": 3,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 12
+      }
+    ],
+    "1": [
+      {
+        "opcode": 10,
+        "dst": 2,
+        "src": 0,
+        "program": 2,
+        "encrypted_word_index": 16
+      },
+      {
+        "opcode": 9,
+        "dst": 2,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 20
+      },
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 24
+      }
+    ],
+    "2": [
+      {
+        "opcode": 2,
+        "dst": 2,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 28
+      },
+      {
+        "opcode": 6,
+        "dst": 2,
+        "src": 1,
+        "program": 0,
+        "encrypted_word_index": 32
+      },
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 36
+      }
+    ],
+    "3": [
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 40
+      },
+      {
+        "opcode": 5,
+        "dst": 3,
+        "src": 1,
+        "program": 0,
+        "encrypted_word_index": 44
+      },
+      {
+        "opcode": 10,
+        "dst": 2,
+        "src": 0,
+        "program": 4,
+        "encrypted_word_index": 48
+      },
+      {
+        "opcode": 4,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 52
+      }
+    ],
+    "4": [
+      {
+        "opcode": 10,
+        "dst": 2,
+        "src": 0,
+        "program": 5,
+        "encrypted_word_index": 56
+      },
+      {
+        "opcode": 9,
+        "dst": 2,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 60
+      },
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 64
+      }
+    ],
+    "5": [
+      {
+        "opcode": 2,
+        "dst": 2,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 68
+      },
+      {
+        "opcode": 8,
+        "dst": 2,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 72
+      },
+      {
+        "opcode": 6,
+        "dst": 2,
+        "src": 1,
+        "program": 0,
+        "encrypted_word_index": 76
+      },
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 80
+      }
+    ],
+    "6": [
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 84
+      },
+      {
+        "opcode": 7,
+        "dst": 3,
+        "src": 1,
+        "program": 0,
+        "encrypted_word_index": 88
+      },
+      {
+        "opcode": 10,
+        "dst": 2,
+        "src": 0,
+        "program": 7,
+        "encrypted_word_index": 92
+      },
+      {
+        "opcode": 4,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 96
+      }
+    ],
+    "7": [
+      {
+        "opcode": 10,
+        "dst": 2,
+        "src": 0,
+        "program": 8,
+        "encrypted_word_index": 100
+      },
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 104
+      }
+    ],
+    "8": [
+      {
+        "opcode": 2,
+        "dst": 2,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 108
+      },
+      {
+        "opcode": 6,
+        "dst": 2,
+        "src": 1,
+        "program": 0,
+        "encrypted_word_index": 112
+      },
+      {
+        "opcode": 2,
+        "dst": 3,
+        "src": 2,
+        "program": 0,
+        "encrypted_word_index": 116
+      }
+    ],
+    "9": [
+      {
+        "opcode": 10,
+        "dst": 3,
+        "src": 0,
+        "program": 0,
+        "encrypted_word_index": 120
+      }
+    ],
+    "10": [
+      {
+        "opcode": 10,
+        "dst": 3,
+        "src": 0,
+        "program": 3,
+        "encrypted_word_index": 124
+      }
+    ],
+    "11": [
+      {
+        "opcode": 10,
+        "dst": 3,
+        "src": 0,
+        "program": 6,
+        "encrypted_word_index": 128
+      }
+    ]
+  },
+  "proofs": [
+    {
+      "program": 6,
+      "result": "unsat",
+      "property": "output == a XOR b for all uint64 a,b"
+    },
+    {
+      "program": 11,
+      "result": "unsat",
+      "property": "output == a XOR b for all uint64 a,b"
+    },
+    {
+      "property": "shared mask cancels for all uint64 a,b,mask",
+      "result": "unsat"
+    }
+  ],
+  "selector_table_rva": "0x3edc08",
+  "selector_bytes": "00030600090a0b09",
+  "source": "original PE tables; static semantic reconstruction, not native dynamic coverage",
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "z3_version": "5.3.3.0 430d19e697e2ec9bad79ff210d41b4a7a5fcfa3e 430d19e"
+}

@@ -1,0 +1,49 @@
+{
+  "baseline_commit": "735a747a128e3688b1aedf3e699e414e5c6fa907",
+  "consecutive_instructions": 6,
+  "distinct_opcodes": [
+    1,
+    4,
+    5,
+    41
+  ],
+  "five_or_more_processes": 6,
+  "six_instruction_processes": 3,
+  "natural_integrated_rebuild_processes": 2,
+  "new_native_instruction_observations": 694168,
+  "accepted_continuous_native_observations": 590492,
+  "accepted_virtual_instruction_instances": 33,
+  "accepted_memory_boundaries": 905,
+  "generated_kernels": 64,
+  "observed_generated_kernels": 61,
+  "remaining_outer_states": 7,
+  "newly_supported_outer_state": "0x2e0073",
+  "xor_observed_domains": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "observed_handler_bindings": [
+    "0x1f4f20",
+    "0x1f8210",
+    "0x1fb5c0",
+    "0x1fcef0",
+    "0x202800",
+    "0x205fa0",
+    "0x209290",
+    "0x20c650",
+    "0x20e060",
+    "0x2162d0",
+    "0x21d530",
+    "0x21e270",
+    "0x220b70"
+  ],
+  "state_matrix": {
+    "User": "unchanged: logical program IR; selected native mechanisms only",
+    "Serial": "PARTIAL: six continuous instructions, four opcodes, two integrated natural rebuilds; next opcode 0x1a unresolved",
+    "SHA": "unchanged: functional behavior and initialization; virtual program not recovered",
+    "Hex": "unchanged: literal executor for finite validated corpus; compact semantics partial"
+  },
+  "next": "Recover opcode 0x1a at PC20, helper 1ed270 and deferred request helper 1f10a0, then pending-queue wrapper return and autonomous scheduling."
+}

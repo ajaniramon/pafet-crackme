@@ -1,0 +1,30 @@
+test_code_overlay_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_conflicting_alias_is_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_conflicting_observation_alias_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_consistent_alias_is_safe (test_pafet_state_contract.ContractTests) ... ok
+test_cpu_fields_required (test_pafet_state_contract.ContractTests) ... ok
+test_empty_manifest_and_directory_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_empty_truncated_and_broken_observations_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_exact_budget_and_entry_only_generic_replay (test_pafet_state_contract.ContractTests) ... ok
+test_extended_state_is_rejected_before_execution (test_pafet_state_contract.ContractTests) ... ok
+test_generic_profile_has_no_user_layout (test_pafet_state_contract.ContractTests) ... ok
+test_generic_rejects_user_ablation (test_pafet_state_contract.ContractTests) ... ok
+test_hole_does_not_become_zero (test_pafet_state_contract.ContractTests) ... ok
+test_inventory_and_hash_failures (test_pafet_state_contract.ContractTests) ... ok
+test_missing_gs_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_missing_iat_or_teb_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_missing_stack_page_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_missing_writable_cookie_page_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_runtime_read_of_zero_mapped_hole_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_synthetic_zero_count_preserves_defined_flags (test_pafet_state_contract.ContractTests) ... ok
+test_unsupported_version_rejected (test_pafet_state_contract.ContractTests) ... ok
+test_after_values_cannot_satisfy_missing_input_contract (test_pafet_state_inputs.InputTests) ... ok
+test_all_original_xxvii_frames_are_incomplete (test_pafet_state_inputs.InputTests) ... ok
+test_autonomous_replay_cannot_open_observations (test_pafet_state_inputs.InputTests) ... ok
+test_corrected_frames_cover_both_pointed_arrays (test_pafet_state_inputs.InputTests) ... ok
+test_replay_rejects_missing_array_page (test_pafet_state_inputs.InputTests) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 13.611s
+
+OK

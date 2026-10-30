@@ -1,6 +1,6 @@
 # 13 — Open gaps and research priorities
 
-The current [JACK XXXII matrix](../jack_xxxii_evidence/status.json), earlier
+The current [JACK XXXIII matrix](../jack_xxxiii_evidence/status.json), earlier
 [mechanism matrix](../jack_xvii_evidence/status_matrix.json) and
 [JACK XVII report](jack-xvii.md) distinguish demonstrated facts, partial
 reconstruction, hypotheses and unknowns. No VM is declared completely
@@ -48,12 +48,29 @@ in three fresh processes. Two delimited helpers validate dynamic remap rebuild;
 that local proof is not a continuous rebuild-path claim. The replay loader's
 readonly-PE relocation defect is fixed with separate validation/image objects.
 
-Next: extend beyond PC 16 and the remaining eight outer states, armed
-attestation, scheduler exceptions, rekey TLS callbacks and unobserved fallback
-branches. Other windows and the full ISA/CFG remain open. LOAD domains 1/2
-retain static-only bindings. SHA's materializer, ISA and state still require
-independent discovery. The truncated rebuild-containing capture is rejected;
-its missing observations are not synthesized from the isolated helper result.
+[JACK XXXIII](../PAFET_JACK_XXXIII.md) crosses PC 16 with opcode `0x29`
+(`XOR_U64`), including its nested native-ALU variant. Three independent
+processes execute six continuous instructions to PC 20/SP 0; three others
+execute five. Two natural processes traverse a full remap rebuild and continue
+with equivalent declared state. Job `0x2e0073` is now reconstructed; seven
+outer states remain unsupported. This is finite memory-boundary equivalence,
+separate from the accompanying instruction-by-instruction x64 replay.
+
+Next: recover opcode `0x1a` at PC 20, its label decoder at `0x1ed270`, deferred
+request helper `0x1f10a0`, pending-queue wrapper return and subsequent scheduler
+work. A complete capture matches six instructions plus the seventh handler
+entry; the seventh instruction is explicitly unsupported. No ten-step claim
+is made. Kernel coverage remains 61/64: `0xaf41e` requires a domain-2 budget
+exit and the relevant noise condition; incoming edges for `0x2c1549` and
+`0x32a5e8` remain unknown outside the reduced graph.
+
+Armed attestation, scheduler exceptions, rekey TLS callbacks, unobserved
+fallback branches, other windows and the full ISA/CFG remain open. LOAD domain
+1 now has native coverage; LOAD domain 2 retains a static-only binding. All
+four XOR domains have natural boundary comparisons. SHA's materializer, ISA
+and state still require independent discovery. The historical truncated
+rebuild capture remains rejected; the new complete captures are independent
+evidence and do not repair its missing observations.
 Do not substitute standard primitive rounds for unproved virtual semantics.
 JACK XXVIII supplies a generic capture profile and an 18-instruction Windows/
 Unicorn Serial seed-region comparison. It validates reusable transport, not a

@@ -1,0 +1,49 @@
+{
+  "outer_job": {
+    "case": "captures/seventh_boundary",
+    "pre_fix_failure": "Unknown outer job 0x2e0073",
+    "completed_virtual_instructions": 5,
+    "first_unsupported_rva": "0x230ef1",
+    "native_instructions_before_gap": 100534,
+    "input_prefix_all_bytes_match": true,
+    "cause": "Missing semantic job, not a capture or replay defect",
+    "recovered_semantics": [
+      "N = ctx[0x348] XOR ctx[0x11e8]",
+      "ctx[0x348] = N",
+      "ctx[0x20] = mix(N XOR ctx[0x20])",
+      "enqueue decoder label 0x27f17 because proved helper 23e0 returns 1"
+    ],
+    "result": "Fixed candidate executes sixth opcode and matches the seventh handler entry; test retains old failure by disabling only the new job"
+  },
+  "alu_prototype": {
+    "kind": "synthetic development counterexample, not natural coverage",
+    "cause": "Incorrect RIP-relative selector RVA 0x3e1c08 instead of 0x3edc08",
+    "input": {
+      "left": 0,
+      "right": 0,
+      "token": 123
+    },
+    "incorrect_result": "0x7b479f3ee3e1685a",
+    "independently_required_xor": "0x0",
+    "why_happy_path_missed_it": "The naturally observed operands are complementary; an incorrect arithmetic microprogram could produce the same all-one word.",
+    "fix": "Compute selector from correct original-PE table, decrypt/check ALU records, prove both selected programs and test 512 unrelated operand/token triples"
+  },
+  "remaining_seventh": {
+    "case": "captures/seventh_boundary",
+    "opcode": "0x1a",
+    "virtual_pc": 20,
+    "decoded_pc": 21,
+    "handler": "0x1f5bf0",
+    "status": "Explicit unsupported; no seventh instruction executed",
+    "first_static_helpers": [
+      "0x1f1c70",
+      "0x1ee070",
+      "0x1ed270",
+      "0x1f10a0",
+      "0x1f0db0"
+    ]
+  },
+  "negative_controls": "validation.json: single-byte key, queue key/count, encoded PC and dispatch-table changes; tests also reject missing thunk memory and retry of faulted state",
+  "laboratory_defects_found": "None in the new accepted paths; unchanged capture/replay infrastructure passed all new Level A traces",
+  "truncations": "No new truncated captures; historical truncated frames remain rejected by unchanged regressions"
+}

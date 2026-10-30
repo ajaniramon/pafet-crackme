@@ -1,0 +1,66 @@
+[
+  {
+    "name": "xxviii",
+    "command": [
+      "python",
+      "scripts/pafet_lab_xxviii.py",
+      "--output",
+      "jack_xxxiii_evidence\\xxviii_regression.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 32.256,
+    "output": "jack_xxxiii_evidence/xxviii_regression.txt"
+  },
+  {
+    "name": "xxix",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_validate",
+      "--output",
+      "jack_xxxiii_evidence\\xxix_regression.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 16.377,
+    "output": "jack_xxxiii_evidence/xxix_regression.txt"
+  },
+  {
+    "name": "xxx",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_continuous_validate",
+      "--output",
+      "jack_xxxiii_evidence\\xxx_regression.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 31.107,
+    "output": "jack_xxxiii_evidence/xxx_regression.txt"
+  },
+  {
+    "name": "xxxi",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_extended_validate",
+      "--output",
+      "jack_xxxiii_evidence\\xxxi_regression.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 32.493,
+    "output": "jack_xxxiii_evidence/xxxi_regression.txt"
+  },
+  {
+    "name": "xxxii",
+    "command": [
+      "python",
+      "-m",
+      "devirt.serial_scheduler_validate",
+      "--output",
+      "jack_xxxiii_evidence\\xxxii_regression.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 122.591,
+    "output": "jack_xxxiii_evidence/xxxii_regression.txt"
+  }
+]

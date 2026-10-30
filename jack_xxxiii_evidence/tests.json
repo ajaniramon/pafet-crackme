@@ -1,0 +1,60 @@
+{
+  "pre_change_scheduler_tests": {
+    "tests": 12,
+    "result": "PASS",
+    "seconds": 20.796,
+    "baseline": "735a747a128e3688b1aedf3e699e414e5c6fa907"
+  },
+  "runs": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "devirt.test_ir",
+        "devirt.test_serial",
+        "devirt.test_serial_continuous",
+        "devirt.test_serial_extended",
+        "devirt.test_serial_scheduler",
+        "devirt.test_serial_depth",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 100.25,
+      "output": "jack_xxxiii_evidence/tests_0.txt"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_pafet_state*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.971,
+      "output": "jack_xxxiii_evidence/tests_1.txt"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_pafet_state*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.04,
+      "output": "jack_xxxiii_evidence/tests_2.txt"
+    }
+  ]
+}

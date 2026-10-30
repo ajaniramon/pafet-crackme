@@ -152,6 +152,10 @@ class ScheduledSerialVMState(ExtendedSerialVMState):
             self.fault=str(error)
             raise
 
+    def additional_job(self,label):
+        """Versioned semantic extensions may handle independently proved jobs."""
+        return False
+
     def _dispatch_next(self,budget):
         if self.phase not in ('outer_dispatch','outer_jobs'):self.fail('Not at outer dispatch')
         if self.phase=='outer_dispatch':
@@ -194,6 +198,7 @@ class ScheduledSerialVMState(ExtendedSerialVMState):
             if label in TAILS:
                 self.record('job_entry',TAILS[label]['entry']);self.opcode_finish(TAILS[label])
                 self.jobs.append(label);self.record('job_end',0x232daa);continue
+            if self.additional_job(label):continue
             if label not in JOBS:self.fail('Unknown outer job '+hex(label))
             job=JOBS[label];self.record('job_entry',job['entry']);self.kernel(job)
             self.jobs.append(label);self.record('job_end',0x232daa)

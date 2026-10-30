@@ -1,0 +1,54 @@
+{
+  "schema": "pafet-capture-v2",
+  "run_id": "4fe3f9bf5de74a3ab45555d85be0a622",
+  "status": "complete",
+  "requested_frames": 1,
+  "frames": [
+    {
+      "stem": "frame_00",
+      "steps": 103676,
+      "rekey": false,
+      "status": "complete",
+      "entry_sha256": "dd87391b2ae33eed5589f6187b94b17387fc2c484536e373379fa9081cb48c40",
+      "trace_sha256": "d66dd27d2a917edda01d5f73d4b4af8729f16602b0de4f78443904dd23fbf379",
+      "terminal": {
+        "kind": "stop-any",
+        "pc": "0x7ff754f45bf0"
+      }
+    }
+  ],
+  "user_hex": "616c696365",
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "variant_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+  "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54",
+  "method": "Windows debug API; execution hardware breakpoint then trap-flag single step; no instruction patching",
+  "selection": "consecutive handler invocations",
+  "entry_rva": null,
+  "entry_rvas": [
+    "0x22bc85",
+    "0x22fcce",
+    "0x2304ba",
+    "0x231c07"
+  ],
+  "select_counter": [
+    4576,
+    1
+  ],
+  "stop_next": false,
+  "select_counter_relation": "equal",
+  "step_limit": 500000,
+  "stop_counter_min": [
+    4576,
+    7
+  ],
+  "stop_any_rvas": [
+    "0x1f5bf0",
+    "0x20d330",
+    "0x20ed90",
+    "0x225710"
+  ],
+  "profile": "native-x64-v1",
+  "stop_rva": null,
+  "inputs": "Entry GPRs, RFLAGS, XMM, GS base and memory only; oracle after-state/reads are separate trace data."
+}
