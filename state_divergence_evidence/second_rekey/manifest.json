@@ -1,0 +1,22 @@
+{
+  "frames": [
+    {
+      "stem": "frame_00",
+      "steps": 14338,
+      "rekey": true
+    },
+    {
+      "stem": "frame_01",
+      "steps": 14244,
+      "rekey": true
+    }
+  ],
+  "user_hex": "72616d6f6e",
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "variant_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "collector_sha256": "9b933844b452c1bd4206a7f7a48993bb05b1938d05e70f801fbd6569fa37306b",
+  "method": "Windows debug API; execution hardware breakpoint then trap-flag single step; no instruction patching",
+  "selection": "consecutive handler invocations",
+  "entry_rva": "0x4930",
+  "inputs": "Entry GPRs, RFLAGS, XMM, GS base and memory only; oracle after-state/reads are separate trace data."
+}

@@ -1,0 +1,287 @@
+{
+  "frames": [
+    {
+      "frame": "frame_00",
+      "rekey": true,
+      "entry_sha256": "32b237012ca243fd7d014ac58ca3a88a027c5d6db85cdb859809268a70905d67",
+      "trace_sha256": "e5bcf4633de37e208532c552f32c6f381b4a72bc617b3c525a0a1b3e0a7fb2b7",
+      "complete": {
+        "coverage": "complete",
+        "instructions_compared": 14338,
+        "all_match": true,
+        "first_read_difference": null,
+        "first_state_difference": null,
+        "terminal_comparison": {
+          "steps": 14338,
+          "error": null,
+          "context_different_bytes": 0,
+          "array_different_bytes": {
+            "encoded register banks": 0,
+            "encoded virtual stack": 0
+          }
+        },
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "instruction": "imul rcx, r9",
+          "replay": "0xa03",
+          "native": "0xa07",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        }
+      },
+      "legacy": {
+        "coverage": "legacy",
+        "instructions_compared": 13646,
+        "all_match": false,
+        "first_read_difference": {
+          "step": 13646,
+          "pc": "0x7ff7bcb04f7f",
+          "instruction": "xor rdx, qword ptr [r8 + r9]",
+          "differences": [
+            {
+              "address": "0xa094d588f0",
+              "native": "a556662d92167d1a",
+              "replay": "0000000000000000"
+            }
+          ]
+        },
+        "first_state_difference": {
+          "step": 13646,
+          "pc": "0x7ff7bcb04f7f",
+          "preferred_pc": "0x140004f7f",
+          "instruction": "xor rdx, qword ptr [r8 + r9]",
+          "preceding_instructions_match": 13645,
+          "differences": {
+            "rdx": [
+              "0xdb37cef75b4dcb37",
+              "0xc14ad865762b9d92"
+            ],
+            "memory_reads": {
+              "replay": [
+                [
+                  689691789552,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  689691789552,
+                  "a556662d92167d1a"
+                ]
+              ]
+            }
+          }
+        },
+        "terminal_comparison": {
+          "steps": 14338,
+          "error": null,
+          "context_different_bytes": 8,
+          "array_different_bytes": {
+            "encoded register banks": 0,
+            "encoded virtual stack": 16
+          }
+        },
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "instruction": "imul rcx, r9",
+          "replay": "0xa03",
+          "native": "0xa07",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        }
+      },
+      "missing_register_tail": {
+        "coverage": "missing-register-tail",
+        "instructions_compared": 14338,
+        "all_match": true,
+        "first_read_difference": null,
+        "first_state_difference": null,
+        "terminal_comparison": {
+          "steps": 14338,
+          "error": null,
+          "context_different_bytes": 0,
+          "array_different_bytes": {
+            "encoded register banks": 0,
+            "encoded virtual stack": 0
+          }
+        },
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "instruction": "imul rcx, r9",
+          "replay": "0xa03",
+          "native": "0xa07",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        }
+      }
+    },
+    {
+      "frame": "frame_01",
+      "rekey": true,
+      "entry_sha256": "69e5a86fca46ddf6ede0c58b259356bccaae40321c6cd5ae24da7fbcbe27bfa2",
+      "trace_sha256": "330d749c976ab179763b0a658476e0f52fdfc2e30b1b063e456cb072bf500434",
+      "complete": {
+        "coverage": "complete",
+        "instructions_compared": 14244,
+        "all_match": true,
+        "first_read_difference": null,
+        "first_state_difference": null,
+        "terminal_comparison": {
+          "steps": 14244,
+          "error": null,
+          "context_different_bytes": 0,
+          "array_different_bytes": {
+            "encoded register banks": 0,
+            "encoded virtual stack": 0
+          }
+        },
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "instruction": "imul rcx, r9",
+          "replay": "0xa03",
+          "native": "0xa07",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        }
+      },
+      "legacy": {
+        "coverage": "legacy",
+        "instructions_compared": 3747,
+        "all_match": false,
+        "first_read_difference": {
+          "step": 3747,
+          "pc": "0x7ff7bcb04e4e",
+          "instruction": "mov rdx, qword ptr [rax + rcx*8]",
+          "differences": [
+            {
+              "address": "0xa094d58300",
+              "native": "a39f7a2bf3103d02",
+              "replay": "0000000000000000"
+            }
+          ]
+        },
+        "first_state_difference": {
+          "step": 3747,
+          "pc": "0x7ff7bcb04e4e",
+          "preferred_pc": "0x140004e4e",
+          "instruction": "mov rdx, qword ptr [rax + rcx*8]",
+          "preceding_instructions_match": 3746,
+          "differences": {
+            "rdx": [
+              "0x0",
+              "0x23d10f32b7a9fa3"
+            ],
+            "memory_reads": {
+              "replay": [
+                [
+                  689691788032,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  689691788032,
+                  "a39f7a2bf3103d02"
+                ]
+              ]
+            }
+          }
+        },
+        "terminal_comparison": {
+          "steps": 14244,
+          "error": null,
+          "context_different_bytes": 762,
+          "array_different_bytes": {
+            "encoded register banks": 1508,
+            "encoded virtual stack": 16
+          }
+        },
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "instruction": "imul rcx, r9",
+          "replay": "0xa03",
+          "native": "0xa07",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        }
+      },
+      "missing_register_tail": {
+        "coverage": "missing-register-tail",
+        "instructions_compared": 3747,
+        "all_match": false,
+        "first_read_difference": {
+          "step": 3747,
+          "pc": "0x7ff7bcb04e4e",
+          "instruction": "mov rdx, qword ptr [rax + rcx*8]",
+          "differences": [
+            {
+              "address": "0xa094d58300",
+              "native": "a39f7a2bf3103d02",
+              "replay": "0000000000000000"
+            }
+          ]
+        },
+        "first_state_difference": {
+          "step": 3747,
+          "pc": "0x7ff7bcb04e4e",
+          "preferred_pc": "0x140004e4e",
+          "instruction": "mov rdx, qword ptr [rax + rcx*8]",
+          "preceding_instructions_match": 3746,
+          "differences": {
+            "rdx": [
+              "0x0",
+              "0x23d10f32b7a9fa3"
+            ],
+            "memory_reads": {
+              "replay": [
+                [
+                  689691788032,
+                  "0000000000000000"
+                ]
+              ],
+              "native": [
+                [
+                  689691788032,
+                  "a39f7a2bf3103d02"
+                ]
+              ]
+            }
+          }
+        },
+        "terminal_comparison": {
+          "steps": 14244,
+          "error": null,
+          "context_different_bytes": 762,
+          "array_different_bytes": {
+            "encoded register banks": 1508,
+            "encoded virtual stack": 0
+          }
+        },
+        "first_raw_arithmetic_flag_difference": {
+          "step": 36,
+          "pc": "0x7ff7bcb049e5",
+          "instruction": "imul rcx, r9",
+          "replay": "0xa03",
+          "native": "0xa07",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        }
+      }
+    }
+  ],
+  "all_complete_inputs_match": true,
+  "comparison_source_sha256": "50f5bd24d260e4da391a87523127e88d1978b2c1316c51a66e43fb191435547b",
+  "replay_source_sha256": "af3c9fcaf8cce618c32d1b437fcff575f168689af62b820779a1f52bb87ff3b9",
+  "scope": "16 GPRs, RIP, XMM, MXCSR, architecturally defined arithmetic flags, native operand reads and written memory after every instruction. Oracle values are comparison-only."
+}

@@ -72,5 +72,8 @@ The other five PCs belong to block 54, proven dead under the documented
 abstract-state contract. A model-only constant mutation exercises them; it is
 not a native altered-PE experiment. Complete native encoded state, guards,
 scheduling and exception behavior remain open. In particular, the
-[XXVII context mismatch](../PAFET_JACK_XXVII.md) is not closed by agreement on
-decoded state. Full User-VM devirtualization is therefore still partial.
+[XXVII context mismatch](../PAFET_JACK_XXVII.md) came from omitted pointed-array
+inputs, as demonstrated by the later [native-state analysis](native-state-divergence.md).
+Fresh complete-input frames now match Windows instruction by instruction;
+the old incomplete snapshots are not repaired using expected results. Full
+User-VM devirtualization remains partial beyond those validated paths.

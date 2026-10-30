@@ -14,14 +14,17 @@ contract; a model-only mutation exercises them. Missing post snapshots remain
 listed rather than reconstructed as measurements.
 
 Native encoded-state updates, alias scheduling, guards and OS exceptions are
-not fully reproduced. XXVII's captured-cookie replay stops at a 764-byte context
-mismatch in `ramon/1`, despite matching return GPRs and C++/Unicorn lockstep.
-The first replay write associated with a final mismatch is `0x140004ef1`; it
-is not yet a proven first native divergence. No speculative cause is adopted.
-Cookie-sensitive return validation and queue exception coverage remain open.
+not fully reproduced. The [native-state follow-up](native-state-divergence.md)
+demonstrates why XXVII's inputs were incomplete: native-stack pointers to the
+register/virtual-stack arrays had been skipped. The first affected native reads
+are now observed directly; complete entry memory fixes fresh DROP/rekey traces
+without changing instruction semantics or supplying expected outputs.
 
-Next: collect native intermediate inputs/states at that table transformation,
-identify the earliest actual disagreement and only then change the model.
+The old snapshots cannot independently recover their lost before-memory and
+are rejected by strict validation. Next: extend complete-input capture and
+native instruction comparisons to more scheduler, cookie-sensitive and queue
+exception paths. The specific capture flaw is resolved; universal native VM
+equivalence remains open.
 
 ## Serial and SHA
 

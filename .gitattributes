@@ -11,3 +11,10 @@ scripts/pafet_cookie_*xxvii.py -text
 jack_xxvii_evidence/** -text
 devirt/** -text
 jack_xvii_evidence/** -text whitespace=cr-at-eol
+scripts/pafet_native_step_capture.py -text
+scripts/pafet_state_*.py -text
+scripts/pafet_uservm_inputs.py -text
+scripts/test_pafet_state_inputs.py -text
+scripts/pafet_capture_native_xxiv.py -text
+scripts/pafet_h3bea0_unicorn_xiii.py -text
+state_divergence_evidence/** -text whitespace=cr-at-eol

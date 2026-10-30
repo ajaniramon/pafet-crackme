@@ -23,3 +23,4 @@ primary evidence define current claims.
 | [14-real-bytecode-xxiii.md](14-real-bytecode-xxiii.md) | Detailed User materializer, operand and routing formulas |
 | [14-tooling.md](14-tooling.md) | Earlier tooling inventory |
 | [jack-xvii.md](jack-xvii.md) | New effect IR, compiler, validation chain and four-VM audit |
+| [native-state-divergence.md](native-state-divergence.md) | First native mismatches, omitted stack arrays and the independently validated capture fix |

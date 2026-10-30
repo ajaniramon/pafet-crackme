@@ -51,9 +51,10 @@
     },
     "native_encoded_state": {
       "status": "PARCIAL",
-      "scope": "Native projections and selected wrappers validated. XXVII's 764-byte context mismatch remains unresolved.",
+      "scope": "Partial native mechanisms. Follow-up identifies omitted pointed-array inputs behind XXVII; fresh full-input DROP/rekey traces match Windows instruction by instruction. Broader guards, scheduling and exceptions remain open.",
       "evidence": [
-        "../jack_xxvii_evidence/first_divergence.json"
+        "../jack_xxvii_evidence/first_divergence.json",
+        "../state_divergence_evidence/regression.json"
       ]
     },
     "readable_program": {
@@ -196,5 +197,6 @@
     "status": "HIPÓTESIS",
     "claim": "All four VMs share the same ISA because some helper pools are cloned.",
     "assessment": "Unsupported; not assumed by this tool. Shared pool results and the newly checked initialization recurrence do not prove identical opcode formats, states or dispatchers."
-  }
+  },
+  "followup_native_input_fix": "../docs/native-state-divergence.md"
 }

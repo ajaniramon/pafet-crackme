@@ -25,16 +25,27 @@ Interceptor.attach(base.add(0x3bea0),{
    Interceptor.flush();
   }
   const stackRange=Process.findRangeByAddress(rsp);
-  function capture(p,size,src){
+  function capture(p,size,src,allowStack=false,exact=false){
    try{
     if(p.isNull()||p.compare(ptr('0x100000'))<0||p.compare(ptr('0x7fffffffffff'))>0)return;
     if(p.compare(base)>=0&&p.compare(base.add(mod.size))<0)return;
-    if(stackRange&&p.compare(stackRange.base)>=0&&p.compare(stackRange.base.add(stackRange.size))<0)return;
-    const lo=p.and(ptr('0xfffffffffffff000')),range=Process.findRangeByAddress(p);if(!range||range.protection[0]!='r')return;
-    const end=range.base.add(range.size),available=end.sub(lo).toUInt32();size=Math.min(size,available);const key=lo.toString();
+    if(!allowStack&&stackRange&&p.compare(stackRange.base)>=0&&p.compare(stackRange.base.add(stackRange.size))<0)return;
+    const lo=exact?p:p.and(ptr('0xfffffffffffff000')),range=Process.findRangeByAddress(p);if(!range||range.protection[0]!='r')return;
+    const end=range.base.add(range.size),available=end.sub(lo).toUInt32();
+    if(exact&&available<size){errors.push('short required input: '+src);return;}
+    size=Math.min(size,available);const key=lo.toString();
     if(v.extra[key]&&v.extra[key].size>=size)return;
     v.extra[key]={size,before_hex:hex(lo,size),src};
    }catch(e){}
+  }
+  // These are separate state buffers, even when they reside on the native
+  // stack. The 8-KiB context window does not contain either complete array.
+  capture(ctx.add(0x1158).readPointer(),0x1000,'encoded register banks',true,true);
+  capture(ctx.add(0x1160).readPointer(),0x2000,'encoded virtual stack',true,true);
+  v.input_contract='complete-pointed-uservm-arrays-v1';
+  for(const [offset,size] of [[0x1158,0x1000],[0x1160,0x2000]]){
+   const key=ctx.add(offset).readPointer().toString();
+   if(!v.extra[key]||v.extra[key].size<size)errors.push('missing required pointed input '+offset.toString(16));
   }
   capture(ctx.add(0xf48).readPointer(),0x20000,'trampoline pool');
   for(let i=0;i<8192;i+=8)capture(ctx.add(i).readPointer(),0x4000,'context pointer '+i.toString(16));

@@ -33,6 +33,9 @@ def to_int(s):
 
 
 def emulate_one(vec, pe_runtime_base=None):
+    if vec.get('input_contract')=='complete-pointed-uservm-arrays-v1':
+        from pafet_uservm_inputs import require_complete
+        require_complete(vec)
     before = vec['regs']
     after = vec['after']
     ctx_rcx = to_int(before['rcx'])

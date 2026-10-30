@@ -1,0 +1,22 @@
+{
+  "run_id": "b7130786-3654-4f7c-8d6c-b0fc7fcdbb00",
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "oracle_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "collector_sha256": "c1e75f3a0725017f64e9beacf302bf22f42510a486200e51a58062560c69bf4f",
+  "base_collector_sha256": "a1d1d6eb3f86310b470eeb428cb529f29adb1487d9c8967951a81ef5570dfb75",
+  "agent_sha256": "b9bb3ab4b84599467c95767fe71921b7407ecd5c268a8b783ae13b84b6cc029d",
+  "cookie_rva": "0x40d020",
+  "patch_offsets": [
+    "0x395efb",
+    "0x395efc"
+  ],
+  "frida_version": "17.24.3",
+  "selection": "first two handler invocations in each of three independent processes",
+  "limitations": [
+    "native initial RFLAGS/XMM unavailable",
+    "captured regions only",
+    "two-byte SHA-gate variant"
+  ],
+  "frames": 6,
+  "capture_sha256": "8009caac5dab52de42d637c90318681602cebe03aab7bd1d1a672b0894cebc31"
+}

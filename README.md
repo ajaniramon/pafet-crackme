@@ -24,7 +24,9 @@ Literal Hex-VM baseline: [JACK XXVI, `a3fd245`](https://github.com/ajaniramon/pa
 
 The conservative CFG has 339 instructions and 75 blocks. Optimized C++ folds 49 constants and removes 130 dead pure values; a structured backend emits the proved single loop under an enforced initial-register contract. Validation compares 17 Windows executions, the independent bytecode model, IR and generated code, including block states and native byte stores. Native coverage is 334 logical PCs; the other five are exercised only by a separately labelled model control.
 
-Four native initialization regions also pass original-x64/IR/C++ comparisons at 10,179 iteration boundaries. They establish blob references and seed folds for User, Serial, SHA and Hex, **not a shared ISA or decrypted Serial/SHA program**. See the [status matrix](jack_xvii_evidence/status_matrix.json), [validation](jack_xvii_evidence/validation.json) and [reproduction commands](docs/jack-xvii.md#7-reproduction). The XXVII native-context mismatch remains unresolved.
+Four native initialization regions also pass original-x64/IR/C++ comparisons at 10,179 iteration boundaries. They establish blob references and seed folds for User, Serial, SHA and Hex, **not a shared ISA or decrypted Serial/SHA program**. See the [status matrix](jack_xvii_evidence/status_matrix.json), [validation](jack_xvii_evidence/validation.json) and [reproduction commands](docs/jack-xvii.md#7-reproduction).
+
+The [native-state follow-up](docs/native-state-divergence.md) identifies XXVII's capture flaw: pointed register/stack arrays on the native stack were omitted and replayed as zeros. New hardware single-step traces locate the first affected reads, then match **31,990 native instructions** with complete entry inputs; six corrected Frida frames also pass C++/x64/native comparisons. Old incomplete snapshots are rejected rather than repaired from expected results. This resolves that input-capture cause while broader native VM coverage remains open.
 
 ## Executable architecture and evidence identity
 
@@ -80,7 +82,7 @@ JACK XXIV translates these five selected wrapper bodies and checks them instruct
 | `0x140025020` | Block transfer | 7 + 27 / 34 |
 | `0x1400216d0` | STORE_REG | 32 + 2 / 34 |
 
-They are **not five atomic output-byte writers**. The comparisons include GPRs, RIP, defined arithmetic flags, XMM state and written memory. Local coverage accounts for the bodies under explicit LUT, ABI and non-aliasing assumptions; it does not cover every helper or OS exception path. [JACK XXVII](PAFET_JACK_XXVII.md) reproduces the historical RCX/security-cookie discrepancy and adds process-cookie capture. Its new replay stops at a separate context-memory mismatch, so fresh-frame closure remains open, along with the User-VM queue-throw path.
+They are **not five atomic output-byte writers**. The comparisons include GPRs, RIP, defined arithmetic flags, XMM state and written memory. Local coverage accounts for the bodies under explicit LUT, ABI and non-aliasing assumptions; it does not cover every helper or OS exception path. [JACK XXVII](PAFET_JACK_XXVII.md) recorded an incomplete-frame mismatch. The [follow-up](docs/native-state-divergence.md) corrects pointed-array input capture and validates fresh DROP/rekey frames instruction by instruction against Windows. The User-VM queue-throw path and wider guard/scheduler coverage remain open.
 
 The new [effect-IR/compiler comparison](jack_xvii_evidence/validation.json) adds four Windows captures to those thirteen cases, including length-15/16 storage boundaries and a 23-byte binary input. It compares 54,108 logical steps; 54,105 immediate post-core snapshots are available. The missing snapshots are `a8/779`, `fresh_heap16/932` and `fresh_sso15/1625`, each checked through its next pre-state.
 
@@ -264,7 +266,7 @@ These are primitive/oracle tests, not instruction-level Serial-VM or SHA-VM reco
 ## Remaining research
 
 - Reduce the Hex-VM literal translation into a compact semantic model while retaining its demonstrated behavior and explicit state transitions.
-- Complete User-VM native encoded-state, dispatcher/guard and exception behavior beyond the five locally verified wrapper bodies; resolve the recorded cookie/frame discrepancy and queue exception path.
+- Complete User-VM native encoded-state, dispatcher/guard and exception behavior beyond the validated frames; extend the corrected full-input capture to additional paths, including queue exceptions.
 - Recover Serial-VM and SHA-VM virtualization mechanisms beyond their functional RC4/SHA-256 replacements.
 - Expand seed, branch, input-length, alias/escape and host-failure coverage. Preserve missing observations as missing, including the one User-VM post-core snapshot.
 - Model the native crypto tail when trimming produces partial blocks, and integrate the reconstructed engines into the final readable `pafet.cpp`.
@@ -281,6 +283,7 @@ These are primitive/oracle tests, not instruction-level Serial-VM or SHA-VM reco
 | [jack_xxiii_evidence/](jack_xxiii_evidence/) | Recovered User-VM bytecode, logical program, native traces and comparisons |
 | [jack_xxiv_evidence/](jack_xxiv_evidence/) | Wrapper CFGs, lockstep results, directed cases and conditional coverage proofs |
 | [jack_xxvii_evidence/](jack_xxvii_evidence/) | Process-cookie captures, historical negative control and the first failing fresh User-VM frame |
+| [state_divergence_evidence/](state_divergence_evidence/) | Independent before/after native instruction data, missing-input counterfactuals and corrected capture regressions |
 | [jack_xxvi_evidence/](jack_xxvi_evidence/) | Hex-VM manifests, native frames, full/standalone comparisons, arithmetic tests and Windows package |
 | [vm_pools_evidence/](vm_pools_evidence/) | Earlier pool, bytecode and primitive observations; provenance and scope vary by artifact |
 | [docs/](docs/) | Detailed topic notes, including historical interpretations superseded by the later JACK work |

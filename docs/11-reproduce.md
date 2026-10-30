@@ -47,7 +47,10 @@ package/build commands and the older component tests. Consult the dedicated
 [XXIII report](../PAFET_JACK_XXIII.md) for original-bytecode model reproduction,
 and [XXVII report](../PAFET_JACK_XXVII.md) for its intentionally failing native
 context reproducer. That last failure is not resolved by JACK XVII's decoded
-state comparisons.
+state comparisons. Its missing-input cause is now isolated and corrected in
+the separate [native-state follow-up](native-state-divergence.md), whose
+complete-input replay and strict regression commands supersede incomplete
+snapshots for new full-state claims.
 
 The JACK XXI rekeyed demonstrator and Serial/SHA primitive tests remain useful
 behavioral checks. They are not proof of complete native VM reconstruction or
