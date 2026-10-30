@@ -2,21 +2,29 @@
 
 An independent reconstruction of **PAFET**, the Windows x64 crackme by **NIMA Nikjoo**. This repository studies the executable's four nested virtual machines, their encoded state and dispatch mechanisms, and the cryptographic pipeline they implement.
 
-**The original flag has not been recovered.** The current result is a reproducible research base: an interpreter for the recovered User-VM program, instruction-level translations of five selected User-VM wrappers, an autonomous literal Hex-VM executor, and functional Serial-VM/SHA-VM implementations. These components have different validation contracts; they are not a claim of complete devirtualization.
+**The original flag has not been recovered.** The current result is a reproducible research base: a bytecode-to-effect-IR compiler and structured C++ for the logical User-VM program, instruction-level translations of five selected User-VM wrappers, an autonomous literal Hex-VM executor, and functional Serial-VM/SHA-VM implementations. These components have different validation contracts; they are not a claim of complete devirtualization.
 
 The project's final objective is a **clean, readable `pafet.cpp` faithful to the original mechanisms of all four VMs**. Matching outputs or retaining a large literal x64-to-C++ translation is an intermediate result, not that final objective.
 
-Evidence baseline: [JACK XXVI, `a3fd245`](https://github.com/ajaniramon/pafet-crackme/commit/a3fd245dfd39dd0cd36a1c47b5534c64f0f138c4).
+Literal Hex-VM baseline: [JACK XXVI, `a3fd245`](https://github.com/ajaniramon/pafet-crackme/commit/a3fd245dfd39dd0cd36a1c47b5534c64f0f138c4). Current semantic work: [JACK XVII — DE VIRTUAL MACHINA](docs/jack-xvii.md), 30 October 2026, following XXVII.
 
 ## Current state
 
 | Component | Current implementation | Demonstrated scope | Remaining work |
 |---|---|---|---|
-| User-VM | [Original-bytecode interpreter](src/pafet_original_vm_xxiii.cpp), plus [native wrapper translations](src/pafet_lifted_xxiv.cpp) | All 73 materialization segments recovered; 13 Windows executions compared at the decoded logical-state level; five wrapper bodies checked against original x64 | Complete native encoded state, scheduling, guards and exception behavior; integration into a faithful whole-VM reconstruction |
+| User-VM | [Semantic devirtualizer](devirt/), [structured C++](jack_xvii_evidence/generated/user.structured.cpp), [bytecode model](src/pafet_original_vm_xxiii.cpp) and [native wrappers](src/pafet_lifted_xxiv.cpp) | All 73 materialization segments; 339 instructions lifted; 17 Windows executions and 54,108 logical steps compared; five wrapper bodies checked against original x64 | Complete native encoded state, scheduling, guards and exception behavior; integration into a faithful whole-VM reconstruction |
 | Hex-VM | [Literal executor](src/pafet_hexvm_executor_lifted_xxvi.cpp), [translated instructions](src/hexvm_lifted_xxvi/), [CPU model](src/pafet_hexvm_cpu_xxvi.h) and [host services](src/pafet_hexvm_host_xxvi.h) | Initialization through cleanup and return for the validated corpus; 286,214 native push boundaries matched; 10 independent input/output cases | Reduce the literal translation to semantic IR; broaden seed, branch and failure-path coverage |
-| Serial-VM | [RC4 implementation](src/pafet_serialvm_native_xviii.h) | Ten fixed-vector tests; historical native memory observations consistent with RC4 using a one-byte zero key | Reconstruct its virtualized execution mechanisms rather than substitute RC4 behavior |
-| SHA-VM | [SHA-256 implementation](src/pafet_shavm_native_xix.h) | Twelve fixed-vector tests; historical digest observations after native execution | Reconstruct the SHA-VM's encoded state, dispatch and round execution |
+| Serial-VM | [RC4 implementation](src/pafet_serialvm_native_xviii.h), plus [initialization IR](jack_xvii_evidence/regions/serial.seed.ir.json) | Ten fixed-vector tests and historical memory observations; original blob-seed loop checked per iteration | Recover materialization, opcode format, state, dispatch and the virtualized RC4 program |
+| SHA-VM | [SHA-256 implementation](src/pafet_shavm_native_xix.h), plus [initialization IR](jack_xvii_evidence/regions/sha.seed.ir.json) | Twelve fixed-vector tests and historical digest observations; original blob-seed loop checked per iteration | Recover materialization, opcode format, state, dispatch and the virtualized SHA program |
 | Crypto/controller | [DES/3DES implementation](src/pafet_des3_xxi.h), [offline oracle](scripts/pafet_des3_offline.py), [behavioral demonstrator](src/pafet_recompile_xxi.cpp) | Recovered key construction, cipher composition and controlled rekeying example | Integrate the newer VM reconstructions; account for native partial-block memory behavior; recover the original credentials/flag |
+
+## Semantic devirtualizer
+
+[JACK XVII](docs/jack-xvii.md) implements **original PE → materialized bytecode → effect IR → readable C++** for the recovered logical User program. The IR preserves wrapping arithmetic, signed comparisons, register/stack effects, host byte-memory operations and deferred control transfers. Unknown semantics stop explicitly. The generated program contains no runtime opcode decoder or captured instruction stream.
+
+The conservative CFG has 339 instructions and 75 blocks. Optimized C++ folds 49 constants and removes 130 dead pure values; a structured backend emits the proved single loop under an enforced initial-register contract. Validation compares 17 Windows executions, the independent bytecode model, IR and generated code, including block states and native byte stores. Native coverage is 334 logical PCs; the other five are exercised only by a separately labelled model control.
+
+Four native initialization regions also pass original-x64/IR/C++ comparisons at 10,179 iteration boundaries. They establish blob references and seed folds for User, Serial, SHA and Hex, **not a shared ISA or decrypted Serial/SHA program**. See the [status matrix](jack_xvii_evidence/status_matrix.json), [validation](jack_xvii_evidence/validation.json) and [reproduction commands](docs/jack-xvii.md#7-reproduction). The XXVII native-context mismatch remains unresolved.
 
 ## Executable architecture and evidence identity
 
@@ -74,7 +82,9 @@ JACK XXIV translates these five selected wrapper bodies and checks them instruct
 
 They are **not five atomic output-byte writers**. The comparisons include GPRs, RIP, defined arithmetic flags, XMM state and written memory. Local coverage accounts for the bodies under explicit LUT, ABI and non-aliasing assumptions; it does not cover every helper or OS exception path. [JACK XXVII](PAFET_JACK_XXVII.md) reproduces the historical RCX/security-cookie discrepancy and adds process-cookie capture. Its new replay stops at a separate context-memory mismatch, so fresh-frame closure remains open, along with the User-VM queue-throw path.
 
-Sources and detailed evidence: [JACK XXIII](PAFET_JACK_XXIII.md), [JACK XXIV](PAFET_JACK_XXIV.md), [logical verification](jack_xxiii_evidence/verification.json), [wrapper coverage](jack_xxiv_evidence/).
+The new [effect-IR/compiler comparison](jack_xvii_evidence/validation.json) adds four Windows captures to those thirteen cases, including length-15/16 storage boundaries and a 23-byte binary input. It compares 54,108 logical steps; 54,105 immediate post-core snapshots are available. The missing snapshots are `a8/779`, `fresh_heap16/932` and `fresh_sso15/1625`, each checked through its next pre-state.
+
+Sources and detailed evidence: [JACK XXIII](PAFET_JACK_XXIII.md), [JACK XXIV](PAFET_JACK_XXIV.md), [JACK XVII semantic pipeline](docs/jack-xvii.md), [logical verification](jack_xxiii_evidence/verification.json), [wrapper coverage](jack_xxiv_evidence/).
 
 ## Hex-VM: autonomous literal executor
 
@@ -183,7 +193,7 @@ The research combines PE extraction, recursive CFG recovery, native Windows inst
 
 Each comparison has a contract: decoded logical state, native instruction state, a callback boundary or final output. Native VA, virtual PC, alias, physical segment and CFG root are different quantities. Conditional unreachable-edge proofs supplement local coverage; neither a complete trace nor a matching output establishes coverage of unvisited states.
 
-Source hashes, PE identity, run IDs and archived inputs make results attributable. The [scoped Git attributes](.gitattributes) preserve the bytes used by the XXVI provenance checks. Historical reports remain dated research records; the implementation and evidence linked above define the current claims.
+Source hashes, PE identity, run IDs and archived inputs make results attributable. The [scoped Git attributes](.gitattributes) preserve bytes used by the provenance checks, including the new compiler and its evidence. Historical reports remain dated research records; the implementation and evidence linked above define the current claims.
 
 ## Reproduction
 
@@ -266,6 +276,8 @@ These are primitive/oracle tests, not instruction-level Serial-VM or SHA-VM reco
 |---|---|
 | [src/](src/) | Current interpreters, native translations, host/CPU models, primitive implementations and test programs |
 | [scripts/](scripts/) | PE/CFG extraction, collectors, differential harnesses, build and packaging tools |
+| [devirt/](devirt/) | Explicit effect IR, User bytecode lifter, optimizer, C++ backends, native captures and differential tests |
+| [jack_xvii_evidence/](jack_xvii_evidence/) | Generated readable User program, four initialization regions, native traces, status matrix and validation |
 | [jack_xxiii_evidence/](jack_xxiii_evidence/) | Recovered User-VM bytecode, logical program, native traces and comparisons |
 | [jack_xxiv_evidence/](jack_xxiv_evidence/) | Wrapper CFGs, lockstep results, directed cases and conditional coverage proofs |
 | [jack_xxvii_evidence/](jack_xxvii_evidence/) | Process-cookie captures, historical negative control and the first failing fresh User-VM frame |

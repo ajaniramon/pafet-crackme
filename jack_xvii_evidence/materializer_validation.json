@@ -1,0 +1,37 @@
+{
+  "all_checks_pass": true,
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "permutation_inputs": 256,
+  "native_materializer_calls": 219,
+  "cases": [
+    {
+      "shadow": "zero",
+      "period": 0,
+      "current": 0,
+      "blocks": 73,
+      "all_1752_bytes_match_after_every_request": true,
+      "counter_and_bitmap_match": true,
+      "sha256": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815"
+    },
+    {
+      "shadow": "nonzero",
+      "period": 0,
+      "current": 0,
+      "blocks": 73,
+      "all_1752_bytes_match_after_every_request": true,
+      "counter_and_bitmap_match": true,
+      "sha256": "0e742937238048518f0a6345b9ed7bd195f3af8b9b9480d210458650a5b6f80f"
+    },
+    {
+      "shadow": "nonzero",
+      "period": 24,
+      "current": 17,
+      "blocks": 73,
+      "all_1752_bytes_match_after_every_request": true,
+      "counter_and_bitmap_match": true,
+      "sha256": "71133da9eb0982d6bd9c1e5f2f3db8db65cc88113df93ff8818a432e83fdb2c5"
+    }
+  ],
+  "validation_source_sha256": "ef07c8fef537ad877d4e26f5c35d1ce5bb1369703f358f1425084ff044dd94fb",
+  "scope": "Original x64 native materializer versus reused scalar extractor; default result equals devirtualizer input. Not complete VM-context initialization."
+}

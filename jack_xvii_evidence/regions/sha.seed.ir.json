@@ -1,0 +1,309 @@
+{
+  "schema": "pafet-effect-ir-v1",
+  "vm": "SHA native initialization region",
+  "pe_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "entry": 0,
+  "functions": {},
+  "blocks": [
+    {
+      "pc": 0,
+      "stack_in": 0,
+      "instructions": [
+        {
+          "pc": 0,
+          "logical_opcode": 0,
+          "operation": "NATIVE_INITIALIZATION_REGION",
+          "encoded_hex": "native-region",
+          "operands": [],
+          "fallthrough_pc": 1,
+          "stack_after": [],
+          "effects": [
+            {
+              "id": "seed",
+              "op": "const",
+              "args": [],
+              "bits": 64,
+              "value": 16208587783562536740
+            },
+            {
+              "op": "reg.write",
+              "index": 0,
+              "args": [
+                "seed"
+              ]
+            },
+            {
+              "id": "zero",
+              "op": "const",
+              "args": [],
+              "bits": 64,
+              "value": 0
+            },
+            {
+              "op": "reg.write",
+              "index": 1,
+              "args": [
+                "zero"
+              ]
+            },
+            {
+              "id": "size",
+              "op": "buffer.size",
+              "args": [],
+              "bits": 64,
+              "buffer": "source"
+            },
+            {
+              "op": "reg.write",
+              "index": 2,
+              "args": [
+                "size"
+              ]
+            }
+          ],
+          "control": {
+            "op": "jump",
+            "target": 1
+          }
+        }
+      ]
+    },
+    {
+      "pc": 1,
+      "stack_in": 0,
+      "instructions": [
+        {
+          "pc": 1,
+          "logical_opcode": 0,
+          "operation": "NATIVE_INITIALIZATION_REGION",
+          "encoded_hex": "native-region",
+          "operands": [],
+          "fallthrough_pc": 2,
+          "stack_after": [],
+          "effects": [
+            {
+              "id": "acc",
+              "op": "reg.read",
+              "args": [],
+              "bits": 64,
+              "index": 0
+            },
+            {
+              "id": "i",
+              "op": "reg.read",
+              "args": [],
+              "bits": 64,
+              "index": 1
+            },
+            {
+              "id": "byte",
+              "op": "load8",
+              "args": [
+                "i"
+              ],
+              "bits": 8,
+              "buffer": "source"
+            },
+            {
+              "id": "x",
+              "op": "xor",
+              "args": [
+                "acc",
+                "i"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "y",
+              "op": "xor",
+              "args": [
+                "x",
+                "byte"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "shift",
+              "op": "const",
+              "args": [],
+              "bits": 64,
+              "value": 33
+            },
+            {
+              "id": "m1",
+              "op": "const",
+              "args": [],
+              "bits": 64,
+              "value": 18397679294719823053
+            },
+            {
+              "id": "m2",
+              "op": "const",
+              "args": [],
+              "bits": 64,
+              "value": 14181476777654086739
+            },
+            {
+              "id": "a",
+              "op": "shr",
+              "args": [
+                "y",
+                "shift"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "b",
+              "op": "xor",
+              "args": [
+                "a",
+                "y"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "c",
+              "op": "mul",
+              "args": [
+                "b",
+                "m1"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "d",
+              "op": "shr",
+              "args": [
+                "c",
+                "shift"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "e",
+              "op": "xor",
+              "args": [
+                "d",
+                "c"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "f",
+              "op": "mul",
+              "args": [
+                "e",
+                "m2"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "g",
+              "op": "shr",
+              "args": [
+                "f",
+                "shift"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "next",
+              "op": "xor",
+              "args": [
+                "g",
+                "f"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "one",
+              "op": "const",
+              "args": [],
+              "bits": 64,
+              "value": 1
+            },
+            {
+              "id": "inc",
+              "op": "add",
+              "args": [
+                "i",
+                "one"
+              ],
+              "bits": 64
+            },
+            {
+              "id": "size",
+              "op": "reg.read",
+              "args": [],
+              "bits": 64,
+              "index": 2
+            },
+            {
+              "id": "more",
+              "op": "ult",
+              "args": [
+                "inc",
+                "size"
+              ],
+              "bits": 64
+            },
+            {
+              "op": "reg.write",
+              "index": 0,
+              "args": [
+                "next"
+              ]
+            },
+            {
+              "op": "reg.write",
+              "index": 1,
+              "args": [
+                "inc"
+              ]
+            }
+          ],
+          "control": {
+            "op": "branch",
+            "condition": "more",
+            "zero": false,
+            "target": 1,
+            "fallthrough": 2
+          }
+        }
+      ]
+    },
+    {
+      "pc": 2,
+      "stack_in": 0,
+      "instructions": [
+        {
+          "pc": 2,
+          "logical_opcode": 0,
+          "operation": "NATIVE_INITIALIZATION_REGION",
+          "encoded_hex": "native-region",
+          "operands": [],
+          "fallthrough_pc": 3,
+          "stack_after": [],
+          "effects": [
+            {
+              "id": "ret",
+              "op": "reg.read",
+              "args": [],
+              "bits": 64,
+              "index": 0
+            }
+          ],
+          "control": {
+            "op": "return",
+            "value": "ret"
+          }
+        }
+      ]
+    }
+  ],
+  "contract": {
+    "input": "nonempty bytes; original seed from PE",
+    "state": "Compiler scratch r0=accumulator,r1=index,r2=length; not virtual ISA registers.",
+    "scope": "Blob seed fold only; not bytecode materialization, opcode decoding or RC4/SHA semantic recovery."
+  }
+}

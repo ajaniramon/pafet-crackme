@@ -9,3 +9,5 @@ jack_xxvi_evidence/** -text
 src/pafet_hexvm_lifted_xxvi.cpp -text whitespace=-blank-at-eol
 scripts/pafet_cookie_*xxvii.py -text
 jack_xxvii_evidence/** -text
+devirt/** -text
+jack_xvii_evidence/** -text whitespace=cr-at-eol

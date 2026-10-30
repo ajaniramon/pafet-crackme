@@ -1,80 +1,42 @@
-# 05 — SHA-VM (SHA-256)
+# 05 — SHA-VM: digest behavior and unresolved virtualization
 
-## What it computes
+The executor is at `0x14027aba0`. The existing
+[replacement](../src/pafet_shavm_native_xix.h) implements SHA-256. Its twelve
+fixed-vector tests validate the replacement. The historical
+[native capture](../vm_pools_evidence/shavm_vectors_xix.json) records expected
+digests in searched memory windows for short usernames and empty input; it is
+not a virtual-instruction or SHA-round trace.
 
-```python
-sha_vm(bytes) = hashlib.sha256(bytes).digest()
-```
+Separate [crypto-audit evidence](../audit_evidence/native_audit.json) checks
+seven native message-preparation/compression cases, including padding boundaries
+and embedded NULs, under an adapted Linux PE host. Those cases must not be
+attributed to the twelve-case Windows collector or to unmodified acceptance.
 
-Standard FIPS 180-4 SHA-256. The computed 32-byte digest is compared
-verbatim against:
+## Verified initialization region
 
-```text
-H = 9419f86b97bd379906be72ea80517c075a499d0db0a37499132c2d203cc21420
-```
-
-Mismatch → `[!] Invalid username`.
-
-## Where in the PE
-
-```text
-Executor VA  : 0x14027aba0
-Output slot  : ctx + 0xc0 (digest, 32 bytes)
-```
-
-## Replica
-
-[`src/pafet_shavm_native_xix.h`](../src/pafet_shavm_native_xix.h)
-is a standard public-domain-style SHA-256 (based on Brad Conte's
-reference). Full K-table, standard rotation schedule, big-endian
-message schedule, Merkle-Damgård padding.
-
-Public interface:
-
-```cpp
-namespace pafet_shavm {
-    inline void compute(const uint8_t* data, size_t len, uint8_t digest[32]);
-}
-```
-
-Internals: `transform(H[8], block[64])`, `rotr`, the 64-entry `K[]`
-constant table, SHA-256 padding (append `0x80`, zero-pad, append
-big-endian 64-bit bit-length), Merkle-Damgård iteration.
-
-## Validation
-
-Test harness: [`src/main_shavm_test_xix.cpp`](../src/main_shavm_test_xix.cpp)
-→ `pafet_shavm_test_xix.exe`.
+[JACK XVII](jack-xvii.md) verifies the original initializer's blob reference at
+RVA `0x3e3f10`, with `0xdb6` (3,510) bytes read:
 
 ```text
-12/12 inputs byte-exact against the on-disk SHA-VM's ctx+0xc0 window
-and against hashlib.sha256:
-  "", "a", "abc",
-  "The quick brown fox jumps over the lazy dog",
-  "alice", "ramon",
-  <56 B input to exercise the >1-block path>,
-  <input with embedded NUL>,
-  <2-block input>, ...
+acc = 0xe0f078b65dfb2724
+for i in 0 .. 3509:
+    acc = fmix64(acc XOR i XOR blob[i])
 ```
 
-Raw vectors: `vm_pools_evidence/shavm_vectors_xix.json`.
-Output location evidence: `vm_pools_evidence/sha_output_location_xix.json`.
+[Disassembly, extracted bytes and effect IR](../jack_xvii_evidence/regions/)
+are available. Every iteration is checked against original x64 and generated
+C++. This establishes a native initialization recurrence, not decryption,
+virtual SHA instructions or a decoded program length.
 
-## Why SHA-256 is wrapped in the same VM
+## Still unknown
 
-Same reasoning as the serial-VM. SHA-256's compression function uses
-ADD mod 2^32, XOR, AND and rotations — all expressible against the
-shared 12-slot ALU pool. The K-table (64 32-bit constants) lives in
-`.rdata` as a plain constant array; the pool handles the per-round
-ADD/XOR/rotation primitives.
+The virtual opcode format, materialization, handler resolution, encoded virtual
+state, virtual control transfers and mapping to SHA rounds remain unrecovered.
+A digest occurrence in an ABI-object memory window does not identify the full
+internal virtual context. Standard SHA arithmetic and cloned helper pools do
+not establish an ISA shared with User, Serial or Hex.
 
-Running SHA-256 under a VM makes it ~1000× slower than native, but
-hides the K-table and compression round shape from a static-analysis
-walker that only reads `.text`.
-
-## Pre-overnight sources
-
-| Report                      | Content                                              |
-|-----------------------------|------------------------------------------------------|
-| `PAFET_CRYPTO_AUDIT.md`     | SHA-VM behavior under RSA-PE loader (7 standard cases match) |
-| `PAFET_NIGHT_REPORT.md`     | Commit XIX: byte-exact native port shipped          |
+The digest remains part of the username gate described in
+[the pipeline](02-pipeline.md). No matching original username or original flag
+is known. Next: trace the verified blob into its first decoded program buffer,
+then establish per-instruction state effects independently of a SHA-256 oracle.

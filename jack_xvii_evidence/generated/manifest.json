@@ -1,0 +1,58 @@
+{
+  "pe_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "instructions": 339,
+  "basic_blocks": 75,
+  "logical_edges": 340,
+  "unknown_instructions": [],
+  "optimization": {
+    "constant_folds": 49,
+    "dead_pure_values_removed": 130,
+    "contract": "Block exit state, host effects, control and result; no instruction trace."
+  },
+  "artifacts": {
+    "user.bytecode.bin": "a15f43b7d8afa2b3ea2b4cbb77c5ae740a9b4ccc240fbd49fcb9bd8492d5d815",
+    "user.ir.json": "01728bb736ade47aec47dc7db0e49a6b71058b4cb7acf6a1c4135550a916a76f",
+    "user.optimized.ir.json": "06748c86e047e07ae86bf4af6b85fd34b4cb1469213db07acc9eb28ddcf2d380",
+    "user.cpp": "b959fb543800c6a6cc42f9c467ac09cc950e840f787e9b9a796e5703d0dd6ccf",
+    "user.optimized.cpp": "7ffa52ef0e000c04dcf93fffa7b43227a6e624f8726127f700a6381af9c6bbe4",
+    "user.pseudo.txt": "d234f408b62ef47c0bd3bb9ec4eea2155569dfe1b7a2d80872b10b823208822e",
+    "user.structured.cpp": "86e23cc6b44fa389e61e68b0fffc9a218d2b0482ce53f1809fae3a6a53b78093",
+    "user.structured.json": "1c55b3441abc348e478547eb4bde3f976d1f164758bb6e174e670209051eca3d"
+  },
+  "sources": {
+    "devirt/__init__.py": "d74b2e3b017fadca39778b154344105623bb11b643af6fa5dd41b5940bf3e0c1",
+    "devirt/__main__.py": "a62696f52871529dfac30e96eb9c0018d4741243232b748518c72e99f7ca257f",
+    "devirt/audit.py": "bd597d902ce129a72f1356ca4849f877b6dfade0c69217015d2f5fabd64b966a",
+    "devirt/capture.py": "72fbfe1ab41c4b402a3b702dede5363b4886866a3eec016f5131c0801714b7da",
+    "devirt/cpp.py": "16b5a3fc913ac7d81779bab64fa7712bf66254293c2d64bb8ae317afd171acb2",
+    "devirt/driver.cpp": "b6e92544e3b1c9e4e51a6d70f395e54c7477a10e29958ed152216ce74324738f",
+    "devirt/ir.py": "c75a1cabb278f9f37787e5aac5a7dae18746d17ee5ec30c3ffcc39233a75f201",
+    "devirt/materializer.py": "ef07c8fef537ad877d4e26f5c35d1ce5bb1369703f358f1425084ff044dd94fb",
+    "devirt/region_driver.cpp": "8cde2ce28aca40041ef7cf6d90b354a6d22b14e2d43ae48bd9ede645614e5dea",
+    "devirt/runtime.hpp": "52fdab4ab6e24f09707b04c602815d49804fa4dfeb86652557325b96137219fa",
+    "devirt/test_ir.py": "e63825da5220abdbb8510298a545169b51ad966d7dc94bb77425ecd4a662adca",
+    "devirt/uservm.py": "2e1cf26b9f93c4b8b47ec4b45baac5799df1c744441d53be37ded35686f31e37",
+    "devirt/validate.py": "ad65f1c3af673fd70494ba2617c2bf07b97798dc49abf7de10778255f4db37d2",
+    "devirt/windows.py": "cb130a07959539fe7dd2a251f6265d2347f929cc20abddb883d5ba8e0e0c6a6b"
+  },
+  "reused_sources": {
+    "scripts/pafet_decode_xxiii.py": "eed8e468dfcc851478a1e90768148dee253d8a9f0c2ef0e028cb7f27575ff290",
+    "scripts/pafet_materialize_xxiii.py": "4dcad56ee29838db7fc6db91413e841cdf784f03e5d18e67b6fbd34ee53e6593",
+    "scripts/decode_user_blob_vi.py": "1822c564a0f52ede1f8eae986227e8c3deb293248bd8d690394f764424a63ccb",
+    "scripts/pafet_abstract_xxiii.py": "2984cbb769ee76188678559546b484e28ac0f56f09b80ce1622041bc4199dfcc"
+  },
+  "scope": {
+    "values": "uint64; explicit wrapping widths; signed comparisons are int64",
+    "registers": 256,
+    "flags": "No separate logical flags used by this program; conditions are stack values.",
+    "memory": "source/working/output byte buffers, explicit index and host side effects",
+    "control": "post_core_pc is operand end; queued target is next_opcode_pc",
+    "excluded": [
+      "native register/stack encoding",
+      "alias scheduling",
+      "native guard effects",
+      "OS exceptions",
+      "MSVC allocation/capacity state"
+    ]
+  }
+}

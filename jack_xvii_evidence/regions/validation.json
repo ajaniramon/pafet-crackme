@@ -1,0 +1,178 @@
+{
+  "pe_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "regions": {
+    "User": {
+      "executor": "0x3f540",
+      "seed_pc": "0x3f6e5",
+      "lea_pc": "0x3f6f1",
+      "count_pc": "0x3f6f8",
+      "blob": "0x3e5020",
+      "size": "0x6d8",
+      "seed": "0xf7002e5d6b6ed339",
+      "start": "0x3f700",
+      "branch": "0x3f719",
+      "end": "0x3f71b",
+      "raw_blob_sha256": "fe89beb0ea9f67afa5e762c1be7fae2a8c338c0fed1dbdc8b39d8d4c0dab1147",
+      "trials": [
+        {
+          "case": "original_blob",
+          "bytes": 1752,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0xc4344faf7ef3b8df",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "e3423863d518150f9dfe771ba1bdb2a688b3f8c754c47966cae70f77e47aec85"
+        },
+        {
+          "case": "one_byte",
+          "bytes": 1,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0x5263cb78b19b2f7f",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "f15cc41f12d07d3bb5a01dc5238c9135e13eb62732bea6050ce7dfaf58559b20"
+        },
+        {
+          "case": "synthetic_65",
+          "bytes": 65,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0x758e26cf28a069b7",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "cb3af4e350da27e76391f129db8288c34dbf1281beff6989647054e3cbd8a0b9"
+        }
+      ],
+      "ir_sha256": "407e5285d12b63eee78082098ae289aeb6b823fd799ceb539fc98f902fd3c420",
+      "generated_cpp_sha256": "55c37d3771c17ff02f582fc4f1ae01233e6baf679d46e707afff30896e540c26"
+    },
+    "Serial": {
+      "executor": "0x22a120",
+      "seed_pc": "0x22a2c5",
+      "lea_pc": "0x22a2d1",
+      "count_pc": "0x22a2d8",
+      "blob": "0x3e9c10",
+      "size": "0xa76",
+      "seed": "0x3f7bc48565f9022a",
+      "start": "0x22a2e0",
+      "branch": "0x22a2f9",
+      "end": "0x22a2fb",
+      "raw_blob_sha256": "3da417858475bca1acccf427ca80caa173db80a796cdf66dacdd09cbeaa29cea",
+      "trials": [
+        {
+          "case": "original_blob",
+          "bytes": 2678,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0xd46023193b81faaa",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "7511d0d282e63e923f917ad0f855f95e05d2337cbde112049988a2d7a0104c24"
+        },
+        {
+          "case": "one_byte",
+          "bytes": 1,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0x21d57be1eb66fac2",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "dcc71f3befed7abeacf88c2db69557f1a225a6ef455600634dfe779a308f78f8"
+        },
+        {
+          "case": "synthetic_65",
+          "bytes": 65,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0xdbea1b66f9d4f79b",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "f028e87989fee5665cb5e1250a260962fd00beb3a7eb910816ea25a49547a13b"
+        }
+      ],
+      "ir_sha256": "4967a24dc020beab9e4bf08353b88678915c77396b445a297ba56a490cc88108",
+      "generated_cpp_sha256": "da619071a6ab1c21b7d82a676f4c290fbb2bdc52a7c1c3ebfbbaceb7d6263609"
+    },
+    "SHA": {
+      "executor": "0x27aba0",
+      "seed_pc": "0x27ad87",
+      "lea_pc": "0x27ad93",
+      "count_pc": "0x27ad9a",
+      "blob": "0x3e3f10",
+      "size": "0xdb6",
+      "seed": "0xe0f078b65dfb2724",
+      "start": "0x27ada0",
+      "branch": "0x27adb9",
+      "end": "0x27adbb",
+      "raw_blob_sha256": "c412ef37d8f57aeb4fc772db46a35158ba0670f7f8958a1fb76f72d46038f78f",
+      "trials": [
+        {
+          "case": "original_blob",
+          "bytes": 3510,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0xfa0cd896d41a6139",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "14faadea3bedc964da8188ee795d913cd188bc4de5b57f096975acafda5989f9"
+        },
+        {
+          "case": "one_byte",
+          "bytes": 1,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0xac673d88c2e251f7",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "87b07f7688c2b9c6a4eef7dfa595376aa4734d18c2e7a2a996f95c00f16cd06c"
+        },
+        {
+          "case": "synthetic_65",
+          "bytes": 65,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0xf0d6e837c3f387c9",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "27e72fdb734c9c9716dd97eb503034c08a6d39258686bc5facfebed4e5afd68c"
+        }
+      ],
+      "ir_sha256": "d55b8ec0873018320435f70c846600d8ba7eb372209d9922ddbab034200328f5",
+      "generated_cpp_sha256": "444642e5f2b05d7cf1c7786729d84d93eca1ca517b5d64df6523b89e9435dd43"
+    },
+    "Hex": {
+      "executor": "0x804c0",
+      "seed_pc": "0x80682",
+      "lea_pc": "0x80692",
+      "count_pc": "0x80699",
+      "blob": "0x3ec120",
+      "size": "0x7b7",
+      "seed": "0x671ae3e65cd34f0d",
+      "start": "0x806b0",
+      "branch": "0x806eb",
+      "end": "0x806ed",
+      "raw_blob_sha256": "2934dfcf6ff82a7c7c380ba17f8de9a74224e2d5bed726f27c0854cf5f10822c",
+      "trials": [
+        {
+          "case": "original_blob",
+          "bytes": 1975,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0x1d03b1512f9e93a3",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "8b554916f3be601a3cbbdb2775668357720dc69461557b8cbb000033128207fd"
+        },
+        {
+          "case": "one_byte",
+          "bytes": 1,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0x863db1facb36487f",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "fbc12d6220b2f7f861b0810159d4a3328a6b753791c1e1a817de4614111546ca"
+        },
+        {
+          "case": "synthetic_65",
+          "bytes": 65,
+          "every_iteration_accumulator_index_remaining_pointer_match": true,
+          "final_hash": "0x39b7ef85645c2439",
+          "cpp_matches_every_iteration": true,
+          "iteration_states_sha256": "948e2902c6d432b5b6c37c119359fe9afdaf600f4da823c51225c82ba451e25e"
+        }
+      ],
+      "ir_sha256": "aed1d0e632f4e00976ff6ed2860d8cda9d239fbc8c27ca3470cb61f73e122d2c",
+      "generated_cpp_sha256": "ec232ffe0b1f90b96543964d0920761ccd0446678ace179879275fbd91c3262d"
+    }
+  },
+  "all_checks_pass": true,
+  "scope": "Verified initialization blob references, lengths, seed recurrence and per-iteration state. Serial/SHA bytecode format and ISA remain unproved.",
+  "validation_source_sha256": "bd597d902ce129a72f1356ca4849f877b6dfade0c69217015d2f5fabd64b966a",
+  "sources_sha256": {
+    "devirt/ir.py": "c75a1cabb278f9f37787e5aac5a7dae18746d17ee5ec30c3ffcc39233a75f201",
+    "devirt/cpp.py": "16b5a3fc913ac7d81779bab64fa7712bf66254293c2d64bb8ae317afd171acb2",
+    "devirt/runtime.hpp": "52fdab4ab6e24f09707b04c602815d49804fa4dfeb86652557325b96137219fa",
+    "devirt/region_driver.cpp": "8cde2ce28aca40041ef7cf6d90b354a6d22b14e2d43ae48bd9ede645614e5dea"
+  }
+}

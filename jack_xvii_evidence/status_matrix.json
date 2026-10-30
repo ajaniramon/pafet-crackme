@@ -1,0 +1,200 @@
+{
+  "baseline_commit": "a59292e1286b6cc205fe398354ebda0bbcf03b3e",
+  "operation": "JACK XVII — DE VIRTUAL MACHINA (2026-10-30)",
+  "legend": {
+    "DEMOSTRADO": "Supported by the cited implementation and bounded primary evidence; not a universal claim.",
+    "PARCIAL": "Some mechanisms or a finite corpus are reconstructed; stated gaps remain.",
+    "HIPÓTESIS": "Not established by primary evidence; must not be used as an implementation premise.",
+    "DESCONOCIDO": "No demonstrated reconstruction in the audited sources."
+  },
+  "User": {
+    "bytecode": {
+      "status": "DEMOSTRADO",
+      "scope": "1752 bytes; 73 physical materialization units; 339 decoded instructions.",
+      "evidence": [
+        "../devirt/uservm.py",
+        "../scripts/pafet_materialize_xxiii.py",
+        "generated/manifest.json"
+      ]
+    },
+    "materialization": {
+      "status": "DEMOSTRADO",
+      "scope": "Permutation, three XOR passes, feedback mask and shadow/window terms in the extractor's documented contract.",
+      "evidence": [
+        "../jack_xxiii_evidence/materializer_differential.json",
+        "materializer_validation.json"
+      ]
+    },
+    "instruction_semantics": {
+      "status": "DEMOSTRADO",
+      "scope": "15 logical opcodes occurring in the recovered program; uint64 stack/register effects and seven explicit host effects.",
+      "evidence": [
+        "generated/user.ir.json",
+        "validation.json"
+      ]
+    },
+    "native_dispatch": {
+      "status": "PARCIAL",
+      "scope": "Four root channels, dynamic aliases, remapping and threaded calls characterized. Complete native scheduling, guards and exceptional paths remain open.",
+      "evidence": [
+        "../jack_xxiii_evidence/dispatch_coverage_windows.json",
+        "../PAFET_JACK_XXIV.md"
+      ]
+    },
+    "logical_state_and_cfg": {
+      "status": "DEMOSTRADO",
+      "scope": "256 logical uint64 registers, operand stack, deferred transfers, 75 CFG blocks. No separate logical flags used by this program.",
+      "evidence": [
+        "generated/user.ir.json",
+        "generated/user.structured.json"
+      ]
+    },
+    "native_encoded_state": {
+      "status": "PARCIAL",
+      "scope": "Native projections and selected wrappers validated. XXVII's 764-byte context mismatch remains unresolved.",
+      "evidence": [
+        "../jack_xxvii_evidence/first_divergence.json"
+      ]
+    },
+    "readable_program": {
+      "status": "DEMOSTRADO",
+      "scope": "Direct C++ and structured single-loop C++ derived from bytecode. The structured form enforces the first-16-registers-zero contract.",
+      "evidence": [
+        "generated/user.structured.cpp",
+        "validation.json"
+      ]
+    },
+    "whole_vm": {
+      "status": "PARCIAL",
+      "scope": "Logical program recovered and translated; complete native VM mechanisms are not closed."
+    }
+  },
+  "Serial": {
+    "bytecode": {
+      "status": "PARCIAL",
+      "scope": "Initializer reads 2678 bytes at RVA 0x3e9c10; raw encrypted-blob candidate extracted. This count alone is not a decoded program length.",
+      "evidence": [
+        "regions/serial.asm",
+        "regions/validation.json"
+      ]
+    },
+    "blob_seed": {
+      "status": "DEMOSTRADO",
+      "scope": "Original initialization fold lowered to effect IR; every iteration compared with original x64 and generated C++.",
+      "evidence": [
+        "regions/serial.seed.ir.json",
+        "regions/validation.json"
+      ]
+    },
+    "decryption_decoder_handlers": {
+      "status": "DESCONOCIDO",
+      "scope": "No validated Serial opcode grammar or per-opcode virtual-state semantics recovered by this operation."
+    },
+    "virtual_state_and_cfg": {
+      "status": "DESCONOCIDO",
+      "scope": "Executor at 0x14022a120 is known; entry ABI/memory hits do not identify a complete internal VM context, ISA or virtual CFG."
+    },
+    "functional_replacement": {
+      "status": "PARCIAL",
+      "scope": "Zero-key RC4 replacement with ten fixed tests and historical native memory searches; not a devirtualized program.",
+      "evidence": [
+        "../src/pafet_serialvm_native_xviii.h",
+        "../vm_pools_evidence/serialvm_vectors_xviii.json"
+      ]
+    },
+    "whole_vm": {
+      "status": "PARCIAL",
+      "scope": "A native initialization region is recovered; no complete Serial devirtualization."
+    }
+  },
+  "SHA": {
+    "bytecode": {
+      "status": "PARCIAL",
+      "scope": "Initializer reads 3510 bytes at RVA 0x3e3f10; raw encrypted-blob candidate extracted. Opcode format remains unknown.",
+      "evidence": [
+        "regions/sha.asm",
+        "regions/validation.json"
+      ]
+    },
+    "blob_seed": {
+      "status": "DEMOSTRADO",
+      "scope": "Original initialization fold lowered to effect IR; every iteration compared with original x64 and generated C++.",
+      "evidence": [
+        "regions/sha.seed.ir.json",
+        "regions/validation.json"
+      ]
+    },
+    "decryption_decoder_handlers": {
+      "status": "DESCONOCIDO",
+      "scope": "No validated SHA virtual instruction decoder or round-to-opcode mapping."
+    },
+    "virtual_state_and_cfg": {
+      "status": "DESCONOCIDO",
+      "scope": "Executor 0x14027aba0 and external digest observations are known; complete internal state layout and virtual control flow remain open."
+    },
+    "functional_replacement": {
+      "status": "PARCIAL",
+      "scope": "SHA-256 implementation with twelve fixed tests, short Windows digest observations and separate native-instruction crypto-audit cases.",
+      "evidence": [
+        "../src/pafet_shavm_native_xix.h",
+        "../vm_pools_evidence/shavm_vectors_xix.json",
+        "../audit_evidence/native_audit.json"
+      ]
+    },
+    "whole_vm": {
+      "status": "PARCIAL",
+      "scope": "A native initialization region is recovered; SHA-256 behavior is not a reconstructed virtualized SHA program."
+    }
+  },
+  "Hex": {
+    "bytecode": {
+      "status": "PARCIAL",
+      "scope": "1975-byte initializer blob at RVA 0x3ec120; literal decoder and 72 observed virtual PCs. No complete reduced ISA grammar.",
+      "evidence": [
+        "regions/hex.asm",
+        "../jack_xxvi_evidence/literal_program_map.json",
+        "../jack_xxvi_evidence/executor_lift_manifest.json"
+      ]
+    },
+    "blob_seed": {
+      "status": "DEMOSTRADO",
+      "scope": "Inline fmix64 fold lowered to effect IR and checked at every iteration.",
+      "evidence": [
+        "regions/hex.seed.ir.json",
+        "regions/validation.json"
+      ]
+    },
+    "native_decoder_dispatch_state": {
+      "status": "PARCIAL",
+      "scope": "Literal decoder/remap, thunks, encoded slots, LIFO work queue, mixer, exceptions and callbacks execute for the validated corpus; reduced semantics remain partial.",
+      "evidence": [
+        "../src/pafet_hexvm_core_xxvi.h",
+        "../src/pafet_hexvm_executor_lifted_xxvi.cpp",
+        "../jack_xxvi_evidence/executor_msvc_differential.json"
+      ]
+    },
+    "program_semantics": {
+      "status": "PARCIAL",
+      "scope": "Callback-controlled substring parsing builds the 72-byte string; sixteen slot reads produce a separate 128-byte register buffer. A compact complete program IR is still missing.",
+      "evidence": [
+        "../PAFET_JACK_XXVI_CLOSURE.md"
+      ]
+    },
+    "functional_execution": {
+      "status": "DEMOSTRADO",
+      "scope": "Historical XXVI detailed replay and ten independent start-to-return cases, within their documented host contracts.",
+      "evidence": [
+        "../jack_xxvi_evidence/standalone_msvc_differential.json"
+      ]
+    },
+    "whole_vm": {
+      "status": "PARCIAL",
+      "scope": "Literal corpus execution is available; full reduced semantic devirtualization and universal equivalence are not demonstrated."
+    }
+  },
+  "cross_vm_hypothesis": {
+    "status": "HIPÓTESIS",
+    "claim": "All four VMs share the same ISA because some helper pools are cloned.",
+    "assessment": "Unsupported; not assumed by this tool. Shared pool results and the newly checked initialization recurrence do not prove identical opcode formats, states or dispatchers."
+  }
+}

@@ -1,137 +1,39 @@
-# 08 — Recompiling Pafet from scratch
+# 08 — Recompilation, semantic code and remaining integration
 
-Jack XXI (commit `eec2068`) assembles the 4 reconstructed nested VMs
-and the pure-C++ 3DES-EDE into a single executable that behaves like
-`pafet.bin`:
+There are three different deliverables in the repository:
 
-```text
-src/pafet_recompile_xxi.cpp         # the glue
-src/pafet_shavm_native_xix.h        # SHA-VM
-src/pafet_serialvm_native_xviii.h   # serial-VM
-src/pafet_hexvm_native_xx.h         # hex-VM
-src/pafet_byte_writer_x.h           # user-VM
-src/pafet_des3_xxi.h                # pure-C++ 3DES-EDE + permissive unpad
-```
+| Artifact | What it establishes | What it does not establish |
+| --- | --- | --- |
+| [XXI demonstrator](../src/pafet_recompile_xxi.cpp) | Functional crypto/controller composition, configurable gate/ciphertext and a controlled rekeying example | Original flag, original acceptance or full VM mechanisms |
+| [User semantic compiler](../devirt/) | Original-bytecode extraction, explicit effect IR and readable C++ for the logical User program | Complete native encoded/guard/scheduler/exception state |
+| [XXVI Hex literal executor](../src/pafet_hexvm_executor_lifted_xxvi.cpp) | Autonomous start-to-return literal execution for its validated corpus | Complete compact semantic ISA/program or universal equivalence |
 
-## Two builds, same source
+## Current readable code
 
-The gate hash (`EXPECTED_HASH`) and the ciphertext hex
-(`CIPHERTEXT_HEX`) are compile-time `#define`s. One source file
-produces two executables:
+[JACK XVII](jack-xvii.md) generates
+[user.structured.cpp](../jack_xvii_evidence/generated/user.structured.cpp) from
+the PE's materialized bytecode. It recovers a prefix, a natural loop and a return
+suffix under an enforced initial-register contract. Stack/register effects and
+native host memory operations remain explicit. There is no runtime opcode switch,
+PE decoder or captured instruction stream in the generated executable.
 
-### `pafet_recompile_xxi_original.exe`
+The direct backend supports arbitrary supplied initial logical registers;
+the structured backend requires the first 16 to be zero, as in the native
+corpus and abstract-state proof. Their validation contracts are separate.
 
-Compiled with the **original** PE's values:
+## Earlier functional demonstrator
 
-```text
-EXPECTED_HASH  = 9419f86b97bd379906be72ea80517c075a499d0db0a37499132c2d203cc21420
-CIPHERTEXT_HEX = 6f56f79c... (72 B)
-```
+The XXI build script remains `src/build_recompile_xxi.bat`. It builds original
+configuration and rekeyed variants. The rekeyed variant deliberately combines
+chosen credentials with chosen gate/ciphertext data. It validates that controlled
+pipeline instance and prints a chosen flag, not the original challenge flag.
 
-Behavior: rejects every known username. Equivalent to `pafet.bin`
-in the acceptance sense.
+That demonstrator still uses the older User formula/strict Hex helper. It does
+not automatically integrate the XXIII interpreter, current semantic compiler or
+XXVI literal executor. Serial/SHA replacements are standard primitives, not
+recovered virtual instruction programs. Native partial-block cipher reads and
+input-trimming differences impose additional whole-program limits.
 
-### `pafet_recompile_xxi_ramon.exe`
-
-Compiled with a **rekeyed** target: `sha256("ramon") == ...` and a
-ciphertext computed from the plaintext
-`CMO{pafet_rekeyed_by_ramon_____________________________________________}`
-encrypted under `key = f_user("ramon") ++ g_serial("barcelona") ++ pad`.
-
-Behavior:
-
-```powershell
-echo "ramon`nbarcelona" | .\src\pafet_recompile_xxi_ramon.exe
-# ==================================
-#    VSEC-RECOMPILED Pafet Challenge
-# ==================================
-#
-# Username: Serial  : [+] Correct!
-# [+] Flag: CMO{pafet_rekeyed_by_ramon_____________________________________________}
-```
-
-Reject path for any other username:
-
-```powershell
-echo "notramon`nbarcelona" | .\src\pafet_recompile_xxi_ramon.exe
-# [!] Invalid username
-```
-
-## Pipeline in `main`
-
-Direct read of
-[`src/pafet_recompile_xxi.cpp`](../src/pafet_recompile_xxi.cpp):
-
-```cpp
-// 1. Read credentials
-getline(cin, username); rtrim(username);
-getline(cin, serial);   rtrim(serial);
-
-// 2. SHA-VM gate
-pafet_shavm::compute(username.data(), username.size(), digest);
-if (hex_of(digest) != EXPECTED_HASH) { print "Invalid username"; exit; }
-
-// 3. user-VM: f_user
-for (i = 0..username.size()) {
-    f_u[i] = pafet_x::byte_writer(username.data(), username.size(), i);
-}
-
-// 4. serial-VM: g_serial
-pafet_serialvm_xviii::serial_vm(serial.data(), g_s.data(), serial.size());
-
-// 5. Key assembly
-memcpy(key, f_u.data(), min(24, f_u.size()));
-memcpy(key + take_u, g_s.data(), min(24 - take_u, g_s.size()));
-// rest is zero-initialized
-
-// 6. hex-VM: decode ciphertext
-pafet_hexvm_xx::hex_vm(CIPHERTEXT_HEX, 144, ct);
-
-// 7. DES3-EDE 3 passes + permissive unpad
-pt = pafet_des3_xxi::decrypt_material(ct, key);
-
-// 8. Shape check
-if (pt[0..4] == "CMO{" && pt.back() == '}') print "Correct! Flag: " << pt;
-else print "Wrong credentials";
-```
-
-## Build
-
-```powershell
-cd src
-.\build_recompile_xxi.bat
-```
-
-The batch file compiles both variants (original + ramon) and places
-the resulting `.exe` files in `src/`.
-
-Requires MSVC `cl.exe` from a `vcvarsall x64` shell. No external
-dependencies — the C++ is self-contained.
-
-## Diff against `pafet.bin`
-
-| Property                              | `pafet.bin`                                | `pafet_recompile_xxi_*.exe`                |
-|---------------------------------------|---------------------------------------------|---------------------------------------------|
-| Pipeline (SHA → f_user → RC4 → DES3)  | yes                                         | yes                                         |
-| Permissive unpad                      | yes                                         | yes                                         |
-| 4 nested VMs with shared ALU pool     | yes                                         | **no** — primitives are direct calls        |
-| Encrypted bytecode blob at `0x1403E5020` | yes                                       | **no** — f_user is a 1-line C++ function    |
-| Resolver / dispatcher / 35 handlers   | yes                                         | **no** — one function per primitive         |
-| Threaded code, `call r9` dispatch     | yes                                         | **no**                                      |
-| Materializer / Feistel-decrypted blob | yes                                         | **no**                                      |
-| Observable byte-exact output          | yes                                         | **yes** on every tested input              |
-
-The replication is **behavioral**, not binary-identical: the recompiled
-version takes `(username, serial)` and produces the same bytes the
-original would (with the user's chosen gate hash and ciphertext), but
-it is a thin pipeline, not a virtualized one. If `NIMA` wants a
-virtualized clone, the materializer + 73-block canonical bytecode +
-10-op ISA are documented well enough in [03-user-vm.md](03-user-vm.md)
-and [09-bytecode.md](09-bytecode.md) to rebuild one.
-
-## Earlier recompile attempts
-
-| Approach                                           | Status                      |
-|----------------------------------------------------|-----------------------------|
-| `pafet_custom_ramon.exe` (early rekey by patching `.rdata`) | works, but hostile to further edits (binary patch, not source) |
-| `pafet_recompile_xxi_*.exe` (full source rebuild)  | **current**, pure C++, re-buildable |
+The final `pafet.cpp` must combine readable reconstructions faithful to all
+four original VM mechanisms. Neither output-only replacements nor retaining
+58,662 translated native instructions meets that final goal by itself.

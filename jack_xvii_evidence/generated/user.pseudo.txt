@@ -1,0 +1,455 @@
+// Readable control/effect view. Executable C++ is in user.optimized.cpp.
+// Generated from original PE bytecode. Do not edit; regenerate with python -m devirt.
+// PE SHA-256: fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a
+// Contract: decoded User-VM state and byte-buffer host effects; native protection state excluded.
+#include "runtime.hpp"
+namespace pafet_devirt {
+// copy_input; 0x140048960; writer 0x140048a28..0x140048a3e
+[[maybe_unused]] static uint64_t host_0(State& s) {
+    s.working = s.source;
+    let zero = u64(0x0);
+    return zero;
+}
+// reverse_bytes; 0x140048960; writer 0x140048a28..0x140048a3e
+[[maybe_unused]] static uint64_t host_1(State& s) {
+    std::reverse(s.working.begin(), s.working.end());
+    let zero = u64(0x0);
+    return zero;
+}
+// set_index; 0x140048960; writer 0x140048a28..0x140048a3e
+[[maybe_unused]] static uint64_t host_2(State& s, uint64_t arg0) {
+    s.index = arg0;
+    let zero = u64(0x0);
+    return zero;
+}
+// has_byte; 0x140048960; writer 0x140048a28..0x140048a3e
+[[maybe_unused]] static uint64_t host_3(State& s) {
+    let i = s.index;
+    let n = s.working.size();
+    let more = (i < n);
+    return more;
+}
+// rewrite_byte; 0x140048960; writer 0x140048a28..0x140048a3e
+uint64_t host_4(State& s) {
+    let i = s.index;
+    let b = (s.working.at(i)) & u64(0xff);
+    let key = (u64(0x5a)) & u64(0xff);
+    let x = ((b ^ key)) & u64(0xff);
+    let seven = (u64(0x7)) & u64(0xff);
+    let a = ((x + seven)) & u64(0xff);
+    let three = u64(0x3);
+    let delta = ((i * three)) & u64(0xff);
+    let byte = ((a + delta)) & u64(0xff);
+    s.working.at(i) = uint8_t(byte);
+    let ret = ((byte & u64(0x80)) ? (byte | u64(0xffffffffffffff00)) : (byte & u64(0xff)));
+    return ret;
+}
+// get_index; 0x140048960; writer 0x140048a28..0x140048a3e
+[[maybe_unused]] static uint64_t host_5(State& s) {
+    let i = s.index;
+    return i;
+}
+// publish_output; 0x140048960; writer 0x140048a28..0x140048a3e
+[[maybe_unused]] static uint64_t host_6(State& s) {
+    s.output = s.working;
+    let zero = u64(0x0);
+    return zero;
+}
+    goto B0;
+B0: { // incoming stack: 0 uint64 values
+    let v10 = u64(0x0);
+    s.registers[8] = v10;
+    let v14 = host_0(s);
+    s.stack = {};
+    goto B72;
+}
+B24: { // incoming stack: 0 uint64 values
+    let v24 = s.registers[2];
+    let v27 = s.registers[6];
+    s.stack = {};
+    goto B672;
+}
+B48: { // incoming stack: 0 uint64 values
+    let v48 = u64(0x12);
+    s.registers[5] = v48;
+    let v64 = u64(0x48);
+    s.stack = {v64};
+    goto B1056;
+}
+B72: { // incoming stack: 0 uint64 values
+    let v72 = u64(0xad2405c91c8c83c1);
+    s.registers[8] = v72;
+    let v88 = u64(0xffffffffffffffff);
+    s.stack = {v88};
+    goto B960;
+}
+B96: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B648;
+}
+B120: { // incoming stack: 0 uint64 values
+    let v120 = s.registers[4];
+    s.stack = {};
+    goto B288;
+}
+B144: { // incoming stack: 0 uint64 values
+    let v144 = s.registers[4];
+    let v147 = s.registers[14];
+    s.stack = {};
+    goto B1656;
+}
+B168: { // incoming stack: 0 uint64 values
+    let v168 = s.registers[5];
+    s.stack = {};
+    goto B1728;
+}
+B192: { // incoming stack: 0 uint64 values
+    let v192 = s.registers[8];
+    s.stack = {};
+    goto B120;
+}
+B216: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B576;
+}
+B240: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B600;
+}
+B264: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1152;
+}
+B288: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B360;
+}
+B312: { // incoming stack: 0 uint64 values
+    let v312 = s.registers[13];
+    let v315 = s.registers[14];
+    s.stack = {};
+    goto B1560;
+}
+B336: { // incoming stack: 0 uint64 values
+    let v336 = u64(0xfa);
+    s.registers[5] = v336;
+    let v352 = u64(0x0);
+    s.stack = {v352};
+    goto B1008;
+}
+B360: { // incoming stack: 0 uint64 values
+    let v360 = s.registers[5];
+    let v363 = s.registers[11];
+    s.stack = {};
+    goto B696;
+}
+B384: { // incoming stack: 0 uint64 values
+    let v384 = s.registers[3];
+    s.stack = {};
+    goto B1488;
+}
+B408: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1224;
+}
+B432: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B528;
+}
+B456: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1608;
+}
+B480: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.stack = {};
+    if (s0 != 0) goto B384;
+    goto B485;
+}
+B485: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B432;
+}
+B504: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1392;
+}
+B528: { // incoming stack: 0 uint64 values
+    let v528 = s.registers[10];
+    s.stack = {};
+    goto B1488;
+}
+B552: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    let v552 = u64(0x1);
+    let v557 = (s0 + v552);
+    let v558 = host_2(s, v557);
+    let v563 = host_5(s);
+    s.stack = {};
+    goto B1128;
+}
+B576: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1296;
+}
+B600: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B408;
+}
+B624: { // incoming stack: 0 uint64 values
+    let v624 = u64(0xfa);
+    s.registers[5] = v624;
+    let v640 = u64(0x5d);
+    s.stack = {v640};
+    goto B936;
+}
+B648: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1680;
+}
+B672: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1248;
+}
+B696: { // incoming stack: 0 uint64 values
+    let v696 = u64(0xfa);
+    s.registers[5] = v696;
+    let v712 = u64(0xa0);
+    s.stack = {v712};
+    goto B792;
+}
+B720: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B96;
+}
+B744: { // incoming stack: 0 uint64 values
+    let v744 = s.registers[7];
+    s.stack = {};
+    goto B1440;
+}
+B768: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B864;
+}
+B792: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B216;
+}
+B816: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1032;
+}
+B840: { // incoming stack: 0 uint64 values
+    let v840 = u64(0xfa);
+    s.registers[5] = v840;
+    let v856 = u64(0xe8);
+    s.stack = {v856};
+    goto B984;
+}
+B864: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1536;
+}
+B888: { // incoming stack: 0 uint64 values
+    let v888 = host_6(s);
+    let v893 = u64(0x0);
+    s.stack = {};
+    s.result = v893; s.halted = true;
+    return;
+}
+B912: { // incoming stack: 0 uint64 values
+    let v912 = s.registers[14];
+    let v915 = s.registers[4];
+    s.stack = {};
+    goto B720;
+}
+B936: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B264;
+}
+B960: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[8] = s0;
+    let v963 = host_1(s);
+    let v968 = u64(0x0);
+    let v973 = host_2(s, v968);
+    s.stack = {};
+    goto B1704;
+}
+B984: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B504;
+}
+B1008: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B1704;
+}
+B1032: { // incoming stack: 0 uint64 values
+    let v1032 = u64(0x5);
+    s.registers[5] = v1032;
+    let v1048 = u64(0x0);
+    s.stack = {v1048};
+    goto B1512;
+}
+B1056: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B1080;
+}
+B1080: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1200;
+}
+B1104: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B192;
+}
+B1128: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1272;
+}
+B1152: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B744;
+}
+B1176: { // incoming stack: 0 uint64 values
+    let v1176 = s.registers[6];
+    let v1179 = s.registers[0];
+    s.stack = {};
+    goto B840;
+}
+B1200: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B624;
+}
+B1224: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1584;
+}
+B1248: { // incoming stack: 0 uint64 values
+    let v1248 = s.registers[8];
+    let v1251 = s.registers[14];
+    s.stack = {};
+    goto B888;
+}
+B1272: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1344;
+}
+B1296: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1368;
+}
+B1320: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B240;
+}
+B1344: { // incoming stack: 0 uint64 values
+    let v1344 = u64(0x5a);
+    s.registers[5] = v1344;
+    let v1360 = u64(0x0);
+    s.stack = {v1360};
+    goto B768;
+}
+B1368: { // incoming stack: 0 uint64 values
+    let v1368 = s.registers[6];
+    let v1378 = s.registers[8];
+    let v1381 = u64(0x5);
+    let v1386 = ((v1378 ^ u64(0x8000000000000000)) > (v1381 ^ u64(0x8000000000000000)));
+    s.stack = {v1386};
+    goto B480;
+}
+B1392: { // incoming stack: 0 uint64 values
+    let v1392 = s.registers[10];
+    s.stack = {};
+    goto B336;
+}
+B1416: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B456;
+}
+B1440: { // incoming stack: 0 uint64 values
+    let v1440 = u64(0xa7);
+    s.registers[5] = v1440;
+    let v1456 = u64(0x5d);
+    s.stack = {v1456};
+    goto B1104;
+}
+B1464: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B48;
+}
+B1488: { // incoming stack: 0 uint64 values
+    let v1493 = u64(0x88767a18df8a92b0);
+    s.registers[8] = v1493;
+    let v1497 = host_4(s);
+    let v1502 = host_5(s);
+    s.stack = {v1502};
+    goto B552;
+}
+B1512: { // incoming stack: 1 uint64 values
+    let s0 = s.stack[0];
+    s.registers[5] = s0;
+    s.stack = {};
+    goto B912;
+}
+B1536: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B312;
+}
+B1560: { // incoming stack: 0 uint64 values
+    let v1560 = s.registers[8];
+    let v1563 = s.registers[8];
+    s.stack = {};
+    goto B1320;
+}
+B1584: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1176;
+}
+B1608: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B168;
+}
+B1632: { // incoming stack: 0 uint64 values
+    let v1632 = s.registers[14];
+    s.stack = {};
+    goto B1416;
+}
+B1656: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B24;
+}
+B1680: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B144;
+}
+B1704: { // incoming stack: 0 uint64 values
+    let v1704 = host_3(s);
+    s.stack = {};
+    if (v1704 == 0) goto B1632;
+    goto B1713;
+}
+B1713: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B1464;
+}
+B1728: { // incoming stack: 0 uint64 values
+    s.stack = {};
+    goto B816;
+}
+}
+} // namespace pafet_devirt

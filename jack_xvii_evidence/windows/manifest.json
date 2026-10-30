@@ -1,0 +1,25 @@
+{
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "variant_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "collector_sha256": "1fcc5aea5e7bf82f7c69a23fde5bf95774c53bb86210efc4635f947306a739cb",
+  "wrapper_sha256": "72fbfe1ab41c4b402a3b702dede5363b4886866a3eec016f5131c0801714b7da",
+  "cases": [
+    {
+      "label": "fresh_empty",
+      "input_hex": ""
+    },
+    {
+      "label": "fresh_sso15",
+      "input_hex": "303132333435363738396162636465"
+    },
+    {
+      "label": "fresh_heap16",
+      "input_hex": "30313233343536373839616263646566"
+    },
+    {
+      "label": "fresh_binary23",
+      "input_hex": "007f80ff30313233343536373839616263646566676869"
+    }
+  ],
+  "scope": "New Windows pass8 native logical states and actual writer stores; no unmodified acceptance claim."
+}

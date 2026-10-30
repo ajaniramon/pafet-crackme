@@ -1,0 +1,124 @@
+{
+  "all_checks_pass": true,
+  "compiler": "MSVC 14.42.34433",
+  "flags": "/O2 /std:c++17 /W4 /WX",
+  "cases": [
+    {
+      "case": "a1",
+      "steps": 336,
+      "native_post_states": 336,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "a8",
+      "steps": 1862,
+      "native_post_states": 1861,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "alice",
+      "steps": 1208,
+      "native_post_states": 1208,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "alice123",
+      "steps": 1862,
+      "native_post_states": 1862,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "empty",
+      "steps": 118,
+      "native_post_states": 118,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "long_a23",
+      "steps": 5132,
+      "native_post_states": 5132,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "long_a24",
+      "steps": 5350,
+      "native_post_states": 5350,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "long_a25",
+      "steps": 5568,
+      "native_post_states": 5568,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "long_pattern23",
+      "steps": 5132,
+      "native_post_states": 5132,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "long_pattern24",
+      "steps": 5350,
+      "native_post_states": 5350,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "long_pattern25",
+      "steps": 5568,
+      "native_post_states": 5568,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "ramon",
+      "steps": 1208,
+      "native_post_states": 1208,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "ramonbarcelona",
+      "steps": 3170,
+      "native_post_states": 3170,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "fresh_binary23",
+      "steps": 5132,
+      "native_post_states": 5132,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "fresh_empty",
+      "steps": 118,
+      "native_post_states": 118,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "fresh_heap16",
+      "steps": 3606,
+      "native_post_states": 3605,
+      "all_three_backends_match_native_projection": true
+    },
+    {
+      "case": "fresh_sso15",
+      "steps": 3388,
+      "native_post_states": 3387,
+      "all_three_backends_match_native_projection": true
+    }
+  ],
+  "native_executions": 17,
+  "logical_steps": 54108,
+  "native_post_states": 54105,
+  "generated_source_sha256": {
+    "user.cpp": "b959fb543800c6a6cc42f9c467ac09cc950e840f787e9b9a796e5703d0dd6ccf",
+    "user.optimized.cpp": "7ffa52ef0e000c04dcf93fffa7b43227a6e624f8726127f700a6381af9c6bbe4",
+    "user.structured.cpp": "86e23cc6b44fa389e61e68b0fffc9a218d2b0482ce53f1809fae3a6a53b78093"
+  },
+  "executable_sha256": {
+    "user": "8d31a510ead04b3a0ac51aa24bd6a6bc243bbaf74d94a9d17a9d8f4aa3232d9d",
+    "user.optimized": "c6c36b60aec2d922b47fcab18e71fb5eeaab959d18b0a3eef1851686d45f381d",
+    "user.structured": "e4e2774a306152eb5693cb7b52f003fce0c32b051cf6086b2f55c345c9d2afb8"
+  },
+  "validation_source_sha256": "cb130a07959539fe7dd2a251f6265d2347f929cc20abddb883d5ba8e0e0c6a6b",
+  "scope": "Native Windows MSVC execution of generated logical User program; comparison to pass8 decoded states and memory, not full native encoded state."
+}

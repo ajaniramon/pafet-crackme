@@ -1,0 +1,25 @@
+140080682 48b90d4fd35ce6e31a67 movabs rcx, 0x671ae3e65cd34f0d
+14008068c 4533ed xor r13d, r13d
+14008068f 418bd5 mov edx, r13d
+140080692 4c8d0587ba3600 lea r8, [rip + 0x36ba87]
+140080699 41b9b7070000 mov r9d, 0x7b7
+14008069f 49ba53ec851afeb9cec4 movabs r10, 0xc4ceb9fe1a85ec53
+1400806a9 0f1f8000000000 nop dword ptr [rax]
+1400806b0 410fb600 movzx eax, byte ptr [r8]
+1400806b4 4833c2 xor rax, rdx
+1400806b7 4833c1 xor rax, rcx
+1400806ba 488bc8 mov rcx, rax
+1400806bd 48c1e921 shr rcx, 0x21
+1400806c1 4833c8 xor rcx, rax
+1400806c4 480fafcb imul rcx, rbx
+1400806c8 488bc1 mov rax, rcx
+1400806cb 48c1e821 shr rax, 0x21
+1400806cf 4833c1 xor rax, rcx
+1400806d2 490fafc2 imul rax, r10
+1400806d6 488bc8 mov rcx, rax
+1400806d9 48c1e921 shr rcx, 0x21
+1400806dd 4833c8 xor rcx, rax
+1400806e0 48ffc2 inc rdx
+1400806e3 4d8d4001 lea r8, [r8 + 1]
+1400806e7 4983e901 sub r9, 1
+1400806eb 75c3 jne 0x1400806b0
