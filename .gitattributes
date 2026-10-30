@@ -37,3 +37,7 @@ jack_xxxiii_evidence/*.asm -text whitespace=-blank-at-eol
 scripts/pafet_serial_audit_xxxiii.py -text
 scripts/pafet_serial_alu_proof_xxxiii.py -text
 scripts/pafet_serial_metrics_xxxiii.py -text
+jack_xxxiv_evidence/** -text whitespace=cr-at-eol
+jack_xxxiv_evidence/*.asm -text whitespace=-blank-at-eol
+scripts/pafet_serial_audit_xxxiv.py -text
+scripts/pafet_serial_metrics_xxxiv.py -text

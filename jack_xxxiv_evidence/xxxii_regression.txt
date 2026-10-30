@@ -1,0 +1,15 @@
+four_a PASS native 21931 steps 4
+four_b PASS native 95235 steps 4
+four_c PASS native 58304 steps 4
+outer_a PASS native 19622 steps 3
+outer_b REJECTED frame trace limit
+outer_c PASS native 19630 steps 3
+outer_d PASS native 57632 steps 3
+outer_e PASS native 40008 steps 1
+outer_f PASS native 56939 steps 3
+outer_g PASS native 39318 steps 1
+remap_a PASS native 110301 steps 0
+remap_b PASS native 109412 steps 0
+return2_a REJECTED None
+return2_b PASS native 38667 steps 1
+return2_c REJECTED None

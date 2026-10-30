@@ -176,8 +176,7 @@ class SerialVMState(FirstOpcode):
         self.phase='execute';self.record('handler_entry',self.body)
     def decode_header(self):
         pc=self.control(1)&0xffffffff
-        # This operation has only demonstrated the first materialized unit.
-        if pc>=26 or self.read(self.u(0xb10),1)!=b'\1':self.fail('Undemonstrated materialization route')
+        self.prepare_opcode_byte(pc)
         counter=self.u(0x11e0,4);signed=signed32(counter);key=self.u(0x20)
         update_decode_key(self,pc,counter)
         self.advance_register_epoch()
@@ -191,6 +190,9 @@ class SerialVMState(FirstOpcode):
         if (counter+1)%32==0:self.fail('Decoder epoch transition')
         self.put(0x20,mix(opcode^(pc+1)^key))
         return pc,opcode,token
+    def prepare_opcode_byte(self,pc):
+        # Versioned extensions can prove additional materialization routes.
+        if pc>=26 or self.read(self.u(0xb10),1)!=b'\1':self.fail('Undemonstrated materialization route')
     def advance_register_epoch(self):
         epoch=(self.u(0x200,4)+1)&0xffffffff
         if epoch>=self.u(0x1fc,4):self.fail('Register rekey')

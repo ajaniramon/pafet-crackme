@@ -1,0 +1,635 @@
+[
+  {
+    "case": "jack_xxxiv_evidence/captures/ten_a",
+    "logical_unit": 1,
+    "window32": 63,
+    "window26": 78,
+    "materialization_counter": 2,
+    "boundaries": {
+      "all_events_match": true,
+      "first_divergence": null,
+      "boundaries": [
+        {
+          "name": "materializer_return",
+          "native_rva": "0x229d33",
+          "native_instructions": 115141,
+          "boundary_found": true,
+          "pc": 2028,
+          "sp": 0,
+          "regions": [
+            {
+              "role": "Serial context",
+              "address": "0xb48b111990",
+              "size": 4592,
+              "different_bytes": 0,
+              "candidate_sha256": "358c10502594e25e34aa1208a8dfdb419adf16a409d9e652d806d4b231097888",
+              "native_sha256": "358c10502594e25e34aa1208a8dfdb419adf16a409d9e652d806d4b231097888"
+            },
+            {
+              "role": "bytecode",
+              "address": "0x1cd9f03b470",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "c9d77ed71d37d5f7158c55ef75b8f463f9e3ffb5dd4744c629d39a02ee184381",
+              "native_sha256": "c9d77ed71d37d5f7158c55ef75b8f463f9e3ffb5dd4744c629d39a02ee184381"
+            },
+            {
+              "role": "shadow",
+              "address": "0x1cd9f03bf20",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "bf1f69263577d999615d266f21f35dc62172f1d5188a0e2d7626c05f17c70d30",
+              "native_sha256": "bf1f69263577d999615d266f21f35dc62172f1d5188a0e2d7626c05f17c70d30"
+            },
+            {
+              "role": "materialization bitmap",
+              "address": "0x1cd9f036ee0",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+              "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+            },
+            {
+              "role": "window bitmap",
+              "address": "0x1cd9f036690",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "bc6fa796e473c64c634e9d9e202a729920c52d6a79c178d8e07bb0006c6bb233",
+              "native_sha256": "bc6fa796e473c64c634e9d9e202a729920c52d6a79c178d8e07bb0006c6bb233"
+            },
+            {
+              "role": "register banks",
+              "address": "0xb48b112fb0",
+              "size": 4096,
+              "different_bytes": 0,
+              "candidate_sha256": "f209141677348101fb9b18af4f0552a75050667a3c6957f0acb9529815c0a10d",
+              "native_sha256": "f209141677348101fb9b18af4f0552a75050667a3c6957f0acb9529815c0a10d"
+            },
+            {
+              "role": "virtual stack",
+              "address": "0xb48b113fb0",
+              "size": 8192,
+              "different_bytes": 0,
+              "candidate_sha256": "d88cfab1e1f1ae4a5a77752d5f3b9eb143738dda3245f6f4c92b87747bab498f",
+              "native_sha256": "d88cfab1e1f1ae4a5a77752d5f3b9eb143738dda3245f6f4c92b87747bab498f"
+            },
+            {
+              "role": "dispatch table",
+              "address": "0xb48b112bd0",
+              "size": 992,
+              "different_bytes": 0,
+              "candidate_sha256": "54809a37d3da100fc4f16c1c94d60108ecc5e7f14fd66801fd8b4f953bd8af35",
+              "native_sha256": "54809a37d3da100fc4f16c1c94d60108ecc5e7f14fd66801fd8b4f953bd8af35"
+            },
+            {
+              "role": "generated thunk pool",
+              "address": "0x1cd9efa0000",
+              "size": 7968,
+              "different_bytes": 0,
+              "candidate_sha256": "f45d150031eb769d81630416cbc08113fd1f4a77fb3e2cd943878cfe0f3f8a48",
+              "native_sha256": "f45d150031eb769d81630416cbc08113fd1f4a77fb3e2cd943878cfe0f3f8a48"
+            },
+            {
+              "role": "writable PE .data",
+              "address": "0x7ff76c03d000",
+              "size": 187860,
+              "different_bytes": 0,
+              "candidate_sha256": "95b77574a82570f680f0cc372ea73fc16eb3e8b0f94e9abfd5a7661c5f5d2668",
+              "native_sha256": "95b77574a82570f680f0cc372ea73fc16eb3e8b0f94e9abfd5a7661c5f5d2668"
+            },
+            {
+              "role": "rekey TLS callback flag",
+              "address": "0x1cd9f01a134",
+              "size": 4,
+              "different_bytes": 0,
+              "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+              "native_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "all_bytes_match": true
+        },
+        {
+          "name": "handler_entry",
+          "native_rva": "0x1f8210",
+          "native_instructions": 117778,
+          "boundary_found": true,
+          "pc": 2029,
+          "sp": 0,
+          "regions": [
+            {
+              "role": "Serial context",
+              "address": "0xb48b111990",
+              "size": 4592,
+              "different_bytes": 0,
+              "candidate_sha256": "0790950e828752d9dc56513f77474e2b9701b36bc7633ef93c4994da9c81e5dc",
+              "native_sha256": "0790950e828752d9dc56513f77474e2b9701b36bc7633ef93c4994da9c81e5dc"
+            },
+            {
+              "role": "bytecode",
+              "address": "0x1cd9f03b470",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "a703a8c6038d67a7f2d2e60f55914af9f36a33f4c3f5bd14e87b9d9202ff3813",
+              "native_sha256": "a703a8c6038d67a7f2d2e60f55914af9f36a33f4c3f5bd14e87b9d9202ff3813"
+            },
+            {
+              "role": "shadow",
+              "address": "0x1cd9f03bf20",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "bf1f69263577d999615d266f21f35dc62172f1d5188a0e2d7626c05f17c70d30",
+              "native_sha256": "bf1f69263577d999615d266f21f35dc62172f1d5188a0e2d7626c05f17c70d30"
+            },
+            {
+              "role": "materialization bitmap",
+              "address": "0x1cd9f036ee0",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+              "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+            },
+            {
+              "role": "window bitmap",
+              "address": "0x1cd9f036690",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "0850abd28afd71cd482dd57db2bf7b980094d6efa05347802f9eaffc902fc6a7",
+              "native_sha256": "0850abd28afd71cd482dd57db2bf7b980094d6efa05347802f9eaffc902fc6a7"
+            },
+            {
+              "role": "register banks",
+              "address": "0xb48b112fb0",
+              "size": 4096,
+              "different_bytes": 0,
+              "candidate_sha256": "f209141677348101fb9b18af4f0552a75050667a3c6957f0acb9529815c0a10d",
+              "native_sha256": "f209141677348101fb9b18af4f0552a75050667a3c6957f0acb9529815c0a10d"
+            },
+            {
+              "role": "virtual stack",
+              "address": "0xb48b113fb0",
+              "size": 8192,
+              "different_bytes": 0,
+              "candidate_sha256": "d88cfab1e1f1ae4a5a77752d5f3b9eb143738dda3245f6f4c92b87747bab498f",
+              "native_sha256": "d88cfab1e1f1ae4a5a77752d5f3b9eb143738dda3245f6f4c92b87747bab498f"
+            },
+            {
+              "role": "dispatch table",
+              "address": "0xb48b112bd0",
+              "size": 992,
+              "different_bytes": 0,
+              "candidate_sha256": "54809a37d3da100fc4f16c1c94d60108ecc5e7f14fd66801fd8b4f953bd8af35",
+              "native_sha256": "54809a37d3da100fc4f16c1c94d60108ecc5e7f14fd66801fd8b4f953bd8af35"
+            },
+            {
+              "role": "generated thunk pool",
+              "address": "0x1cd9efa0000",
+              "size": 7968,
+              "different_bytes": 0,
+              "candidate_sha256": "f45d150031eb769d81630416cbc08113fd1f4a77fb3e2cd943878cfe0f3f8a48",
+              "native_sha256": "f45d150031eb769d81630416cbc08113fd1f4a77fb3e2cd943878cfe0f3f8a48"
+            },
+            {
+              "role": "writable PE .data",
+              "address": "0x7ff76c03d000",
+              "size": 187860,
+              "different_bytes": 0,
+              "candidate_sha256": "95b77574a82570f680f0cc372ea73fc16eb3e8b0f94e9abfd5a7661c5f5d2668",
+              "native_sha256": "95b77574a82570f680f0cc372ea73fc16eb3e8b0f94e9abfd5a7661c5f5d2668"
+            },
+            {
+              "role": "rekey TLS callback flag",
+              "address": "0x1cd9f01a134",
+              "size": 4,
+              "different_bytes": 0,
+              "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+              "native_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "all_bytes_match": true
+        }
+      ]
+    }
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/ten_b",
+    "logical_unit": 1,
+    "window32": 63,
+    "window26": 78,
+    "materialization_counter": 2,
+    "boundaries": {
+      "all_events_match": true,
+      "first_divergence": null,
+      "boundaries": [
+        {
+          "name": "materializer_return",
+          "native_rva": "0x229d33",
+          "native_instructions": 152438,
+          "boundary_found": true,
+          "pc": 2028,
+          "sp": 0,
+          "regions": [
+            {
+              "role": "Serial context",
+              "address": "0xfbf59519d0",
+              "size": 4592,
+              "different_bytes": 0,
+              "candidate_sha256": "5fd3fcef5c5412d9cc25b97a3cbe68c46453293c1ebb61ca6be885bef2e938dc",
+              "native_sha256": "5fd3fcef5c5412d9cc25b97a3cbe68c46453293c1ebb61ca6be885bef2e938dc"
+            },
+            {
+              "role": "bytecode",
+              "address": "0x2e6be29b470",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "fee1cb0cceb84132e55c4460b4bbc687083688c6c6d68666b3e4db02f6a43bb8",
+              "native_sha256": "fee1cb0cceb84132e55c4460b4bbc687083688c6c6d68666b3e4db02f6a43bb8"
+            },
+            {
+              "role": "shadow",
+              "address": "0x2e6be29bf20",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "aa893c83ecce07198cf8b1414c35c87e400966fb74a15a4feeb70ecb266bf9ec",
+              "native_sha256": "aa893c83ecce07198cf8b1414c35c87e400966fb74a15a4feeb70ecb266bf9ec"
+            },
+            {
+              "role": "materialization bitmap",
+              "address": "0x2e6be296ee0",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+              "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+            },
+            {
+              "role": "window bitmap",
+              "address": "0x2e6be296690",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "bc6fa796e473c64c634e9d9e202a729920c52d6a79c178d8e07bb0006c6bb233",
+              "native_sha256": "bc6fa796e473c64c634e9d9e202a729920c52d6a79c178d8e07bb0006c6bb233"
+            },
+            {
+              "role": "register banks",
+              "address": "0xfbf5952ff0",
+              "size": 4096,
+              "different_bytes": 0,
+              "candidate_sha256": "13279c801b4e113144fdd86cfa1261f1db1d3ebbf3c53776f119cb1e883458a3",
+              "native_sha256": "13279c801b4e113144fdd86cfa1261f1db1d3ebbf3c53776f119cb1e883458a3"
+            },
+            {
+              "role": "virtual stack",
+              "address": "0xfbf5953ff0",
+              "size": 8192,
+              "different_bytes": 0,
+              "candidate_sha256": "68cf1331544ca0e2438ed56b709ffa5ee604e0f49f0504e493fff2b7ba50268d",
+              "native_sha256": "68cf1331544ca0e2438ed56b709ffa5ee604e0f49f0504e493fff2b7ba50268d"
+            },
+            {
+              "role": "dispatch table",
+              "address": "0xfbf5952c10",
+              "size": 992,
+              "different_bytes": 0,
+              "candidate_sha256": "30ca3dd746882a11178f2d801c55aa6a83b9994c5acde4ef2d830dac0f87f310",
+              "native_sha256": "30ca3dd746882a11178f2d801c55aa6a83b9994c5acde4ef2d830dac0f87f310"
+            },
+            {
+              "role": "generated thunk pool",
+              "address": "0x2e6be390000",
+              "size": 7968,
+              "different_bytes": 0,
+              "candidate_sha256": "eecd94d48b42b2f3b7624d726670f5d5f8e5414dd13e9ac573dda01d1ca7ae13",
+              "native_sha256": "eecd94d48b42b2f3b7624d726670f5d5f8e5414dd13e9ac573dda01d1ca7ae13"
+            },
+            {
+              "role": "writable PE .data",
+              "address": "0x7ff76c03d000",
+              "size": 187860,
+              "different_bytes": 0,
+              "candidate_sha256": "b453ccb0f68a787f6543f6889fede9724555c273d81406ac4b86b75210b3f3f1",
+              "native_sha256": "b453ccb0f68a787f6543f6889fede9724555c273d81406ac4b86b75210b3f3f1"
+            },
+            {
+              "role": "rekey TLS callback flag",
+              "address": "0x2e6be27a134",
+              "size": 4,
+              "different_bytes": 0,
+              "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+              "native_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "all_bytes_match": true
+        },
+        {
+          "name": "handler_entry",
+          "native_rva": "0x21d530",
+          "native_instructions": 155060,
+          "boundary_found": true,
+          "pc": 2029,
+          "sp": 0,
+          "regions": [
+            {
+              "role": "Serial context",
+              "address": "0xfbf59519d0",
+              "size": 4592,
+              "different_bytes": 0,
+              "candidate_sha256": "0b51fc4fa35559645438849cdb6eb9d4d2608d93e7e5ea1e0abbc6bbecb68f97",
+              "native_sha256": "0b51fc4fa35559645438849cdb6eb9d4d2608d93e7e5ea1e0abbc6bbecb68f97"
+            },
+            {
+              "role": "bytecode",
+              "address": "0x2e6be29b470",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "4031becec0aee28a926960abf428713963559cdf29ea0f9f0850382ade4ba4f5",
+              "native_sha256": "4031becec0aee28a926960abf428713963559cdf29ea0f9f0850382ade4ba4f5"
+            },
+            {
+              "role": "shadow",
+              "address": "0x2e6be29bf20",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "aa893c83ecce07198cf8b1414c35c87e400966fb74a15a4feeb70ecb266bf9ec",
+              "native_sha256": "aa893c83ecce07198cf8b1414c35c87e400966fb74a15a4feeb70ecb266bf9ec"
+            },
+            {
+              "role": "materialization bitmap",
+              "address": "0x2e6be296ee0",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+              "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+            },
+            {
+              "role": "window bitmap",
+              "address": "0x2e6be296690",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "0850abd28afd71cd482dd57db2bf7b980094d6efa05347802f9eaffc902fc6a7",
+              "native_sha256": "0850abd28afd71cd482dd57db2bf7b980094d6efa05347802f9eaffc902fc6a7"
+            },
+            {
+              "role": "register banks",
+              "address": "0xfbf5952ff0",
+              "size": 4096,
+              "different_bytes": 0,
+              "candidate_sha256": "13279c801b4e113144fdd86cfa1261f1db1d3ebbf3c53776f119cb1e883458a3",
+              "native_sha256": "13279c801b4e113144fdd86cfa1261f1db1d3ebbf3c53776f119cb1e883458a3"
+            },
+            {
+              "role": "virtual stack",
+              "address": "0xfbf5953ff0",
+              "size": 8192,
+              "different_bytes": 0,
+              "candidate_sha256": "68cf1331544ca0e2438ed56b709ffa5ee604e0f49f0504e493fff2b7ba50268d",
+              "native_sha256": "68cf1331544ca0e2438ed56b709ffa5ee604e0f49f0504e493fff2b7ba50268d"
+            },
+            {
+              "role": "dispatch table",
+              "address": "0xfbf5952c10",
+              "size": 992,
+              "different_bytes": 0,
+              "candidate_sha256": "30ca3dd746882a11178f2d801c55aa6a83b9994c5acde4ef2d830dac0f87f310",
+              "native_sha256": "30ca3dd746882a11178f2d801c55aa6a83b9994c5acde4ef2d830dac0f87f310"
+            },
+            {
+              "role": "generated thunk pool",
+              "address": "0x2e6be390000",
+              "size": 7968,
+              "different_bytes": 0,
+              "candidate_sha256": "eecd94d48b42b2f3b7624d726670f5d5f8e5414dd13e9ac573dda01d1ca7ae13",
+              "native_sha256": "eecd94d48b42b2f3b7624d726670f5d5f8e5414dd13e9ac573dda01d1ca7ae13"
+            },
+            {
+              "role": "writable PE .data",
+              "address": "0x7ff76c03d000",
+              "size": 187860,
+              "different_bytes": 0,
+              "candidate_sha256": "b453ccb0f68a787f6543f6889fede9724555c273d81406ac4b86b75210b3f3f1",
+              "native_sha256": "b453ccb0f68a787f6543f6889fede9724555c273d81406ac4b86b75210b3f3f1"
+            },
+            {
+              "role": "rekey TLS callback flag",
+              "address": "0x2e6be27a134",
+              "size": 4,
+              "different_bytes": 0,
+              "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+              "native_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "all_bytes_match": true
+        }
+      ]
+    }
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/ten_c",
+    "logical_unit": 1,
+    "window32": 63,
+    "window26": 78,
+    "materialization_counter": 2,
+    "boundaries": {
+      "all_events_match": true,
+      "first_divergence": null,
+      "boundaries": [
+        {
+          "name": "materializer_return",
+          "native_rva": "0x229d33",
+          "native_instructions": 116388,
+          "boundary_found": true,
+          "pc": 2028,
+          "sp": 0,
+          "regions": [
+            {
+              "role": "Serial context",
+              "address": "0x4c8ede1960",
+              "size": 4592,
+              "different_bytes": 0,
+              "candidate_sha256": "28a87aebe2a0b6c77fd31aa0aa8b3b90c8bdbd81c0873378cf0f0d24585f57b9",
+              "native_sha256": "28a87aebe2a0b6c77fd31aa0aa8b3b90c8bdbd81c0873378cf0f0d24585f57b9"
+            },
+            {
+              "role": "bytecode",
+              "address": "0x17e6694b470",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "7b2a67d22a1751bd4ea51019c346d5b65475a92af4dff1c0da8c544cb1d17210",
+              "native_sha256": "7b2a67d22a1751bd4ea51019c346d5b65475a92af4dff1c0da8c544cb1d17210"
+            },
+            {
+              "role": "shadow",
+              "address": "0x17e6694bf20",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "9c6002dab0252db34cafb365a8d3f0fd08e9b934410baa752dcbd3ab53206f00",
+              "native_sha256": "9c6002dab0252db34cafb365a8d3f0fd08e9b934410baa752dcbd3ab53206f00"
+            },
+            {
+              "role": "materialization bitmap",
+              "address": "0x17e66946ee0",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+              "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+            },
+            {
+              "role": "window bitmap",
+              "address": "0x17e66946690",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "bc6fa796e473c64c634e9d9e202a729920c52d6a79c178d8e07bb0006c6bb233",
+              "native_sha256": "bc6fa796e473c64c634e9d9e202a729920c52d6a79c178d8e07bb0006c6bb233"
+            },
+            {
+              "role": "register banks",
+              "address": "0x4c8ede2f80",
+              "size": 4096,
+              "different_bytes": 0,
+              "candidate_sha256": "a6cc11180a1f786d0aa0b7b384d5c97edc164ec51db11379d999c23d83f5ad2a",
+              "native_sha256": "a6cc11180a1f786d0aa0b7b384d5c97edc164ec51db11379d999c23d83f5ad2a"
+            },
+            {
+              "role": "virtual stack",
+              "address": "0x4c8ede3f80",
+              "size": 8192,
+              "different_bytes": 0,
+              "candidate_sha256": "eed3b99215187e3a9d3fa9076b28d4ff5b10ea829b03b7ced7573da34a225fe0",
+              "native_sha256": "eed3b99215187e3a9d3fa9076b28d4ff5b10ea829b03b7ced7573da34a225fe0"
+            },
+            {
+              "role": "dispatch table",
+              "address": "0x4c8ede2ba0",
+              "size": 992,
+              "different_bytes": 0,
+              "candidate_sha256": "1f75712f1536456ce85490b48d3c86a4f0f9773e1ff1f32ed2d930a602be9d86",
+              "native_sha256": "1f75712f1536456ce85490b48d3c86a4f0f9773e1ff1f32ed2d930a602be9d86"
+            },
+            {
+              "role": "generated thunk pool",
+              "address": "0x17e66b90000",
+              "size": 7968,
+              "different_bytes": 0,
+              "candidate_sha256": "91f4108f5c5aafba4f11a1ce1a20ad50aa11abaa590a0e5186e50c002f1dc906",
+              "native_sha256": "91f4108f5c5aafba4f11a1ce1a20ad50aa11abaa590a0e5186e50c002f1dc906"
+            },
+            {
+              "role": "writable PE .data",
+              "address": "0x7ff76c03d000",
+              "size": 187860,
+              "different_bytes": 0,
+              "candidate_sha256": "acb6e7bce9a9a9393c1a653b419d52ea5ec8068b759a4ee177641fca1bef4187",
+              "native_sha256": "acb6e7bce9a9a9393c1a653b419d52ea5ec8068b759a4ee177641fca1bef4187"
+            },
+            {
+              "role": "rekey TLS callback flag",
+              "address": "0x17e6692a134",
+              "size": 4,
+              "different_bytes": 0,
+              "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+              "native_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "all_bytes_match": true
+        },
+        {
+          "name": "handler_entry",
+          "native_rva": "0x21d530",
+          "native_instructions": 119024,
+          "boundary_found": true,
+          "pc": 2029,
+          "sp": 0,
+          "regions": [
+            {
+              "role": "Serial context",
+              "address": "0x4c8ede1960",
+              "size": 4592,
+              "different_bytes": 0,
+              "candidate_sha256": "1f143a899fc5fe71829c058f9087f616daa6c0b4131f737099e1ad99b7c0d103",
+              "native_sha256": "1f143a899fc5fe71829c058f9087f616daa6c0b4131f737099e1ad99b7c0d103"
+            },
+            {
+              "role": "bytecode",
+              "address": "0x17e6694b470",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "6e6831acfa196336d469856f11689a93675624eb02336bdbf7a141a0d04e2f43",
+              "native_sha256": "6e6831acfa196336d469856f11689a93675624eb02336bdbf7a141a0d04e2f43"
+            },
+            {
+              "role": "shadow",
+              "address": "0x17e6694bf20",
+              "size": 2678,
+              "different_bytes": 0,
+              "candidate_sha256": "9c6002dab0252db34cafb365a8d3f0fd08e9b934410baa752dcbd3ab53206f00",
+              "native_sha256": "9c6002dab0252db34cafb365a8d3f0fd08e9b934410baa752dcbd3ab53206f00"
+            },
+            {
+              "role": "materialization bitmap",
+              "address": "0x17e66946ee0",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+              "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+            },
+            {
+              "role": "window bitmap",
+              "address": "0x17e66946690",
+              "size": 104,
+              "different_bytes": 0,
+              "candidate_sha256": "0850abd28afd71cd482dd57db2bf7b980094d6efa05347802f9eaffc902fc6a7",
+              "native_sha256": "0850abd28afd71cd482dd57db2bf7b980094d6efa05347802f9eaffc902fc6a7"
+            },
+            {
+              "role": "register banks",
+              "address": "0x4c8ede2f80",
+              "size": 4096,
+              "different_bytes": 0,
+              "candidate_sha256": "a6cc11180a1f786d0aa0b7b384d5c97edc164ec51db11379d999c23d83f5ad2a",
+              "native_sha256": "a6cc11180a1f786d0aa0b7b384d5c97edc164ec51db11379d999c23d83f5ad2a"
+            },
+            {
+              "role": "virtual stack",
+              "address": "0x4c8ede3f80",
+              "size": 8192,
+              "different_bytes": 0,
+              "candidate_sha256": "eed3b99215187e3a9d3fa9076b28d4ff5b10ea829b03b7ced7573da34a225fe0",
+              "native_sha256": "eed3b99215187e3a9d3fa9076b28d4ff5b10ea829b03b7ced7573da34a225fe0"
+            },
+            {
+              "role": "dispatch table",
+              "address": "0x4c8ede2ba0",
+              "size": 992,
+              "different_bytes": 0,
+              "candidate_sha256": "1f75712f1536456ce85490b48d3c86a4f0f9773e1ff1f32ed2d930a602be9d86",
+              "native_sha256": "1f75712f1536456ce85490b48d3c86a4f0f9773e1ff1f32ed2d930a602be9d86"
+            },
+            {
+              "role": "generated thunk pool",
+              "address": "0x17e66b90000",
+              "size": 7968,
+              "different_bytes": 0,
+              "candidate_sha256": "91f4108f5c5aafba4f11a1ce1a20ad50aa11abaa590a0e5186e50c002f1dc906",
+              "native_sha256": "91f4108f5c5aafba4f11a1ce1a20ad50aa11abaa590a0e5186e50c002f1dc906"
+            },
+            {
+              "role": "writable PE .data",
+              "address": "0x7ff76c03d000",
+              "size": 187860,
+              "different_bytes": 0,
+              "candidate_sha256": "acb6e7bce9a9a9393c1a653b419d52ea5ec8068b759a4ee177641fca1bef4187",
+              "native_sha256": "acb6e7bce9a9a9393c1a653b419d52ea5ec8068b759a4ee177641fca1bef4187"
+            },
+            {
+              "role": "rekey TLS callback flag",
+              "address": "0x17e6692a134",
+              "size": 4,
+              "different_bytes": 0,
+              "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+              "native_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+            }
+          ],
+          "all_bytes_match": true
+        }
+      ]
+    }
+  }
+]

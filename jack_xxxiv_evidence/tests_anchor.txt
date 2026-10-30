@@ -1,0 +1,6 @@
+test_repeated_rva_summary_requires_full_preceding_sequence (devirt.test_serial_branch.BranchTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 5.286s
+
+OK

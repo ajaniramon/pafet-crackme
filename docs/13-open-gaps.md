@@ -1,6 +1,6 @@
 # 13 — Open gaps and research priorities
 
-The current [JACK XXXIII matrix](../jack_xxxiii_evidence/status.json), earlier
+The current [JACK XXXIV matrix](../jack_xxxiv_evidence/status.json), earlier
 [mechanism matrix](../jack_xvii_evidence/status_matrix.json) and
 [JACK XVII report](jack-xvii.md) distinguish demonstrated facts, partial
 reconstruction, hypotheses and unknowns. No VM is declared completely
@@ -56,21 +56,29 @@ with equivalent declared state. Job `0x2e0073` is now reconstructed; seven
 outer states remain unsupported. This is finite memory-boundary equivalence,
 separate from the accompanying instruction-by-instruction x64 replay.
 
-Next: recover opcode `0x1a` at PC 20, its label decoder at `0x1ed270`, deferred
-request helper `0x1f10a0`, pending-queue wrapper return and subsequent scheduler
-work. A complete capture matches six instructions plus the seventh handler
-entry; the seventh instruction is explicitly unsupported. No ten-step claim
-is made. Kernel coverage remains 61/64: `0xaf41e` requires a domain-2 budget
-exit and the relevant noise condition; incoming edges for `0x2c1549` and
-`0x32a5e8` remain unknown outside the reduced graph.
+[JACK XXXIV](../PAFET_JACK_XXXIV.md) reconstructs opcode `0x1a` at PC20,
+its unit-label permutation, deferred request, queued wrapper return and armed
+attestation/PC commit. Three processes validate seven instructions through
+the scheduler transfer to PC2028. Two cross natural remaps. Three more
+processes materialize unit 1, transition both window schemes and execute ten
+instructions through PC2041/SP1. The candidate starts once and uses no
+intermediate native state. New evidence also closes LOAD domain 2; all four
+LOAD and XOR domains have natural comparisons. Opcode `0x1a` has natural
+evidence for domains 0, 1 and 3; domain 2 is static only.
 
-Armed attestation, scheduler exceptions, rekey TLS callbacks, unobserved
-fallback branches, other windows and the full ISA/CFG remain open. LOAD domain
-1 now has native coverage; LOAD domain 2 retains a static-only binding. All
-four XOR domains have natural boundary comparisons. SHA's materializer, ISA
-and state still require independent discovery. The historical truncated
-rebuild capture remains rejected; the new complete captures are independent
-evidence and do not repair its missing observations.
+Next: reconstruct opcode `0x3a` at PC2041 and its continuation. A complete
+capture matches the ten-step prefix plus the next decoder/handler entry
+at native RVA `0x2217f0`; its eleventh core is not executed semantically.
+The observation-only summary must retain preceding boundaries when matching
+repeated RVAs; XXXIV preserves and fixes a new summary-prototype counterexample.
+
+Other deferred-request conditions, native guard-failure delivery, scheduler
+exceptions, rekey TLS callbacks, seven cataloged outer states and fallback
+branches remain open. Windows beyond the observed 0-to-2028 transition and
+the full ISA/CFG require further comparisons. Kernel coverage stays 61/64;
+`0xaf41e`, `0x2c1549` and `0x32a5e8` remain unobserved. SHA's materializer,
+ISA and state still need independent discovery. Historical truncated captures
+remain rejected; new complete runs do not repair missing old observations.
 Do not substitute standard primitive rounds for unproved virtual semantics.
 JACK XXVIII supplies a generic capture profile and an 18-instruction Windows/
 Unicorn Serial seed-region comparison. It validates reusable transport, not a

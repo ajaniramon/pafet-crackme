@@ -1,0 +1,31 @@
+{
+  "unsupported_eleventh": {
+    "case": "jack_xxxiv_evidence/captures/eleventh_boundary",
+    "completed_instructions": 10,
+    "virtual_pc": 2041,
+    "decoded_pc": 2042,
+    "opcode": "0x3a",
+    "failure": "Unknown opcode/body association 0x2217f0",
+    "native_entry": "0x2217f0",
+    "all_declared_prefix_boundaries_match": true,
+    "native_replay_instructions": 274760,
+    "treatment": "Retained EXPECTED_UNSUPPORTED; no eleventh opcode executed or eleven-step equivalence claimed"
+  },
+  "rejected_sequential_pc_hypothesis": {
+    "observation": "The seventh opcode consumes bytes through PC25 but leaves a queued authenticated request. The later decoder entry has PC2028; a U32-reader or thread-return endpoint omits the transfer.",
+    "evidence": "validation.json seven_a/seven_b/seven_c"
+  },
+  "boundary_summary": {
+    "evidence": "boundary_anchor_counterexample.json",
+    "cause": "A new metrics prototype discarded preceding events before matching a reused RVA",
+    "fix": "Compare the full event sequence, then project matched rows. No candidate state or comparison was relaxed."
+  },
+  "synthetic_controls": {
+    "invalid_unit": "Operand 103 is rejected and execution latches",
+    "authentication": "A one-bit control-12 tag change is rejected at commit",
+    "window_shape": "Unsupported 64-byte period is rejected, not guessed",
+    "comparison": "validation.json contains five single-byte key/queue/control/dispatch negative controls"
+  },
+  "laboratory": "All seven native captures reach their declared terminals. No input-capture or replay defect found. The new summary-prototype anchoring error is recorded separately.",
+  "scope": "Synthetic failures test guards and are not claimed as natural branch coverage."
+}

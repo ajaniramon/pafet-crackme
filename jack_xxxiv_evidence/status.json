@@ -1,0 +1,59 @@
+{
+  "source_sha256": {
+    "devirt/serial_regions_xxxiv.py": "81a43341f56e048626f8da95243764e789cc1b9058c069cfcae87e2e87b8339c",
+    "scripts/pafet_serial_audit_xxxiv.py": "51c909ff486e1323a5a61b5ceeaff6c388316fada0dac1bce67852c643089b88"
+  },
+  "baseline_commit": "878960fde889db860a7ed9bdb3b585f21e0dee13",
+  "consecutive_instructions": 10,
+  "distinct_opcodes": [
+    1,
+    4,
+    5,
+    26,
+    41
+  ],
+  "seven_or_more_processes": 6,
+  "ten_instruction_processes": 3,
+  "natural_integrated_rebuild_processes": 2,
+  "new_native_instruction_observations": 1268229,
+  "accepted_continuous_native_observations": 993469,
+  "accepted_virtual_instruction_instances": 51,
+  "accepted_memory_boundaries": 1877,
+  "generated_kernels": 64,
+  "observed_generated_kernels": 61,
+  "remaining_outer_states": 7,
+  "newly_supported_outer_state": null,
+  "branch_observed_domains": [
+    0,
+    1,
+    3
+  ],
+  "observed_handler_bindings": [
+    "0x1f4f20",
+    "0x1f5bf0",
+    "0x1f8210",
+    "0x1fb5c0",
+    "0x1fcef0",
+    "0x202800",
+    "0x205fa0",
+    "0x209290",
+    "0x20c650",
+    "0x20d330",
+    "0x20e060",
+    "0x20fa70",
+    "0x214950",
+    "0x2162d0",
+    "0x21d530",
+    "0x21e270",
+    "0x220b70",
+    "0x225710",
+    "0x228a10"
+  ],
+  "state_matrix": {
+    "User": "unchanged: logical program IR; selected native mechanisms only",
+    "Serial": "PARTIAL: ten continuous instructions, five opcodes; deferred branch and new materialization windows validated; opcode 0x3a unresolved",
+    "SHA": "unchanged: functional behavior and initialization; virtual program not recovered",
+    "Hex": "unchanged: literal executor for finite validated corpus; compact semantics partial"
+  },
+  "next": "Recover opcode 0x3a at PC2041, retain the materialization/window state from the ten-step candidate, then validate instruction eleven and subsequent continuations."
+}

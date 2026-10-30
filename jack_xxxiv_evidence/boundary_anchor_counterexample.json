@@ -1,0 +1,24 @@
+{
+  "case": "captures/ten_a",
+  "cause": "A new metrics prototype discarded preceding events and associated a reused RVA with the first native visit.",
+  "unanchored_first_difference": {
+    "classification": "model",
+    "event": "materializer_return",
+    "native_rva": "0x229d33",
+    "native_instructions": 38040,
+    "address": "0xb48b1119a0",
+    "context_offset": "0x10",
+    "candidate": 221,
+    "native": 143
+  },
+  "unanchored_positions": [
+    38040,
+    117778
+  ],
+  "anchored_positions": [
+    115141,
+    117778
+  ],
+  "full_comparison_pass": true,
+  "fix": "Compare the full event sequence, then project matching rows into the summary. Candidate state and strict comparisons are unchanged."
+}

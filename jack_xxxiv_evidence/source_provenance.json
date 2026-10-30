@@ -1,0 +1,44 @@
+[
+  {
+    "case": "jack_xxxiv_evidence/captures/eleventh_boundary",
+    "run_id": "41b009d5ded4412e8b229c99b684ea1b",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/seven_a",
+    "run_id": "aa85383ef314422ea3442477e95d86be",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/seven_b",
+    "run_id": "b89f3377ddb14661bcf09bd79db17915",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/seven_c",
+    "run_id": "97824264324e47119d00314fe4990ae3",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/ten_a",
+    "run_id": "4fb5059d65324012a4920805f8b88f0b",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/ten_b",
+    "run_id": "1f7dbd43e3b94faab4ad3fee544bc173",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  {
+    "case": "jack_xxxiv_evidence/captures/ten_c",
+    "run_id": "2f13c5ab124148bf9a78dbb046ead967",
+    "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "contract_sha256": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  }
+]
