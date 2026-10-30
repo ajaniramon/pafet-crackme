@@ -1,0 +1,56 @@
+{
+  "operation": "JACK XXXI",
+  "baseline_commit": "39c61f3066ae7378147bf6a70b0f95bfce15e9df",
+  "Serial": {
+    "continuous_three_steps": {
+      "status": "DEMOSTRADO",
+      "level": "C",
+      "scope": "PC 0 -> 5 -> 8 -> 11, three fresh independent processes, through rekey and return to outer dispatcher",
+      "evidence": "validation.json"
+    },
+    "opcodes": {
+      "1": "PUSH_POOL_U32",
+      "5": "STORE_REG_U16",
+      "4": "LOAD_REG_U16, native differential domains 0/3; other domains static-only"
+    },
+    "rekey": {
+      "status": "PARCIAL",
+      "natural": "Three SP-zero Windows routes; exact physical/logical comparisons",
+      "synthetic": "Four original-x64 helper differentials: 0/1/3/1023 live stack cells and 0/1/3/32 queue entries",
+      "open": "TLS callback-enabled branch and broader natural routes"
+    },
+    "unwind": {
+      "status": "DEMOSTRADO",
+      "scope": "Static context-free tails in 12 wrappers; native child/parent/outer return comparisons"
+    },
+    "outer_dispatch_loop": {
+      "status": "DESCONOCIDO",
+      "frontiers": [
+        "0x22bc87",
+        "0x231c09",
+        "0x22fcd0"
+      ]
+    },
+    "full_remap_rebuild": {
+      "status": "DESCONOCIDO",
+      "counterexample": "process_c, call RVA 0x209a34 at observed step 1163; incomplete capture rejected"
+    },
+    "other_windows_remaining_ISA_CFG": {
+      "status": "DESCONOCIDO"
+    },
+    "whole_VM": {
+      "status": "PARCIAL"
+    }
+  },
+  "User": {
+    "change": "none",
+    "scope": "prior contracts retained; IR/state regressions rerun"
+  },
+  "Hex": {
+    "change": "none"
+  },
+  "SHA": {
+    "change": "none"
+  },
+  "no_credential_search": true
+}

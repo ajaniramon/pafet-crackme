@@ -1,0 +1,80 @@
+{
+  "baseline_commit": "39c61f3066ae7378147bf6a70b0f95bfce15e9df",
+  "cases": [
+    {
+      "path": "jack_xxxi_evidence/captures/process_a",
+      "expected": "return-blocked"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_b",
+      "expected": "three-continuous"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_c",
+      "expected": "rejected-incomplete"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_d",
+      "expected": "three-continuous"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_e",
+      "expected": "return-blocked"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_f",
+      "expected": "return-blocked"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_g",
+      "expected": "return-blocked"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_h",
+      "expected": "three-continuous"
+    },
+    {
+      "path": "jack_xxxi_evidence/captures/process_i",
+      "expected": "return-blocked"
+    },
+    {
+      "path": "jack_xxix_evidence/captures/opcode1",
+      "expected": "three-continuous"
+    }
+  ],
+  "artifacts": {
+    "jack_xxxi_evidence/captures/process_a/frame_00.entry.json.gz": "1591fe86fd8ab4733694bcd6ed322f142f7aa7eef5356d4c14fdffa277d2efa2",
+    "jack_xxxi_evidence/captures/process_a/frame_00.trace.json.gz": "16465ac9628d4159447b3838fd9f1789ba2cdc9ad424a991acbdd5a4348dffd3",
+    "jack_xxxi_evidence/captures/process_a/manifest.json": "419c3d96d7cbd3a90d88c1f53f1c5b17e6dea4df858aedc3c85fd7b9117335b7",
+    "jack_xxxi_evidence/captures/process_b/frame_00.entry.json.gz": "24971827dcafaefd178bc3461eb89e79665a31f3263c8495326cd246f7c09351",
+    "jack_xxxi_evidence/captures/process_b/frame_00.trace.json.gz": "8deb16c76a32b722d4499249fa627702ed3bf690eb1127cb6eb14e53776cb54d",
+    "jack_xxxi_evidence/captures/process_b/manifest.json": "2e806b0fca068cf37c15baeca4a00f33a44e113b0d9837c7954c9d8653d90593",
+    "jack_xxxi_evidence/captures/process_c/capture_error.json": "5a0157aa5fea526a64575fb9ebd4147ac8b476f3692fd041d87cc4e55ba426bd",
+    "jack_xxxi_evidence/captures/process_c/frame_00.entry.json.gz": "a699f656e2e8fcd69e1cd2dbddcf18c3a743ead45088913539dec9365a54c739",
+    "jack_xxxi_evidence/captures/process_c/frame_00.trace.json.gz": "55656d3135b34fdfeb3e8dda8260a6d70b1d615f09304c65d67f20972134c8fd",
+    "jack_xxxi_evidence/captures/process_c/manifest.json": "5a0157aa5fea526a64575fb9ebd4147ac8b476f3692fd041d87cc4e55ba426bd",
+    "jack_xxxi_evidence/captures/process_d/frame_00.entry.json.gz": "96c7211edddc97aa49b6a5985ae5935b4aac2d63fb30b28f8ada5382b3769b9c",
+    "jack_xxxi_evidence/captures/process_d/frame_00.trace.json.gz": "fb39da822e2faca0ca4da2910a7ad0ea86c2dba479c4ead6e8c281a17c4a7242",
+    "jack_xxxi_evidence/captures/process_d/manifest.json": "24cb44c28bad350a444f983714c4f47b9d348f22e7941e22ab864728a58027e8",
+    "jack_xxxi_evidence/captures/process_e/frame_00.entry.json.gz": "40e5203f941753a861fe08a610c3590938758d6e7a867935590a60b375d7f5ca",
+    "jack_xxxi_evidence/captures/process_e/frame_00.trace.json.gz": "b139845b39832dc82d58e6144dc198f193d14283b9e2363e4225a484f2f7af20",
+    "jack_xxxi_evidence/captures/process_e/manifest.json": "ad7737182607de2c1e654f0509220f65184936f7c434fb8ca45fffe3f15b811c",
+    "jack_xxxi_evidence/captures/process_f/frame_00.entry.json.gz": "2dadd18880eb68aa754a09f72c9eb05f0e3174af18c472a5a5b908db7d2ee89e",
+    "jack_xxxi_evidence/captures/process_f/frame_00.trace.json.gz": "511f29e9fe78f6c18b0520d387f79dd4a0004eafed2b224762869290b8e17923",
+    "jack_xxxi_evidence/captures/process_f/manifest.json": "fc2d921656c6537cfca2799092fd77470cd6cf54a7d36fdf56265a49af0ee977",
+    "jack_xxxi_evidence/captures/process_g/frame_00.entry.json.gz": "ecf922c9db968204991fa49fd3b7511359b782a0e0e1a6048b423479a5952b36",
+    "jack_xxxi_evidence/captures/process_g/frame_00.trace.json.gz": "acefbcf5587760fb92fc75cecfa9581f19e01b3d9101eae58080ad7c50736d8d",
+    "jack_xxxi_evidence/captures/process_g/manifest.json": "57df19b65c846cb6178cdd4312eb5ff8e15ba0d926a606addb154241929974dc",
+    "jack_xxxi_evidence/captures/process_h/frame_00.entry.json.gz": "fd798016699731acebd4812aabad00517858f8dee61d9c22c58ff64feb9640b8",
+    "jack_xxxi_evidence/captures/process_h/frame_00.trace.json.gz": "bf78e42c4503d1d7031562e33bacfe0ffcc50197c44903a5def427138c0af900",
+    "jack_xxxi_evidence/captures/process_h/manifest.json": "ba8d7f13b63ef7e320550a28af1e447ec339ba6b2bb0148c5a251a28ed218b08",
+    "jack_xxxi_evidence/captures/process_i/frame_00.entry.json.gz": "abfcf315bbff8ce17bb9c3b3db5ba9b3af8d0c3ca6eca3037d7e9f191833fbce",
+    "jack_xxxi_evidence/captures/process_i/frame_00.trace.json.gz": "fdf4895d95007aecb199816b0cf1f293fbb1f803911610460ec74ad71dcc1e53",
+    "jack_xxxi_evidence/captures/process_i/manifest.json": "acfd3bd15c683d008c291dd3785bffcd7e6d661b2226dcdc4eaf375e558e6d3f",
+    "jack_xxix_evidence/captures/opcode1/frame_00.entry.json.gz": "24a960e16c562065c67fc842e462b87ca5837aee3be9b94388d9869e5a721958",
+    "jack_xxix_evidence/captures/opcode1/frame_00.trace.json.gz": "752af07a09d98709284761f090bdb23f268dbefd44f4e835e776d2ba6e96efb2",
+    "jack_xxix_evidence/captures/opcode1/manifest.json": "8c4745f416e7672375c98ea17e9f516d1e170ae171930ee863953a9984674634",
+    "jack_xxx_evidence/capture_source.py": "b40510dbe673af7b551773a6c05d41dd882fd8f579e9a3dfa904f6ee90fe713d",
+    "jack_xxx_evidence/contract_source.py": "23d10416b17155ddd03d4dd326316a707ac40d8ae18839962159747ad31646f8"
+  }
+}

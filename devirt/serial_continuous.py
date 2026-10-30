@@ -51,6 +51,7 @@ class SerialDecoderWithMapProbe(FirstDecode):
     update_decode_key=update_decode_key
 
 class SerialVMState(FirstOpcode):
+    regions = REGIONS
     @classmethod
     def from_initial_capture(cls,entry,pe):
         import pefile
@@ -77,8 +78,8 @@ class SerialVMState(FirstOpcode):
                             'roles':[r['role'] for r in self.roots],
                             'regions':[(r['address'],self.read(r['address'],r['size'])) for r in self.roots]})
     def spec(self):
-        if self.body not in REGIONS:self.fail('Unknown native semantic wrapper '+hex(self.body))
-        return REGIONS[self.body]
+        if self.body not in self.regions:self.fail('Unknown native semantic wrapper '+hex(self.body))
+        return self.regions[self.body]
     def noise_prefix(self):
         spec=self.spec();n=self.u(spec['noise_offset']);constant=int.from_bytes(self.pe.get_data(spec['noise_constant_rva'],8),'little')
         domain=spec['domain'];op=spec['opcode']
@@ -114,7 +115,9 @@ class SerialVMState(FirstOpcode):
         label=self.control(0)&0xffffffff
         expected=struct.unpack('<4I',self.pe.get_data(0x3e2d90,16))[spec['domain']]
         if label!=expected:self.fail('Outer dispatcher label mismatch')
-        if self.budget&0x7fffffff<2:self.fail('Thread budget exhausted')
+        if self.budget&0x7fffffff<2:
+            self.budget_exhausted()
+            return
         pc=self.control(1)&0xffffffff
         attest=mix(self.u(0x4ad,1)^pc^self.u(0x11e8));self.put(0x11e8,attest)
         self.put(0x20,mix(self.u(0x28)^self.u(0x20)^attest))
@@ -158,7 +161,7 @@ class SerialVMState(FirstOpcode):
             else:self.fail('Unknown thunk transform')
         else:self.fail('Unknown thunk codec')
         body=target-self.runtime_base
-        if body not in REGIONS or REGIONS[body]['opcode']!=opcode or REGIONS[body]['domain']!=domain:self.fail('Unknown opcode/body association '+hex(body))
+        if body not in self.regions or self.regions[body]['opcode']!=opcode or self.regions[body]['domain']!=domain:self.fail('Unknown opcode/body association '+hex(body))
         return body
     def decode_next(self):
         pc=self.control(1)&0xffffffff
@@ -166,9 +169,8 @@ class SerialVMState(FirstOpcode):
         if pc>=26 or self.read(self.u(0xb10),1)!=b'\1':self.fail('Undemonstrated materialization route')
         counter=self.u(0x11e0,4);signed=signed32(counter);key=self.u(0x20)
         update_decode_key(self,pc,counter)
-        epoch=(self.u(0x200,4)+1)&0xffffffff
-        if epoch>=self.u(0x1fc,4):self.fail('Register rekey')
-        self.put(0x200,epoch,4);self.ensure_cached_window(pc,pc)
+        self.advance_register_epoch()
+        self.ensure_cached_window(pc,pc)
         self.set_control(8,pc)
         raw=self.read(self.u(0x1d0)+pc,1)[0]^self.read(self.u(0x48)+pc,1)[0]
         self.set_control(1,pc+1)
@@ -183,6 +185,12 @@ class SerialVMState(FirstOpcode):
         self.control(1) # the remapper's read refreshes PC even for simple opcodes
         self.body=self.resolve_handler(domain,opcode);self.domain=domain;self.budget=(self.budget-1)&0xffffffff
         self.phase='execute';self.record('handler_entry',self.body)
+    def advance_register_epoch(self):
+        epoch=(self.u(0x200,4)+1)&0xffffffff
+        if epoch>=self.u(0x1fc,4):self.fail('Register rekey')
+        self.put(0x200,epoch,4)
+    def budget_exhausted(self):
+        self.fail('Thread budget exhausted')
     def pop(self):
         sp=self.control(2)&0xffffffff
         if not 0<sp<=1023:self.fail('Stack underflow/invalid SP')
@@ -194,13 +202,17 @@ class SerialVMState(FirstOpcode):
         erased=rol(index^self.u(0x1b0),mask>>58)^mask
         self.m.add(cell,erased.to_bytes(8,'little'),overwrite=True)
         return value
-    def store_register(self):
-        self.noise_prefix();pc=self.control(1)&0xffffffff
+    def read_u16_operand(self):
+        pc=self.control(1)&0xffffffff
         self.ensure_cached_window(pc,pc+1)
         word=int.from_bytes(self.read(self.u(0x1d0)+pc,2),'little')
         h=(pc*0x84e97925)&0xffffffff
         operand=((word^((h^0x09f46000)>>13)^h)*0xffff8c3d)&0xffff
-        self.set_control(1,pc+2);value=self.pop();reg=operand&255
+        self.set_control(1,pc+2)
+        return pc,operand
+    def store_register(self):
+        self.noise_prefix();pc,operand=self.read_u16_operand()
+        value=self.pop();reg=operand&255
         tag=self.advance();self.put(0xb65+reg,tag,1)
         mask=((tag*self.u(0x1a0))&MASK)^((reg*self.u(0x238))&MASK)^self.u(0x230)
         encoded=(value+mask)&MASK if self.u(0x1f8,1) else value^mask
@@ -219,10 +231,12 @@ class SerialVMState(FirstOpcode):
         if self.phase=='return_handoff':self.fail('Native return continuation is not modeled')
         if self.phase=='decode':self.decode_next()
         opcode=self.u(0x4ad,1);start=self.peek(8)&0xffffffff
-        if opcode==1:result=FirstOpcode.run(self)
-        elif opcode==5:result=self.store_register()
-        else:self.fail('Unknown semantic opcode '+str(opcode))
+        result=self.execute_opcode(opcode)
         result.update(virtual_pc=start,native_body=hex(self.body))
         self.record('opcode_core',self.spec()['core_end']);self.continuation();self.steps+=1
         result.update(boundary_pc=self.peek(1)&0xffffffff,boundary_sp=self.peek(2)&0xffffffff,boundary_phase=self.phase)
         return result
+    def execute_opcode(self,opcode):
+        if opcode==1:return FirstOpcode.run(self)
+        if opcode==5:return self.store_register()
+        self.fail('Unknown semantic opcode '+str(opcode))

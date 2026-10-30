@@ -25,7 +25,21 @@ directories; the report gives generic and User profile commands.
 
 ## Semantic devirtualizer
 
-The current Serial continuous interval is [JACK XXX](../PAFET_JACK_XXX.md):
+The current three-instruction Serial interval is [JACK XXXI](../PAFET_JACK_XXXI.md):
+
+```bash
+python scripts/pafet_serial_audit_xxxi.py
+python -m devirt.serial_extended_validate
+python -m devirt.serial_rekey_validate
+python -m devirt.serial_extended_metrics
+python -m unittest devirt.test_serial_extended -v
+```
+
+The rekey helper tests use explicitly synthetic inputs. The main validator
+requires three independent complete Windows chains and rejects incomplete
+captures. Native handlers execute only as oracles, never in the candidate.
+
+The previous two-instruction Serial interval is [JACK XXX](../PAFET_JACK_XXX.md):
 
 ```bash
 python scripts/pafet_serial_audit_xxx.py

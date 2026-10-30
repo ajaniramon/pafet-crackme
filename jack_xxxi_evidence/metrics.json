@@ -1,0 +1,276 @@
+{
+  "baseline": {
+    "consecutive": 2,
+    "opcodes": 2,
+    "fresh_cases": 4,
+    "fresh_inline_cases": 3,
+    "observed_native_instances": 10327,
+    "unique_native_pcs": 2883
+  },
+  "current": {
+    "consecutive": 3,
+    "opcodes": 3,
+    "fresh_cases": 3,
+    "observed_native_instances": 53498,
+    "unique_native_pcs": 3296,
+    "native_pcs_outside_baseline_C_intervals": 1704
+  },
+  "timing": {
+    "environment": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "samples": [
+      {
+        "case": "jack_xxxi_evidence/captures/process_b",
+        "repeat": 0,
+        "preflight_ms": 874.0279999910854,
+        "step_ms": [
+          0.9203000226989388,
+          1.9041000050492585,
+          17.33460003742948
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_b",
+        "repeat": 1,
+        "preflight_ms": 944.3245999864303,
+        "step_ms": [
+          0.9535999852232635,
+          1.5150000108405948,
+          17.00009999331087
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_b",
+        "repeat": 2,
+        "preflight_ms": 977.52329998184,
+        "step_ms": [
+          0.9263999527320266,
+          1.4705000212416053,
+          15.965899976436049
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_b",
+        "repeat": 3,
+        "preflight_ms": 975.3996999934316,
+        "step_ms": [
+          0.9584000217728317,
+          1.5451000072062016,
+          16.8666000245139
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_b",
+        "repeat": 4,
+        "preflight_ms": 984.9178000004031,
+        "step_ms": [
+          0.9843999869190156,
+          1.4779999619349837,
+          16.649800003506243
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_d",
+        "repeat": 0,
+        "preflight_ms": 1007.3187000234611,
+        "step_ms": [
+          0.9533999837003648,
+          1.630400016438216,
+          17.203199968207628
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_d",
+        "repeat": 1,
+        "preflight_ms": 1020.9726000321098,
+        "step_ms": [
+          0.9166000527329743,
+          1.5202000504359603,
+          16.72419998794794
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_d",
+        "repeat": 2,
+        "preflight_ms": 964.5980000495911,
+        "step_ms": [
+          0.9399999980814755,
+          1.666500000283122,
+          16.36140001937747
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_d",
+        "repeat": 3,
+        "preflight_ms": 967.7488000015728,
+        "step_ms": [
+          1.0910999844782054,
+          1.5199999907054007,
+          16.307500016409904
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_d",
+        "repeat": 4,
+        "preflight_ms": 1015.0991000118665,
+        "step_ms": [
+          0.9642000077292323,
+          1.5996000147424638,
+          17.06059998832643
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_h",
+        "repeat": 0,
+        "preflight_ms": 1057.328300026711,
+        "step_ms": [
+          1.0278000263497233,
+          1.498199999332428,
+          16.425899986643344
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_h",
+        "repeat": 1,
+        "preflight_ms": 1018.1916999863461,
+        "step_ms": [
+          0.9120000177063048,
+          1.5442000003531575,
+          18.018200004007667
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_h",
+        "repeat": 2,
+        "preflight_ms": 1000.9952000109479,
+        "step_ms": [
+          1.0103000095114112,
+          1.509999972768128,
+          16.7109000030905
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_h",
+        "repeat": 3,
+        "preflight_ms": 1005.9802999603562,
+        "step_ms": [
+          1.428399991709739,
+          1.7883999971672893,
+          16.276300011668354
+        ]
+      },
+      {
+        "case": "jack_xxxi_evidence/captures/process_h",
+        "repeat": 4,
+        "preflight_ms": 1007.6930000213906,
+        "step_ms": [
+          1.0779999429360032,
+          1.8332000472582877,
+          17.114500049501657
+        ]
+      }
+    ],
+    "median_preflight_ms": 1000.9952000109479,
+    "median_step_ms": [
+      0.9584000217728317,
+      1.5442000003531575,
+      16.72419998794794
+    ],
+    "scope": "15 semantic runs with snapshots/projection checks enabled; PE preflight timed separately. No native tracing/emulation is executed by these steps; this is not a native speedup measurement."
+  },
+  "noise_ablation": {
+    "kind": "deliberate candidate ablation; not natural coverage",
+    "logical_endpoint_equal": true,
+    "full_state_equal": false,
+    "first_divergence": {
+      "classification": "model",
+      "event": "opcode_core",
+      "native_rva": "0x20e1a8",
+      "native_instructions": 367,
+      "address": "0x1f93cf2048",
+      "context_offset": "0x2e8",
+      "candidate": 106,
+      "native": 56
+    },
+    "conclusion": "Noise can be represented compactly but cannot be omitted under the full-memory contract."
+  },
+  "reused_function_audit": [
+    {
+      "path": "devirt/serial.py",
+      "function": "advance",
+      "ast_unchanged": true,
+      "ast_sha256": "4a8bf283cdfbf506f2704ad08a5a3c0912871daa7ebefe41615d0ed8ec5b0aef"
+    },
+    {
+      "path": "devirt/serial.py",
+      "function": "control_mask",
+      "ast_unchanged": true,
+      "ast_sha256": "ebd7401c48e0fb5983887d69b3f35289e85bc1956f2e14354837f7e76f34404e"
+    },
+    {
+      "path": "devirt/serial.py",
+      "function": "control",
+      "ast_unchanged": true,
+      "ast_sha256": "455c9ae44aa2740039cfc070e6fc3e7eb558d5f4a2e7cc855fe35670f54a14a5"
+    },
+    {
+      "path": "devirt/serial.py",
+      "function": "set_control",
+      "ast_unchanged": true,
+      "ast_sha256": "1b8c50577af8d89f87228a2e2c54a1d132a9d561b409f7fdc976999d67da818a"
+    },
+    {
+      "path": "devirt/serial.py",
+      "function": "push",
+      "ast_unchanged": true,
+      "ast_sha256": "905692dd4da9987f0edcffbcf9197a3fc13f64c449b48aee388351f9396ead3a"
+    },
+    {
+      "path": "devirt/serial.py",
+      "function": "pool_push",
+      "ast_unchanged": true,
+      "ast_sha256": "9c778fba0fcf5cfd5ccca503e1731fa7bdd1ce3e553d9a992b6bc1fa523bd542"
+    },
+    {
+      "path": "devirt/serial.py",
+      "function": "ensure_cached_window",
+      "ast_unchanged": true,
+      "ast_sha256": "320b8222591e8e7b9a234e9c1e07b8ec69ee23af58887becbea82f5e1947b839"
+    },
+    {
+      "path": "devirt/serial_continuous.py",
+      "function": "peek",
+      "ast_unchanged": true,
+      "ast_sha256": "8011ca046024784195d9d297d8c5fdb5ea086b8dda3626b97a8aafab9ebffb3e"
+    },
+    {
+      "path": "devirt/serial_continuous.py",
+      "function": "noise_prefix",
+      "ast_unchanged": true,
+      "ast_sha256": "68979dd58249e76d7981184302c5dc0a6d153fd15fae84b17ef193939c78a186"
+    },
+    {
+      "path": "devirt/serial_continuous.py",
+      "function": "mutate_byte",
+      "ast_unchanged": true,
+      "ast_sha256": "cea43b689699f2db841fdfc0eae35d9b074e7f62494ab0d27e1a983cf54191ff"
+    },
+    {
+      "path": "devirt/serial_continuous.py",
+      "function": "feedback",
+      "ast_unchanged": true,
+      "ast_sha256": "cef956b30835ad1763d89b48f360cb6ecde5bb124d6d33d0cbc7cdbcf9adaf01"
+    },
+    {
+      "path": "devirt/serial_continuous.py",
+      "function": "pop",
+      "ast_unchanged": true,
+      "ast_sha256": "045bda0b6f31729ea8569035f9ce488afe0343eed6a48770bd07ecc880fc977b"
+    }
+  ],
+  "source_sha256": {
+    "devirt/serial_extended.py": "95d891607575056e8638e633af443f01aaf4617fbf98475769914e9d2e601c83",
+    "devirt/serial_continuous.py": "0f25c122d5e5e862d872e721502ec869e3deba8e43a835371b85b005b06c0139",
+    "devirt/serial_extended_metrics.py": "cb9acddfb9eb5af23754a21e9beb784b48f76b44fde987bd3ef2e5ae4e155e6f"
+  }
+}

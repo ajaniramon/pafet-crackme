@@ -1,0 +1,340 @@
+{
+  "all_checks_pass": true,
+  "cases": [
+    {
+      "kind": "synthetic-original-x64-helper",
+      "active_stack_cells": 0,
+      "queue_entries": 0,
+      "original_x64_instructions": 14256,
+      "regions": [
+        {
+          "role": "Serial context",
+          "bytes": 4592,
+          "different_bytes": 0
+        },
+        {
+          "role": "bytecode",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "shadow",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "materialization bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "window bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "register banks",
+          "bytes": 4096,
+          "different_bytes": 0
+        },
+        {
+          "role": "virtual stack",
+          "bytes": 8192,
+          "different_bytes": 0
+        },
+        {
+          "role": "dispatch table",
+          "bytes": 992,
+          "different_bytes": 0
+        },
+        {
+          "role": "generated thunk pool",
+          "bytes": 7968,
+          "different_bytes": 0
+        },
+        {
+          "role": "writable PE .data",
+          "bytes": 187860,
+          "different_bytes": 0
+        },
+        {
+          "role": "rekey TLS callback flag",
+          "bytes": 4,
+          "different_bytes": 0
+        }
+      ],
+      "logical_preservation": [
+        {
+          "logical_values_preserved": true,
+          "sha256": "b5208db27a920ee7b91d245374953fcc3b80cf4db1b49de66806e36bbb47eb79",
+          "registers": 256,
+          "controls": 14,
+          "active_stack_cells": 0,
+          "register_formats": [
+            0,
+            0
+          ],
+          "control_formats": [
+            1,
+            1
+          ],
+          "queue_entries": 0
+        }
+      ],
+      "all_bytes_match": true
+    },
+    {
+      "kind": "synthetic-original-x64-helper",
+      "active_stack_cells": 1,
+      "queue_entries": 1,
+      "original_x64_instructions": 14323,
+      "regions": [
+        {
+          "role": "Serial context",
+          "bytes": 4592,
+          "different_bytes": 0
+        },
+        {
+          "role": "bytecode",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "shadow",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "materialization bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "window bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "register banks",
+          "bytes": 4096,
+          "different_bytes": 0
+        },
+        {
+          "role": "virtual stack",
+          "bytes": 8192,
+          "different_bytes": 0
+        },
+        {
+          "role": "dispatch table",
+          "bytes": 992,
+          "different_bytes": 0
+        },
+        {
+          "role": "generated thunk pool",
+          "bytes": 7968,
+          "different_bytes": 0
+        },
+        {
+          "role": "writable PE .data",
+          "bytes": 187860,
+          "different_bytes": 0
+        },
+        {
+          "role": "rekey TLS callback flag",
+          "bytes": 4,
+          "different_bytes": 0
+        }
+      ],
+      "logical_preservation": [
+        {
+          "logical_values_preserved": true,
+          "sha256": "6f87c866a7b15eeae35dd2e52b2988f8d06878e97c9760d85f3f77b1b6596efc",
+          "registers": 256,
+          "controls": 14,
+          "active_stack_cells": 1,
+          "register_formats": [
+            0,
+            0
+          ],
+          "control_formats": [
+            1,
+            1
+          ],
+          "queue_entries": 1
+        }
+      ],
+      "all_bytes_match": true
+    },
+    {
+      "kind": "synthetic-original-x64-helper",
+      "active_stack_cells": 3,
+      "queue_entries": 3,
+      "original_x64_instructions": 14435,
+      "regions": [
+        {
+          "role": "Serial context",
+          "bytes": 4592,
+          "different_bytes": 0
+        },
+        {
+          "role": "bytecode",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "shadow",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "materialization bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "window bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "register banks",
+          "bytes": 4096,
+          "different_bytes": 0
+        },
+        {
+          "role": "virtual stack",
+          "bytes": 8192,
+          "different_bytes": 0
+        },
+        {
+          "role": "dispatch table",
+          "bytes": 992,
+          "different_bytes": 0
+        },
+        {
+          "role": "generated thunk pool",
+          "bytes": 7968,
+          "different_bytes": 0
+        },
+        {
+          "role": "writable PE .data",
+          "bytes": 187860,
+          "different_bytes": 0
+        },
+        {
+          "role": "rekey TLS callback flag",
+          "bytes": 4,
+          "different_bytes": 0
+        }
+      ],
+      "logical_preservation": [
+        {
+          "logical_values_preserved": true,
+          "sha256": "175e8ba1cd74b0c1830840818cfc9c607d94e4fb949a31e120125fb0537cabc6",
+          "registers": 256,
+          "controls": 14,
+          "active_stack_cells": 3,
+          "register_formats": [
+            0,
+            0
+          ],
+          "control_formats": [
+            1,
+            1
+          ],
+          "queue_entries": 3
+        }
+      ],
+      "all_bytes_match": true
+    },
+    {
+      "kind": "synthetic-original-x64-helper",
+      "active_stack_cells": 1023,
+      "queue_entries": 32,
+      "original_x64_instructions": 57631,
+      "regions": [
+        {
+          "role": "Serial context",
+          "bytes": 4592,
+          "different_bytes": 0
+        },
+        {
+          "role": "bytecode",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "shadow",
+          "bytes": 2678,
+          "different_bytes": 0
+        },
+        {
+          "role": "materialization bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "window bitmap",
+          "bytes": 104,
+          "different_bytes": 0
+        },
+        {
+          "role": "register banks",
+          "bytes": 4096,
+          "different_bytes": 0
+        },
+        {
+          "role": "virtual stack",
+          "bytes": 8192,
+          "different_bytes": 0
+        },
+        {
+          "role": "dispatch table",
+          "bytes": 992,
+          "different_bytes": 0
+        },
+        {
+          "role": "generated thunk pool",
+          "bytes": 7968,
+          "different_bytes": 0
+        },
+        {
+          "role": "writable PE .data",
+          "bytes": 187860,
+          "different_bytes": 0
+        },
+        {
+          "role": "rekey TLS callback flag",
+          "bytes": 4,
+          "different_bytes": 0
+        }
+      ],
+      "logical_preservation": [
+        {
+          "logical_values_preserved": true,
+          "sha256": "fb74e252a4beea91d3b0223536bf970df73ca45b0f8a801574269ab972f621dd",
+          "registers": 256,
+          "controls": 14,
+          "active_stack_cells": 1023,
+          "register_formats": [
+            0,
+            0
+          ],
+          "control_formats": [
+            1,
+            1
+          ],
+          "queue_entries": 32
+        }
+      ],
+      "all_bytes_match": true
+    }
+  ],
+  "source_sha256": {
+    "devirt/serial_rekey_validate.py": "3e4e6630d49e56aae43a00ebacf199d09c1fc5d572e2de83539fbff1020459f6",
+    "devirt/serial_extended.py": "95d891607575056e8638e633af443f01aaf4617fbf98475769914e9d2e601c83",
+    "scripts/pafet_state_replay.py": "3ab41d6d675cdeb7e3daad5f52175a54df38d80f03cbdb65edec1053e678fc2b"
+  },
+  "entry_sha256": "24971827dcafaefd178bc3461eb89e79665a31f3263c8495326cd246f7c09351",
+  "scope": "Constructed isolated-helper inputs; not native Windows paths or continuous program coverage."
+}

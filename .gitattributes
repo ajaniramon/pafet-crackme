@@ -26,3 +26,6 @@ jack_xxix_evidence/** -text whitespace=cr-at-eol
 jack_xxix_evidence/*.asm -text whitespace=-blank-at-eol
 jack_xxx_evidence/** -text whitespace=cr-at-eol
 jack_xxx_evidence/*.asm -text whitespace=-blank-at-eol
+jack_xxxi_evidence/** -text whitespace=cr-at-eol
+jack_xxxi_evidence/*.asm -text whitespace=-blank-at-eol
+scripts/pafet_serial_audit_xxxi.py -text

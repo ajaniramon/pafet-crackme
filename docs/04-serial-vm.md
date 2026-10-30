@@ -66,7 +66,7 @@ state. Final logical state is PC 8, SP 0.
 
 Three fresh Windows processes match every declared virtual-state byte at the
 next inline decoder. A fourth matches a child-wrapper return handoff to its
-pending parent; native caller resumption is still unsupported. Both control
+pending parent; that baseline does not resume native callers. Both control
 encodings and both register encodings occur in the validated fresh cases. A separate retained decoder
 capture verifies the table-dependent key probe; that branch does not rewrite
 the remap table. See [validation](../jack_xxx_evidence/validation.json).
@@ -76,17 +76,37 @@ followed by repeated `step()` calls, exported from `devirt.serial`. The second
 step consumes only the first step's state. Incomplete captures and unknown
 routes fail explicitly. Native replay and continuous semantics are distinct.
 
+## Three instructions: JACK XXXI
+
+[JACK XXXI](../PAFET_JACK_XXXI.md) adds a scalar reduction of rekey helper
+`RVA 0x1ef7c0`, then executes opcode 4, `LOAD_REG_U16`, at PC 8. It reads the
+register stored by the preceding instruction and pushes its value, ending at
+PC 11/SP 1. The exhausted-budget branch and context-free parent-wrapper tails
+are reconstructed through return to the outer dispatcher.
+
+Three fresh Windows processes compare every declared byte at 13 boundaries,
+including rekey entry/exit, the third core and all return frontiers. One crosses
+the decoder key probe continuously. Four synthetic helper cases independently
+check nonempty-stack rekey and the 1,023-cell limit against original x64; they
+are not Windows program paths. LOAD domains 0/3 have native differential proof;
+the other two have static bindings only.
+
+Use `ExtendedSerialVMState` from `devirt.serial_extended`, then three `step()`
+calls from the same initial capture. See [validation](../jack_xxxi_evidence/validation.json)
+and [reproduction](../PAFET_JACK_XXXI.md#8-reproduction). The original two-step
+class and evidence remain as a narrower regression contract.
+
 ## Still unknown
 
-The first two instructions and supported continuation paths are demonstrated
+The first three instructions and supported continuation paths are demonstrated
 within their recorded state contracts. The full ISA/CFG, callbacks, general
-register/flag architecture, native return continuation, full remap rebuild and
+register/flag architecture, the outer dispatcher loop, full remap rebuild and
 other rekey/window/guard cases remain partial or unknown. Entry RCX is the caller's argument array, not the internal
 context base. Four older pool-reader candidates have finite ALU-helper
 comparisons documented in [the pool report](../PAFET_SERIALVM_POOL.md). Their
 similarity to User-VM does not prove an identical ISA or dispatcher.
 
-Next: reconstruct the PC 8 register-rekey boundary, native return continuation and
-additional opcodes/windows. Keep RC4's algorithm state separate from
+Next: resume the outer dispatcher at PC 11, reconstruct full remap rebuild and
+rekey TLS callbacks, and extend to additional opcodes/windows. Keep RC4's algorithm state separate from
 the recovered virtualization mechanisms. No complete Serial devirtualization
 is claimed.

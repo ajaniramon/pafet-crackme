@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "report": "validation.json",
+      "source_hashes_match": true
+    },
+    {
+      "report": "xxx_regression.json",
+      "source_hashes_match": true
+    },
+    {
+      "report": "rekey_differential.json",
+      "source_hashes_match": true
+    },
+    {
+      "report": "unit_tests.json",
+      "source_hashes_match": true
+    }
+  ],
+  "relative_file_links_checked": 138,
+  "original_PE_unchanged": true,
+  "collector_archives_verified": true,
+  "unit_tests": 62,
+  "optimized_repeat_tests": 25,
+  "document_sha256": {
+    "README.md": "068ba43cefb7d16032d5043f4ae9638f29944d105e3f2a50068f2fe39cbac87e",
+    "PAFET_JACK_XXXI.md": "be22042a90ac156e21165bd39f51343f11d06d153d47e2b8ef23ca1d07c9fdad",
+    "docs/04-serial-vm.md": "481803a21c56b3f940e560547ba19f5f35054f7f785b0b3b0e8e35b349a29af7",
+    "docs/11-reproduce.md": "c10e433c55d79e445d638e448fcfe4ae60b38621035197205b5e28d6e3f8e837",
+    "docs/13-open-gaps.md": "e64304ccf13301e8a475d6b0f39155b54332fc6152bea3e695f09325aabd1246"
+  },
+  "metrics_source_hashes_match": true,
+  "static_reuse_functions": 12,
+  "powershell_capture_command_parsed": true,
+  "all_final_source_bindings_match": true,
+  "all_claimed_regressions_pass": true
+}

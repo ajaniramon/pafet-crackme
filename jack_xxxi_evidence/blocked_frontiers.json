@@ -1,0 +1,16 @@
+{
+  "scope": "Exploratory observed prefix only; capture is incomplete and rejected by the formal runner. No Level A or C claim.",
+  "model_gap": "Full remap rebuild during second decode at PC 5",
+  "native_branch_calls": [
+    {
+      "step": 1163,
+      "rva": "0x209a34",
+      "instruction": "call 0x7ff63fb697e0"
+    }
+  ],
+  "native_capture_terminal": {
+    "kind": "capture-error",
+    "error": "frame trace limit"
+  },
+  "observation_limit": 100001
+}

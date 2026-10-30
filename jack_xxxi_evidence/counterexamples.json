@@ -1,0 +1,44 @@
+{
+  "initial_boundary_bug": {
+    "observed": "candidate outer boundary 0x22fcd1 absent; actual CALL rax is 2 bytes",
+    "cause": "Assumed 3-byte CALL encoding",
+    "fix": "Decode CALL size from original PE, then compute return RVA; no observed target supplied"
+  },
+  "synthetic_harness_bug": {
+    "observed": "RET attempted 0x80000003 after 14255 original instructions",
+    "cause": "Reused pre-CALL stack top as helper return slot",
+    "fix": "Construct an explicit synthetic pushed return slot from entry RIP; preserve native snapshots unchanged"
+  },
+  "unsupported_remap": {
+    "scope": "Exploratory observed prefix only; capture is incomplete and rejected by the formal runner. No Level A or C claim.",
+    "model_gap": "Full remap rebuild during second decode at PC 5",
+    "native_branch_calls": [
+      {
+        "step": 1163,
+        "rva": "0x209a34",
+        "instruction": "call 0x7ff63fb697e0"
+      }
+    ],
+    "native_capture_terminal": {
+      "kind": "capture-error",
+      "error": "frame trace limit"
+    },
+    "observation_limit": 100001
+  },
+  "rejected_routes": [
+    "process_c"
+  ],
+  "short_routes": [
+    "process_a",
+    "process_e",
+    "process_f",
+    "process_g",
+    "process_i"
+  ],
+  "incomplete_manifest_metadata": {
+    "observed_entry_rva": "0x3bea0",
+    "actual_entry_source": "frame_00.entry.json.gz state.rip-base",
+    "cause": "Existing collector error fallback writes args.entry even when entry-any was selected",
+    "treatment": "Preserve raw metadata; reject incomplete frame; do not infer Serial entry from fallback default"
+  }
+}
