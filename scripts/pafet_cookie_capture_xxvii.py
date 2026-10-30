@@ -4,9 +4,10 @@
 Preserve the XXIV collector and evidence. Capture the first two 0x3bea0
 invocations for each of alice, ramon and a*23 in the existing gate variant.
 """
-import gzip, hashlib, json, pathlib, threading, uuid
+import argparse, gzip, hashlib, json, pathlib, threading, uuid
 import frida
 from pafet_capture_native_xxiv import AGENT as ORIGINAL_AGENT, ROOT
+from pafet_state_contract import ORIGINAL_SHA256,VARIANT_SHA256,require
 
 OUT = ROOT/'jack_xxvii_evidence'
 COOKIE_RVA = 0x40d020
@@ -25,10 +26,15 @@ def agent():
     return source
 
 def main():
-    OUT.mkdir(exist_ok=True)
+    global OUT
+    ap=argparse.ArgumentParser();ap.add_argument('--out',type=pathlib.Path,default=ROOT/'jack_xxviii_evidence/frida'/uuid.uuid4().hex);args=ap.parse_args()
+    OUT=args.out
+    if OUT.exists() and any(OUT.iterdir()):raise ValueError('Capture output must be fresh; historical evidence is immutable')
+    OUT.mkdir(parents=True,exist_ok=True)
     original = (ROOT/'pafet.bin').read_bytes()
     executable = ROOT/'pafet_pass8.exe'
     variant = executable.read_bytes()
+    require(hashlib.sha256(original).hexdigest()==ORIGINAL_SHA256 and hashlib.sha256(variant).hexdigest()==VARIANT_SHA256,'Research PE identity differs','integrity')
     offsets = [i for i,(a,b) in enumerate(zip(original,variant)) if a != b]
     assert len(original) == len(variant) and offsets == [0x395efb,0x395efc]
     source = agent()

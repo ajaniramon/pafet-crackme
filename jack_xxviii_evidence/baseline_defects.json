@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "b222ca13230cd3b8947719b8c2b830e8e086a38d",
+  "source_sha256": {
+    "scripts/pafet_state_replay.py": "af3c9fcaf8cce618c32d1b437fcff575f168689af62b820779a1f52bb87ff3b9",
+    "scripts/pafet_state_compare.py": "50f5bd24d260e4da391a87523127e88d1978b2c1316c51a66e43fb191435547b",
+    "scripts/pafet_native_step_capture.py": "9b933844b452c1bd4206a7f7a48993bb05b1938d05e70f801fbd6569fa37306b"
+  },
+  "empty_corpus": {
+    "returncode": 0,
+    "report": {
+      "frames": [],
+      "all_complete_inputs_match": true,
+      "comparison_source_sha256": "50f5bd24d260e4da391a87523127e88d1978b2c1316c51a66e43fb191435547b",
+      "replay_source_sha256": "af3c9fcaf8cce618c32d1b437fcff575f168689af62b820779a1f52bb87ff3b9",
+      "scope": "16 GPRs, RIP, XMM, MXCSR, architecturally defined arithmetic flags, native operand reads and written memory after every instruction. Oracle values are comparison-only."
+    }
+  },
+  "contradictory_overlap_accepted": true,
+  "empty_xmm_accepted": true
+}

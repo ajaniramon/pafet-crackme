@@ -1,0 +1,89 @@
+{
+  "schema": "pafet-lab-corpus-v1",
+  "baseline_commit": "b222ca13230cd3b8947719b8c2b830e8e086a38d",
+  "corpora": [
+    {
+      "path": "state_divergence_evidence/drop_control",
+      "category": "baseline",
+      "component": "User"
+    },
+    {
+      "path": "state_divergence_evidence/second_rekey",
+      "category": "baseline",
+      "component": "User"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/cookie",
+      "category": "additional",
+      "component": "CRT"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/queue",
+      "category": "blocked",
+      "component": "User"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/remap_empty",
+      "category": "additional",
+      "component": "User"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/resolver_len1",
+      "category": "additional",
+      "component": "User",
+      "cpp_known_missing_rva": "0x3ebb0"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/serial_seed",
+      "category": "additional",
+      "component": "Serial"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/store_len16",
+      "category": "additional",
+      "component": "User",
+      "cpp_known_missing_rva": "0x2d5d0"
+    },
+    {
+      "path": "jack_xxviii_evidence/captures/transfer_len25",
+      "category": "additional",
+      "component": "User"
+    }
+  ],
+  "artifacts": {
+    "state_divergence_evidence/drop_control/manifest.json": "839728bb6ce51304b045c6e2289dc19485b6132301174719aafe0aa353a4c58f",
+    "state_divergence_evidence/drop_control/frame_00.entry.json.gz": "3c7e6cf4e78f211ba9733ee352970bdba22a9cfe0e1a8d0e09157c8e7351c40c",
+    "state_divergence_evidence/drop_control/frame_00.trace.json.gz": "4762149e93abc79103c2df4d509be87129d40e1c8b2d00590ff4e9da292a731e",
+    "state_divergence_evidence/drop_control/frame_01.entry.json.gz": "ee7d8aacf35ceebc4970a0706d6c9c3906c2fdc65a6f4bee1a6107d61beb9702",
+    "state_divergence_evidence/drop_control/frame_01.trace.json.gz": "2c8d7d056dbf55bbc164aefe14facd618432a53bae423bb00b4f1d20a9f65400",
+    "state_divergence_evidence/second_rekey/manifest.json": "aae241ae18260d4e27715b4519c2981db4428d8ca810b3c8c844cf409d175de2",
+    "state_divergence_evidence/second_rekey/frame_00.entry.json.gz": "32b237012ca243fd7d014ac58ca3a88a027c5d6db85cdb859809268a70905d67",
+    "state_divergence_evidence/second_rekey/frame_00.trace.json.gz": "e5bcf4633de37e208532c552f32c6f381b4a72bc617b3c525a0a1b3e0a7fb2b7",
+    "state_divergence_evidence/second_rekey/frame_01.entry.json.gz": "69e5a86fca46ddf6ede0c58b259356bccaae40321c6cd5ae24da7fbcbe27bfa2",
+    "state_divergence_evidence/second_rekey/frame_01.trace.json.gz": "330d749c976ab179763b0a658476e0f52fdfc2e30b1b063e456cb072bf500434",
+    "jack_xxviii_evidence/captures/cookie/manifest.json": "b09d12da5d52e8d93a1d366e3e54ef73f871b712666405f4ac6c62748864a835",
+    "jack_xxviii_evidence/captures/cookie/frame_00.entry.json.gz": "f61b3487151939fc6610c78fcc36f7f4949c336801b9d72395606772b66874a9",
+    "jack_xxviii_evidence/captures/cookie/frame_00.trace.json.gz": "ab793aa9cd1e9fe448bc7b11e5f671bbb90e246bba54162e370e451bbc7f69c4",
+    "jack_xxviii_evidence/captures/queue/manifest.json": "8d8f1d8af4e9672aec90a8d8089f7027cd5fc2b50bc5f0dbfaabe7185d0be9c9",
+    "jack_xxviii_evidence/captures/queue/frame_00.entry.json.gz": "26cbd67e408c3e89a0faad012a446d77523757fc24235057f4d5b68a64d7974e",
+    "jack_xxviii_evidence/captures/queue/frame_00.trace.json.gz": "08797ddaef4c395dd756c465cb218439018ba6e79b50f462f2e359a8012e2622",
+    "jack_xxviii_evidence/captures/remap_empty/manifest.json": "9fe6a08ab4d836a37e89ca6e3fde707f74f2e0f3faf774afe7befd9c93475baa",
+    "jack_xxviii_evidence/captures/remap_empty/frame_00.entry.json.gz": "d97e29379d90836193cbcf84f253ed6b81344f0f3ac41435a8086dcb1a5adb13",
+    "jack_xxviii_evidence/captures/remap_empty/frame_00.trace.json.gz": "5ed32c0758932a6433ad8b8cda3d5be05841fcad43dbd1ceeec1170863b16925",
+    "jack_xxviii_evidence/captures/resolver_len1/manifest.json": "d76ed41efe4e9b8d396bfac50433a0371395b25fe1a9eae38ee377267e0e1ce7",
+    "jack_xxviii_evidence/captures/resolver_len1/frame_00.entry.json.gz": "362e7e016b36f88e379f6f633ef1240961b2c65ef6c6605d240b893d8c18a92b",
+    "jack_xxviii_evidence/captures/resolver_len1/frame_00.trace.json.gz": "c1cd9ff5194f160e3fc426d1d4068d849263a3066c4351dcd1af3f2a71ee139e",
+    "jack_xxviii_evidence/captures/serial_seed/manifest.json": "72a3c070f88ff963354eef7f8f91aeca6f0a950d5d859c569827f03f5485ef9d",
+    "jack_xxviii_evidence/captures/serial_seed/frame_00.entry.json.gz": "86481a078d752c6315a062125ad904799a327092c601976b36ad18331e598c8d",
+    "jack_xxviii_evidence/captures/serial_seed/frame_00.trace.json.gz": "2b3bf63431b7e20ea818bd225efefee1246944734b33f9082f5e0e6ca12f6bb3",
+    "jack_xxviii_evidence/captures/store_len16/manifest.json": "d69d069efd09674d5502cecb2ed1c0fe1b3977aac7b1db355abb8848b96bb870",
+    "jack_xxviii_evidence/captures/store_len16/frame_00.entry.json.gz": "0bb31cc490237b51b9fed235dac2f1555272c4b8bcb1a43b4f9c3bfc7af2e5b5",
+    "jack_xxviii_evidence/captures/store_len16/frame_00.trace.json.gz": "d2881b40eb7ef4817479075c9b064d04e9f57980ebc3d3bd0328582bc7246de7",
+    "jack_xxviii_evidence/captures/transfer_len25/manifest.json": "e8d09c795d818b0c79a711bbde2b96d1d080db50a908e613dedf71bdb6cfcb66",
+    "jack_xxviii_evidence/captures/transfer_len25/frame_00.entry.json.gz": "6b096d5e40752fe670b12de8921bb30e9abed6e12d3efd92186047c15faf0d4a",
+    "jack_xxviii_evidence/captures/transfer_len25/frame_00.trace.json.gz": "d66c4ba0827d33328d6716e88173ccd5dcec65be76253f5b0e9b7ec93ba436b3",
+    "state_divergence_evidence/frida/cookie_frames.json.gz": "8009caac5dab52de42d637c90318681602cebe03aab7bd1d1a672b0894cebc31",
+    "state_divergence_evidence/frida/capture_provenance.json": "e082f99296591103baaa91fc6485ca19b8f67dd25ca34b12051efd8a5ff7a6f9",
+    "jack_xxvii_evidence/cookie_frames.json.gz": "5c94b1d2f0decfe51d014df8bb961b404cac863727853d5ab9cfa436c418b192"
+  }
+}

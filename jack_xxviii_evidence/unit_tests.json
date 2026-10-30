@@ -1,0 +1,41 @@
+{
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\Ram\u00f3n\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_pafet_state*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_code_overlay_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_alias_is_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_observation_alias_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_consistent_alias_is_safe (test_pafet_state_contract.ContractTests) ... ok\ntest_cpu_fields_required (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_manifest_and_directory_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_truncated_and_broken_observations_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_exact_budget_and_entry_only_generic_replay (test_pafet_state_contract.ContractTests) ... ok\ntest_extended_state_is_rejected_before_execution (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_profile_has_no_user_layout (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_rejects_user_ablation (test_pafet_state_contract.ContractTests) ... ok\ntest_hole_does_not_become_zero (test_pafet_state_contract.ContractTests) ... ok\ntest_inventory_and_hash_failures (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_gs_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_iat_or_teb_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_stack_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_writable_cookie_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_runtime_read_of_zero_mapped_hole_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_synthetic_zero_count_preserves_defined_flags (test_pafet_state_contract.ContractTests) ... ok\ntest_unsupported_version_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_after_values_cannot_satisfy_missing_input_contract (test_pafet_state_inputs.InputTests) ... ok\ntest_all_original_xxvii_frames_are_incomplete (test_pafet_state_inputs.InputTests) ... ok\ntest_autonomous_replay_cannot_open_observations (test_pafet_state_inputs.InputTests) ... ok\ntest_corrected_frames_cover_both_pointed_arrays (test_pafet_state_inputs.InputTests) ... ok\ntest_replay_rejects_missing_array_page (test_pafet_state_inputs.InputTests) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 9.043s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Ram\u00f3n\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_pafet_state*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_code_overlay_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_alias_is_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_observation_alias_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_consistent_alias_is_safe (test_pafet_state_contract.ContractTests) ... ok\ntest_cpu_fields_required (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_manifest_and_directory_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_truncated_and_broken_observations_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_exact_budget_and_entry_only_generic_replay (test_pafet_state_contract.ContractTests) ... ok\ntest_extended_state_is_rejected_before_execution (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_profile_has_no_user_layout (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_rejects_user_ablation (test_pafet_state_contract.ContractTests) ... ok\ntest_hole_does_not_become_zero (test_pafet_state_contract.ContractTests) ... ok\ntest_inventory_and_hash_failures (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_gs_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_iat_or_teb_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_stack_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_writable_cookie_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_runtime_read_of_zero_mapped_hole_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_synthetic_zero_count_preserves_defined_flags (test_pafet_state_contract.ContractTests) ... ok\ntest_unsupported_version_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_after_values_cannot_satisfy_missing_input_contract (test_pafet_state_inputs.InputTests) ... ok\ntest_all_original_xxvii_frames_are_incomplete (test_pafet_state_inputs.InputTests) ... ok\ntest_autonomous_replay_cannot_open_observations (test_pafet_state_inputs.InputTests) ... ok\ntest_corrected_frames_cover_both_pointed_arrays (test_pafet_state_inputs.InputTests) ... ok\ntest_replay_rejects_missing_array_page (test_pafet_state_inputs.InputTests) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 9.478s\n\nOK\n"
+    }
+  ],
+  "test_source_sha256": {
+    "test_pafet_state_contract.py": "ca8299dbea94a61636ea1fa878956b6fdce9b9164651a59d91243cfff437dd3f",
+    "test_pafet_state_inputs.py": "4176d658a11c258343b2c3734373ba27fd89eeb20b428e4ded4f245cba66edc3"
+  }
+}

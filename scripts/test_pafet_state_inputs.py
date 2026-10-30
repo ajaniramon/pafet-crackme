@@ -41,7 +41,7 @@ class InputTests(unittest.TestCase):
         entry=load(ROOT/'state_divergence_evidence/second_rekey/frame_01.entry.json.gz')
         target=entry['known_arrays'][0]['address']&~4095
         entry['regions']=[r for r in entry['regions'] if r['address']!=target]
-        with self.assertRaisesRegex(ValueError,'missing pointed input pages'):Replay(entry)
+        with self.assertRaisesRegex(ValueError,'Required before-memory is absent'):Replay(entry)
 
     def test_autonomous_replay_cannot_open_observations(self):
         entry=load(ROOT/'state_divergence_evidence/second_rekey/frame_01.entry.json.gz')

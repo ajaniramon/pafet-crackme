@@ -221,11 +221,11 @@ python scripts/pafet_state_compare.py --captures "$run/drop"
 python scripts/pafet_state_compare.py --captures "$run/rekey"
 ```
 
-For the six-frame corrected Frida capture, reuse the existing collector while
-directing output away from historical evidence:
+For a fresh six-frame corrected Frida capture, direct output away from
+historical evidence (requires Frida):
 
 ```powershell
-python -c "import pathlib,sys; sys.path.insert(0,'scripts'); import pafet_cookie_capture_xxvii as c; c.OUT=pathlib.Path('state_divergence_evidence/frida'); c.OUT.mkdir(parents=True,exist_ok=True); c.main()"
+python scripts/pafet_cookie_capture_xxvii.py --out "$run/frida"
 ```
 
 New processes change seeds, addresses and instruction counts. Comparisons are
@@ -235,3 +235,10 @@ committed run. Keep the committed datasets if retaining this exact reproducer.
 The result closes this capture-induced divergence for the stated frames. It
 does not establish universal interpreter equivalence, complete User-VM guard or
 exception coverage, or complete devirtualization of any additional VM.
+
+The current reusable laboratory is [JACK XXVIII](../PAFET_JACK_XXVIII.md).
+It adds pinned artifact verification, generic/native and User profiles,
+read-before-write initialization checks, strict empty/incomplete/alias failures,
+new observed routes and explicit queue/C++ blockers. Its runner supersedes
+directory-glob comparisons for permanent regression. The figures above remain
+the original follow-up's historical measurements.

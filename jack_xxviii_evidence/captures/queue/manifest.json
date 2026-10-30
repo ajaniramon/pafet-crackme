@@ -1,0 +1,30 @@
+{
+  "schema": "pafet-capture-v2",
+  "run_id": "aeceab9ff97b452a9828af774db97089",
+  "status": "blocked",
+  "requested_frames": 1,
+  "frames": [
+    {
+      "stem": "frame_00",
+      "steps": 32,
+      "rekey": false,
+      "status": "blocked",
+      "entry_sha256": "26cbd67e408c3e89a0faad012a446d77523757fc24235057f4d5b68a64d7974e",
+      "trace_sha256": "08797ddaef4c395dd756c465cb218439018ba6e79b50f462f2e359a8012e2622",
+      "terminal": {
+        "kind": "external-code-boundary",
+        "pc": "0x7ff90ff57d30"
+      }
+    }
+  ],
+  "user_hex": "616c696365",
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "variant_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+  "collector_sha256": "03ad98c6fcac85915e9ff24c6ab47105e5e2b4bfd2506b19684b753d58298585",
+  "method": "Windows debug API; execution hardware breakpoint then trap-flag single step; no instruction patching",
+  "selection": "consecutive handler invocations",
+  "entry_rva": "0x6010",
+  "profile": "user-v1",
+  "stop_rva": null,
+  "inputs": "Entry GPRs, RFLAGS, XMM, GS base and memory only; oracle after-state/reads are separate trace data."
+}

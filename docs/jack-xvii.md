@@ -8,7 +8,11 @@ earlier Serial-VM work with XVII in its filenames.
 **Result:** a PE-to-effect-IR-to-C++ devirtualizer for the recovered **logical
 User-VM program**, plus four independently validated native initialization
 regions. No complete four-VM reconstruction is claimed. Native User-VM encoding,
-guard/scheduler machinery and the XXVII context discrepancy remain open.
+guard/scheduler machinery remained open at this operation's conclusion.
+The later [native-state follow-up](native-state-divergence.md) demonstrated the
+missing-input cause of XXVII's discrepancy. [JACK XXVIII](../PAFET_JACK_XXVIII.md)
+now supplies the pinned laboratory and new native route evidence; neither
+follow-up changes this report's logical-program validation scope.
 
 ## 1. Audit: initial and final state
 
@@ -363,11 +367,12 @@ recorded in [windows_cpp_validation.json](../jack_xvii_evidence/windows_cpp_vali
 
 ## 8. Open mechanisms and next experiments
 
-1. **User native rekey/guard state:** XXVII's `ramon/1` has matching software
-   lockstep and return GPRs but 764 differing context bytes. This operation does
-   not assign a speculative cause. Capture intermediate native reads/writes
-   around the table transformation, identify the earliest actual divergence,
-   then close cookie-sensitive and exceptional-frame controls.
+1. **User native rekey/guard state:** the subsequent
+   [follow-up](native-state-divergence.md) isolated omitted pointed-stack inputs.
+   [XXVIII](../PAFET_JACK_XXVIII.md) preserves the corrected regressions and adds
+   remap, resolver, storage, transfer and cookie cases. Extend seed/guard
+   coverage, translate its two missing C++ regions, and independently capture
+   the queue's OS/unwind dependencies before claiming exception equivalence.
 2. **Serial/SHA materialization:** trace reads of the verified blobs into their
    first materialized buffers, capture decoder boundaries and identify actual
    operand widths. Reuse only mechanisms that match original instruction tests;

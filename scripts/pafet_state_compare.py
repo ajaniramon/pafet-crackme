@@ -1,81 +1,83 @@
 #!/usr/bin/env python3
-"""Compare an autonomous input-only replay with separately stored Windows observations."""
+"""Compare autonomous entry-only x64 execution with separate Windows evidence."""
 import argparse
 import gzip
-import hashlib
 import json
 import pathlib
-from pafet_state_replay import Replay,NAMES,snapshot
+from pafet_state_replay import Replay,NAMES,snapshot,u
+from pafet_state_contract import require,load_frames,ContractError
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-
-
 def read(path):return json.loads(gzip.decompress(path.read_bytes()))
-
-
-def byte_map(items):return {address+i:b for address,data in items for i,b in enumerate(bytes.fromhex(data))}
-
-
-def compare(entry,oracle,coverage):
-    replay=Replay(entry,coverage);first_read=None;first_state=None;first_raw_flags=None;completed=0
-    for number,native in enumerate(oracle['trace'],1):
-        # Address values from oracle are used only for read-only comparison.
-        before_reads=[]
-        for address,data in native['reads']:
-            actual=bytes(replay.uc.mem_read(address,len(data)//2)).hex()
-            if actual!=data:before_reads.append({'address':hex(address),'native':data,'replay':actual})
-        actual=replay.step();completed=number
-        if first_read is None and before_reads:
-            first_read={'step':number,'pc':hex(native['pc']),'instruction':native['instruction'],'differences':before_reads}
-        a=actual['after'];b=native['after']
-        raw_difference=(a['flags']^b['flags'])&0x8d5
-        if first_raw_flags is None and raw_difference:
-            first_raw_flags={'step':number,'pc':hex(native['pc']),'instruction':native['instruction'],
-                             'replay':hex(a['flags']),'native':hex(b['flags']),'different_bits':hex(raw_difference),
-                             'defined_mask':hex(actual['defined_flags_mask']),
-                             'only_architecturally_undefined_bits':not bool(raw_difference&actual['defined_flags_mask'])}
-        differences={name:[hex(x),hex(y)] for name,x,y in zip(NAMES,a['gprs'],b['gprs']) if x!=y}
-        for key in ('rip','xmm','mxcsr'):
-            if a[key]!=b[key]:differences[key]=[a[key],b[key]]
-        if (a['flags']^b['flags'])&actual['defined_flags_mask']:differences['defined_flags']=[hex(a['flags']),hex(b['flags']),hex(actual['defined_flags_mask'])]
-        if actual['pc']!=native['pc'] or actual['bytes']!=native['bytes']:differences['instruction']=[hex(actual['pc']),actual['bytes'],hex(native['pc']),native['bytes']]
-        if byte_map(actual['reads'])!=byte_map(native['reads']):differences['memory_reads']={'replay':actual['reads'],'native':native['reads']}
-        if byte_map(actual['writes'])!=byte_map(native['writes']):differences['written_memory']={'replay':actual['writes'],'native':native['writes']}
-        if differences:
-            first_state={'step':number,'pc':hex(native['pc']),'preferred_pc':hex(native['pc']-entry['base']+0x140000000),
-                         'instruction':native['instruction'],'preceding_instructions_match':number-1,'differences':differences}
-            break
-    terminal=Replay(entry,coverage);end_error=None
-    try:steps=sum(1 for _ in terminal.run())
-    except Exception as error:steps=None;end_error=repr(error)
-    expected=bytes.fromhex(oracle['after_context_hex']);actual=bytes(terminal.uc.mem_read(entry['context'],len(expected)))
-    final={'steps':steps,'error':end_error,'context_different_bytes':sum(a!=b for a,b in zip(actual,expected)),
-           'array_different_bytes':{a['role']:sum(x!=y for x,y in zip(bytes(terminal.uc.mem_read(a['address'],len(a['hex'])//2)),bytes.fromhex(a['hex']))) for a in oracle['after_arrays']}}
-    all_match=(first_state is None and first_read is None and completed==len(oracle['trace']) and
-               end_error is None and final['context_different_bytes']==0 and not any(final['array_different_bytes'].values()))
-    result={'coverage':coverage,'instructions_compared':completed,'all_match':all_match,
-            'first_read_difference':first_read,'first_state_difference':first_state,'terminal_comparison':final}
-    result['first_raw_arithmetic_flag_difference']=first_raw_flags
+def byte_map(items):
+    result={}
+    for address,data in items:
+        for i,value in enumerate(bytes.fromhex(data)):
+            require(address+i not in result or result[address+i]==value,'Contradictory memory observations','observation',address=hex(address+i))
+            result[address+i]=value
     return result
 
+def validate_oracle(entry,oracle):
+    trace=oracle.get('trace')
+    require(isinstance(trace,list) and trace,'Empty native trace','observation')
+    pc=entry['state']['rip']
+    for number,row in enumerate(trace,1):
+        require(row['pc']==pc,'Broken native observation chain','observation',step=number)
+        require(len(row['after']['gprs'])==16 and len(bytes.fromhex(row['after']['xmm']))==256,'Incomplete observed CPU','observation',step=number)
+        require(0<len(bytes.fromhex(row['bytes']))<=15,'Invalid observed instruction','observation',step=number)
+        pc=row['after']['rip']
+    complete=oracle.get('complete',True)
+    if complete:require(pc==entry.get('stop',entry['native_return']),'Truncated native trace','observation',last_pc=hex(pc))
+    return complete
+
+def compare(entry,oracle,coverage='complete'):
+    native_complete=validate_oracle(entry,oracle)
+    replay=Replay(entry,coverage);candidate=[];failure=None
+    # No observed trace length, branch or expected value drives execution.
+    try:
+        for row in replay.run():candidate.append(row)
+    except Exception as error:
+        failure=error.report() if isinstance(error,ContractError) else {'classification':'unmapped-dependency' if isinstance(error,u.UcError) and error.errno in (u.UC_ERR_FETCH_UNMAPPED,u.UC_ERR_READ_UNMAPPED,u.UC_ERR_WRITE_UNMAPPED) else 'emulation','message':str(error),'pc':hex(snapshot(replay.uc)['rip'])}
+    first=None;raw=None;read_difference=None
+    for number,(actual,native) in enumerate(zip(candidate,oracle['trace']),1):
+        a=actual['after'];b=native['after'];different={}
+        for name,x,y in zip(NAMES,a['gprs'],b['gprs']):
+            if x!=y:different[name]=[hex(x),hex(y)]
+        for key in ('rip','xmm','mxcsr'):
+            if a[key]!=b[key]:different[key]=[a[key],b[key]]
+        bits=(a['flags']^b['flags'])&0x8d5
+        if (a['flags']^b['flags'])&~0x8d5:different['non_arithmetic_flags']=[hex(a['flags']),hex(b['flags'])]
+        if bits and raw is None:raw={'step':number,'pc':hex(native['pc']),'different_bits':hex(bits),'defined_mask':hex(actual['defined_flags_mask']),'only_architecturally_undefined_bits':not bool(bits&actual['defined_flags_mask'])}
+        if bits&actual['defined_flags_mask']:different['defined_flags']=[hex(a['flags']),hex(b['flags']),hex(actual['defined_flags_mask'])]
+        if (actual['pc'],actual['bytes'])!=(native['pc'],native['bytes']):different['instruction']=[actual['pc'],actual['bytes'],native['pc'],native['bytes']]
+        for key in ('reads','writes'):
+            if byte_map(actual[key])!=byte_map(native[key]):different['memory_'+key]={'replay':actual[key],'native':native[key]}
+        if read_difference is None and 'memory_reads' in different:read_difference={'step':number,'pc':hex(native['pc']),'differences':different['memory_reads']}
+        if different and first is None:first={'step':number,'pc':hex(native['pc']),'preferred_pc':hex(native['pc']-entry['base']+0x140000000),'instruction':native['instruction'],'preceding_instructions_match':number-1,'differences':different}
+    if first is None and len(candidate)!=len(oracle['trace']):first={'step':min(len(candidate),len(oracle['trace']))+1,'differences':{'trace_length':[len(candidate),len(oracle['trace'])]}}
+    regions=list(oracle.get('after_arrays',[]))+list(oracle.get('final_regions',[]))
+    if oracle.get('after_context_hex') is not None:regions.append({'role':'context','address':entry['context'],'hex':oracle['after_context_hex']})
+    finals=[]
+    for region in regions:
+        expected=bytes.fromhex(region['hex'])
+        try:actual=bytes(replay.uc.mem_read(region['address'],len(expected)));delta=sum(a!=b for a,b in zip(actual,expected))
+        except Exception:delta=len(expected)
+        finals.append({'role':region['role'],'different_bytes':delta})
+    ok=native_complete and failure is None and first is None and not any(r['different_bytes'] for r in finals)
+    return {'coverage':coverage,'instructions_compared':min(len(candidate),len(oracle['trace'])),'candidate_instructions':len(candidate),'native_complete':native_complete,'all_match':ok,
+            'first_state_difference':first,'first_read_difference':read_difference,'first_raw_arithmetic_flag_difference':raw,'failure':failure,
+            'terminal_comparison':{'steps':len(candidate),'error':failure,'regions':finals},'contract':replay.contract}
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--captures',type=pathlib.Path,default=ROOT/'state_divergence_evidence/debugger');args=ap.parse_args()
-    rows=[]
-    for path in sorted(args.captures.glob('*.entry.json.gz')):
-        stem=path.name.split('.')[0];entry=read(path);oracle=read(path.with_name(stem+'.trace.json.gz'))
-        rows.append({'frame':stem,'rekey':oracle['rekey'],'entry_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
-                     'trace_sha256':hashlib.sha256(path.with_name(stem+'.trace.json.gz').read_bytes()).hexdigest(),
-                     'complete':compare(entry,oracle,'complete'),
-                     'legacy':compare(entry,oracle,'legacy'),
-                     'missing_register_tail':compare(entry,oracle,'missing-register-tail')})
-        print(json.dumps(rows[-1]),flush=True)
-    report={'frames':rows,'all_complete_inputs_match':all(r['complete']['all_match'] for r in rows),
-            'comparison_source_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),
-            'replay_source_sha256':hashlib.sha256((ROOT/'scripts/pafet_state_replay.py').read_bytes()).hexdigest(),
-            'scope':'16 GPRs, RIP, XMM, MXCSR, architecturally defined arithmetic flags, native operand reads and written memory after every instruction. Oracle values are comparison-only.'}
-    (args.captures/'comparison.json').write_bytes(json.dumps(report,indent=2).encode()+b'\n')
-    assert report['all_complete_inputs_match'],'complete-input replay diverged; see comparison.json'
-
-
+    ap=argparse.ArgumentParser();ap.add_argument('--captures',type=pathlib.Path,default=ROOT/'state_divergence_evidence/drop_control');ap.add_argument('--output',type=pathlib.Path);ap.add_argument('--negative-controls',action='store_true');args=ap.parse_args()
+    manifest=load_frames(args.captures);rows=[]
+    for item in manifest['frames']:
+        stem=item['stem'];entry=read(args.captures/(stem+'.entry.json.gz'));oracle=read(args.captures/(stem+'.trace.json.gz'))
+        row={'frame':stem,'complete':compare(entry,oracle)}
+        if args.negative_controls:
+            for label,mode in [('legacy','legacy'),('missing_register_tail','missing-register-tail')]:row[label]=compare(entry,oracle,mode)
+        rows.append(row);print(stem,'PASS' if row['complete']['all_match'] else 'FAIL',row['complete']['instructions_compared'],flush=True)
+    report={'frames':rows,'all_complete_inputs_match':bool(rows) and all(r['complete']['all_match'] for r in rows),'scope':'Windows instruction observations; defined arithmetic flags; memory read/write events. Candidate uses captured inputs only.'}
+    output=args.output or args.captures/'comparison.json';output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+    require(report['all_complete_inputs_match'],'Native comparison failed; see '+str(output),'comparison')
 if __name__=='__main__':main()

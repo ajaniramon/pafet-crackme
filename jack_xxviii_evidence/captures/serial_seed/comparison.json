@@ -1,0 +1,48 @@
+{
+  "frames": [
+    {
+      "frame": "frame_00",
+      "complete": {
+        "coverage": "complete",
+        "instructions_compared": 18,
+        "candidate_instructions": 18,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 6,
+          "pc": "0x7ff64e492043",
+          "different_bits": "0x10",
+          "defined_mask": "0x8c5",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 18,
+          "error": null,
+          "regions": []
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 67,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x4d5cff35cc34",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    }
+  ],
+  "all_complete_inputs_match": true,
+  "scope": "Windows instruction observations; defined arithmetic flags; memory read/write events. Candidate uses captured inputs only."
+}

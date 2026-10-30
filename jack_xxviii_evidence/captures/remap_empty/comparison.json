@@ -1,0 +1,61 @@
+{
+  "frames": [
+    {
+      "frame": "frame_00",
+      "complete": {
+        "coverage": "complete",
+        "instructions_compared": 55,
+        "candidate_instructions": 55,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 20,
+          "pc": "0x7ff64e497575",
+          "different_bits": "0x94",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 55,
+          "error": null,
+          "regions": [
+            {
+              "role": "encoded register banks",
+              "different_bytes": 0
+            },
+            {
+              "role": "encoded virtual stack",
+              "different_bytes": 0
+            },
+            {
+              "role": "context",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "user-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 2,
+          "captured_pages": 74,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff64e490000",
+          "cookie": "0x10ccfa32ee56",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    }
+  ],
+  "all_complete_inputs_match": true,
+  "scope": "Windows instruction observations; defined arithmetic flags; memory read/write events. Candidate uses captured inputs only."
+}

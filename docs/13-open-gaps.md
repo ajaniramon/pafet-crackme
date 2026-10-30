@@ -21,10 +21,13 @@ are now observed directly; complete entry memory fixes fresh DROP/rekey traces
 without changing instruction semantics or supplying expected outputs.
 
 The old snapshots cannot independently recover their lost before-memory and
-are rejected by strict validation. Next: extend complete-input capture and
-native instruction comparisons to more scheduler, cookie-sensitive and queue
-exception paths. The specific capture flaw is resolved; universal native VM
-equivalence remains open.
+are rejected by strict validation. Next: extend native comparisons beyond the
+new [JACK XXVIII](../PAFET_JACK_XXVIII.md) remap/resolver/STORE_REG/transfer and
+cookie cases. The pinned runner preserves two missing C++ translations
+(`RVA 0x3ebb0` and `0x2d5d0`) and a queue exception boundary at
+`RtlPcToFileHeader`; these are not C++ or exception equivalence. The capture
+flaw is resolved; universal VM equivalence and broader seed/guard/storage
+coverage remain open.
 
 ## Serial and SHA
 
@@ -37,6 +40,9 @@ are not proof of identical VMs.
 Next: follow the verified blob reads into first materialized buffers, establish
 instruction boundaries, then lift one instruction with independent state tests.
 Do not substitute standard primitive rounds for unproved virtual semantics.
+JACK XXVIII supplies a generic capture profile and an 18-instruction Windows/
+Unicorn Serial seed-region comparison. It validates reusable transport, not a
+Serial ISA or a SHA state contract; discover the latter independently.
 
 ## Hex
 

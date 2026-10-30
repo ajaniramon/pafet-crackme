@@ -6,19 +6,22 @@ import hashlib
 import importlib.util
 import json
 import pathlib
+import sys
 import capstone
 import unicorn
 from pafet_uservm_inputs import require_complete,IncompleteCapture
 import pafet_cookie_diff_xxvii as cookie
 import pafet_native_diff_xxiv as differential
 from pafet_state_replay import Replay
+from pafet_state_contract import require
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'state_divergence_evidence'
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--no-build',action='store_true');args=ap.parse_args()
+    require(sys.flags.optimize==0,'Legacy C++ regression uses assertions; run it without python -O','unsupported-runtime')
+    ap=argparse.ArgumentParser();ap.add_argument('--no-build',action='store_true');ap.add_argument('--output',type=pathlib.Path,default=OUT/'regression.json');args=ap.parse_args()
     path=OUT/'frida/cookie_frames.json.gz';blob=path.read_bytes();captures=json.loads(gzip.decompress(blob))
     provenance=json.loads(path.with_name('capture_provenance.json').read_bytes())
     assert hashlib.sha256(blob).hexdigest()==provenance['capture_sha256']
@@ -64,7 +67,7 @@ def main():
             'capture_sha256':provenance['capture_sha256'],'validation_source_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),
             'runtime_source_sha256':{name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in ('scripts/pafet_capture_native_xxiv.py','scripts/pafet_h3bea0_unicorn_xiii.py','scripts/pafet_uservm_inputs.py','src/pafet_lifted_xxiv.cpp','src/pafet_native_state_xxiv.h')},
             'scope':'Fresh native before-inputs only. Original incomplete snapshots are rejected, not repaired from their expected results. No complete VM/universal-equivalence claim.'}
-    (OUT/'regression.json').write_bytes(json.dumps(report,indent=2).encode()+b'\n')
+    args.output.write_bytes(json.dumps(report,indent=2).encode()+b'\n')
 
 
 if __name__=='__main__':main()

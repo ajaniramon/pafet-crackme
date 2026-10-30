@@ -18,3 +18,6 @@ scripts/test_pafet_state_inputs.py -text
 scripts/pafet_capture_native_xxiv.py -text
 scripts/pafet_h3bea0_unicorn_xiii.py -text
 state_divergence_evidence/** -text whitespace=cr-at-eol
+jack_xxviii_evidence/** -text whitespace=cr-at-eol
+scripts/pafet_lab_xxviii.py -text
+scripts/test_pafet_state_contract.py -text

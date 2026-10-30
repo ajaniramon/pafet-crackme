@@ -28,6 +28,14 @@ Four native initialization regions also pass original-x64/IR/C++ comparisons at 
 
 The [native-state follow-up](docs/native-state-divergence.md) identifies XXVII's capture flaw: pointed register/stack arrays on the native stack were omitted and replayed as zeros. New hardware single-step traces locate the first affected reads, then match **31,990 native instructions** with complete entry inputs; six corrected Frida frames also pass C++/x64/native comparisons. Old incomplete snapshots are rejected rather than repaired from expected results. This resolves that input-capture cause while broader native VM coverage remains open.
 
+## Native-state laboratory
+
+[JACK XXVIII — ESTADO CERO](PAFET_JACK_XXVIII.md) adds a validated entry-state contract, byte-level input coverage, pinned capture hashes and a reusable [regression runner](scripts/pafet_lab_xxviii.py). Empty corpora, contradictory aliases, missing CPU/memory inputs and truncated native observations fail explicitly. Replay runs from before-state alone; expected outputs never repair its inputs.
+
+The [new corpus](jack_xxviii_evidence/corpus.json) adds **5,837 Windows/Unicorn instruction comparisons in six complete regions**: four User-VM regions (5,813 instructions), a six-instruction cookie check and an 18-instruction Serial initialization region. C++ also matches the remap, transfer and cookie regions; resolver and STORE_REG paths expose two explicit missing-translation boundaries. The queue exception capture remains blocked at `RtlPcToFileHeader`, with 31 instructions compared and the failing boundary retained. These are finite observed native paths, distinct from logical bytecode coverage and functional crypto tests.
+
+Run `python scripts/pafet_lab_xxviii.py` for pinned native replay, or add `--cpp` under Linux/WSL with GCC for the translation comparison. See the report for reproduction, negative controls, the Serial/SHA reuse assessment and remaining OS/exception-state limitations.
+
 ## Executable architecture and evidence identity
 
 PAFET's controller invokes separate virtualized computations for the username transform, serial transform, username digest and ciphertext materialization. Shared helpers and encoding patterns do not establish that all four use an identical interpreter or ISA.
@@ -284,6 +292,7 @@ These are primitive/oracle tests, not instruction-level Serial-VM or SHA-VM reco
 | [jack_xxiv_evidence/](jack_xxiv_evidence/) | Wrapper CFGs, lockstep results, directed cases and conditional coverage proofs |
 | [jack_xxvii_evidence/](jack_xxvii_evidence/) | Process-cookie captures, historical negative control and the first failing fresh User-VM frame |
 | [state_divergence_evidence/](state_divergence_evidence/) | Independent before/after native instruction data, missing-input counterfactuals and corrected capture regressions |
+| [jack_xxviii_evidence/](jack_xxviii_evidence/) | Pinned native-state corpus, new User/Serial/cookie captures, explicit queue/C++ blockers and laboratory regressions |
 | [jack_xxvi_evidence/](jack_xxvi_evidence/) | Hex-VM manifests, native frames, full/standalone comparisons, arithmetic tests and Windows package |
 | [vm_pools_evidence/](vm_pools_evidence/) | Earlier pool, bytecode and primitive observations; provenance and scope vary by artifact |
 | [docs/](docs/) | Detailed topic notes, including historical interpretations superseded by the later JACK work |
