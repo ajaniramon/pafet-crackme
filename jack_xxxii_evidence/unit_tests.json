@@ -1,0 +1,63 @@
+{
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\Ram\u00f3n\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-m",
+        "unittest",
+        "devirt.test_ir",
+        "devirt.test_serial",
+        "devirt.test_serial_continuous",
+        "devirt.test_serial_extended",
+        "devirt.test_serial_scheduler",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_memory_effect_not_removed (devirt.test_ir.ArithmeticTests) ... ok\ntest_unknown_stops (devirt.test_ir.ArithmeticTests) ... ok\ntest_width_and_signedness (devirt.test_ir.ArithmeticTests) ... ok\ntest_extraction_cfg_and_effects (devirt.test_ir.LiftingTests) ... ok\ntest_join_shape_rejected (devirt.test_ir.LiftingTests) ... ok\ntest_malformed_pe_rejected (devirt.test_ir.LiftingTests) ... ok\ntest_optimizer_keeps_host_calls_and_writes (devirt.test_ir.LiftingTests) ... ok\ntest_structurer_refuses_unproved_multiple_branches (devirt.test_ir.LiftingTests) ... ok\ntest_unknown_opcode_not_decoded_with_a_guessed_length (devirt.test_ir.LiftingTests) ... ok\ntest_unproved_host_effect_is_explicit_and_stops (devirt.test_ir.LiftingTests) ... ok\ntest_bad_materializer_shape_refused (devirt.test_serial.SerialTests) ... ok\ntest_first_instruction_from_pe_and_before_memory_only (devirt.test_serial.SerialTests) ... ok\ntest_pointer_field_contract_detects_stale_target (devirt.test_serial.SerialTests) ... ok\ntest_two_native_core_boundaries (devirt.test_serial.SerialTests) ... ok\ntest_unknown_decoder_route_is_preserved (devirt.test_serial.SerialTests) ... ok\ntest_unknown_opcode_is_not_guessed (devirt.test_serial.SerialTests) ... ok\ntest_unknown_window_is_not_filled_from_output (devirt.test_serial.SerialTests) ... ok\ntest_whole_decoder_projection (devirt.test_serial.SerialTests) ... ok\ntest_alternative_boundaries_are_validated (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_missing_serial_root_cannot_hide_behind_generic_profile (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_one_byte_difference_is_reported (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_public_api_works_without_validator_import (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_relocation_preflight_does_not_close_semantic_pe (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_return_handoff_after_second_instruction_is_exact (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_three_fresh_continuous_processes (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_truncated_observations_rejected_before_execution (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_two_steps_have_no_oracle_or_native_engine (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_uncached_value_error_also_latches (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_unknown_third_step_is_latched_without_retry_mutation (devirt.test_serial_continuous.ContinuousSerialTests) ... ok\ntest_fourth_instruction_stops_before_unmodeled_outer_loop (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_incomplete_capture_is_rejected (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_logical_equality_does_not_replace_full_state_comparison (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_no_observation_or_native_engine_during_candidate (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_short_routes_remain_explicit_counterexamples (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_single_byte_register_corruption_is_detected (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_three_fresh_chains_include_rekey_and_all_return_boundaries (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_tls_flag_is_required_even_without_optional_descriptors (devirt.test_serial_extended.ExtendedSerialTests) ... ok\ntest_both_requested_outer_returns_select_decoder (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_counter_terminal_is_not_reached_on_an_earlier_visit (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_dispatch_failure_latches_and_cannot_retry_changed_state (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_four_steps_use_no_native_engine_or_observation_input (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_frame_assumptions_are_explicit (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_missing_counter_or_invalid_limit_is_rejected (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_replay_readonly_pointers_use_runtime_base (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_runtime_has_no_unicorn_or_z3_dependency (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_three_independent_four_instruction_chains (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_two_native_remap_inputs_match_all_declared_roots (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_unknown_callback_target_fails (devirt.test_serial_scheduler.SchedulerTests) ... ok\ntest_unvalidated_post_wrapper_fallback_is_explicit (devirt.test_serial_scheduler.SchedulerTests) ... ok\n\n----------------------------------------------------------------------\nRan 49 tests in 65.778s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Ram\u00f3n\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_pafet_state*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_code_overlay_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_alias_is_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_observation_alias_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_consistent_alias_is_safe (test_pafet_state_contract.ContractTests) ... ok\ntest_cpu_fields_required (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_manifest_and_directory_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_truncated_and_broken_observations_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_exact_budget_and_entry_only_generic_replay (test_pafet_state_contract.ContractTests) ... ok\ntest_extended_state_is_rejected_before_execution (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_profile_has_no_user_layout (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_rejects_user_ablation (test_pafet_state_contract.ContractTests) ... ok\ntest_hole_does_not_become_zero (test_pafet_state_contract.ContractTests) ... ok\ntest_inventory_and_hash_failures (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_gs_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_iat_or_teb_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_stack_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_writable_cookie_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_runtime_read_of_zero_mapped_hole_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_synthetic_zero_count_preserves_defined_flags (test_pafet_state_contract.ContractTests) ... ok\ntest_unsupported_version_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_after_values_cannot_satisfy_missing_input_contract (test_pafet_state_inputs.InputTests) ... ok\ntest_all_original_xxvii_frames_are_incomplete (test_pafet_state_inputs.InputTests) ... ok\ntest_autonomous_replay_cannot_open_observations (test_pafet_state_inputs.InputTests) ... ok\ntest_corrected_frames_cover_both_pointed_arrays (test_pafet_state_inputs.InputTests) ... ok\ntest_replay_rejects_missing_array_page (test_pafet_state_inputs.InputTests) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 15.246s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Ram\u00f3n\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_pafet_state*.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_code_overlay_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_alias_is_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_conflicting_observation_alias_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_consistent_alias_is_safe (test_pafet_state_contract.ContractTests) ... ok\ntest_cpu_fields_required (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_manifest_and_directory_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_empty_truncated_and_broken_observations_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_exact_budget_and_entry_only_generic_replay (test_pafet_state_contract.ContractTests) ... ok\ntest_extended_state_is_rejected_before_execution (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_profile_has_no_user_layout (test_pafet_state_contract.ContractTests) ... ok\ntest_generic_rejects_user_ablation (test_pafet_state_contract.ContractTests) ... ok\ntest_hole_does_not_become_zero (test_pafet_state_contract.ContractTests) ... ok\ntest_inventory_and_hash_failures (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_gs_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_iat_or_teb_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_stack_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_missing_writable_cookie_page_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_runtime_read_of_zero_mapped_hole_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_synthetic_zero_count_preserves_defined_flags (test_pafet_state_contract.ContractTests) ... ok\ntest_unsupported_version_rejected (test_pafet_state_contract.ContractTests) ... ok\ntest_after_values_cannot_satisfy_missing_input_contract (test_pafet_state_inputs.InputTests) ... ok\ntest_all_original_xxvii_frames_are_incomplete (test_pafet_state_inputs.InputTests) ... ok\ntest_autonomous_replay_cannot_open_observations (test_pafet_state_inputs.InputTests) ... ok\ntest_corrected_frames_cover_both_pointed_arrays (test_pafet_state_inputs.InputTests) ... ok\ntest_replay_rejects_missing_array_page (test_pafet_state_inputs.InputTests) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 14.574s\n\nOK\n"
+    }
+  ],
+  "source_sha256": {
+    "devirt/serial_continuous.py": "34b8f19ae5d7adb3804f02ab076aa4c8b5508e7cc2c9d5b7d4196e4114133654",
+    "devirt/serial_scheduler.py": "bbd5323a55583c7c30f8b39ca4c1976fcf64e53eb5ec40cec07670825c8ef457",
+    "devirt/serial_remap.py": "004db1739de8fb1363b5136b451a3e59feac3d894484e2cee405e5fcb87245f5",
+    "devirt/serial_jobs_xxxii.py": "8dead8a5c37a08737385f86318a70ba1f487045fac89070200105c83ecb0b1e0",
+    "scripts/pafet_state_contract.py": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54",
+    "scripts/pafet_state_replay.py": "a0c2ae798c03eba710853c8a46b3dea263319d631fb26478b9134a876231bd6f",
+    "scripts/pafet_state_compare.py": "e24717c8fd31f6fb8f6f0394cf2bc097a93623fe4365b6d63e3b514d2d2e4c21",
+    "devirt/test_serial_scheduler.py": "f119d84012dc1d2c41f3f2e72fe82743297f4dd0a05e436a75fa87f8c34c93fa"
+  }
+}

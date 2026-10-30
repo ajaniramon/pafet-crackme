@@ -25,7 +25,21 @@ directories; the report gives generic and User profile commands.
 
 ## Semantic devirtualizer
 
-The current three-instruction Serial interval is [JACK XXXI](../PAFET_JACK_XXXI.md):
+The current autonomous Serial interval is [JACK XXXII](../PAFET_JACK_XXXII.md):
+
+```bash
+python -m pip install --target jack_xxxii_evidence/build/deps -r jack_xxxii_evidence/requirements.txt
+python scripts/pafet_serial_jobs_xxxii.py
+python -m devirt.serial_scheduler_validate
+python -m unittest devirt.test_serial_scheduler -v
+```
+
+Z3 is an offline reduction dependency only. The candidate runs without Unicorn
+or Z3. The new capture scripts delimit outer work, helper returns and the fourth
+instruction with read-only terminal predicates. See the report for their
+controlled-lab commands and explicit rejection of truncated/empty captures.
+
+The previous three-instruction Serial interval is [JACK XXXI](../PAFET_JACK_XXXI.md):
 
 ```bash
 python scripts/pafet_serial_audit_xxxi.py

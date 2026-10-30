@@ -37,7 +37,10 @@ def update_decode_key(state,pc,counter):
     key=state.u(0x20);signed=signed32(counter)
     x=mix(((pc*MUL)&MASK)^rol(key,17)^((signed*PHI)&MASK)^state.u(0x260));live=(x^(x>>29))|1
     state.put(0x260,live)
-    if live&0x3ff==0x2c5:raise UnsupportedSerialRoute('Full remap rebuild')
+    if live&0x3ff==0x2c5:
+        hook=getattr(state,'full_remap_rebuild',None)
+        if hook is None:raise UnsupportedSerialRoute('Full remap rebuild')
+        hook()
     if live&31==0x15:
         x=mix((((signed^0x5a5a)*PHI)&MASK)^rol(key,17)^live^0x8f70feda99a6026d);lookup=(x^(x>>29))|1
         domain=(lookup>>8)&3;slot=(lookup>>40)%62
@@ -164,6 +167,14 @@ class SerialVMState(FirstOpcode):
         if body not in self.regions or self.regions[body]['opcode']!=opcode or self.regions[body]['domain']!=domain:self.fail('Unknown opcode/body association '+hex(body))
         return body
     def decode_next(self):
+        pc,opcode,token=self.decode_header()
+        domain=(mid(((self.u(0x1178,4)*MUL)&MASK)^((opcode*PHI)&MASK)^token)>>33)&3
+        self.put(0x11a0,self.u(0x11a0)+1)
+        labels=struct.unpack('<4I',self.pe.get_data(0x3e2d90,16));self.set_control(0,labels[domain])
+        self.control(1) # the remapper's read refreshes PC even for simple opcodes
+        self.body=self.resolve_handler(domain,opcode);self.domain=domain;self.budget=(self.budget-1)&0xffffffff
+        self.phase='execute';self.record('handler_entry',self.body)
+    def decode_header(self):
         pc=self.control(1)&0xffffffff
         # This operation has only demonstrated the first materialized unit.
         if pc>=26 or self.read(self.u(0xb10),1)!=b'\1':self.fail('Undemonstrated materialization route')
@@ -179,12 +190,7 @@ class SerialVMState(FirstOpcode):
         self.put(0x11e0,counter+1,4);self.put(0x4ad,opcode,1)
         if (counter+1)%32==0:self.fail('Decoder epoch transition')
         self.put(0x20,mix(opcode^(pc+1)^key))
-        domain=(mid(((self.u(0x1178,4)*MUL)&MASK)^((opcode*PHI)&MASK)^token)>>33)&3
-        self.put(0x11a0,self.u(0x11a0)+1)
-        labels=struct.unpack('<4I',self.pe.get_data(0x3e2d90,16));self.set_control(0,labels[domain])
-        self.control(1) # the remapper's read refreshes PC even for simple opcodes
-        self.body=self.resolve_handler(domain,opcode);self.domain=domain;self.budget=(self.budget-1)&0xffffffff
-        self.phase='execute';self.record('handler_entry',self.body)
+        return pc,opcode,token
     def advance_register_epoch(self):
         epoch=(self.u(0x200,4)+1)&0xffffffff
         if epoch>=self.u(0x1fc,4):self.fail('Register rekey')

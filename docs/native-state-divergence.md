@@ -242,3 +242,19 @@ read-before-write initialization checks, strict empty/incomplete/alias failures,
 new observed routes and explicit queue/C++ blockers. Its runner supersedes
 directory-glob comparisons for permanent regression. The figures above remain
 the original follow-up's historical measurements.
+
+## JACK XXXII: a separate readonly-image loader defect
+
+The Serial remap helper exposed another initial-state defect, independent of
+XXVII's missing pointed stack memory. Reusing a relocated `pefile.PE` for Replay
+image mapping left some readonly pointers at the preferred base. The first
+observed register/read difference was RVA `0x229a90`, step 2,204, reading the
+pointer at RVA `0x3e95a0` (a DIR64 relocation). Validation and native mapping now
+own separate pristine PE objects; only original bytes and captured ASLR base
+supply relocated pointers. No snapshot or expected result repairs them.
+
+Two delimited Windows helper traces now pass, with the original failure kept in
+[the XXXII counterexample](../jack_xxxii_evidence/remap_loader_counterexample.json).
+See [the report](../PAFET_JACK_XXXII.md#4-laboratory-defect-readonly-pe-relocation)
+for the minimal cause and targeted loader regression. This does not establish
+universal OS/loader or VM equivalence.

@@ -1,0 +1,94 @@
+{
+  "all_archives_match": true,
+  "cases": [
+    {
+      "case": "four_a",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "four_b",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "four_c",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "outer_a",
+      "collector": "jack_xxx_evidence/capture_source.py",
+      "collector_sha256": "b40510dbe673af7b551773a6c05d41dd882fd8f579e9a3dfa904f6ee90fe713d",
+      "contract": "jack_xxx_evidence/contract_source.py"
+    },
+    {
+      "case": "outer_b",
+      "collector": "jack_xxx_evidence/capture_source.py",
+      "collector_sha256": "b40510dbe673af7b551773a6c05d41dd882fd8f579e9a3dfa904f6ee90fe713d"
+    },
+    {
+      "case": "outer_c",
+      "collector": "jack_xxx_evidence/capture_source.py",
+      "collector_sha256": "b40510dbe673af7b551773a6c05d41dd882fd8f579e9a3dfa904f6ee90fe713d",
+      "contract": "jack_xxx_evidence/contract_source.py"
+    },
+    {
+      "case": "outer_d",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "outer_e",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "outer_f",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "outer_g",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "remap_a",
+      "collector": "jack_xxxii_evidence/remap_collector_source.py",
+      "collector_sha256": "8c5a9ed3876dd1234eac571ecc8d97743cd1cd6f351e9d57cae9c1a3123bb7b6",
+      "contract": "jack_xxx_evidence/contract_source.py"
+    },
+    {
+      "case": "remap_b",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "return2_a",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "return2_b",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    },
+    {
+      "case": "return2_c",
+      "collector": "jack_xxxii_evidence/collector_source.py",
+      "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+      "contract": "jack_xxxii_evidence/contract_source.py"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_bindings_checked": [
+    "validation.json",
+    "unit_tests.json",
+    "xxviii_regression.json",
+    "xxxi_regression.json",
+    "xxx_regression.json"
+  ],
+  "all_source_hashes_match": true,
+  "regeneration_byte_identical": true,
+  "complete_comparisons": 12,
+  "native_observations": 666999,
+  "four_instruction_native_observations": 175470,
+  "distinct_helper_run_ids": 2,
+  "distinct_tests": 74,
+  "optimized_repeat_tests": 25,
+  "relative_file_links_checked": 156,
+  "original_PE_unchanged": true,
+  "document_sha256": {
+    "README.md": "da9d1c7c092a95da17319ad624d34c59120b434d61c3ddf0c2cccf6001bb6e47",
+    "PAFET_JACK_XXXII.md": "256f70baf02991d44d56bd7e5d536e61394abd6bc20b2b380f81e26718b77b8a",
+    "docs/04-serial-vm.md": "f7663fe52e2dd16510cec1e02c8a629e8d9c8fe163cc119fcbf556ed90538e1d",
+    "docs/11-reproduce.md": "f65e79495bf1b331e8e4fa48e99b2b6daa88138a7dcfbf272654b725589b73a1",
+    "docs/13-open-gaps.md": "56cce23c09e7d2025c8712894b8ab0830bbf274c84f20da10185fb3b1fa83d78",
+    "docs/native-state-divergence.md": "ad91e696add28c5fa536e49474fce49c4c0509ab252db5c21b59e7dc592b70a2"
+  }
+}

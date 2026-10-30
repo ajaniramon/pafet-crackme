@@ -1,0 +1,57 @@
+{
+  "operation": "JACK XXXII",
+  "baseline_commit": "9a81d98d5f95b43fa1fe53f90d161602f1a86ab8",
+  "primary_goal": {
+    "status": "PASS",
+    "scope": "Return to outer dispatcher, select new work and continue from one candidate state; requested return RVAs 0x22bc87 and 0x231c09 verified"
+  },
+  "Serial": {
+    "status": "PARCIAL",
+    "continuous": {
+      "level": "C",
+      "instructions": 4,
+      "opcodes": 3,
+      "fresh_processes": 3,
+      "logical_path": [
+        0,
+        5,
+        8,
+        11,
+        16
+      ],
+      "final_sp": 2
+    },
+    "outer_graph": {
+      "generated_field_kernels": 64,
+      "manual_jobs": 11,
+      "unimplemented_states": 8,
+      "guards": "Armed attestation, exception delivery, halt/cleanup and post-wrapper fallback remain unsupported",
+      "observed_generated_kernels": 61,
+      "observed_callback_targets": 8
+    },
+    "remap": {
+      "level": "B",
+      "fresh_processes": 2,
+      "dynamic_entries": 248,
+      "full_pool_bytes": 7968,
+      "codec_mask": 15,
+      "scope": "Return-delimited native proofs; static-pool branch unverified; not triggered in the four-step chains"
+    },
+    "unknown": "Post-PC-16 continuous path, remaining ISA/CFG and other windows"
+  },
+  "laboratory": {
+    "readonly_PE_relocation": "Corrected image ownership; first measured divergence 0x229a90 step 2204 retained",
+    "capture": "Read-only counter/minimum predicates and explicit instruction bounds"
+  },
+  "User": {
+    "change": "none",
+    "regression": "IR/state and native XXVIII checks"
+  },
+  "Hex": {
+    "change": "none"
+  },
+  "SHA": {
+    "change": "none"
+  },
+  "evidence": "validation.json"
+}

@@ -1,0 +1,32 @@
+{
+  "readonly_loader": {
+    "evidence": "remap_loader_counterexample.json",
+    "initial_memory": "Readonly RVA 0x3e95a0 held preferred-base pointer in replay",
+    "first_observed_difference": {
+      "rva": "0x229a90",
+      "step": 2204,
+      "preceding_matching_instructions": 2203
+    },
+    "cause": "Validation and native mapping reused one mutated pefile object",
+    "fix": "Separate pristine PE instances; use original DIR64 relocations and input runtime base"
+  },
+  "callback_binding": {
+    "evidence": "captures/outer_a/frame_00.entry.json.gz",
+    "original_error": "Unknown queue callback binding",
+    "cause": "Assumed callback slots were invariant; a fresh process rotated the function table",
+    "fix": "Read the actual pointer, dispatch by verified original PE RVA, reject unknown targets"
+  },
+  "incomplete": {
+    "case": "captures/outer_b",
+    "observed_prefix": 100001,
+    "treatment": "Retained and rejected; later helper proof does not repair the missing observations"
+  },
+  "selection_misses": {
+    "cases": [
+      "captures/return2_a",
+      "captures/return2_c"
+    ],
+    "treatment": "No eligible first-domain-2 entry; zero before-frames, no coverage claimed"
+  },
+  "negative_control": "validation.json negative_control: one queue-key byte at ctx+0xac8"
+}

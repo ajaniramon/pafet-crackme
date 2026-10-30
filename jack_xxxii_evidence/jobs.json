@@ -1,0 +1,4484 @@
+{
+  "jobs": {
+    "0x15148": {
+      "entry": 2274522,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  42
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    42
+                  ]
+                ]
+              ]
+            ],
+            1701126
+          ],
+          "native_call": "0x22b601"
+        }
+      ],
+      "next_job": 1632796,
+      "enqueue_call": 2305256,
+      "proofs": 2,
+      "native_reduced": 76
+    },
+    "0x3bcca": {
+      "entry": 2274034,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  44
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    44
+                  ]
+                ]
+              ]
+            ],
+            1782132
+          ],
+          "native_call": "0x22b406"
+        }
+      ],
+      "next_job": 920914,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 88
+    },
+    "0x41a84": {
+      "entry": 2275098,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  13
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    13
+                  ]
+                ]
+              ]
+            ],
+            526539
+          ],
+          "native_call": "0x22b812"
+        }
+      ],
+      "next_job": 3511623,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 80
+    },
+    "0x77d1d": {
+      "entry": 2276063,
+      "stages": [
+        {
+          "writes": {},
+          "feedback": [
+            [
+              "concat",
+              [
+                [
+                  56,
+                  [
+                    "extract",
+                    63,
+                    8,
+                    "noise"
+                  ]
+                ],
+                [
+                  8,
+                  [
+                    "bvxor",
+                    8,
+                    "opcode",
+                    [
+                      "extract",
+                      7,
+                      0,
+                      "noise"
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            41946
+          ],
+          "native_call": "0x22bb4c"
+        }
+      ],
+      "selector": [
+        163607,
+        1996345,
+        3014771,
+        163607
+      ],
+      "replace_with_decoder": 1996345,
+      "entry_table_rva": 4135936,
+      "proofs": 0,
+      "native_reduced": 23
+    },
+    "0x8e646": {
+      "entry": 2276594,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                31
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      59,
+                      [
+                        "extract",
+                        63,
+                        5,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      5,
+                      [
+                        "bvnot",
+                        5,
+                        [
+                          "extract",
+                          4,
+                          0,
+                          "noise"
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            1255593
+          ],
+          "native_call": "0x22bd82"
+        }
+      ],
+      "next_job": 1969511,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 55
+    },
+    "0x9aaf3": {
+      "entry": 2278362,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                38
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  38
+                ]
+              ]
+            ],
+            1539114
+          ],
+          "native_call": "0x22c4aa"
+        }
+      ],
+      "next_job": 1068964,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 72
+    },
+    "0xaf41e": {
+      "entry": 2278219,
+      "stages": [
+        {
+          "writes": {
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                [
+                  "sign_extend",
+                  64,
+                  32,
+                  "fetch"
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "concat",
+              [
+                [
+                  56,
+                  [
+                    "extract",
+                    63,
+                    8,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ]
+                  ]
+                ],
+                [
+                  8,
+                  [
+                    "bvxor",
+                    8,
+                    "opcode",
+                    [
+                      "extract",
+                      7,
+                      0,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            62919
+          ],
+          "native_call": "0x22c381"
+        }
+      ],
+      "selector": [
+        163607,
+        1996345,
+        3014771,
+        163607
+      ],
+      "replace_with_decoder": 1996345,
+      "entry_table_rva": 4135936,
+      "proofs": 0,
+      "native_reduced": 10
+    },
+    "0xaf70b": {
+      "entry": 2277865,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvand",
+                64,
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    5
+                  ]
+                ],
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    5
+                  ]
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              [
+                "mix",
+                [
+                  "bvand",
+                  64,
+                  [
+                    "extract",
+                    63,
+                    0,
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      5
+                    ]
+                  ],
+                  [
+                    "extract",
+                    63,
+                    0,
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      5
+                    ]
+                  ]
+                ]
+              ],
+              "key"
+            ],
+            202515
+          ],
+          "native_call": "0x22c308"
+        }
+      ],
+      "next_job": 2062206,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 82
+    },
+    "0xc2abb": {
+      "entry": 2277428,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                46
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  46
+                ]
+              ]
+            ],
+            1863138
+          ],
+          "native_call": "0x22c13e"
+        }
+      ],
+      "next_job": 3135553,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 74
+    },
+    "0xe0d52": {
+      "entry": 2277005,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                45
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  45
+                ]
+              ]
+            ],
+            1822635
+          ],
+          "native_call": "0x22bfbd"
+        }
+      ],
+      "next_job": 797371,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 89
+    },
+    "0xf5594": {
+      "entry": 2278675,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  57
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ],
+                    57
+                  ]
+                ]
+              ]
+            ],
+            2308671
+          ],
+          "native_call": "0x22c64b"
+        }
+      ],
+      "next_job": 1447248,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 77
+    },
+    "0xf6b1c": {
+      "entry": 2279693,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                18
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  18
+                ]
+              ]
+            ],
+            729054
+          ],
+          "native_call": "0x22c9d9"
+        }
+      ],
+      "next_job": 3944063,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 59
+    },
+    "0xffd5b": {
+      "entry": 2279099,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    59,
+                    [
+                      "extract",
+                      63,
+                      5,
+                      "noise"
+                    ]
+                  ],
+                  [
+                    4,
+                    [
+                      "bvnot",
+                      4,
+                      [
+                        "extract",
+                        4,
+                        1,
+                        "noise"
+                      ]
+                    ]
+                  ],
+                  [
+                    1,
+                    [
+                      "extract",
+                      0,
+                      0,
+                      "noise"
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      59,
+                      [
+                        "extract",
+                        63,
+                        5,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      4,
+                      [
+                        "bvnot",
+                        4,
+                        [
+                          "extract",
+                          4,
+                          1,
+                          "noise"
+                        ]
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "extract",
+                        0,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            1215090
+          ],
+          "native_call": "0x22c84b"
+        }
+      ],
+      "next_job": 583238,
+      "enqueue_call": 2305256,
+      "proofs": 2,
+      "native_reduced": 108
+    },
+    "0x104fa4": {
+      "entry": 2280544,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  39
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ],
+                    39
+                  ]
+                ]
+              ]
+            ],
+            1579617
+          ],
+          "native_call": "0x22cd8f"
+        }
+      ],
+      "next_job": 2705150,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 89
+    },
+    "0x106353": {
+      "entry": 2282676,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  11
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    11
+                  ]
+                ]
+              ]
+            ],
+            445533
+          ],
+          "native_call": "0x22d5d4"
+        }
+      ],
+      "next_job": 3510653,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 81
+    },
+    "0x109dc8": {
+      "entry": 2282136,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                54
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  54
+                ]
+              ]
+            ],
+            2187162
+          ],
+          "native_call": "0x22d3f7"
+        }
+      ],
+      "next_job": 3067688,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 96
+    },
+    "0x116fdf": {
+      "entry": 2281723,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    62,
+                    [
+                      "extract",
+                      63,
+                      2,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ],
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              "noise",
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  [
+                    2,
+                    [
+                      "bvnot",
+                      2,
+                      [
+                        "extract",
+                        1,
+                        0,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ],
+                            [
+                              "mix",
+                              [
+                                "bvxor",
+                                64,
+                                "noise",
+                                [
+                                  "sign_extend",
+                                  64,
+                                  32,
+                                  "fetch"
+                                ]
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      62,
+                      [
+                        "extract",
+                        63,
+                        2,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ],
+                            [
+                              "mix",
+                              [
+                                "bvxor",
+                                64,
+                                "noise",
+                                [
+                                  "sign_extend",
+                                  64,
+                                  32,
+                                  "fetch"
+                                ]
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      2,
+                      [
+                        "bvnot",
+                        2,
+                        [
+                          "extract",
+                          1,
+                          0,
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ],
+                              [
+                                "mix",
+                                [
+                                  "bvxor",
+                                  64,
+                                  "noise",
+                                  [
+                                    "sign_extend",
+                                    64,
+                                    32,
+                                    "fetch"
+                                  ]
+                                ]
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            121509
+          ],
+          "native_call": "0x22d214"
+        }
+      ],
+      "next_job": 4051343,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 85
+    },
+    "0x13397f": {
+      "entry": 2281120,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  29
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ],
+                    29
+                  ]
+                ]
+              ]
+            ],
+            1174587
+          ],
+          "native_call": "0x22cf7b"
+        }
+      ],
+      "next_job": 1047899,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 72
+    },
+    "0x161550": {
+      "entry": 2283234,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  58
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    58
+                  ]
+                ]
+              ]
+            ],
+            2349174
+          ],
+          "native_call": "0x22d809"
+        }
+      ],
+      "next_job": 2665143,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 60
+    },
+    "0x17ed28": {
+      "entry": 2284833,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    63,
+                    [
+                      "extract",
+                      63,
+                      1,
+                      "noise"
+                    ]
+                  ],
+                  [
+                    1,
+                    [
+                      "bvnot",
+                      1,
+                      [
+                        "extract",
+                        0,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      63,
+                      [
+                        "extract",
+                        63,
+                        1,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "bvnot",
+                        1,
+                        [
+                          "extract",
+                          0,
+                          0,
+                          "noise"
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            40503
+          ],
+          "native_call": "0x22de3a"
+        }
+      ],
+      "next_job": 1639985,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 106
+    },
+    "0x181c8c": {
+      "entry": 2284589,
+      "stages": [
+        {
+          "writes": {
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                [
+                  "sign_extend",
+                  64,
+                  32,
+                  "fetch"
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "concat",
+              [
+                [
+                  56,
+                  [
+                    "extract",
+                    63,
+                    8,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ]
+                  ]
+                ],
+                [
+                  8,
+                  [
+                    "bvxor",
+                    8,
+                    "opcode",
+                    [
+                      "extract",
+                      7,
+                      0,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            83892
+          ],
+          "native_call": "0x22dcc8"
+        }
+      ],
+      "selector": [
+        163607,
+        1996345,
+        3014771,
+        163607
+      ],
+      "replace_with_decoder": 1996345,
+      "entry_table_rva": 4135936,
+      "proofs": 0,
+      "native_reduced": 29
+    },
+    "0x18ea1c": {
+      "entry": 2284113,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                43
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  43
+                ]
+              ]
+            ],
+            1741629
+          ],
+          "native_call": "0x22db9d"
+        }
+      ],
+      "next_job": 244938,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 90
+    },
+    "0x190631": {
+      "entry": 2283627,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    62,
+                    [
+                      "extract",
+                      63,
+                      2,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  [
+                    1,
+                    [
+                      "bvnot",
+                      1,
+                      [
+                        "extract",
+                        1,
+                        1,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  [
+                    1,
+                    [
+                      "extract",
+                      0,
+                      0,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      62,
+                      [
+                        "extract",
+                        63,
+                        2,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "bvnot",
+                        1,
+                        [
+                          "extract",
+                          1,
+                          1,
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              "noise",
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "extract",
+                        0,
+                        0,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            81006
+          ],
+          "native_call": "0x22d97f"
+        }
+      ],
+      "next_job": 1142751,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 76
+    },
+    "0x196621": {
+      "entry": 2285332,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                22
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  22
+                ]
+              ]
+            ],
+            891066
+          ],
+          "native_call": "0x22e04d"
+        }
+      ],
+      "next_job": 3516171,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 70
+    },
+    "0x1a5672": {
+      "entry": 2287428,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                56
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  56
+                ]
+              ]
+            ],
+            2268168
+          ],
+          "native_call": "0x22e8bd"
+        }
+      ],
+      "next_job": 1004948,
+      "enqueue_call": 2305256,
+      "proofs": 3,
+      "native_reduced": 72
+    },
+    "0x1aeb1c": {
+      "entry": 2286163,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                26
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  26
+                ]
+              ]
+            ],
+            1053078
+          ],
+          "native_call": "0x22e3fe"
+        }
+      ],
+      "next_job": 2526637,
+      "enqueue_call": 2305256,
+      "proofs": 2,
+      "native_reduced": 80
+    },
+    "0x1c1c41": {
+      "entry": 2285821,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                49
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  49
+                ]
+              ]
+            ],
+            1984647
+          ],
+          "native_call": "0x22e1c5"
+        }
+      ],
+      "next_job": 2816429,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 69
+    },
+    "0x1cbf2d": {
+      "entry": 2287977,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                33
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  33
+                ]
+              ]
+            ],
+            1336599
+          ],
+          "native_call": "0x22eab0"
+        }
+      ],
+      "next_job": 2627604,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 97
+    },
+    "0x1e0d67": {
+      "entry": 2289365,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                32
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  32
+                ]
+              ]
+            ],
+            1296096
+          ],
+          "native_call": "0x22efa9"
+        }
+      ],
+      "next_job": 1883949,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 71
+    },
+    "0x1e7134": {
+      "entry": 2288948,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  9
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    9
+                  ]
+                ]
+              ],
+              "key"
+            ],
+            364527
+          ],
+          "native_call": "0x22ee9f"
+        }
+      ],
+      "next_job": 2025773,
+      "enqueue_call": 2303596,
+      "proofs": 1,
+      "native_reduced": 76
+    },
+    "0x1eb316": {
+      "entry": 2288483,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  28
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      59,
+                      [
+                        "extract",
+                        63,
+                        5,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      3,
+                      [
+                        "bvnot",
+                        3,
+                        [
+                          "extract",
+                          4,
+                          2,
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              "noise",
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      2,
+                      [
+                        "extract",
+                        1,
+                        0,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            1134084
+          ],
+          "native_call": "0x22ec62"
+        }
+      ],
+      "next_job": 1259903,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 69
+    },
+    "0x1ee92d": {
+      "entry": 2289795,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                10
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  10
+                ]
+              ],
+              "key"
+            ],
+            405030
+          ],
+          "native_call": "0x22f1ec"
+        }
+      ],
+      "next_job": 1074003,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 91
+    },
+    "0x1f777e": {
+      "entry": 2291431,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  6
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      61,
+                      [
+                        "extract",
+                        63,
+                        3,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      2,
+                      [
+                        "bvnot",
+                        2,
+                        [
+                          "extract",
+                          2,
+                          1,
+                          "noise"
+                        ]
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "extract",
+                        0,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            243018
+          ],
+          "native_call": "0x22f85d"
+        }
+      ],
+      "next_job": 2955783,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 124
+    },
+    "0x2022f6": {
+      "entry": 2291009,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  24
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      59,
+                      [
+                        "extract",
+                        63,
+                        5,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      2,
+                      [
+                        "bvnot",
+                        2,
+                        [
+                          "extract",
+                          4,
+                          3,
+                          "noise"
+                        ]
+                      ]
+                    ],
+                    [
+                      3,
+                      [
+                        "extract",
+                        2,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            972072
+          ],
+          "native_call": "0x22f627"
+        }
+      ],
+      "next_job": 3625087,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 76
+    },
+    "0x2478fb": {
+      "entry": 2290625,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  37
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    37
+                  ]
+                ]
+              ]
+            ],
+            1498611
+          ],
+          "native_call": "0x22f490"
+        }
+      ],
+      "next_job": 633587,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 69
+    },
+    "0x25a4a6": {
+      "entry": 2290326,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                53
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  53
+                ]
+              ]
+            ],
+            2146659
+          ],
+          "native_call": "0x22f333"
+        }
+      ],
+      "next_job": 1088968,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 59
+    },
+    "0x25af0e": {
+      "entry": 2291962,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    60,
+                    [
+                      "extract",
+                      63,
+                      4,
+                      "noise"
+                    ]
+                  ],
+                  [
+                    4,
+                    [
+                      "bvnot",
+                      4,
+                      [
+                        "extract",
+                        3,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      60,
+                      [
+                        "extract",
+                        63,
+                        4,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      4,
+                      [
+                        "bvnot",
+                        4,
+                        [
+                          "extract",
+                          3,
+                          0,
+                          "noise"
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            607545
+          ],
+          "native_call": "0x22fa55"
+        }
+      ],
+      "next_job": 2711692,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 84
+    },
+    "0x260812": {
+      "entry": 2293432,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                17
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  17
+                ]
+              ]
+            ],
+            688551
+          ],
+          "native_call": "0x22ffc1"
+        }
+      ],
+      "next_job": 1010460,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 77
+    },
+    "0x268dad": {
+      "entry": 2293051,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                27
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  27
+                ]
+              ]
+            ],
+            1093581
+          ],
+          "native_call": "0x22fe25"
+        }
+      ],
+      "next_job": 2011926,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 89
+    },
+    "0x281814": {
+      "entry": 2292420,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                34
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  34
+                ]
+              ]
+            ],
+            1377102
+          ],
+          "native_call": "0x22fbcc"
+        }
+      ],
+      "next_job": 4084379,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 98
+    },
+    "0x2946fe": {
+      "entry": 2295446,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvand",
+                64,
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ],
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    40
+                  ]
+                ],
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ],
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    40
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvand",
+                  64,
+                  [
+                    "extract",
+                    63,
+                    0,
+                    [
+                      "bvxor",
+                      64,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ],
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              "noise",
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ]
+                            ]
+                          ]
+                        ]
+                      ],
+                      40
+                    ]
+                  ],
+                  [
+                    "extract",
+                    63,
+                    0,
+                    [
+                      "bvxor",
+                      64,
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ],
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              "noise",
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ]
+                            ]
+                          ]
+                        ]
+                      ],
+                      40
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            1620120
+          ],
+          "native_call": "0x2307c1"
+        }
+      ],
+      "next_job": 3079347,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 85
+    },
+    "0x29608c": {
+      "entry": 2295079,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  16
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      59,
+                      [
+                        "extract",
+                        63,
+                        5,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "bvnot",
+                        1,
+                        [
+                          "extract",
+                          4,
+                          4,
+                          "noise"
+                        ]
+                      ]
+                    ],
+                    [
+                      4,
+                      [
+                        "extract",
+                        3,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            648048
+          ],
+          "native_call": "0x230612"
+        }
+      ],
+      "next_job": 2492434,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 78
+    },
+    "0x2af9ad": {
+      "entry": 2294520,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                50
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  50
+                ]
+              ]
+            ],
+            2025150
+          ],
+          "native_call": "0x2303df"
+        }
+      ],
+      "next_job": 2825758,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 79
+    },
+    "0x2b1e1e": {
+      "entry": 2295899,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  51
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    51
+                  ]
+                ]
+              ]
+            ],
+            2065653
+          ],
+          "native_call": "0x230909"
+        }
+      ],
+      "next_job": 3940645,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 76
+    },
+    "0x2b5c68": {
+      "entry": 2297136,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ],
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ]
+                  ]
+                ],
+                48
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ],
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  48
+                ]
+              ]
+            ],
+            1944144
+          ],
+          "native_call": "0x230e50"
+        }
+      ],
+      "next_job": 1842241,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 88
+    },
+    "0x2c1549": {
+      "entry": 2296987,
+      "stages": [
+        {
+          "writes": {
+            "noise": [
+              "bvxor",
+              64,
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  [
+                    "sign_extend",
+                    64,
+                    32,
+                    "fetch"
+                  ]
+                ]
+              ],
+              [
+                "mix",
+                [
+                  "bvadd",
+                  64,
+                  1,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          }
+        }
+      ],
+      "next_job": 2320306,
+      "enqueue_call": 2297126,
+      "proofs": 0,
+      "native_reduced": 28
+    },
+    "0x2c5cea": {
+      "entry": 2296789,
+      "stages": [
+        {
+          "writes": {},
+          "feedback": [
+            [
+              "concat",
+              [
+                [
+                  56,
+                  [
+                    "extract",
+                    63,
+                    8,
+                    "noise"
+                  ]
+                ],
+                [
+                  8,
+                  [
+                    "bvxor",
+                    8,
+                    "opcode",
+                    [
+                      "extract",
+                      7,
+                      0,
+                      "noise"
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            20973
+          ],
+          "native_call": "0x230c42"
+        }
+      ],
+      "selector": [
+        163607,
+        1996345,
+        3014771,
+        163607
+      ],
+      "replace_with_decoder": 1996345,
+      "entry_table_rva": 4135936,
+      "proofs": 0,
+      "native_reduced": 23
+    },
+    "0x2d1a07": {
+      "entry": 2296274,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    61,
+                    [
+                      "extract",
+                      63,
+                      3,
+                      "noise"
+                    ]
+                  ],
+                  [
+                    3,
+                    [
+                      "bvnot",
+                      3,
+                      [
+                        "extract",
+                        2,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      61,
+                      [
+                        "extract",
+                        63,
+                        3,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      3,
+                      [
+                        "bvnot",
+                        3,
+                        [
+                          "extract",
+                          2,
+                          0,
+                          "noise"
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            283521
+          ],
+          "native_call": "0x230af0"
+        }
+      ],
+      "next_job": 4192930,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 84
+    },
+    "0x2ecf28": {
+      "entry": 2298449,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                55
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  55
+                ]
+              ]
+            ],
+            2227665
+          ],
+          "native_call": "0x231350"
+        }
+      ],
+      "next_job": 1726066,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 75
+    },
+    "0x2efcb3": {
+      "entry": 2298038,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                41
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  41
+                ]
+              ]
+            ],
+            1660623
+          ],
+          "native_call": "0x23119a"
+        }
+      ],
+      "next_job": 86344,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 73
+    },
+    "0x2fd841": {
+      "entry": 2297755,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  47
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        "noise",
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ]
+                      ]
+                    ],
+                    47
+                  ]
+                ]
+              ]
+            ],
+            1903641
+          ],
+          "native_call": "0x231072"
+        }
+      ],
+      "next_job": 2841704,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 62
+    },
+    "0x32a5e8": {
+      "entry": 2297747,
+      "stages": [],
+      "next_job": 163607,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 4
+    },
+    "0x33037c": {
+      "entry": 2299170,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ],
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  36
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ],
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    36
+                  ]
+                ]
+              ]
+            ],
+            1458108
+          ],
+          "native_call": "0x231669"
+        }
+      ],
+      "next_job": 2390267,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 96
+    },
+    "0x35917d": {
+      "entry": 2300425,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ],
+                12
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  12
+                ]
+              ]
+            ],
+            486036
+          ],
+          "native_call": "0x231b2f"
+        }
+      ],
+      "next_job": 268932,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 92
+    },
+    "0x359547": {
+      "entry": 2300040,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                14
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  14
+                ]
+              ]
+            ],
+            567042
+          ],
+          "native_call": "0x231962"
+        }
+      ],
+      "next_job": 2469646,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 65
+    },
+    "0x35a70b": {
+      "entry": 2299682,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvand",
+                64,
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    23
+                  ]
+                ],
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    23
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvand",
+                  64,
+                  [
+                    "extract",
+                    63,
+                    0,
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      23
+                    ]
+                  ],
+                  [
+                    "extract",
+                    63,
+                    0,
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      23
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            931569
+          ],
+          "native_call": "0x231847"
+        }
+      ],
+      "next_job": 2106102,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 86
+    },
+    "0x36cfc2": {
+      "entry": 2301044,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                20
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  20
+                ]
+              ]
+            ],
+            810060
+          ],
+          "native_call": "0x231d2e"
+        }
+      ],
+      "next_job": 3674327,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 55
+    },
+    "0x37507f": {
+      "entry": 2302816,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                25
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  25
+                ]
+              ]
+            ],
+            1012575
+          ],
+          "native_call": "0x232474"
+        }
+      ],
+      "next_job": 1764124,
+      "enqueue_call": 2305256,
+      "proofs": 0,
+      "native_reduced": 70
+    },
+    "0x3810d7": {
+      "entry": 2302300,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                21
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  21
+                ]
+              ]
+            ],
+            850563
+          ],
+          "native_call": "0x2322c6"
+        }
+      ],
+      "next_job": 1664545,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 124
+    },
+    "0x3c2125": {
+      "entry": 2303156,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  52
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    52
+                  ]
+                ]
+              ]
+            ],
+            2106156
+          ],
+          "native_call": "0x23258e"
+        }
+      ],
+      "next_job": 2466982,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 67
+    },
+    "0x3c2e7f": {
+      "entry": 2304992,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  19
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    19
+                  ]
+                ]
+              ]
+            ],
+            769557
+          ],
+          "native_call": "0x232c68"
+        }
+      ],
+      "next_job": 3592130,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 52
+    },
+    "0x3dd18f": {
+      "entry": 2304503,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ],
+                  4
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      61,
+                      [
+                        "extract",
+                        63,
+                        3,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "bvnot",
+                        1,
+                        [
+                          "extract",
+                          2,
+                          2,
+                          [
+                            "mix",
+                            [
+                              "bvxor",
+                              64,
+                              "noise",
+                              [
+                                "sign_extend",
+                                64,
+                                32,
+                                "fetch"
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    [
+                      2,
+                      [
+                        "extract",
+                        1,
+                        0,
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            162012
+          ],
+          "native_call": "0x232b19"
+        }
+      ],
+      "next_job": 718603,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 113
+    },
+    "0x3e529b": {
+      "entry": 2304040,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "extract",
+                63,
+                0,
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ],
+                      [
+                        "mix",
+                        [
+                          "bvxor",
+                          64,
+                          "noise",
+                          [
+                            "sign_extend",
+                            64,
+                            32,
+                            "fetch"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  35
+                ]
+              ]
+            ]
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "extract",
+                  63,
+                  0,
+                  [
+                    "bvxor",
+                    64,
+                    [
+                      "mix",
+                      [
+                        "bvxor",
+                        64,
+                        [
+                          "sign_extend",
+                          64,
+                          32,
+                          "fetch"
+                        ],
+                        [
+                          "mix",
+                          [
+                            "bvxor",
+                            64,
+                            "noise",
+                            [
+                              "sign_extend",
+                              64,
+                              32,
+                              "fetch"
+                            ]
+                          ]
+                        ]
+                      ]
+                    ],
+                    35
+                  ]
+                ]
+              ]
+            ],
+            1417605
+          ],
+          "native_call": "0x23294c"
+        }
+      ],
+      "next_job": 3343228,
+      "enqueue_call": 2305256,
+      "proofs": 1,
+      "native_reduced": 78
+    },
+    "0x3ffaa2": {
+      "entry": 2303606,
+      "stages": [
+        {
+          "writes": {
+            "key": "key",
+            "noise": [
+              "mix",
+              [
+                "concat",
+                [
+                  [
+                    60,
+                    [
+                      "extract",
+                      63,
+                      4,
+                      "noise"
+                    ]
+                  ],
+                  [
+                    1,
+                    [
+                      "bvnot",
+                      1,
+                      [
+                        "extract",
+                        3,
+                        3,
+                        "noise"
+                      ]
+                    ]
+                  ],
+                  [
+                    3,
+                    [
+                      "extract",
+                      2,
+                      0,
+                      "noise"
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            "chain": "chain"
+          },
+          "feedback": [
+            [
+              "bvxor",
+              64,
+              "key",
+              [
+                "mix",
+                [
+                  "concat",
+                  [
+                    [
+                      60,
+                      [
+                        "extract",
+                        63,
+                        4,
+                        "noise"
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        "bvnot",
+                        1,
+                        [
+                          "extract",
+                          3,
+                          3,
+                          "noise"
+                        ]
+                      ]
+                    ],
+                    [
+                      3,
+                      [
+                        "extract",
+                        2,
+                        0,
+                        "noise"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            324024
+          ],
+          "native_call": "0x232795"
+        }
+      ],
+      "next_job": 1995060,
+      "enqueue_call": 2303596,
+      "proofs": 0,
+      "native_reduced": 91
+    }
+  },
+  "generic_reducer_gaps": {
+    "0x825f": "Uninitialized frame offset 0x1308",
+    "0x27f17": "Unsupported job helper 0x229c70",
+    "0x38a89": "Uninitialized frame offset 0xc0",
+    "0x48cad": "Input-dependent/unproved branch UGE(Extract(31,\n            0,\n            ZeroExt(32, ZeroExt(24, Extract(7, 0, opcode)))),\n    62)",
+    "0x57f52": "Unsupported job helper 0x1f0160",
+    "0x85b36": "Unsupported job helper 0x1ee070",
+    "0xf6105": "Unsupported job helper 0x1ee070",
+    "0xfe1ab": "Unsupported job helper 0x1ee510",
+    "0x1ad951": "Unsupported job helper 0x1ee070",
+    "0x1e7639": "Unsupported job helper 0x1f1730",
+    "0x2367b2": "Uninitialized frame offset 0xd8",
+    "0x26dc07": "Input-dependent/unproved branch UGE(Extract(31,\n            0,\n            ZeroExt(32, ZeroExt(24, Extract(7, 0, opcode)))),\n    62)",
+    "0x28aab7": "Unsupported job helper 0x1eddd0",
+    "0x2a0025": "Input-dependent/unproved branch UGE(Extract(31,\n            0,\n            ZeroExt(32, ZeroExt(24, Extract(7, 0, opcode)))),\n    62)",
+    "0x2e0073": "Unsupported job instruction cmovne rdx, r15",
+    "0x2e0108": "Unsupported job helper 0x1f1730",
+    "0x338040": "Input-dependent/unproved branch UGE(Extract(31,\n            0,\n            ZeroExt(32, ZeroExt(24, Extract(7, 0, opcode)))),\n    62)",
+    "0x3abaef": "Unsupported job helper 0x1ee070",
+    "0x3b6230": "Unknown register r13"
+  },
+  "manual_runtime_jobs": {
+    "0x825f": "domain selection",
+    "0x27f17": "outer header decoder",
+    "0x28aab7": "unarmed attestation gate",
+    "0x85b36": "post-opcode common prefix and generated tail",
+    "0xf6105": "post-opcode common prefix and generated tail",
+    "0x1ad951": "post-opcode common prefix and generated tail",
+    "0x3abaef": "post-opcode common prefix and generated tail",
+    "0x26dc07": "outer handler dispatch, opcode < 62",
+    "0x338040": "outer handler dispatch, opcode < 62",
+    "0x48cad": "outer handler dispatch, opcode < 62",
+    "0x2a0025": "outer handler dispatch, opcode < 62"
+  },
+  "runtime_unimplemented": {
+    "0x38a89": {
+      "entry": "0x22b481",
+      "reason": "Uninitialized frame offset 0xc0"
+    },
+    "0x57f52": {
+      "entry": "0x22bba5",
+      "reason": "Unsupported job helper 0x1f0160"
+    },
+    "0xfe1ab": {
+      "entry": "0x22c8f6",
+      "reason": "Unsupported job helper 0x1ee510"
+    },
+    "0x1e7639": {
+      "entry": "0x22eca6",
+      "reason": "Unsupported job helper 0x1f1730"
+    },
+    "0x2367b2": {
+      "entry": "0x22f4f9",
+      "reason": "Uninitialized frame offset 0xd8"
+    },
+    "0x2e0073": {
+      "entry": "0x230ef1",
+      "reason": "Unsupported job instruction cmovne rdx, r15"
+    },
+    "0x2e0108": {
+      "entry": "0x231458",
+      "reason": "Unsupported job helper 0x1f1730"
+    },
+    "0x3b6230": {
+      "entry": "0x231e05",
+      "reason": "Unknown register r13"
+    }
+  },
+  "original_sha256": "fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a",
+  "z3": "5.3.3.0 430d19e697e2ec9bad79ff210d41b4a7a5fcfa3e 430d19e"
+}

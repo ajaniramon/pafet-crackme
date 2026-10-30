@@ -1,6 +1,6 @@
 # 13 — Open gaps and research priorities
 
-The current [JACK XXXI matrix](../jack_xxxi_evidence/status.json), earlier
+The current [JACK XXXII matrix](../jack_xxxii_evidence/status.json), earlier
 [mechanism matrix](../jack_xvii_evidence/status_matrix.json) and
 [JACK XVII report](jack-xvii.md) distinguish demonstrated facts, partial
 reconstruction, hypotheses and unknowns. No VM is declared completely
@@ -42,16 +42,18 @@ the inlined decoder and `STORE_REG_U16` at PC 5 continuously from one before-sta
 [JACK XXXI](../PAFET_JACK_XXXI.md) extends this to opcode 4 (`LOAD_REG_U16`)
 and PC 11/SP 1, including rekey, budget exit and parent-wrapper unwind. Three
 fresh processes pass 13 full virtual-memory boundaries; one takes the key
-probe continuously. The full remap rebuild is still open: `process_c` reaches
-its call at RVA `0x209a34` during PC 5 decode, then exceeds the observation limit
-and is rejected. Early-return routes stop at the outer loop at PC 5/8.
+probe continuously. [JACK XXXII](../PAFET_JACK_XXXII.md) now resumes the outer dispatcher,
+selects queued work and executes a fourth instruction continuously to PC 16/SP 2
+in three fresh processes. Two delimited helpers validate dynamic remap rebuild;
+that local proof is not a continuous rebuild-path claim. The replay loader's
+readonly-PE relocation defect is fixed with separate validation/image objects.
 
-Next: resume the outer dispatcher at PC 11, cross the full remap rebuild and
-rekey TLS callback branches, and extend the ISA/CFG and windows. LOAD domains
-1/2 are static-only; active-stack rekey is checked against isolated original
-x64 with synthetic inputs, not extra Windows routes. SHA's materializer, ISA
-and virtual state still need independent discovery. Shared ALU helpers do not
-prove identical VMs.
+Next: extend beyond PC 16 and the remaining eight outer states, armed
+attestation, scheduler exceptions, rekey TLS callbacks and unobserved fallback
+branches. Other windows and the full ISA/CFG remain open. LOAD domains 1/2
+retain static-only bindings. SHA's materializer, ISA and state still require
+independent discovery. The truncated rebuild-containing capture is rejected;
+its missing observations are not synthesized from the isolated helper result.
 Do not substitute standard primitive rounds for unproved virtual semantics.
 JACK XXVIII supplies a generic capture profile and an 18-instruction Windows/
 Unicorn Serial seed-region comparison. It validates reusable transport, not a

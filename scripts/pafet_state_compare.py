@@ -5,7 +5,7 @@ import gzip
 import json
 import pathlib
 from pafet_state_replay import Replay,NAMES,snapshot,u
-from pafet_state_contract import require,load_frames,ContractError
+from pafet_state_contract import require,load_frames,ContractError,Memory,stop_reached
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def read(path):return json.loads(gzip.decompress(path.read_bytes()))
@@ -27,15 +27,21 @@ def validate_oracle(entry,oracle):
         require(0<len(bytes.fromhex(row['bytes']))<=15,'Invalid observed instruction','observation',step=number)
         pc=row['after']['rip']
     complete=oracle.get('complete',True)
-    if complete:require(pc in entry.get('stop_any',[entry.get('stop',entry['native_return'])]),'Truncated native trace','observation',last_pc=hex(pc))
+    if complete:
+        mem=Memory()
+        if entry.get('stop_counter_min'):
+            for r in entry['regions']:mem.add(r['address'],bytes.fromhex(r['hex']))
+            for row in trace:
+                for at,data in row['writes']:mem.add(at,bytes.fromhex(data),overwrite=True)
+        require(stop_reached(entry,mem.read,pc),'Truncated native trace or unreached counter','observation',last_pc=hex(pc))
     return complete
 
-def compare(entry,oracle,coverage='complete'):
+def compare(entry,oracle,coverage='complete',instruction_budget=None):
     native_complete=validate_oracle(entry,oracle)
     replay=Replay(entry,coverage);candidate=[];failure=None
     # No observed trace length, branch or expected value drives execution.
     try:
-        for row in replay.run():candidate.append(row)
+        for row in replay.run(budget=instruction_budget):candidate.append(row)
     except Exception as error:
         failure=error.report() if isinstance(error,ContractError) else {'classification':'unmapped-dependency' if isinstance(error,u.UcError) and error.errno in (u.UC_ERR_FETCH_UNMAPPED,u.UC_ERR_READ_UNMAPPED,u.UC_ERR_WRITE_UNMAPPED) else 'emulation','message':str(error),'pc':hex(snapshot(replay.uc)['rip'])}
     first=None;raw=None;read_difference=None

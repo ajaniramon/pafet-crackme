@@ -1,0 +1,123 @@
+{
+  "coverage": "complete",
+  "instructions_compared": 2212,
+  "candidate_instructions": 2212,
+  "native_complete": true,
+  "all_match": false,
+  "first_state_difference": {
+    "step": 2204,
+    "pc": "0x7ff6275a9a90",
+    "preferred_pc": "0x140229a90",
+    "instruction": "mov rcx, qword ptr [rdi + rax + 0x3e95a0]",
+    "preceding_instructions_match": 2203,
+    "differences": {
+      "rcx": [
+        "0x1403eac70",
+        "0x7ff62776ac70"
+      ],
+      "memory_reads": {
+        "replay": [
+          [
+            140695200765344,
+            "70ac3e4001000000"
+          ]
+        ],
+        "native": [
+          [
+            140695200765344,
+            "70ac7627f67f0000"
+          ]
+        ]
+      }
+    }
+  },
+  "first_read_difference": {
+    "step": 2204,
+    "pc": "0x7ff6275a9a90",
+    "differences": {
+      "replay": [
+        [
+          140695200765344,
+          "70ac3e4001000000"
+        ]
+      ],
+      "native": [
+        [
+          140695200765344,
+          "70ac7627f67f0000"
+        ]
+      ]
+    }
+  },
+  "first_raw_arithmetic_flag_difference": {
+    "step": 28,
+    "pc": "0x7ff6275a985f",
+    "different_bits": "0x10",
+    "defined_mask": "0x8c5",
+    "only_architecturally_undefined_bits": true
+  },
+  "failure": {
+    "classification": "unmapped-dependency",
+    "message": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+    "pc": "0x7ff6275a9aca"
+  },
+  "terminal_comparison": {
+    "steps": 2212,
+    "error": {
+      "classification": "unmapped-dependency",
+      "message": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+      "pc": "0x7ff6275a9aca"
+    },
+    "regions": [
+      {
+        "role": "declared root rcx",
+        "different_bytes": 381
+      },
+      {
+        "role": "pointed rcx+0x1d0",
+        "different_bytes": 0
+      },
+      {
+        "role": "pointed rcx+0x48",
+        "different_bytes": 0
+      },
+      {
+        "role": "pointed rcx+0xb10",
+        "different_bytes": 0
+      },
+      {
+        "role": "pointed rcx+0xb50",
+        "different_bytes": 0
+      },
+      {
+        "role": "pointed rcx+0x180",
+        "different_bytes": 0
+      },
+      {
+        "role": "pointed rcx+0x188",
+        "different_bytes": 0
+      },
+      {
+        "role": "pointed rcx+0x1190",
+        "different_bytes": 6356
+      }
+    ]
+  },
+  "contract": {
+    "profile": "native-x64-v1",
+    "legacy_transport": false,
+    "declared_inputs_valid": true,
+    "array_count": 0,
+    "captured_pages": 72,
+    "consistent_alias_bytes": 0,
+    "runtime_base": "0x7ff627380000",
+    "cookie": "0x3314883c80e",
+    "cookie_differs_from_static_default": true,
+    "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+    "unavailable": [
+      "FS base unless explicitly captured",
+      "arbitrary transitive pointer closure",
+      "unvisited host/exception dependencies"
+    ]
+  }
+}

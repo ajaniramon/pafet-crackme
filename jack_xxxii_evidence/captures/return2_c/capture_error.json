@@ -1,0 +1,8 @@
+{
+  "status": "blocked",
+  "classification": "capture",
+  "error": "Capture blocked/incomplete; before inputs and observed prefix preserved in jack_xxxii_evidence\\captures\\return2_c",
+  "frames": [],
+  "entry_rva": "0x22bc85",
+  "collector_sha256": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2"
+}

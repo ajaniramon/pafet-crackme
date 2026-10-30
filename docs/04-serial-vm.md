@@ -96,17 +96,37 @@ calls from the same initial capture. See [validation](../jack_xxxi_evidence/vali
 and [reproduction](../PAFET_JACK_XXXI.md#8-reproduction). The original two-step
 class and evidence remain as a narrower regression contract.
 
+## Autonomous outer scheduling: JACK XXXII
+
+[JACK XXXII](../PAFET_JACK_XXXII.md) resumes the outer loop, drains the encoded
+work queue, dispatches callbacks by their actual PE pointers, and selects the
+next decoder/domain/handler without native replay. Three fresh Windows
+processes execute `PC 0 -> 5 -> 8 -> 11 -> 16`, ending at SP 2. The fourth
+instruction reuses PUSH_POOL_U32; three distinct opcodes remain implemented.
+
+Two return-delimited native captures check the dynamic remap rebuild across
+248 entries, inverse permutations, keys, domain seed and the full generated
+thunk pool. Its isolated proof is kept separate from the continuous chains,
+which do not trigger rebuild. A readonly-PE relocation loader defect exposed
+by that helper has a preserved first-divergence counterexample and regression.
+
+Use `ScheduledSerialVMState` from `devirt.serial_scheduler`. Its generated
+field-effect kernels have no native PC/register machine; Z3 is used only in the
+offline reducer. See [validation](../jack_xxxii_evidence/validation.json),
+[jobs/gaps](../jack_xxxii_evidence/jobs.json) and
+[reproduction](../PAFET_JACK_XXXII.md#7-reproduction).
+
 ## Still unknown
 
-The first three instructions and supported continuation paths are demonstrated
+The first four instructions and supported scheduling paths are demonstrated
 within their recorded state contracts. The full ISA/CFG, callbacks, general
-register/flag architecture, the outer dispatcher loop, full remap rebuild and
-other rekey/window/guard cases remain partial or unknown. Entry RCX is the caller's argument array, not the internal
+register/flag architecture, eight remaining outer states, armed attestation,
+scheduler exception delivery and other rekey/window/guard cases remain partial or unknown. Entry RCX is the caller's argument array, not the internal
 context base. Four older pool-reader candidates have finite ALU-helper
 comparisons documented in [the pool report](../PAFET_SERIALVM_POOL.md). Their
 similarity to User-VM does not prove an identical ISA or dispatcher.
 
-Next: resume the outer dispatcher at PC 11, reconstruct full remap rebuild and
-rekey TLS callbacks, and extend to additional opcodes/windows. Keep RC4's algorithm state separate from
-the recovered virtualization mechanisms. No complete Serial devirtualization
-is claimed.
+Next: extend beyond PC 16, close remaining outer-state/exception guards, verify
+rebuild within a continuous native chain, and cover additional opcodes/windows.
+Keep RC4's algorithm state separate from the recovered virtualization
+mechanisms. No complete Serial devirtualization is claimed.

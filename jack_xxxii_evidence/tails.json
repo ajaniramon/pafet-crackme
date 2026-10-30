@@ -1,0 +1,311 @@
+{
+  "0x85b36": {
+    "entry": 2275541,
+    "tail_start": 2275762,
+    "tree": {
+      "condition": [
+        "bool_not",
+        [
+          "eq",
+          [
+            "extract",
+            1,
+            0,
+            [
+              "mix",
+              [
+                "bvxor",
+                64,
+                [
+                  "sign_extend",
+                  64,
+                  32,
+                  "fetch"
+                ],
+                [
+                  "mix",
+                  [
+                    "bvxor",
+                    64,
+                    "noise",
+                    [
+                      "sign_extend",
+                      64,
+                      32,
+                      "fetch"
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          1
+        ]
+      ],
+      "yes": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "sign_extend",
+                    64,
+                    32,
+                    "fetch"
+                  ],
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              "chain": "chain"
+            }
+          }
+        ],
+        "next_job": 1580172,
+        "enqueue_call": 2305256,
+        "proofs": 0,
+        "native_reduced": 55
+      },
+      "no": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  [
+                    "sign_extend",
+                    64,
+                    32,
+                    "fetch"
+                  ],
+                  [
+                    "mix",
+                    [
+                      "bvxor",
+                      64,
+                      "noise",
+                      [
+                        "sign_extend",
+                        64,
+                        32,
+                        "fetch"
+                      ]
+                    ]
+                  ]
+                ]
+              ],
+              "chain": "chain"
+            }
+          }
+        ],
+        "next_job": 4051343,
+        "enqueue_call": 2305256,
+        "proofs": 0,
+        "native_reduced": 55
+      }
+    }
+  },
+  "0xf6105": {
+    "entry": 2279968,
+    "tail_start": 2280189,
+    "tree": {
+      "condition": [
+        "bool_not",
+        [
+          "eq",
+          [
+            "extract",
+            1,
+            0,
+            "noise"
+          ],
+          1
+        ]
+      ],
+      "yes": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": "noise"
+            }
+          }
+        ],
+        "next_job": 717854,
+        "enqueue_call": 2305256,
+        "proofs": 1,
+        "native_reduced": 64
+      },
+      "no": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": "noise"
+            }
+          }
+        ],
+        "next_job": 1142751,
+        "enqueue_call": 2305256,
+        "proofs": 1,
+        "native_reduced": 64
+      }
+    }
+  },
+  "0x1ad951": {
+    "entry": 2286774,
+    "tail_start": 2286995,
+    "tree": {
+      "condition": [
+        "bool_not",
+        [
+          "eq",
+          [
+            "extract",
+            1,
+            0,
+            "noise"
+          ],
+          1
+        ]
+      ],
+      "yes": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": "noise",
+              "chain": "chain"
+            }
+          }
+        ],
+        "next_job": 490781,
+        "enqueue_call": 2305256,
+        "proofs": 2,
+        "native_reduced": 50
+      },
+      "no": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": "noise",
+              "chain": "chain"
+            }
+          }
+        ],
+        "next_job": 1639985,
+        "enqueue_call": 2305256,
+        "proofs": 2,
+        "native_reduced": 50
+      }
+    }
+  },
+  "0x3abaef": {
+    "entry": 2301821,
+    "tail_start": 2302042,
+    "tree": {
+      "condition": [
+        "bool_not",
+        [
+          "eq",
+          [
+            "extract",
+            1,
+            0,
+            [
+              "mix",
+              [
+                "bvxor",
+                64,
+                "noise",
+                [
+                  "sign_extend",
+                  64,
+                  32,
+                  "fetch"
+                ]
+              ]
+            ]
+          ],
+          1
+        ]
+      ],
+      "yes": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  [
+                    "sign_extend",
+                    64,
+                    32,
+                    "fetch"
+                  ]
+                ]
+              ]
+            }
+          }
+        ],
+        "next_job": 2907370,
+        "enqueue_call": 2305256,
+        "proofs": 0,
+        "native_reduced": 49
+      },
+      "no": {
+        "stages": [
+          {
+            "writes": {
+              "key": "key",
+              "noise": [
+                "mix",
+                [
+                  "bvxor",
+                  64,
+                  "noise",
+                  [
+                    "sign_extend",
+                    64,
+                    32,
+                    "fetch"
+                  ]
+                ]
+              ]
+            }
+          }
+        ],
+        "next_job": 1568040,
+        "enqueue_call": 2305256,
+        "proofs": 0,
+        "native_reduced": 49
+      }
+    }
+  }
+}

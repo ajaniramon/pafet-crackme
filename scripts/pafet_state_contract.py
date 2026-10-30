@@ -28,6 +28,11 @@ class ContractError(ValueError):
 def require(test,message,kind='incomplete-input',**details):
     if not test:raise ContractError(kind,message,**details)
 
+def stop_reached(entry,read,pc):
+    if pc not in entry.get('stop_any',[entry.get('stop',entry['native_return'])]):return False
+    counter=entry.get('stop_counter_min')
+    return counter is None or int.from_bytes(read(counter['address'],4),'little')>=counter['minimum']
+
 
 def unhex(value,label):
     try:return bytes.fromhex(value)
@@ -126,6 +131,10 @@ def validate_entry(entry,pe):
     require(isinstance(native_return,int),'Initial return address is required')
     require(struct.unpack('<Q',memory.read(rsp,8,'entry return slot'))[0]==native_return,'Return address contradicts entry stack','contradictory-memory')
     stop=entry.get('stop',native_return);require(isinstance(stop,int) and stop!=state['rip'],'A nonempty execution boundary is required','malformed-input')
+    limit=entry.get('instruction_limit',100000);require(isinstance(limit,int) and 0<limit<=1000000,'Invalid instruction limit','malformed-input')
+    if 'stop_counter_min' in entry:
+        counter=entry['stop_counter_min'];require(isinstance(counter,dict) and isinstance(counter.get('address'),int) and isinstance(counter.get('minimum'),int) and 0<counter['minimum']<=0xffffffff,'Invalid boundary counter','malformed-input')
+        memory.read(counter['address'],4,'boundary counter')
     if 'stop_any' in entry:
         stops=entry['stop_any'];require(isinstance(stops,list) and stops and len(stops)==len(set(stops)) and all(isinstance(s,int) and base<=s<base+image_size and s!=state['rip'] for s in stops),'Invalid alternative boundaries','malformed-input')
     require(base<=state['rip']<base+image_size,'Entry RIP is outside the verified PE','malformed-input')

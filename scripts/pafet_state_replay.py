@@ -14,7 +14,7 @@ import pefile
 import unicorn as u
 import capstone as cs
 from unicorn.x86_const import *
-from pafet_state_contract import validate_entry,ContractError,require
+from pafet_state_contract import validate_entry,ContractError,require,stop_reached
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 NAMES=['rax','rcx','rdx','rbx','rsp','rbp','rsi','rdi']+[f'r{i}' for i in range(8,16)]
@@ -36,7 +36,9 @@ class Replay:
         if hashlib.sha256(original).hexdigest()!='fe85e59225387fba4923f3bc6103914fe7b85ba3dc0514c9e37382818fb44d1a':
             raise ValueError('Replay requires the original PE identity')
         pe=pefile.PE(data=original)
-        _,self.initialized,self.contract=validate_entry(entry,pe)
+        # Validation relocates its PE. Reusing it for a second mapping can
+        # return preferred-base readonly pointers from pefile section caches.
+        _,self.initialized,self.contract=validate_entry(entry,pefile.PE(data=original))
         self.uc=u.Uc(u.UC_ARCH_X86,u.UC_MODE_64);base=entry['base'];size=pe.OPTIONAL_HEADER.SizeOfImage
         self.uc.mem_map(base,(size+4095)&~4095)
         self.uc.mem_write(base,pe.get_memory_mapped_image(ImageBase=base))
@@ -116,11 +118,12 @@ class Replay:
                 'reads':[(at,data.hex()) for at,data in self.reads],
                 'writes':[(at,bytes(self.uc.mem_read(at,size)).hex()) for at,size in self.writes]}
 
-    def run(self,budget=100000):
+    def run(self,budget=None):
+        if budget is None:budget=self.entry.get('instruction_limit',100000)
         for _ in range(budget):
-            if self.uc.reg_read(UC_X86_REG_RIP) in self.entry.get('stop_any',[self.entry.get('stop',self.entry['native_return'])]):return
+            if stop_reached(self.entry,lambda a,n:bytes(self.uc.mem_read(a,n)),self.uc.reg_read(UC_X86_REG_RIP)):return
             yield self.step()
-        if self.uc.reg_read(UC_X86_REG_RIP) in self.entry.get('stop_any',[self.entry.get('stop',self.entry['native_return'])]):return
+        if stop_reached(self.entry,lambda a,n:bytes(self.uc.mem_read(a,n)),self.uc.reg_read(UC_X86_REG_RIP)):return
         raise RuntimeError('replay instruction budget')
 
 

@@ -18,7 +18,7 @@ import uuid
 import pefile
 import capstone as cs
 from capstone.x86 import X86_OP_MEM
-from pafet_state_contract import PROFILES,ORIGINAL_SHA256,VARIANT_SHA256,require,validate_entry
+from pafet_state_contract import PROFILES,ORIGINAL_SHA256,VARIANT_SHA256,require,validate_entry,stop_reached
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 NAMES=['rax','rcx','rdx','rbx','rsp','rbp','rsi','rdi']+[f'r{i}' for i in range(8,16)]
@@ -204,6 +204,9 @@ def main():
     ap.add_argument('--entry-any',action='append',type=lambda s:int(s,0),default=[],help='Up to four alternative entry RVAs, using DR0..DR3')
     ap.add_argument('--stop-next',action='store_true',help='For a CALL-site entry, stop at its following instruction after the callee returns')
     ap.add_argument('--select-counter',help='Capture only when dword [RCX+OFFSET] equals VALUE; read-only selection OFFSET:VALUE')
+    ap.add_argument('--select-counter-min',help='Read-only selection OFFSET:MINIMUM for a naturally reached counter')
+    ap.add_argument('--step-limit',type=int,default=100000,help='Explicit per-frame observation bound (default 100000)')
+    ap.add_argument('--stop-counter-min',help='At terminal RVAs also require initial RCX-relative dword >= minimum, OFFSET:MINIMUM')
     args=ap.parse_args()
     require(C.sizeof(Context)==1232 and Context.Rip.offset==248 and C.sizeof(Event)==176 and C.sizeof(MemoryInfo)==48,'Unsupported Windows x64 context layout')
     require(args.frames>0,'Frame count must be positive','malformed-input')
@@ -218,8 +221,13 @@ def main():
     require(0<len(entries)<=4 and len(set(entries))==len(entries),'Hardware entry inventory must contain 1..4 distinct RVAs','malformed-input')
     require(not(args.stop_next and args.stop_rva is not None),'Select one stop policy','malformed-input')
     require(not args.stop_any or (not args.stop_next and args.stop_rva is None),'Select one stop policy','malformed-input')
-    selection=tuple(int(n,0) for n in args.select_counter.split(':')) if args.select_counter else None
+    require(not(args.select_counter and args.select_counter_min),'Select one counter predicate','malformed-input')
+    require(0<args.step_limit<=1000000,'Invalid frame observation bound','malformed-input')
+    selection_text=args.select_counter or args.select_counter_min
+    selection=tuple(int(n,0) for n in selection_text.split(':')) if selection_text else None
     require(selection is None or len(selection)==2,'Counter selection needs OFFSET:VALUE','malformed-input')
+    stop_counter=tuple(int(n,0) for n in args.stop_counter_min.split(':')) if args.stop_counter_min else None
+    require(stop_counter is None or len(stop_counter)==2,'Stop counter needs OFFSET:MINIMUM','malformed-input')
     original=(ROOT/'pafet.bin').read_bytes();variant=(ROOT/'pafet_pass8.exe').read_bytes()
     require(hashlib.sha256(original).hexdigest()==ORIGINAL_SHA256 and hashlib.sha256(variant).hexdigest()==VARIANT_SHA256,'Research executable identity differs','integrity')
     require(len(original)==len(variant) and [i for i,(a,b) in enumerate(zip(original,variant)) if a!=b]==[0x395efb,0x395efc],'Unexpected executable changes','integrity')
@@ -255,7 +263,8 @@ def main():
                     h,teb=threads[event.TID];backing,c=debug.get(h)
                     if active is None and c.Rip-base in entries:
                         invocations+=1
-                        if selection and struct.unpack('<I',debug.read(c.Rcx+selection[0],4))[0]!=selection[1]:
+                        selected_value=struct.unpack('<I',debug.read(c.Rcx+selection[0],4))[0] if selection else None
+                        if selection and (selected_value<selection[1] if args.select_counter_min else selected_value!=selection[1]):
                             c.Dr6=0;c.EFlags|=0x10000;debug.set(h,c)
                             debug.checked(debug.k.ContinueDebugEvent(event.PID,event.TID,status));continued=True
                             continue
@@ -271,6 +280,9 @@ def main():
                             stop_rva=c.Rip-base+call.size
                         captured=inputs(debug,c,base,teb,pe,args.profile,stop_rva,roots,pointer_roots)
                         if args.stop_any:captured['stop_any']=[base+x for x in args.stop_any];validate_entry(captured,pefile.PE(str(ROOT/'pafet.bin')))
+                        captured['instruction_limit']=args.step_limit
+                        if stop_counter:captured['stop_counter_min']={'address':c.Rcx+stop_counter[0],'minimum':stop_counter[1]}
+                        validate_entry(captured,pefile.PE(str(ROOT/'pafet.bin')))
                         captured['invocation']=invocations
                         active={'entry':captured,'trace':[],'thread':event.TID,'writes':[],'rekey':False}
                         print('entry',len(frames),hex(c.Rcx),'captured pages',len(captured['regions']),flush=True)
@@ -280,7 +292,7 @@ def main():
                         active['pending']['after']=state(c)
                         active['pending']['writes']=[[at,debug.read(at,size).hex()] for at,size in active['writes']]
                         active['trace'].append(active.pop('pending'))
-                        if c.Rip in active['entry'].get('stop_any',[active['entry'].get('stop',active['entry']['native_return'])]):
+                        if stop_reached(active['entry'],debug.read,c.Rip):
                             frame=save_frame(args.out,len(frames),active,debug,{'kind':'stop-any' if 'stop_any' in active['entry'] else 'stop-rva' if 'stop' in active['entry'] else 'return','pc':hex(c.Rip)})
                             frames.append(frame)
                             print(frame['stem'],frame['steps'],'instructions; rekey',active['rekey'],flush=True)
@@ -301,7 +313,7 @@ def main():
                                            'reads':[[at,debug.read(at,size).hex()] for at,size in reads]}
                         active['writes']=writes
                         if c.Rip==base+0x4930:active['rekey']=True
-                        if len(active['trace'])>100000:raise RuntimeError('frame trace limit')
+                        if len(active['trace'])>args.step_limit:raise RuntimeError('frame trace limit')
                         c.EFlags=(c.EFlags|0x100)&~0x10000;c.Dr6=0;debug.set(h,c)
                 else:
                     if active is not None:
@@ -320,6 +332,8 @@ def main():
                   'selection':'first control then counter within 16 of rekey threshold' if args.near_rekey else 'consecutive handler invocations',
                   'entry_rva':hex(entries[0]) if len(entries)==1 else None,
                   'entry_rvas':list(map(hex,entries)),'select_counter':selection,'stop_next':args.stop_next,
+                  'select_counter_relation':'minimum' if args.select_counter_min else 'equal','step_limit':args.step_limit,
+                  'stop_counter_min':stop_counter,
                   'stop_any_rvas':list(map(hex,args.stop_any)),
                   'profile':args.profile,'stop_rva':hex(args.stop_rva) if args.stop_rva is not None else None,
                   'inputs':'Entry GPRs, RFLAGS, XMM, GS base and memory only; oracle after-state/reads are separate trace data.'}
