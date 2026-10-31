@@ -90,3 +90,44 @@ remaps, rekeys and decoder epochs leave the callback stream unchanged.
 Together with step 2 (the only host-visible effect of Serial-VM is callback 22
 writing `work`'s bytes in place), the entire obfuscation layer is invisible to
 the host. The readable `serial.cpp` may omit it.
+
+## Step 5 — `serial.cpp`
+
+[`serial_cpp_evidence/serial.cpp`](serial_cpp_evidence/serial.cpp). Two layers,
+as required, with no library substitution:
+
+- **Primitives** — a `Receiver` struct whose 23 methods `fn0…fn22` are the
+  exact cases of native switch `0x232e20`, over the twelve recovered fields
+  (step 1). The default (`fn` ≥ 23) returns 0, matching the `JA` arm.
+- **Program** — `serial_vm_program(Receiver&)` calls those primitives in the
+  order and with the loop conditions recovered from the closed CFG (JACK
+  XXXVI §8): three counted loops with the `BRANCH_IF_ZERO` tests
+  `i < 256`, `i2 < 256`, `n < work.size()`, and the `zext8/sext32` chain on
+  the `fn17` cursor exactly as opcodes `0x3b`/`0x3a` apply it.
+- **Host** — `run_serial(work, key)` is the `std::function` lambda
+  `operator()` command 1: fill the receiver from `work`/`key` and run the
+  program, which transforms `work` in place.
+
+The de-obfuscated program is the RC4 key schedule (identity fill, then the
+keyed mixing loop) followed by the RC4 keystream XOR over the data bytes.
+This is recorded as an **observation**; the file keeps the recovered
+primitives rather than calling a library RC4, so it stays tied to the binary.
+The keyed arm (`fn9`, callback 9) is present but dead on this binary, where
+the decoder-slot-7 key is empty (step 1).
+
+## Step 6 — Validation of `serial.cpp`
+
+1. **Independent reference.** `run_serial("serial01", "")` yields
+   `ad7dfb28c25b6d0b`, byte-identical to an independent RC4(zero-key) ⊕
+   `serial01` computed separately.
+2. **End-to-end against the recovered VM.** `pafet_serial_finalbuf_xxxvi.py`
+   runs the full candidate VM to HALT on the `bob` capture and reads the work
+   buffer that callback 22 transformed in place:
+   `serial01` → `ad7dfb28c25b6d0b` after 46,722 steps to HALT
+   ([end_to_end_seventeen_b.json](serial_cpp_evidence/end_to_end_seventeen_b.json)),
+   byte-identical to `serial.cpp` and to the reference in (1).
+
+By JACK XXXVI the candidate VM already matches original x64 at every
+declared-memory boundary of the complete run, so this chains to the original
+executable. `serial.cpp` is the faithful, readable Serial-VM: the recovered
+program and primitives, with the proven-invisible obfuscation omitted.

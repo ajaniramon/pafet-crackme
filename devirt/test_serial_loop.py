@@ -1,6 +1,6 @@
 """JACK XXXVI: new opcode semantics, callbacks, exception route, halt route,
 static program structure and candidate independence."""
-import json,random,subprocess,sys,unittest
+import json,pathlib,random,subprocess,sys,unittest
 import pefile
 from .serial_loop import (LoopSerialVMState,HANDLERS,NativeThrow,condition_scramble,signed64,
                           compare_less_signed,compare_greater_signed,compare_not_equal,bitwise_not,zero_extend,add)
@@ -137,6 +137,31 @@ class Structure(unittest.TestCase):
         cross=json.loads((OUT/'static_crosscheck.json').read_text())
         self.assertTrue(cross['all_identical']);self.assertEqual({r['instructions'] for r in cross['captures']},{478})
         self.assertTrue(all(c['mismatches']==0 for c in cross['executed_vs_static']))
+
+    def test_serial_cpp_matches_rc4_zero_key_reference(self):
+        import shutil, subprocess, tempfile
+        gpp = shutil.which('g++') or shutil.which('clang++')
+        if not gpp:
+            self.skipTest('no C++ compiler')
+        src = ROOT / 'serial_cpp_evidence' / 'serial.cpp'
+        if not src.exists():
+            self.skipTest('serial.cpp not present')
+        # Independent RC4(zero-key) stream XOR "serial01".
+        S = list(range(256)); j = 0
+        for i in range(256):
+            j = (j + S[i]) & 255; S[i], S[j] = S[j], S[i]
+        a = b = 0; ref = []
+        for c in b'serial01':
+            a = (a + 1) & 255; b = (b + S[a]) & 255; S[a], S[b] = S[b], S[a]
+            ref.append(c ^ S[(S[a] + S[b]) & 255])
+        with tempfile.TemporaryDirectory() as d:
+            (pathlib.Path(d) / 'serial.cpp').write_bytes(src.read_bytes())
+            (pathlib.Path(d) / 'm.cpp').write_text(
+                '#include "serial.cpp"\n#include <cstdio>\nint main(){std::string w="serial01",k="";'
+                'pafet::run_serial(w,k);for(unsigned char c:w)printf("%02x",c);}\n')
+            subprocess.run([gpp, '-O2', '-std=c++17', 'm.cpp', '-o', 'm'], cwd=d, check=True)
+            out = subprocess.run(['./m'], cwd=d, capture_output=True, text=True, check=True).stdout.strip()
+        self.assertEqual(out, bytes(ref).hex())
 
     def test_cfg_loops_bifurcations_and_halt(self):
         g=json.loads((OUT/'virtual_cfg.json').read_text())
