@@ -1,0 +1,45 @@
+{
+ "cleanup_entry": "0x22b0af (reached and verified in seventeen_b, eleven_c)",
+ "sequence": [
+  {
+   "rva": "0x22b0b9",
+   "effect": "frame-local noise update [rsp+0x4d8] ^= 0x398100(...) (native frame only)"
+  },
+  {
+   "rva": "0x229750",
+   "effect": "if ctx[0x1198]: VirtualFree(ctx[0x1190], 0, MEM_RELEASE); ctx[0x1190]=0; ctx[0x1198]=0  (generated thunk pool)"
+  },
+  {
+   "rva": "0x22b0d6..0x22b0fd",
+   "effect": "for i in [r12, 24): out[i] = 232e00 -> 1ee650(ctx, i) = decoded virtual register i (re-tagged; bank (epoch+i)&1)"
+  },
+  {
+   "rva": "0x22b10f",
+   "effect": "memset(bytecode buffer, 0, 0xa76)"
+  },
+  {
+   "rva": "0x22b138",
+   "effect": "result = 1ee310(ctx) = logical control 3 (read + re-tag); HALT stores 0"
+  },
+  {
+   "rva": "0x22b148",
+   "effect": "1edd60: destroy std::function at ctx+0x78 (callable ptr ctx+0xb0 = callback receiver) via its vtable +0x20; ctx+0xb0 = 0"
+  },
+  {
+   "rva": "0x22b156..0x22b180",
+   "effect": "398110 x4: std::vector buffer frees (frame locals +0x130/+0x148/+0x160/+0x178)"
+  },
+  {
+   "rva": "0x22b18e",
+   "effect": "2ed0: destroy std::function at frame+0xe0"
+  },
+  {
+   "rva": "0x22b1a1..0x22b1c2",
+   "effect": "security cookie check, return result"
+  }
+ ],
+ "return_value": "0 on the natural route (control 3 written 0 by HALT, verified at the last compared boundary)",
+ "outputs": "24-qword array = virtual registers [r12,24); r12 is a native frame counter (0 after a catch or most jobs); not tracked by the model",
+ "host_use": "Adapter 0x39d740 calls 0x22a120 then jumps to xor eax,eax; ret: return value and out[24] (its own frame locals at rbp-0x48) are discarded. The only host-observable effect is the in-place transformation of work.data()[0:work.size()] through callbacks 22.",
+ "verification": "Static disassembly only for the steps after 0x22b0af; the emulation oracle stops at the VirtualFree import. The observable-effect claim (only work bytes) is checked dynamically in step 4."
+}

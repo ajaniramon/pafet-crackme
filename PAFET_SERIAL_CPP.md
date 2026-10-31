@@ -44,3 +44,23 @@ key length 0.
 (`CMP_NE fn8(),0`) is therefore constant for this binary: the callback-9 arm
 is dead for every username/serial, not merely unobserved. The order of the
 three commands inside `0x264a60` is inferred from their effects, not traced.
+
+## Step 2 — Cleanup and return after HALT
+
+[Evidence](serial_cpp_evidence/cleanup_return.json). From the verified
+cleanup entry `22b0af`:
+
+| RVA | Effect |
+|---|---|
+| `229750` | `VirtualFree(ctx[0x1190], 0, MEM_RELEASE)` of the generated thunk pool; clear pointer/size |
+| `22b0d6` loop | `out[i] = R[i]` for `i ∈ [r12, 24)` via `232e00 → 1ee650` (decoded virtual registers) |
+| `22b10f` | `memset(bytecode, 0, 0xa76)` |
+| `22b138` | result = `1ee310` = logical control 3, which HALT sets to **0** |
+| `22b148` | `1edd60`: destroy the `std::function` holding the callback receiver (`ctx+0xb0`) |
+| `22b156…22b18e` | four vector frees and one more `std::function` destroy; cookie check; `ret result` |
+
+**What the host sees.** The adapter `0x39d740` calls `0x22a120` and then
+returns 0 without reading the result or `out[24]` (both live in its own
+frame). The only host-visible effect of Serial-VM is therefore the in-place
+transformation of `work`'s bytes through callback 22. The cleanup itself is
+established statically; the emulator stops at the `VirtualFree` import.
