@@ -1,0 +1,106 @@
+{
+ "chain": [
+  "main dispatcher 0x396990 case 11 @0x396c36",
+  "outer wrapper 0x264a60 (virtualized, 36 KB, not analysed)",
+  "std::function lambda vtable 0x3f19f0 (_Func_impl_no_alloc<lambda_487f57e9...>), operator() 0x39d740",
+  "Serial-VM dispatcher 0x22a120(out=rbp-0x48, count=24, callback receiver)"
+ ],
+ "lambda_captures": {
+  "+0x08": "std::string* work (handler-11 local rsp+0x30)",
+  "+0x10": "std::string* input = ctx+0x10 (serial)",
+  "+0x18": "std::string* key (handler-11 local rbp-0x10 = string_decoder(7), empty)",
+  "+0x20": "std::string* output (handler-11 local rbp-0x40, later moved into ctx+0x20)"
+ },
+ "lambda_commands": {
+  "0": "work = *input (0x3984e0 assign, after optional reset 0x3997c0)",
+  "1": "Serial-VM over work.data()/work.size() with key; receiver vtable 0x3f1820 -> 0x39d940 -> switch 0x232e20",
+  "2": "*output = work"
+ },
+ "receiver_fields": [
+  {
+   "field": "R0",
+   "type": "int32 i",
+   "source": "frame rsp+0x24",
+   "role": "loop-1 index / idx<256"
+  },
+  {
+   "field": "R1",
+   "type": "uint8 S[256]",
+   "source": "frame rbp+0xc0 (zeroed 0xc0..)",
+   "role": "byte table"
+  },
+  {
+   "field": "R2",
+   "type": "uint8 j",
+   "source": "frame rsp+0x20",
+   "role": "loop-2 accumulator"
+  },
+  {
+   "field": "R3",
+   "type": "std::string* key",
+   "source": "*(lambda+0x18) = handler-11 local built from string_decoder(7) = \"\"",
+   "role": "key"
+  },
+  {
+   "field": "R4",
+   "type": "uint64 keylen",
+   "source": "frame rbp-0x58 (uninitialised until fn5)",
+   "role": "modulus for key index"
+  },
+  {
+   "field": "R5",
+   "type": "int32 i2",
+   "source": "frame rsp+0x28",
+   "role": "loop-2 index"
+  },
+  {
+   "field": "R6",
+   "type": "uint8 a",
+   "source": "frame rsp+0x21",
+   "role": "loop-3 cursor i"
+  },
+  {
+   "field": "R7",
+   "type": "uint8 b",
+   "source": "frame rsp+0x22",
+   "role": "loop-3 cursor j"
+  },
+  {
+   "field": "R8",
+   "type": "uint64 n",
+   "source": "frame rbp-0x50",
+   "role": "loop-3 byte counter"
+  },
+  {
+   "field": "R9",
+   "type": "uint64 len",
+   "source": "frame rsp+0x30 = work.size()",
+   "role": "data length"
+  },
+  {
+   "field": "R10",
+   "type": "uint8 k",
+   "source": "frame rsp+0x23",
+   "role": "keystream byte"
+  },
+  {
+   "field": "R11",
+   "type": "char* data",
+   "source": "frame rsp+0x38 = work.data() (SSO-aware)",
+   "role": "data buffer, transformed in place"
+  }
+ ],
+ "captured_values": {
+  "data": "serial01",
+  "data_length": 8,
+  "key_length": 0,
+  "cases": [
+   "seventeen_b",
+   "eleven_a",
+   "eleven_c"
+  ]
+ },
+ "key_provenance": "0x380840 slot 7 returns the empty string (PAFET_DES3_RECOVERY.md); constant in this binary, independent of username/serial",
+ "consequence": "Bifurcation 2392 (fn8()!=0) is constant-false for this binary: the callback-9 arm is statically dead for every input, not only unobserved.",
+ "scope": "Static disassembly of 0x396c36, 0x39d740 plus capture memory. The order in which 0x264a60 issues commands 0/1/2 is inferred from their effects, not traced through its virtual code."
+}
