@@ -1,0 +1,55 @@
+{
+ "case": "jack_xxxv_evidence/captures/seventeen_b",
+ "run_id": "7bd867db7fc64e81a7457e550335a7b2",
+ "user": "bob",
+ "executed": 46722,
+ "verified_steps": 45946,
+ "candidate_failure": "Serial-VM halted; native cleanup from 22b0af is not modeled",
+ "exceptions": 196,
+ "epochs": 1460,
+ "rekeys": 585,
+ "remaps": 1746,
+ "callbacks": 3188,
+ "emulated": {
+  "all_events_match": false,
+  "first_divergence": {
+   "classification": "model-digest",
+   "event": 1942002,
+   "name": "outer_header_end",
+   "pc": 1457,
+   "native_instructions": 845902274
+  },
+  "compared_events": 1942003,
+  "native_instructions": 845902274,
+  "delivery_count": 194
+ },
+ "negative_controls": [
+  {
+   "kind": "full-bytes",
+   "event": 374,
+   "first_divergence": {
+    "classification": "model",
+    "event": 374,
+    "name": "opcode_core",
+    "role": "Serial context",
+    "address": "0x3cd6fc1970",
+    "context_offset": "0x20",
+    "candidate": 213,
+    "native": 212,
+    "native_instructions": 188305
+   }
+  },
+  {
+   "kind": "digest",
+   "event": 1200,
+   "first_divergence": {
+    "classification": "model-digest",
+    "event": 1200,
+    "name": "outer_decoder",
+    "pc": 2626,
+    "native_instructions": 817425
+   }
+  }
+ ],
+ "note": "Pre-fix run: serial_windows fast path moved ctx+0xb5c; diverged at the first fast-path window move (step 45948). Kept as a counterexample; superseded by the fixed run."
+}

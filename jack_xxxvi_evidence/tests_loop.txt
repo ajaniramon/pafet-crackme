@@ -1,0 +1,18 @@
+test_cached_window_request_moves_nothing (devirt.test_serial_loop.Captured.test_cached_window_request_moves_nothing) ... ok
+test_callback_cases_follow_switch_232e20 (devirt.test_serial_loop.Captured.test_callback_cases_follow_switch_232e20) ... ok
+test_cold_candidate_without_native_engine_or_observations (devirt.test_serial_loop.Captured.test_cold_candidate_without_native_engine_or_observations) ... ok
+test_exception_delivery_enqueues_encoded_label_and_resumes_loop (devirt.test_serial_loop.Captured.test_exception_delivery_enqueues_encoded_label_and_resumes_loop) ... ok
+test_hundred_fifty_steps_cross_the_old_exception_frontier (devirt.test_serial_loop.Captured.test_hundred_fifty_steps_cross_the_old_exception_frontier) ... ok
+test_inconsistent_branch_request_is_refused (devirt.test_serial_loop.Captured.test_inconsistent_branch_request_is_refused) ... ok
+test_condition_scramble_is_zero_exactly_for_zero (devirt.test_serial_loop.Semantics.test_condition_scramble_is_zero_exactly_for_zero) ... ok
+test_native_alu_add_program_is_decoded_not_assumed (devirt.test_serial_loop.Semantics.test_native_alu_add_program_is_decoded_not_assumed) ... ok
+test_not_and_zero_extension_width_zero_is_zero (devirt.test_serial_loop.Semantics.test_not_and_zero_extension_width_zero_is_zero) ... ok
+test_registry_contains_recovered_families_once (devirt.test_serial_loop.Semantics.test_registry_contains_recovered_families_once) ... ok
+test_signed_and_equality_comparisons_on_edges (devirt.test_serial_loop.Semantics.test_signed_and_equality_comparisons_on_edges) ... ok
+test_cfg_loops_bifurcations_and_halt (devirt.test_serial_loop.Structure.test_cfg_loops_bifurcations_and_halt) ... ok
+test_static_program_is_closed_and_capture_independent (devirt.test_serial_loop.Structure.test_static_program_is_closed_and_capture_independent) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 13.584s
+
+OK

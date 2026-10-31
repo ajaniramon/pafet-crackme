@@ -1,0 +1,148 @@
+{
+ "rejected_windows_captures": [
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_a",
+   "status": "REJECTED_INCOMPLETE as a Windows capture",
+   "emulated_continuation_verified_steps": 1000,
+   "exceptions": 5,
+   "treatment": "Windows trace stops at external code during C++ exception dispatch; the continuation is only emulation evidence and is not counted for depth, domain or kernel coverage."
+  }
+ ],
+ "first_unsupported": [
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_a",
+   "verified_steps": 1000,
+   "candidate_failure": null,
+   "native_frontier": null
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_b",
+   "verified_steps": 1000,
+   "candidate_failure": null,
+   "native_frontier": null
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_c",
+   "verified_steps": 46722,
+   "candidate_failure": "Serial-VM halted; native cleanup from 22b0af is not modeled",
+   "native_frontier": {
+    "status": "UcError: Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+    "rip": "0x7ff90ff55da0",
+    "last_pe_rvas": [
+     "0x229752",
+     "0x229756",
+     "0x22975d",
+     "0x229760",
+     "0x229762",
+     "0x229769",
+     "0x22976b",
+     "0x229771"
+    ],
+    "extra_native_instructions": 884727649
+   }
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_a",
+   "verified_steps": 1000,
+   "candidate_failure": null,
+   "native_frontier": null
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_b",
+   "verified_steps": 46722,
+   "candidate_failure": "Serial-VM halted; native cleanup from 22b0af is not modeled",
+   "native_frontier": {
+    "status": "UcError: Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)",
+    "rip": "0x7ff90ff55da0",
+    "last_pe_rvas": [
+     "0x229752",
+     "0x229756",
+     "0x22975d",
+     "0x229760",
+     "0x229762",
+     "0x229769",
+     "0x22976b",
+     "0x229771"
+    ],
+    "extra_native_instructions": 860651596
+   }
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_c",
+   "verified_steps": 1000,
+   "candidate_failure": null,
+   "native_frontier": null
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_d",
+   "verified_steps": 1000,
+   "candidate_failure": null,
+   "native_frontier": null
+  }
+ ],
+ "negative_controls": [
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_c",
+   "controls": [
+    {
+     "kind": "full-bytes",
+     "event": 716,
+     "first_divergence": {
+      "classification": "model",
+      "event": 716,
+      "name": "opcode_core",
+      "role": "Serial context",
+      "address": "0xe3f31d1cd0",
+      "context_offset": "0x20",
+      "candidate": 237,
+      "native": 236,
+      "native_instructions": 277312
+     }
+    },
+    {
+     "kind": "digest",
+     "event": 1200,
+     "first_divergence": {
+      "classification": "model-digest",
+      "event": 1200,
+      "name": "job_end",
+      "pc": 1759,
+      "native_instructions": 458623
+     }
+    }
+   ]
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_b",
+   "controls": [
+    {
+     "kind": "full-bytes",
+     "event": 374,
+     "first_divergence": {
+      "classification": "model",
+      "event": 374,
+      "name": "opcode_core",
+      "role": "Serial context",
+      "address": "0x3cd6fc1970",
+      "context_offset": "0x20",
+      "candidate": 213,
+      "native": 212,
+      "native_instructions": 188305
+     }
+    },
+    {
+     "kind": "digest",
+     "event": 1200,
+     "first_divergence": {
+      "classification": "model-digest",
+      "event": 1200,
+      "name": "outer_decoder",
+      "pc": 2626,
+      "native_instructions": 817425
+     }
+    }
+   ]
+  }
+ ],
+ "scope": "Negative controls are synthetic corruptions; no natural guard-failure equivalence is claimed."
+}

@@ -1,0 +1,10 @@
+process_a PARTIAL steps= 1 native= 1078
+process_b PASS steps= 3 native= 17812
+process_c REJECTED before candidate/replay
+process_d PASS steps= 3 native= 17812
+process_e PARTIAL steps= 1 native= 1078
+process_f PARTIAL steps= 1 native= 1078
+process_g PARTIAL steps= 1 native= 1080
+process_h PASS steps= 3 native= 17874
+process_i PARTIAL steps= 2 native= 2610
+opcode1 PASS steps= 3 native= 17816

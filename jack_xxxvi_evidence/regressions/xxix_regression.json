@@ -1,0 +1,952 @@
+{
+  "all_claimed_checks_pass": true,
+  "captures": [
+    {
+      "case": "decoder_len16",
+      "kind": "decoder-gap",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 5719,
+        "candidate_instructions": 5719,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 18,
+          "pc": "0x7ff60a25e0ab",
+          "different_bits": "0x10",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 5719,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 70,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff60a070000",
+          "cookie": "0xe97145afd8c",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "semantic": {
+        "status": "unknown",
+        "reason": "Unimplemented decoder map refresh",
+        "first_unmodeled_native_rva": "0x229df4",
+        "candidate_result_emitted": false
+      }
+    },
+    {
+      "case": "domain1_first",
+      "kind": "later-instruction",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 2757,
+        "candidate_instructions": 2757,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 20,
+          "pc": "0x7ff698fd2830",
+          "different_bits": "0x80",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2757,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x4798c7ef2424",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "first_decode_v2",
+      "kind": "decoder",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 5658,
+        "candidate_instructions": 5658,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 18,
+          "pc": "0x7ff698fbe0ab",
+          "different_bits": "0x14",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 5658,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 70,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0xbd6202847687",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "semantic": {
+        "all_virtual_regions_match": true,
+        "native_instructions_to_boundary": 5658,
+        "boundary_rva": "0x22a115",
+        "dispatch": null,
+        "result": {
+          "pc": 0,
+          "raw_header": "0x21",
+          "opcode": 1,
+          "next_pc": 1,
+          "materialized_bytes": 26,
+          "new_materializations": 1,
+          "next_native_state": "0x825f"
+        },
+        "regions": [
+          {
+            "role": "declared root rcx",
+            "bytes": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "4670ed7604aaf99186a9fed0157d926f71b25a13e03caa29caee1230e4f88fd6",
+            "native_sha256": "4670ed7604aaf99186a9fed0157d926f71b25a13e03caa29caee1230e4f88fd6"
+          },
+          {
+            "role": "pointed rcx+0x1d0",
+            "bytes": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+            "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+          },
+          {
+            "role": "pointed rcx+0x48",
+            "bytes": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+            "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+          },
+          {
+            "role": "pointed rcx+0xb10",
+            "bytes": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "pointed rcx+0xb50",
+            "bytes": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "pointed rcx+0x180",
+            "bytes": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "ee74bfc59022ec8ea3a375f689214dc4bf2c61456e96f09a168f6e5648d69804",
+            "native_sha256": "ee74bfc59022ec8ea3a375f689214dc4bf2c61456e96f09a168f6e5648d69804"
+          },
+          {
+            "role": "pointed rcx+0x188",
+            "bytes": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47",
+            "native_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47"
+          }
+        ],
+        "scope": "Whole declared virtual context and pointed roots; machine call-stack scratch, GPR temporaries and native flags are not outputs of the reduced semantic model."
+      }
+    },
+    {
+      "case": "first_opcode",
+      "kind": "later-instruction",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 2599,
+        "candidate_instructions": 2599,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 14,
+          "pc": "0x7ff698fe4971",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2599,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x8619bd542ecf",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "first_remap",
+      "kind": "remap",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 61,
+        "candidate_instructions": 61,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 7,
+          "pc": "0x7ff698fc1f64",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 61,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 67,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x59ec64096b2d",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "first_resolve",
+      "kind": "resolver",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 10,
+        "candidate_instructions": 10,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": null,
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 10,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 67,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x4a4f85412727",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      }
+    },
+    {
+      "case": "opcode1",
+      "kind": "instruction",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 17816,
+        "candidate_instructions": 17816,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 21,
+          "pc": "0x7ff698fc8257",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 17816,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x7263bbfec30e",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "semantic": {
+        "all_virtual_regions_match": true,
+        "native_instructions_to_boundary": 369,
+        "boundary_rva": "0x1f8358",
+        "dispatch": {
+          "opcode": 1,
+          "domain": 0,
+          "slot": 5,
+          "thunk": "0x227cc4800c0",
+          "operation": "xor",
+          "body_rva": 2064912
+        },
+        "result": {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ]
+        },
+        "regions": [
+          {
+            "role": "declared root rcx",
+            "bytes": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "e342ffedc02b545b988b4c11e867323714e769a43150a9d9157af4d7b5b7ac55",
+            "native_sha256": "e342ffedc02b545b988b4c11e867323714e769a43150a9d9157af4d7b5b7ac55"
+          },
+          {
+            "role": "pointed rcx+0x1d0",
+            "bytes": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+            "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+          },
+          {
+            "role": "pointed rcx+0x48",
+            "bytes": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+            "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+          },
+          {
+            "role": "pointed rcx+0xb10",
+            "bytes": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "pointed rcx+0xb50",
+            "bytes": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "pointed rcx+0x180",
+            "bytes": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2",
+            "native_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2"
+          },
+          {
+            "role": "pointed rcx+0x188",
+            "bytes": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1",
+            "native_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1"
+          },
+          {
+            "role": "pointed rcx+0x1190",
+            "bytes": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc",
+            "native_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc"
+          }
+        ],
+        "scope": "Whole declared virtual context and pointed roots; machine call-stack scratch, GPR temporaries and native flags are not outputs of the reduced semantic model."
+      }
+    },
+    {
+      "case": "opcode1_len16",
+      "kind": "instruction",
+      "windows_unicorn": {
+        "coverage": "complete",
+        "instructions_compared": 1079,
+        "candidate_instructions": 1079,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 14,
+          "pc": "0x7ff698fd92b1",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 1079,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x3851be172183",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "semantic": {
+        "all_virtual_regions_match": true,
+        "native_instructions_to_boundary": 369,
+        "boundary_rva": "0x2093d8",
+        "dispatch": {
+          "opcode": 1,
+          "domain": 1,
+          "slot": 24,
+          "thunk": "0x16965360ae0",
+          "operation": "double-not",
+          "body_rva": 2134672
+        },
+        "result": {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ]
+        },
+        "regions": [
+          {
+            "role": "declared root rcx",
+            "bytes": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "8ab656f5496b56a07c3a4f2026a6a89cc63090a6909f460be334d4610701dfe8",
+            "native_sha256": "8ab656f5496b56a07c3a4f2026a6a89cc63090a6909f460be334d4610701dfe8"
+          },
+          {
+            "role": "pointed rcx+0x1d0",
+            "bytes": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+            "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+          },
+          {
+            "role": "pointed rcx+0x48",
+            "bytes": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+            "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+          },
+          {
+            "role": "pointed rcx+0xb10",
+            "bytes": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "pointed rcx+0xb50",
+            "bytes": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "pointed rcx+0x180",
+            "bytes": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "bdee45e80709eb452969badc1aac14833c0bfcdfe7c3e978fc5b420f6e596841",
+            "native_sha256": "bdee45e80709eb452969badc1aac14833c0bfcdfe7c3e978fc5b420f6e596841"
+          },
+          {
+            "role": "pointed rcx+0x188",
+            "bytes": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "ab51c85956ee20e082a433d6fbd2686b1623c116eff16beffaba0f756e0784f5",
+            "native_sha256": "ab51c85956ee20e082a433d6fbd2686b1623c116eff16beffaba0f756e0784f5"
+          },
+          {
+            "role": "pointed rcx+0x1190",
+            "bytes": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "c8562cd17dc04d160b655f5709b7283c22551945e12a4b23c37b9e92e6775644",
+            "native_sha256": "c8562cd17dc04d160b655f5709b7283c22551945e12a4b23c37b9e92e6775644"
+          }
+        ],
+        "scope": "Whole declared virtual context and pointed roots; machine call-stack scratch, GPR temporaries and native flags are not outputs of the reduced semantic model."
+      }
+    }
+  ],
+  "native_windows_instructions": 35699,
+  "first_instruction_semantic_cases": 2,
+  "helper_validation": {
+    "permutation_inputs": 256,
+    "materializer_calls": 309,
+    "native_helper_calls": 565,
+    "cases": [
+      {
+        "case": "zero_shadow",
+        "blocks": 103,
+        "all_buffer_bytes_counter_bitmap_match": true,
+        "sha256": "3da8e439937fb6d275e309f2763248f1144c883853ed6c74f64f9298643bf7bf"
+      },
+      {
+        "case": "nonzero_shadow",
+        "blocks": 103,
+        "all_buffer_bytes_counter_bitmap_match": true,
+        "sha256": "ba812a9966ea9a72714598020dc839a8e73ea59e0b351bd04e1b96e0b7a0eac1"
+      },
+      {
+        "case": "protected_windows",
+        "blocks": 103,
+        "all_buffer_bytes_counter_bitmap_match": true,
+        "sha256": "98a9ee001123cd2b9ceb4da7edb3ab43c0f73dab897ff733b98bea6ab54dbff0"
+      }
+    ],
+    "unmasked_blob_sha256": "3da8e439937fb6d275e309f2763248f1144c883853ed6c74f64f9298643bf7bf",
+    "physical_block_starts": [
+      0,
+      2028,
+      1742,
+      572,
+      78,
+      156,
+      2496,
+      1794,
+      806,
+      2522,
+      1508,
+      1196,
+      2392,
+      962,
+      832,
+      1768,
+      2314,
+      260,
+      468,
+      1638,
+      1170,
+      2184,
+      2054,
+      52,
+      26,
+      1144,
+      104,
+      1118,
+      2652,
+      2106,
+      416,
+      1352,
+      1976,
+      312,
+      2626,
+      1586,
+      286,
+      338,
+      1716,
+      2470,
+      2002,
+      1248,
+      494,
+      780,
+      1378,
+      2366,
+      884,
+      1534,
+      1092,
+      1040,
+      1404,
+      936,
+      702,
+      364,
+      2236,
+      676,
+      910,
+      2158,
+      1820,
+      2574,
+      1222,
+      2600,
+      1950,
+      390,
+      858,
+      2548,
+      1560,
+      2262,
+      1898,
+      1326,
+      624,
+      1482,
+      546,
+      728,
+      130,
+      988,
+      1066,
+      442,
+      2288,
+      208,
+      234,
+      754,
+      1924,
+      2132,
+      1430,
+      2444,
+      598,
+      1014,
+      650,
+      1300,
+      1274,
+      182,
+      1664,
+      1612,
+      1846,
+      2418,
+      520,
+      1872,
+      1456,
+      2340,
+      2080,
+      2210,
+      1690
+    ],
+    "scope": "Original x64 helpers in isolated Unicorn with synthetic initialized memory. These are not additional Windows captures or proof of 103 opcode semantics."
+  },
+  "source_sha256": {
+    "devirt/serial.py": "1764285bcf128076da0d3ebb57a22868e2baad37590e74fbc0c7f7de2970ccf9",
+    "devirt/serial_validate.py": "b0fbeb3da18b66ac3a66cdf3a212c7479b95a065095fc1361853bec8dbb8fc4e",
+    "scripts/pafet_native_step_capture.py": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "scripts/pafet_state_contract.py": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54",
+    "scripts/pafet_state_replay.py": "a0c2ae798c03eba710853c8a46b3dea263319d631fb26478b9134a876231bd6f",
+    "scripts/pafet_state_compare.py": "e24717c8fd31f6fb8f6f0394cf2bc097a93623fe4365b6d63e3b514d2d2e4c21",
+    "scripts/pafet_semantic_probe.py": "0e6ed669117d9a7debc9034056fe64df9060770b4598e074cc448b7ae15f0303",
+    "scripts/pafet_audit_xxiv.py": "d9101bb4a3d1929c9fd14d2272b1cd7786a5f5c62044dd6bfdb56f787fa8870a",
+    "scripts/pafet_serial_audit_xxix.py": "ce1784b85ac2b7d2598c6396fe9ffa637c2ac638d046857c78e3940c0588c749"
+  },
+  "scope": "First opcode and bounded decoder routes; explicit unknown map-refresh branch; no full Serial VM or RC4-program claim."
+}

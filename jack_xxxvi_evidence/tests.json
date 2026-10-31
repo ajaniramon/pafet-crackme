@@ -1,0 +1,23 @@
+{
+ "devirt_ir_serial": {
+  "tests": 77,
+  "result": "OK",
+  "file": "tests_devirt_and_validators_after_fix.txt",
+  "note": "Run after the serial_windows fix; the same output also re-runs the XXXV and XXXIV validators."
+ },
+ "state_contract": {
+  "tests": 25,
+  "result": "OK",
+  "files": [
+   "tests_state.txt",
+   "tests_state_optimized.txt"
+  ]
+ },
+ "serial_loop": {
+  "tests": 13,
+  "result": "OK",
+  "file": "tests_loop.txt"
+ },
+ "total_distinct": 115,
+ "historical_validators": "regressions.json (XXVIII-XXXV, all exit 0)"
+}

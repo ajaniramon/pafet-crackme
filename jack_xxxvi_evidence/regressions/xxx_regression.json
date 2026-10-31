@@ -1,0 +1,3942 @@
+{
+  "all_required_checks_pass": true,
+  "rows": [
+    {
+      "case": "jack_xxx_evidence/captures/chain_a",
+      "expectation": "continuous",
+      "run_id": "d8edc2d740a940f6941e08de39ea4fa1",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 2575,
+        "candidate_instructions": 2575,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 27,
+          "pc": "0x7ff73eec92fa",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2575,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff73ecc0000",
+          "cookie": "0xe9799237a27a",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "opcode_core",
+            "native_rva": "0x2093d8",
+            "native_instructions": 369,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xce0af1690",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "6caa513456a18d3e5f6e5f04faffbe595b3ee46724371fece57d3f61db61a4d7",
+                "native_sha256": "6caa513456a18d3e5f6e5f04faffbe595b3ee46724371fece57d3f61db61a4d7"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1d69170b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1d69170bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x1d691706ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x1d691706690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xce0af2cb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c",
+                "native_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xce0af3cb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b",
+                "native_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xce0af28d0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+                "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x1d691940000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+                "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+                "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x209934",
+            "native_instructions": 1051,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xce0af1690",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "5d1c2fcaf6fe0559c5e99f9ccc84cf40fa7e736ede65829448276771f8b1ff20",
+                "native_sha256": "5d1c2fcaf6fe0559c5e99f9ccc84cf40fa7e736ede65829448276771f8b1ff20"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1d69170b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354",
+                "native_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1d69170bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf",
+                "native_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x1d691706ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x1d691706690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xce0af2cb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c",
+                "native_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xce0af3cb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b",
+                "native_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xce0af28d0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+                "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x1d691940000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+                "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+                "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "handler_entry",
+            "native_rva": "0x202800",
+            "native_instructions": 1495,
+            "boundary_found": true,
+            "pc": 6,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xce0af1690",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "516acf53bbd1283049c6c430fcd59585e3970086659da1154c4742176fac86fb",
+                "native_sha256": "516acf53bbd1283049c6c430fcd59585e3970086659da1154c4742176fac86fb"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1d69170b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354",
+                "native_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1d69170bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf",
+                "native_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x1d691706ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x1d691706690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xce0af2cb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c",
+                "native_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xce0af3cb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b",
+                "native_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xce0af28d0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+                "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x1d691940000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+                "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+                "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "opcode_core",
+            "native_rva": "0x2029cf",
+            "native_instructions": 1903,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xce0af1690",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "73f532fb991a7e8c2dbdaccec049580a7b553cd1a602522d6578d7dd93a160b0",
+                "native_sha256": "73f532fb991a7e8c2dbdaccec049580a7b553cd1a602522d6578d7dd93a160b0"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1d69170b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354",
+                "native_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1d69170bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf",
+                "native_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x1d691706ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x1d691706690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xce0af2cb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7",
+                "native_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xce0af3cb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d",
+                "native_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xce0af28d0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+                "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x1d691940000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+                "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+                "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x202ed6",
+            "native_instructions": 2575,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xce0af1690",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "ababcbfd659fc7524a441e2a36618bdb22e10b0e34b1b012f04506b1509a36b0",
+                "native_sha256": "ababcbfd659fc7524a441e2a36618bdb22e10b0e34b1b012f04506b1509a36b0"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1d69170b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8244980556181f281d33fbb7f00e562d8d931097c2c0066c55e24df3afe3f563",
+                "native_sha256": "8244980556181f281d33fbb7f00e562d8d931097c2c0066c55e24df3afe3f563"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1d69170bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "b6bff42f9704feb87ea52b3f6a1b78755aab0cd728e40953902bc95edb7e205c",
+                "native_sha256": "b6bff42f9704feb87ea52b3f6a1b78755aab0cd728e40953902bc95edb7e205c"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x1d691706ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x1d691706690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xce0af2cb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7",
+                "native_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xce0af3cb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d",
+                "native_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xce0af28d0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+                "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x1d691940000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+                "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+                "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [
+        {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ],
+          "virtual_pc": 0,
+          "native_body": "0x209290",
+          "boundary_pc": 5,
+          "boundary_sp": 1,
+          "boundary_phase": "decode"
+        },
+        {
+          "opcode": 5,
+          "mnemonic": "STORE_REG_U16",
+          "operand": 16,
+          "register": 16,
+          "value": 4768527142241613331,
+          "next_pc": 8,
+          "virtual_pc": 5,
+          "native_body": "0x202800",
+          "boundary_pc": 8,
+          "boundary_sp": 0,
+          "boundary_phase": "decode"
+        }
+      ],
+      "unsupported": null,
+      "level_C": true,
+      "status": "level-C",
+      "final_phase": "decode",
+      "domains": [
+        1,
+        1
+      ],
+      "map_probes": 0,
+      "final_pc": 8,
+      "final_sp": 0
+    },
+    {
+      "case": "jack_xxx_evidence/captures/chain_b",
+      "expectation": "continuous",
+      "run_id": "4f210b58bf8a416e98a8a4bcfb4b8945",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 64038,
+        "candidate_instructions": 64038,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 14,
+          "pc": "0x7ff73eedd551",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 64038,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff73ecc0000",
+          "cookie": "0xbf90d8db8c2f",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "opcode_core",
+            "native_rva": "0x21d67f",
+            "native_instructions": 370,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xfd688f1bd0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "8b1775c4bd397177665428a5e6b2d607916f6be409dc123b7dc0954d6074074f",
+                "native_sha256": "8b1775c4bd397177665428a5e6b2d607916f6be409dc123b7dc0954d6074074f"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2bfc92db470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2bfc92dbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2bfc92d66d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2bfc92d6770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xfd688f31f0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "0550401d344bd22785ba6f8c41a1a1d37ba322b8e4314df164a76240e4cde9d7",
+                "native_sha256": "0550401d344bd22785ba6f8c41a1a1d37ba322b8e4314df164a76240e4cde9d7"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xfd688f41f0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "b58b66fbe568e5afed581bed4f8cd7f84797180aba3703edc580c87ab9ea902d",
+                "native_sha256": "b58b66fbe568e5afed581bed4f8cd7f84797180aba3703edc580c87ab9ea902d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xfd688f2e10",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84",
+                "native_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2bfc9280000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0",
+                "native_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f",
+                "native_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x21dbdb",
+            "native_instructions": 1052,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xfd688f1bd0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "1a1c17005e4ea1a30a5ff1e53018909152824b5570144e946f4555a7407c67d6",
+                "native_sha256": "1a1c17005e4ea1a30a5ff1e53018909152824b5570144e946f4555a7407c67d6"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2bfc92db470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "ccc3b934830bdbffe2f0962518dbcb593aa63aa9edc522be5da31d87c753e468",
+                "native_sha256": "ccc3b934830bdbffe2f0962518dbcb593aa63aa9edc522be5da31d87c753e468"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2bfc92dbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "6eb66bb8811eb2bf6e4bf54aa9bf92e77dc4398d13b1b1fd700fae02bae1a810",
+                "native_sha256": "6eb66bb8811eb2bf6e4bf54aa9bf92e77dc4398d13b1b1fd700fae02bae1a810"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2bfc92d66d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2bfc92d6770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xfd688f31f0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "0550401d344bd22785ba6f8c41a1a1d37ba322b8e4314df164a76240e4cde9d7",
+                "native_sha256": "0550401d344bd22785ba6f8c41a1a1d37ba322b8e4314df164a76240e4cde9d7"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xfd688f41f0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "b58b66fbe568e5afed581bed4f8cd7f84797180aba3703edc580c87ab9ea902d",
+                "native_sha256": "b58b66fbe568e5afed581bed4f8cd7f84797180aba3703edc580c87ab9ea902d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xfd688f2e10",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84",
+                "native_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2bfc9280000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0",
+                "native_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f",
+                "native_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "handler_entry",
+            "native_rva": "0x202800",
+            "native_instructions": 1494,
+            "boundary_found": true,
+            "pc": 6,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xfd688f1bd0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "ec3d01203d6b79043a8e23bf49fa7f5c9f0aea5cc6d120286570d544f6c0434e",
+                "native_sha256": "ec3d01203d6b79043a8e23bf49fa7f5c9f0aea5cc6d120286570d544f6c0434e"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2bfc92db470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "ccc3b934830bdbffe2f0962518dbcb593aa63aa9edc522be5da31d87c753e468",
+                "native_sha256": "ccc3b934830bdbffe2f0962518dbcb593aa63aa9edc522be5da31d87c753e468"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2bfc92dbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "6eb66bb8811eb2bf6e4bf54aa9bf92e77dc4398d13b1b1fd700fae02bae1a810",
+                "native_sha256": "6eb66bb8811eb2bf6e4bf54aa9bf92e77dc4398d13b1b1fd700fae02bae1a810"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2bfc92d66d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2bfc92d6770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xfd688f31f0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "0550401d344bd22785ba6f8c41a1a1d37ba322b8e4314df164a76240e4cde9d7",
+                "native_sha256": "0550401d344bd22785ba6f8c41a1a1d37ba322b8e4314df164a76240e4cde9d7"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xfd688f41f0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "b58b66fbe568e5afed581bed4f8cd7f84797180aba3703edc580c87ab9ea902d",
+                "native_sha256": "b58b66fbe568e5afed581bed4f8cd7f84797180aba3703edc580c87ab9ea902d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xfd688f2e10",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84",
+                "native_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2bfc9280000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0",
+                "native_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f",
+                "native_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "opcode_core",
+            "native_rva": "0x2029cf",
+            "native_instructions": 1902,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xfd688f1bd0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "27603285119468ddfeb4d0055cfeea29a6e0aa37556d6869fe75acd29fc819ce",
+                "native_sha256": "27603285119468ddfeb4d0055cfeea29a6e0aa37556d6869fe75acd29fc819ce"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2bfc92db470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "ccc3b934830bdbffe2f0962518dbcb593aa63aa9edc522be5da31d87c753e468",
+                "native_sha256": "ccc3b934830bdbffe2f0962518dbcb593aa63aa9edc522be5da31d87c753e468"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2bfc92dbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "6eb66bb8811eb2bf6e4bf54aa9bf92e77dc4398d13b1b1fd700fae02bae1a810",
+                "native_sha256": "6eb66bb8811eb2bf6e4bf54aa9bf92e77dc4398d13b1b1fd700fae02bae1a810"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2bfc92d66d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2bfc92d6770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xfd688f31f0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "93d6a3b8d5684d0aca7ef60e5ef5aa2939111408d0662efdc6c5db255ff837f5",
+                "native_sha256": "93d6a3b8d5684d0aca7ef60e5ef5aa2939111408d0662efdc6c5db255ff837f5"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xfd688f41f0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "58817ee5e37fef650fdacdee5d42c842e6dd321ea9c29bd18255c27d8ff21f4d",
+                "native_sha256": "58817ee5e37fef650fdacdee5d42c842e6dd321ea9c29bd18255c27d8ff21f4d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xfd688f2e10",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84",
+                "native_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2bfc9280000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0",
+                "native_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f",
+                "native_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "return_handoff",
+            "native_rva": "0x20350f",
+            "native_instructions": 2600,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xfd688f1bd0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "b7ff8f182c0c01119d3ab7869355fc1f077761bc66256dbfef0f4c8a775f36cb",
+                "native_sha256": "b7ff8f182c0c01119d3ab7869355fc1f077761bc66256dbfef0f4c8a775f36cb"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2bfc92db470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "3fd8149b6942e0af8baae3ad853bdb564744efd334b7e16126fdc01e97046b7d",
+                "native_sha256": "3fd8149b6942e0af8baae3ad853bdb564744efd334b7e16126fdc01e97046b7d"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2bfc92dbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "f5e519faa0ce6787da1bf8cab59d0c45240accebeadf68d13103d4dccd6896dd",
+                "native_sha256": "f5e519faa0ce6787da1bf8cab59d0c45240accebeadf68d13103d4dccd6896dd"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2bfc92d66d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2bfc92d6770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xfd688f31f0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "93d6a3b8d5684d0aca7ef60e5ef5aa2939111408d0662efdc6c5db255ff837f5",
+                "native_sha256": "93d6a3b8d5684d0aca7ef60e5ef5aa2939111408d0662efdc6c5db255ff837f5"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xfd688f41f0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "58817ee5e37fef650fdacdee5d42c842e6dd321ea9c29bd18255c27d8ff21f4d",
+                "native_sha256": "58817ee5e37fef650fdacdee5d42c842e6dd321ea9c29bd18255c27d8ff21f4d"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xfd688f2e10",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84",
+                "native_sha256": "c399bc17930c3aa341d1e6ff79144683dc13e1a605c87e66cfbcc7589fe93d84"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2bfc9280000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0",
+                "native_sha256": "ebc2d8e9df2b0d97af4ec7e0be753f4c0d5270d5e87dd2aa00726585f1b581c0"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f",
+                "native_sha256": "40ac9d4a9a4ba4b2327717538a4c73a74107bccffa8326e927901a3cbf29581f"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [
+        {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ],
+          "virtual_pc": 0,
+          "native_body": "0x21d530",
+          "boundary_pc": 5,
+          "boundary_sp": 1,
+          "boundary_phase": "decode"
+        },
+        {
+          "opcode": 5,
+          "mnemonic": "STORE_REG_U16",
+          "operand": 16,
+          "register": 16,
+          "value": 4768527142241613331,
+          "next_pc": 8,
+          "virtual_pc": 5,
+          "native_body": "0x202800",
+          "boundary_pc": 8,
+          "boundary_sp": 0,
+          "boundary_phase": "return_handoff"
+        }
+      ],
+      "unsupported": null,
+      "level_C": true,
+      "status": "level-C",
+      "final_phase": "return_handoff",
+      "domains": [
+        3,
+        1
+      ],
+      "map_probes": 0,
+      "final_pc": 8,
+      "final_sp": 0
+    },
+    {
+      "case": "jack_xxx_evidence/captures/chain_c",
+      "expectation": "rejected-incomplete",
+      "status": "rejected-incomplete",
+      "level_A": "not-claimed",
+      "level_C": false,
+      "reason": "frame trace limit",
+      "observed_prefix_instructions": 100001
+    },
+    {
+      "case": "jack_xxx_evidence/captures/chain_d",
+      "expectation": "rejected-incomplete",
+      "status": "rejected-incomplete",
+      "level_A": "not-claimed",
+      "level_C": false,
+      "reason": "frame trace limit",
+      "observed_prefix_instructions": 100001
+    },
+    {
+      "case": "jack_xxx_evidence/captures/chain_e",
+      "expectation": "continuous",
+      "run_id": "32f1800898434565ab8c056073749644",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 2575,
+        "candidate_instructions": 2575,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 14,
+          "pc": "0x7ff73eedd551",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2575,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff73ecc0000",
+          "cookie": "0x62df49eed81d",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "opcode_core",
+            "native_rva": "0x21d67f",
+            "native_instructions": 370,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x34feef1da0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "1b2c04d432029a3cfb6360396369a85cfdbd4a054ba04ae55846569216ff08f4",
+                "native_sha256": "1b2c04d432029a3cfb6360396369a85cfdbd4a054ba04ae55846569216ff08f4"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x213dcf0b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "shadow",
+                "address": "0x213dcf0bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x213dcf06ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x213dcf06690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x34feef33c0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "79869f01bf31891d882738bf7c1418c0d6854153389906281d842898845268f6",
+                "native_sha256": "79869f01bf31891d882738bf7c1418c0d6854153389906281d842898845268f6"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x34feef43c0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "4c824d66ea3a667e36b18d23310a904ca84f7383d534c65831934e239939f5b6",
+                "native_sha256": "4c824d66ea3a667e36b18d23310a904ca84f7383d534c65831934e239939f5b6"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x34feef2fe0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c",
+                "native_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x213dce70000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c",
+                "native_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b",
+                "native_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x21dbdb",
+            "native_instructions": 1052,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x34feef1da0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "9e524658c346ef15e0b55c6f44af2e1ad2f02bc1c4ee4cf6119f98e1e88aa19e",
+                "native_sha256": "9e524658c346ef15e0b55c6f44af2e1ad2f02bc1c4ee4cf6119f98e1e88aa19e"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x213dcf0b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "79cab6e737e5af7678b2810163bdb769e6431f7fb2c9e8c98c0b9a6fd137640c",
+                "native_sha256": "79cab6e737e5af7678b2810163bdb769e6431f7fb2c9e8c98c0b9a6fd137640c"
+              },
+              {
+                "role": "shadow",
+                "address": "0x213dcf0bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "37bb16fa6e1cda136391ba6991f699b2ba328443a8e7c693fc39a8681515f100",
+                "native_sha256": "37bb16fa6e1cda136391ba6991f699b2ba328443a8e7c693fc39a8681515f100"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x213dcf06ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x213dcf06690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x34feef33c0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "79869f01bf31891d882738bf7c1418c0d6854153389906281d842898845268f6",
+                "native_sha256": "79869f01bf31891d882738bf7c1418c0d6854153389906281d842898845268f6"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x34feef43c0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "4c824d66ea3a667e36b18d23310a904ca84f7383d534c65831934e239939f5b6",
+                "native_sha256": "4c824d66ea3a667e36b18d23310a904ca84f7383d534c65831934e239939f5b6"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x34feef2fe0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c",
+                "native_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x213dce70000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c",
+                "native_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b",
+                "native_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "handler_entry",
+            "native_rva": "0x20fa70",
+            "native_instructions": 1496,
+            "boundary_found": true,
+            "pc": 6,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x34feef1da0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "407eb2d60d04b9a97a52bed69b89d4025bad793f5889a71bd5fa09954c00fa97",
+                "native_sha256": "407eb2d60d04b9a97a52bed69b89d4025bad793f5889a71bd5fa09954c00fa97"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x213dcf0b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "79cab6e737e5af7678b2810163bdb769e6431f7fb2c9e8c98c0b9a6fd137640c",
+                "native_sha256": "79cab6e737e5af7678b2810163bdb769e6431f7fb2c9e8c98c0b9a6fd137640c"
+              },
+              {
+                "role": "shadow",
+                "address": "0x213dcf0bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "37bb16fa6e1cda136391ba6991f699b2ba328443a8e7c693fc39a8681515f100",
+                "native_sha256": "37bb16fa6e1cda136391ba6991f699b2ba328443a8e7c693fc39a8681515f100"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x213dcf06ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x213dcf06690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x34feef33c0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "79869f01bf31891d882738bf7c1418c0d6854153389906281d842898845268f6",
+                "native_sha256": "79869f01bf31891d882738bf7c1418c0d6854153389906281d842898845268f6"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x34feef43c0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "4c824d66ea3a667e36b18d23310a904ca84f7383d534c65831934e239939f5b6",
+                "native_sha256": "4c824d66ea3a667e36b18d23310a904ca84f7383d534c65831934e239939f5b6"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x34feef2fe0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c",
+                "native_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x213dce70000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c",
+                "native_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b",
+                "native_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "opcode_core",
+            "native_rva": "0x20fc3f",
+            "native_instructions": 1904,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x34feef1da0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "2ff2253651a2358974b862200a4bce4e9566ac84fc32868b3a8853ddeed0cb6a",
+                "native_sha256": "2ff2253651a2358974b862200a4bce4e9566ac84fc32868b3a8853ddeed0cb6a"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x213dcf0b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "79cab6e737e5af7678b2810163bdb769e6431f7fb2c9e8c98c0b9a6fd137640c",
+                "native_sha256": "79cab6e737e5af7678b2810163bdb769e6431f7fb2c9e8c98c0b9a6fd137640c"
+              },
+              {
+                "role": "shadow",
+                "address": "0x213dcf0bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "37bb16fa6e1cda136391ba6991f699b2ba328443a8e7c693fc39a8681515f100",
+                "native_sha256": "37bb16fa6e1cda136391ba6991f699b2ba328443a8e7c693fc39a8681515f100"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x213dcf06ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x213dcf06690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x34feef33c0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "f85f68b5906d3cdae9ad7e10f1a104dd76f0375bc68f42775bc08014bd2fa7cd",
+                "native_sha256": "f85f68b5906d3cdae9ad7e10f1a104dd76f0375bc68f42775bc08014bd2fa7cd"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x34feef43c0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "91985b5a32b2ee3cae2a2c93da326a59c0ef25b79261336c18b4ae948b95f0c0",
+                "native_sha256": "91985b5a32b2ee3cae2a2c93da326a59c0ef25b79261336c18b4ae948b95f0c0"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x34feef2fe0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c",
+                "native_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x213dce70000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c",
+                "native_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b",
+                "native_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x210143",
+            "native_instructions": 2575,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x34feef1da0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "b1f14dffb6d63f6733bc78bf7e4272dbaf6c42e64d7e1ea2dbb1a749781eb087",
+                "native_sha256": "b1f14dffb6d63f6733bc78bf7e4272dbaf6c42e64d7e1ea2dbb1a749781eb087"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x213dcf0b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "3681a9c5b45ca20334ce705aae643efe593f2099ca219f30eec848bafda8559d",
+                "native_sha256": "3681a9c5b45ca20334ce705aae643efe593f2099ca219f30eec848bafda8559d"
+              },
+              {
+                "role": "shadow",
+                "address": "0x213dcf0bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "2c70705c7c39c895cf7da607e4a270656a7aa67048667dca21f7f82d5ef8d99c",
+                "native_sha256": "2c70705c7c39c895cf7da607e4a270656a7aa67048667dca21f7f82d5ef8d99c"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x213dcf06ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x213dcf06690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x34feef33c0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "f85f68b5906d3cdae9ad7e10f1a104dd76f0375bc68f42775bc08014bd2fa7cd",
+                "native_sha256": "f85f68b5906d3cdae9ad7e10f1a104dd76f0375bc68f42775bc08014bd2fa7cd"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x34feef43c0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "91985b5a32b2ee3cae2a2c93da326a59c0ef25b79261336c18b4ae948b95f0c0",
+                "native_sha256": "91985b5a32b2ee3cae2a2c93da326a59c0ef25b79261336c18b4ae948b95f0c0"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x34feef2fe0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c",
+                "native_sha256": "0f2647096b284bc5491aaf0f16f4eb1fae456cd11b968bd46707feddca1f8a7c"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x213dce70000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c",
+                "native_sha256": "9ab33b5c7eda8f0d6f92d38f6e7c4ca142b3167cb1079f09242b02893623ae0c"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b",
+                "native_sha256": "a5b8061e360ea92104ecd47e6b83400fb03698969f8505e2b8115a5447350b5b"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [
+        {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ],
+          "virtual_pc": 0,
+          "native_body": "0x21d530",
+          "boundary_pc": 5,
+          "boundary_sp": 1,
+          "boundary_phase": "decode"
+        },
+        {
+          "opcode": 5,
+          "mnemonic": "STORE_REG_U16",
+          "operand": 16,
+          "register": 16,
+          "value": 4768527142241613331,
+          "next_pc": 8,
+          "virtual_pc": 5,
+          "native_body": "0x20fa70",
+          "boundary_pc": 8,
+          "boundary_sp": 0,
+          "boundary_phase": "decode"
+        }
+      ],
+      "unsupported": null,
+      "level_C": true,
+      "status": "level-C",
+      "final_phase": "decode",
+      "domains": [
+        3,
+        2
+      ],
+      "map_probes": 0,
+      "final_pc": 8,
+      "final_sp": 0
+    },
+    {
+      "case": "jack_xxx_evidence/captures/chain_f",
+      "expectation": "continuous",
+      "run_id": "f817b69e00b348d8a16919c963a47a4c",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 2577,
+        "candidate_instructions": 2577,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 21,
+          "pc": "0x7ff73eedd577",
+          "different_bits": "0x80",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 2577,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff73ecc0000",
+          "cookie": "0x3245fb2cd105",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "opcode_core",
+            "native_rva": "0x21d67f",
+            "native_instructions": 370,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xb5753c1890",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "be121dc5f7a750a80c5baa56ab77d044ed71e006222af50f9745eefd481746ed",
+                "native_sha256": "be121dc5f7a750a80c5baa56ab77d044ed71e006222af50f9745eefd481746ed"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2218d4ab470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2218d4abf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2218d4a6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2218d4a6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xb5753c2eb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "67f79246d7c2d56374f7d2a3888b7f6e382d57747b3f4e4ec36faa6aa6862a71",
+                "native_sha256": "67f79246d7c2d56374f7d2a3888b7f6e382d57747b3f4e4ec36faa6aa6862a71"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xb5753c3eb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "9083a7a9b2f9fc56e870a25f3cfcabc6c069219b37f07c22481b8d1f9a732a20",
+                "native_sha256": "9083a7a9b2f9fc56e870a25f3cfcabc6c069219b37f07c22481b8d1f9a732a20"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xb5753c2ad0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7",
+                "native_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2218d430000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1",
+                "native_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680",
+                "native_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x21dbdb",
+            "native_instructions": 1052,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xb5753c1890",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "1c1548ff10c59c92cb90996580ad62913152b6b478e8cef04ce0cff51c253efe",
+                "native_sha256": "1c1548ff10c59c92cb90996580ad62913152b6b478e8cef04ce0cff51c253efe"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2218d4ab470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "eb2263e34049e787e2e79e9c67d080b8ed11755f689abb782351aacbd115d4cc",
+                "native_sha256": "eb2263e34049e787e2e79e9c67d080b8ed11755f689abb782351aacbd115d4cc"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2218d4abf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "720fa5712572cd79b13c43972ad0b5d7920fb0e5b7ba0baff1687318f0131da6",
+                "native_sha256": "720fa5712572cd79b13c43972ad0b5d7920fb0e5b7ba0baff1687318f0131da6"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2218d4a6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2218d4a6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xb5753c2eb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "67f79246d7c2d56374f7d2a3888b7f6e382d57747b3f4e4ec36faa6aa6862a71",
+                "native_sha256": "67f79246d7c2d56374f7d2a3888b7f6e382d57747b3f4e4ec36faa6aa6862a71"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xb5753c3eb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "9083a7a9b2f9fc56e870a25f3cfcabc6c069219b37f07c22481b8d1f9a732a20",
+                "native_sha256": "9083a7a9b2f9fc56e870a25f3cfcabc6c069219b37f07c22481b8d1f9a732a20"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xb5753c2ad0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7",
+                "native_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2218d430000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1",
+                "native_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680",
+                "native_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "handler_entry",
+            "native_rva": "0x21e270",
+            "native_instructions": 1496,
+            "boundary_found": true,
+            "pc": 6,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xb5753c1890",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "495232c59e7718310f84c5e381bd590e32f75794777df9a6ac92168a5341b028",
+                "native_sha256": "495232c59e7718310f84c5e381bd590e32f75794777df9a6ac92168a5341b028"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2218d4ab470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "eb2263e34049e787e2e79e9c67d080b8ed11755f689abb782351aacbd115d4cc",
+                "native_sha256": "eb2263e34049e787e2e79e9c67d080b8ed11755f689abb782351aacbd115d4cc"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2218d4abf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "720fa5712572cd79b13c43972ad0b5d7920fb0e5b7ba0baff1687318f0131da6",
+                "native_sha256": "720fa5712572cd79b13c43972ad0b5d7920fb0e5b7ba0baff1687318f0131da6"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2218d4a6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2218d4a6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xb5753c2eb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "67f79246d7c2d56374f7d2a3888b7f6e382d57747b3f4e4ec36faa6aa6862a71",
+                "native_sha256": "67f79246d7c2d56374f7d2a3888b7f6e382d57747b3f4e4ec36faa6aa6862a71"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xb5753c3eb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "9083a7a9b2f9fc56e870a25f3cfcabc6c069219b37f07c22481b8d1f9a732a20",
+                "native_sha256": "9083a7a9b2f9fc56e870a25f3cfcabc6c069219b37f07c22481b8d1f9a732a20"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xb5753c2ad0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7",
+                "native_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2218d430000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1",
+                "native_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680",
+                "native_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "opcode_core",
+            "native_rva": "0x21e446",
+            "native_instructions": 1905,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xb5753c1890",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "be515ea3ebe39e3d6a0eaeeb4f1fa79cc1d74752f178731013cc41e7af08988f",
+                "native_sha256": "be515ea3ebe39e3d6a0eaeeb4f1fa79cc1d74752f178731013cc41e7af08988f"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2218d4ab470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "eb2263e34049e787e2e79e9c67d080b8ed11755f689abb782351aacbd115d4cc",
+                "native_sha256": "eb2263e34049e787e2e79e9c67d080b8ed11755f689abb782351aacbd115d4cc"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2218d4abf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "720fa5712572cd79b13c43972ad0b5d7920fb0e5b7ba0baff1687318f0131da6",
+                "native_sha256": "720fa5712572cd79b13c43972ad0b5d7920fb0e5b7ba0baff1687318f0131da6"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2218d4a6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2218d4a6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xb5753c2eb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "c7daf5a22d15022ca12fd3cacc9c114008bb6dc4a922004f988d7a85658ae736",
+                "native_sha256": "c7daf5a22d15022ca12fd3cacc9c114008bb6dc4a922004f988d7a85658ae736"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xb5753c3eb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "11e0ae51b0f2721aba9309ad04acb349a40080497ab69c5cd288ae45e7a316c7",
+                "native_sha256": "11e0ae51b0f2721aba9309ad04acb349a40080497ab69c5cd288ae45e7a316c7"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xb5753c2ad0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7",
+                "native_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2218d430000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1",
+                "native_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680",
+                "native_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x21e94d",
+            "native_instructions": 2577,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xb5753c1890",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "336a5d8cc22eb5ac5ec5ead3a3f69213f7c404abb421bad181d6b212e63d8686",
+                "native_sha256": "336a5d8cc22eb5ac5ec5ead3a3f69213f7c404abb421bad181d6b212e63d8686"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x2218d4ab470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "c0de90ff9a2b20941bccf2c454c6d188ce33e04437217282384296bbda44a66a",
+                "native_sha256": "c0de90ff9a2b20941bccf2c454c6d188ce33e04437217282384296bbda44a66a"
+              },
+              {
+                "role": "shadow",
+                "address": "0x2218d4abf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "4e2a23beb5611d44484c6809b464da72571d2c4e70a0c067cd24ea63fb186bd2",
+                "native_sha256": "4e2a23beb5611d44484c6809b464da72571d2c4e70a0c067cd24ea63fb186bd2"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x2218d4a6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x2218d4a6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xb5753c2eb0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "c7daf5a22d15022ca12fd3cacc9c114008bb6dc4a922004f988d7a85658ae736",
+                "native_sha256": "c7daf5a22d15022ca12fd3cacc9c114008bb6dc4a922004f988d7a85658ae736"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xb5753c3eb0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "11e0ae51b0f2721aba9309ad04acb349a40080497ab69c5cd288ae45e7a316c7",
+                "native_sha256": "11e0ae51b0f2721aba9309ad04acb349a40080497ab69c5cd288ae45e7a316c7"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xb5753c2ad0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7",
+                "native_sha256": "57349ec866588e285200067b56f35603bb587aef604c6a3c1ec06f7ed5b753c7"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x2218d430000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1",
+                "native_sha256": "56b5279ca9fa34237c92873d4e2c29d4afef03c800c3b2ee1e09eadab01cdeb1"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff73f0cd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680",
+                "native_sha256": "07610793985a077062e2485a9c79f95620f33fff1920272e13a7676c3e7d1680"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [
+        {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ],
+          "virtual_pc": 0,
+          "native_body": "0x21d530",
+          "boundary_pc": 5,
+          "boundary_sp": 1,
+          "boundary_phase": "decode"
+        },
+        {
+          "opcode": 5,
+          "mnemonic": "STORE_REG_U16",
+          "operand": 16,
+          "register": 16,
+          "value": 4768527142241613331,
+          "next_pc": 8,
+          "virtual_pc": 5,
+          "native_body": "0x21e270",
+          "boundary_pc": 8,
+          "boundary_sp": 0,
+          "boundary_phase": "decode"
+        }
+      ],
+      "unsupported": null,
+      "level_C": true,
+      "status": "level-C",
+      "final_phase": "decode",
+      "domains": [
+        3,
+        3
+      ],
+      "map_probes": 0,
+      "final_pc": 8,
+      "final_sp": 0
+    },
+    {
+      "case": "jack_xxix_evidence/captures/opcode1",
+      "expectation": "continuous",
+      "run_id": "810e037bb0c6482785f80aa0532e5cbf",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 17816,
+        "candidate_instructions": 17816,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 21,
+          "pc": "0x7ff698fc8257",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 17816,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x7263bbfec30e",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "opcode_core",
+            "native_rva": "0x1f8358",
+            "native_instructions": 369,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xddfe1d1db0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "e342ffedc02b545b988b4c11e867323714e769a43150a9d9157af4d7b5b7ac55",
+                "native_sha256": "e342ffedc02b545b988b4c11e867323714e769a43150a9d9157af4d7b5b7ac55"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x227cc2bb470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "shadow",
+                "address": "0x227cc2bbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x227cc2b6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x227cc2b6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xddfe1d33d0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2",
+                "native_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xddfe1d43d0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1",
+                "native_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xddfe1d2ff0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759",
+                "native_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x227cc480000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc",
+                "native_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c",
+                "native_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x1f88b4",
+            "native_instructions": 1051,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xddfe1d1db0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "7b5214345ef37289d9dc8f8796548c1325b4884dfcb9e259b8b2ca702ac1a719",
+                "native_sha256": "7b5214345ef37289d9dc8f8796548c1325b4884dfcb9e259b8b2ca702ac1a719"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x227cc2bb470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "6ed0cee6a9a97df89c36db411622c131f12c25da22112745b2a580d929611ea1",
+                "native_sha256": "6ed0cee6a9a97df89c36db411622c131f12c25da22112745b2a580d929611ea1"
+              },
+              {
+                "role": "shadow",
+                "address": "0x227cc2bbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "ed339c9bbf34a5428b255e43843999c0f3db781be77a86493405f978a1a5d33d",
+                "native_sha256": "ed339c9bbf34a5428b255e43843999c0f3db781be77a86493405f978a1a5d33d"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x227cc2b6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x227cc2b6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xddfe1d33d0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2",
+                "native_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xddfe1d43d0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1",
+                "native_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xddfe1d2ff0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759",
+                "native_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x227cc480000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc",
+                "native_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c",
+                "native_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "handler_entry",
+            "native_rva": "0x21e270",
+            "native_instructions": 1495,
+            "boundary_found": true,
+            "pc": 6,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xddfe1d1db0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "0901c7acfefa1116682d1609ce48cba6bf8ea6e4927ecdb0e7c68997f5ecd0a7",
+                "native_sha256": "0901c7acfefa1116682d1609ce48cba6bf8ea6e4927ecdb0e7c68997f5ecd0a7"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x227cc2bb470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "6ed0cee6a9a97df89c36db411622c131f12c25da22112745b2a580d929611ea1",
+                "native_sha256": "6ed0cee6a9a97df89c36db411622c131f12c25da22112745b2a580d929611ea1"
+              },
+              {
+                "role": "shadow",
+                "address": "0x227cc2bbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "ed339c9bbf34a5428b255e43843999c0f3db781be77a86493405f978a1a5d33d",
+                "native_sha256": "ed339c9bbf34a5428b255e43843999c0f3db781be77a86493405f978a1a5d33d"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x227cc2b6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x227cc2b6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xddfe1d33d0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2",
+                "native_sha256": "05713e095a8e220be98364ec8057e7cabb553924ff2d8014c4669c292effa8f2"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xddfe1d43d0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1",
+                "native_sha256": "f8d9cacb8d3273f758ab69f1917cb733ca368936a6fa50370f7a76d2ad9e2ff1"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xddfe1d2ff0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759",
+                "native_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x227cc480000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc",
+                "native_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c",
+                "native_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "opcode_core",
+            "native_rva": "0x21e446",
+            "native_instructions": 1904,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xddfe1d1db0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "5d6cb35feb0e7a02d5b71e3d4c221187bfd4120e66075c1fb0bb9a83a0cc6552",
+                "native_sha256": "5d6cb35feb0e7a02d5b71e3d4c221187bfd4120e66075c1fb0bb9a83a0cc6552"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x227cc2bb470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "6ed0cee6a9a97df89c36db411622c131f12c25da22112745b2a580d929611ea1",
+                "native_sha256": "6ed0cee6a9a97df89c36db411622c131f12c25da22112745b2a580d929611ea1"
+              },
+              {
+                "role": "shadow",
+                "address": "0x227cc2bbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "ed339c9bbf34a5428b255e43843999c0f3db781be77a86493405f978a1a5d33d",
+                "native_sha256": "ed339c9bbf34a5428b255e43843999c0f3db781be77a86493405f978a1a5d33d"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x227cc2b6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x227cc2b6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xddfe1d33d0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "f3d84c521bd922887ef746b55a790fb248df01f44b3e995efaa4821ca188eff0",
+                "native_sha256": "f3d84c521bd922887ef746b55a790fb248df01f44b3e995efaa4821ca188eff0"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xddfe1d43d0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "3713dcd3f95782b96e02f9bb4512847392376a9680fef4186aef701f418f2c36",
+                "native_sha256": "3713dcd3f95782b96e02f9bb4512847392376a9680fef4186aef701f418f2c36"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xddfe1d2ff0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759",
+                "native_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x227cc480000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc",
+                "native_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c",
+                "native_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "next_decoder",
+            "native_rva": "0x21e94d",
+            "native_instructions": 2576,
+            "boundary_found": true,
+            "pc": 8,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0xddfe1d1db0",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "aef858135e342a1a1d0bb4356d9b116d2d64a617a9aec95883650ff63c223db2",
+                "native_sha256": "aef858135e342a1a1d0bb4356d9b116d2d64a617a9aec95883650ff63c223db2"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x227cc2bb470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "1da38d30e7ecb44e4d93dff5538992971f48ba355bb02a7ea5707914b1697669",
+                "native_sha256": "1da38d30e7ecb44e4d93dff5538992971f48ba355bb02a7ea5707914b1697669"
+              },
+              {
+                "role": "shadow",
+                "address": "0x227cc2bbf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "576728f799ce4d3126871797a27645708dcfc744f2e42416e14a87aa7e2b4f12",
+                "native_sha256": "576728f799ce4d3126871797a27645708dcfc744f2e42416e14a87aa7e2b4f12"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x227cc2b6ee0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x227cc2b6690",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0xddfe1d33d0",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "f3d84c521bd922887ef746b55a790fb248df01f44b3e995efaa4821ca188eff0",
+                "native_sha256": "f3d84c521bd922887ef746b55a790fb248df01f44b3e995efaa4821ca188eff0"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0xddfe1d43d0",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "3713dcd3f95782b96e02f9bb4512847392376a9680fef4186aef701f418f2c36",
+                "native_sha256": "3713dcd3f95782b96e02f9bb4512847392376a9680fef4186aef701f418f2c36"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0xddfe1d2ff0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759",
+                "native_sha256": "e13539a9e5eff5b0493a9df5bca166cc969239b019236ca640f5bdbfefd50759"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x227cc480000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc",
+                "native_sha256": "711e0144db3de3ce21f9cb981b8749cfe072e15a63c332a3998a3513a3a58adc"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c",
+                "native_sha256": "30b3f14aa9a2493a8f70ac3f78087685966fd8e8a3c2262f02f5dfed8592363c"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [
+        {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ],
+          "virtual_pc": 0,
+          "native_body": "0x1f8210",
+          "boundary_pc": 5,
+          "boundary_sp": 1,
+          "boundary_phase": "decode"
+        },
+        {
+          "opcode": 5,
+          "mnemonic": "STORE_REG_U16",
+          "operand": 16,
+          "register": 16,
+          "value": 4768527142241613331,
+          "next_pc": 8,
+          "virtual_pc": 5,
+          "native_body": "0x21e270",
+          "boundary_pc": 8,
+          "boundary_sp": 0,
+          "boundary_phase": "decode"
+        }
+      ],
+      "unsupported": null,
+      "level_C": true,
+      "status": "level-C",
+      "final_phase": "decode",
+      "domains": [
+        0,
+        3
+      ],
+      "map_probes": 0,
+      "final_pc": 8,
+      "final_sp": 0
+    },
+    {
+      "case": "jack_xxix_evidence/captures/opcode1_len16",
+      "expectation": "return-resume-blocked",
+      "run_id": "38a8137619f240cfba370466282ea943",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 1079,
+        "candidate_instructions": 1079,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 14,
+          "pc": "0x7ff698fd92b1",
+          "different_bits": "0x4",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 1079,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1190",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 72,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff698dd0000",
+          "cookie": "0x3851be172183",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "opcode_core",
+            "native_rva": "0x2093d8",
+            "native_instructions": 369,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x4181311a00",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "8ab656f5496b56a07c3a4f2026a6a89cc63090a6909f460be334d4610701dfe8",
+                "native_sha256": "8ab656f5496b56a07c3a4f2026a6a89cc63090a6909f460be334d4610701dfe8"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1696517b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1696517bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x169651766d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x16965176770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x4181313020",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "bdee45e80709eb452969badc1aac14833c0bfcdfe7c3e978fc5b420f6e596841",
+                "native_sha256": "bdee45e80709eb452969badc1aac14833c0bfcdfe7c3e978fc5b420f6e596841"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x4181314020",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "ab51c85956ee20e082a433d6fbd2686b1623c116eff16beffaba0f756e0784f5",
+                "native_sha256": "ab51c85956ee20e082a433d6fbd2686b1623c116eff16beffaba0f756e0784f5"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x4181312c40",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "9fe17e02729dddbde44b47a9638bea55f5108aa9bffc642b6cca6e4299b88fea",
+                "native_sha256": "9fe17e02729dddbde44b47a9638bea55f5108aa9bffc642b6cca6e4299b88fea"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x16965360000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "c8562cd17dc04d160b655f5709b7283c22551945e12a4b23c37b9e92e6775644",
+                "native_sha256": "c8562cd17dc04d160b655f5709b7283c22551945e12a4b23c37b9e92e6775644"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "cd862936223389e64c85ac5da38376087dddc2e1e76741ad6306cf7fb944ca20",
+                "native_sha256": "cd862936223389e64c85ac5da38376087dddc2e1e76741ad6306cf7fb944ca20"
+              }
+            ],
+            "all_bytes_match": true
+          },
+          {
+            "name": "return_handoff",
+            "native_rva": "0x209f9d",
+            "native_instructions": 1078,
+            "boundary_found": true,
+            "pc": 5,
+            "sp": 1,
+            "regions": [
+              {
+                "role": "Serial context",
+                "address": "0x4181311a00",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "b3a3b538c35175e2ed3a7eb0762c51819aa547f8373177d1d680abaf4b22a38b",
+                "native_sha256": "b3a3b538c35175e2ed3a7eb0762c51819aa547f8373177d1d680abaf4b22a38b"
+              },
+              {
+                "role": "bytecode",
+                "address": "0x1696517b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "a3ff7c1c213bc963d9b484858cb893a68a68a56454565791cad3905bdd60696f",
+                "native_sha256": "a3ff7c1c213bc963d9b484858cb893a68a68a56454565791cad3905bdd60696f"
+              },
+              {
+                "role": "shadow",
+                "address": "0x1696517bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "e8e11313945bb1f412c4f496c3d9d9127b2bbac91172917c3946d89c66b4cbbe",
+                "native_sha256": "e8e11313945bb1f412c4f496c3d9d9127b2bbac91172917c3946d89c66b4cbbe"
+              },
+              {
+                "role": "materialization bitmap",
+                "address": "0x169651766d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "window bitmap",
+                "address": "0x16965176770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "register banks",
+                "address": "0x4181313020",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "bdee45e80709eb452969badc1aac14833c0bfcdfe7c3e978fc5b420f6e596841",
+                "native_sha256": "bdee45e80709eb452969badc1aac14833c0bfcdfe7c3e978fc5b420f6e596841"
+              },
+              {
+                "role": "virtual stack",
+                "address": "0x4181314020",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "ab51c85956ee20e082a433d6fbd2686b1623c116eff16beffaba0f756e0784f5",
+                "native_sha256": "ab51c85956ee20e082a433d6fbd2686b1623c116eff16beffaba0f756e0784f5"
+              },
+              {
+                "role": "dispatch table",
+                "address": "0x4181312c40",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "9fe17e02729dddbde44b47a9638bea55f5108aa9bffc642b6cca6e4299b88fea",
+                "native_sha256": "9fe17e02729dddbde44b47a9638bea55f5108aa9bffc642b6cca6e4299b88fea"
+              },
+              {
+                "role": "generated thunk pool",
+                "address": "0x16965360000",
+                "size": 7968,
+                "different_bytes": 0,
+                "candidate_sha256": "c8562cd17dc04d160b655f5709b7283c22551945e12a4b23c37b9e92e6775644",
+                "native_sha256": "c8562cd17dc04d160b655f5709b7283c22551945e12a4b23c37b9e92e6775644"
+              },
+              {
+                "role": "writable PE .data",
+                "address": "0x7ff6991dd000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "cd862936223389e64c85ac5da38376087dddc2e1e76741ad6306cf7fb944ca20",
+                "native_sha256": "cd862936223389e64c85ac5da38376087dddc2e1e76741ad6306cf7fb944ca20"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [
+        {
+          "opcode": 1,
+          "mnemonic": "PUSH_POOL_U32",
+          "operand_pc": 1,
+          "next_pc": 5,
+          "selector": 0,
+          "value": 4768527142241613331,
+          "ir": [
+            {
+              "op": "read_scrambled_u32",
+              "pc": 1,
+              "raw_hex": "113ecdf1",
+              "selector": 0,
+              "pool_slot": 11
+            },
+            {
+              "op": "push",
+              "value": 4768527142241613331,
+              "before_sp": 0,
+              "after_sp": 1
+            }
+          ],
+          "virtual_pc": 0,
+          "native_body": "0x209290",
+          "boundary_pc": 5,
+          "boundary_sp": 1,
+          "boundary_phase": "return_handoff"
+        }
+      ],
+      "unsupported": "Native return continuation is not modeled",
+      "level_C": false,
+      "status": "level-B-return-handoff"
+    },
+    {
+      "case": "jack_xxix_evidence/captures/decoder_len16",
+      "expectation": "map-probe",
+      "run_id": "5b3e19fce3294ee887831914370ec7f2",
+      "level_A": {
+        "coverage": "complete",
+        "instructions_compared": 5719,
+        "candidate_instructions": 5719,
+        "native_complete": true,
+        "all_match": true,
+        "first_state_difference": null,
+        "first_read_difference": null,
+        "first_raw_arithmetic_flag_difference": {
+          "step": 18,
+          "pc": "0x7ff60a25e0ab",
+          "different_bits": "0x10",
+          "defined_mask": "0x801",
+          "only_architecturally_undefined_bits": true
+        },
+        "failure": null,
+        "terminal_comparison": {
+          "steps": 5719,
+          "error": null,
+          "regions": [
+            {
+              "role": "declared root rcx",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x1d0",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x48",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb10",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0xb50",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x180",
+              "different_bytes": 0
+            },
+            {
+              "role": "pointed rcx+0x188",
+              "different_bytes": 0
+            }
+          ]
+        },
+        "contract": {
+          "profile": "native-x64-v1",
+          "legacy_transport": false,
+          "declared_inputs_valid": true,
+          "array_count": 0,
+          "captured_pages": 70,
+          "consistent_alias_bytes": 0,
+          "runtime_base": "0x7ff60a070000",
+          "cookie": "0xe97145afd8c",
+          "cookie_differs_from_static_default": true,
+          "path_completeness": "Not a universal closure proof; every executed read/fetch must be initialized or previously written.",
+          "unavailable": [
+            "FS base unless explicitly captured",
+            "arbitrary transitive pointer closure",
+            "unvisited host/exception dependencies"
+          ]
+        }
+      },
+      "level_B": {
+        "all_events_match": true,
+        "first_divergence": null,
+        "boundaries": [
+          {
+            "name": "map_probe_decoder",
+            "native_rva": "0x22a115",
+            "native_instructions": 5719,
+            "boundary_found": true,
+            "pc": 1,
+            "sp": 0,
+            "regions": [
+              {
+                "role": "unspecified",
+                "address": "0x23f5af1970",
+                "size": 4592,
+                "different_bytes": 0,
+                "candidate_sha256": "c2fe58319ebf8dd1444c0bbf1821b6f8afaa905f25765b0cee9759fff63f0c46",
+                "native_sha256": "c2fe58319ebf8dd1444c0bbf1821b6f8afaa905f25765b0cee9759fff63f0c46"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x1e1e347b470",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+                "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x1e1e347bf20",
+                "size": 2678,
+                "different_bytes": 0,
+                "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+                "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x1e1e34766d0",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+                "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x1e1e3476770",
+                "size": 104,
+                "different_bytes": 0,
+                "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+                "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x23f5af2f90",
+                "size": 4096,
+                "different_bytes": 0,
+                "candidate_sha256": "32ef53e39d920f1c6105d5f198312171ea547b1222f5225c498b5a50b7384a5d",
+                "native_sha256": "32ef53e39d920f1c6105d5f198312171ea547b1222f5225c498b5a50b7384a5d"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x23f5af3f90",
+                "size": 8192,
+                "different_bytes": 0,
+                "candidate_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47",
+                "native_sha256": "9f1dcbc35c350d6027f98be0f5c8b43b42ca52b7604459c0c42be3aa88913d47"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x23f5af2bb0",
+                "size": 992,
+                "different_bytes": 0,
+                "candidate_sha256": "6f5cab6f1429537741bec51ce6ce43b8108ff474d8fe02334f1efd39cb457a5a",
+                "native_sha256": "6f5cab6f1429537741bec51ce6ce43b8108ff474d8fe02334f1efd39cb457a5a"
+              },
+              {
+                "role": "unspecified",
+                "address": "0x7ff60a47d000",
+                "size": 187860,
+                "different_bytes": 0,
+                "candidate_sha256": "08ff63254fee22aab7aa03dd03d93ce0da6880e317c5f438b83d110cabfe8cb1",
+                "native_sha256": "08ff63254fee22aab7aa03dd03d93ce0da6880e317c5f438b83d110cabfe8cb1"
+              }
+            ],
+            "all_bytes_match": true
+          }
+        ]
+      },
+      "logical_steps": [],
+      "unsupported": null,
+      "level_C": false,
+      "map_probes": 1,
+      "result": {
+        "pc": 0,
+        "raw_header": "0x21",
+        "opcode": 1,
+        "next_pc": 1,
+        "materialized_bytes": 26,
+        "new_materializations": 1,
+        "next_native_state": "0x825f"
+      },
+      "status": "level-B-map-probe"
+    }
+  ],
+  "fresh_level_C_processes": 4,
+  "fresh_inline_decoder_chains": 3,
+  "fresh_level_C_instructions_to_final_boundary": 10327,
+  "one_byte_negative_control": {
+    "all_events_match": false,
+    "first_divergence": {
+      "classification": "model",
+      "event": "next_decoder",
+      "native_rva": "0x209934",
+      "native_instructions": 1051,
+      "address": "0xce0af1840",
+      "context_offset": "0x1b0",
+      "candidate": 143,
+      "native": 142
+    },
+    "boundaries": [
+      {
+        "name": "opcode_core",
+        "native_rva": "0x2093d8",
+        "native_instructions": 369,
+        "boundary_found": true,
+        "pc": 5,
+        "sp": 1,
+        "regions": [
+          {
+            "role": "Serial context",
+            "address": "0xce0af1690",
+            "size": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "6caa513456a18d3e5f6e5f04faffbe595b3ee46724371fece57d3f61db61a4d7",
+            "native_sha256": "6caa513456a18d3e5f6e5f04faffbe595b3ee46724371fece57d3f61db61a4d7"
+          },
+          {
+            "role": "bytecode",
+            "address": "0x1d69170b470",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277",
+            "native_sha256": "8ff045861c40d3eebdeccd5dda466489884d87602caf4cdf55affa0b14fe8277"
+          },
+          {
+            "role": "shadow",
+            "address": "0x1d69170bf20",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510",
+            "native_sha256": "7afe4d92be3293c9cbe4903e41dd9f479434aa27be0b2feb80340ef1eca36510"
+          },
+          {
+            "role": "materialization bitmap",
+            "address": "0x1d691706ee0",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "window bitmap",
+            "address": "0x1d691706690",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "register banks",
+            "address": "0xce0af2cb0",
+            "size": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c",
+            "native_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c"
+          },
+          {
+            "role": "virtual stack",
+            "address": "0xce0af3cb0",
+            "size": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b",
+            "native_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b"
+          },
+          {
+            "role": "dispatch table",
+            "address": "0xce0af28d0",
+            "size": 992,
+            "different_bytes": 0,
+            "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+            "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+          },
+          {
+            "role": "generated thunk pool",
+            "address": "0x1d691940000",
+            "size": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+            "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+          },
+          {
+            "role": "writable PE .data",
+            "address": "0x7ff73f0cd000",
+            "size": 187860,
+            "different_bytes": 0,
+            "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+            "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+          }
+        ],
+        "all_bytes_match": true
+      },
+      {
+        "name": "next_decoder",
+        "native_rva": "0x209934",
+        "native_instructions": 1051,
+        "boundary_found": true,
+        "pc": 5,
+        "sp": 1,
+        "regions": [
+          {
+            "role": "Serial context",
+            "address": "0xce0af1690",
+            "size": 4592,
+            "different_bytes": 1,
+            "candidate_sha256": "97598c17531396de712b30fed10ea3f6751654e000dacb0dfc353368c537f8d2",
+            "native_sha256": "5d1c2fcaf6fe0559c5e99f9ccc84cf40fa7e736ede65829448276771f8b1ff20"
+          },
+          {
+            "role": "bytecode",
+            "address": "0x1d69170b470",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354",
+            "native_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354"
+          },
+          {
+            "role": "shadow",
+            "address": "0x1d69170bf20",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf",
+            "native_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf"
+          },
+          {
+            "role": "materialization bitmap",
+            "address": "0x1d691706ee0",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "window bitmap",
+            "address": "0x1d691706690",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "register banks",
+            "address": "0xce0af2cb0",
+            "size": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c",
+            "native_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c"
+          },
+          {
+            "role": "virtual stack",
+            "address": "0xce0af3cb0",
+            "size": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b",
+            "native_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b"
+          },
+          {
+            "role": "dispatch table",
+            "address": "0xce0af28d0",
+            "size": 992,
+            "different_bytes": 0,
+            "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+            "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+          },
+          {
+            "role": "generated thunk pool",
+            "address": "0x1d691940000",
+            "size": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+            "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+          },
+          {
+            "role": "writable PE .data",
+            "address": "0x7ff73f0cd000",
+            "size": 187860,
+            "different_bytes": 0,
+            "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+            "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+          }
+        ],
+        "all_bytes_match": false
+      },
+      {
+        "name": "handler_entry",
+        "native_rva": "0x202800",
+        "native_instructions": 1495,
+        "boundary_found": true,
+        "pc": 6,
+        "sp": 1,
+        "regions": [
+          {
+            "role": "Serial context",
+            "address": "0xce0af1690",
+            "size": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "516acf53bbd1283049c6c430fcd59585e3970086659da1154c4742176fac86fb",
+            "native_sha256": "516acf53bbd1283049c6c430fcd59585e3970086659da1154c4742176fac86fb"
+          },
+          {
+            "role": "bytecode",
+            "address": "0x1d69170b470",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354",
+            "native_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354"
+          },
+          {
+            "role": "shadow",
+            "address": "0x1d69170bf20",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf",
+            "native_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf"
+          },
+          {
+            "role": "materialization bitmap",
+            "address": "0x1d691706ee0",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "window bitmap",
+            "address": "0x1d691706690",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "register banks",
+            "address": "0xce0af2cb0",
+            "size": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c",
+            "native_sha256": "95f4e49a02282a951fc17aeafadbfebfd16efb23891ac75ad91c76bf246ca41c"
+          },
+          {
+            "role": "virtual stack",
+            "address": "0xce0af3cb0",
+            "size": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b",
+            "native_sha256": "8cdc36c40f821da4d461dfaea80017bc00f55b0003c0084cf869dba2206d031b"
+          },
+          {
+            "role": "dispatch table",
+            "address": "0xce0af28d0",
+            "size": 992,
+            "different_bytes": 0,
+            "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+            "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+          },
+          {
+            "role": "generated thunk pool",
+            "address": "0x1d691940000",
+            "size": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+            "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+          },
+          {
+            "role": "writable PE .data",
+            "address": "0x7ff73f0cd000",
+            "size": 187860,
+            "different_bytes": 0,
+            "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+            "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+          }
+        ],
+        "all_bytes_match": true
+      },
+      {
+        "name": "opcode_core",
+        "native_rva": "0x2029cf",
+        "native_instructions": 1903,
+        "boundary_found": true,
+        "pc": 8,
+        "sp": 0,
+        "regions": [
+          {
+            "role": "Serial context",
+            "address": "0xce0af1690",
+            "size": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "73f532fb991a7e8c2dbdaccec049580a7b553cd1a602522d6578d7dd93a160b0",
+            "native_sha256": "73f532fb991a7e8c2dbdaccec049580a7b553cd1a602522d6578d7dd93a160b0"
+          },
+          {
+            "role": "bytecode",
+            "address": "0x1d69170b470",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354",
+            "native_sha256": "4d943652314f72d938d094a243c2f286dda4d260fbe7e0225f24734d0254a354"
+          },
+          {
+            "role": "shadow",
+            "address": "0x1d69170bf20",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf",
+            "native_sha256": "5db42c2a2345dbf260db756126d21eb83748aca0d05bb409e50c5936f0cd32cf"
+          },
+          {
+            "role": "materialization bitmap",
+            "address": "0x1d691706ee0",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "window bitmap",
+            "address": "0x1d691706690",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "register banks",
+            "address": "0xce0af2cb0",
+            "size": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7",
+            "native_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7"
+          },
+          {
+            "role": "virtual stack",
+            "address": "0xce0af3cb0",
+            "size": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d",
+            "native_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d"
+          },
+          {
+            "role": "dispatch table",
+            "address": "0xce0af28d0",
+            "size": 992,
+            "different_bytes": 0,
+            "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+            "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+          },
+          {
+            "role": "generated thunk pool",
+            "address": "0x1d691940000",
+            "size": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+            "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+          },
+          {
+            "role": "writable PE .data",
+            "address": "0x7ff73f0cd000",
+            "size": 187860,
+            "different_bytes": 0,
+            "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+            "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+          }
+        ],
+        "all_bytes_match": true
+      },
+      {
+        "name": "next_decoder",
+        "native_rva": "0x202ed6",
+        "native_instructions": 2575,
+        "boundary_found": true,
+        "pc": 8,
+        "sp": 0,
+        "regions": [
+          {
+            "role": "Serial context",
+            "address": "0xce0af1690",
+            "size": 4592,
+            "different_bytes": 0,
+            "candidate_sha256": "ababcbfd659fc7524a441e2a36618bdb22e10b0e34b1b012f04506b1509a36b0",
+            "native_sha256": "ababcbfd659fc7524a441e2a36618bdb22e10b0e34b1b012f04506b1509a36b0"
+          },
+          {
+            "role": "bytecode",
+            "address": "0x1d69170b470",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "8244980556181f281d33fbb7f00e562d8d931097c2c0066c55e24df3afe3f563",
+            "native_sha256": "8244980556181f281d33fbb7f00e562d8d931097c2c0066c55e24df3afe3f563"
+          },
+          {
+            "role": "shadow",
+            "address": "0x1d69170bf20",
+            "size": 2678,
+            "different_bytes": 0,
+            "candidate_sha256": "b6bff42f9704feb87ea52b3f6a1b78755aab0cd728e40953902bc95edb7e205c",
+            "native_sha256": "b6bff42f9704feb87ea52b3f6a1b78755aab0cd728e40953902bc95edb7e205c"
+          },
+          {
+            "role": "materialization bitmap",
+            "address": "0x1d691706ee0",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4",
+            "native_sha256": "fb62bb0e3ef441d8e2e5e8733c3a00df18e90f27380f187e4434a07c6381efa4"
+          },
+          {
+            "role": "window bitmap",
+            "address": "0x1d691706690",
+            "size": 104,
+            "different_bytes": 0,
+            "candidate_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383",
+            "native_sha256": "8515006c93296d2d8bbe2b9da95c9c33b8a1da0c7770169ba5378b498415e383"
+          },
+          {
+            "role": "register banks",
+            "address": "0xce0af2cb0",
+            "size": 4096,
+            "different_bytes": 0,
+            "candidate_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7",
+            "native_sha256": "389a8ccf98da9d48cad3ba5c1a32d9c614f1166a945d4fd26f4966981c7ba9d7"
+          },
+          {
+            "role": "virtual stack",
+            "address": "0xce0af3cb0",
+            "size": 8192,
+            "different_bytes": 0,
+            "candidate_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d",
+            "native_sha256": "e21bcc6bdf3c771637db70b6d759799c1dcaac059ee0462f66ff7186bddbae5d"
+          },
+          {
+            "role": "dispatch table",
+            "address": "0xce0af28d0",
+            "size": 992,
+            "different_bytes": 0,
+            "candidate_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2",
+            "native_sha256": "60d1bf8b8208feaff0e66ce674ca02394b86bf3217ae4d5c2aeb36089f7550b2"
+          },
+          {
+            "role": "generated thunk pool",
+            "address": "0x1d691940000",
+            "size": 7968,
+            "different_bytes": 0,
+            "candidate_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc",
+            "native_sha256": "edde6118637f544168f7475af4d8ae966b871805e788d6db87891db8a111a6dc"
+          },
+          {
+            "role": "writable PE .data",
+            "address": "0x7ff73f0cd000",
+            "size": 187860,
+            "different_bytes": 0,
+            "candidate_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9",
+            "native_sha256": "d8c7a92e4ca32b69104ce7632e75cff2b40d215d1f3468b3f302ad9f6bec95f9"
+          }
+        ],
+        "all_bytes_match": true
+      }
+    ]
+  },
+  "source_sha256": {
+    "devirt/serial.py": "1764285bcf128076da0d3ebb57a22868e2baad37590e74fbc0c7f7de2970ccf9",
+    "devirt/serial_continuous.py": "c7610f6a9dfd232181754bfd538638e9000da80286a2da43281d303fc38443d0",
+    "devirt/serial_regions.py": "30d58da9f99e7a09e72fe1a264353d3db2289976ae6fbe57dfe427f28db12bd0",
+    "devirt/serial_continuous_validate.py": "6e4909f2295bf94c80df0207b74b97fb0ed2f999cd89291dad201f68f363137f",
+    "scripts/pafet_serial_audit_xxx.py": "9e647832429052ce354d6d2055b3c6849688ef2667ba1447c4067ba6d5424832",
+    "scripts/pafet_native_step_capture.py": "c504f9b28662f28ac675ed39410512129247a235c7b01ad2773471c7b276daf2",
+    "scripts/pafet_state_compare.py": "e24717c8fd31f6fb8f6f0394cf2bc097a93623fe4365b6d63e3b514d2d2e4c21",
+    "scripts/pafet_state_replay.py": "a0c2ae798c03eba710853c8a46b3dea263319d631fb26478b9134a876231bd6f",
+    "scripts/pafet_state_contract.py": "72f12a72432da87f7a5b180a61d151eb7eef0ada52d697f2288f82998a30ef54"
+  },
+  "scope": "C: two dependent virtual steps from one before-state. No intermediate restoration or native handler execution. Complete captures only. A wrapper return handoff is observable; resuming its caller is still unsupported."
+}

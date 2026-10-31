@@ -59,10 +59,14 @@ class ScheduledSerialVMState(ExtendedSerialVMState):
         encoded=label^self.u(0xac8)
         if (count^self.u(0x260))&0x1ff==0:self.full_remap_rebuild()
         if count==1 or (((-1003*count)^self.u(0xac8,4))&0xfff)==31:
-            self.fail('Scheduler exception delivery')
+            self.throw_label(encoded);return
         n=self.u(0xad0,4)
         if n>=64:self.fail('Scheduler queue overflow')
         self.put(0x8c8+8*n,encoded);self.put(0xad0,n+1,4)
+
+    def throw_label(self,encoded):
+        # Native 1f0e48 calls _CxxThrowException with the encoded label.
+        self.fail('Scheduler exception delivery')
 
     def callback(self,index):
         targets=[0x1f0a30,0x1f0aa0,0x1f0af0,0x1f0b10,0x1f0b70,0x1f0bc0,0x1f0bd0,0x1f09d0]

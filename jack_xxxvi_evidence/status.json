@@ -1,0 +1,26 @@
+{
+ "baseline_commit": "34b0a39f3b15051e8fdb534efde55f37305a3d6e",
+ "maximum_windows_verified_instructions": 17,
+ "maximum_emulation_verified_instructions": 46722,
+ "independent_processes": 6,
+ "rejected_windows_captures": 1,
+ "semantic_instruction_instances": 97444,
+ "emulated_native_instructions": 1820206405,
+ "emulated_boundaries": 4135530,
+ "exception_deliveries": 428,
+ "VM_status": {
+  "Serial": "PARTIAL: closed static program, three loops and HALT recovered; long emulation-verified runs; native cleanup open",
+  "User": "unchanged",
+  "SHA": "unchanged",
+  "Hex": "unchanged"
+ },
+ "source_sha256": {
+  "scripts/pafet_serial_metrics_xxxvi.py": "f94523b08876207ac09642fff3a3dc2f99631dbce1e6a4a5cc466d841252a0b9",
+  "scripts/pafet_serial_graph_xxxvi.py": "6ec816de09dc12fda96d6fdd3ff3808e5986bd3fbf1a085af7504f78a71d6537",
+  "scripts/pafet_serial_static_xxxvi.py": "00ced7a8d1433f38f99856d9fe2606f68417c70fce206af7ea9b1656a1379434",
+  "scripts/pafet_serial_audit_xxxvi.py": "48619d75877c69d3e45355812080a19eab7d7e11887cfdec6f7a66e045a1e105",
+  "scripts/pafet_eh_stub.py": "ec06a57ed98524254e79687239ac846f888f3af537c76faec2c03aa741a58b00",
+  "devirt/serial_loop.py": "1f1b19c97f50b528aaeda4cca9ed06956d49b5c48ce1328fcbdee09df8abe9dc",
+  "devirt/serial_loop_validate.py": "207e79eb79e663f2cfe8a8b20bce4630b7ece8db1479793e122e76a915e9b6c1"
+ }
+}

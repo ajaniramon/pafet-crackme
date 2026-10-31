@@ -83,3 +83,12 @@ def xor_variant(pe, left, right, token):
     slot = 2+4*((((a>>1)^b)>>2)&1)
     program = pe.get_data(0x3edc08+slot,1)[0]
     return evaluate(pe,program,a,b)
+
+
+def add_variant(pe, left, right, token):
+    """RVA 1ed730 selector 0: masked operands, then a table-chosen program."""
+    mask = mix(token)
+    a,b = (mask + left) & MASK,(right - mask) & MASK
+    slot = 4*(((a>>3)^(b>>2))&1)
+    program = pe.get_data(0x3edc08+slot,1)[0]
+    return evaluate(pe,program,a,b)
