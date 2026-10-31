@@ -45,12 +45,9 @@ class WindowSerialVMState(BranchSerialVMState):
             for index in (wfirst,wfirst+1):
                 if index<103 and self.read(bitmap+index,1)==b'\0':
                     self.toggle26(index);self.m.add(bitmap+index,b'\1',overwrite=True)
-        else:
-            # Fast 1f0660 still enters 1f05c0, which materializes missing masks.
-            self.put(0xb5c,wfirst,4)
-            for index in (wfirst,wfirst+1):
-                if index<103 and self.read(bitmap+index,1)==b'\0':
-                    self.toggle26(index);self.m.add(bitmap+index,b'\1',overwrite=True)
+        # Both windows cached: 1f0785 jumps to the epilogue 1f08eb, skipping
+        # 1f05c0. The 26-window index is NOT moved to wfirst (JACK XXXVI;
+        # earlier runs only exercised wfirst==old26, where both agree).
 
     def prepare_opcode_byte(self,pc):
         if not 0<=pc<2678:self.fail('Opcode outside bytecode')

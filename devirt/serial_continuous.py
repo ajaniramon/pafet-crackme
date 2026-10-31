@@ -187,9 +187,10 @@ class SerialVMState(FirstOpcode):
         token=mix(signed^self.u(0x350)^self.u(0x348)^(pc+1)^key);self.put(0x28,token)
         opcode=self.pe.get_data(0x3ecf00+(raw^0xdd),1)[0]^0x63
         self.put(0x11e0,counter+1,4);self.put(0x4ad,opcode,1)
-        if (counter+1)%32==0:self.fail('Decoder epoch transition')
+        if (counter+1)%32==0:self.decoder_epoch(counter+1,key)
         self.put(0x20,mix(opcode^(pc+1)^key))
         return pc,opcode,token
+    def decoder_epoch(self,counter,key):self.fail('Decoder epoch transition')
     def prepare_opcode_byte(self,pc):
         # Versioned extensions can prove additional materialization routes.
         if pc>=26 or self.read(self.u(0xb10),1)!=b'\1':self.fail('Undemonstrated materialization route')

@@ -1,0 +1,441 @@
+{
+ "loops": [
+  {
+   "header": 1742,
+   "latches": [
+    1872
+   ],
+   "body_blocks": [
+    78,
+    156,
+    572,
+    650,
+    702,
+    884,
+    936,
+    941,
+    1040,
+    1092,
+    1274,
+    1300,
+    1404,
+    1716,
+    1742,
+    1759,
+    1872,
+    2002,
+    2340,
+    2444,
+    2626
+   ],
+   "body_instructions": 86,
+   "condition_pc": 1754,
+   "condition": "BRANCH_IF_ZERO_UNIT_U32",
+   "exit_edges": [
+    {
+     "source": 1754,
+     "target": 2418
+    }
+   ],
+   "iteration_lengths": [
+    79,
+    81
+   ],
+   "proof": "Back edge to a dominating header in the static decode",
+   "dynamic": [
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_a",
+     "user": "alice",
+     "header_entries": 13,
+     "back_edges_traversed": 12,
+     "first_entry_step": 15,
+     "last_entry_step": 987,
+     "strides": [
+      81
+     ],
+     "exit_steps": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_b",
+     "user": "bob",
+     "header_entries": 13,
+     "back_edges_traversed": 12,
+     "first_entry_step": 15,
+     "last_entry_step": 987,
+     "strides": [
+      81
+     ],
+     "exit_steps": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_c",
+     "user": "charlie",
+     "header_entries": 257,
+     "back_edges_traversed": 256,
+     "first_entry_step": 15,
+     "last_entry_step": 20751,
+     "strides": [
+      81
+     ],
+     "exit_steps": [
+      20755
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_a",
+     "user": "alice",
+     "header_entries": 13,
+     "back_edges_traversed": 12,
+     "first_entry_step": 15,
+     "last_entry_step": 987,
+     "strides": [
+      81
+     ],
+     "exit_steps": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_b",
+     "user": "bob",
+     "header_entries": 257,
+     "back_edges_traversed": 256,
+     "first_entry_step": 15,
+     "last_entry_step": 20751,
+     "strides": [
+      81
+     ],
+     "exit_steps": [
+      20755
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_c",
+     "user": "bob",
+     "header_entries": 13,
+     "back_edges_traversed": 12,
+     "first_entry_step": 15,
+     "last_entry_step": 987,
+     "strides": [
+      81
+     ],
+     "exit_steps": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_d",
+     "user": "bob",
+     "header_entries": 13,
+     "back_edges_traversed": 12,
+     "first_entry_step": 15,
+     "last_entry_step": 987,
+     "strides": [
+      81
+     ],
+     "exit_steps": []
+    }
+   ]
+  },
+  {
+   "header": 2184,
+   "latches": [
+    1560
+   ],
+   "body_blocks": [
+    26,
+    52,
+    104,
+    130,
+    494,
+    728,
+    754,
+    988,
+    1002,
+    1066,
+    1118,
+    1144,
+    1222,
+    1352,
+    1430,
+    1456,
+    1560,
+    1586,
+    1924,
+    2054,
+    2184,
+    2198
+   ],
+   "body_instructions": 100,
+   "condition_pc": 2193,
+   "condition": "BRANCH_IF_ZERO_UNIT_U32",
+   "exit_edges": [
+    {
+     "source": 2193,
+     "target": 312
+    }
+   ],
+   "iteration_lengths": [
+    94,
+    95
+   ],
+   "proof": "Back edge to a dominating header in the static decode",
+   "dynamic": [
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_c",
+     "user": "charlie",
+     "header_entries": 9,
+     "back_edges_traversed": 8,
+     "first_entry_step": 45932,
+     "last_entry_step": 46692,
+     "strides": [
+      95
+     ],
+     "exit_steps": [
+      46695
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_b",
+     "user": "bob",
+     "header_entries": 9,
+     "back_edges_traversed": 8,
+     "first_entry_step": 45932,
+     "last_entry_step": 46692,
+     "strides": [
+      95
+     ],
+     "exit_steps": [
+      46695
+     ]
+    }
+   ]
+  },
+  {
+   "header": 2522,
+   "latches": [
+    234
+   ],
+   "body_blocks": [
+    182,
+    208,
+    234,
+    260,
+    286,
+    364,
+    390,
+    416,
+    520,
+    546,
+    598,
+    624,
+    832,
+    858,
+    962,
+    1014,
+    1196,
+    1248,
+    1326,
+    1508,
+    1534,
+    1612,
+    1664,
+    1669,
+    1768,
+    1846,
+    1950,
+    1955,
+    2080,
+    2106,
+    2210,
+    2236,
+    2262,
+    2288,
+    2314,
+    2366,
+    2392,
+    2397,
+    2522,
+    2539,
+    2548,
+    2574,
+    2600
+   ],
+   "body_instructions": 168,
+   "condition_pc": 2534,
+   "condition": "BRANCH_IF_ZERO_UNIT_U32",
+   "exit_edges": [
+    {
+     "source": 2534,
+     "target": 1898
+    }
+   ],
+   "iteration_lengths": [
+    98,
+    99,
+    130,
+    131,
+    132
+   ],
+   "proof": "Back edge to a dominating header in the static decode",
+   "dynamic": [
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_c",
+     "user": "charlie",
+     "header_entries": 257,
+     "back_edges_traversed": 256,
+     "first_entry_step": 20803,
+     "last_entry_step": 45891,
+     "strides": [
+      98
+     ],
+     "exit_steps": [
+      45895
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_b",
+     "user": "bob",
+     "header_entries": 257,
+     "back_edges_traversed": 256,
+     "first_entry_step": 20803,
+     "last_entry_step": 45891,
+     "strides": [
+      98
+     ],
+     "exit_steps": [
+      45895
+     ]
+    }
+   ]
+  }
+ ],
+ "bifurcations": [
+  {
+   "pc": 936,
+   "mnemonic": "BRANCH_IF_NONZERO_UNIT_U32",
+   "block": 936,
+   "targets": [
+    941,
+    2340
+   ],
+   "loop_header": false,
+   "reconverges_at": 78,
+   "observed": {
+    "fallthrough": 572
+   }
+  },
+  {
+   "pc": 997,
+   "mnemonic": "BRANCH_IF_NONZERO_UNIT_U32",
+   "block": 988,
+   "targets": [
+    1002,
+    1222
+   ],
+   "loop_header": false,
+   "reconverges_at": 52,
+   "observed": {
+    "fallthrough": 16
+   }
+  },
+  {
+   "pc": 1664,
+   "mnemonic": "BRANCH_IF_NONZERO_UNIT_U32",
+   "block": 1664,
+   "targets": [
+    1669,
+    598
+   ],
+   "loop_header": false,
+   "reconverges_at": 2314,
+   "observed": {}
+  },
+  {
+   "pc": 1754,
+   "mnemonic": "BRANCH_IF_ZERO_UNIT_U32",
+   "block": 1742,
+   "targets": [
+    1759,
+    2418
+   ],
+   "loop_header": true,
+   "reconverges_at": 2418,
+   "observed": {
+    "fallthrough": 577,
+    "taken": 2
+   }
+  },
+  {
+   "pc": 1950,
+   "mnemonic": "BRANCH_IF_NONZERO_UNIT_U32",
+   "block": 1950,
+   "targets": [
+    1955,
+    2106
+   ],
+   "loop_header": false,
+   "reconverges_at": 1196,
+   "observed": {
+    "fallthrough": 512
+   }
+  },
+  {
+   "pc": 2193,
+   "mnemonic": "BRANCH_IF_ZERO_UNIT_U32",
+   "block": 2184,
+   "targets": [
+    2198,
+    312
+   ],
+   "loop_header": true,
+   "reconverges_at": 312,
+   "observed": {
+    "fallthrough": 16,
+    "taken": 2
+   }
+  },
+  {
+   "pc": 2392,
+   "mnemonic": "BRANCH_IF_ZERO_UNIT_U32",
+   "block": 2392,
+   "targets": [
+    2397,
+    286
+   ],
+   "loop_header": false,
+   "reconverges_at": 2314,
+   "observed": {
+    "taken": 512
+   }
+  },
+  {
+   "pc": 2534,
+   "mnemonic": "BRANCH_IF_ZERO_UNIT_U32",
+   "block": 2522,
+   "targets": [
+    2539,
+    1898
+   ],
+   "loop_header": true,
+   "reconverges_at": 1898,
+   "observed": {
+    "fallthrough": 512,
+    "taken": 2
+   }
+  }
+ ],
+ "termination": {
+  "halt_pcs": [
+   2652
+  ],
+  "halt_statically_reachable": true,
+  "route": "HALT core: control3=0, control0=0xfe1ab, control10=1; wrapper 1ee450 -> pop-only RET; dispatcher 22fd0c -> 232daa -> 22b088 -> 22b0a2 -> cleanup 22b0af",
+  "dynamically_reached": [
+   {
+    "case": "jack_xxxv_evidence/captures/eleven_c",
+    "step": 46722
+   },
+   {
+    "case": "jack_xxxv_evidence/captures/seventeen_b",
+    "step": 46722
+   }
+  ]
+ }
+}

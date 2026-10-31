@@ -28,9 +28,15 @@ class BranchSerialVMState(DeepSerialVMState):
         self.set_control(1,pc+4)
         return pc,value
 
-    def request_branch(self,target,origin):
-        # RVA 1f10a0, arguments condition=0, mode=1, invert=0.
-        take=1
+    deferred_branch_opcodes=(26,)
+
+    def request_branch(self,target,origin,value=0,condition=1,invert=0):
+        # RVA 1f10a0(value, condition, invert, target, origin). Opcode 26
+        # passes value=0, condition=1, invert=0, so it always takes.
+        zero=int(value&MASK==0)
+        consistent=((~condition)&1)^zero
+        if not consistent:self.fail('Deferred branch request consistency guard')
+        take=(zero^invert)&1
         frame=self.u(0x384,4);salt=self.u(0x350);live=self.u(0x260)
         mask=mix(take*C2 ^ origin*MUL ^ frame ^ salt ^ live ^ 0x42524d4b)
         self.set_control(4,(mask&0xffffffff)^target)
@@ -40,6 +46,7 @@ class BranchSerialVMState(DeepSerialVMState):
         self.set_control(12,tag)
         self.set_control(6,1)
         self.put(0x388,self.u(0x388)+1)
+        self.put(0x348,self.u(0x348)^((((condition&1)^zero)*PHI)&MASK))
         self.put(0x20,mix(take^origin^self.u(0x20)))
         self.set_control(0,0xffd5b)
         return 0xffd5b
@@ -57,7 +64,7 @@ class BranchSerialVMState(DeepSerialVMState):
                     operand_pc=pc,target_pc=target,next_pc=origin)
 
     def continuation(self):
-        if self.u(0x4ad,1)!=26:return super().continuation()
+        if self.u(0x4ad,1) not in self.deferred_branch_opcodes:return super().continuation()
         if not self.budget&0x80000000:self.fail('Unthreaded branch wrapper return')
         if self.guard!=self.u(0x11b8):self.fail('Branch wrapper guard mismatch')
         if self.control(10)&0xffffffff:self.fail('Halted branch VM')

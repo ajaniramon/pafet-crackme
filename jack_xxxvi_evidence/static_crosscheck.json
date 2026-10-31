@@ -1,0 +1,98 @@
+{
+ "captures": [
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_a",
+   "user": "alice",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_b",
+   "user": "bob",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_c",
+   "user": "charlie",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_a",
+   "user": "alice",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_b",
+   "user": "bob",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_c",
+   "user": "bob",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_d",
+   "user": "bob",
+   "instructions": 478,
+   "program_sha256": "211ded198cc34ff18f8e9a2229eb6ab496d1c02ccd7794dc24c12e2215085fa2",
+   "identical_to_first": true
+  }
+ ],
+ "executed_vs_static": [
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_a",
+   "verified_instances": 1000,
+   "mismatches": 0,
+   "first": []
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_b",
+   "verified_instances": 1000,
+   "mismatches": 0,
+   "first": []
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/eleven_c",
+   "verified_instances": 46722,
+   "mismatches": 0,
+   "first": []
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_a",
+   "verified_instances": 1000,
+   "mismatches": 0,
+   "first": []
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_b",
+   "verified_instances": 46722,
+   "mismatches": 0,
+   "first": []
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_c",
+   "verified_instances": 1000,
+   "mismatches": 0,
+   "first": []
+  },
+  {
+   "case": "jack_xxxv_evidence/captures/seventeen_d",
+   "verified_instances": 1000,
+   "mismatches": 0,
+   "first": []
+  }
+ ],
+ "all_identical": true
+}

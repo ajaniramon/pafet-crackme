@@ -1,0 +1,149 @@
+{
+ "static_bindings": 68,
+ "cumulative_verified_bindings": 66,
+ "cumulative_domains": {
+  "0x20": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x3a": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x2c": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x4": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x1a": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x1b": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x3b": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x1": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x8": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x16": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x1e": [
+   0,
+   2
+  ],
+  "0x29": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x1c": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x5": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x18": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x1f": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "0x15": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "unverified_bindings": [
+  {
+   "rva": "0x2078e0",
+   "opcode": 30,
+   "domain": 1
+  },
+  {
+   "rva": "0x21c7f0",
+   "opcode": 30,
+   "domain": 3
+  }
+ ],
+ "generated_kernels": 64,
+ "observed_generated_kernels": 62,
+ "unobserved_generated_labels": [
+  "0x2c1549",
+  "0x32a5e8"
+ ],
+ "host_callback_functions_executed": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22
+ ],
+ "scope": "Bindings/kernels count only from complete Windows captures whose emulated continuation matched; XXXV cumulative evidence retained."
+}

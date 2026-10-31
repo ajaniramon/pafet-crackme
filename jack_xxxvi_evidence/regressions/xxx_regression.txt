@@ -1,0 +1,9 @@
+chain_a level-C A= 2575 boundaries= 5
+chain_b level-C A= 64038 boundaries= 5
+chain_c REJECTED incomplete; no A/C claim
+chain_d REJECTED incomplete; no A/C claim
+chain_e level-C A= 2575 boundaries= 5
+chain_f level-C A= 2577 boundaries= 5
+opcode1 level-C A= 17816 boundaries= 5
+opcode1_len16 level-B-return-handoff A= 1079 boundaries= 2
+decoder_len16 level-B-map-probe A= 5719 boundaries= 1

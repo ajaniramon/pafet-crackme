@@ -1,0 +1,215 @@
+{
+ "maximum_windows_verified_instructions": 17,
+ "maximum_emulation_verified_instructions": 46722,
+ "processes_at_maximum": 2,
+ "users_at_maximum": [
+  "bob",
+  "charlie"
+ ],
+ "processes_with_at_least": {
+  "18": 6,
+  "25": 6,
+  "100": 6,
+  "500": 6,
+  "1000": 6,
+  "5000": 2,
+  "20000": 2
+ },
+ "implemented_semantic_opcodes": [
+  1,
+  4,
+  5,
+  8,
+  21,
+  22,
+  24,
+  26,
+  27,
+  28,
+  30,
+  31,
+  32,
+  41,
+  44,
+  58,
+  59
+ ],
+ "dimension": {
+  "static_instructions": 478,
+  "dynamic_distinct_pcs": 398,
+  "dynamic_instruction_instances": 97444,
+  "opcode_families": 17,
+  "materialization_units_with_static_code": 103,
+  "materialization_units_executed": 84,
+  "basic_blocks": 111,
+  "basic_blocks_executed": 90,
+  "natural_loops": 3,
+  "loops_with_verified_back_edge": 3,
+  "loops_with_verified_exit": 3,
+  "exit_routes_static": 1,
+  "halt_reached_dynamically": true,
+  "unclassified_bytes": 1092
+ },
+ "static_program": {
+  "static_instructions": 478,
+  "basic_blocks": 111,
+  "jumps": 102,
+  "conditional_branches": 8,
+  "halts": 1,
+  "unknown_frontiers": [],
+  "opcodes": [
+   1,
+   4,
+   5,
+   8,
+   21,
+   22,
+   24,
+   26,
+   27,
+   28,
+   30,
+   31,
+   32,
+   41,
+   44,
+   58,
+   59
+  ],
+  "dynamic_distinct_pcs": 398,
+  "static_only_pcs": 80,
+  "observed_pcs_outside_static": [],
+  "physical_bytes": 2678,
+  "bytes_in_static_instructions": 1586,
+  "natural_loops": 3
+ },
+ "loops": [
+  {
+   "header": 1742,
+   "iteration_lengths": [
+    79,
+    81
+   ],
+   "dynamic": [
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_a",
+     "header_entries": 13,
+     "back_edges": 12,
+     "exits": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_b",
+     "header_entries": 13,
+     "back_edges": 12,
+     "exits": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_c",
+     "header_entries": 257,
+     "back_edges": 256,
+     "exits": [
+      20755
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_a",
+     "header_entries": 13,
+     "back_edges": 12,
+     "exits": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_b",
+     "header_entries": 257,
+     "back_edges": 256,
+     "exits": [
+      20755
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_c",
+     "header_entries": 13,
+     "back_edges": 12,
+     "exits": []
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_d",
+     "header_entries": 13,
+     "back_edges": 12,
+     "exits": []
+    }
+   ]
+  },
+  {
+   "header": 2184,
+   "iteration_lengths": [
+    94,
+    95
+   ],
+   "dynamic": [
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_c",
+     "header_entries": 9,
+     "back_edges": 8,
+     "exits": [
+      46695
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_b",
+     "header_entries": 9,
+     "back_edges": 8,
+     "exits": [
+      46695
+     ]
+    }
+   ]
+  },
+  {
+   "header": 2522,
+   "iteration_lengths": [
+    98,
+    99,
+    130,
+    131,
+    132
+   ],
+   "dynamic": [
+    {
+     "case": "jack_xxxv_evidence/captures/eleven_c",
+     "header_entries": 257,
+     "back_edges": 256,
+     "exits": [
+      45895
+     ]
+    },
+    {
+     "case": "jack_xxxv_evidence/captures/seventeen_b",
+     "header_entries": 257,
+     "back_edges": 256,
+     "exits": [
+      45895
+     ]
+    }
+   ]
+  }
+ ],
+ "termination": {
+  "halt_pcs": [
+   2652
+  ],
+  "halt_statically_reachable": true,
+  "route": "HALT core: control3=0, control0=0xfe1ab, control10=1; wrapper 1ee450 -> pop-only RET; dispatcher 22fd0c -> 232daa -> 22b088 -> 22b0a2 -> cleanup 22b0af",
+  "dynamically_reached": [
+   {
+    "case": "jack_xxxv_evidence/captures/eleven_c",
+    "step": 46722
+   },
+   {
+    "case": "jack_xxxv_evidence/captures/seventeen_b",
+    "step": 46722
+   }
+  ]
+ },
+ "global_devirtualization_percentage": null,
+ "reason": "The reachable static program is closed (478 instructions, no unknown opcode), but native halt cleanup, other outer states and Windows confirmation beyond the trace remain open; a single percentage would hide these different evidence levels."
+}

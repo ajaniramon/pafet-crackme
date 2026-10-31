@@ -1,6 +1,6 @@
 # 13 — Open gaps and research priorities
 
-The current [JACK XXXV matrix](../jack_xxxv_evidence/status.json), earlier
+The current [JACK XXXVI status](../jack_xxxvi_evidence/status.json), [JACK XXXV matrix](../jack_xxxv_evidence/status.json), earlier
 [mechanism matrix](../jack_xvii_evidence/status_matrix.json) and
 [JACK XVII report](jack-xvii.md) distinguish demonstrated facts, partial
 reconstruction, hypotheses and unknowns. No VM is declared completely
@@ -84,6 +84,27 @@ static decoder's out-of-range route sets runtime work `0xfe1ab` and a halt
 control; complete cleanup/return and its reachability remain unverified.
 Total reachable instructions, iteration counts and a global percentage are
 still unknown.
+
+[JACK XXXVI](../PAFET_JACK_XXXVI.md) recovers `0x16` (`CMP_LT_S64`) and the
+rest of the reachable ISA: `ADD`, `CMP_NE`, `CMP_GT`, `NOT`, zero extension,
+conditional deferred branches (`0x1b`/`0x1c`, via the generalized `1f10a0`
+request) and `HALT` (`0x1e`). All 23 cases of the host-callback switch
+`232e20` are modeled as scalar/byte primitives, plus the decoder epoch and the
+scheduler's C++ exception route (throw in `1f0db0` → FH4 catch funclet
+`3cab48` → dispatcher loop). A static recursive decode from PC0 closes the
+reachable program at 478 instructions with three natural loops (headers 1742,
+2522, 2184), eight conditional branches and one HALT; all seven captures
+decode identically. The whole program (46,722 instructions, all three loops)
+executes to `HALT` and the cleanup entry `22b0af` in two processes. A
+window-cache defect inherited from XXXIV (`1f0660` fast path) was found at
+step 45948 and fixed. Depth beyond the Windows traces is verified against original x64
+emulated from the same Windows entry (plus a modeled OS exception
+dispatcher), not against new Windows captures: no Windows lab was reachable.
+
+Next (XXXVII): Windows confirmation of the long runs (checkpoint collector),
+the native halt cleanup from `22b0af` (output writer `232e00`, `memset`,
+destructors, heap free) and the return of Serial-VM, the other outer states,
+and the remaining unobserved domain bindings.
 
 A natural scheduler exception is preserved in `seventeen_a`: its 136,246-step
 capture stops outside the PE and is rejected as a complete proof. The model
