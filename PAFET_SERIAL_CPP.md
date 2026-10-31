@@ -64,3 +64,29 @@ returns 0 without reading the result or `out[24]` (both live in its own
 frame). The only host-visible effect of Serial-VM is therefore the in-place
 transformation of `work`'s bytes through callback 22. The cleanup itself is
 established statically; the emulator stops at the `VirtualFree` import.
+
+## Step 4 — The obfuscation layer is not host-observable
+
+[Evidence](serial_cpp_evidence/observable.json),
+[`pafet_serial_observable.py`](scripts/pafet_serial_observable.py).
+
+**Static (abstract interpretation to fixpoint, all 478 instructions / 111
+blocks).** A stack/register value is `CONST` (pool constant or
+constant-derived), `HOST` (derived from a callback result) or `JUNK` (from a
+register the program never stores). Result: **no `HOST_CALL` argument is ever
+`JUNK`** (0 findings). Junk is stored only into the scratch registers r16/r23,
+which are never loaded back into a callback argument. The uninitialised
+registers that steer the four reconverging diamonds (936, 997, 1664, 1950)
+therefore influence only comparisons whose results are dropped and padding
+whose arms rejoin with identical callbacks (confirmed in `loops.json`).
+
+**Dynamic (cross-process).** The two full HALT runs each make exactly **3188**
+callbacks; their stored callback (function, argc, result) prefixes and tails
+are identical, and the 64-callback prefix is identical across all seven
+processes — even though users, rekeys (585 vs 589), remaps (1746 vs 1904) and
+C++ exception counts (196 vs 219) differ. Encoded controls, keys, PRNG,
+remaps, rekeys and decoder epochs leave the callback stream unchanged.
+
+Together with step 2 (the only host-visible effect of Serial-VM is callback 22
+writing `work`'s bytes in place), the entire obfuscation layer is invisible to
+the host. The readable `serial.cpp` may omit it.

@@ -1,0 +1,51 @@
+{
+ "stored_registers": [
+  16,
+  23
+ ],
+ "host_call_arguments_tainted_by_junk": [],
+ "junk_never_reaches_a_callback_argument": true,
+ "scratch_registers_holding_junk": [
+  16,
+  23
+ ],
+ "note": "Abstract stack/register interpretation to fixpoint over all 478 instructions and 111 blocks. Registers the program never stores load as JUNK; pool constants are CONST; callback results are HOST. No HOST_CALL argument is ever JUNK. Junk is stored only into the scratch registers r16/r23, which are never loaded back into a callback argument (otherwise the host-arg check would fire); together with step 2 (the only host-visible effect is callback 22 writing work bytes) the uninitialised registers, keys, tags, PRNG, remaps, rekeys and epochs cannot reach host output.",
+ "dynamic": {
+  "processes": [
+   "jack_xxxv_evidence/captures/eleven_a",
+   "jack_xxxv_evidence/captures/eleven_b",
+   "jack_xxxv_evidence/captures/eleven_c",
+   "jack_xxxv_evidence/captures/seventeen_a",
+   "jack_xxxv_evidence/captures/seventeen_b",
+   "jack_xxxv_evidence/captures/seventeen_c",
+   "jack_xxxv_evidence/captures/seventeen_d"
+  ],
+  "full_halt_processes": [
+   "jack_xxxv_evidence/captures/eleven_c",
+   "jack_xxxv_evidence/captures/seventeen_b"
+  ],
+  "common_prefix_callbacks": 62,
+  "prefix_identical_all_processes": true,
+  "tail_identical_full_runs": true,
+  "total_callbacks_full_runs": {
+   "jack_xxxv_evidence/captures/eleven_c": 3188,
+   "jack_xxxv_evidence/captures/seventeen_b": 3188
+  },
+  "differing_state": {
+   "jack_xxxv_evidence/captures/eleven_c": {
+    "user": "charlie",
+    "rekeys": 589,
+    "remaps": 1904,
+    "exceptions": 219
+   },
+   "jack_xxxv_evidence/captures/seventeen_b": {
+    "user": "bob",
+    "rekeys": 585,
+    "remaps": 1746,
+    "exceptions": 196
+   }
+  }
+ },
+ "conclusion": "Host-visible output depends only on callback results and pool constants. Keys, PRNG, control tags, remaps, rekeys, decoder epochs and junk registers differ across processes yet the stored callback (function, argc, result) prefixes and the full-run tails match, so the obfuscation layer has no effect the host can observe.",
+ "scope": "Static register-use check plus cross-process equality on the stored 64-callback prefix (all processes) and tail (the two full HALT runs). The middle of the ~3188-callback sequence was not retained; not a proof over all inputs."
+}
