@@ -1,0 +1,2011 @@
+{
+ "name": "sha_maj",
+ "role": "SHA-256 Maj",
+ "executor": "0x1402df0e0",
+ "binary": "pafet.bin",
+ "helpers": {
+  "op": "0x1402d9b50",
+  "u32": "0x1402d9870",
+  "u16": "0x1402d9980",
+  "u8": "0x1402d9a80",
+  "push": "0x1402d6d20",
+  "pop": "0x1402d6e40"
+ },
+ "blocks": 40,
+ "complete_blocks": 40,
+ "instructions": 194,
+ "natural_instructions": 194,
+ "conditional_branches": 0,
+ "one_sided_branches": [],
+ "branches": [],
+ "opcode_histogram": {
+  "1": 44,
+  "4": 29,
+  "5": 9,
+  "8": 4,
+  "21": 8,
+  "22": 8,
+  "26": 39,
+  "29": 1,
+  "31": 28,
+  "39": 3,
+  "41": 12,
+  "44": 3,
+  "59": 6
+ },
+ "host_indices": [],
+ "conflicts": 0,
+ "conflict_detail": [],
+ "runs": [
+  {
+   "kind": "base",
+   "user_len": 3,
+   "status": "done",
+   "instructions": 194
+  },
+  {
+   "kind": "base",
+   "user_len": 25,
+   "status": "done",
+   "instructions": 194
+  }
+ ],
+ "constants": {
+  "0": "0x3efed8c07278b6af",
+  "1": "0xc101273f8d874951",
+  "3": "0xde",
+  "4": "0x19",
+  "5": "0xfa",
+  "6": "0xcb",
+  "7": "0xf9",
+  "8": "0x6b"
+ },
+ "program": {
+  "0": [
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     29
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "1": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     0
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 8,
+    "name": "ADD",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     14
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 59,
+    "name": "ZEXT",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U8"
+    ],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     2
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "2": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     10
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 59,
+    "name": "ZEXT",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U8"
+    ],
+    "natural": true
+   },
+   {
+    "op": 39,
+    "name": "AND",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 59,
+    "name": "ZEXT",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U8"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 59,
+    "name": "ZEXT",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U8"
+    ],
+    "natural": true
+   },
+   {
+    "op": 39,
+    "name": "AND",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "3": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     10
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 59,
+    "name": "ZEXT",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U8"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 59,
+    "name": "ZEXT",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U8"
+    ],
+    "natural": true
+   },
+   {
+    "op": 39,
+    "name": "AND",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 29,
+    "name": "RET",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   }
+  ],
+  "4": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     14
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "5": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     26
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "6": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     10
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     17
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "7": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     37
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "8": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     31
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "9": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     9
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "10": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     34
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "11": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     21
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "12": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     13
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     39
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "13": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     15
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     12
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "14": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     2
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 8,
+    "name": "ADD",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     36
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "15": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     18
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "16": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 44,
+    "name": "NOT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     33
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "17": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     12
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     11
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     20
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "18": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     19
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "19": [
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     22
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "20": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "21": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 8,
+    "name": "ADD",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     32
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "22": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     11
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "23": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     24
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "24": [
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     28
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "25": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     9
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "26": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     27
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "27": [
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "28": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     10
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "29": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     7
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     13
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "30": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 22,
+    "name": "SLT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "31": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     10
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 8,
+    "name": "ADD",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     30
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "32": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     0
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "33": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     14
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     0
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "34": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 5,
+    "name": "SET",
+    "args": [
+     1
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     35
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "35": [
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     25
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "36": [
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     6
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 4,
+    "name": "GET",
+    "args": [
+     13
+    ],
+    "kinds": [
+     "U16"
+    ],
+    "natural": true
+   },
+   {
+    "op": 21,
+    "name": "NE",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     23
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "37": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     4
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     8
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 41,
+    "name": "XOR",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     16
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "38": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     5
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 44,
+    "name": "NOT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     15
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ],
+  "39": [
+   {
+    "op": 1,
+    "name": "CONST",
+    "args": [
+     3
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   },
+   {
+    "op": 44,
+    "name": "NOT",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 31,
+    "name": "DROP",
+    "args": [],
+    "kinds": [],
+    "natural": true
+   },
+   {
+    "op": 26,
+    "name": "JMP",
+    "args": [
+     38
+    ],
+    "kinds": [
+     "U32"
+    ],
+    "natural": true
+   }
+  ]
+ }
+}

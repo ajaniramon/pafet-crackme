@@ -1,0 +1,14 @@
+# user (username transform f_user): what feeds each conditional branch and each HOST call
+## conditional branches: 2
+  block 3.1  JZ -> 45   cond = h3@3.0   REAL (both outcomes occur naturally)
+  block 47.0  JNZ -> 54   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+## HOST calls: 9
+  host 0  at 0.4  args=[]  return dropped
+  host 1  at 2.1  args=[]  return dropped
+  host 2  at 2.4  args=[0x0]  return dropped
+  host 2  at 6.2  args=[(in1 + 0x1)]  return dropped
+  host 3  at 3.0  args=[]  return used
+  host 4  at 5.3  args=[]  return dropped
+  host 5  at 5.5  args=[]  return used
+  host 5  at 6.4  args=[]  return dropped
+  host 6  at 8.0  args=[]  return dropped

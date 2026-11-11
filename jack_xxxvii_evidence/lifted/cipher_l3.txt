@@ -1,0 +1,842 @@
+# cipher_l3 (cipher level 3) executor 0x140176950; logical program recovered dynamically.
+# block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
+block 0:
+   0  CONST  0   = 0x0
+   1  HOST   0 1
+   2  DROP   
+   3  CONST  1   = 0xae6054e7561fe5bb
+   4  SET    23
+   5  JMP    1   -> block 1
+block 1:
+   0  CONST  0   = 0x0
+   1  SEXT   32
+   2  HOST   1 1
+   3  DROP   
+   4  JMP    2   -> block 2
+block 2:
+   0  HOST   2 0
+   1  SEXT   32
+   2  CONST  2   = 0x8
+   3  SLT    
+   4  JZ     80   -> block 80  seen=FT
+   5  JMP    3   -> block 3
+block 3:
+   0  JMP    78   -> block 78
+block 4:
+   0  CONST  3   = 0x133845cc383b7633
+   1  SET    23
+   2  GET    23
+   3  CONST  4   = 0xecc7ba33c7c489cc
+   4  XOR    
+   5  SET    23
+   6  JMP    5   -> block 5
+block 5:
+   0  HOST   3 0
+   1  CONST  2   = 0x8
+   2  SHL    
+   3  HOST   4 0
+   4  ZEXT   8
+   5  OR     
+   6  HOST   0 1
+   7  JMP    6   -> block 6
+block 6:
+   0  DROP   
+   1  HOST   3 0
+   2  DROP   
+   3  HOST   2 0
+   4  CONST  5   = 0x1
+   5  ADD    
+   6  HOST   1 1
+   7  DROP   
+   8  JMP    7   -> block 7
+block 7:
+   0  HOST   2 0
+   1  DROP   
+   2  JMP    71   -> block 71
+block 8:
+   0  CONST  6   = 0xce9102f7db954043
+   1  SET    23
+   2  GET    23
+   3  CONST  7   = 0x316efd08246abfbc
+   4  XOR    
+   5  SET    23
+   6  JMP    9   -> block 9
+block 9:
+   0  CONST  0   = 0x0
+   1  HOST   5 1
+   2  DROP   
+   3  CONST  0   = 0x0
+   4  SEXT   32
+   5  HOST   6 1
+   6  JMP    10   -> block 10
+block 10:
+   0  DROP   
+   1  JMP    11   -> block 11
+block 11:
+   0  HOST   7 0
+   1  SEXT   32
+   2  CONST  8   = 0x40
+   3  SLT    
+   4  JZ     83   -> block 83  seen=FT
+   5  JMP    12   -> block 12
+block 12:
+   0  JMP    117   -> block 117
+block 13:
+   0  CONST  9   = 0x28702e52128f069d
+   1  SET    23
+   2  HOST   3 0
+   3  CONST  5   = 0x1
+   4  JMP    14   -> block 14
+block 14:
+   0  CONST  8   = 0x40
+   1  HOST   8 0
+   2  ZEXT   8
+   3  SEXT   32
+   4  SUB    
+   5  SHL    
+   6  AND    
+   7  CONST  0   = 0x0
+   8  JMP    15   -> block 15
+block 15:
+   0  NE     
+   1  JZ     61   -> block 61  seen=FT
+   2  JMP    16   -> block 16
+block 16:
+   0  JMP    53   -> block 53
+block 17:
+   0  CONST  10   = 0x4f44d04dbd4b9f99
+   1  CONST  11   = 0xb0bb2fb242b46067
+   2  ADD    
+   3  SET    23
+   4  HOST   9 0
+   5  JMP    18   -> block 18
+block 18:
+   0  CONST  5   = 0x1
+   1  CONST  12   = 0x3f
+   2  HOST   7 0
+   3  SEXT   32
+   4  SUB    
+   5  SHL    
+   6  OR     
+   7  JMP    19   -> block 19
+block 19:
+   0  HOST   5 1
+   1  DROP   
+   2  HOST   9 0
+   3  DROP   
+   4  JMP    133   -> block 133
+block 20:
+   0  HOST   7 0
+   1  CONST  5   = 0x1
+   2  ADD    
+   3  HOST   6 1
+   4  DROP   
+   5  HOST   7 0
+   6  DROP   
+   7  JMP    21   -> block 21
+block 21:
+   0  JMP    97   -> block 97
+block 22:
+   0  HOST   9 0
+   1  CONST  13   = 0x20
+   2  SHR    
+   3  ZEXT   32
+   4  ZEXT   32
+   5  ZEXT   32
+   6  HOST   10 1
+   7  DROP   
+   8  JMP    23   -> block 23
+block 23:
+   0  HOST   9 0
+   1  CONST  14   = 0xffffffffffffffff
+   2  AND    
+   3  ZEXT   32
+   4  ZEXT   32
+   5  ZEXT   32
+   6  HOST   11 1
+   7  DROP   
+   8  JMP    24   -> block 24
+block 24:
+   0  CONST  0   = 0x0
+   1  SEXT   32
+   2  HOST   12 1
+   3  DROP   
+   4  JMP    25   -> block 25
+block 25:
+   0  HOST   13 0
+   1  SEXT   32
+   2  CONST  15   = 0x10
+   3  SLT    
+   4  JZ     90   -> block 90  seen=FT
+   5  JMP    26   -> block 26
+block 26:
+   0  JMP    86   -> block 86
+block 27:
+   0  HOST   14 0
+   1  ZEXT   32
+   2  ZEXT   32
+   3  HOST   15 1
+   4  DROP   
+   5  HOST   16 0
+   6  ZEXT   32
+   7  JMP    28   -> block 28
+block 28:
+   0  HOST   17 0
+   1  XOR    
+   2  ZEXT   32
+   3  HOST   11 1
+   4  DROP   
+   5  HOST   14 0
+   6  DROP   
+   7  JMP    29   -> block 29
+block 29:
+   0  CONST  16   = 0x7d61b7d49e39d517
+   1  SET    23
+   2  HOST   18 0
+   3  ZEXT   32
+   4  ZEXT   32
+   5  HOST   10 1
+   6  DROP   
+   7  JMP    30   -> block 30
+block 30:
+   0  HOST   16 0
+   1  DROP   
+   2  HOST   13 0
+   3  CONST  5   = 0x1
+   4  ADD    
+   5  HOST   12 1
+   6  DROP   
+   7  JMP    31   -> block 31
+block 31:
+   0  HOST   13 0
+   1  DROP   
+   2  JMP    103   -> block 103
+block 32:
+   0  HOST   14 0
+   1  ZEXT   32
+   2  CONST  13   = 0x20
+   3  SHL    
+   4  HOST   16 0
+   5  ZEXT   32
+   6  OR     
+   7  JMP    33   -> block 33
+block 33:
+   0  HOST   19 1
+   1  DROP   
+   2  CONST  0   = 0x0
+   3  HOST   20 1
+   4  DROP   
+   5  CONST  0   = 0x0
+   6  JMP    34   -> block 34
+block 34:
+   0  SEXT   32
+   1  HOST   21 1
+   2  DROP   
+   3  JMP    35   -> block 35
+block 35:
+   0  HOST   22 0
+   1  SEXT   32
+   2  CONST  8   = 0x40
+   3  SLT    
+   4  JZ     136   -> block 136  seen=FT
+   5  JMP    36   -> block 36
+block 36:
+   0  JMP    65   -> block 65
+block 37:
+   0  CONST  17   = 0x2d2d2bc49ed2c287
+   1  SET    23
+   2  GET    23
+   3  CONST  18   = 0xd2d2d43b612d3d78
+   4  XOR    
+   5  SET    23
+   6  JMP    38   -> block 38
+block 38:
+   0  HOST   23 0
+   1  CONST  5   = 0x1
+   2  CONST  8   = 0x40
+   3  HOST   24 0
+   4  ZEXT   8
+   5  JMP    39   -> block 39
+block 39:
+   0  SEXT   32
+   1  SUB    
+   2  SHL    
+   3  AND    
+   4  CONST  0   = 0x0
+   5  NE     
+   6  JZ     57   -> block 57  seen=FT
+   7  JMP    40   -> block 40
+block 40:
+   0  JMP    110   -> block 110
+block 41:
+   0  HOST   25 0
+   1  CONST  5   = 0x1
+   2  CONST  12   = 0x3f
+   3  HOST   22 0
+   4  SEXT   32
+   5  SUB    
+   6  JMP    42   -> block 42
+block 42:
+   0  SHL    
+   1  OR     
+   2  HOST   20 1
+   3  DROP   
+   4  HOST   25 0
+   5  DROP   
+   6  JMP    112   -> block 112
+block 43:
+   0  HOST   22 0
+   1  CONST  5   = 0x1
+   2  ADD    
+   3  HOST   21 1
+   4  DROP   
+   5  HOST   22 0
+   6  DROP   
+   7  JMP    44   -> block 44
+block 44:
+   0  JMP    115   -> block 115
+block 45:
+   0  CONST  19   = 0xe279d9c1cd532b3f
+   1  NOT    
+   2  SET    23
+   3  CONST  20   = 0x7
+   4  SEXT   32
+   5  HOST   26 1
+   6  DROP   
+   7  JMP    46   -> block 46
+block 46:
+   0  HOST   27 0
+   1  SEXT   32
+   2  CONST  0   = 0x0
+   3  SGE    
+   4  JZ     132   -> block 132  seen=FT
+   5  JMP    47   -> block 47
+block 47:
+   0  JMP    88   -> block 88
+block 48:
+   0  CONST  21   = 0x1d185a40e1946027
+   1  CONST  22   = 0xe2e7a5bf1e6b9fd9
+   2  ADD    
+   3  SET    23
+   4  HOST   28 0
+   5  DROP   
+   6  JMP    49   -> block 49
+block 49:
+   0  HOST   25 0
+   1  CONST  2   = 0x8
+   2  SHR    
+   3  HOST   20 1
+   4  DROP   
+   5  HOST   25 0
+   6  DROP   
+   7  JMP    50   -> block 50
+block 50:
+   0  HOST   27 0
+   1  CONST  5   = 0x1
+   2  SUB    
+   3  HOST   26 1
+   4  DROP   
+   5  HOST   27 0
+   6  DROP   
+   7  JMP    51   -> block 51
+block 51:
+   0  JMP    70   -> block 70
+block 52:
+   0  RET0   
+block 53:
+   0  CONST  23   = 0xe7
+   1  CONST  27   = 0x98
+   2  XOR    
+   3  DROP   
+   4  JMP    92   -> block 92
+block 54:
+   0  CONST  28   = 0x5a
+   1  CONST  28   = 0x5a
+   2  SLT    
+   3  DROP   
+   4  JMP    37   -> block 37
+block 55:
+   0  CONST  28   = 0x5a
+   1  SET    6
+   2  GET    6
+   3  CONST  23   = 0xe7
+   4  XOR    
+   5  SET    6
+   6  JMP    56   -> block 56
+block 56:
+   0  JMP    2   -> block 2
+block 57:
+   0  GET    19
+   1  GET    13
+   2  NE     
+   3  DROP   
+   4  JMP    139   -> block 139
+block 58:
+   0  CONST  24   = 0xbf
+   1  CONST  25   = 0x7d
+   2  SLT    
+   3  DROP   
+   4  JMP    35   -> block 35
+block 59:
+   0  CONST  23   = 0xe7
+   1  SET    6
+   2  GET    6
+   3  CONST  24   = 0xbf
+   4  XOR    
+   5  SET    6
+   6  JMP    60   -> block 60
+block 60:
+   0  JMP    46   -> block 46
+block 61:
+   0  GET    11
+   1  CONST  23   = 0xe7
+   2  ADD    
+   3  DROP   
+   4  JMP    85   -> block 85
+block 62:
+   0  CONST  27   = 0x98
+   1  CONST  25   = 0x7d
+   2  XOR    
+   3  DROP   
+   4  JMP    32   -> block 32
+block 63:
+   0  GET    3
+   1  GET    16
+   2  NE     
+   3  DROP   
+   4  JMP    20   -> block 20
+block 64:
+   0  CONST  28   = 0x5a
+   1  CONST  25   = 0x7d
+   2  XOR    
+   3  DROP   
+   4  JMP    55   -> block 55
+block 65:
+   0  CONST  27   = 0x98
+   1  NOT    
+   2  DROP   
+   3  JMP    124   -> block 124
+block 66:
+   0  CONST  24   = 0xbf
+   1  CONST  25   = 0x7d
+   2  SLT    
+   3  DROP   
+   4  JMP    17   -> block 17
+block 67:
+   0  GET    15
+   1  CONST  23   = 0xe7
+   2  ADD    
+   3  DROP   
+   4  JMP    141   -> block 141
+block 68:
+   0  CONST  25   = 0x7d
+   1  SET    6
+   2  GET    6
+   3  CONST  23   = 0xe7
+   4  XOR    
+   5  SET    6
+   6  JMP    69   -> block 69
+block 69:
+   0  JMP    41   -> block 41
+block 70:
+   0  GET    5
+   1  CONST  25   = 0x7d
+   2  ADD    
+   3  DROP   
+   4  JMP    59   -> block 59
+block 71:
+   0  CONST  26   = 0x70
+   1  NOT    
+   2  DROP   
+   3  JMP    64   -> block 64
+block 72:
+   0  CONST  23   [forced-only]
+   1  CONST  23   [forced-only]
+   2  SLT       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    20   -> block 20   [forced-only]
+block 73:
+   0  GET    2
+   1  CONST  26   = 0x70
+   2  ADD    
+   3  DROP   
+   4  GET    2
+   5  CONST  24   = 0xbf
+   6  SGT    
+   7  JMP    74   -> block 74
+block 74:
+   0  JNZ    87   -> block 87  seen=FT
+   1  JMP    75   -> block 75
+block 75:
+   0  JMP    113   -> block 113
+block 76:
+   0  CONST  28   = 0x5a
+   1  CONST  24   = 0xbf
+   2  XOR    
+   3  DROP   
+   4  JMP    118   -> block 118
+block 77:
+   0  CONST  24   = 0xbf
+   1  NOT    
+   2  DROP   
+   3  JMP    45   -> block 45
+block 78:
+   0  GET    13
+   1  GET    7
+   2  NE     
+   3  DROP   
+   4  JMP    79   -> block 79
+block 79:
+   0  GET    17
+   1  GET    2
+   2  NE     
+   3  DROP   
+   4  JMP    93   -> block 93
+block 80:
+   0  GET    0
+   1  CONST  25   = 0x7d
+   2  ADD    
+   3  DROP   
+   4  JMP    119   -> block 119
+block 81:
+   0  CONST  24   [forced-only]
+   1  NOT       [forced-only]
+   2  DROP      [forced-only]
+   3  JMP    37   -> block 37   [forced-only]
+block 82:
+   0  GET    19
+   1  CONST  26   = 0x70
+   2  ADD    
+   3  DROP   
+   4  JMP    48   -> block 48
+block 83:
+   0  GET    12
+   1  CONST  28   = 0x5a
+   2  ADD    
+   3  DROP   
+   4  JMP    76   -> block 76
+block 84:
+   0  GET    20
+   1  GET    13
+   2  NE     
+   3  DROP   
+   4  JMP    98   -> block 98
+block 85:
+   0  CONST  26   = 0x70
+   1  CONST  24   = 0xbf
+   2  XOR    
+   3  DROP   
+   4  JMP    63   -> block 63
+block 86:
+   0  GET    8
+   1  CONST  27   = 0x98
+   2  ADD    
+   3  DROP   
+   4  JMP    135   -> block 135
+block 87:
+   0  CONST  25   [forced-only]
+   1  NOT       [forced-only]
+   2  DROP      [forced-only]
+   3  JMP    13   -> block 13   [forced-only]
+block 88:
+   0  CONST  23   = 0xe7
+   1  NOT    
+   2  DROP   
+   3  JMP    121   -> block 121
+block 89:
+   0  GET    21
+   1  GET    2
+   2  NE     
+   3  DROP   
+   4  JMP    27   -> block 27
+block 90:
+   0  CONST  25   = 0x7d
+   1  CONST  26   = 0x70
+   2  XOR    
+   3  DROP   
+   4  JMP    140   -> block 140
+block 91:
+   0  CONST  26   [forced-only]
+   1  NOT       [forced-only]
+   2  DROP      [forced-only]
+   3  JMP    43   -> block 43   [forced-only]
+block 92:
+   0  GET    23
+   1  GET    6
+   2  NE     
+   3  DROP   
+   4  JMP    66   -> block 66
+block 93:
+   0  GET    3
+   1  GET    23
+   2  NE     
+   3  DROP   
+   4  GET    8
+   5  CONST  26   = 0x70
+   6  SGT    
+   7  JMP    94   -> block 94
+block 94:
+   0  JNZ    114   -> block 114  seen=FT
+   1  JMP    95   -> block 95
+block 95:
+   0  JMP    96   -> block 96
+block 96:
+   0  GET    5
+   1  CONST  28   = 0x5a
+   2  ADD    
+   3  DROP   
+   4  JMP    4   -> block 4
+block 97:
+   0  GET    3
+   1  GET    8
+   2  NE     
+   3  DROP   
+   4  JMP    84   -> block 84
+block 98:
+   0  CONST  23   = 0xe7
+   1  SET    6
+   2  GET    6
+   3  CONST  24   = 0xbf
+   4  XOR    
+   5  SET    6
+   6  JMP    99   -> block 99
+block 99:
+   0  JMP    11   -> block 11
+block 100:
+   0  CONST  26   = 0x70
+   1  CONST  26   = 0x70
+   2  XOR    
+   3  DROP   
+   4  JMP    43   -> block 43
+block 101:
+   0  CONST  25   [forced-only]
+   1  CONST  24   [forced-only]
+   2  XOR       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    27   -> block 27   [forced-only]
+block 102:
+   0  GET    16
+   1  CONST  26   = 0x70
+   2  ADD    
+   3  DROP   
+   4  JMP    20   -> block 20
+block 103:
+   0  CONST  26   = 0x70
+   1  SET    6
+   2  GET    6
+   3  CONST  25   = 0x7d
+   4  XOR    
+   5  SET    6
+   6  JMP    104   -> block 104
+block 104:
+   0  JMP    137   -> block 137
+block 105:
+   0  CONST  28   [forced-only]
+   1  SET    6   [forced-only]
+   2  GET    6   [forced-only]
+   3  CONST  26   [forced-only]
+   4  XOR       [forced-only]
+   5  SET    6   [forced-only]
+   6  JMP    106   -> block 106   [forced-only]
+block 106:
+   0  JMP    48   -> block 48   [forced-only]
+block 107:
+   0  CONST  27   = 0x98
+   1  SET    6
+   2  GET    6
+   3  CONST  26   = 0x70
+   4  XOR    
+   5  SET    6
+   6  JMP    108   -> block 108
+block 108:
+   0  GET    15
+   1  CONST  25   = 0x7d
+   2  SGT    
+   3  JNZ    81   -> block 81  seen=FT
+   4  JMP    109   -> block 109
+block 109:
+   0  JMP    54   -> block 54
+block 110:
+   0  GET    3
+   1  CONST  23   = 0xe7
+   2  ADD    
+   3  DROP   
+   4  JMP    68   -> block 68
+block 111:
+   0  GET    3
+   1  CONST  24   = 0xbf
+   2  ADD    
+   3  DROP   
+   4  JMP    77   -> block 77
+block 112:
+   0  GET    11
+   1  GET    15
+   2  NE     
+   3  DROP   
+   4  JMP    125   -> block 125
+block 113:
+   0  CONST  25   = 0x7d
+   1  CONST  27   = 0x98
+   2  SLT    
+   3  DROP   
+   4  JMP    13   -> block 13
+block 114:
+   0  GET    3   [forced-only]
+   1  CONST  25   [forced-only]
+   2  ADD       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    4   -> block 4   [forced-only]
+block 115:
+   0  CONST  25   = 0x7d
+   1  CONST  28   = 0x5a
+   2  XOR    
+   3  DROP   
+   4  JMP    58   -> block 58
+block 116:
+   0  GET    22
+   1  CONST  23   = 0xe7
+   2  ADD    
+   3  DROP   
+   4  JMP    8   -> block 8
+block 117:
+   0  CONST  27   = 0x98
+   1  NOT    
+   2  DROP   
+   3  JMP    134   -> block 134
+block 118:
+   0  CONST  25   = 0x7d
+   1  CONST  27   = 0x98
+   2  SLT    
+   3  DROP   
+   4  JMP    22   -> block 22
+block 119:
+   0  CONST  23   = 0xe7
+   1  SET    6
+   2  GET    6
+   3  CONST  24   = 0xbf
+   4  XOR    
+   5  SET    6
+   6  JMP    120   -> block 120
+block 120:
+   0  JMP    116   -> block 116
+block 121:
+   0  CONST  23   = 0xe7
+   1  CONST  24   = 0xbf
+   2  XOR    
+   3  DROP   
+   4  GET    7
+   5  CONST  28   = 0x5a
+   6  SGT    
+   7  JMP    122   -> block 122
+block 122:
+   0  JNZ    105   -> block 105  seen=FT
+   1  JMP    123   -> block 123
+block 123:
+   0  JMP    82   -> block 82
+block 124:
+   0  GET    10
+   1  CONST  26   = 0x70
+   2  ADD    
+   3  DROP   
+   4  JMP    107   -> block 107
+block 125:
+   0  CONST  26   = 0x70
+   1  CONST  26   = 0x70
+   2  XOR    
+   3  DROP   
+   4  GET    9
+   5  CONST  23   = 0xe7
+   6  SGT    
+   7  JMP    126   -> block 126
+block 126:
+   0  JNZ    91   -> block 91  seen=FT
+   1  JMP    127   -> block 127
+block 127:
+   0  JMP    100   -> block 100
+block 128:
+   0  CONST  25   = 0x7d
+   1  SET    6
+   2  GET    6
+   3  CONST  24   = 0xbf
+   4  XOR    
+   5  SET    6
+   6  JMP    129   -> block 129
+block 129:
+   0  GET    20
+   1  CONST  25   = 0x7d
+   2  SGT    
+   3  JNZ    101   -> block 101  seen=FT
+   4  JMP    130   -> block 130
+block 130:
+   0  JMP    89   -> block 89
+block 131:
+   0  CONST  24   = 0xbf
+   1  CONST  24   = 0xbf
+   2  XOR    
+   3  DROP   
+   4  JMP    25   -> block 25
+block 132:
+   0  CONST  28   = 0x5a
+   1  NOT    
+   2  DROP   
+   3  JMP    138   -> block 138
+block 133:
+   0  GET    11
+   1  CONST  28   = 0x5a
+   2  ADD    
+   3  DROP   
+   4  JMP    67   -> block 67
+block 134:
+   0  GET    18
+   1  CONST  26   = 0x70
+   2  ADD    
+   3  DROP   
+   4  JMP    73   -> block 73
+block 135:
+   0  CONST  28   = 0x5a
+   1  CONST  27   = 0x98
+   2  XOR    
+   3  DROP   
+   4  JMP    128   -> block 128
+block 136:
+   0  CONST  26   = 0x70
+   1  CONST  23   = 0xe7
+   2  SLT    
+   3  DROP   
+   4  JMP    111   -> block 111
+block 137:
+   0  GET    2
+   1  GET    20
+   2  NE     
+   3  DROP   
+   4  JMP    131   -> block 131
+block 138:
+   0  CONST  23   = 0xe7
+   1  NOT    
+   2  DROP   
+   3  JMP    52   -> block 52
+block 139:
+   0  CONST  28   = 0x5a
+   1  CONST  27   = 0x98
+   2  XOR    
+   3  DROP   
+   4  JMP    43   -> block 43
+block 140:
+   0  CONST  24   = 0xbf
+   1  NOT    
+   2  DROP   
+   3  JMP    62   -> block 62
+block 141:
+   0  GET    14
+   1  CONST  27   = 0x98
+   2  ADD    
+   3  DROP   
+   4  GET    22
+   5  CONST  23   = 0xe7
+   6  SGT    
+   7  JMP    142   -> block 142
+block 142:
+   0  JNZ    72   -> block 72  seen=FT
+   1  JMP    143   -> block 143
+block 143:
+   0  JMP    102   -> block 102

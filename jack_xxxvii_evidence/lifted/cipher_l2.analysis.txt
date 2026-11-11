@@ -1,0 +1,9 @@
+# cipher_l2 (cipher level 2): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 6
+  host 0  at 1.0  args=[]  return dropped
+  host 1  at 1.2  args=[]  return dropped
+  host 2  at 1.4  args=[]  return dropped
+  host 3  at 2.1  args=[]  return dropped
+  host 4  at 2.3  args=[]  return dropped
+  host 5  at 2.5  args=[]  return dropped

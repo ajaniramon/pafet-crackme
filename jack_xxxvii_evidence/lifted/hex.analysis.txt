@@ -1,0 +1,13 @@
+# hex (ciphertext hex decoder): what feeds each conditional branch and each HOST call
+## conditional branches: 2
+  block 1.1  JZ -> 9   cond = h1@1.0   REAL (both outcomes occur naturally)
+  block 56.0  JNZ -> 13   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+## HOST calls: 8
+  host 0  at 0.3  args=[0x0]  return dropped
+  host 0  at 4.3  args=[(h4@4.0 + 0x2)]  return dropped
+  host 1  at 1.0  args=[]  return used
+  host 2  at 3.3  args=[]  return dropped
+  host 3  at 3.5  args=[]  return dropped
+  host 4  at 4.0  args=[]  return used
+  host 4  at 4.5  args=[]  return dropped
+  host 5  at 6.0  args=[]  return dropped

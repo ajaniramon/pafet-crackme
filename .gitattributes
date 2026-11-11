@@ -47,3 +47,5 @@ scripts/pafet_serial_audit_xxxv.py -text
 scripts/pafet_serial_graph_xxxv.py -text
 scripts/pafet_serial_metrics_xxxv.py -text
 scripts/pafet_serial_arithmetic_xxxv.py -text
+jack_xxxvii_evidence/** -text whitespace=cr-at-eol
+scripts/pafet_*_xxxvii.py -text

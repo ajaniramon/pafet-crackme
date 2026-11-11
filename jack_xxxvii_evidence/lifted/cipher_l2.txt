@@ -1,0 +1,232 @@
+# cipher_l2 (cipher level 2) executor 0x1400d3fe0; logical program recovered dynamically.
+# block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
+block 0:
+   0  JMP    16   -> block 16
+block 1:
+   0  HOST   0 0
+   1  DROP   
+   2  HOST   1 0
+   3  DROP   
+   4  HOST   2 0
+   5  DROP   
+   6  CONST  0   = 0xdf73207cb334b6e1
+   7  JMP    2   -> block 2
+block 2:
+   0  SET    8
+   1  HOST   3 0
+   2  DROP   
+   3  HOST   4 0
+   4  DROP   
+   5  HOST   5 0
+   6  DROP   
+   7  RET0   
+block 3:
+   0  GET    7
+   1  CONST  2   = 0xe6
+   2  ADD    
+   3  DROP   
+   4  JMP    31   -> block 31
+block 4:
+   0  GET    8
+   1  GET    4
+   2  NE     
+   3  DROP   
+   4  JMP    1   -> block 1
+block 5:
+   0  GET    10
+   1  CONST  2   = 0xe6
+   2  ADD    
+   3  DROP   
+   4  JMP    19   -> block 19
+block 6:
+   0  GET    0
+   1  CONST  5   = 0x53
+   2  ADD    
+   3  DROP   
+   4  JMP    30   -> block 30
+block 7:
+   0  CONST  4   = 0x38
+   1  SET    3
+   2  GET    3
+   3  CONST  4   = 0x38
+   4  XOR    
+   5  SET    3
+   6  JMP    8   -> block 8
+block 8:
+   0  JMP    12   -> block 12
+block 9:
+   0  GET    9
+   1  GET    11
+   2  NE     
+   3  DROP   
+   4  JMP    24   -> block 24
+block 10:
+   0  GET    12
+   1  CONST  5   = 0x53
+   2  ADD    
+   3  DROP   
+   4  JMP    15   -> block 15
+block 11:
+   0  CONST  2   = 0xe6
+   1  NOT    
+   2  DROP   
+   3  JMP    9   -> block 9
+block 12:
+   0  CONST  3   = 0x73
+   1  NOT    
+   2  DROP   
+   3  JMP    3   -> block 3
+block 13:
+   0  GET    8
+   1  CONST  4   = 0x38
+   2  ADD    
+   3  DROP   
+   4  JMP    36   -> block 36
+block 14:
+   0  CONST  2   = 0xe6
+   1  CONST  4   = 0x38
+   2  SLT    
+   3  DROP   
+   4  JMP    18   -> block 18
+block 15:
+   0  CONST  6   = 0x29
+   1  CONST  3   = 0x73
+   2  XOR    
+   3  DROP   
+   4  JMP    13   -> block 13
+block 16:
+   0  GET    0
+   1  CONST  2   = 0xe6
+   2  ADD    
+   3  DROP   
+   4  JMP    17   -> block 17
+block 17:
+   0  GET    12
+   1  GET    7
+   2  NE     
+   3  DROP   
+   4  JMP    25   -> block 25
+block 18:
+   0  GET    3
+   1  CONST  6   = 0x29
+   2  ADD    
+   3  DROP   
+   4  JMP    5   -> block 5
+block 19:
+   0  GET    1
+   1  CONST  6   = 0x29
+   2  ADD    
+   3  DROP   
+   4  JMP    20   -> block 20
+block 20:
+   0  CONST  2   = 0xe6
+   1  CONST  6   = 0x29
+   2  XOR    
+   3  DROP   
+   4  JMP    21   -> block 21
+block 21:
+   0  CONST  3   = 0x73
+   1  SET    3
+   2  GET    3
+   3  CONST  1   = 0x71
+   4  XOR    
+   5  SET    3
+   6  JMP    22   -> block 22
+block 22:
+   0  JMP    23   -> block 23
+block 23:
+   0  GET    4
+   1  CONST  4   = 0x38
+   2  ADD    
+   3  DROP   
+   4  JMP    4   -> block 4
+block 24:
+   0  CONST  6   = 0x29
+   1  CONST  4   = 0x38
+   2  SLT    
+   3  DROP   
+   4  JMP    35   -> block 35
+block 25:
+   0  CONST  5   = 0x53
+   1  CONST  3   = 0x73
+   2  XOR    
+   3  DROP   
+   4  JMP    7   -> block 7
+block 26:
+   0  GET    15
+   1  GET    11
+   2  NE     
+   3  DROP   
+   4  JMP    10   -> block 10
+block 27:
+   0  CONST  4   = 0x38
+   1  SET    3
+   2  GET    3
+   3  CONST  2   = 0xe6
+   4  XOR    
+   5  SET    3
+   6  JMP    28   -> block 28
+block 28:
+   0  JMP    39   -> block 39
+block 29:
+   0  CONST  1   = 0x71
+   1  CONST  3   = 0x73
+   2  SLT    
+   3  DROP   
+   4  JMP    37   -> block 37
+block 30:
+   0  GET    12
+   1  GET    9
+   2  NE     
+   3  DROP   
+   4  JMP    14   -> block 14
+block 31:
+   0  GET    8
+   1  CONST  1   = 0x71
+   2  ADD    
+   3  DROP   
+   4  JMP    26   -> block 26
+block 32:
+   0  CONST  4   = 0x38
+   1  CONST  4   = 0x38
+   2  SLT    
+   3  DROP   
+   4  JMP    33   -> block 33
+block 33:
+   0  CONST  5   = 0x53
+   1  SET    3
+   2  GET    3
+   3  CONST  5   = 0x53
+   4  XOR    
+   5  SET    3
+   6  JMP    34   -> block 34
+block 34:
+   0  JMP    6   -> block 6
+block 35:
+   0  GET    3
+   1  CONST  2   = 0xe6
+   2  ADD    
+   3  DROP   
+   4  JMP    29   -> block 29
+block 36:
+   0  CONST  3   = 0x73
+   1  CONST  3   = 0x73
+   2  XOR    
+   3  DROP   
+   4  JMP    27   -> block 27
+block 37:
+   0  CONST  4   = 0x38
+   1  SET    3
+   2  GET    3
+   3  CONST  5   = 0x53
+   4  XOR    
+   5  SET    3
+   6  JMP    38   -> block 38
+block 38:
+   0  JMP    32   -> block 32
+block 39:
+   0  GET    4
+   1  CONST  2   = 0xe6
+   2  ADD    
+   3  DROP   
+   4  JMP    11   -> block 11

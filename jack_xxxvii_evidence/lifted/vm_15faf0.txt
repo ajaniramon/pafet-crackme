@@ -1,0 +1,417 @@
+# vm_15faf0 (unidentified (cipher cluster)) executor 0x14015faf0; logical program recovered dynamically.
+# block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
+block 0:
+   0  CONST  0   = 0xe21059a547bd1371
+   1  CONST  1   = 0x1defa65ab842ec8f
+   2  ADD    
+   3  SET    3
+   4  HOST   0 0
+   5  JMP    1   -> block 1
+block 1:
+   0  JZ     78   -> block 78  seen=FT
+   1  JMP    2   -> block 2   [forced-only]
+block 2:
+   0  JMP    34   -> block 34   [forced-only]
+block 3:   # INCOMPLETE: terminator not recorded
+   0  HOST   1 0   [forced-only]
+   1  DROP      [forced-only]
+   2  CONST  2   [forced-only]
+block 4:
+   0  HOST   2 0
+   1  ZEXT   8
+   2  HOST   3 1
+   3  DROP   
+   4  HOST   4 0
+   5  ZEXT   8
+   6  SEXT   32
+   7  JMP    5   -> block 5
+block 5:
+   0  CONST  2   = 0x0
+   1  EQ     
+   2  JNZ    39   -> block 39  seen=FT
+   3  JMP    6   -> block 6
+block 6:
+   0  JMP    62   -> block 62
+block 7:
+   0  HOST   4 0
+   1  ZEXT   8
+   2  SEXT   32
+   3  CONST  3   = 0x8
+   4  SGT    
+   5  CONST  2   = 0x0
+   6  JMP    8   -> block 8
+block 8:
+   0  NE     
+   1  JMP    46   -> block 46
+block 9:
+   0  CONST  4   [forced-only]
+   1  JMP    10   -> block 10   [forced-only]
+block 10:
+   0  JZ     81   -> block 81  seen=FT
+   1  JMP    11   -> block 11
+block 11:
+   0  JMP    64   -> block 64
+block 12:
+   0  HOST   5 0
+   1  DROP   
+   2  CONST  2   = 0x0
+   3  RET    
+block 13:   # INCOMPLETE: terminator not recorded
+   0  HOST   6 0   [forced-only]
+   1  DROP      [forced-only]
+   2  CONST  2   [forced-only]
+block 14:
+   0  CONST  5   [forced-only]
+   1  NOT       [forced-only]
+   2  DROP      [forced-only]
+   3  JMP    41   -> block 41   [forced-only]
+block 15:
+   0  GET    9
+   1  GET    2
+   2  NE     
+   3  DROP   
+   4  JMP    48   -> block 48
+block 16:
+   0  CONST  7   = 0x3e
+   1  CONST  9   = 0x7a
+   2  SLT    
+   3  DROP   
+   4  JMP    66   -> block 66
+block 17:
+   0  GET    15
+   1  GET    14
+   2  NE     
+   3  DROP   
+   4  JMP    88   -> block 88
+block 19:
+   0  CONST  10   = 0x9
+   1  SET    2
+   2  GET    2
+   3  CONST  6   = 0x54
+   4  XOR    
+   5  JMP    20   -> block 20
+block 20:
+   0  SET    2
+   1  JMP    12   -> block 12
+block 21:
+   0  CONST  6   = 0x54
+   1  NOT    
+   2  DROP   
+   3  GET    5
+   4  CONST  7   = 0x3e
+   5  SGT    
+   6  JMP    22   -> block 22
+block 22:
+   0  JNZ    79   -> block 79  seen=FT
+   1  JMP    23   -> block 23
+block 23:
+   0  JMP    19   -> block 19
+block 25:
+   0  GET    7   [forced-only]
+   1  GET    2   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    65   -> block 65   [forced-only]
+block 26:
+   0  CONST  5   [forced-only]
+   1  SET    2   [forced-only]
+   2  GET    2   [forced-only]
+   3  CONST  9   [forced-only]
+   4  XOR       [forced-only]
+   5  JMP    27   -> block 27   [forced-only]
+block 27:
+   0  SET    2   [forced-only]
+   1  JMP    86   -> block 86   [forced-only]
+block 28:
+   0  GET    15   [forced-only]
+   1  CONST  10   [forced-only]
+   2  ADD       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    47   -> block 47   [forced-only]
+block 29:
+   0  CONST  6   = 0x54
+   1  CONST  7   = 0x3e
+   2  SLT    
+   3  DROP   
+   4  JMP    7   -> block 7
+block 30:
+   0  GET    1
+   1  GET    9
+   2  NE     
+   3  DROP   
+   4  JMP    84   -> block 84
+block 31:
+   0  GET    2   [forced-only]
+   1  CONST  7   [forced-only]
+   2  ADD       [forced-only]
+   3  DROP      [forced-only]
+   4  GET    11   [forced-only]
+   5  CONST  5   [forced-only]
+   6  SGT       [forced-only]
+   7  JMP    32   -> block 32   [forced-only]
+block 32:
+   0  JNZ    67   -> block 67  seen=FT   [forced-only]
+   1  JMP    33   -> block 33   [forced-only]
+block 33:
+   0  JMP    45   -> block 45   [forced-only]
+block 34:
+   0  CONST  7   [forced-only]
+   1  SET    2   [forced-only]
+   2  GET    2   [forced-only]
+   3  CONST  6   [forced-only]
+   4  XOR       [forced-only]
+   5  JMP    35   -> block 35   [forced-only]
+block 35:
+   0  SET    2   [forced-only]
+   1  JMP    28   -> block 28   [forced-only]
+block 37:
+   0  CONST  5   [forced-only]
+   1  SET    2   [forced-only]
+   2  GET    2   [forced-only]
+   3  CONST  5   [forced-only]
+   4  XOR       [forced-only]
+   5  JMP    38   -> block 38   [forced-only]
+block 38:
+   0  SET    2   [forced-only]
+   1  JMP    26   -> block 26   [forced-only]
+block 39:
+   0  CONST  10   [forced-only]
+   1  SET    2   [forced-only]
+   2  GET    2   [forced-only]
+   3  CONST  8   [forced-only]
+   4  XOR       [forced-only]
+   5  JMP    40   -> block 40   [forced-only]
+block 40:
+   0  SET    2   [forced-only]
+   1  JMP    25   -> block 25   [forced-only]
+block 41:
+   0  CONST  7   [forced-only]
+   1  CONST  7   [forced-only]
+   2  XOR       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    85   -> block 85   [forced-only]
+block 42:
+   0  CONST  8   [forced-only]
+   1  SET    2   [forced-only]
+   2  GET    2   [forced-only]
+   3  CONST  8   [forced-only]
+   4  XOR       [forced-only]
+   5  JMP    43   -> block 43   [forced-only]
+block 43:
+   0  SET    2   [forced-only]
+   1  JMP    76   -> block 76   [forced-only]
+block 44:
+   0  CONST  9   = 0x7a
+   1  NOT    
+   2  DROP   
+   3  JMP    16   -> block 16
+block 45:
+   0  GET    0   [forced-only]
+   1  GET    13   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    3   -> block 3   [forced-only]
+block 46:
+   0  CONST  8   = 0x92
+   1  CONST  5   = 0xdb
+   2  XOR    
+   3  DROP   
+   4  JMP    60   -> block 60
+block 47:
+   0  GET    14   [forced-only]
+   1  GET    1   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    14   -> block 14   [forced-only]
+block 48:
+   0  CONST  6   = 0x54
+   1  CONST  10   = 0x9
+   2  XOR    
+   3  DROP   
+   4  JMP    59   -> block 59
+block 50:
+   0  CONST  10   = 0x9
+   1  CONST  6   = 0x54
+   2  SLT    
+   3  DROP   
+   4  GET    12
+   5  JMP    51   -> block 51
+block 51:
+   0  CONST  6   = 0x54
+   1  SGT    
+   2  JNZ    90   -> block 90  seen=FT
+   3  JMP    52   -> block 52
+block 52:
+   0  JMP    29   -> block 29
+block 57:
+   0  CONST  10   = 0x9
+   1  SET    2
+   2  GET    2
+   3  CONST  8   = 0x92
+   4  XOR    
+   5  JMP    58   -> block 58
+block 58:
+   0  SET    2
+   1  JMP    44   -> block 44
+block 59:
+   0  CONST  10   = 0x9
+   1  CONST  8   = 0x92
+   2  SLT    
+   3  DROP   
+   4  JMP    4   -> block 4
+block 60:
+   0  CONST  7   = 0x3e
+   1  CONST  7   = 0x3e
+   2  XOR    
+   3  DROP   
+   4  JMP    57   -> block 57
+block 62:
+   0  CONST  10   = 0x9
+   1  CONST  10   = 0x9
+   2  SLT    
+   3  DROP   
+   4  JMP    87   -> block 87
+block 63:
+   0  GET    10   [forced-only]
+   1  GET    8   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    9   -> block 9   [forced-only]
+block 64:
+   0  CONST  10   = 0x9
+   1  CONST  10   = 0x9
+   2  SLT    
+   3  DROP   
+   4  JMP    71   -> block 71
+block 65:
+   0  GET    3   [forced-only]
+   1  CONST  5   [forced-only]
+   2  ADD       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    69   -> block 69   [forced-only]
+block 66:
+   0  CONST  8   = 0x92
+   1  NOT    
+   2  DROP   
+   3  JMP    10   -> block 10
+block 67:
+   0  GET    11   [forced-only]
+   1  GET    10   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    3   -> block 3   [forced-only]
+block 68:
+   0  GET    6
+   1  GET    5
+   2  NE     
+   3  DROP   
+   4  JMP    74   -> block 74
+block 69:
+   0  CONST  10   [forced-only]
+   1  SET    2   [forced-only]
+   2  GET    2   [forced-only]
+   3  CONST  6   [forced-only]
+   4  XOR       [forced-only]
+   5  JMP    70   -> block 70   [forced-only]
+block 70:
+   0  SET    2   [forced-only]
+   1  JMP    92   -> block 92   [forced-only]
+block 71:
+   0  CONST  6   = 0x54
+   1  SET    2
+   2  GET    2
+   3  CONST  10   = 0x9
+   4  XOR    
+   5  JMP    72   -> block 72
+block 72:
+   0  SET    2
+   1  JMP    82   -> block 82
+block 74:
+   0  GET    0
+   1  CONST  9   = 0x7a
+   2  ADD    
+   3  DROP   
+   4  JMP    21   -> block 21
+block 76:
+   0  GET    12   [forced-only]
+   1  GET    14   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    13   -> block 13   [forced-only]
+block 78:
+   0  GET    12
+   1  GET    8
+   2  NE     
+   3  DROP   
+   4  JMP    83   -> block 83
+block 79:
+   0  GET    1   [forced-only]
+   1  CONST  6   [forced-only]
+   2  ADD       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    12   -> block 12   [forced-only]
+block 80:
+   0  CONST  6   = 0x54
+   1  CONST  5   = 0xdb
+   2  XOR    
+   3  DROP   
+   4  JMP    17   -> block 17
+block 81:
+   0  GET    6   [forced-only]
+   1  GET    6   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    37   -> block 37   [forced-only]
+block 82:
+   0  GET    7
+   1  GET    15
+   2  NE     
+   3  DROP   
+   4  JMP    68   -> block 68
+block 83:
+   0  GET    4
+   1  CONST  5   = 0xdb
+   2  ADD    
+   3  DROP   
+   4  JMP    30   -> block 30
+block 84:
+   0  GET    5
+   1  GET    1
+   2  NE     
+   3  DROP   
+   4  JMP    15   -> block 15
+block 85:
+   0  CONST  8   [forced-only]
+   1  CONST  6   [forced-only]
+   2  XOR       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    31   -> block 31   [forced-only]
+block 86:
+   0  GET    4   [forced-only]
+   1  GET    7   [forced-only]
+   2  NE        [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    42   -> block 42   [forced-only]
+block 87:
+   0  CONST  6   = 0x54
+   1  CONST  6   = 0x54
+   2  SLT    
+   3  DROP   
+   4  JMP    80   -> block 80
+block 88:
+   0  CONST  10   = 0x9
+   1  CONST  5   = 0xdb
+   2  SLT    
+   3  DROP   
+   4  JMP    50   -> block 50
+block 90:
+   0  CONST  7   [forced-only]
+   1  NOT       [forced-only]
+   2  DROP      [forced-only]
+   3  JMP    7   -> block 7   [forced-only]
+block 92:
+   0  GET    1   [forced-only]
+   1  CONST  5   [forced-only]
+   2  ADD       [forced-only]
+   3  DROP      [forced-only]
+   4  JMP    63   -> block 63   [forced-only]

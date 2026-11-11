@@ -1,0 +1,43 @@
+# serial_inner (serial RC4): what feeds each conditional branch and each HOST call
+## conditional branches: 7
+  block 2.4  JZ -> 95   cond = (sext32(h1@2.0) <s 0x100)   REAL (both outcomes occur naturally)
+  block 9.4  JZ -> 68   cond = (sext32(h7@9.0) <s 0x100)   REAL (both outcomes occur naturally)
+  block 12.0  JZ -> 36   cond = in1   ONE-WAY in every natural run: T, values ['0x0']
+  block 21.3  JZ -> 33   cond = (h15@21.0 <s h16@21.1)   REAL (both outcomes occur naturally)
+  block 51.0  JNZ -> 99   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+  block 62.0  JNZ -> 29   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+  block 75.3  JNZ -> 60   cond = (r15 >s 0xfd)   ONE-WAY in every natural run: F, values ['0x0']
+## HOST calls: 33
+  host 0  at 1.4  args=[0x0]  return dropped
+  host 0  at 4.5  args=[(h1@4.2 + 0x1)]  return dropped
+  host 1  at 2.0  args=[]  return used
+  host 1  at 4.2  args=[]  return used
+  host 1  at 5.0  args=[]  return dropped
+  host 2  at 4.0  args=[]  return dropped
+  host 3  at 6.3  args=[0x0]  return dropped
+  host 4  at 7.1  args=[]  return used
+  host 5  at 7.2  args=[h4@7.1]  return dropped
+  host 6  at 8.2  args=[0x0]  return dropped
+  host 6  at 16.5  args=[(h7@16.2 + 0x1)]  return dropped
+  host 7  at 9.0  args=[]  return used
+  host 7  at 16.2  args=[]  return used
+  host 7  at 17.0  args=[]  return dropped
+  host 8  at 11.3  args=[]  return used
+  host 10 at 15.0  args=[]  return dropped
+  host 11 at 16.0  args=[]  return dropped
+  host 12 at 18.3  args=[0x0]  return dropped
+  host 12 at 24.0  args=[in1]  return dropped
+  host 13 at 19.1  args=[zext8(in1)]  return dropped
+  host 14 at 20.0  args=[in1]  return dropped
+  host 14 at 26.5  args=[(h15@26.2 + 0x1)]  return dropped
+  host 15 at 21.0  args=[]  return used
+  host 15 at 26.2  args=[]  return used
+  host 15 at 27.0  args=[]  return dropped
+  host 16 at 21.1  args=[]  return used
+  host 17 at 23.0  args=[]  return used
+  host 17 at 24.2  args=[]  return dropped
+  host 18 at 25.0  args=[]  return dropped
+  host 19 at 25.2  args=[]  return dropped
+  host 20 at 25.4  args=[]  return used
+  host 21 at 25.6  args=[zext8(h20@25.4)]  return dropped
+  host 22 at 26.0  args=[]  return dropped

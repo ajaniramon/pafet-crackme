@@ -1,0 +1,6 @@
+# serial_outer (serial wrapper): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 3
+  host 0  at 1.4  args=[]  return dropped
+  host 1  at 2.0  args=[]  return dropped
+  host 2  at 2.2  args=[]  return dropped

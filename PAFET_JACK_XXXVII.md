@@ -1,0 +1,236 @@
+# JACK XXXVII — ALL TWENTY
+
+## 1. Result and scope
+
+Started on `main` at `dbae09f9601796760e5aaa368cbbc9c3a36785e9` (JACK XXXVI and the
+Serial C++ steps integrated). This round ran on Windows, which XXXVI did not have.
+
+**The logical program of all twenty VM executors in `pafet.bin` is recorded:
+1,503 logical blocks and 7,123 instructions.** It was recovered dynamically, by
+hooking each VM's own decoder helpers under Frida and re-running every conditional
+branch with its condition flipped. Nothing was decrypted statically.
+
+Where the repository already holds an independent static decode, the dynamic lift
+agrees with it instruction for instruction:
+
+| VM | Static reference | Lifted blocks identical | Differing instructions | Missing |
+|---|---|---:|---:|---|
+| Main controller | controller slice, 482 instr. | 92 of 94 reachable | 0 | last instruction of 2 blocks; 11 dead blocks |
+| User-VM | JACK XVII/XXIII, 339 instr. | 73 of 73 | 0 | nothing |
+| Serial-VM (inner) | JACK XXXVI, 478 instr. | 87 of 88 | 0 | 61 instructions behind one branch (§5) |
+
+The inner Serial-VM trace on Windows is **46,722 instructions long** for both inputs
+used. That is the count XXXVI obtained from x64 emulated from a Windows entry, now
+observed on Windows itself, at the logical-instruction level only.
+
+**What this is not.** It is a logical program per VM: opcodes, operands, block
+structure and branch outcomes. It does not reconstruct encoded state, domains,
+rekeys, the scheduler, guards or exception delivery, which JACK XXIII–XXXVI
+study. It is not a `pafet.cpp`. It does not recover credentials or the flag, and no
+credential search is part of the round.
+
+Evidence: [lifted programs](jack_xxxvii_evidence/lifted/),
+[validation](jack_xxxvii_evidence/validation.json),
+[branch summary](jack_xxxvii_evidence/branch_summary.txt),
+Windows checks ([gate](jack_xxxvii_evidence/windows_gate.json),
+[digest](jack_xxxvii_evidence/windows_digest.json),
+[oracle](jack_xxxvii_evidence/windows_oracle.json)).
+
+## 2. Method
+
+Every VM executor is preceded by its own copy of the runtime helpers, in the same
+order as the main VM's. Six of them are enough to read the logical program:
+
+| Helper | Main VM (known) | Observed contract |
+|---|---|---|
+| opcode remap | `0x1403859f0` | `(ctx, domain, logical_opcode)`; one call per virtual instruction |
+| U32 / U16 / U8 reader | `0x140385590` / `0x140385720` / `0x1403858a0` | return the decoded operand |
+| push | `0x140381e60` | `(ctx, value)` |
+| pop | `0x140382030` | returns the value |
+
+[`pafet_vm_lift_xxxvii.py`](scripts/pafet_vm_lift_xxxvii.py) locates them for each
+executor from `.pdata` by layout: the four functions of decreasing size before the
+materializer are the readers and the remap; the two functions before the 405-byte
+function are push and pop. Functions are grouped with `UNW_FLAG_CHAININFO`, because
+adjacency alone merges unrelated neighbours. For the User-VM this yields
+`0x140003880`, `0x140003a50` and `0x1400074d0`, the helpers documented in the
+[night report](PAFET_NIGHT_REPORT.md);
+for the inner Serial-VM, `0x1401ee820`, `0x1401ee940` and `0x1401f1e80`, as in
+JACK XXXV–XXXVI.
+
+A run records the first invocation of the VM as a sequence of instructions. Blocks
+are keyed by logical id, the operand of `JMP`/`JZ`/`JNZ`; block 0 is the entry.
+Each conditional branch whose other outcome has not been seen is then re-run with
+the popped condition replaced, chaining flips where a branch only appears after an
+earlier flip. Forced runs are used to read instructions only. Their values are
+discarded and every instruction is tagged `natural` or not in the JSON.
+
+VMs that run before the SHA gate are traced in the original `pafet.bin`. The others
+need `pafet_pass8.exe`, the existing two-byte gate bypass.
+
+## 3. The twenty programs
+
+`Forced-only` counts instructions never executed without a flip. `Real` counts
+branches where both outcomes occurred without a flip, with the inputs used.
+
+| VM | Executor | Blocks | Instr. | Forced-only | Cond. branches | Real | Host indices |
+|---|---|---:|---:|---:|---:|---:|---:|
+| `main` | `0x14038d9d0` | 94 | 429 | 106 | 8 | 2 | 24 |
+| `user` | `0x14003f540` | 73 | 339 | 5 | 2 | 1 | 7 |
+| `serial_outer` | `0x140264a60` | 42 | 189 | 0 | 0 | 0 | 3 |
+| `serial_inner` | `0x14022a120` | 88 | 416 | 18 | 7 | 3 | 22 |
+| `sha_msg` | `0x14027aba0` | 135 | 638 | 41 | 14 | 7 | 40 |
+| `sha_compress` | `0x140290300` | 106 | 582 | 14 | 6 | 3 | 49 |
+| `sha_ch` | `0x1402a4a20` | 38 | 177 | 0 | 0 | 0 | 4 |
+| `sha_maj` | `0x1402df0e0` | 40 | 194 | 0 | 0 | 0 | 0 |
+| `sha_ep0` | `0x1402b8140` | 43 | 197 | 0 | 0 | 0 | 1 |
+| `sha_ep1` | `0x1402ccb00` | 43 | 194 | 0 | 0 | 0 | 1 |
+| `sha_sig0` | `0x140335b10` | 41 | 187 | 0 | 0 | 0 | 1 |
+| `sha_sig1` | `0x140377720` | 41 | 194 | 0 | 0 | 0 | 1 |
+| `hex` | `0x1400804c0` | 79 | 357 | 8 | 2 | 1 | 6 |
+| `cipher_l1` | `0x1400c0510` | 70 | 316 | 5 | 2 | 1 | 7 |
+| `cipher_l2` | `0x1400d3fe0` | 40 | 190 | 0 | 0 | 0 | 6 |
+| `vm_15faf0` | `0x14015faf0` | 79 | 336 | 147 | 6 | 0 | 7 |
+| `cipher_l3` | `0x140176950` | 144 | 696 | 35 | 14 | 7 | 29 |
+| `vm_18df50` | `0x14018df50` | 132 | 647 | 27 | 10 | 5 | 21 |
+| `vm_1e42b0` | `0x1401e42b0` | 133 | 650 | 28 | 12 | 6 | 28 |
+| `vm_3216e0` | `0x1403216e0` | 42 | 195 | 0 | 0 | 0 | 0 |
+| **Total** | | **1,503** | **7,123** | 434 | 83 | 37 | |
+
+Each VM has a listing (`NAME.txt`), a machine-readable program with run records
+(`NAME.json`) and a per-block symbolic view of what feeds every branch and host
+call (`NAME.analysis.txt`, from
+[`pafet_vm_analyze_xxxvii.py`](scripts/pafet_vm_analyze_xxxvii.py)).
+
+The SHA names come from the native callbacks: `0x1402834d0` (40 cases) drives
+`sha_msg` and `0x140298d10` (49 cases) drives `sha_compress`, which calls the six
+leaf executors. The four names beginning `vm_` are not identified. Their loop
+bounds are consistent with DES (`<8, <56, <16, <48` in `vm_1e42b0`; `<48, <8, <32`
+in `vm_18df50`; `<8, <64, <16, <64` in `cipher_l3`), but this round did not read
+their native callbacks, so the roles stay unassigned.
+
+## 4. Opcodes
+
+The opcode numbers behave the same in every executor traced. Sixteen were already decoded for
+the main VM; XXXVI names `0x3a`/`0x3b` as sign and zero extension. Six more appear
+in the SHA leaves and the cipher cluster. Their meaning here is inferred from the
+virtual stack during this round (first POP is the right operand) and is not
+verified against the handler bodies:
+
+| Opcode | Name used | Stack traffic observed |
+|---:|---|---|
+| 9 | `SUB` | pops `0x3a`, `0x40`, pushes `0x6` |
+| 25 | `SGE` | pops `0x0`, `0x7`, pushes `0x1`; only seen against zero |
+| 39 | `AND` | pops `0x400000000000`, `0x6f56f79c3e348835`, pushes `0x400000000000` |
+| 40 | `OR` | pops `0x56`, `0x6f00`, pushes `0x6f56` |
+| 42 | `SHL` | pops `0x8`, `0x6f56`, pushes `0x6f5600` |
+| 43 | `SHR` | pops `0x8`, `0x3510366fbff5cb69`, pushes `0x3510366fbff5cb` |
+
+The stack samples are not stored in the evidence; tracing `cipher_l3` reproduces
+them.
+
+## 5. Validation against static decodes
+
+[`pafet_vm_lift_validate_xxxvii.py`](scripts/pafet_vm_lift_validate_xxxvii.py)
+compares each lifted block with the static `(opcode, operands)` sequence and gives
+two verdicts: *consistent* (no differing instruction) and *complete* (every block
+the static decode reaches from the entry, in full).
+
+| VM | Static blocks / instr. | Reachable from entry | Lifted | Consistent | Complete |
+|---|---|---|---|---|---|
+| `main` | 105 / 482 | 94 / 431 | 94 / 429 | yes | no |
+| `user` | 73 / 339 | 73 / 339 | 73 / 339 | yes | yes |
+| `serial_inner` | 103 / 478 | 103 / 478 | 88 / 416 | yes | no |
+
+**Main.** The 11 static blocks absent from the lift (28, 34, 42, 43, 57, 66, 70,
+85, 93, 94, 99) form two chains starting at blocks 28 and 57, which no jump
+targets. They are dead code and a dynamic method cannot see them. Blocks 6 and 21
+lack their final instruction: the forced traces that reach them end one
+instruction early. The cause was not investigated.
+
+**Serial.** Block 12 is `JZ 36`, taken in every natural execution with condition
+value 0. With the fall-through forced, the process exited before another
+instruction was recorded. The static decode shows 15 blocks and 61 instructions
+behind that fall-through. So this branch is one-way in practice, and the lift is
+blind to what a flip cannot survive. Two blocks of `vm_15faf0` are also
+incomplete; no static reference exists for them and the cause was not
+investigated.
+
+This is the measured limit of the method: it recovers what executes or can be
+forced to execute, and agrees exactly with the static decodes there. It does not
+replace them.
+
+## 6. What decides acceptance
+
+These checks were the reason for the round: looking for a condition on the
+credentials that the earlier reports could not exclude.
+
+**The SHA gate has no hidden condition on the username.**
+
+- In `sha_msg`, host 9 (copy one message byte into the block) appears once, at
+  block 8, and its return is dropped. The program receives only the data pointer
+  (host 2), the size (hosts 4 and 8) and counters. Its seven real branches are
+  `i < size`, `pos == 64`, `pos < 56`, `pad < 56`, `pad < 64`, `i < 8` and
+  `j < 32`. The other seven never changed outcome in six inputs.
+- In `sha_compress` the three real branches are counters (`i < 16`, `i < 64`,
+  `i < 64`). Data moves between callbacks through the stack but reaches no branch.
+- The six leaf executors contain no conditional branch.
+- The native comparator at `0x140396ae9` requires equal sizes and a full `memcmp`.
+- On Windows, the digest read at that comparator equals `hashlib.sha256` of the
+  bytes `getline` receives in **359 of 359** cases: lengths 0–513, every byte
+  value, multi-block inputs. Five of them differ from the SHA-256 of the bytes
+  piped in (`0d`, `1a`, `0d0d0d`, `61621a6364`, `1a1a1a`), because text-mode
+  input drops CR before LF and stops at `0x1a`.
+- The unmodified binary rejects all **108** odd usernames tried.
+
+**The key derivation and cipher model hold at the length boundaries.**
+`pafet_oracle.exe` matches `scripts/pafet_des3_offline.py` in 32 cases with
+username lengths 0–48 and serial lengths 0–32: 29 complete outputs and 3 first
+blocks where the model declines a heap-dependent tail. No mismatch. The length
+15/17 and 23–25 anomalies recorded on the Linux loader do not occur on Windows.
+The oracle is a research variant; this is not acceptance by the original.
+
+**One-way branches are not all opaque.** `vm_15faf0` has six branches and none
+took both outcomes with the two inputs used; 147 of its 336 instructions were
+reached only by force. Its shape (read a byte, zero-extend, compare, call
+callbacks) suggests the unpad step, which branches on the last decrypted byte.
+"One-way" in the tables means one-way for these inputs.
+
+Nothing here reduces the credential space. The gate is SHA-256, the pipeline is
+the documented one, and the flag still depends on credentials that are not known.
+
+## 7. Limits
+
+- Dynamic recovery. A block that neither a natural nor a forced jump reaches is
+  not recorded, and a flip that kills the process hides what follows (§5).
+- Only the first invocation of each VM is traced, with two inputs per VM (six for
+  `sha_msg`). Input-dependent paths outside those inputs appear only if a flip
+  reaches them.
+- Forced runs execute with inconsistent state. Their instructions are trusted
+  because the decoder, not the data, produces them; their values are not used.
+- Post-gate VMs are observed in `pafet_pass8.exe`, not the original.
+- Helper discovery is a size pattern fitted to this binary. The three static
+  comparisons and the known helper addresses support it; it is not a general
+  REVoid tool.
+- Names for opcodes 9, 25, 39, 40, 42 and 43 are inferred (§4).
+- No native mechanism, timing, guard or exception behaviour is modelled.
+
+## 8. Reproduction
+
+Windows, Python 3.10, `frida` and `pefile`, from the repository root. Each command
+runs the binaries one process at a time unless `--workers` says otherwise.
+
+```powershell
+python scripts/pafet_vm_lift_xxxvii.py --list
+python scripts/pafet_vm_lift_xxxvii.py all                 # about 25 minutes
+python scripts/pafet_vm_analyze_xxxvii.py (Get-ChildItem jack_xxxvii_evidence/lifted/*.json)
+python scripts/pafet_vm_lift_validate_xxxvii.py
+python scripts/pafet_windows_checks_xxxvii.py gate
+python scripts/pafet_windows_checks_xxxvii.py digest       # about 3 minutes
+python scripts/pafet_windows_checks_xxxvii.py oracle --workers 3   # about 7 minutes
+```
+
+Re-running the lifter rewrites the tracked files under
+`jack_xxxvii_evidence/lifted/`; inspect the diff. Block ids and instruction
+sequences were identical across the repeated runs of this round; run timings are
+not.

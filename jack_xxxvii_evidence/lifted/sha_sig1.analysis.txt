@@ -1,0 +1,5 @@
+# sha_sig1 (SHA-256 small sigma 1): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 2
+  host 0  at 2.1  args=[in2, zext32(in1)]  return used
+  host 0  at 3.0  args=[in2, in1]  return used

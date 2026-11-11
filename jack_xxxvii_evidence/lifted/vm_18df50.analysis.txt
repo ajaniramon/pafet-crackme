@@ -1,0 +1,61 @@
+# vm_18df50 (unidentified (cipher cluster)): what feeds each conditional branch and each HOST call
+## conditional branches: 10
+  block 3.4  JZ -> 126   cond = (sext32(h2@3.0) <s 0x30)   REAL (both outcomes occur naturally)
+  block 7.2  JZ -> 85   cond = (in1 != 0x0)   REAL (both outcomes occur naturally)
+  block 17.4  JZ -> 118   cond = (sext32(h9@17.0) <s 0x8)   REAL (both outcomes occur naturally)
+  block 33.4  JZ -> 48   cond = (sext32(h18@33.0) <s 0x20)   REAL (both outcomes occur naturally)
+  block 37.8  JZ -> 45   cond = ((in4 & zext32((in3 << (in2 - sext32(zext8(in1)))))) != 0x0)   REAL (both outcomes occur naturally)
+  block 73.3  JNZ -> 110   cond = (r20 >s 0xfb)   ONE-WAY in every natural run: F, values ['0x0']
+  block 77.1  JNZ -> 81   cond = (in2 >s in1)   ONE-WAY in every natural run: F, values ['0x0']
+  block 88.0  JNZ -> 124   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+  block 103.0  JNZ -> 49   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+  block 128.0  JNZ -> 122   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+## HOST calls: 48
+  host 0  at 0.1  args=[0x0]  return dropped
+  host 0  at 10.3  args=[(in4 | (in3 << (in2 - in1)))]  return dropped
+  host 0  at 14.0  args=[in1]  return dropped
+  host 1  at 2.2  args=[0x0]  return dropped
+  host 1  at 11.3  args=[(h2@11.0 + 0x1)]  return dropped
+  host 2  at 3.0  args=[]  return used
+  host 2  at 9.3  args=[]  return used
+  host 2  at 11.0  args=[]  return used
+  host 2  at 11.5  args=[]  return dropped
+  host 3  at 5.2  args=[]  return used
+  host 4  at 6.1  args=[]  return used
+  host 5  at 9.0  args=[]  return used
+  host 5  at 10.5  args=[]  return dropped
+  host 5  at 13.3  args=[]  return used
+  host 5  at 14.2  args=[]  return dropped
+  host 5  at 19.0  args=[]  return used
+  host 6  at 13.4  args=[]  return used
+  host 7  at 15.0  args=[in1]  return dropped
+  host 7  at 28.6  args=[zext32((in5 | zext32((in4 << (in3 - (in2 * in1))))))]  return dropped
+  host 8  at 16.1  args=[sext32(in1)]  return dropped
+  host 8  at 29.3  args=[(h9@29.0 + 0x1)]  return dropped
+  host 9  at 17.0  args=[]  return used
+  host 9  at 19.3  args=[]  return used
+  host 9  at 27.4  args=[]  return used
+  host 9  at 29.0  args=[]  return used
+  host 9  at 29.5  args=[]  return dropped
+  host 10 at 20.7  args=[zext8(zext8(((in4 >> (in3 - (in2 * in1))) & 0x3f)))]  return dropped
+  host 11 at 22.0  args=[]  return used
+  host 11 at 23.1  args=[]  return used
+  host 11 at 24.3  args=[]  return used
+  host 12 at 24.1  args=[zext8(in1)]  return dropped
+  host 13 at 25.6  args=[zext8(zext8((sext63((in2 >> in1)) & 0xf)))]  return dropped
+  host 14 at 26.3  args=[]  return used
+  host 14 at 28.8  args=[]  return dropped
+  host 14 at 36.0  args=[]  return used
+  host 15 at 26.4  args=[]  return used
+  host 16 at 31.3  args=[0x0]  return dropped
+  host 16 at 40.5  args=[zext32((in4 | zext32((in3 << (in2 - in1)))))]  return dropped
+  host 17 at 32.1  args=[sext32(in1)]  return dropped
+  host 17 at 42.3  args=[(h18@42.0 + 0x1)]  return dropped
+  host 18 at 33.0  args=[]  return used
+  host 18 at 39.3  args=[]  return used
+  host 18 at 42.0  args=[]  return used
+  host 18 at 42.5  args=[]  return dropped
+  host 19 at 36.4  args=[]  return used
+  host 20 at 39.0  args=[]  return used
+  host 20 at 40.7  args=[]  return dropped
+  host 20 at 44.0  args=[]  return used

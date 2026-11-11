@@ -1,0 +1,195 @@
+{
+ "scope": "Logical (opcode, operands) sequences per logical block id; not native mechanisms, values or coverage of every input.",
+ "results": [
+  {
+   "vm": "main",
+   "static_blocks_with_code": 105,
+   "static_instructions": 482,
+   "static_blocks_reachable_from_entry": 94,
+   "static_instructions_reachable_from_entry": 431,
+   "lifted_blocks": 94,
+   "lifted_instructions": 429,
+   "identical_blocks": 92,
+   "prefix_only_blocks": [
+    {
+     "block": 6,
+     "lifted": 3,
+     "static": 4
+    },
+    {
+     "block": 21,
+     "lifted": 1,
+     "static": 2
+    }
+   ],
+   "mismatching_blocks": [],
+   "static_blocks_absent_from_lift": [
+    28,
+    34,
+    42,
+    43,
+    57,
+    66,
+    70,
+    85,
+    93,
+    94,
+    99
+   ],
+   "absent_blocks_reachable_from_entry": [],
+   "absent_block_static_predecessors": {
+    "28": [],
+    "34": [
+     28
+    ],
+    "42": [
+     70
+    ],
+    "43": [
+     42
+    ],
+    "57": [],
+    "66": [
+     43
+    ],
+    "70": [
+     57
+    ],
+    "85": [
+     66
+    ],
+    "93": [
+     99
+    ],
+    "94": [
+     93
+    ],
+    "99": [
+     34
+    ]
+   },
+   "consistent": true,
+   "complete": false
+  },
+  {
+   "vm": "user",
+   "static_blocks_with_code": 73,
+   "static_instructions": 339,
+   "static_blocks_reachable_from_entry": 73,
+   "static_instructions_reachable_from_entry": 339,
+   "lifted_blocks": 73,
+   "lifted_instructions": 339,
+   "identical_blocks": 73,
+   "prefix_only_blocks": [],
+   "mismatching_blocks": [],
+   "static_blocks_absent_from_lift": [],
+   "absent_blocks_reachable_from_entry": [],
+   "absent_block_static_predecessors": {},
+   "consistent": true,
+   "complete": true
+  },
+  {
+   "vm": "serial_inner",
+   "static_blocks_with_code": 103,
+   "static_instructions": 478,
+   "static_blocks_reachable_from_entry": 103,
+   "static_instructions_reachable_from_entry": 478,
+   "lifted_blocks": 88,
+   "lifted_instructions": 416,
+   "identical_blocks": 87,
+   "prefix_only_blocks": [
+    {
+     "block": 12,
+     "lifted": 1,
+     "static": 2
+    }
+   ],
+   "mismatching_blocks": [],
+   "static_blocks_absent_from_lift": [
+    13,
+    14,
+    41,
+    54,
+    64,
+    65,
+    70,
+    72,
+    79,
+    86,
+    87,
+    91,
+    92,
+    93,
+    101
+   ],
+   "absent_blocks_reachable_from_entry": [
+    13,
+    14,
+    41,
+    54,
+    64,
+    65,
+    70,
+    72,
+    79,
+    86,
+    87,
+    91,
+    92,
+    93,
+    101
+   ],
+   "absent_block_static_predecessors": {
+    "13": [
+     12
+    ],
+    "14": [
+     54
+    ],
+    "41": [
+     65
+    ],
+    "54": [
+     41
+    ],
+    "64": [
+     93
+    ],
+    "65": [
+     72
+    ],
+    "70": [
+     79
+    ],
+    "72": [
+     13
+    ],
+    "79": [
+     101
+    ],
+    "86": [
+     92
+    ],
+    "87": [
+     86
+    ],
+    "91": [
+     70
+    ],
+    "92": [
+     91
+    ],
+    "93": [
+     92
+    ],
+    "101": [
+     14
+    ]
+   },
+   "consistent": true,
+   "complete": false
+  }
+ ],
+ "all_consistent": true,
+ "all_complete": false
+}

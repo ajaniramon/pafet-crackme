@@ -1,0 +1,14 @@
+# cipher_l1 (cipher entry (main host 19)): what feeds each conditional branch and each HOST call
+## conditional branches: 2
+  block 2.1  JZ -> 39   cond = h3@2.0   REAL (both outcomes occur naturally)
+  block 29.0  JNZ -> 52   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+## HOST calls: 9
+  host 0  at 0.0  args=[]  return dropped
+  host 1  at 0.2  args=[]  return dropped
+  host 2  at 0.5  args=[0x0]  return used
+  host 2  at 5.2  args=[(in1 + 0x8)]  return dropped
+  host 3  at 2.0  args=[]  return used
+  host 4  at 4.3  args=[]  return dropped
+  host 5  at 4.5  args=[]  return used
+  host 5  at 5.4  args=[]  return dropped
+  host 6  at 7.2  args=[]  return dropped

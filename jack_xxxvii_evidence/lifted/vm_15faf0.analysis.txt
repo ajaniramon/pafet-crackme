@@ -1,0 +1,17 @@
+# vm_15faf0 (unidentified (cipher cluster)): what feeds each conditional branch and each HOST call
+## conditional branches: 6
+  block 1.0  JZ -> 78   cond = in1   ONE-WAY in every natural run: T, values ['0x0']
+  block 5.2  JNZ -> 39   cond = (in1 == 0x0)   ONE-WAY in every natural run: F, values ['0x0']
+  block 10.0  JZ -> 81   cond = in1   ONE-WAY in every natural run: F, values ['0x1']
+  block 22.0  JNZ -> 79   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
+  block 32.0  JNZ -> 67   cond = in1   ONE-WAY in every natural run: , values []
+  block 51.2  JNZ -> 90   cond = (in1 >s 0x54)   ONE-WAY in every natural run: F, values ['0x0']
+## HOST calls: 8
+  host 0  at 0.4  args=[]  return used
+  host 1  at 3.0  args=[]  return dropped
+  host 2  at 4.0  args=[]  return used
+  host 3  at 4.2  args=[zext8(h2@4.0)]  return dropped
+  host 4  at 4.4  args=[]  return used
+  host 4  at 7.0  args=[]  return used
+  host 5  at 12.0  args=[]  return dropped
+  host 6  at 13.0  args=[]  return dropped

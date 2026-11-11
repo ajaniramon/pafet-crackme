@@ -1,0 +1,6 @@
+# sha_ep1 (SHA-256 big sigma 1): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 3
+  host 0  at 1.4  args=[zext32(r4), 0x6]  return used
+  host 0  at 2.2  args=[in1, 0xb]  return used
+  host 0  at 3.2  args=[in1, 0x19]  return used

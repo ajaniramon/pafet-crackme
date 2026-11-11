@@ -1,0 +1,267 @@
+{
+ "binary": "pafet_oracle.exe (research variant; not acceptance by the original)",
+ "cases": 32,
+ "full_match": 29,
+ "first_block_match": 3,
+ "mismatch": 0,
+ "no_output": 0,
+ "results": [
+  {
+   "user_len": 0,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.2
+  },
+  {
+   "user_len": 1,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.1
+  },
+  {
+   "user_len": 7,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.2
+  },
+  {
+   "user_len": 8,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.5
+  },
+  {
+   "user_len": 9,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.3
+  },
+  {
+   "user_len": 14,
+   "serial_len": 8,
+   "verdict": "first_block_match",
+   "model_has_full_output": false,
+   "output_len": 71,
+   "seconds": 38.5
+  },
+  {
+   "user_len": 15,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.6
+  },
+  {
+   "user_len": 16,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.4
+  },
+  {
+   "user_len": 17,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.2
+  },
+  {
+   "user_len": 22,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.3
+  },
+  {
+   "user_len": 23,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.7
+  },
+  {
+   "user_len": 24,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.4
+  },
+  {
+   "user_len": 25,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.4
+  },
+  {
+   "user_len": 31,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.7
+  },
+  {
+   "user_len": 32,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.7
+  },
+  {
+   "user_len": 33,
+   "serial_len": 8,
+   "verdict": "first_block_match",
+   "model_has_full_output": false,
+   "output_len": 66,
+   "seconds": 36.8
+  },
+  {
+   "user_len": 48,
+   "serial_len": 8,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.5
+  },
+  {
+   "user_len": 5,
+   "serial_len": 0,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.2
+  },
+  {
+   "user_len": 5,
+   "serial_len": 1,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.0
+  },
+  {
+   "user_len": 5,
+   "serial_len": 7,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 36.4
+  },
+  {
+   "user_len": 5,
+   "serial_len": 9,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 71,
+   "seconds": 36.3
+  },
+  {
+   "user_len": 5,
+   "serial_len": 15,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 37.6
+  },
+  {
+   "user_len": 5,
+   "serial_len": 16,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 37.7
+  },
+  {
+   "user_len": 5,
+   "serial_len": 17,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 37.8
+  },
+  {
+   "user_len": 5,
+   "serial_len": 19,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 39.2
+  },
+  {
+   "user_len": 5,
+   "serial_len": 24,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 39.1
+  },
+  {
+   "user_len": 5,
+   "serial_len": 32,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 39.0
+  },
+  {
+   "user_len": 8,
+   "serial_len": 16,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 41.0
+  },
+  {
+   "user_len": 16,
+   "serial_len": 8,
+   "verdict": "first_block_match",
+   "model_has_full_output": false,
+   "output_len": 69,
+   "seconds": 41.3
+  },
+  {
+   "user_len": 15,
+   "serial_len": 0,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 40.9
+  },
+  {
+   "user_len": 16,
+   "serial_len": 0,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.7
+  },
+  {
+   "user_len": 17,
+   "serial_len": 0,
+   "verdict": "full_match",
+   "model_has_full_output": true,
+   "output_len": 72,
+   "seconds": 38.7
+  }
+ ],
+ "pe_sha256": "270cbc4dcf0e204d0fccd86b0725f864f92adc00f6f8f4a081781330bed02c69"
+}

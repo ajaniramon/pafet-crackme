@@ -1,0 +1,3 @@
+# sha_maj (SHA-256 Maj): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 0

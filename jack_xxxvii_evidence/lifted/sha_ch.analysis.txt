@@ -1,0 +1,7 @@
+# sha_ch (SHA-256 Ch): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 4
+  host 0  at 1.0  args=[]  return used
+  host 1  at 1.2  args=[]  return used
+  host 2  at 1.5  args=[]  return used
+  host 3  at 1.6  args=[]  return used
