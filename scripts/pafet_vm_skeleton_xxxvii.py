@@ -60,7 +60,8 @@ def skeleton(name):
             ins = prog[blk][idx]
             op, args = ins['op'], ins['args']
             if op == 1:
-                stack.append(consts[args[0]])
+                # a pool constant only read by forced runs has no recorded value
+                stack.append(consts.get(args[0], 'const[%d]' % args[0]))
             elif op == 4:
                 stack.append(regs.get(args[0], 'r%d' % args[0]))
             elif op == 5:

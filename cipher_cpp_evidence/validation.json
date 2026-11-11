@@ -1,7 +1,7 @@
 {
  "binary": "pafet_pass8.exe (two-byte gate bypass; the cipher VMs are unchanged)",
  "pe_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
- "source_sha256": "bff6facaf24b694c06deca9f222c8f85214b6ed340c2efbe84ca9afd3894887d",
+ "source_sha256": "f48ae35d501180e6591d7642fc882daf2a450a99039b4b838bd7d1c68c5da9b0",
  "compiler": "clang version 23.1.4 (https://github.com/llvm/llvm-project 7a941dfb2877a0b8cf30323fefa85ad019e0b0f5)",
  "chunk": 50000,
  "argument_cases": {

@@ -51,3 +51,4 @@ jack_xxxvii_evidence/** -text whitespace=cr-at-eol
 scripts/pafet_*_xxxvii.py -text
 sha_cpp_evidence/** -text whitespace=cr-at-eol
 cipher_cpp_evidence/** -text whitespace=cr-at-eol
+pafet_cpp_evidence/** -text whitespace=cr-at-eol

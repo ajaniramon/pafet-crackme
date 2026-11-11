@@ -1,0 +1,18 @@
+# user (username transform f_user): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0()
+    v2 = host1()
+    v3 = host2(0x0)
+    v4 = host3()
+    if (v4) goto L3_2; else goto L45_0
+L3_2:
+    # one-way (registers and constants only): ((r8 >s 0x5)) was always zero; the other outcome goes to L54_0
+    v6 = host4()
+    v7 = host5()
+    v8 = host2((v7 + 0x1))
+    v9 = host5()
+    v10 = host3()
+    if (v10) goto L3_2; else goto L45_0
+L45_0:
+    v5 = host6()
+    return 0x0

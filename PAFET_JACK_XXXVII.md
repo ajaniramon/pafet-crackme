@@ -327,7 +327,70 @@ a partial block are not modelled; the empty-input arm of the unpad was reached
 only by a forced run and its tail is not recorded; and, as for `sha.cpp`, the
 omitted obfuscation layer has no taint proof.
 
-## 10. Reproduction
+## 10. The whole program in C++
+
+[`pafet_cpp_evidence/pafet.cpp`](pafet_cpp_evidence/pafet.cpp) adds the four VMs
+that were left (`main`, `user`, `hex`, `serial_outer`) and includes `sha.cpp`,
+`cipher.cpp` and the unchanged `serial_cpp_evidence/serial.cpp` of JACK XXXVI. With
+it all twenty VMs are written at the callback level, and `pafet_main()` is the
+program: read username and serial, compare the digest, build the 24-byte key,
+decode the embedded text, run three cipher passes, test `CMO{…}` and print.
+
+The shared trace and width helpers moved to
+[`vm_common.h`](pafet_cpp_evidence/vm_common.h); `sha.cpp` and `cipher.cpp` now
+include it and were validated again with the figures of §8 and §9.
+
+Read from the native callbacks:
+
+- `user` callback 4 is `xor 0x5a; add 7; add 3*index` on the reversed username and
+  returns the byte sign-extended. The program is the 339-instruction one of JACK
+  XVII/XXIII.
+- `hex` callback 2 takes at most two characters and reads them through a
+  hexadecimal input stream; callback 3 appends the low byte.
+- `serial_outer` has three commands: copy the serial, run the inner Serial-VM with
+  the key of decoder slot 7 (empty), copy the result out.
+- `main` has no test other than the three already known: digest, key shorter than
+  24, and output format.
+
+Two tails of the main program were not recorded by the dynamic lift (§5) and are
+taken from `controller_evidence/decoded_main_program.json`: `return 1` after the
+invalid-username message and `return 0` after the flag is printed.
+
+[`pafet_cpp_validate_xxxvii.py`](scripts/pafet_cpp_validate_xxxvii.py) compares
+the compiled model with `pafet.bin`, and with `pafet_pass8.exe` when the model
+applies the same bypass (the `jne` after the gate's `memcmp` removed). Input goes
+through standard input on both sides.
+
+| | Original | Gate bypass |
+|---|---|---|
+| Runs | 4 | 5 |
+| Standard output, byte for byte | equal in 4 | equal in 5 |
+| Exit code | equal in 4 | equal in 5 |
+| Callback records, twelve switches | 18,240 | 8,011,721 |
+| Record counts and hash checkpoints | equal | equal (166 checkpoints in total) |
+
+Twelve native switches are hooked at once: main, user, hex, outer serial, the two
+SHA switches and the six cipher switches
+([validation](pafet_cpp_evidence/validation.json)).
+
+What this does not cover:
+
+- **The accepting path.** No run reaches "Correct!" and the flag line, because no
+  valid credentials are known. Callbacks 21 and 22 and the `return 0` tail are
+  written from the native code and the static decode and were never executed here.
+- **The inner Serial-VM switch** (`0x140232e20`) is not hooked: `serial.cpp` emits no
+  trace records. Its output still enters the comparison as key bytes read by the
+  key schedule. Its own validation is that of JACK XXXVI.
+- **Partial blocks**, as in §9; every run here keeps sizes at multiples of eight.
+- **Console input.** Runs use a pipe; a console goes through a different CRT path.
+- As in §8 and §9, the obfuscation layer is omitted without a taint proof, and the
+  comparison is by count and running hash.
+
+This is not the faithful four-VM `pafet.cpp` the project aims at: it reproduces
+what the programs ask of the host, in the binary's order, not the mechanisms of
+the virtual machines.
+
+## 11. Reproduction
 
 Windows, Python 3.10, `frida` and `pefile`, from the repository root. Each command
 runs the binaries one process at a time unless `--workers` says otherwise.
@@ -341,6 +404,7 @@ python scripts/pafet_vm_identify_xxxvii.py                 # static; executes no
 python scripts/pafet_vm_skeleton_xxxvii.py sha_msg sha_compress
 python scripts/pafet_sha_cpp_validate_xxxvii.py            # needs clang++; about 2 minutes
 python scripts/pafet_cipher_cpp_validate_xxxvii.py         # needs clang++; about 12 minutes
+python scripts/pafet_cpp_validate_xxxvii.py                # needs clang++; about 20 minutes
 python scripts/pafet_windows_checks_xxxvii.py gate
 python scripts/pafet_windows_checks_xxxvii.py digest       # about 3 minutes
 python scripts/pafet_windows_checks_xxxvii.py oracle --workers 3   # about 7 minutes

@@ -1,0 +1,52 @@
+# main (main controller): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0()
+    v2 = host1()
+    v3 = host2()
+    v4 = host3()
+    v5 = host4()
+    v6 = host5()
+    v7 = host6()
+    v8 = host7()
+    v9 = host8()
+    # one-way: (v9) was always zero; the other outcome goes to L4_4
+    v10 = host10()
+    v11 = host11()
+    v12 = host12()
+    v13 = host13()
+    v14 = host14()
+    if (v14) goto L10_1; else goto L73_0
+L4_4:
+    # one-way (registers and constants only): ((r22 >s 0xbb)) was always zero; the other outcome goes to L91_0
+    v31 = host9()
+    # block 6 not recorded past instruction 3
+L10_1:
+    # one-way (registers and constants only): ((r22 >s 0xbb)) was always zero; the other outcome goes to L64_0
+    v27 = host15()
+    v28 = host16()
+    v29 = host17(0x0)
+    v30 = host18()
+    if ((sext32(v30) <s 0x3)) goto L14_5; else goto L87_0
+L14_5:
+    # one-way (registers and constants only): ((r10 >s 0xbb)) was always zero; the other outcome goes to L24_0
+    v22 = host19()
+    v23 = host18()
+    v24 = host17((v23 + 0x1))
+    v25 = host18()
+    v26 = host18()
+    if ((sext32(v26) <s 0x3)) goto L14_5; else goto L87_0
+L18_4:
+    # one-way (registers and constants only): ((r19 >s 0xd3)) was always zero; the other outcome goes to L51_0
+    v20 = host21()
+    v21 = host22()
+    # block 21 not recorded past instruction 1
+L73_0:
+    v15 = host16()
+    v16 = host17(0x0)
+    v17 = host18()
+    if ((sext32(v17) <s 0x3)) goto L14_5; else goto L87_0
+L87_0:
+    v18 = host20()
+    # one-way: (v18) was always zero; the other outcome goes to L18_4
+    v19 = host23()
+    return 0x1

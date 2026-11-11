@@ -1,0 +1,17 @@
+# hex (ciphertext hex decoder): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0(0x0)
+    v2 = host1()
+    if (v2) goto L1_2; else goto L9_0
+L1_2:
+    # one-way (registers and constants only): ((r15 >s 0x5)) was always zero; the other outcome goes to L13_0
+    v4 = host2()
+    v5 = host3()
+    v6 = host4()
+    v7 = host0((v6 + 0x2))
+    v8 = host4()
+    v9 = host1()
+    if (v9) goto L1_2; else goto L9_0
+L9_0:
+    v3 = host5()
+    return 0x0
