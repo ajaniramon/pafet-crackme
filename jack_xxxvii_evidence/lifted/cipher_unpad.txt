@@ -1,4 +1,4 @@
-# vm_15faf0 (unidentified (cipher cluster)) executor 0x14015faf0; logical program recovered dynamically.
+# cipher_unpad (permissive unpad of the decrypted buffer) executor 0x14015faf0; logical program recovered dynamically.
 # block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
 block 0:
    0  CONST  0   = 0xe21059a547bd1371

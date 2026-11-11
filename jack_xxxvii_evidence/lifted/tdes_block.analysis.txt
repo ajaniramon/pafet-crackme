@@ -1,4 +1,4 @@
-# cipher_l2 (cipher level 2): what feeds each conditional branch and each HOST call
+# tdes_block (3DES block: three key schedules, then D(K3) E(K2) D(K1)): what feeds each conditional branch and each HOST call
 ## conditional branches: 0
 ## HOST calls: 6
   host 0  at 1.0  args=[]  return dropped

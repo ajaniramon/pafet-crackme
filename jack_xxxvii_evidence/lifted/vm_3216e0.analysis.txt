@@ -1,3 +1,0 @@
-# vm_3216e0 (unidentified): what feeds each conditional branch and each HOST call
-## conditional branches: 0
-## HOST calls: 0

@@ -1,4 +1,4 @@
-# cipher_l3 (cipher level 3): what feeds each conditional branch and each HOST call
+# des_block (DES block: IP, 16 rounds, FP): what feeds each conditional branch and each HOST call
 ## conditional branches: 14
   block 2.4  JZ -> 80   cond = (sext32(h2@2.0) <s 0x8)   REAL (both outcomes occur naturally)
   block 11.4  JZ -> 83   cond = (sext32(h7@11.0) <s 0x40)   REAL (both outcomes occur naturally)

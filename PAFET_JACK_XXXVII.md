@@ -88,13 +88,13 @@ branches where both outcomes occurred without a flip, with the inputs used.
 | `sha_sig0` | `0x140335b10` | 41 | 187 | 0 | 0 | 0 | 1 |
 | `sha_sig1` | `0x140377720` | 41 | 194 | 0 | 0 | 0 | 1 |
 | `hex` | `0x1400804c0` | 79 | 357 | 8 | 2 | 1 | 6 |
-| `cipher_l1` | `0x1400c0510` | 70 | 316 | 5 | 2 | 1 | 7 |
-| `cipher_l2` | `0x1400d3fe0` | 40 | 190 | 0 | 0 | 0 | 6 |
-| `vm_15faf0` | `0x14015faf0` | 79 | 336 | 147 | 6 | 0 | 7 |
-| `cipher_l3` | `0x140176950` | 144 | 696 | 35 | 14 | 7 | 29 |
-| `vm_18df50` | `0x14018df50` | 132 | 647 | 27 | 10 | 5 | 21 |
-| `vm_1e42b0` | `0x1401e42b0` | 133 | 650 | 28 | 12 | 6 | 28 |
-| `vm_3216e0` | `0x1403216e0` | 42 | 195 | 0 | 0 | 0 | 0 |
+| `cipher_buffer` | `0x1400c0510` | 70 | 316 | 5 | 2 | 1 | 7 |
+| `tdes_block` | `0x1400d3fe0` | 40 | 190 | 0 | 0 | 0 | 6 |
+| `cipher_unpad` | `0x14015faf0` | 79 | 336 | 147 | 6 | 0 | 7 |
+| `des_block` | `0x140176950` | 144 | 696 | 35 | 14 | 7 | 29 |
+| `des_round` | `0x14018df50` | 132 | 647 | 27 | 10 | 5 | 21 |
+| `des_keyschedule` | `0x1401e42b0` | 133 | 650 | 28 | 12 | 6 | 28 |
+| `sha_rotr` | `0x1403216e0` | 42 | 195 | 0 | 0 | 0 | 0 |
 | **Total** | | **1,503** | **7,123** | 434 | 83 | 37 | |
 
 Each VM has a listing (`NAME.txt`), a machine-readable program with run records
@@ -102,12 +102,33 @@ Each VM has a listing (`NAME.txt`), a machine-readable program with run records
 call (`NAME.analysis.txt`, from
 [`pafet_vm_analyze_xxxvii.py`](scripts/pafet_vm_analyze_xxxvii.py)).
 
-The SHA names come from the native callbacks: `0x1402834d0` (40 cases) drives
-`sha_msg` and `0x140298d10` (49 cases) drives `sha_compress`, which calls the six
-leaf executors. The four names beginning `vm_` are not identified. Their loop
-bounds are consistent with DES (`<8, <56, <16, <48` in `vm_1e42b0`; `<48, <8, <32`
-in `vm_18df50`; `<8, <64, <16, <64` in `cipher_l3`), but this round did not read
-their native callbacks, so the roles stay unassigned.
+All twenty are identified from their native callbacks
+([`pafet_vm_identify_xxxvii.py`](scripts/pafet_vm_identify_xxxvii.py),
+[identification](jack_xxxvii_evidence/identification.json)):
+
+| VM | Role | Evidence |
+|---|---|---|
+| `sha_msg`, `sha_compress` | SHA-256 update/final and transform | callbacks `0x1402834d0` (40 cases) and `0x140298d10` (49 cases), read natively |
+| `sha_ch`, `sha_maj`, `sha_ep0`, `sha_ep1`, `sha_sig0`, `sha_sig1`, `sha_rotr` | Ch, Maj, Σ0, Σ1, σ0, σ1, 32-bit rotate right | branch-free; the lifted program equals the textbook function on 2,000 random inputs each |
+| `des_block` | DES block | callbacks index tables equal to the standard IP and FP |
+| `des_round` | DES round function | tables equal to the standard E, P and the eight S-boxes (512 bytes) |
+| `des_keyschedule` | DES key schedule | tables equal to the standard PC-1, rotation counts and PC-2 |
+| `tdes_block` | one 3DES block | six callbacks: three key schedules, then the block with direction 0, 1, 0 and keys 3, 2, 1 |
+| `cipher_buffer` | one cipher pass | copies up to 24 key bytes, loops `i < size` over blocks, calls the unpad |
+| `cipher_unpad` | permissive unpad | callbacks: size is zero, last byte, store/load it, `data[0 : size - p]` |
+
+For the branch-free VMs the whole program is evaluated symbolically from entry to
+`RET`; the obfuscation folds away and leaves, for example,
+`(x >> n) | (x << (32 - n))` for `sha_rotr` and
+`(a & b) ^ (a & c) ^ (b & c)` for `sha_maj`. The σ and Σ programs call host 0 with
+`(x, n)`; a Stalker call summary shows that callback entering the `sha_rotr`
+executor. `sha_ch` reads `x`, `y`, `~x` and `z` from four callbacks (the native
+adapter at `0x14039d580` performs the `not`). Which adapter each executor uses was
+observed with Stalker and is recorded as a table in the script, not re-derived.
+
+`tdes_block` matches the composition `D_K1(E_K2(D_K3(X)))` of the crypto audit.
+The direction flag is read from the callback bodies; its meaning (0 = decrypt) is
+taken from that audit, not re-proved here.
 
 ## 4. Opcodes
 
@@ -126,7 +147,7 @@ verified against the handler bodies:
 | 42 | `SHL` | pops `0x8`, `0x6f56`, pushes `0x6f5600` |
 | 43 | `SHR` | pops `0x8`, `0x3510366fbff5cb69`, pushes `0x3510366fbff5cb` |
 
-The stack samples are not stored in the evidence; tracing `cipher_l3` reproduces
+The stack samples are not stored in the evidence; tracing `des_block` reproduces
 them.
 
 ## 5. Validation against static decodes
@@ -152,7 +173,7 @@ instruction early. The cause was not investigated.
 value 0. With the fall-through forced, the process exited before another
 instruction was recorded. The static decode shows 15 blocks and 61 instructions
 behind that fall-through. So this branch is one-way in practice, and the lift is
-blind to what a flip cannot survive. Two blocks of `vm_15faf0` are also
+blind to what a flip cannot survive. Two blocks of `cipher_unpad` are also
 incomplete; no static reference exists for them and the cause was not
 investigated.
 
@@ -190,11 +211,11 @@ blocks where the model declines a heap-dependent tail. No mismatch. The length
 15/17 and 23–25 anomalies recorded on the Linux loader do not occur on Windows.
 The oracle is a research variant; this is not acceptance by the original.
 
-**One-way branches are not all opaque.** `vm_15faf0` has six branches and none
+**One-way branches are not all opaque.** `cipher_unpad` has six branches and none
 took both outcomes with the two inputs used; 147 of its 336 instructions were
-reached only by force. Its shape (read a byte, zero-extend, compare, call
-callbacks) suggests the unpad step, which branches on the last decrypted byte.
-"One-way" in the tables means one-way for these inputs.
+reached only by force. It is the unpad step, which branches on the last decrypted
+byte, and neither input produced a trailing byte in 1..8. "One-way" in the tables
+means one-way for these inputs.
 
 Nothing here reduces the credential space. The gate is SHA-256, the pipeline is
 the documented one, and the flag still depends on credentials that are not known.
@@ -212,7 +233,10 @@ the documented one, and the flag still depends on credentials that are not known
 - Helper discovery is a size pattern fitted to this binary. The three static
   comparisons and the known helper addresses support it; it is not a general
   REVoid tool.
-- Names for opcodes 9, 25, 39, 40, 42 and 43 are inferred (§4).
+- Names for opcodes 9, 25, 39, 40, 42 and 43 are inferred (§4). The branch-free
+  SHA programs that use 9, 39, 40, 42 and 43 equal their textbook functions under
+  those meanings, which supports them; 25 has no such check.
+- The executor-to-adapter table is a recorded Stalker observation (§3).
 - No native mechanism, timing, guard or exception behaviour is modelled.
 
 ## 8. Reproduction
@@ -225,6 +249,7 @@ python scripts/pafet_vm_lift_xxxvii.py --list
 python scripts/pafet_vm_lift_xxxvii.py all                 # about 25 minutes
 python scripts/pafet_vm_analyze_xxxvii.py (Get-ChildItem jack_xxxvii_evidence/lifted/*.json)
 python scripts/pafet_vm_lift_validate_xxxvii.py
+python scripts/pafet_vm_identify_xxxvii.py                 # static; executes nothing
 python scripts/pafet_windows_checks_xxxvii.py gate
 python scripts/pafet_windows_checks_xxxvii.py digest       # about 3 minutes
 python scripts/pafet_windows_checks_xxxvii.py oracle --workers 3   # about 7 minutes

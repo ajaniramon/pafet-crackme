@@ -1,0 +1,3 @@
+# sha_rotr (SHA-256 32-bit rotate right): what feeds each conditional branch and each HOST call
+## conditional branches: 0
+## HOST calls: 0

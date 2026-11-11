@@ -1,4 +1,4 @@
-# vm_18df50 (unidentified (cipher cluster)) executor 0x14018df50; logical program recovered dynamically.
+# des_round (DES round function: E expansion, S-boxes, P) executor 0x14018df50; logical program recovered dynamically.
 # block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
 block 0:
    0  CONST  0   = 0x0

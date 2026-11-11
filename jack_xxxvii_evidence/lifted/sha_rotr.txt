@@ -1,4 +1,4 @@
-# vm_3216e0 (unidentified) executor 0x1403216e0; logical program recovered dynamically.
+# sha_rotr (SHA-256 32-bit rotate right) executor 0x1403216e0; logical program recovered dynamically.
 # block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
 block 0:
    0  JMP    20   -> block 20

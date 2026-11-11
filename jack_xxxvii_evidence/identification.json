@@ -1,0 +1,299 @@
+{
+ "scope": "static identification only; executes nothing",
+ "host_adapters": [
+  {
+   "vm": "main",
+   "adapter": "0x14039d4a0",
+   "dispatcher": "0x140396990",
+   "inline": false,
+   "cases": 24
+  },
+  {
+   "vm": "sha_ch",
+   "adapter": "0x14039d580",
+   "dispatcher": "0x14039d580",
+   "inline": true,
+   "cases": null
+  },
+  {
+   "vm": "sha_compress",
+   "adapter": "0x14039d600",
+   "dispatcher": "0x140298d10",
+   "inline": false,
+   "cases": 49
+  },
+  {
+   "vm": "sha_msg",
+   "adapter": "0x14039d6b0",
+   "dispatcher": "0x1402834d0",
+   "inline": false,
+   "cases": 40
+  },
+  {
+   "vm": "serial_inner",
+   "adapter": "0x14039d940",
+   "dispatcher": "0x140232e20",
+   "inline": false,
+   "cases": 23
+  },
+  {
+   "vm": "des_keyschedule",
+   "adapter": "0x14039d9c0",
+   "dispatcher": "0x1403a0d40",
+   "inline": false,
+   "cases": 28
+  },
+  {
+   "vm": "des_round",
+   "adapter": "0x14039da50",
+   "dispatcher": "0x1403a0f10",
+   "inline": false,
+   "cases": 21
+  },
+  {
+   "vm": "des_block",
+   "adapter": "0x14039dae0",
+   "dispatcher": "0x14017f790",
+   "inline": false,
+   "cases": 29
+  },
+  {
+   "vm": "cipher_unpad",
+   "adapter": "0x14039db70",
+   "dispatcher": "0x14039db70",
+   "inline": true,
+   "cases": 7
+  },
+  {
+   "vm": "cipher_buffer",
+   "adapter": "0x14039de80",
+   "dispatcher": "0x1400c9170",
+   "inline": false,
+   "cases": 7
+  },
+  {
+   "vm": "hex",
+   "adapter": "0x14039dee0",
+   "dispatcher": "0x140088a00",
+   "inline": false,
+   "cases": 6
+  },
+  {
+   "vm": "user",
+   "adapter": "0x14039df30",
+   "dispatcher": "0x140048960",
+   "inline": false,
+   "cases": 7
+  }
+ ],
+ "des_tables": [
+  {
+   "vm": "des_block",
+   "host_case": "8",
+   "table_rva": "0x3def60",
+   "standard": "IP",
+   "length": 64,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_block",
+   "host_case": "24",
+   "table_rva": "0x3e03b0",
+   "standard": "FP",
+   "length": 64,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_round",
+   "host_case": "4",
+   "table_rva": "0x3eead0",
+   "standard": "E",
+   "length": 48,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_round",
+   "host_case": "19",
+   "table_rva": "0x3ea790",
+   "standard": "P",
+   "length": 32,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_round",
+   "host_case": "15",
+   "table_rva": "0x3f1150",
+   "standard": "SBOX",
+   "length": 512,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_keyschedule",
+   "host_case": "8",
+   "table_rva": "0x3ec908",
+   "standard": "PC1",
+   "length": 56,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_keyschedule",
+   "host_case": "15/16/18/19",
+   "table_rva": "0x3ec0b0",
+   "standard": "SHIFTS",
+   "length": 16,
+   "equal": true,
+   "first_difference": null
+  },
+  {
+   "vm": "des_keyschedule",
+   "host_case": "25",
+   "table_rva": "0x3ed458",
+   "standard": "PC2",
+   "length": 48,
+   "equal": true,
+   "first_difference": null
+  }
+ ],
+ "branch_free_vms": {
+  "sha_rotr": {
+   "formula": {
+    "returns": "((zext32(arg5) >> zext32(arg12)) | zext32((zext32(arg5) << zext32((0x20 - zext32(arg12))))))",
+    "host_calls": [],
+    "blocks_walked": 42,
+    "blocks": 42
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [
+     5,
+     12
+    ],
+    "host_model": null
+   }
+  },
+  "sha_maj": {
+   "formula": {
+    "returns": "(((zext32(arg5) & zext32(arg10)) ^ (zext32(arg5) & zext32(arg7))) ^ (zext32(arg10) & zext32(arg7)))",
+    "host_calls": [],
+    "blocks_walked": 40,
+    "blocks": 40
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [
+     5,
+     10,
+     7
+    ],
+    "host_model": null
+   }
+  },
+  "sha_ep0": {
+   "formula": {
+    "returns": "((h0 ^ h1) ^ h2)",
+    "host_calls": [
+     "host0(zext32(arg8), 0x2)",
+     "host0(zext32(arg8), 0xd)",
+     "host0(zext32(arg8), 0x16)"
+    ],
+    "blocks_walked": 43,
+    "blocks": 43
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [
+     8
+    ],
+    "host_model": "rotr"
+   }
+  },
+  "sha_ep1": {
+   "formula": {
+    "returns": "((h0 ^ h1) ^ h2)",
+    "host_calls": [
+     "host0(zext32(arg4), 0x6)",
+     "host0(zext32(arg4), 0xb)",
+     "host0(zext32(arg4), 0x19)"
+    ],
+    "blocks_walked": 43,
+    "blocks": 43
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [
+     4
+    ],
+    "host_model": "rotr"
+   }
+  },
+  "sha_sig0": {
+   "formula": {
+    "returns": "((h0 ^ h1) ^ (zext32(arg7) >> 0x3))",
+    "host_calls": [
+     "host0(zext32(arg7), 0x7)",
+     "host0(zext32(arg7), 0x12)"
+    ],
+    "blocks_walked": 41,
+    "blocks": 41
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [
+     7
+    ],
+    "host_model": "rotr"
+   }
+  },
+  "sha_sig1": {
+   "formula": {
+    "returns": "((h0 ^ h1) ^ (zext32(arg2) >> 0xa))",
+    "host_calls": [
+     "host0(zext32(arg2), 0x11)",
+     "host0(zext32(arg2), 0x13)"
+    ],
+    "blocks_walked": 41,
+    "blocks": 41
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [
+     2
+    ],
+    "host_model": "rotr"
+   }
+  },
+  "sha_ch": {
+   "formula": {
+    "returns": "((zext32(h0) & zext32(h1)) ^ (h2 & zext32(h3)))",
+    "host_calls": [
+     "host0()",
+     "host1()",
+     "host2()",
+     "host3()"
+    ],
+    "blocks_walked": 38,
+    "blocks": 38
+   },
+   "numeric": {
+    "trials": 2000,
+    "mismatches": 0,
+    "argument_registers": [],
+    "host_model": "ch"
+   }
+  }
+ },
+ "all_tables_equal": true,
+ "all_leaves_equal": true
+}

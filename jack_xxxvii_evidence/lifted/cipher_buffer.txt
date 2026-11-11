@@ -1,4 +1,4 @@
-# cipher_l1 (cipher entry (main host 19)) executor 0x1400c0510; logical program recovered dynamically.
+# cipher_buffer (cipher pass: key copy, 8-byte block loop, unpad (main host 19)) executor 0x1400c0510; logical program recovered dynamically.
 # block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
 block 0:
    0  HOST   0 0

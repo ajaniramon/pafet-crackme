@@ -1,4 +1,4 @@
-# vm_18df50 (unidentified (cipher cluster)): what feeds each conditional branch and each HOST call
+# des_round (DES round function: E expansion, S-boxes, P): what feeds each conditional branch and each HOST call
 ## conditional branches: 10
   block 3.4  JZ -> 126   cond = (sext32(h2@3.0) <s 0x30)   REAL (both outcomes occur naturally)
   block 7.2  JZ -> 85   cond = (in1 != 0x0)   REAL (both outcomes occur naturally)

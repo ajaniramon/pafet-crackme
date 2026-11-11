@@ -1,6 +1,6 @@
 {
- "name": "cipher_l1",
- "role": "cipher entry (main host 19)",
+ "name": "cipher_buffer",
+ "role": "cipher pass: key copy, 8-byte block loop, unpad (main host 19)",
  "executor": "0x1400c0510",
  "binary": "pafet_pass8.exe",
  "helpers": {

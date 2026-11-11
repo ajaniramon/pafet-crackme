@@ -1,4 +1,4 @@
-# cipher_l1 (cipher entry (main host 19)): what feeds each conditional branch and each HOST call
+# cipher_buffer (cipher pass: key copy, 8-byte block loop, unpad (main host 19)): what feeds each conditional branch and each HOST call
 ## conditional branches: 2
   block 2.1  JZ -> 39   cond = h3@2.0   REAL (both outcomes occur naturally)
   block 29.0  JNZ -> 52   cond = in1   ONE-WAY in every natural run: F, values ['0x0']

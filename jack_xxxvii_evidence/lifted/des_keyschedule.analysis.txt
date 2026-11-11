@@ -1,4 +1,4 @@
-# vm_1e42b0 (unidentified (cipher cluster)): what feeds each conditional branch and each HOST call
+# des_keyschedule (DES key schedule: PC-1, rotations, PC-2): what feeds each conditional branch and each HOST call
 ## conditional branches: 12
   block 3.4  JZ -> 57   cond = (sext32(h2@3.0) <s 0x8)   REAL (both outcomes occur naturally)
   block 10.4  JZ -> 103   cond = (sext32(h7@10.0) <s 0x38)   REAL (both outcomes occur naturally)

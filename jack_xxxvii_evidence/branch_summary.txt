@@ -1,7 +1,7 @@
-cipher_l1      branches=2  real=1  one-way=1  hosts=9
+cipher_buffer  branches=2  real=1  one-way=1  hosts=9
      2.1 JZ cond = h3@2.0
-cipher_l2      branches=0  real=0  one-way=0  hosts=6
-cipher_l3      branches=14  real=7  one-way=7  hosts=64
+cipher_unpad   branches=6  real=0  one-way=6  hosts=8
+des_block      branches=14  real=7  one-way=7  hosts=64
      2.4 JZ cond = (sext32(h2@2.0) <s 0x8)
      11.4 JZ cond = (sext32(h7@11.0) <s 0x40)
      15.1 JZ cond = (in2 != in1)
@@ -9,6 +9,19 @@ cipher_l3      branches=14  real=7  one-way=7  hosts=64
      35.4 JZ cond = (sext32(h22@35.0) <s 0x40)
      39.6 JZ cond = ((in4 & (in3 << (in2 - sext32(in1)))) != 0x0)
      46.4 JZ cond = (sext32(h27@46.0) >=s 0x0)
+des_keyschedule branches=12  real=6  one-way=6  hosts=59
+     3.4 JZ cond = (sext32(h2@3.0) <s 0x8)
+     10.4 JZ cond = (sext32(h7@10.0) <s 0x38)
+     13.6 JZ cond = ((in4 & (in3 << (in2 - sext32(in1)))) != 0x0)
+     23.4 JZ cond = (sext32(h13@23.0) <s 0x10)
+     35.4 JZ cond = (sext32(h23@35.0) <s 0x30)
+     38.6 JZ cond = ((in4 & (in3 << (in2 - sext32(in1)))) != 0x0)
+des_round      branches=10  real=5  one-way=5  hosts=48
+     3.4 JZ cond = (sext32(h2@3.0) <s 0x30)
+     7.2 JZ cond = (in1 != 0x0)
+     17.4 JZ cond = (sext32(h9@17.0) <s 0x8)
+     33.4 JZ cond = (sext32(h18@33.0) <s 0x20)
+     37.8 JZ cond = ((in4 & zext32((in3 << (in2 - sext32(zext8(in1)))))) != 0x0)
 hex            branches=2  real=1  one-way=1  hosts=8
      1.1 JZ cond = h1@1.0
 main           branches=8  real=2  one-way=6  hosts=27
@@ -35,22 +48,9 @@ sha_msg        branches=14  real=7  one-way=7  hosts=60
      27.3 JZ cond = (h15@27.0 <s 0x40)
      38.4 JZ cond = (sext32(h31@38.0) <s 0x8)
      44.4 JZ cond = (sext32(h37@44.0) <s 0x20)
+sha_rotr       branches=0  real=0  one-way=0  hosts=0
 sha_sig0       branches=0  real=0  one-way=0  hosts=2
 sha_sig1       branches=0  real=0  one-way=0  hosts=2
+tdes_block     branches=0  real=0  one-way=0  hosts=6
 user           branches=2  real=1  one-way=1  hosts=9
      3.1 JZ cond = h3@3.0
-vm_15faf0      branches=6  real=0  one-way=6  hosts=8
-vm_18df50      branches=10  real=5  one-way=5  hosts=48
-     3.4 JZ cond = (sext32(h2@3.0) <s 0x30)
-     7.2 JZ cond = (in1 != 0x0)
-     17.4 JZ cond = (sext32(h9@17.0) <s 0x8)
-     33.4 JZ cond = (sext32(h18@33.0) <s 0x20)
-     37.8 JZ cond = ((in4 & zext32((in3 << (in2 - sext32(zext8(in1)))))) != 0x0)
-vm_1e42b0      branches=12  real=6  one-way=6  hosts=59
-     3.4 JZ cond = (sext32(h2@3.0) <s 0x8)
-     10.4 JZ cond = (sext32(h7@10.0) <s 0x38)
-     13.6 JZ cond = ((in4 & (in3 << (in2 - sext32(in1)))) != 0x0)
-     23.4 JZ cond = (sext32(h13@23.0) <s 0x10)
-     35.4 JZ cond = (sext32(h23@35.0) <s 0x30)
-     38.6 JZ cond = ((in4 & (in3 << (in2 - sext32(in1)))) != 0x0)
-vm_3216e0      branches=0  real=0  one-way=0  hosts=0

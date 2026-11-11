@@ -1,4 +1,4 @@
-# cipher_l2 (cipher level 2) executor 0x1400d3fe0; logical program recovered dynamically.
+# tdes_block (3DES block: three key schedules, then D(K3) E(K2) D(K1)) executor 0x1400d3fe0; logical program recovered dynamically.
 # block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
 block 0:
    0  JMP    16   -> block 16

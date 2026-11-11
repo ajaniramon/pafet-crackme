@@ -1,4 +1,4 @@
-# cipher_l3 (cipher level 3) executor 0x140176950; logical program recovered dynamically.
+# des_block (DES block: IP, 16 rounds, FP) executor 0x140176950; logical program recovered dynamically.
 # block ids are logical (JMP/JZ/JNZ operands). [forced-only] = reached only with a flipped branch.
 block 0:
    0  CONST  0   = 0x0

@@ -1,6 +1,6 @@
 {
- "name": "vm_15faf0",
- "role": "unidentified (cipher cluster)",
+ "name": "cipher_unpad",
+ "role": "permissive unpad of the decrypted buffer",
  "executor": "0x14015faf0",
  "binary": "pafet_pass8.exe",
  "helpers": {

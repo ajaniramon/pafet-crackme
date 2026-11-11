@@ -1,6 +1,6 @@
 {
- "name": "cipher_l3",
- "role": "cipher level 3",
+ "name": "des_block",
+ "role": "DES block: IP, 16 rounds, FP",
  "executor": "0x140176950",
  "binary": "pafet_pass8.exe",
  "helpers": {
