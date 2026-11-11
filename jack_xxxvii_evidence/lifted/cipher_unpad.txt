@@ -44,8 +44,8 @@ block 8:
    0  NE     
    1  JMP    46   -> block 46
 block 9:
-   0  CONST  4   [forced-only]
-   1  JMP    10   -> block 10   [forced-only]
+   0  CONST  4   = 0x1
+   1  JMP    10   -> block 10
 block 10:
    0  JZ     81   -> block 81  seen=FT
    1  JMP    11   -> block 11
@@ -56,10 +56,11 @@ block 12:
    1  DROP   
    2  CONST  2   = 0x0
    3  RET    
-block 13:   # INCOMPLETE: terminator not recorded
-   0  HOST   6 0   [forced-only]
-   1  DROP      [forced-only]
-   2  CONST  2   [forced-only]
+block 13:
+   0  HOST   6 0
+   1  DROP   
+   2  CONST  2   = 0x0
+   3  RET    
 block 14:
    0  CONST  5   [forced-only]
    1  NOT       [forced-only]
@@ -107,21 +108,21 @@ block 22:
 block 23:
    0  JMP    19   -> block 19
 block 25:
-   0  GET    7   [forced-only]
-   1  GET    2   [forced-only]
-   2  NE        [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    65   -> block 65   [forced-only]
+   0  GET    7
+   1  GET    2
+   2  NE     
+   3  DROP   
+   4  JMP    65   -> block 65
 block 26:
-   0  CONST  5   [forced-only]
-   1  SET    2   [forced-only]
-   2  GET    2   [forced-only]
-   3  CONST  9   [forced-only]
-   4  XOR       [forced-only]
-   5  JMP    27   -> block 27   [forced-only]
+   0  CONST  5   = 0xdb
+   1  SET    2
+   2  GET    2
+   3  CONST  9   = 0x7a
+   4  XOR    
+   5  JMP    27   -> block 27
 block 27:
-   0  SET    2   [forced-only]
-   1  JMP    86   -> block 86   [forced-only]
+   0  SET    2
+   1  JMP    86   -> block 86
 block 28:
    0  GET    15   [forced-only]
    1  CONST  10   [forced-only]
@@ -165,25 +166,25 @@ block 35:
    0  SET    2   [forced-only]
    1  JMP    28   -> block 28   [forced-only]
 block 37:
-   0  CONST  5   [forced-only]
-   1  SET    2   [forced-only]
-   2  GET    2   [forced-only]
-   3  CONST  5   [forced-only]
-   4  XOR       [forced-only]
-   5  JMP    38   -> block 38   [forced-only]
+   0  CONST  5   = 0xdb
+   1  SET    2
+   2  GET    2
+   3  CONST  5   = 0xdb
+   4  XOR    
+   5  JMP    38   -> block 38
 block 38:
-   0  SET    2   [forced-only]
-   1  JMP    26   -> block 26   [forced-only]
+   0  SET    2
+   1  JMP    26   -> block 26
 block 39:
-   0  CONST  10   [forced-only]
-   1  SET    2   [forced-only]
-   2  GET    2   [forced-only]
-   3  CONST  8   [forced-only]
-   4  XOR       [forced-only]
-   5  JMP    40   -> block 40   [forced-only]
+   0  CONST  10   = 0x9
+   1  SET    2
+   2  GET    2
+   3  CONST  8   = 0x92
+   4  XOR    
+   5  JMP    40   -> block 40
 block 40:
-   0  SET    2   [forced-only]
-   1  JMP    25   -> block 25   [forced-only]
+   0  SET    2
+   1  JMP    25   -> block 25
 block 41:
    0  CONST  7   [forced-only]
    1  CONST  7   [forced-only]
@@ -191,15 +192,15 @@ block 41:
    3  DROP      [forced-only]
    4  JMP    85   -> block 85   [forced-only]
 block 42:
-   0  CONST  8   [forced-only]
-   1  SET    2   [forced-only]
-   2  GET    2   [forced-only]
-   3  CONST  8   [forced-only]
-   4  XOR       [forced-only]
-   5  JMP    43   -> block 43   [forced-only]
+   0  CONST  8   = 0x92
+   1  SET    2
+   2  GET    2
+   3  CONST  8   = 0x92
+   4  XOR    
+   5  JMP    43   -> block 43
 block 43:
-   0  SET    2   [forced-only]
-   1  JMP    76   -> block 76   [forced-only]
+   0  SET    2
+   1  JMP    76   -> block 76
 block 44:
    0  CONST  9   = 0x7a
    1  NOT    
@@ -272,11 +273,11 @@ block 62:
    3  DROP   
    4  JMP    87   -> block 87
 block 63:
-   0  GET    10   [forced-only]
-   1  GET    8   [forced-only]
-   2  NE        [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    9   -> block 9   [forced-only]
+   0  GET    10
+   1  GET    8
+   2  NE     
+   3  DROP   
+   4  JMP    9   -> block 9
 block 64:
    0  CONST  10   = 0x9
    1  CONST  10   = 0x9
@@ -284,11 +285,11 @@ block 64:
    3  DROP   
    4  JMP    71   -> block 71
 block 65:
-   0  GET    3   [forced-only]
-   1  CONST  5   [forced-only]
-   2  ADD       [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    69   -> block 69   [forced-only]
+   0  GET    3
+   1  CONST  5   = 0xdb
+   2  ADD    
+   3  DROP   
+   4  JMP    69   -> block 69
 block 66:
    0  CONST  8   = 0x92
    1  NOT    
@@ -307,15 +308,15 @@ block 68:
    3  DROP   
    4  JMP    74   -> block 74
 block 69:
-   0  CONST  10   [forced-only]
-   1  SET    2   [forced-only]
-   2  GET    2   [forced-only]
-   3  CONST  6   [forced-only]
-   4  XOR       [forced-only]
-   5  JMP    70   -> block 70   [forced-only]
+   0  CONST  10   = 0x9
+   1  SET    2
+   2  GET    2
+   3  CONST  6   = 0x54
+   4  XOR    
+   5  JMP    70   -> block 70
 block 70:
-   0  SET    2   [forced-only]
-   1  JMP    92   -> block 92   [forced-only]
+   0  SET    2
+   1  JMP    92   -> block 92
 block 71:
    0  CONST  6   = 0x54
    1  SET    2
@@ -333,11 +334,11 @@ block 74:
    3  DROP   
    4  JMP    21   -> block 21
 block 76:
-   0  GET    12   [forced-only]
-   1  GET    14   [forced-only]
-   2  NE        [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    13   -> block 13   [forced-only]
+   0  GET    12
+   1  GET    14
+   2  NE     
+   3  DROP   
+   4  JMP    13   -> block 13
 block 78:
    0  GET    12
    1  GET    8
@@ -357,11 +358,11 @@ block 80:
    3  DROP   
    4  JMP    17   -> block 17
 block 81:
-   0  GET    6   [forced-only]
-   1  GET    6   [forced-only]
-   2  NE        [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    37   -> block 37   [forced-only]
+   0  GET    6
+   1  GET    6
+   2  NE     
+   3  DROP   
+   4  JMP    37   -> block 37
 block 82:
    0  GET    7
    1  GET    15
@@ -387,11 +388,11 @@ block 85:
    3  DROP      [forced-only]
    4  JMP    31   -> block 31   [forced-only]
 block 86:
-   0  GET    4   [forced-only]
-   1  GET    7   [forced-only]
-   2  NE        [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    42   -> block 42   [forced-only]
+   0  GET    4
+   1  GET    7
+   2  NE     
+   3  DROP   
+   4  JMP    42   -> block 42
 block 87:
    0  CONST  6   = 0x54
    1  CONST  6   = 0x54
@@ -410,8 +411,8 @@ block 90:
    2  DROP      [forced-only]
    3  JMP    7   -> block 7   [forced-only]
 block 92:
-   0  GET    1   [forced-only]
-   1  CONST  5   [forced-only]
-   2  ADD       [forced-only]
-   3  DROP      [forced-only]
-   4  JMP    63   -> block 63   [forced-only]
+   0  GET    1
+   1  CONST  5   = 0xdb
+   2  ADD    
+   3  DROP   
+   4  JMP    63   -> block 63

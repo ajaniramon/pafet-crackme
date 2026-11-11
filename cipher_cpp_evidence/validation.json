@@ -1,0 +1,138 @@
+{
+ "binary": "pafet_pass8.exe (two-byte gate bypass; the cipher VMs are unchanged)",
+ "pe_sha256": "80a751350c8ed61ab25de6c8e81c2ec1c838af2126fe1eafbf1f89d0518407e7",
+ "source_sha256": "bff6facaf24b694c06deca9f222c8f85214b6ed340c2efbe84ca9afd3894887d",
+ "compiler": "clang version 23.1.4 (https://github.com/llvm/llvm-project 7a941dfb2877a0b8cf30323fefa85ad019e0b0f5)",
+ "chunk": 50000,
+ "argument_cases": {
+  "b": [
+   2
+  ],
+  "d": [
+   0,
+   1,
+   5,
+   6,
+   10,
+   11,
+   12,
+   15,
+   19,
+   20,
+   21,
+   26
+  ],
+  "t": [],
+  "u": [
+   3
+  ],
+  "r": [
+   0,
+   1,
+   7,
+   8,
+   10,
+   12,
+   13,
+   16,
+   17
+  ],
+  "k": [
+   0,
+   1,
+   5,
+   6,
+   10,
+   11,
+   12,
+   20,
+   21,
+   22
+  ]
+ },
+ "cases": [
+  {
+   "username_hex": "616c696365",
+   "serial_hex": "73657269616c3031",
+   "key_hex": "464340464ead7dfb28c25b6d0b0000000000000000000000",
+   "pass_lengths": [
+    72,
+    72,
+    72
+   ],
+   "callbacks_native": 1641410,
+   "callbacks_model": 1641410,
+   "checkpoints": 33,
+   "sequence_equal": true,
+   "output_equals_offline_model": true,
+   "native_error": null
+  },
+  {
+   "username_hex": "616263",
+   "serial_hex": "73343032",
+   "key_hex": "404248ad2cb9730000000000000000000000000000000000",
+   "pass_lengths": [
+    64,
+    64,
+    64
+   ],
+   "callbacks_native": 1486160,
+   "callbacks_model": 1486160,
+   "checkpoints": 30,
+   "sequence_equal": true,
+   "output_equals_offline_model": true,
+   "native_error": null
+  },
+  {
+   "username_hex": "616263",
+   "serial_hex": "7a313236",
+   "key_hex": "404248a429bb770000000000000000000000000000000000",
+   "pass_lengths": [
+    72,
+    72,
+    72
+   ],
+   "callbacks_native": 1604333,
+   "callbacks_model": 1604333,
+   "checkpoints": 33,
+   "sequence_equal": true,
+   "output_equals_offline_model": true,
+   "native_error": null
+  },
+  {
+   "username_hex": "",
+   "serial_hex": "",
+   "key_hex": "000000000000000000000000000000000000000000000000",
+   "pass_lengths": [
+    72,
+    72,
+    72
+   ],
+   "callbacks_native": 1575510,
+   "callbacks_model": 1575510,
+   "checkpoints": 32,
+   "sequence_equal": true,
+   "output_equals_offline_model": true,
+   "native_error": null
+  },
+  {
+   "username_hex": "6162636465666768696a6b6c6d6e6f70717273747576777879",
+   "serial_hex": "73657269616c3031",
+   "key_hex": "2a2c3a3c424442444a4c5a5c626462646a6c7a7c82848284",
+   "pass_lengths": [
+    72,
+    72,
+    72
+   ],
+   "callbacks_native": 1686534,
+   "callbacks_model": 1686534,
+   "checkpoints": 34,
+   "sequence_equal": true,
+   "output_equals_offline_model": true,
+   "native_error": null
+  }
+ ],
+ "all_sequences_equal": true,
+ "all_outputs_equal_offline_model": true,
+ "total_callbacks_compared": 7993947
+}

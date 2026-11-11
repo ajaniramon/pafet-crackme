@@ -1,8 +1,8 @@
 # cipher_unpad (permissive unpad of the decrypted buffer): what feeds each conditional branch and each HOST call
 ## conditional branches: 6
   block 1.0  JZ -> 78   cond = in1   ONE-WAY in every natural run: T, values ['0x0']
-  block 5.2  JNZ -> 39   cond = (in1 == 0x0)   ONE-WAY in every natural run: F, values ['0x0']
-  block 10.0  JZ -> 81   cond = in1   ONE-WAY in every natural run: F, values ['0x1']
+  block 5.2  JNZ -> 39   cond = (in1 == 0x0)   REAL (both outcomes occur naturally)
+  block 10.0  JZ -> 81   cond = in1   REAL (both outcomes occur naturally)
   block 22.0  JNZ -> 79   cond = in1   ONE-WAY in every natural run: F, values ['0x0']
   block 32.0  JNZ -> 67   cond = in1   ONE-WAY in every natural run: , values []
   block 51.2  JNZ -> 90   cond = (in1 >s 0x54)   ONE-WAY in every natural run: F, values ['0x0']

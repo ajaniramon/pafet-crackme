@@ -6,7 +6,7 @@ Started on `main` at `dbae09f9601796760e5aaa368cbbc9c3a36785e9` (JACK XXXVI and 
 Serial C++ steps integrated). This round ran on Windows, which XXXVI did not have.
 
 **The logical program of all twenty VM executors in `pafet.bin` is recorded:
-1,503 logical blocks and 7,123 instructions.** It was recovered dynamically, by
+1,503 logical blocks and 7,124 instructions.** It was recovered dynamically, by
 hooking each VM's own decoder helpers under Frida and re-running every conditional
 branch with its condition flipped. Nothing was decrypted statically.
 
@@ -90,12 +90,12 @@ branches where both outcomes occurred without a flip, with the inputs used.
 | `hex` | `0x1400804c0` | 79 | 357 | 8 | 2 | 1 | 6 |
 | `cipher_buffer` | `0x1400c0510` | 70 | 316 | 5 | 2 | 1 | 7 |
 | `tdes_block` | `0x1400d3fe0` | 40 | 190 | 0 | 0 | 0 | 6 |
-| `cipher_unpad` | `0x14015faf0` | 79 | 336 | 147 | 6 | 0 | 7 |
+| `cipher_unpad` | `0x14015faf0` | 79 | 337 | 67 | 6 | 2 | 7 |
 | `des_block` | `0x140176950` | 144 | 696 | 35 | 14 | 7 | 29 |
 | `des_round` | `0x14018df50` | 132 | 647 | 27 | 10 | 5 | 21 |
 | `des_keyschedule` | `0x1401e42b0` | 133 | 650 | 28 | 12 | 6 | 28 |
 | `sha_rotr` | `0x1403216e0` | 42 | 195 | 0 | 0 | 0 | 0 |
-| **Total** | | **1,503** | **7,123** | 434 | 83 | 37 | |
+| **Total** | | **1,503** | **7,124** | 354 | 83 | 38 | |
 
 Each VM has a listing (`NAME.txt`), a machine-readable program with run records
 (`NAME.json`) and a per-block symbolic view of what feeds every branch and host
@@ -212,9 +212,10 @@ blocks where the model declines a heap-dependent tail. No mismatch. The length
 The oracle is a research variant; this is not acceptance by the original.
 
 **One-way branches are not all opaque.** `cipher_unpad` has six branches and none
-took both outcomes with the two inputs used; 147 of its 336 instructions were
+took both outcomes with the first two inputs used; 147 of its instructions were
 reached only by force. It is the unpad step, which branches on the last decrypted
-byte, and neither input produced a trailing byte in 1..8. "One-way" in the tables
+byte, and neither input produced a trailing byte in 1..8. With the inputs of §9
+two of its branches take both outcomes and 67 instructions remain forced-only. "One-way" in the tables
 means one-way for these inputs.
 
 Nothing here reduces the credential space. The gate is SHA-256, the pipeline is
@@ -279,7 +280,54 @@ without the taint proof `serial.cpp` has for the Serial-VM
 omitted part did not change any callback in these 15 runs; it does not prove it
 cannot.
 
-## 9. Reproduction
+## 9. The cipher pass in C++
+
+[`cipher_cpp_evidence/cipher.cpp`](cipher_cpp_evidence/cipher.cpp) does the same for
+the six cipher VMs: `cipher_buffer`, `tdes_block`, `des_keyschedule`, `des_block`,
+`des_round` and `cipher_unpad`. The members are the cases of six native switches
+(7, 6, 28, 29, 21 and 7 cases); the six `*_program` functions follow the lifted
+programs. It is DES written one bit at a time: every permutation is a loop that
+tests one table-selected bit and sets one output bit.
+
+Findings read from the native callbacks and the programs:
+
+- `des_block` callback 17 uses subkey `r` when its flag is 1 and `15 - r` when it
+  is 0. `tdes_block` calls the block with flags 0, 1, 0 and keys 3, 2, 1, so one
+  block is `D_K1(E_K2(D_K3(X)))`, as the crypto audit states.
+- The three key schedules are recomputed for every 8-byte block.
+- `cipher_unpad` copies the buffer when the last byte `p` is 0 or greater than 8,
+  and otherwise keeps `size - p` bytes without looking at the removed ones. The
+  "p not larger than size" clamp is in the native callback, not in the VM.
+- `cipher_buffer` steps `i += 8` while `i < size` and always hands eight bytes to
+  the block, so a size that is not a multiple of eight reads past the string.
+
+To exercise the unpad naturally, `cipher_unpad` and `cipher_buffer` were re-lifted
+with two more credential pairs found with the offline model: `abc`/`s402` (first
+pass ends in `08`, one block removed) and `abc`/`z126` (ends in `00`).
+
+[`pafet_cipher_cpp_validate_xxxvii.py`](scripts/pafet_cipher_cpp_validate_xxxvii.py)
+runs `pafet_pass8.exe` under Frida with hooks on the six switches, through the
+three passes of the main program, and folds every `(switch, case, argument,
+return)` record into a running hash kept every 50,000 records. The compiled
+`cipher.cpp` does the same for the derived key and the embedded ciphertext.
+
+| | |
+|---|---|
+| Credential pairs | 5: `alice`/`serial01`, `abc`/`s402`, `abc`/`z126`, empty/empty, a 25-byte username |
+| Callback records | 7,993,947 in total; the same count on both sides in every case |
+| Hash checkpoints | 162, all equal |
+| Output after three passes | equal to `scripts/pafet_des3_offline.py` in all 5 |
+
+The comparison is by count and checkpoint hash, not record by record; a difference
+would be located by dumping the chunk ([validation](cipher_cpp_evidence/validation.json)).
+
+Limits specific to this file: it agrees with the binary only when every pass
+leaves a multiple of eight bytes, because the heap bytes the original reads past
+a partial block are not modelled; the empty-input arm of the unpad was reached
+only by a forced run and its tail is not recorded; and, as for `sha.cpp`, the
+omitted obfuscation layer has no taint proof.
+
+## 10. Reproduction
 
 Windows, Python 3.10, `frida` and `pefile`, from the repository root. Each command
 runs the binaries one process at a time unless `--workers` says otherwise.
@@ -292,6 +340,7 @@ python scripts/pafet_vm_lift_validate_xxxvii.py
 python scripts/pafet_vm_identify_xxxvii.py                 # static; executes nothing
 python scripts/pafet_vm_skeleton_xxxvii.py sha_msg sha_compress
 python scripts/pafet_sha_cpp_validate_xxxvii.py            # needs clang++; about 2 minutes
+python scripts/pafet_cipher_cpp_validate_xxxvii.py         # needs clang++; about 12 minutes
 python scripts/pafet_windows_checks_xxxvii.py gate
 python scripts/pafet_windows_checks_xxxvii.py digest       # about 3 minutes
 python scripts/pafet_windows_checks_xxxvii.py oracle --workers 3   # about 7 minutes

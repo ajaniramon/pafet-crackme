@@ -1,0 +1,25 @@
+# cipher_unpad (permissive unpad of the decrypted buffer): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0()
+    # one-way: (v1) was always zero; the other outcome goes to L1_1
+    v2 = host2()
+    v3 = host3(zext8(v2))
+    v4 = host4()
+    if ((sext32(zext8(v4)) == 0x0)) goto L39_0; else goto L5_3
+L1_1:
+    # one-way (registers and constants only): ((r11 >s 0xdb)) was always zero; the other outcome goes to L67_0
+    v8 = host1()
+    # block 3 not recorded past instruction 3
+L5_3:
+    # one-way (registers and constants only): ((r12 >s 0x54)) was always zero; the other outcome goes to L90_0
+    v5 = host4()
+    if (((sext32(zext8(v5)) >s 0x8) != 0x0)) goto L10_1; else goto L81_0
+L10_1:
+    # one-way (registers and constants only): ((r5 >s 0x3e)) was always zero; the other outcome goes to L79_0
+    v7 = host5()
+    return 0x0
+L39_0:
+    if (0x1) goto L10_1; else goto L81_0
+L81_0:
+    v6 = host6()
+    return 0x0

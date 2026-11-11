@@ -74,12 +74,14 @@
   {
    "kind": "base",
    "user_len": 3,
+   "serial_len": 8,
    "status": "done",
    "instructions": 2017
   },
   {
    "kind": "base",
-   "user_len": 25,
+   "user_len": 3,
+   "serial_len": 4,
    "status": "done",
    "instructions": 2017
   },

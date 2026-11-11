@@ -1,0 +1,105 @@
+# des_keyschedule (DES key schedule: PC-1, rotations, PC-2): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0(0x0)
+    v2 = host1(0x0)
+    v3 = host2()
+    if ((sext32(v3) <s 0x8)) goto L3_5; else goto L57_0
+L3_5:
+    # one-way (registers and constants only): ((r4 >s 0xfa)) was always zero; the other outcome goes to L117_0
+    v64 = host3()
+    v65 = host4()
+    v66 = host0(((v64 << 0x8) | zext8(v65)))
+    v67 = host3()
+    v68 = host2()
+    v69 = host1((v68 + 0x1))
+    v70 = host2()
+    v71 = host2()
+    if ((sext32(v71) <s 0x8)) goto L3_5; else goto L57_0
+L10_5:
+    # one-way (registers and constants only): ((r1 >s 0xcd)) was always zero; the other outcome goes to L100_0
+    v50 = host3()
+    v51 = host8()
+    if (((v50 & (0x1 << (0x40 - sext32(zext8(v51))))) != 0x0)) goto L13_7; else goto L109_0
+L13_7:
+    v56 = host9()
+    v57 = host7()
+    v58 = host5((v56 | (0x1 << (0x37 - sext32(v57)))))
+    v59 = host9()
+    # one-way (registers and constants only): ((r7 >s 0x60)) was always zero; the other outcome goes to L93_0
+    v60 = host7()
+    v61 = host6((v60 + 0x1))
+    v62 = host7()
+    v63 = host7()
+    if ((sext32(v63) <s 0x38)) goto L10_5; else goto L103_0
+L23_5:
+    # one-way (registers and constants only): ((r4 >s 0x58)) was always zero; the other outcome goes to L101_0
+    v13 = host14()
+    v14 = host15()
+    v15 = host14()
+    v16 = host16()
+    v17 = host10(zext32(((zext32((zext32(v13) << sext32(zext8(v14)))) | (zext32(v15) >> (0x1c - sext32(zext8(v16))))) & 0xfffffff)))
+    v18 = host14()
+    v19 = host17()
+    v20 = host18()
+    v21 = host17()
+    v22 = host19()
+    v23 = host11(zext32(((zext32((zext32(v19) << sext32(zext8(v20)))) | (zext32(v21) >> (0x1c - sext32(zext8(v22))))) & 0xfffffff)))
+    v24 = host17()
+    v25 = host14()
+    v26 = host17()
+    v27 = host20(((zext32(v25) << 0x1c) | zext32(v26)))
+    v28 = host21(0x0)
+    v29 = host22(0x0)
+    v30 = host23()
+    if ((sext32(v30) <s 0x30)) goto L35_5; else goto L51_0
+L35_5:
+    v36 = host24()
+    v37 = host25()
+    if (((v36 & (0x1 << (0x38 - sext32(zext8(v37))))) != 0x0)) goto L38_7; else goto L119_0
+L38_7:
+    v42 = host26()
+    v43 = host23()
+    v44 = host21((v42 | (0x1 << (0x2f - sext32(v43)))))
+    v45 = host26()
+    v46 = host23()
+    v47 = host22((v46 + 0x1))
+    v48 = host23()
+    # one-way (registers and constants only): ((r18 >s 0x8c)) was always zero; the other outcome goes to L53_0
+    v49 = host23()
+    if ((sext32(v49) <s 0x30)) goto L35_5; else goto L51_0
+L51_0:
+    v31 = host27()
+    v32 = host13()
+    v33 = host12((v32 + 0x1))
+    v34 = host13()
+    v35 = host13()
+    if ((sext32(v35) <s 0x10)) goto L23_5; else goto L58_0
+L57_0:
+    v4 = host5(0x0)
+    v5 = host6(0x0)
+    v6 = host7()
+    if ((sext32(v6) <s 0x38)) goto L10_5; else goto L103_0
+L58_0:
+    return void
+L103_0:
+    v7 = host9()
+    v8 = host10(zext32(zext32(zext32((v7 >> 0x1c)))))
+    v9 = host9()
+    v10 = host11(zext32(zext32(zext32((v9 & 0xfffffff)))))
+    v11 = host12(0x0)
+    v12 = host13()
+    if ((sext32(v12) <s 0x10)) goto L23_5; else goto L58_0
+L109_0:
+    v52 = host7()
+    v53 = host6((v52 + 0x1))
+    v54 = host7()
+    v55 = host7()
+    if ((sext32(v55) <s 0x38)) goto L10_5; else goto L103_0
+L119_0:
+    # one-way (registers and constants only): ((r12 >s 0x40)) was always zero; the other outcome goes to L90_0
+    v38 = host23()
+    v39 = host22((v38 + 0x1))
+    v40 = host23()
+    # one-way (registers and constants only): ((r18 >s 0x8c)) was always zero; the other outcome goes to L53_0
+    v41 = host23()
+    if ((sext32(v41) <s 0x30)) goto L35_5; else goto L51_0

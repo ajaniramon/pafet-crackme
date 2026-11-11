@@ -1,6 +1,8 @@
 cipher_buffer  branches=2  real=1  one-way=1  hosts=9
      2.1 JZ cond = h3@2.0
-cipher_unpad   branches=6  real=0  one-way=6  hosts=8
+cipher_unpad   branches=6  real=2  one-way=4  hosts=8
+     5.2 JNZ cond = (in1 == 0x0)
+     10.0 JZ cond = in1
 des_block      branches=14  real=7  one-way=7  hosts=64
      2.4 JZ cond = (sext32(h2@2.0) <s 0x8)
      11.4 JZ cond = (sext32(h7@11.0) <s 0x40)

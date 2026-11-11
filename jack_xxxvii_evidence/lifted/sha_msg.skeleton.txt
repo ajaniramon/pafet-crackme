@@ -11,6 +11,7 @@ L0_0:
     v9 = host8()
     if ((v8 <s v9)) goto L6_4; else goto L97_0
 L6_4:
+    # one-way (registers and constants only): ((r4 >s 0x33)) was always zero; the other outcome goes to L53_0
     v69 = host9()
     v70 = host10()
     if ((zext32(v70) == 0x40)) goto L9_6; else goto L86_0
@@ -21,6 +22,7 @@ L9_6:
     v79 = host12()
     v80 = host0(0x0)
     v81 = host10()
+    # one-way (registers and constants only): ((r16 >s 0x39)) was always zero; the other outcome goes to L76_0
     v82 = host7()
     v83 = host6((v82 + 0x1))
     v84 = host7()
@@ -28,18 +30,22 @@ L9_6:
     v86 = host8()
     if ((v85 <s v86)) goto L6_4; else goto L97_0
 L18_1:
+    # one-way (registers and constants only): ((r11 >s 0xf2)) was always zero; the other outcome goes to L132_0
     v50 = host14()
     v51 = host15()
     if ((v51 <s 0x38)) goto L22_4; else goto L117_0
 L22_4:
     v67 = host16()
+    # one-way (registers and constants only): ((r6 >s 0x39)) was always zero; the other outcome goes to L108_0
     v68 = host15()
     if ((v68 <s 0x38)) goto L22_4; else goto L117_0
 L27_4:
+    # one-way (registers and constants only): ((r9 >s 0x39)) was always zero; the other outcome goes to L129_0
     v48 = host18()
     v49 = host15()
     if ((v49 <s 0x40)) goto L27_4; else goto L90_0
 L38_5:
+    # one-way (registers and constants only): ((r4 >s 0x39)) was always zero; the other outcome goes to L101_0
     v40 = host32()
     v41 = host33()
     v42 = host34()
@@ -50,6 +56,7 @@ L38_5:
     v47 = host31()
     if ((sext32(v47) <s 0x8)) goto L38_5; else goto L113_0
 L44_5:
+    # one-way (registers and constants only): ((r1 >s 0x55)) was always zero; the other outcome goes to L100_0
     v35 = host38()
     v36 = host37()
     v37 = host36((v36 + 0x1))

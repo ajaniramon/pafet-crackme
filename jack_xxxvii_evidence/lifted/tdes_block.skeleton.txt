@@ -1,0 +1,9 @@
+# tdes_block (3DES block: three key schedules, then D(K3) E(K2) D(K1)): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0()
+    v2 = host1()
+    v3 = host2()
+    v4 = host3()
+    v5 = host4()
+    v6 = host5()
+    return void

@@ -307,13 +307,13 @@ def lift(cfg, inputs, max_forced=300, log=print):
     P = Program()
     queue = []           # (user, flips, branches)
     stats = []
-    for u in inputs:
-        evs, st = run(cfg, u)
+    for u in inputs:                     # u = (username, serial)
+        evs, st = run(cfg, u[0], u[1])
         ins = parse(evs)
-        br = P.walk(ins, 'base:%d' % len(u), st != 'done')
+        br = P.walk(ins, 'base:%d' % len(u[0]), st != 'done')
         queue.append((u, (), br))
-        stats.append(dict(kind='base', user_len=len(u), status=st, instructions=len(ins)))
-        log('  base len=%-3d status=%-8s instr=%-6d blocks=%d' % (len(u), st, len(ins), len(P.blocks)))
+        stats.append(dict(kind='base', user_len=len(u[0]), serial_len=len(u[1]), status=st, instructions=len(ins)))
+        log('  base len=%-3d status=%-8s instr=%-6d blocks=%d' % (len(u[0]), st, len(ins), len(P.blocks)))
     tried = set()
     forced = 0
     while forced < max_forced:
@@ -334,11 +334,11 @@ def lift(cfg, inputs, max_forced=300, log=print):
         u, flips, pos, want = todo
         tried.add((pos, want))
         forced += 1
-        evs, st = run(cfg, u, flips=flips, timeout=400)   # a late branch needs the whole natural prefix first
+        evs, st = run(cfg, u[0], u[1], flips=flips, timeout=400)   # a late branch needs the whole natural prefix first
         ins = parse(evs)
-        br = P.walk(ins, 'force:%d:%s' % (len(u), flips), True)
+        br = P.walk(ins, 'force:%d:%s' % (len(u[0]), flips), True)
         queue.append((u, flips, br))
-        stats.append(dict(kind='forced', user_len=len(u), flips=list(flips), status=st, instructions=len(ins)))
+        stats.append(dict(kind='forced', user_len=len(u[0]), flips=list(flips), status=st, instructions=len(ins)))
         log('  force %-14s pos=%s want=%s status=%-8s instr=%-6d blocks=%d' % (flips, pos, want, st, len(ins), len(P.blocks)))
     return P, stats
 
@@ -410,7 +410,13 @@ def main():
             print(name, 'helpers not located; skipped')
             continue
         print('==', name, cfg['role'])
-        inputs = [b"", b"abc", b"A" * 55, b"B" * 56, b"C" * 64, b"D" * 120] if name == 'sha_msg' else [b"abc", b"abcdefghijklmnopqrstuvwxy"]
+        if name == 'sha_msg':
+            inputs = [(u, b"serial01") for u in (b"", b"abc", b"A" * 55, b"B" * 56, b"C" * 64, b"D" * 120)]
+        elif name in ('cipher_unpad', 'cipher_buffer'):
+            # first-pass last byte: 0xaa.. (no trim), 0x08 (trims one block), 0x00 (no trim)
+            inputs = [(b"abc", b"serial01"), (b"abc", b"s402"), (b"abc", b"z126")]
+        else:
+            inputs = [(b"abc", b"serial01"), (b"abcdefghijklmnopqrstuvwxy", b"serial01")]
         P, stats = lift(cfg, inputs, args.max_forced)
         text, consts = listing(P, cfg)
         (args.out / (name + '.txt')).write_text(text, encoding='utf-8')

@@ -5,6 +5,7 @@ L0_0:
     v3 = host2()
     if ((sext32(v3) <s 0x10)) goto L3_5; else goto L75_0
 L3_5:
+    # one-way (registers and constants only): ((r19 >s 0xa2)) was always zero; the other outcome goes to L73_0
     v72 = host3()
     v73 = host2()
     v74 = host0((v73 + 0x1))
@@ -15,6 +16,7 @@ L3_5:
     v79 = host2()
     if ((sext32(v79) <s 0x10)) goto L3_5; else goto L75_0
 L9_5:
+    # one-way (registers and constants only): ((r2 >s 0xe0)) was always zero; the other outcome goes to L63_0
     v67 = host7()
     v68 = host6()
     v69 = host5((v68 + 0x1))
@@ -22,6 +24,7 @@ L9_5:
     v71 = host6()
     if ((sext32(v71) <s 0x40)) goto L9_5; else goto L99_0
 L20_5:
+    # one-way (registers and constants only): ((r25 >s 0xa2)) was always zero; the other outcome goes to L104_0
     v32 = host26()
     v33 = host27(zext32(v32))
     v34 = host28()

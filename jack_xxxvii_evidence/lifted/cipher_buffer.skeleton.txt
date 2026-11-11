@@ -1,0 +1,18 @@
+# cipher_buffer (cipher pass: key copy, 8-byte block loop, unpad (main host 19)): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0()
+    v2 = host1()
+    v3 = host2(0x0)
+    v4 = host3()
+    if (v4) goto L2_2; else goto L39_0
+L2_2:
+    # one-way (registers and constants only): ((r2 >s 0xe1)) was always zero; the other outcome goes to L52_0
+    v6 = host4()
+    v7 = host5()
+    v8 = host2((v7 + 0x8))
+    v9 = host5()
+    v10 = host3()
+    if (v10) goto L2_2; else goto L39_0
+L39_0:
+    v5 = host6()
+    return 0x0

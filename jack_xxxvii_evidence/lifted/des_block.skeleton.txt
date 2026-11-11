@@ -1,0 +1,115 @@
+# des_block (DES block: IP, 16 rounds, FP): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0(0x0)
+    v2 = host1(0x0)
+    v3 = host2()
+    if ((sext32(v3) <s 0x8)) goto L2_5; else goto L80_0
+L2_5:
+    # one-way (registers and constants only): ((r8 >s 0x70)) was always zero; the other outcome goes to L114_0
+    v70 = host3()
+    v71 = host4()
+    v72 = host0(((v70 << 0x8) | zext8(v71)))
+    v73 = host3()
+    v74 = host2()
+    v75 = host1((v74 + 0x1))
+    v76 = host2()
+    v77 = host2()
+    if ((sext32(v77) <s 0x8)) goto L2_5; else goto L80_0
+L11_5:
+    # one-way (registers and constants only): ((r2 >s 0xbf)) was always zero; the other outcome goes to L87_0
+    v56 = host3()
+    v57 = host8()
+    if (((v56 & (0x1 << (0x40 - sext32(zext8(v57))))) != 0x0)) goto L15_2; else goto L61_0
+L15_2:
+    v62 = host9()
+    v63 = host7()
+    v64 = host5((v62 | (0x1 << (0x3f - sext32(v63)))))
+    v65 = host9()
+    # one-way (registers and constants only): ((r22 >s 0xe7)) was always zero; the other outcome goes to L72_0
+    v66 = host7()
+    v67 = host6((v66 + 0x1))
+    v68 = host7()
+    v69 = host7()
+    if ((sext32(v69) <s 0x40)) goto L11_5; else goto L83_0
+L25_5:
+    # one-way (registers and constants only): ((r20 >s 0x7d)) was always zero; the other outcome goes to L101_0
+    v43 = host14()
+    v44 = host15(zext32(zext32(v43)))
+    v45 = host16()
+    v46 = host17()
+    v47 = host11(zext32((zext32(v45) ^ v46)))
+    v48 = host14()
+    v49 = host18()
+    v50 = host10(zext32(zext32(v49)))
+    v51 = host16()
+    v52 = host13()
+    v53 = host12((v52 + 0x1))
+    v54 = host13()
+    v55 = host13()
+    if ((sext32(v55) <s 0x10)) goto L25_5; else goto L90_0
+L35_5:
+    # one-way (registers and constants only): ((r15 >s 0x7d)) was always zero; the other outcome goes to L81_0
+    v29 = host23()
+    v30 = host24()
+    if (((v29 & (0x1 << (0x40 - sext32(zext8(v30))))) != 0x0)) goto L39_7; else goto L57_0
+L39_7:
+    v35 = host25()
+    v36 = host22()
+    v37 = host20((v35 | (0x1 << (0x3f - sext32(v36)))))
+    v38 = host25()
+    # one-way (registers and constants only): ((r9 >s 0xe7)) was always zero; the other outcome goes to L91_0
+    v39 = host22()
+    v40 = host21((v39 + 0x1))
+    v41 = host22()
+    v42 = host22()
+    if ((sext32(v42) <s 0x40)) goto L35_5; else goto L136_0
+L46_5:
+    # one-way (registers and constants only): ((r7 >s 0x5a)) was always zero; the other outcome goes to L105_0
+    v21 = host28()
+    v22 = host25()
+    v23 = host20((v22 >> 0x8))
+    v24 = host25()
+    v25 = host27()
+    v26 = host26((v25 - 0x1))
+    v27 = host27()
+    v28 = host27()
+    if ((sext32(v28) >=s 0x0)) goto L46_5; else goto L132_0
+L57_0:
+    v31 = host22()
+    v32 = host21((v31 + 0x1))
+    v33 = host22()
+    v34 = host22()
+    if ((sext32(v34) <s 0x40)) goto L35_5; else goto L136_0
+L61_0:
+    v58 = host7()
+    v59 = host6((v58 + 0x1))
+    v60 = host7()
+    v61 = host7()
+    if ((sext32(v61) <s 0x40)) goto L11_5; else goto L83_0
+L80_0:
+    v4 = host5(0x0)
+    v5 = host6(0x0)
+    v6 = host7()
+    if ((sext32(v6) <s 0x40)) goto L11_5; else goto L83_0
+L83_0:
+    v7 = host9()
+    v8 = host10(zext32(zext32(zext32((v7 >> 0x20)))))
+    v9 = host9()
+    v10 = host11(zext32(zext32(zext32((v9 & 0xffffffffffffffff)))))
+    v11 = host12(0x0)
+    v12 = host13()
+    if ((sext32(v12) <s 0x10)) goto L25_5; else goto L90_0
+L90_0:
+    v13 = host14()
+    v14 = host16()
+    v15 = host19(((zext32(v13) << 0x20) | zext32(v14)))
+    v16 = host20(0x0)
+    v17 = host21(0x0)
+    v18 = host22()
+    if ((sext32(v18) <s 0x40)) goto L35_5; else goto L136_0
+L132_0:
+    return void
+L136_0:
+    v19 = host26(0x7)
+    v20 = host27()
+    if ((sext32(v20) >=s 0x0)) goto L46_5; else goto L132_0
