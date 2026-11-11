@@ -1,0 +1,117 @@
+# sha_msg (SHA-256 message/padding): host-call skeleton. Lx_y = run starting at block x, instruction y.
+L0_0:
+    v1 = host0(0x0)
+    v2 = host1(0x0)
+    v3 = host2()
+    v4 = host3(v3)
+    v5 = host4()
+    v6 = host5(v5)
+    v7 = host6(0x0)
+    v8 = host7()
+    v9 = host8()
+    if ((v8 <s v9)) goto L6_4; else goto L97_0
+L6_4:
+    v69 = host9()
+    v70 = host10()
+    if ((zext32(v70) == 0x40)) goto L9_6; else goto L86_0
+L9_6:
+    v76 = host11()
+    v77 = host12()
+    v78 = host1((v77 + 0x200))
+    v79 = host12()
+    v80 = host0(0x0)
+    v81 = host10()
+    v82 = host7()
+    v83 = host6((v82 + 0x1))
+    v84 = host7()
+    v85 = host7()
+    v86 = host8()
+    if ((v85 <s v86)) goto L6_4; else goto L97_0
+L18_1:
+    v50 = host14()
+    v51 = host15()
+    if ((v51 <s 0x38)) goto L22_4; else goto L117_0
+L22_4:
+    v67 = host16()
+    v68 = host15()
+    if ((v68 <s 0x38)) goto L22_4; else goto L117_0
+L27_4:
+    v48 = host18()
+    v49 = host15()
+    if ((v49 <s 0x40)) goto L27_4; else goto L90_0
+L38_5:
+    v40 = host32()
+    v41 = host33()
+    v42 = host34()
+    v43 = host35()
+    v44 = host31()
+    v45 = host30((v44 + 0x1))
+    v46 = host31()
+    v47 = host31()
+    if ((sext32(v47) <s 0x8)) goto L38_5; else goto L113_0
+L44_5:
+    v35 = host38()
+    v36 = host37()
+    v37 = host36((v36 + 0x1))
+    v38 = host37()
+    v39 = host37()
+    if ((sext32(v39) <s 0x20)) goto L44_5; else goto L106_0
+L86_0:
+    v71 = host7()
+    v72 = host6((v71 + 0x1))
+    v73 = host7()
+    v74 = host7()
+    v75 = host8()
+    if ((v74 <s v75)) goto L6_4; else goto L97_0
+L90_0:
+    v15 = host19()
+    v16 = host20()
+    v17 = host12()
+    v18 = host10()
+    v19 = host1((v17 + zext32((zext32(v18) * 0x8))))
+    v20 = host12()
+    v21 = host21()
+    v22 = host22()
+    v23 = host23()
+    v24 = host24()
+    v25 = host25()
+    v26 = host26()
+    v27 = host27()
+    v28 = host28()
+    v29 = host29()
+    v30 = host30(0x0)
+    v31 = host31()
+    if ((sext32(v31) <s 0x8)) goto L38_5; else goto L113_0
+L97_0:
+    v10 = host10()
+    v11 = host13(zext32(v10))
+    v12 = host10()
+    if ((zext32(v12) <s 0x38)) goto L18_1; else goto L107_0
+L106_0:
+    v34 = host39()
+    return 0x0
+L107_0:
+    v13 = host17()
+    v14 = host15()
+    if ((v14 <s 0x40)) goto L27_4; else goto L90_0
+L113_0:
+    v32 = host36(0x0)
+    v33 = host37()
+    if ((sext32(v33) <s 0x20)) goto L44_5; else goto L106_0
+L117_0:
+    v52 = host12()
+    v53 = host10()
+    v54 = host1((v52 + zext32((zext32(v53) * 0x8))))
+    v55 = host12()
+    v56 = host21()
+    v57 = host22()
+    v58 = host23()
+    v59 = host24()
+    v60 = host25()
+    v61 = host26()
+    v62 = host27()
+    v63 = host28()
+    v64 = host29()
+    v65 = host30(0x0)
+    v66 = host31()
+    if ((sext32(v66) <s 0x8)) goto L38_5; else goto L113_0

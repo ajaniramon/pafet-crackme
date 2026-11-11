@@ -49,3 +49,4 @@ scripts/pafet_serial_metrics_xxxv.py -text
 scripts/pafet_serial_arithmetic_xxxv.py -text
 jack_xxxvii_evidence/** -text whitespace=cr-at-eol
 scripts/pafet_*_xxxvii.py -text
+sha_cpp_evidence/** -text whitespace=cr-at-eol

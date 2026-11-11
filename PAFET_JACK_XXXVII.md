@@ -239,7 +239,47 @@ the documented one, and the flag still depends on credentials that are not known
 - The executor-to-adapter table is a recorded Stalker observation (§3).
 - No native mechanism, timing, guard or exception behaviour is modelled.
 
-## 8. Reproduction
+## 8. The digest in C++
+
+[`sha_cpp_evidence/sha.cpp`](sha_cpp_evidence/sha.cpp) writes the nine SHA VMs as
+readable C++, in the manner of `serial_cpp_evidence/serial.cpp`. The 40 and 49
+cases of the two native callback switches are members `fn0…`; `sha_msg_program`
+and `sha_compress_program` call them in the order, with the argument expressions
+and under the conditions of the lifted programs. Those come from
+[`pafet_vm_skeleton_xxxvii.py`](scripts/pafet_vm_skeleton_xxxvii.py), which walks a
+lifted program, folds constants and keeps only host calls and real branches
+([`sha_msg.skeleton.txt`](jack_xxxvii_evidence/lifted/sha_msg.skeleton.txt),
+[`sha_compress.skeleton.txt`](jack_xxxvii_evidence/lifted/sha_compress.skeleton.txt)).
+The seven branch-free VMs are one-line functions (§3). Callbacks whose result the
+program discards are kept, because they are real calls.
+
+[`pafet_sha_cpp_validate_xxxvii.py`](scripts/pafet_sha_cpp_validate_xxxvii.py)
+compiles the file with clang++ and, for each input, compares the sequence of
+`(switch, case, argument, return)` it produces with the sequence recorded in
+`pafet.bin` under Frida:
+
+| | |
+|---|---|
+| Inputs | 15: lengths 0, 1, 3, 55–57, 63–65, 119, 120, 128, 200, and two with NUL and high bytes |
+| Callback records compared | 88,433 |
+| Differing records | 0 |
+| Digests (native, C++, `hashlib`) | equal in all 15 |
+| K and initial state | the 64 + 8 immediates in the native wrappers equal the constants in `sha.cpp` |
+
+Three pointer-valued fields are compared as pointers, not by value
+([validation](sha_cpp_evidence/validation.json)).
+
+The structure is the public-domain SHA-256 of Brad Conte's `crypto-algorithms`:
+`sha256_update`, `sha256_final` and `sha256_transform`, one statement per callback.
+
+What the file does not claim: it is the host-visible behaviour of the programs.
+The VMs' encoded state, opaque branches and junk register traffic are omitted
+without the taint proof `serial.cpp` has for the Serial-VM
+(`serial_cpp_evidence/observable.json`). The callback-sequence equality shows the
+omitted part did not change any callback in these 15 runs; it does not prove it
+cannot.
+
+## 9. Reproduction
 
 Windows, Python 3.10, `frida` and `pefile`, from the repository root. Each command
 runs the binaries one process at a time unless `--workers` says otherwise.
@@ -250,6 +290,8 @@ python scripts/pafet_vm_lift_xxxvii.py all                 # about 25 minutes
 python scripts/pafet_vm_analyze_xxxvii.py (Get-ChildItem jack_xxxvii_evidence/lifted/*.json)
 python scripts/pafet_vm_lift_validate_xxxvii.py
 python scripts/pafet_vm_identify_xxxvii.py                 # static; executes nothing
+python scripts/pafet_vm_skeleton_xxxvii.py sha_msg sha_compress
+python scripts/pafet_sha_cpp_validate_xxxvii.py            # needs clang++; about 2 minutes
 python scripts/pafet_windows_checks_xxxvii.py gate
 python scripts/pafet_windows_checks_xxxvii.py digest       # about 3 minutes
 python scripts/pafet_windows_checks_xxxvii.py oracle --workers 3   # about 7 minutes
